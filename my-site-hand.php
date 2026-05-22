@@ -11,7 +11,7 @@
  * Text Domain: my-site-hand
  * Domain Path: /languages
  * Requires at least: 6.2
- * Tested up to: 6.9
+ * Tested up to: 7.0
  *
  * @package My Site Hand (AI)
  */
