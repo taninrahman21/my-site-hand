@@ -12,6 +12,21 @@ $my_site_hand_audit    = $my_site_hand_plugin->get_audit_logger();
 $my_site_hand_auth     = $my_site_hand_plugin->get_auth_manager();
 $my_site_hand_registry = $my_site_hand_plugin->get_abilities_registry();
 
+// Nonce validation.
+$my_site_hand_nonce = wp_create_nonce( 'my_site_hand_admin' );
+
+// Load date ranges.
+// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+$my_site_hand_date_range = $_GET['date_range'] ?? 'all';
+$my_site_hand_date_from = null;
+if ( '24h' === $my_site_hand_date_range ) {
+	$my_site_hand_date_from = gmdate( 'Y-m-d H:i:s', strtotime( '-24 hours' ) );
+} elseif ( '7d' === $my_site_hand_date_range ) {
+	$my_site_hand_date_from = gmdate( 'Y-m-d H:i:s', strtotime( '-7 days' ) );
+} elseif ( '30d' === $my_site_hand_date_range ) {
+	$my_site_hand_date_from = gmdate( 'Y-m-d H:i:s', strtotime( '-30 days' ) );
+}
+
 // Current filters.
 // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 $my_site_hand_filters = [
@@ -21,225 +36,271 @@ $my_site_hand_filters = [
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	'token_id'     => ! empty( $_GET['token_id'] ) ? absint( $_GET['token_id'] ) : null,
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-	'ability_name' => ! empty( $_GET['ability'] ) ? sanitize_text_field( wp_unslash( $_GET['ability'] ) ) : null,
-	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-	'status'       => ! empty( $_GET['status'] ) ? sanitize_text_field( wp_unslash( $_GET['status'] ) ) : null,
-	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-	'date_from'    => ! empty( $_GET['date_from'] ) ? sanitize_text_field( wp_unslash( $_GET['date_from'] ) ) : null,
-	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-	'date_to'      => ! empty( $_GET['date_to'] ) ? sanitize_text_field( wp_unslash( $_GET['date_to'] ) ) : null,
+	'search'       => ! empty( $_GET['search'] ) ? sanitize_text_field( wp_unslash( $_GET['search'] ) ) : null,
+	'date_from'    => $my_site_hand_date_from,
 ];
 
 $my_site_hand_filters = array_filter( $my_site_hand_filters );
 $my_site_hand_filters['per_page'] = 25;
+if ( empty( $my_site_hand_filters['page'] ) ) {
+	$my_site_hand_filters['page'] = 1;
+}
 
-$my_site_hand_result      = $my_site_hand_audit->get_logs( $my_site_hand_filters );
-$my_site_hand_logs        = $my_site_hand_result['logs'];
-$my_site_hand_total       = $my_site_hand_result['total'];
-$my_site_hand_pages       = $my_site_hand_result['pages'];
-$my_site_hand_stats       = $my_site_hand_audit->get_stats();
-$my_site_hand_tokens      = $my_site_hand_auth->list_tokens( 0 );
-$my_site_hand_ability_names = array_keys( $my_site_hand_registry->get_all() );
-$my_site_hand_nonce       = wp_create_nonce( 'my_site_hand_admin' );
+$my_site_hand_result        = $my_site_hand_audit->get_logs( $my_site_hand_filters );
+$my_site_hand_logs          = $my_site_hand_result['logs'];
+$my_site_hand_total         = $my_site_hand_result['total'];
+$my_site_hand_pages         = $my_site_hand_result['pages'];
+$my_site_hand_stats         = $my_site_hand_audit->get_stats();
+$my_site_hand_tokens        = $my_site_hand_auth->list_tokens( 0 );
+$my_site_hand_all_abilities = $my_site_hand_registry->get_all();
+
+// Compute dynamic success rate count for TODAY card.
+global $wpdb;
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
+$my_site_hand_today_successes = (int) $wpdb->get_var(
+	"SELECT COUNT(*) FROM {$wpdb->prefix}mysitehand_audit_log WHERE result_status = 'success' AND DATE(executed_at) = CURDATE()"
+);
+$my_site_hand_today_calls = $my_site_hand_stats['calls_today'];
+$my_site_hand_success_rate = $my_site_hand_today_calls > 0
+	? round( ( $my_site_hand_today_successes / $my_site_hand_today_calls ) * 100, 1 )
+	: 100;
+
+// Build tokens lookup map.
+$my_site_hand_token_map = [];
+foreach ( $my_site_hand_tokens as $my_site_hand_token ) {
+	$my_site_hand_token_map[ $my_site_hand_token['id'] ] = $my_site_hand_token['label'];
+}
 ?>
 <div class="msh-wrap">
 	<?php require MYSITEHAND_PATH . 'templates/partials/header.php'; ?>
 
 	<div class="msh-main-content">
 		<div class="msh-container">
-			<div class="msh-page-header" style="display: flex; justify-content: space-between; align-items: center;">
-				<div>
-					<h2><?php echo esc_html__( 'Audit Log', 'my-site-hand' ); ?></h2>
-					<p class="msh-page-desc"><?php echo esc_html__( 'Monitor all MCP requests and their execution results.', 'my-site-hand' ); ?></p>
+			<!-- Header Row -->
+			<div class="msh-audit-header-row">
+				<div class="msh-page-header-info">
+					<h2 class="msh-page-title"><?php echo esc_html__( 'Audit Log', 'my-site-hand' ); ?></h2>
+					<p class="msh-page-desc-inline"><?php echo esc_html__( 'Every MCP request, with timing, status, and payload.', 'my-site-hand' ); ?></p>
 				</div>
-				<a href="<?php echo esc_url( rest_url( 'my-site-hand/v1/audit-log/export?nonce=' . $my_site_hand_nonce ) ); ?>" class="msh-btn msh-btn--ghost">
-					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-					<?php echo esc_html__( 'Export CSV', 'my-site-hand' ); ?>
-				</a>
+				<div class="msh-page-header-actions">
+					<a href="<?php echo esc_url( rest_url( 'my-site-hand/v1/audit-log/export?nonce=' . $my_site_hand_nonce ) ); ?>" class="msh-btn msh-btn--ghost">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+						<?php echo esc_html__( 'Export CSV', 'my-site-hand' ); ?>
+					</a>
+				</div>
 			</div>
 
-			<!-- Summary Stats -->
-			<div class="msh-stats-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 32px;">
-				<div class="msh-stat-card">
-					<div class="msh-stat-value"><?php echo esc_html( number_format( $my_site_hand_stats['calls_today'] ) ); ?></div>
-					<div class="msh-stat-label"><?php echo esc_html__( 'Calls Today', 'my-site-hand' ); ?></div>
+			<!-- Stats Grid -->
+			<div class="msh-audit-stats-grid">
+				<!-- Today Calls -->
+				<div class="msh-audit-stat-card msh-audit-stat-card--today">
+					<div class="msh-audit-stat-label"><?php echo esc_html__( 'TODAY', 'my-site-hand' ); ?></div>
+					<div class="msh-audit-stat-value"><?php echo esc_html( number_format( $my_site_hand_today_calls ) ); ?></div>
+					<div class="msh-audit-stat-desc"><?php echo esc_html__( 'API calls', 'my-site-hand' ); ?></div>
 				</div>
-				<div class="msh-stat-card">
-					<div class="msh-stat-value"><?php echo esc_html( $my_site_hand_stats['error_rate'] ); ?>%</div>
-					<div class="msh-stat-label"><?php echo esc_html__( 'Error Rate', 'my-site-hand' ); ?></div>
+
+				<!-- Success Rate -->
+				<div class="msh-audit-stat-card msh-audit-stat-card--success">
+					<div class="msh-audit-stat-label"><?php echo esc_html__( 'SUCCESS', 'my-site-hand' ); ?></div>
+					<div class="msh-audit-stat-value"><?php echo esc_html( $my_site_hand_success_rate ); ?>%</div>
+					<div class="msh-audit-stat-desc"><?php printf( esc_html__( '%1$d of %2$d', 'my-site-hand' ), $my_site_hand_today_successes, $my_site_hand_today_calls ); ?></div>
 				</div>
-				<div class="msh-stat-card">
-					<div class="msh-stat-value"><?php echo esc_html( $my_site_hand_stats['avg_duration'] ); ?>ms</div>
-					<div class="msh-stat-label"><?php echo esc_html__( 'Avg Duration', 'my-site-hand' ); ?></div>
+
+				<!-- Average Duration -->
+				<div class="msh-audit-stat-card msh-audit-stat-card--duration">
+					<div class="msh-audit-stat-label"><?php echo esc_html__( 'AVG DURATION', 'my-site-hand' ); ?></div>
+					<div class="msh-audit-stat-value"><?php echo esc_html( $my_site_hand_stats['avg_duration'] ); ?>ms</div>
+					<div class="msh-audit-stat-desc"><?php echo esc_html__( 'response time', 'my-site-hand' ); ?></div>
 				</div>
-				<div class="msh-stat-card">
-					<div class="msh-stat-value"><?php echo esc_html( number_format( $my_site_hand_total ) ); ?></div>
-					<div class="msh-stat-label"><?php echo esc_html__( 'Total Entries', 'my-site-hand' ); ?></div>
+
+				<!-- Errors last 24h -->
+				<div class="msh-audit-stat-card msh-audit-stat-card--errors">
+					<div class="msh-audit-stat-label"><?php echo esc_html__( 'ERRORS', 'my-site-hand' ); ?></div>
+					<div class="msh-audit-stat-value"><?php echo esc_html( number_format( $my_site_hand_stats['errors_24h'] ) ); ?></div>
+					<div class="msh-audit-stat-desc"><?php echo esc_html__( 'last 24h', 'my-site-hand' ); ?></div>
 				</div>
 			</div>
 
 			<!-- Filters Bar -->
-			<div class="msh-card msh-filters-bar" style="margin-bottom: 24px;">
-				<div class="msh-card-body" style="padding: 16px 24px;">
-					<form method="get" id="msh-audit-filters" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-						<input type="hidden" name="page" value="my-site-hand-audit" />
-
-						<select name="token_id" class="msh-select" style="max-width: 180px;" onchange="this.form.submit()">
-							<option value=""><?php echo esc_html__( 'All Tokens', 'my-site-hand' ); ?></option>
-							<?php foreach ( $my_site_hand_tokens as $my_site_hand_token ) : ?>
-							<option value="<?php echo esc_attr( $my_site_hand_token['id'] ); ?>" <?php selected( $my_site_hand_filters['token_id'] ?? '', $my_site_hand_token['id'] ); ?>>
-								<?php echo esc_html( $my_site_hand_token['label'] ); ?>
-							</option>
-							<?php endforeach; ?>
-						</select>
-
-						<select name="ability" class="msh-select" style="max-width: 220px;" onchange="this.form.submit()">
-							<option value=""><?php echo esc_html__( 'All Abilities', 'my-site-hand' ); ?></option>
-							<?php 
-							$my_site_hand_all_abilities = $my_site_hand_registry->get_all();
-							foreach ( $my_site_hand_ability_names as $my_site_hand_ability ) : 
-								$my_site_hand_label = $my_site_hand_all_abilities[ $my_site_hand_ability ]['label'] ?? $my_site_hand_ability;
-							?>
-							<option value="<?php echo esc_attr( $my_site_hand_ability ); ?>" <?php selected( $my_site_hand_filters['ability_name'] ?? '', $my_site_hand_ability ); ?>>
-								<?php echo esc_html( $my_site_hand_label ); ?>
-							</option>
-							<?php endforeach; ?>
-						</select>
-
-						<select name="status" class="msh-select" style="max-width: 150px;" onchange="this.form.submit()">
-							<option value=""><?php echo esc_html__( 'All Statuses', 'my-site-hand' ); ?></option>
-							<option value="success" <?php selected( $my_site_hand_filters['status'] ?? '', 'success' ); ?>><?php echo esc_html__( 'Success', 'my-site-hand' ); ?></option>
-							<option value="error" <?php selected( $my_site_hand_filters['status'] ?? '', 'error' ); ?>><?php echo esc_html__( 'Error', 'my-site-hand' ); ?></option>
-						</select>
-
-						<div style="display: flex; gap: 8px; align-items: center;">
-							<input type="date" name="date_from" class="msh-input" style="width: auto; padding: 6px 12px;" value="<?php echo esc_attr( $my_site_hand_filters['date_from'] ?? '' ); ?>" onchange="this.form.submit()" />
-							<span style="color: var(--msh-text-muted);">&rarr;</span>
-							<input type="date" name="date_to" class="msh-input" style="width: auto; padding: 6px 12px;" value="<?php echo esc_attr( $my_site_hand_filters['date_to'] ?? '' ); ?>" onchange="this.form.submit()" />
+			<div class="msh-audit-filters-bar">
+				<form method="get" id="msh-audit-filters-form">
+					<input type="hidden" name="page" value="my-site-hand-audit" />
+					
+					<div class="msh-audit-filters-row-1">
+						<!-- Search input -->
+						<div class="msh-audit-search-wrap">
+							<svg class="msh-audit-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+							<input type="text" name="search" class="msh-input msh-audit-search-input" placeholder="<?php esc_attr_e( 'Search by ability or client...', 'my-site-hand' ); ?>" value="<?php echo esc_attr( $_GET['search'] ?? '' ); ?>" onchange="this.form.submit()" />
 						</div>
 
-						<a href="<?php echo esc_url( admin_url( 'admin.php?page=my-site-hand-audit' ) ); ?>" class="msh-btn msh-btn--ghost msh-btn--sm" style="margin-left: auto;"><?php echo esc_html__( 'Reset', 'my-site-hand' ); ?></a>
-					</form>
-				</div>
+						<!-- Token Filter -->
+						<select name="token_id" class="msh-select msh-audit-token-select" onchange="this.form.submit()">
+							<option value=""><?php echo esc_html__( 'All', 'my-site-hand' ); ?></option>
+							<?php foreach ( $my_site_hand_tokens as $my_site_hand_token ) : ?>
+								<option value="<?php echo esc_attr( $my_site_hand_token['id'] ); ?>" <?php selected( $_GET['token_id'] ?? '', $my_site_hand_token['id'] ); ?>>
+									<?php echo esc_html( $my_site_hand_token['label'] ); ?>
+								</option>
+							<?php endforeach; ?>
+						</select>
+					</div>
+
+					<div class="msh-audit-filters-row-2">
+						<!-- Time Filter select -->
+						<select name="date_range" class="msh-select msh-audit-range-select" onchange="this.form.submit()">
+							<option value="all" <?php selected( $my_site_hand_date_range, 'all' ); ?>><?php echo esc_html__( 'All time', 'my-site-hand' ); ?></option>
+							<option value="24h" <?php selected( $my_site_hand_date_range, '24h' ); ?>><?php echo esc_html__( 'Last 24 hours', 'my-site-hand' ); ?></option>
+							<option value="7d" <?php selected( $my_site_hand_date_range, '7d' ); ?>><?php echo esc_html__( 'Last 7 days', 'my-site-hand' ); ?></option>
+							<option value="30d" <?php selected( $my_site_hand_date_range, '30d' ); ?>><?php echo esc_html__( 'Last 30 days', 'my-site-hand' ); ?></option>
+						</select>
+
+						<?php if ( ! empty( $_GET['search'] ) || ! empty( $_GET['token_id'] ) || $my_site_hand_date_range !== 'all' ) : ?>
+							<a href="<?php echo esc_url( admin_url( 'admin.php?page=my-site-hand-audit' ) ); ?>" class="msh-btn msh-btn--ghost msh-btn--sm msh-audit-reset-btn">
+								<?php echo esc_html__( 'Reset Filters', 'my-site-hand' ); ?>
+							</a>
+						<?php endif; ?>
+					</div>
+				</form>
 			</div>
 
-			<!-- Log Table -->
-			<div class="msh-card">
-				<div class="msh-card-body msh-card--no-pad">
-					<?php if ( empty( $my_site_hand_logs ) ) : ?>
-					<div class="msh-empty-state" style="padding: 60px 24px; text-align: center;">
-						<p style="color: var(--msh-text-muted);"><?php echo esc_html__( 'No log entries found for the current filters.', 'my-site-hand' ); ?></p>
+			<!-- Collapsible Logs Cards Stack -->
+			<div class="msh-audit-logs-stack">
+				<?php if ( empty( $my_site_hand_logs ) ) : ?>
+					<div class="msh-tokens-empty-state" style="padding: 60px 24px;">
+						<div class="msh-tokens-empty-icon" style="background: #f3f4f6; color: #9ca3af;">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+						</div>
+						<h3 class="msh-tokens-empty-heading"><?php echo esc_html__( 'No entries found', 'my-site-hand' ); ?></h3>
+						<p class="msh-tokens-empty-desc"><?php echo esc_html__( 'No log entries match the selected filters.', 'my-site-hand' ); ?></p>
 					</div>
-					<?php else : ?>
-					<div class="msh-table-wrap">
-						<table class="msh-table msh-audit-table">
-							<thead>
-								<tr>
-									<th><?php echo esc_html__( 'Time', 'my-site-hand' ); ?></th>
-									<th><?php echo esc_html__( 'Ability', 'my-site-hand' ); ?></th>
-									<th><?php echo esc_html__( 'Status', 'my-site-hand' ); ?></th>
-									<th><?php echo esc_html__( 'Duration', 'my-site-hand' ); ?></th>
-									<th><?php echo esc_html__( 'IP', 'my-site-hand' ); ?></th>
-									<th style="width: 100px;"></th>
-								</tr>
-							</thead>
-							<tbody>
-							<?php foreach ( $my_site_hand_logs as $my_site_hand_log ) :
-								$my_site_hand_input_data = json_decode( $my_site_hand_log['input_json'], true );
-							?>
-							<tr class="msh-log-row" id="log-row-<?php echo esc_attr( $my_site_hand_log['id'] ); ?>">
-								<td>
-									<?php 
-									echo esc_html( 
-										sprintf( 
-											/* translators: %s: relative time */
-											__( '%s ago', 'my-site-hand' ), 
-											human_time_diff( strtotime( $my_site_hand_log['executed_at'] ) ) 
-										) 
-									); 
-									?>
-								</td>
-								<td>
-									<div style="font-weight: 500;"><?php echo esc_html( $my_site_hand_all_abilities[ $my_site_hand_log['ability_name'] ]['label'] ?? $my_site_hand_log['ability_name'] ); ?></div>
-								</td>
-								<td>
-									<span class="msh-badge msh-badge--<?php echo esc_attr( $my_site_hand_log['result_status'] ); ?>">
+				<?php else : ?>
+					<?php foreach ( $my_site_hand_logs as $my_site_hand_log ) :
+						$my_site_hand_id = $my_site_hand_log['id'];
+						$my_site_hand_input_data = json_decode( $my_site_hand_log['input_json'], true );
+						
+						// Determine status class and label
+						$my_site_hand_status = $my_site_hand_log['result_status'];
+						$status_code = '200';
+						$status_class = 'success';
+						$status_full = '200 OK';
+						
+						if ( 'error' === $my_site_hand_status ) {
+							$status_code = '500';
+							$status_class = 'error';
+							$status_full = '500 Internal Error';
+						} elseif ( 'rate_limited' === $my_site_hand_status ) {
+							$status_code = '429';
+							$status_class = 'warning';
+							$status_full = '429 Too Many Requests';
+						}
+						
+						$client_name = $my_site_hand_token_map[ $my_site_hand_log['token_id'] ] ?? __( 'Unknown Client', 'my-site-hand' );
+						$formatted_time = wp_date( 'H:i:s', strtotime( $my_site_hand_log['executed_at'] ) );
+						
+						// Beautiful date format for timestamp field
+						$full_timestamp = wp_date( 'M d · H:i:s', strtotime( $my_site_hand_log['executed_at'] ) ) . '.000';
+					?>
+						<div class="msh-audit-log-card">
+							<!-- Header -->
+							<div class="msh-audit-log-header" onclick="
+								const detail = document.getElementById('log-detail-<?php echo esc_js($my_site_hand_id); ?>');
+								const chevron = document.getElementById('log-chevron-<?php echo esc_js($my_site_hand_id); ?>');
+								if (detail.style.display === 'none') {
+									detail.style.display = 'block';
+									chevron.style.transform = 'rotate(90deg)';
+								} else {
+									detail.style.display = 'none';
+									chevron.style.transform = 'none';
+								}
+							">
+								<div class="msh-audit-log-header-left">
+									<div class="msh-audit-log-chevron-wrap">
+										<svg id="log-chevron-<?php echo esc_attr( $my_site_hand_id ); ?>" class="msh-audit-log-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+											<polyline points="9 18 15 12 9 6"></polyline>
+										</svg>
+									</div>
+									<span class="msh-audit-log-time"><?php echo esc_html( $formatted_time ); ?></span>
+									<span class="msh-audit-status-badge msh-audit-status-badge--<?php echo esc_attr( $status_class ); ?>">
+										<?php echo esc_html( $status_code ); ?>
+									</span>
+									<span class="msh-audit-ability-name"><?php echo esc_html( $my_site_hand_all_abilities[ $my_site_hand_log['ability_name'] ]['label'] ?? $my_site_hand_log['ability_name'] ); ?></span>
+								</div>
+								
+								<div class="msh-audit-log-header-right">
+									<span class="msh-audit-client-name"><?php echo esc_html( $client_name ); ?></span>
+									<span class="msh-audit-duration">
 										<?php 
-										$my_site_hand_status = $my_site_hand_log['result_status'];
-										if ( 'success' === $my_site_hand_status ) {
-											echo esc_html__( 'Success', 'my-site-hand' );
-										} elseif ( 'error' === $my_site_hand_status ) {
-											echo esc_html__( 'Error', 'my-site-hand' );
-										} elseif ( 'rate_limited' === $my_site_hand_status ) {
-											echo esc_html__( 'Rate Limited', 'my-site-hand' );
-										} else {
-											echo esc_html( $my_site_hand_status );
-										}
+										echo $my_site_hand_log['duration_ms'] !== null 
+											? sprintf( esc_html__( '%dms', 'my-site-hand' ), $my_site_hand_log['duration_ms'] )
+											: esc_html__( '—', 'my-site-hand' );
 										?>
 									</span>
-								</td>
-								<td style="font-size: 13px; color: var(--msh-text-secondary);">
-									<?php 
-									echo esc_html( 
-										$my_site_hand_log['duration_ms'] !== null 
-											? sprintf( 
-												/* translators: %d: duration in milliseconds */
-												__( '%dms', 'my-site-hand' ), 
-												$my_site_hand_log['duration_ms'] 
-											) 
-											: '—' 
-									); 
-									?>
-								</td>
-								<td class="msh-td--ip"><?php echo esc_html( $my_site_hand_log['ip_address'] ); ?></td>
-								<td>
-									<button type="button" class="msh-btn msh-btn--ghost msh-btn--sm" onclick="msh.expandLogRow(<?php echo absint( $my_site_hand_log['id'] ); ?>)">
-										<?php echo esc_html__( 'Details', 'my-site-hand' ); ?>
-									</button>
-								</td>
-							</tr>
-							<tr class="msh-log-detail" id="log-detail-<?php echo esc_attr( $my_site_hand_log['id'] ); ?>" style="display:none; background: var(--msh-bg);">
-								<td colspan="6" style="padding: 0;">
-									<div class="msh-log-detail-body" style="padding: 24px; border-bottom: 2px solid var(--msh-border);">
-										<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-											<div class="msh-log-detail-section">
-												<h4 style="margin: 0 0 12px; font-size: 12px; text-transform: uppercase; color: var(--msh-text-muted);"><?php echo esc_html__( 'Input Parameters', 'my-site-hand' ); ?></h4>
-												<pre style="margin: 0; padding: 16px; background: #fff; border: 1px solid var(--msh-border); border-radius: 4px; font-size: 12px; overflow-x: auto; color: #1d2327;"><?php echo esc_html( json_encode( $my_site_hand_input_data, JSON_PRETTY_PRINT ) ); ?></pre>
-											</div>
-											<?php if ( $my_site_hand_log['result_summary'] ) : ?>
-											<div class="msh-log-detail-section">
-												<h4 style="margin: 0 0 12px; font-size: 12px; text-transform: uppercase; color: var(--msh-text-muted);"><?php echo esc_html__( 'Execution Result', 'my-site-hand' ); ?></h4>
-												<pre style="margin: 0; padding: 16px; background: #fff; border: 1px solid var(--msh-border); border-radius: 4px; font-size: 12px; overflow-x: auto; color: #1d2327;"><?php echo esc_html( $my_site_hand_log['result_summary'] ); ?></pre>
-											</div>
-											<?php endif; ?>
-										</div>
-										<div style="margin-top: 16px; font-size: 11px; color: var(--msh-text-muted);">
-											<strong><?php echo esc_html__( 'User Agent:', 'my-site-hand' ); ?></strong> <?php echo esc_html( $my_site_hand_log['user_agent'] ?: '—' ); ?>
-										</div>
+								</div>
+							</div>
+							
+							<!-- Collapsible Details Body -->
+							<div class="msh-audit-log-body" id="log-detail-<?php echo esc_attr( $my_site_hand_id ); ?>" style="display: none;">
+								<div class="msh-audit-meta-row">
+									<span class="msh-audit-meta-label"><?php echo esc_html__( 'TIMESTAMP', 'my-site-hand' ); ?></span>
+									<span class="msh-audit-meta-val"><?php echo esc_html( $full_timestamp ); ?></span>
+								</div>
+								
+								<div class="msh-audit-meta-row">
+									<span class="msh-audit-meta-label"><?php echo esc_html__( 'SOURCE IP', 'my-site-hand' ); ?></span>
+									<span class="msh-audit-meta-val"><?php echo esc_html( $my_site_hand_log['ip_address'] ); ?></span>
+								</div>
+								
+								<div class="msh-audit-meta-row">
+									<span class="msh-audit-meta-label"><?php echo esc_html__( 'STATUS', 'my-site-hand' ); ?></span>
+									<span class="msh-audit-meta-val"><?php echo esc_html( $status_full ); ?></span>
+								</div>
+								
+								<!-- Payload block -->
+								<div class="msh-audit-meta-row msh-audit-meta-row--block">
+									<span class="msh-audit-meta-label"><?php echo esc_html__( 'PAYLOAD', 'my-site-hand' ); ?></span>
+									<pre class="msh-audit-payload-pre"><code><?php echo esc_html( json_encode( $my_site_hand_input_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES ) ); ?></code></pre>
+								</div>
+								
+								<!-- Results block if error or summary exists -->
+								<?php if ( ! empty( $my_site_hand_log['result_summary'] ) ) : ?>
+									<div class="msh-audit-meta-row msh-audit-meta-row--block">
+										<span class="msh-audit-meta-label"><?php echo esc_html__( 'EXECUTION RESULT / ERROR SUMMARY', 'my-site-hand' ); ?></span>
+										<pre class="msh-audit-payload-pre"><code><?php echo esc_html( $my_site_hand_log['result_summary'] ); ?></code></pre>
 									</div>
-								</td>
-							</tr>
-							<?php endforeach; ?>
-							</tbody>
-						</table>
-					</div>
-					<?php endif; ?>
-				</div>
+								<?php endif; ?>
+								
+								<!-- User Agent block -->
+								<div class="msh-audit-meta-row msh-audit-meta-row--block" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
+									<span class="msh-audit-meta-label"><?php echo esc_html__( 'USER AGENT', 'my-site-hand' ); ?></span>
+									<span class="msh-audit-meta-val" style="font-size: 12px; font-family: var(--msh-font-mono); line-height: 1.4;"><?php echo esc_html( $my_site_hand_log['user_agent'] ?: '—' ); ?></span>
+								</div>
+							</div>
+						</div>
+					<?php endforeach; ?>
+				<?php endif; ?>
 			</div>
 
 			<!-- Pagination -->
 			<?php if ( $my_site_hand_pages > 1 ) : ?>
-			<div class="msh-pagination" style="margin-top: 24px; display: flex; gap: 4px; justify-content: center;">
-				<?php for ( $my_site_hand_p = 1; $my_site_hand_p <= $my_site_hand_pages; $my_site_hand_p++ ) : ?>
-				<a href="<?php echo esc_url( add_query_arg( 'paged', $my_site_hand_p ) ); ?>"
-					style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 4px; border: 1px solid var(--msh-border); background: <?php echo ( $my_site_hand_filters['page'] ?? 1 ) === $my_site_hand_p ? 'var(--msh-primary)' : '#fff'; ?>; color: <?php echo ( $my_site_hand_filters['page'] ?? 1 ) === $my_site_hand_p ? '#fff' : 'var(--msh-text)'; ?>; text-decoration: none; font-size: 13px; font-weight: 600;">
-					<?php echo esc_html( $my_site_hand_p ); ?>
-				</a>
-				<?php endfor; ?>
-			</div>
+				<div class="msh-pagination" style="margin-top: 32px; display: flex; gap: 6px; justify-content: center;">
+					<?php for ( $my_site_hand_p = 1; $my_site_hand_p <= $my_site_hand_pages; $my_site_hand_p++ ) : 
+						$page_url = add_query_arg( [
+							'paged'      => $my_site_hand_p,
+							'search'     => $_GET['search'] ?? '',
+							'token_id'   => $_GET['token_id'] ?? '',
+							'date_range' => $my_site_hand_date_range,
+						] );
+					?>
+						<a href="<?php echo esc_url( $page_url ); ?>"
+							class="msh-pagination-btn <?php echo ( $my_site_hand_filters['page'] ?? 1 ) === $my_site_hand_p ? 'msh-pagination-btn--active' : ''; ?>">
+							<?php echo esc_html( $my_site_hand_p ); ?>
+						</a>
+					<?php endfor; ?>
+				</div>
 			<?php endif; ?>
 		</div>
 
-		<?php require MYSITEHAND_PATH . 'templates/partials/footer.php'; ?>
 	</div>
+
+	<?php require MYSITEHAND_PATH . 'templates/partials/footer.php'; ?>
 </div>
+

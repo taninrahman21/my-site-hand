@@ -49,21 +49,6 @@
 		},
 
 		/**
-		 * Enable or disable all abilities on the page.
-		 * 
-		 * @param {boolean} enable - True to enable all, false to disable all.
-		 */
-		toggleAllAbilities: function (enable) {
-			const switches = document.querySelectorAll('.msh-switch input[type="checkbox"]');
-			switches.forEach(sw => {
-				if (sw.checked !== enable) {
-					sw.checked = enable;
-					sw.dispatchEvent(new Event('change'));
-				}
-			});
-		},
-
-		/**
 		 * Copy the text of an element to the clipboard.
 		 *
 		 * @param {string} elementId - ID of the element to copy.
@@ -382,74 +367,18 @@
 	 * DOM Ready
 	 * ---------------------------------------------------------------------- */
 	document.addEventListener('DOMContentLoaded', function () {
-		// Match body background to the layout's light page background.
+		// Override WordPress admin background to match our dark theme.
 		const wrap = document.querySelector('.msh-wrap');
 		if (wrap) {
 			const wpBody = document.getElementById('wpbody-content');
 			if (wpBody) {
-				wpBody.style.background = '#f3f4f6';
+				wpBody.style.background = '#0f0f1a';
 			}
 			const wpWrap = document.getElementById('wpbody');
 			if (wpWrap) {
-				wpWrap.style.background = '#f3f4f6';
+				wpWrap.style.background = '#0f0f1a';
 			}
 		}
-
-		// Sidebar toggle for mobile.
-		const toggleBtn = document.getElementById('msh-sidebar-toggle');
-		const sidebar = document.querySelector('.msh-sidebar');
-		if (toggleBtn && sidebar) {
-			toggleBtn.addEventListener('click', function (e) {
-				e.stopPropagation();
-				sidebar.classList.toggle('msh-sidebar--open');
-			});
-
-			document.addEventListener('click', function (e) {
-				if (sidebar.classList.contains('msh-sidebar--open') && !sidebar.contains(e.target)) {
-					sidebar.classList.remove('msh-sidebar--open');
-				}
-			});
-		}
-
-		// Search and filter abilities.
-		const searchInput = document.getElementById('msh-abilities-search');
-		const filterSelect = document.getElementById('msh-abilities-filter');
-		
-		function filterAbilities() {
-			const query = searchInput ? searchInput.value.toLowerCase() : '';
-			const filter = filterSelect ? filterSelect.value : 'all';
-			
-			const cards = document.querySelectorAll('.msh-abilities-list-wrapper .msh-module-card-box');
-			cards.forEach(card => {
-				const moduleSlug = card.dataset.module;
-				let hasVisibleRows = false;
-				
-				const rows = card.querySelectorAll('.msh-ability-row');
-				rows.forEach(row => {
-					const name = row.querySelector('.msh-ability-name-code').textContent.toLowerCase();
-					const desc = row.querySelector('.msh-ability-description').textContent.toLowerCase();
-					
-					const matchesQuery = name.includes(query) || desc.includes(query);
-					const matchesFilter = filter === 'all' || moduleSlug === filter;
-					
-					if (matchesQuery && matchesFilter) {
-						row.style.display = 'flex';
-						hasVisibleRows = true;
-					} else {
-						row.style.display = 'none';
-					}
-				});
-				
-				if (hasVisibleRows && (filter === 'all' || moduleSlug === filter)) {
-					card.style.display = 'block';
-				} else {
-					card.style.display = 'none';
-				}
-			});
-		}
-		
-		if (searchInput) searchInput.addEventListener('input', filterAbilities);
-		if (filterSelect) filterSelect.addEventListener('change', filterAbilities);
 
 		// Close modals on overlay click.
 		document.addEventListener('click', function (e) {

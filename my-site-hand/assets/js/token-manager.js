@@ -113,22 +113,7 @@
 				return;
 			}
 
-			// Compute dynamic expires_at date string from dropdown value
-			let expiresAt = null;
-			const expiresSelect = document.getElementById('msh-token-expires')?.value;
-			if (expiresSelect && expiresSelect !== 'never') {
-				const date = new Date();
-				if (expiresSelect === '30_days') {
-					date.setDate(date.getDate() + 30);
-				} else if (expiresSelect === '90_days') {
-					date.setDate(date.getDate() + 90);
-				} else if (expiresSelect === '6_months') {
-					date.setMonth(date.getMonth() + 6);
-				} else if (expiresSelect === '1_year') {
-					date.setFullYear(date.getFullYear() + 1);
-				}
-				expiresAt = date.toISOString().split('T')[0]; // YYYY-MM-DD
-			}
+			const expiresAt = document.getElementById('msh-token-expires')?.value || null;
 
 			// Collect checked abilities.
 			const abilityCheckboxes = document.querySelectorAll('input[name="abilities[]"]:checked');
@@ -138,7 +123,7 @@
 			const payload = {
 				label: label,
 				abilities: abilities,
-				expires_at: expiresAt
+				expires_at: expiresAt || null
 			};
 
 			const btn = document.getElementById('msh-submit-token');
@@ -164,119 +149,8 @@
 					if (window.msh && window.msh._showToast) {
 						window.msh._showToast(err.message || i18n.error || 'Error occurred.', 'error');
 					}
-					if (btn) {
-						btn.disabled = false;
-						btn.textContent = 'Generate token';
-					}
+					if (btn) { btn.disabled = false; btn.textContent = 'Generate Token'; }
 				});
-		},
-
-		/**
-		 * Toggle the active state of a scope card.
-		 */
-		toggleScopeCard: function (scope) {
-			const checkbox = document.getElementById('msh-scope-' + scope);
-			if (!checkbox) return;
-			checkbox.checked = !checkbox.checked;
-			checkbox.dispatchEvent(new Event('change'));
-		},
-
-		/**
-		 * Handle scope checkbox card changes.
-		 */
-		onScopeCheckboxChange: function (event, scope) {
-			const checked = event.target.checked;
-			const card = event.target.closest('.msh-scope-card');
-			
-			if (card) {
-				if (checked) card.classList.add('msh-scope-card--active');
-				else card.classList.remove('msh-scope-card--active');
-			}
-
-			if (scope === 'custom') {
-				const wrapper = document.getElementById('msh-custom-abilities-wrapper');
-				if (wrapper) {
-					wrapper.style.display = checked ? 'block' : 'none';
-				}
-			} else {
-				// For preset scopes: check/uncheck corresponding checkboxes in the list
-				const checkboxes = document.querySelectorAll(`input[name="abilities[]"][data-scope="${scope}"]`);
-				checkboxes.forEach(cb => {
-					cb.checked = checked;
-				});
-			}
-
-			this.updateSubmitButtonState();
-		},
-
-		/**
-		 * Handle custom individual checkbox updates.
-		 */
-		onCustomAbilityChange: function (scope) {
-			const totalInScope = document.querySelectorAll(`input[name="abilities[]"][data-scope="${scope}"]`).length;
-			const checkedInScope = document.querySelectorAll(`input[name="abilities[]"][data-scope="${scope}"]:checked`).length;
-			const scopeCheckbox = document.getElementById('msh-scope-' + scope);
-			const card = scopeCheckbox?.closest('.msh-scope-card');
-
-			if (scopeCheckbox) {
-				const allChecked = totalInScope === checkedInScope && totalInScope > 0;
-				scopeCheckbox.checked = allChecked;
-				if (card) {
-					if (allChecked) card.classList.add('msh-scope-card--active');
-					else card.classList.remove('msh-scope-card--active');
-				}
-			}
-
-			this.updateSubmitButtonState();
-		},
-
-		/**
-		 * Toggle visibility of the revealed token value.
-		 */
-		toggleTokenVisibility: function () {
-			const maskedInput = document.getElementById('msh-new-token-value-masked');
-			const plainInput = document.getElementById('msh-new-token-value');
-			const eyeIcon = document.getElementById('msh-eye-icon');
-			const eyeOffIcon = document.getElementById('msh-eye-off-icon');
-
-			if (plainInput && maskedInput) {
-				if (plainInput.style.display === 'none') {
-					// Show plain text
-					plainInput.style.display = 'block';
-					maskedInput.style.display = 'none';
-					if (eyeIcon) eyeIcon.style.display = 'none';
-					if (eyeOffIcon) eyeOffIcon.style.display = 'block';
-				} else {
-					// Hide plain text
-					plainInput.style.display = 'none';
-					maskedInput.style.display = 'block';
-					if (eyeIcon) eyeIcon.style.display = 'block';
-					if (eyeOffIcon) eyeOffIcon.style.display = 'none';
-				}
-			}
-		},
-
-		/**
-		 * Enable / disable generate token button.
-		 */
-		updateSubmitButtonState: function () {
-			const label = document.getElementById('msh-token-label')?.value?.trim();
-			const btn = document.getElementById('msh-submit-token');
-			if (!btn) return;
-
-			const hasCheckedAbilities = document.querySelectorAll('input[name="abilities[]"]:checked').length > 0;
-			const hasCheckedPreset = document.getElementById('msh-scope-read')?.checked ||
-				document.getElementById('msh-scope-write')?.checked ||
-				document.getElementById('msh-scope-admin')?.checked ||
-				document.getElementById('msh-scope-custom')?.checked;
-
-			if (label && (hasCheckedAbilities || hasCheckedPreset)) {
-				btn.disabled = false;
-				btn.classList.remove('msh-btn--disabled');
-			} else {
-				btn.disabled = true;
-				btn.classList.add('msh-btn--disabled');
-			}
 		},
 
 		/**
@@ -366,21 +240,30 @@
 		 * @private
 		 */
 		_revealToken: function (token) {
-			// Switch modal step panels
-			const createStep = document.getElementById('msh-modal-create-step');
-			const createdStep = document.getElementById('msh-modal-created-step');
+			// Hide the generate form / button.
+			const form = document.getElementById('msh-generate-token-form');
+			if (form) {
+				const exemptIds = ['msh-confirm-copied', 'msh-copy-token-btn', 'msh-copy-claude-btn'];
+				Array.from(form.elements).forEach(el => {
+					// Exempt everything inside the reveal area OR specific IDs.
+					if (el.closest('.msh-token-reveal') || exemptIds.includes(el.id)) {
+						el.disabled = false;
+					} else {
+						el.disabled = true;
+					}
+				});
+			}
 
-			if (createStep) createStep.style.display = 'none';
-			if (createdStep) createdStep.style.display = 'flex';
+			const submitBtn = document.getElementById('msh-submit-token');
+			if (submitBtn) submitBtn.style.display = 'none';
 
-			// Populate token values
-			const plainEl = document.getElementById('msh-new-token-value');
-			if (plainEl) plainEl.value = token;
+			const revealArea = document.getElementById('msh-token-reveal');
+			if (revealArea) revealArea.style.display = 'block';
 
-			const maskedEl = document.getElementById('msh-new-token-value-masked');
-			if (maskedEl) maskedEl.value = token;
+			const tokenEl = document.getElementById('msh-new-token-value');
+			if (tokenEl) tokenEl.textContent = token;
 
-			// Attach copy button handler
+			// Attach copy handlers programmatically
 			const tokenBtn = document.getElementById('msh-copy-token-btn');
 			if (tokenBtn) {
 				tokenBtn.onclick = () => {
@@ -388,16 +271,21 @@
 				};
 			}
 
-			// Force showing masked view initially
-			if (plainEl) plainEl.style.display = 'none';
-			if (maskedEl) maskedEl.style.display = 'block';
-			
-			const eyeIcon = document.getElementById('msh-eye-icon');
-			const eyeOffIcon = document.getElementById('msh-eye-off-icon');
-			if (eyeIcon) eyeIcon.style.display = 'block';
-			if (eyeOffIcon) eyeOffIcon.style.display = 'none';
+			// Initialize the dynamic copy source for Claude command.
+			this.switchOsTab(window.mshTokens.selectedOs || detectOs());
 
-			// Populate guide details
+			// Show done button; enable when checkbox is checked.
+			const doneBtn = document.getElementById('msh-close-after-copy');
+			if (doneBtn) doneBtn.style.display = 'inline-flex';
+
+			const checkbox = document.getElementById('msh-confirm-copied');
+			if (checkbox) {
+				checkbox.addEventListener('change', function () {
+					if (doneBtn) doneBtn.disabled = !this.checked;
+				});
+			}
+
+			// Initialize the dynamic copy source for Claude command.
 			this.switchOsTab(window.mshTokens.selectedOs || detectOs());
 
 			// Also populate Cursor fields for immediate use if user switches.
@@ -419,22 +307,6 @@
 			const form = document.getElementById('msh-generate-token-form');
 			if (form) form.reset();
 
-			// Hide created view and show create view
-			const createStep = document.getElementById('msh-modal-create-step');
-			const createdStep = document.getElementById('msh-modal-created-step');
-
-			if (createStep) createStep.style.display = 'flex';
-			if (createdStep) createdStep.style.display = 'none';
-
-			// Reset preset cards active states
-			document.querySelectorAll('.msh-scope-card').forEach(card => {
-				card.classList.remove('msh-scope-card--active');
-			});
-
-			// Hide custom abilities list
-			const wrapper = document.getElementById('msh-custom-abilities-wrapper');
-			if (wrapper) wrapper.style.display = 'none';
-
 			// Reset client and OS selection.
 			this.switchClientTab('claude');
 			this.switchOsTab(detectOs());
@@ -451,11 +323,19 @@
 			const step2 = document.getElementById('msh-claude-step-2');
 			if (step2) step2.value = '';
 
+
+			const reveal = document.getElementById('msh-token-reveal');
+			if (reveal) reveal.style.display = 'none';
+
 			const submitBtn = document.getElementById('msh-submit-token');
-			if (submitBtn) {
-				submitBtn.disabled = true;
-				submitBtn.classList.add('msh-btn--disabled');
-				submitBtn.textContent = 'Generate token';
+			if (submitBtn) { submitBtn.style.display = 'inline-flex'; submitBtn.disabled = false; submitBtn.textContent = 'Generate Token'; }
+
+			const doneBtn = document.getElementById('msh-close-after-copy');
+			if (doneBtn) { doneBtn.style.display = 'none'; doneBtn.disabled = true; }
+
+			// Re-enable form elements.
+			if (form) {
+				Array.from(form.elements).forEach(el => { el.disabled = false; });
 			}
 		}
 	};
