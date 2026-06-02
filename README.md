@@ -49,7 +49,7 @@ WordPress does it:  ✅ Done. Automatically.
 
 ---
 
-## 📋 The 46 Abilities
+## 📋 The 45 Abilities
 
 <details>
 <summary><strong>📝 Content Management (9 abilities)</strong></summary>
@@ -137,8 +137,7 @@ WordPress does it:  ✅ Done. Automatically.
 | Ability | Description |
 |---------|-------------|
 | `list-users` | Browse all users with filters |
-| `get-user` | Get full user profile and meta |
-| `create-user` | Generate accounts with auto-passwords |
+| `get-user` | Get full user profile and meta | 
 | `update-user-role` | Change user permissions |
 | `list-roles` | View all registered roles |
 | `get-user-stats` | User counts by role |
