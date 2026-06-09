@@ -77,6 +77,9 @@ class Admin
 		add_action('admin_menu', [$this, 'register_menus']);
 		add_action('admin_enqueue_scripts', [$this, 'enqueue_assets']);
 		add_action('admin_init', [$this, 'register_settings']);
+		add_action('admin_init', [$this, 'handle_activation_redirect']);
+		add_action('admin_head', [$this, 'render_admin_menu_icon_css']);
+		add_filter('plugin_action_links_' . MYSITEHAND_BASENAME, [$this, 'add_plugin_action_links']);
 	}
 
 	/**
@@ -86,7 +89,7 @@ class Admin
 	 */
 	public function register_menus(): void
 	{
-		$icon = 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7H4a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7 14a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10 0a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m-5 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2z"/></svg>');
+		$icon = MYSITEHAND_URL . 'assets/logo.png';
 
 		// Main menu page.
 		$this->page_hooks[] = add_menu_page(
@@ -149,15 +152,36 @@ class Admin
 			[$this, 'render_settings']
 		);
 
+		// Documentation submenu.
+		$this->page_hooks[] = add_submenu_page(
+			'my-site-hand',
+			__('How to use - My Site Hand', 'my-site-hand'),
+			__('How to use', 'my-site-hand'),
+			'manage_options',
+			'my-site-hand-documentation',
+			[$this, 'render_documentation']
+		);
+
 		// Tools submenu.
 		$this->page_hooks[] = add_submenu_page(
 			'my-site-hand',
-			__('Tools - My Site Hand', 'my-site-hand'),
-			__('Tools', 'my-site-hand'),
+			__('About & Info - My Site Hand', 'my-site-hand'),
+			__('About & Info', 'my-site-hand'),
 			'manage_options',
 			'my-site-hand-tools',
 			[$this, 'render_tools']
 		);
+
+		// Suggest Feature submenu.
+		$this->page_hooks[] = add_submenu_page(
+			'my-site-hand',
+			__('Suggest Feature - My Site Hand', 'my-site-hand'),
+			__('Suggest a Feature', 'my-site-hand'),
+			'manage_options',
+			'my-site-hand-feature-request',
+			[$this, 'render_feature_request']
+		);
+
 	}
 
 	/**
@@ -375,6 +399,99 @@ class Admin
 	}
 
 	/**
+	 * Render the documentation page.
+	 *
+	 * @return void
+	 */
+	public function render_documentation(): void
+	{
+		if (!current_user_can('manage_options')) {
+			wp_die(esc_html__('You do not have permission to access this page.', 'my-site-hand'));
+		}
+		require MYSITEHAND_PATH . 'templates/admin/documentation.php';
+	}
+
+	/**
+	 * Render the suggest feature page.
+	 *
+	 * @return void
+	 */
+	public function render_feature_request(): void
+	{
+		if (!current_user_can('manage_options')) {
+			wp_die(esc_html__('You do not have permission to access this page.', 'my-site-hand'));
+		}
+
+		$message = '';
+		$message_type = 'success';
+
+		// Handle Form Submission
+		if (isset($_POST['msh_feature_nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['msh_feature_nonce'])), 'msh_submit_feature')) {
+			$title = isset($_POST['feature_title']) ? sanitize_text_field(wp_unslash($_POST['feature_title'])) : '';
+			$description = isset($_POST['feature_description']) ? sanitize_textarea_field(wp_unslash($_POST['feature_description'])) : '';
+			$user_email = isset($_POST['feature_email']) ? sanitize_email(wp_unslash($_POST['feature_email'])) : '';
+
+			if (empty($title) || empty($description)) {
+				$message = __('Please fill in all required fields.', 'my-site-hand');
+				$message_type = 'error';
+			} else {
+				$to = 'builtbytanin@gmail.com';
+				$subject = '[My Site Hand Feature Request] ' . $title;
+
+				$body = "New Feature Request Submitted:\n\n";
+				$body .= "Title: " . $title . "\n\n";
+				$body .= "Description:\n" . $description . "\n\n";
+				$body .= "Submitted by: " . $user_email . "\n";
+				$body .= "Site: " . esc_url(home_url()) . "\n";
+				$body .= "WordPress Version: " . get_bloginfo('version') . "\n";
+				$body .= "PHP Version: " . PHP_VERSION . "\n";
+
+				$headers = [];
+				if (!empty($user_email)) {
+					$headers[] = 'Reply-To: ' . $user_email;
+				}
+
+				// Generate a From header using the current site domain to prevent generic host rejection
+				$host = wp_parse_url(home_url(), PHP_URL_HOST);
+				if ($host) {
+					if (substr($host, 0, 4) === 'www.') {
+						$host = substr($host, 4);
+					}
+					$headers[] = 'From: My Site Hand <wordpress@' . $host . '>';
+				}
+
+				// Capture any mail errors
+				$mail_error = '';
+				$capture_error = function ($error) use (&$mail_error) {
+					if (is_wp_error($error)) {
+						$mail_error = $error->get_error_message();
+					}
+				};
+				add_action('wp_mail_failed', $capture_error);
+
+				$sent = wp_mail($to, $subject, $body, $headers);
+
+				remove_action('wp_mail_failed', $capture_error);
+
+				if ($sent) {
+					$message = __('Thank you! Your feature request has been successfully submitted to the developer.', 'my-site-hand');
+					$message_type = 'success';
+				} else {
+					if (!empty($mail_error)) {
+						/* translators: %s: the mailer error message */
+						$message = sprintf(__('Failed to send email. Mailer error: %s', 'my-site-hand'), $mail_error);
+					} else {
+						$message = __('Failed to send email. Please check your server SMTP settings or contact builtbytanin@gmail.com directly.', 'my-site-hand');
+					}
+					$message_type = 'error';
+				}
+			}
+		}
+
+		require MYSITEHAND_PATH . 'templates/admin/feature-request.php';
+	}
+
+	/**
 	 * Render the tools page.
 	 *
 	 * @return void
@@ -415,6 +532,79 @@ class Admin
 	public function get_audit(): Audit_Logger
 	{
 		return $this->audit;
+	}
+
+	/**
+	 * Redirect to the dashboard page on plugin activation.
+	 *
+	 * @return void
+	 */
+	public function handle_activation_redirect(): void
+	{
+		if (get_option('my_site_hand_do_activation_redirect')) {
+			delete_option('my_site_hand_do_activation_redirect');
+
+			// Only redirect if this is not a bulk activation, CLI, XML-RPC, AJAX request, etc.
+			if (
+				!is_network_admin() &&
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- 'activate-multi' is set by WP core during bulk plugin activation; no nonce is available.
+				!isset($_GET['activate-multi']) &&
+				current_user_can('manage_options') &&
+				(!defined('DOING_AJAX') || !DOING_AJAX) &&
+				(!defined('WP_CLI') || !WP_CLI)
+			) {
+				wp_safe_redirect(admin_url('admin.php?page=my-site-hand'));
+				exit;
+			}
+		}
+	}
+
+	/**
+	 * Render custom CSS in the admin head to scale the menu icon.
+	 *
+	 * @return void
+	 */
+	public function render_admin_menu_icon_css(): void
+	{
+		?>
+		<style>
+			#adminmenu .toplevel_page_my-site-hand .wp-menu-image {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+			}
+
+			#adminmenu .toplevel_page_my-site-hand .wp-menu-image img {
+				padding: 2px !important;
+				background: #ffffff !important;
+				border-radius: 4px !important;
+				max-width: 20px !important;
+				max-height: 20px !important;
+				width: 20px !important;
+				height: 20px !important;
+				box-sizing: border-box !important;
+				display: block !important;
+				margin: 0 !important;
+			}
+		</style>
+		<?php
+	}
+
+	/**
+	 * Add custom action links on the plugins page.
+	 *
+	 * @param array $links Array of plugin action links.
+	 * @return array
+	 */
+	public function add_plugin_action_links(array $links): array
+	{
+		$settings_link = sprintf(
+			'<a href="%s">%s</a>',
+			esc_url(admin_url('admin.php?page=my-site-hand-documentation')),
+			esc_html__('How to Use', 'my-site-hand')
+		);
+		array_unshift($links, $settings_link);
+		return $links;
 	}
 }
 

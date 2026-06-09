@@ -165,17 +165,19 @@ $my_site_hand_disabled_count = count(array_intersect(array_keys($my_site_hand_ab
 											return !in_array($name, $my_site_hand_disabled_abs, true);
 										}));
 										$my_site_hand_module_total_count = count($my_site_hand_module_abilities);
-										printf(
-											/* translators: 1: enabled count, 2: total count */
-											esc_html__('%1$d of %2$d enabled', 'my-site-hand'),
-											$my_site_hand_module_enabled_count,
-											$my_site_hand_module_total_count
+										echo esc_html(
+											sprintf(
+												/* translators: 1: enabled count, 2: total count */
+												__('%1$d of %2$d enabled', 'my-site-hand'),
+												$my_site_hand_module_enabled_count,
+												$my_site_hand_module_total_count
+											)
 										);
 										?>
 									</span>
 								</div>
 							</div>
-							<span class="msh-module-header-right-count"><?php echo $my_site_hand_module_total_count; ?></span>
+							<span class="msh-module-header-right-count"><?php echo esc_html($my_site_hand_module_total_count); ?></span>
 						</div>
 						<div class="msh-abilities-list">
 							<?php foreach ($my_site_hand_module_abilities as $my_site_hand_name => $my_site_hand_ability):
@@ -184,10 +186,10 @@ $my_site_hand_disabled_count = count(array_intersect(array_keys($my_site_hand_ab
 								$my_site_hand_is_destructive = !empty($my_site_hand_ability['annotations']['destructive']);
 								$my_site_hand_is_enabled = !in_array($my_site_hand_name, $my_site_hand_disabled_abs, true);
 								?>
-								<div class="msh-ability-row">
+								<div class="msh-ability-row" data-name="<?php echo esc_attr($my_site_hand_name); ?>">
 									<div class="msh-ability-row-left">
 										<div class="msh-ability-row-header-line">
-											<span class="msh-ability-name-code"><?php echo esc_html($my_site_hand_name); ?></span>
+											<span class="msh-ability-name-code"><?php echo esc_html($my_site_hand_ability['label'] ?? $my_site_hand_name); ?></span>
 											<div class="msh-ability-tags">
 												<?php if ($my_site_hand_is_readonly): ?>
 													<span class="msh-tag msh-tag--readonly"><?php echo esc_html__('readonly', 'my-site-hand'); ?></span>

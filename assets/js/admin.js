@@ -427,9 +427,10 @@
 				const rows = card.querySelectorAll('.msh-ability-row');
 				rows.forEach(row => {
 					const name = row.querySelector('.msh-ability-name-code').textContent.toLowerCase();
+					const rawName = row.dataset.name ? row.dataset.name.toLowerCase() : '';
 					const desc = row.querySelector('.msh-ability-description').textContent.toLowerCase();
 					
-					const matchesQuery = name.includes(query) || desc.includes(query);
+					const matchesQuery = name.includes(query) || rawName.includes(query) || desc.includes(query);
 					const matchesFilter = filter === 'all' || moduleSlug === filter;
 					
 					if (matchesQuery && matchesFilter) {

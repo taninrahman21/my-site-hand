@@ -1,87 +1,93 @@
 === My Site Hand (AI) ===
 Contributors: builtbytanin
-Tags: ai, mcp, claude, automation, agent
+Tags: ai, claude, cursor, agent, automation
 Requires at least: 6.2
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Connect Claude Desktop and other AI agents to WordPress in seconds using automated MCP commands.
+Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language.
 
 == Description ==
 
-**My Site Hand (AI) for WordPress** is the ultimate bridge between your WordPress site and AI agents (like Claude Desktop, Cursor, and VS Code). Built on the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), it allows AI assistants to manage your site through simple natural language.
+**My Site Hand (AI)** is the ultimate bridge between your WordPress site and your favorite AI tools (like Claude Desktop, Cursor, and VS Code). 
 
-What makes My Site Hand special is the **Zero-Config Setup**. Instead of manually editing JSON files, My Site Hand generates automated terminal commands that configure your AI clients for you instantly.
+Think of it as giving your AI assistant a secure, virtual "hand" to directly type into your WordPress admin, draft posts, manage products, check site health, and optimize SEO—eliminating the hassle of endless copy-pasting.
 
-### 🚀 Key Features:
+Built on the open standard **Model Context Protocol (MCP)** developed by Anthropic (the creators of Claude), this plugin securely exposes safely-gated capabilities (Abilities) to your AI clients so they can interact with your site using simple natural language commands.
 
-*   **One-Click Automated Setup** – No manual JSON editing. Copy a single command to connect Claude Desktop automatically.
-*   **45 Built-in Abilities** – Comprehensive tools for Content, SEO, WooCommerce, Media, and Diagnostics.
-*   **Cross-Platform Support** – Dedicated automated setup steps for **Windows, macOS, and Linux**.
-*   **Native MCP Support** – Full JSON-RPC 2.0 server implementation compatible with all MCP-compliant clients.
-*   **Enterprise-Grade Security** – All tokens are SHA-256 hashed. Granular permissions ensure AI agents only access what you allow.
-*   **Detailed Audit Logging** – Watch every action the AI takes in real-time with our built-in logs.
+### 🚀 What You Can Do with My Site Hand:
+*   **Write & Edit Content** – Ask Claude to draft, edit, format, or publish posts and pages directly on your site.
+*   **AI-Driven SEO Audits** – Let your AI scan Yoast or RankMath metadata, optimize it for targeted keywords, and update titles/descriptions instantly.
+*   **WooCommerce Store Management** – Ask your AI to list low-stock items, draft product listings, check recent orders, or summarize sales analytics.
+*   **Site Health & Diagnostics** – Let the AI inspect PHP error logs, check loopback status, or look up site details to debug issues.
+*   **Zero-Config Automated Setup** – No manual editing of hidden JSON config files. Copy a single command from your WordPress dashboard, paste it into your terminal, and Claude connects automatically!
+*   **Total Safety & Security** – All tokens are SHA-256 hashed. You can toggle specific abilities (like writing or deleting) on/off with simple switches, and monitor everything the AI does in real-time with the built-in **Audit Log**.
 
-—
+---
 
 ### 📦 Included Modules:
 
-**1. Content Management**
-List, read, create, and update posts, pages, and custom post types.
+1.  **Content Manager** (Posts, Pages, and Custom Post Types)
+2.  **SEO Power-Tools** (Compatible with Yoast SEO & RankMath)
+3.  **WooCommerce Store Layer** (Products, Orders, and Analytics)
+4.  **Site Diagnostics & Health** (Error log viewing, system details, image alt-text updates)
 
-**2. SEO Power-Tools (Yoast & RankMath)**
-AI-driven SEO audits, meta-description updates, and focus keyword management.
+---
 
-**3. WooCommerce (Auto-enabled)**
-Manage products, orders, and store analytics through natural language.
-
-**4. Site Diagnostics & Media**
-Site health reports, error log monitoring, bulk media alt-text updates, and more.
+### ⚠️ Important Requirements (Honest & Transparent):
+*   **Node.js**: The automated desktop bridge (`mcp-remote`) requires Node.js installed on your local computer to run.
+*   **SSL/HTTPS**: For security, your site must run on HTTPS so your API tokens remain encrypted in transit.
+*   **Administrator Access**: You must be an administrator to generate API tokens and toggle module permissions.
 
 == Installation ==
 
-1.  Install and activate the plugin.
-2.  Go to **My Site Hand > API Tokens** to generate your secure access key.
-3.  Go to the **My Site Hand Dashboard** and paste your token.
-4.  **Automated Connection**:
-    *   **Step 1**: Run the provided command to install `mcp-remote`.
-    *   **Step 2**: Copy the generated "Connect" command and run it in your terminal.
-5.  Restart Claude Desktop, and you're ready!
+Connecting your AI tools is fast and fully guided:
+
+1.  **Install & Activate**: Search for **My Site Hand** in your WordPress dashboard, install, and activate it.
+2.  **Generate a Token**: Go to **My Site Hand > API Tokens** and click **Create Token**. Give it a label (e.g. "Claude Desktop").
+3.  **Connect in Seconds**: Go to the **How to Use** page in your dashboard:
+    *   **Step 1**: Copy and run the command to install the `mcp-remote` bridge on your computer.
+    *   **Step 2**: Copy the auto-generated connection command (it includes your secure token) and run it in your terminal.
+4.  **Restart & Use**: Restart your Claude Desktop app, and start talking to your website!
 
 == Frequently Asked Questions ==
 
-= Do I need to edit the Claude config file manually? =
-No! My Site Hand generates a command that uses `mcp-remote` to handle the configuration for you automatically on Windows, Mac, or Linux.
+= Is node.js is required?? = 
+Yes. The automated desktop bridge (`mcp-remote`) requires Node.js installed on your local computer to run.
 
-= Is Node.js required? =
-Yes, to use the automated connection feature, you need Node.js installed on your computer to run the `mcp-remote` utility.
+= Is this plugin secure? =
+Yes. Security is our top priority. The plugin uses secure, SHA-256 hashed API tokens. You choose exactly which permissions to grant to each token, and you can revoke access instantly at any time. Furthermore, the built-in **Audit Log** shows you exactly what commands were run, who ran them, and when.
 
-= Can I use this with Cursor or VS Code? =
-Absolutely. The Dashboard provides the MCP Server URL which you can paste directly into Cursor or any IDE that supports MCP.
+= What AI applications are supported? =
+Any application that supports the Model Context Protocol (MCP). This includes **Claude Desktop**, **Cursor IDE**, **VS Code** (via MCP extensions), and **Windsurf**.
 
+= Do I need to edit JSON configuration files? =
+No! Unlike other MCP setups that force you to search for hidden directories and edit configuration files manually, My Site Hand uses a lightweight Node bridge utility to write the configuration for you automatically.
+
+= Does this send my data to third-party servers? =
+No. All MCP communications occur directly between your local AI client and your WordPress site. The plugin does not track, collect, or store your private data on external servers.
 
 == Changelog ==
 
+= 1.0.1 - 9 June 2026=
+*   Added a "Suggest a Feature" page so users can submit feature requests directly to the developer's email.
+*   Improved email deliverability with dynamic "From" headers and real-time failure log captures.
+*   Styled and aligned the admin menu icon in the sidebar with a white background and centered flex alignment.
+*   Added automatic redirection to the dashboard immediately upon plugin activation for faster onboarding.
+*   Added a "How to Use" shortcut link directly on the Plugins page.
+
 = 1.0.0 =
 *   Official Initial Release.
-*   Automated setup for Claude Desktop using `mcp-remote`.
-*   45 abilities across Content, SEO, and WooCommerce modules.
-*   Secure hashed tokens and real-time audit logging.
+*   Automated zero-config setup for Claude Desktop.
+*   Support for Content, SEO (Yoast, RankMath), WooCommerce, and Diagnostics.
+*   Secure token management and real-time audit logs.
 
 == External Services ==
 
 = Link Checker (SEO Module) =
-When the check-broken-links ability is called via the MCP API, this plugin
-sends HTTP HEAD requests to URLs found in your post content to verify they
-are reachable. No personal user data is transmitted — only a standard HTTP
-request is made to each URL being checked. This is triggered only when
-explicitly called by an authorized API token holder.
+When the check-broken-links ability is called via the MCP API, this plugin sends HTTP HEAD requests to URLs found in your post content to verify they are reachable. No personal user data is transmitted — only a standard HTTP request is made to each URL being checked. This is triggered only when explicitly called by an authorized API token holder.
 
 No data is sent to any third-party analytics or tracking service by this plugin.
-
-
-
-

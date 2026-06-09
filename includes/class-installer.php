@@ -28,6 +28,7 @@ class Installer {
 		self::schedule_cron();
 		flush_rewrite_rules();
 		update_option( 'mysitehand_db_version', MYSITEHAND_DB_VERSION );
+		update_option( 'my_site_hand_do_activation_redirect', true );
 	}
 
 	/**

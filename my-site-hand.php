@@ -2,8 +2,8 @@
 /**
  * Plugin Name: My Site Hand (AI)
  * Plugin URI:  https://wordpress.org/plugins/my-site-hand
- * Description: Turn your WordPress site into an AI agent-operable command layer using the Abilities API and Model Context Protocol (MCP). Let Claude Desktop, Cursor, VS Code, and other MCP-compatible AI clients discover, read, and safely operate your WordPress site through natural language.
- * Version:     1.0.0
+ * Description: Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language.
+ * Version:     1.0.1
  * Author:      BuiltByTanin
  * Author URI:  https://github.com/taninrahman21
  * License:     GPL-2.0-or-later
@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
 /**
  * My Site Hand (AI) Plugin Constants.
  */
-define('MYSITEHAND_VERSION', '1.0.0');
+define('MYSITEHAND_VERSION', '1.0.1');
 define('MYSITEHAND_DB_VERSION', '1.0.0');
 define('MYSITEHAND_MIN_PHP', '8.1');
 define('MYSITEHAND_PATH', plugin_dir_path(__FILE__));

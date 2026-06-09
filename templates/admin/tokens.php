@@ -10,7 +10,9 @@ defined('ABSPATH') || exit;
 $my_site_hand_plugin = \MySiteHand\Plugin::get_instance();
 $my_site_hand_auth = $my_site_hand_plugin->get_auth_manager();
 $my_site_hand_registry = $my_site_hand_plugin->get_abilities_registry();
-$my_site_hand_tokens = $my_site_hand_auth->list_tokens(0);
+$my_site_hand_tokens = array_filter($my_site_hand_auth->list_tokens(0), function ($t) {
+	return (int) $t['is_active'] === 1;
+});
 
 $my_site_hand_disabled_abs = (array) get_option('mysitehand_disabled_abilities', []);
 $my_site_hand_all_abilities = $my_site_hand_registry->get_all();
@@ -29,7 +31,7 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 					<h2 class="msh-page-title"><?php echo esc_html__('API Tokens', 'my-site-hand'); ?></h2>
 					<p class="msh-page-desc-inline">
 						<?php 
-						$active_tokens_count = count(array_filter($my_site_hand_tokens, function($t) {
+						$my_site_hand_active_tokens_count = count(array_filter($my_site_hand_tokens, function($t) {
 							$is_active = (int) $t['is_active'] === 1;
 							$is_expired = !empty($t['expires_at']) && strtotime($t['expires_at']) < time();
 							return $is_active && !$is_expired;
@@ -37,7 +39,7 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 						printf(
 							/* translators: %d: count of active tokens */
 							esc_html__('%d active tokens · used by AI clients to authenticate', 'my-site-hand'),
-							$active_tokens_count
+							(int) $my_site_hand_active_tokens_count
 						);
 						?>
 					</p>
@@ -81,28 +83,28 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 						$my_site_hand_status = !$my_site_hand_is_active ? 'revoked' : ($my_site_hand_is_expired ? 'expired' : 'active');
 
 						// Compute Read/Write/Admin permission tags
-						$token_abilities = (array) $my_site_hand_token['abilities'];
-						$has_read = false;
-						$has_write = false;
-						$has_admin = false;
+						$my_site_hand_token_abilities = (array) $my_site_hand_token['abilities'];
+						$my_site_hand_has_read = false;
+						$my_site_hand_has_write = false;
+						$my_site_hand_has_admin = false;
 
-						if (empty($token_abilities)) {
-							$has_read = true;
-							$has_write = true;
-							$has_admin = true;
+						if (empty($my_site_hand_token_abilities)) {
+							$my_site_hand_has_read = true;
+							$my_site_hand_has_write = true;
+							$my_site_hand_has_admin = true;
 						} else {
-							foreach ($token_abilities as $ab_name) {
-								$ab = $my_site_hand_all_abilities[$ab_name] ?? null;
-								if ($ab) {
-									$is_readonly = !empty($ab['annotations']['readonly']);
-									$is_destructive = !empty($ab['annotations']['destructive']);
-									if ($is_readonly) {
-										$has_read = true;
+							foreach ($my_site_hand_token_abilities as $my_site_hand_ab_name) {
+								$my_site_hand_ab = $my_site_hand_all_abilities[$my_site_hand_ab_name] ?? null;
+								if ($my_site_hand_ab) {
+									$my_site_hand_is_readonly = !empty($my_site_hand_ab['annotations']['readonly']);
+									$my_site_hand_is_destructive = !empty($my_site_hand_ab['annotations']['destructive']);
+									if ($my_site_hand_is_readonly) {
+										$my_site_hand_has_read = true;
 									} else {
-										$has_write = true;
+										$my_site_hand_has_write = true;
 									}
-									if ($is_destructive) {
-										$has_admin = true;
+									if ($my_site_hand_is_destructive) {
+										$my_site_hand_has_admin = true;
 									}
 								}
 							}
@@ -119,21 +121,29 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 										<span class="msh-token-card-snippet"><?php echo esc_html('msh_pk_' . substr(md5($my_site_hand_token['created_at'] . $my_site_hand_token['id']), 0, 6) . '...'); ?></span>
 									</div>
 									<div class="msh-token-card-meta-line">
-										<span><?php printf(esc_html__('Created %s', 'my-site-hand'), esc_html(wp_date('M d, Y', strtotime($my_site_hand_token['created_at'])))); ?></span>
+										<span><?php
+											/* translators: %s: formatted date when token was created */
+											printf( esc_html__( 'Created %s', 'my-site-hand' ), esc_html( wp_date( 'M d, Y', strtotime( $my_site_hand_token['created_at'] ) ) ) );
+										?></span>
 										<span class="msh-meta-sep">&bull;</span>
-										<span><?php 
-											echo $my_site_hand_token['last_used'] 
-												? sprintf(esc_html__('Last used %s ago', 'my-site-hand'), esc_html(human_time_diff(strtotime($my_site_hand_token['last_used']))))
-												: esc_html__('Never used', 'my-site-hand'); 
+										<span><?php
+											if ( $my_site_hand_token['last_used'] ) {
+												/* translators: %s: human-readable time difference since token was last used */
+												printf( esc_html__( 'Last used %s ago', 'my-site-hand' ), esc_html( human_time_diff( strtotime( $my_site_hand_token['last_used'] ) ) ) );
+											} else {
+												echo esc_html__( 'Never used', 'my-site-hand' );
+											}
 										?></span>
 										<span class="msh-meta-sep">&bull;</span>
 										<span><?php 
-											if ($my_site_hand_token['expires_at']) {
-												$expiry_time = strtotime($my_site_hand_token['expires_at']);
-												if ($expiry_time < time()) {
-													printf(esc_html__('Expired %s', 'my-site-hand'), esc_html(wp_date('M d, Y', $expiry_time)));
+											if ( $my_site_hand_token['expires_at'] ) {
+												$my_site_hand_expiry_time = strtotime( $my_site_hand_token['expires_at'] );
+												if ( $my_site_hand_expiry_time < time() ) {
+													/* translators: %s: formatted expiry date */
+													printf( esc_html__( 'Expired %s', 'my-site-hand' ), esc_html( wp_date( 'M d, Y', $my_site_hand_expiry_time ) ) );
 												} else {
-													printf(esc_html__('Expires %s', 'my-site-hand'), esc_html(wp_date('M d, Y', $expiry_time)));
+													/* translators: %s: formatted expiry date */
+													printf( esc_html__( 'Expires %s', 'my-site-hand' ), esc_html( wp_date( 'M d, Y', $my_site_hand_expiry_time ) ) );
 												}
 											} else {
 												echo esc_html__('Expires never', 'my-site-hand');
@@ -148,13 +158,13 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 							</div>
 							<div class="msh-token-card-right">
 								<div class="msh-token-card-permissions">
-									<?php if ($has_read): ?>
+									<?php if ($my_site_hand_has_read): ?>
 										<span class="msh-token-perm-tag"><?php echo esc_html__('READ', 'my-site-hand'); ?></span>
 									<?php endif; ?>
-									<?php if ($has_write): ?>
+									<?php if ($my_site_hand_has_write): ?>
 										<span class="msh-token-perm-tag"><?php echo esc_html__('WRITE', 'my-site-hand'); ?></span>
 									<?php endif; ?>
-									<?php if ($has_admin): ?>
+									<?php if ($my_site_hand_has_admin): ?>
 										<span class="msh-token-perm-tag msh-token-perm-tag--admin"><?php echo esc_html__('ADMIN', 'my-site-hand'); ?></span>
 									<?php endif; ?>
 								</div>
@@ -241,21 +251,21 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 							<div id="msh-custom-abilities-wrapper" class="msh-custom-abilities-wrapper" style="display: none;">
 								<div class="msh-abilities-check" style="margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-height: 200px; overflow-y: auto; padding: 12px; border: 1px solid var(--msh-border); border-radius: 4px; background: var(--msh-bg);">
 									<?php foreach ($my_site_hand_abilities as $my_site_hand_ability): 
-										$is_readonly = !empty($my_site_hand_ability['annotations']['readonly']);
-										$is_destructive = !empty($my_site_hand_ability['annotations']['destructive']);
+										$my_site_hand_is_readonly = !empty($my_site_hand_ability['annotations']['readonly']);
+										$my_site_hand_is_destructive = !empty($my_site_hand_ability['annotations']['destructive']);
 										
-										$scope_type = 'write';
-										if ($is_readonly) {
-											$scope_type = 'read';
-										} elseif ($is_destructive) {
-											$scope_type = 'admin';
+										$my_site_hand_scope_type = 'write';
+										if ($my_site_hand_is_readonly) {
+											$my_site_hand_scope_type = 'read';
+										} elseif ($my_site_hand_is_destructive) {
+											$my_site_hand_scope_type = 'admin';
 										}
 									?>
 										<label class="msh-checkbox-label" style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">
 											<input type="checkbox" name="abilities[]"
 												value="<?php echo esc_attr($my_site_hand_ability['name']); ?>"
-												data-scope="<?php echo esc_attr($scope_type); ?>"
-												onchange="mshTokens.onCustomAbilityChange('<?php echo $scope_type; ?>')" />
+												data-scope="<?php echo esc_attr($my_site_hand_scope_type); ?>"
+												onchange="mshTokens.onCustomAbilityChange('<?php echo esc_js( $my_site_hand_scope_type ); ?>')" />
 											<span style="font-size: 13px; font-weight: 500;"><?php echo esc_html($my_site_hand_ability['label']); ?></span>
 										</label>
 									<?php endforeach; ?>
