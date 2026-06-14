@@ -16,6 +16,8 @@ use MySiteHand\Modules\Module_Woocommerce;
 use MySiteHand\Modules\Module_Diagnostics;
 use MySiteHand\Modules\Module_Media;
 use MySiteHand\Modules\Module_Users;
+use MySiteHand\AI\Chat_Controller;
+use MySiteHand\AI\AI_Provider;
 
 /**
  * Plugin class.
@@ -106,6 +108,12 @@ class Plugin {
 	 * @return void
 	 */
 	public function boot(): void {
+		// Load AI helper functions (encryption helpers are global functions).
+		require_once MYSITEHAND_PATH . 'includes/ai/functions.php';
+
+		// Create any tables added since the installed DB version (e.g. chat sessions).
+		Installer::maybe_upgrade();
+
 		$this->init_services();
 		$this->init_modules();
 		$this->register_abilities();
@@ -204,6 +212,13 @@ class Plugin {
 			$this->cache_manager
 		);
 		add_action( 'rest_api_init', [ $rest_controller, 'register_routes' ] );
+
+		// Boot AI Chat controller.
+		$chat_controller = new Chat_Controller(
+			$this->abilities_registry,
+			$this->audit_logger
+		);
+		add_action( 'rest_api_init', [ $chat_controller, 'register_routes' ] );
 	}
 
 	/**
@@ -379,6 +394,9 @@ class Plugin {
 			'mysitehand_cache_ttl',
 			'mysitehand_log_retention_days',
 			'mysitehand_log_level',
+			'mysitehand_ai_provider',
+			'mysitehand_ai_api_key',
+			'mysitehand_ai_model',
 		];
 
 		$option_name = sanitize_key( wp_unslash( $_POST['option_name'] ?? '' ) );
@@ -399,6 +417,24 @@ class Plugin {
 			$option_value = sanitize_text_field( $option_value );
 		} elseif ( 'mysitehand_log_level' === $option_name ) {
 			$option_value = in_array( $option_value, [ 'all', 'errors-only', 'none' ], true ) ? $option_value : 'all';
+		} elseif ( 'mysitehand_ai_provider' === $option_name ) {
+			$option_value = in_array( $option_value, [ 'openai', 'gemini' ], true ) ? $option_value : '';
+		} elseif ( 'mysitehand_ai_model' === $option_name ) {
+			$option_value = sanitize_text_field( $option_value );
+		} elseif ( 'mysitehand_ai_api_key' === $option_name ) {
+			$raw_key = sanitize_text_field( $option_value );
+
+			// An empty submission means "leave the stored key unchanged".
+			if ( '' === $raw_key ) {
+				wp_send_json_success( [ 'saved' => true ] );
+			}
+
+			// Store the key encrypted; never persist it in plain text.
+			$option_value = mysitehand_encrypt_api_key( $raw_key );
+
+			if ( '' === $option_value ) {
+				wp_send_json_error( [ 'message' => __( 'Could not securely store the API key. OpenSSL may be unavailable on this server.', 'my-site-hand' ) ], 500 );
+			}
 		} else {
 			$option_value = sanitize_text_field( $option_value );
 		}

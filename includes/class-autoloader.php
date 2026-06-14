@@ -96,6 +96,8 @@ class Autoloader {
 				return self::$base_dir . 'includes/modules/' . $filename;
 			case 'api':
 				return self::$base_dir . 'api/' . $filename;
+			case 'ai':
+				return self::$base_dir . 'includes/ai/' . $filename;
 			default:
 				return self::$base_dir . 'includes/' . $filename;
 		}

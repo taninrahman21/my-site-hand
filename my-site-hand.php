@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: My Site Hand (AI)
+ * Plugin Name: My Site Hand (AI) - Your Smart Website Assistant
  * Plugin URI:  https://wordpress.org/plugins/my-site-hand
- * Description: Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language.
- * Version:     1.0.1
+ * Description: Let Claude, Cursor, and AI assistants write posts, manage your store, optimize SEO, and run diagnostics on your site using simple natural language. Includes a built-in chat widget!
+ * Version:     1.1.0
  * Author:      BuiltByTanin
  * Author URI:  https://github.com/taninrahman21
  * License:     GPL-2.0-or-later
@@ -21,8 +21,8 @@ defined('ABSPATH') || exit;
 /**
  * My Site Hand (AI) Plugin Constants.
  */
-define('MYSITEHAND_VERSION', '1.0.1');
-define('MYSITEHAND_DB_VERSION', '1.0.0');
+define('MYSITEHAND_VERSION', '1.1.0');
+define('MYSITEHAND_DB_VERSION', '1.2.0');
 define('MYSITEHAND_MIN_PHP', '8.1');
 define('MYSITEHAND_PATH', plugin_dir_path(__FILE__));
 define('MYSITEHAND_BASENAME', plugin_basename(__FILE__));
@@ -57,6 +57,16 @@ if (version_compare(PHP_VERSION, MYSITEHAND_MIN_PHP, '<')) {
 if (file_exists(MYSITEHAND_PATH . 'vendor/autoload.php')) {
 	require_once MYSITEHAND_PATH . 'vendor/autoload.php';
 }
+
+/**
+ * Register the plugin's own autoloader as a fallback.
+ *
+ * The Composer autoloader uses a pre-generated classmap, which does not pick up
+ * class files added after it was built (such as the MySiteHand\AI\ namespace).
+ * Registering this PSR-4-style loader ensures those classes still resolve.
+ */
+require_once MYSITEHAND_PATH . 'includes/class-autoloader.php';
+MySiteHand\Autoloader::register();
 
 /**
  * Bootstrap the plugin.

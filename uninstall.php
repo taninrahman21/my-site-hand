@@ -26,6 +26,8 @@ $wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}mysitehand_tokens`" );
 $wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}mysitehand_audit_log`" );
 // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
 $wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}mysitehand_rate_limits`" );
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
+$wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}mysitehand_chat_sessions`" );
 
 // Delete all plugin options.
 $my_site_hand_options = [
@@ -39,6 +41,10 @@ $my_site_hand_options = [
 	'mysitehand_log_retention_days',
 	'mysitehand_log_level',
 	'mysitehand_delete_data_on_uninstall',
+	'mysitehand_ai_provider',
+	'mysitehand_ai_api_key',
+	'mysitehand_ai_model',
+	'mysitehand_db_version',
 ];
 
 foreach ( $my_site_hand_options as $my_site_hand_option ) {

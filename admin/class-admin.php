@@ -12,6 +12,7 @@ defined('ABSPATH') || exit;
 use MySiteHand\Abilities_Registry;
 use MySiteHand\Auth_Manager;
 use MySiteHand\Audit_Logger;
+use MySiteHand\AI\AI_Provider;
 
 /**
  * Admin class.
@@ -112,6 +113,16 @@ class Admin
 			[$this, 'render_dashboard']
 		);
 
+		// AI Assistant submenu.
+		$this->page_hooks[] = add_submenu_page(
+			'my-site-hand',
+			__('AI Assistant - My Site Hand', 'my-site-hand'),
+			__('AI Assistant', 'my-site-hand'),
+			'manage_options',
+			'my-site-hand-ai-assistant',
+			[$this, 'render_ai_assistant']
+		);
+
 		// Abilities submenu.
 		$this->page_hooks[] = add_submenu_page(
 			'my-site-hand',
@@ -192,6 +203,36 @@ class Admin
 	 */
 	public function enqueue_assets(string $hook): void
 	{
+		// Global Admin Chat Widget assets.
+		wp_enqueue_script('marked-js', MYSITEHAND_URL . 'assets/js/marked.min.js', [], '12.0.0', true);
+		wp_enqueue_script('highlight-js', MYSITEHAND_URL . 'assets/js/highlight.min.js', [], '11.9.0', true);
+		wp_enqueue_style('highlight-css', MYSITEHAND_URL . 'assets/css/github-dark.min.css', [], '11.9.0');
+
+		wp_enqueue_style(
+			'mysitehand-admin-widget',
+			MYSITEHAND_URL . 'assets/css/admin-widget.css',
+			[],
+			MYSITEHAND_VERSION
+		);
+
+		// Don't show the widget on the full-page AI Assistant
+		if (!str_contains($hook, 'ai-assistant')) {
+			wp_enqueue_script(
+				'mysitehand-admin-widget',
+				MYSITEHAND_URL . 'assets/js/admin-widget.js',
+				['marked-js', 'highlight-js'],
+				MYSITEHAND_VERSION,
+				true
+			);
+			wp_localize_script('mysitehand-admin-widget', 'mshFrontendChat', [
+				'restUrl'   => rest_url('my-site-hand/v1/chat/'),
+				'restNonce' => wp_create_nonce('wp_rest'),
+				'iconUrl'   => MYSITEHAND_URL . 'assets/logo.png',
+				'isUsingProxy' => \MySiteHand\AI\AI_Provider::is_using_proxy(),
+				'settingsUrl'  => admin_url('admin.php?page=my-site-hand-settings&tab=ai-assistant'),
+			]);
+		}
+
 		// Check if we're on a my-site-hand page.
 		$is_mysitehand_page = str_contains($hook, 'my-site-hand');
 
@@ -234,6 +275,31 @@ class Admin
 				MYSITEHAND_VERSION,
 				true
 			);
+		}
+
+		// AI Assistant chat JS.
+		if (str_contains($hook, 'ai-assistant')) {
+			wp_enqueue_script(
+				'msh-ai-chat',
+				MYSITEHAND_URL . 'assets/js/ai-chat.js',
+				['mysitehand-admin', 'marked-js', 'highlight-js'],
+				MYSITEHAND_VERSION,
+				true
+			);
+			wp_localize_script('msh-ai-chat', 'mshAiChat', [
+				'restUrl'      => rest_url('my-site-hand/v1/chat/'),
+				'restNonce'    => wp_create_nonce('wp_rest'),
+				'isConfigured' => AI_Provider::is_configured(),
+				'isUsingProxy' => \MySiteHand\AI\AI_Provider::is_using_proxy(),
+				'freeLimit'    => 10,
+				'usageUrl'     => rest_url( 'my-site-hand/v1/chat/usage' ),
+				'provider'     => (string) get_option('mysitehand_ai_provider', ''),
+				'model'        => (string) get_option('mysitehand_ai_model', ''),
+				'models'       => [
+					'openai' => ['gpt-4o', 'gpt-4o-mini', 'gpt-4.1', 'gpt-4.1-mini'],
+					'gemini' => ['gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash'],
+				],
+			]);
 		}
 
 		// Localized data for JavaScript.
@@ -344,6 +410,19 @@ class Admin
 			wp_die(esc_html__('You do not have permission to access this page.', 'my-site-hand'));
 		}
 		require MYSITEHAND_PATH . 'templates/admin/dashboard.php';
+	}
+
+	/**
+	 * Render the AI Assistant chat page.
+	 *
+	 * @return void
+	 */
+	public function render_ai_assistant(): void
+	{
+		if (!current_user_can('manage_options')) {
+			wp_die(esc_html__('You do not have permission to access this page.', 'my-site-hand'));
+		}
+		require_once MYSITEHAND_PATH . 'templates/admin/ai-assistant.php';
 	}
 
 	/**

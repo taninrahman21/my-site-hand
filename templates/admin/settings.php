@@ -84,18 +84,57 @@ $my_site_hand_svg_allowed = [
 			<form method="post" action="options.php">
 				<?php settings_fields('mysitehand_settings'); ?>
 
-				<!-- General Configuration (Full Width) -->
+				<!-- AI Setup Configuration -->
 				<div class="msh-card">
 					<div class="msh-card-header">
-						<h3><?php esc_html_e('General Configuration', 'my-site-hand'); ?></h3>
+						<h3><?php esc_html_e('AI Provider Setup', 'my-site-hand'); ?></h3>
 					</div>
-					<div class="msh-card-body">
+					<div class="msh-card-body" id="msh-api-setup-panel">
+						<div class="msh-settings-notice msh-settings-notice--info">
+							<strong><?php esc_html_e( 'Free AI included.', 'my-site-hand' ); ?></strong>
+							<?php esc_html_e( 'My Site Hand works out of the box with 10 free messages per day — no setup needed.', 'my-site-hand' ); ?>
+							<?php esc_html_e( 'Add your own API key below to get unlimited messages.', 'my-site-hand' ); ?>
+						</div>
+
+						<div class="msh-api-setup-grid" style="margin-top:20px; display:flex; gap:20px; flex-wrap:wrap;">
+							<div class="msh-form-group" style="flex:1; min-width:200px;">
+								<label class="msh-setting-title" for="msh-setup-provider"><?php esc_html_e('Provider', 'my-site-hand'); ?></label>
+								<select id="msh-setup-provider" class="msh-select" style="margin-top:6px; width:100%;">
+									<option value=""><?php esc_html_e('— Select —', 'my-site-hand'); ?></option>
+									<option value="openai" <?php selected(get_option('mysitehand_ai_provider'), 'openai'); ?>><?php esc_html_e('OpenAI', 'my-site-hand'); ?></option>
+									<option value="gemini" <?php selected(get_option('mysitehand_ai_provider'), 'gemini'); ?>><?php esc_html_e('Google Gemini', 'my-site-hand'); ?></option>
+								</select>
+							</div>
+
+							<div class="msh-form-group" style="flex:2; min-width:300px;">
+								<label class="msh-setting-title" for="msh-setup-key"><?php esc_html_e('API Key', 'my-site-hand'); ?></label>
+								<input type="password" id="msh-setup-key" class="msh-input" style="margin-top:6px; width:100%;" autocomplete="off"
+									value=""
+									placeholder="<?php echo get_option('mysitehand_ai_api_key') ? esc_attr('••••••••••••••••') : esc_attr__('Paste your API key…', 'my-site-hand'); ?>" />
+								<div style="font-size: 12px; margin-top: 6px; color: var(--msh-text-muted);">
+									<?php esc_html_e('Get your API key: ', 'my-site-hand'); ?>
+									<a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">OpenAI</a> |
+									<a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google Gemini</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="msh-api-setup-actions" style="margin-top:16px; display:flex; gap:12px; align-items:center;">
+							<button type="button" id="msh-setup-save" class="msh-btn msh-btn--primary">
+								<?php esc_html_e('Save & Activate', 'my-site-hand'); ?>
+							</button>
+							<button type="button" id="msh-setup-test" class="msh-btn msh-btn--ghost">
+								<?php esc_html_e('Test Connection', 'my-site-hand'); ?>
+							</button>
+							<span id="msh-setup-result" class="msh-inline-result" style="font-size:13px; font-weight:500;"></span>
+						</div>
+
+						<hr style="border:0; border-top:1px solid var(--msh-border); margin:24px 0;" />
+
 						<div class="msh-setting-item">
 							<div class="msh-setting-info">
-								<span
-									class="msh-setting-title"><?php esc_html_e('Enable MCP Server', 'my-site-hand'); ?></span>
-								<span
-									class="msh-setting-desc"><?php esc_html_e('Activate the Model Context Protocol server for this site. Disabling this will shut down the endpoint for all agents.', 'my-site-hand'); ?></span>
+								<span class="msh-setting-title"><?php esc_html_e('Enable MCP Server', 'my-site-hand'); ?></span>
+								<span class="msh-setting-desc"><?php esc_html_e('Activate the Model Context Protocol server for this site. Disabling this will shut down the endpoint for all agents.', 'my-site-hand'); ?></span>
 							</div>
 							<label class="msh-switch">
 								<input type="checkbox" name="mysitehand_enabled" value="1" <?php checked(get_option('mysitehand_enabled', true)); ?>
@@ -104,15 +143,13 @@ $my_site_hand_svg_allowed = [
 							</label>
 						</div>
 
-						<div class="msh-setting-item">
-							<div class="msh-setting-info" style="padding-top: 8px;">
-								<span
-									class="msh-setting-title"><?php esc_html_e('Agent Display Name', 'my-site-hand'); ?></span>
-								<span
-									class="msh-setting-desc"><?php esc_html_e('The localized name that AI clients (like Claude or Cursor) will see during initialization.', 'my-site-hand'); ?></span>
+						<div class="msh-setting-item" style="margin-top: 16px;">
+							<div class="msh-setting-info">
+								<span class="msh-setting-title"><?php esc_html_e('Agent Display Name', 'my-site-hand'); ?></span>
+								<span class="msh-setting-desc"><?php esc_html_e('The localized name that AI clients (like Claude or Cursor) will see during initialization.', 'my-site-hand'); ?></span>
 								<input type="text" id="mysitehand_display_name" name="mysitehand_display_name"
 									value="<?php echo esc_attr(get_option('mysitehand_display_name', '')); ?>"
-									class="msh-input" style="margin-top: 12px; max-width: 400px;"
+									class="msh-input" style="margin-top: 8px; max-width: 400px;"
 									placeholder="<?php esc_attr_e('e.g. My Website Agent', 'my-site-hand'); ?>"
 									onblur="msh.saveOption('mysitehand_display_name', this.value)" />
 							</div>
@@ -299,6 +336,8 @@ $my_site_hand_svg_allowed = [
 
 
 			</form>
+			
+
 		</div>
 
 		<?php require MYSITEHAND_PATH . 'templates/partials/footer.php'; ?>

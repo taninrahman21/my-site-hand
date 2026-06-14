@@ -97,6 +97,61 @@ class Installer {
 		) {$charset_collate};";
 
 		dbDelta( $sql_rate );
+
+		// Table: mysitehand_chat_sessions (AI Assistant conversation history).
+		$table_chat = $wpdb->prefix . 'mysitehand_chat_sessions';
+		$sql_chat   = "CREATE TABLE {$table_chat} (
+			id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+			session_id VARCHAR(64) NOT NULL,
+			user_id BIGINT(20) UNSIGNED NOT NULL,
+			role VARCHAR(20) NOT NULL,
+			content LONGTEXT NOT NULL,
+			tool_name VARCHAR(255) DEFAULT NULL,
+			tool_status VARCHAR(20) DEFAULT NULL,
+			created_at DATETIME NOT NULL,
+			PRIMARY KEY (id),
+			KEY session_id (session_id),
+			KEY user_id (user_id)
+		) {$charset_collate};";
+
+		dbDelta( $sql_chat );
+
+		// Table: mysitehand_chat_threads (AI Assistant conversation threads).
+		$table_threads = $wpdb->prefix . 'mysitehand_chat_threads';
+		$sql_threads   = "CREATE TABLE {$table_threads} (
+			id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+			session_id VARCHAR(64) NOT NULL,
+			user_id BIGINT(20) UNSIGNED NOT NULL,
+			title VARCHAR(255) NOT NULL,
+			updated_at DATETIME NOT NULL,
+			created_at DATETIME NOT NULL,
+			PRIMARY KEY (id),
+			UNIQUE KEY session_id (session_id),
+			KEY user_id (user_id)
+		) {$charset_collate};";
+
+		dbDelta( $sql_threads );
+	}
+
+	/**
+	 * Run database upgrades for already-active installs.
+	 *
+	 * Compares the stored DB version against MYSITEHAND_DB_VERSION and re-runs
+	 * the table creation (dbDelta is safe to call repeatedly) when they differ,
+	 * so new tables — such as mysitehand_chat_sessions — are created on update
+	 * without requiring a manual reactivation.
+	 *
+	 * @return void
+	 */
+	public static function maybe_upgrade(): void {
+		$installed = (string) get_option( 'mysitehand_db_version', '0' );
+
+		if ( version_compare( $installed, MYSITEHAND_DB_VERSION, '>=' ) ) {
+			return;
+		}
+
+		self::create_tables();
+		update_option( 'mysitehand_db_version', MYSITEHAND_DB_VERSION );
 	}
 
 	/**
