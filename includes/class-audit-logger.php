@@ -55,7 +55,7 @@ class Audit_Logger {
 			? substr( (string) $data['result_summary'], 0, 500 )
 			: null;
 
-		$ip_address = $this->get_client_ip();
+		$ip_address = Ip_Utils::get_client_ip();
 		$user_agent = isset( $_SERVER['HTTP_USER_AGENT'] )
 			? substr( sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ), 0, 500 )
 			: '';
@@ -275,36 +275,6 @@ class Audit_Logger {
 		return (int) $wpdb->query( "DELETE FROM {$wpdb->prefix}mysitehand_audit_log" );
 	}
 
-	/**
-	 * Get the client's real IP address.
-	 *
-	 * @return string IP address.
-	 */
-	private function get_client_ip(): string {
-		$ip_keys = [
-			'HTTP_CF_CONNECTING_IP',
-			'HTTP_CLIENT_IP',
-			'HTTP_X_FORWARDED_FOR',
-			'HTTP_X_FORWARDED',
-			'HTTP_X_CLUSTER_CLIENT_IP',
-			'HTTP_FORWARDED_FOR',
-			'HTTP_FORWARDED',
-			'REMOTE_ADDR',
-		];
-
-		foreach ( $ip_keys as $key ) {
-			if ( isset( $_SERVER[ $key ] ) ) {
-				$ip = sanitize_text_field( wp_unslash( $_SERVER[ $key ] ) );
-				// Handle comma-separated IPs (X-Forwarded-For).
-				$ip = trim( explode( ',', $ip )[0] );
-				if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
-					return $ip;
-				}
-			}
-		}
-
-		return '0.0.0.0';
-	}
 }
 
 

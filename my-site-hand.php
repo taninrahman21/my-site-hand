@@ -3,7 +3,7 @@
  * Plugin Name: My Site Hand (AI)
  * Plugin URI:  https://wordpress.org/plugins/my-site-hand
  * Description: Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language.
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      BuiltByTanin
  * Author URI:  https://github.com/taninrahman21
  * License:     GPL-2.0-or-later
@@ -21,8 +21,8 @@ defined('ABSPATH') || exit;
 /**
  * My Site Hand (AI) Plugin Constants.
  */
-define('MYSITEHAND_VERSION', '1.0.1');
-define('MYSITEHAND_DB_VERSION', '1.0.0');
+define('MYSITEHAND_VERSION', '1.0.2');
+define('MYSITEHAND_DB_VERSION', '1.1.0');
 define('MYSITEHAND_MIN_PHP', '8.1');
 define('MYSITEHAND_PATH', plugin_dir_path(__FILE__));
 define('MYSITEHAND_BASENAME', plugin_basename(__FILE__));
@@ -76,6 +76,36 @@ add_action(
 			}
 			update_option('mysitehand_enabled_modules', $my_site_hand_default_modules);
 			update_option('mysitehand_modules_restored_v1', 1);
+		}
+
+		// One-time migration for token abilities.
+		if (!get_option('mysitehand_token_abilities_migrated_v1')) {
+			global $wpdb;
+			$table = $wpdb->prefix . 'mysitehand_tokens';
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+			$wpdb->query("UPDATE {$table} SET abilities = '[\"*\"]' WHERE abilities = '' OR abilities = '[]' OR abilities IS NULL");
+			
+				set_transient('mysitehand_token_migration_notice', 1, WEEK_IN_SECONDS);
+			update_option('mysitehand_token_abilities_migrated_v1', 1);
+		}
+
+		if (get_transient('mysitehand_token_migration_notice')) {
+			add_action('admin_notices', function () {
+				echo '<div class="notice notice-info is-dismissible"><p>' . 
+					wp_kses_post(sprintf(
+						/* translators: %s: URL to tokens page */
+						__('<strong>My Site Hand Security Update:</strong> API Token permissions are now enforced strictly. Your existing tokens have been preserved with full access to prevent connection breaks. Please <a href="%s">review your tokens</a> to narrow their scope.', 'my-site-hand'),
+						admin_url('admin.php?page=my-site-hand-tokens')
+					)) . 
+					'</p></div>';
+				delete_transient('mysitehand_token_migration_notice');
+			});
+		}
+
+		// Schema upgrade for IP allowlist (Chunk 3).
+		if (version_compare(get_option('mysitehand_db_version', '1.0.0'), MYSITEHAND_DB_VERSION, '<')) {
+			MySiteHand\Installer::create_tables();
+			update_option('mysitehand_db_version', MYSITEHAND_DB_VERSION);
 		}
 	}
 );

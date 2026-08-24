@@ -245,14 +245,11 @@ class MCP_Server {
 	private function handle_tools_list( mixed $id, array $token ): \WP_REST_Response {
 		$schemas = $this->registry->get_all_as_mcp_tool_schemas();
 
-		// If token has ability restrictions, filter the list.
-		if ( ! empty( $token['abilities'] ) ) {
-			$allowed = $token['abilities'];
-			$schemas = array_values( array_filter(
-				$schemas,
-				static fn( array $schema ) => in_array( $schema['name'], $allowed, true )
-			) );
-		}
+		// Filter tools based on token authorization.
+		$schemas = array_values( array_filter(
+			$schemas,
+			fn( array $schema ) => $this->auth->token_can( $token, $schema['name'] )
+		) );
 
 		// Sanitize tool names for MCP spec compliance (no slashes allowed).
 		$schemas = array_map( function ( array $schema ): array {
@@ -283,7 +280,7 @@ class MCP_Server {
 		$token_id = (int) $token['id'];
 
 		// Check token ability restrictions.
-		if ( ! empty( $token['abilities'] ) && ! in_array( $tool_name, $token['abilities'], true ) ) {
+		if ( ! $this->auth->token_can( $token, $tool_name ) ) {
 			$this->audit->log( [
 				'token_id'      => $token_id,
 				'user_id'       => $token['user_id'],

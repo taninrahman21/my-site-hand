@@ -1,14 +1,14 @@
-=== My Site Hand (AI) ===
+=== My Site Hand – AI Assistant & MCP Server for WordPress ===
 Contributors: builtbytanin
-Tags: ai, claude, cursor, agent, automation
+Tags: ai, ai assistant, claude, mcp, automation
 Requires at least: 6.2
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language.
+Connect Claude, Cursor, or any MCP client to WordPress. Write posts, manage WooCommerce, optimize SEO, and run diagnostics in plain language.
 
 == Description ==
 
@@ -36,6 +36,14 @@ Built on the open standard **Model Context Protocol (MCP)** developed by Anthrop
 4.  **Site Diagnostics & Health** (Error log viewing, system details, image alt-text updates)
 
 ---
+
+### 🔒 Security
+
+*   API tokens are SHA-256 hashed — the raw token is shown once and never stored.
+*   Every token is scoped to specific abilities. A token can only do what you explicitly allow.
+*   Optional IP allowlist restricts a token to specific addresses or CIDR ranges.
+*   Tokens are sent via the Authorization header, never in the URL.
+*   Every action is written to a searchable audit log with configurable retention.
 
 ### ⚠️ Important Requirements (Honest & Transparent):
 *   **Node.js**: The automated desktop bridge (`mcp-remote`) requires Node.js installed on your local computer to run.
@@ -72,6 +80,14 @@ No. All MCP communications occur directly between your local AI client and your 
 
 == Changelog ==
 
+= 1.0.2 - 24 August 2026 =
+*   **Security:** Tokens created without an explicit ability selection no longer default to full access. Existing tokens are migrated automatically and continue to work unchanged.
+*   **Security:** API tokens are no longer accepted via URL query string by default. Use the Authorization header instead. An opt-in setting remains available for clients that cannot send headers.
+*   **New:** Optional per-token IP allowlist with CIDR range support.
+*   **New:** Trusted proxy setting for sites behind Cloudflare or a reverse proxy.
+*   **Improved:** Token creation now clearly distinguishes full access from limited access.
+*   **Fixed:** Database schema version was not being stored after an upgrade, causing unnecessary schema checks on every page load.
+
 = 1.0.1 - 9 June 2026=
 *   Added a "Suggest a Feature" page so users can submit feature requests directly to the developer's email.
 *   Improved email deliverability with dynamic "From" headers and real-time failure log captures.
@@ -84,6 +100,11 @@ No. All MCP communications occur directly between your local AI client and your 
 *   Automated zero-config setup for Claude Desktop.
 *   Support for Content, SEO (Yoast, RankMath), WooCommerce, and Diagnostics.
 *   Secure token management and real-time audit logs.
+
+== Upgrade Notice ==
+
+= 1.0.2 =
+Security update. Token permissions are now enforced strictly. Your existing tokens are migrated automatically and will keep working. Please review your tokens after updating to narrow their scope.
 
 == External Services ==
 

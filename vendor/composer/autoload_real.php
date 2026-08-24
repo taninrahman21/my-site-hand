@@ -36,6 +36,3 @@ class ComposerAutoloaderInit62af73b65723548643c573aa2be8003e
         return $loader;
     }
 }
-
-
-

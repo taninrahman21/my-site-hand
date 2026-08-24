@@ -17,6 +17,7 @@ return array(
     'MySiteHand\\Deactivator' => $baseDir . '/includes/class-deactivator.php',
     'MySiteHand\\Error_Handler' => $baseDir . '/includes/class-error-handler.php',
     'MySiteHand\\Installer' => $baseDir . '/includes/class-installer.php',
+    'MySiteHand\\Ip_Utils' => $baseDir . '/includes/class-ip-utils.php',
     'MySiteHand\\MCP_Server' => $baseDir . '/includes/class-mcp-server.php',
     'MySiteHand\\Modules\\Module_Base' => $baseDir . '/includes/modules/class-module-base.php',
     'MySiteHand\\Modules\\Module_Content' => $baseDir . '/includes/modules/class-module-content.php',
@@ -28,6 +29,3 @@ return array(
     'MySiteHand\\Plugin' => $baseDir . '/includes/class-plugin.php',
     'MySiteHand\\Rate_Limiter' => $baseDir . '/includes/class-rate-limiter.php',
 );
-
-
-

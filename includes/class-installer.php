@@ -36,7 +36,7 @@ class Installer {
 	 *
 	 * @return void
 	 */
-	private static function create_tables(): void {
+	public static function create_tables(): void {
 		global $wpdb;
 
 		$charset_collate = $wpdb->get_charset_collate();
@@ -51,6 +51,7 @@ class Installer {
 			label VARCHAR(255) NOT NULL,
 			user_id BIGINT(20) UNSIGNED NOT NULL,
 			abilities LONGTEXT NOT NULL,
+			allowed_ips VARCHAR(500) DEFAULT NULL,
 			expires_at DATETIME DEFAULT NULL,
 			last_used DATETIME DEFAULT NULL,
 			is_active TINYINT(1) NOT NULL DEFAULT 1,
@@ -115,6 +116,8 @@ class Installer {
 			'mysitehand_display_name'           => get_bloginfo( 'name' ) . ' Agent',
 			'mysitehand_log_level'              => 'all',
 			'mysitehand_delete_data_on_uninstall' => false,
+			'mysitehand_allow_query_token'      => false,
+			'mysitehand_trust_proxy'            => false,
 		];
 
 		foreach ( $defaults as $option => $value ) {

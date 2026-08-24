@@ -32,22 +32,24 @@ class Auth_Manager {
 		$raw_token  = bin2hex( random_bytes( 32 ) );
 		$token_hash = hash( 'sha256', $raw_token );
 
-		$abilities   = $options['abilities'] ?? [];
+		$abilities   = $options['abilities'] ?? [ '*' ];
+		$allowed_ips = isset( $options['allowed_ips'] ) && ! empty( trim( $options['allowed_ips'] ) ) ? trim( $options['allowed_ips'] ) : null;
 		$expires_at  = $options['expires_at'] ?? null;
 
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
 		$wpdb->insert(
 			$wpdb->prefix . 'mysitehand_tokens',
 			[
-				'token_hash' => $token_hash,
-				'label'      => sanitize_text_field( $label ),
-				'user_id'    => $user_id,
-				'abilities'  => wp_json_encode( $abilities ),
-				'expires_at' => $expires_at,
-				'is_active'  => 1,
-				'created_at' => current_time( 'mysql' ),
+				'token_hash'  => $token_hash,
+				'label'       => sanitize_text_field( $label ),
+				'user_id'     => $user_id,
+				'abilities'   => wp_json_encode( $abilities ),
+				'allowed_ips' => $allowed_ips,
+				'expires_at'  => $expires_at,
+				'is_active'   => 1,
+				'created_at'  => current_time( 'mysql' ),
 			],
-			[ '%s', '%s', '%d', '%s', '%s', '%d', '%s' ]
+			[ '%s', '%s', '%d', '%s', '%s', '%s', '%d', '%s' ]
 		);
 
 		$token_id = (int) $wpdb->insert_id;
@@ -92,6 +94,12 @@ class Auth_Manager {
 			if ( $expires && $expires < time() ) {
 				return new \WP_Error( 'token_expired', __( 'Token has expired.', 'my-site-hand' ), [ 'status' => 401 ] );
 			}
+		}
+
+		// Check IP allowlist.
+		$client_ip = Ip_Utils::get_client_ip();
+		if ( ! Ip_Utils::is_ip_allowed( $client_ip, $token['allowed_ips'] ?? null ) ) {
+			return new \WP_Error( 'ip_not_allowed', __( 'IP address not allowed for this token.', 'my-site-hand' ), [ 'status' => 401 ] );
 		}
 
 		// Update last_used timestamp.
@@ -197,14 +205,14 @@ class Auth_Manager {
 		if ( 0 === $user_id ) {
 			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 			$tokens = $wpdb->get_results(
-				"SELECT id, label, user_id, abilities, expires_at, last_used, is_active, created_at FROM {$wpdb->prefix}mysitehand_tokens ORDER BY created_at DESC",
+				"SELECT id, label, user_id, abilities, allowed_ips, expires_at, last_used, is_active, created_at FROM {$wpdb->prefix}mysitehand_tokens ORDER BY created_at DESC",
 				ARRAY_A
 			);
 		} else {
 			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 			$tokens = $wpdb->get_results(
 				$wpdb->prepare(
-					"SELECT id, label, user_id, abilities, expires_at, last_used, is_active, created_at FROM {$wpdb->prefix}mysitehand_tokens WHERE user_id = %d ORDER BY created_at DESC",
+					"SELECT id, label, user_id, abilities, allowed_ips, expires_at, last_used, is_active, created_at FROM {$wpdb->prefix}mysitehand_tokens WHERE user_id = %d ORDER BY created_at DESC",
 					$user_id
 				),
 				ARRAY_A
@@ -283,10 +291,12 @@ class Auth_Manager {
 		}
 
 		// Fall back to query param (for SSE clients).
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		if ( isset( $_GET['token'] ) ) {
+		if ( get_option( 'mysitehand_allow_query_token', false ) ) {
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			return sanitize_text_field( wp_unslash( $_GET['token'] ) );
+			if ( isset( $_GET['token'] ) ) {
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				return sanitize_text_field( wp_unslash( $_GET['token'] ) );
+			}
 		}
 
 		return null;
@@ -321,7 +331,7 @@ class Auth_Manager {
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$token = $wpdb->get_row(
 			$wpdb->prepare(
-				"SELECT id, label, user_id, abilities, expires_at, last_used, is_active, created_at FROM {$wpdb->prefix}mysitehand_tokens WHERE id = %d",
+				"SELECT id, label, user_id, abilities, allowed_ips, expires_at, last_used, is_active, created_at FROM {$wpdb->prefix}mysitehand_tokens WHERE id = %d",
 				$token_id
 			),
 			ARRAY_A
@@ -345,6 +355,25 @@ class Auth_Manager {
 		global $wpdb;
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		return (int) $wpdb->query( "DELETE FROM {$wpdb->prefix}mysitehand_tokens" );
+	}
+
+	/**
+	 * Check if a token is authorized for a specific ability.
+	 *
+	 * @param array<string, mixed> $token   Token record.
+	 * @param string               $ability Ability name (e.g., 'my-site-hand/list-posts').
+	 * @return bool True if authorized, false otherwise.
+	 */
+	public function token_can( array $token, string $ability ): bool {
+		if ( empty( $token['abilities'] ) || ! is_array( $token['abilities'] ) ) {
+			return false;
+		}
+
+		if ( in_array( '*', $token['abilities'], true ) ) {
+			return true;
+		}
+
+		return in_array( $ability, $token['abilities'], true );
 	}
 }
 

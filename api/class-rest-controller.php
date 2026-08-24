@@ -153,6 +153,10 @@ class Rest_Controller {
 						'expires_at' => [
 							'default' => null,
 						],
+						'allowed_ips' => [
+							'default' => '',
+							'sanitize_callback' => 'sanitize_textarea_field',
+						],
 					],
 				],
 			]
@@ -322,9 +326,26 @@ class Rest_Controller {
 			return new \WP_REST_Response( [ 'message' => __( 'Label is required.', 'my-site-hand' ) ], 400 );
 		}
 
+		$abilities = array_map( 'sanitize_text_field', (array) $request->get_param( 'abilities' ) );
+		if ( ! in_array( '*', $abilities, true ) && empty( $abilities ) ) {
+			return new \WP_REST_Response( [ 'message' => __( 'Limited access tokens must select at least one ability.', 'my-site-hand' ) ], 400 );
+		}
+
+		$allowed_ips_raw = $request->get_param( 'allowed_ips' );
+		if ( ! empty( $allowed_ips_raw ) ) {
+			$ips = array_filter( array_map( 'trim', explode( ',', $allowed_ips_raw ) ) );
+			foreach ( $ips as $ip ) {
+				// Basic regex validation for IPv4/IPv6/CIDR
+				if ( ! preg_match( '/^[a-fA-F0-9\.:]+(\/\d{1,2})?$/', $ip ) ) {
+					return new \WP_REST_Response( [ 'message' => sprintf( __( 'Invalid IP or CIDR format: %s', 'my-site-hand' ), esc_html( $ip ) ) ], 400 );
+				}
+			}
+		}
+
 		$options = [
-			'abilities'  => array_map( 'sanitize_text_field', (array) $request->get_param( 'abilities' ) ),
-			'expires_at' => $request->get_param( 'expires_at' ),
+			'abilities'   => $abilities,
+			'expires_at'  => $request->get_param( 'expires_at' ),
+			'allowed_ips' => $allowed_ips_raw,
 		];
 
 		$result = $this->auth->generate_token( $user_id, $label, $options );

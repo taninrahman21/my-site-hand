@@ -646,7 +646,7 @@ $my_site_hand_audit_page_url     = admin_url('admin.php?page=my-site-hand-audit'
 								</div>
 								
 								<p style="margin: 12px 0 0; font-size: 12px; color: var(--msh-text-muted); line-height: 1.4;">
-									<em>* Note: Make sure to include the API token parameter when connecting manually, or authenticate via the environment headers. Using the full copied URL with your token is recommended.</em>
+									<em>* Note: You must authenticate by providing your token in the <code>Authorization: Bearer YOUR_TOKEN</code> header. Passing the token directly in the URL query string is disabled by default for security reasons.</em>
 								</p>
 							</div>
 						</div>

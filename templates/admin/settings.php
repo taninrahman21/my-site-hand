@@ -117,6 +117,20 @@ $my_site_hand_svg_allowed = [
 									onblur="msh.saveOption('mysitehand_display_name', this.value)" />
 							</div>
 						</div>
+
+						<div class="msh-setting-item" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--msh-border);">
+							<div class="msh-setting-info">
+								<span
+									class="msh-setting-title"><?php esc_html_e('Trust Proxy Headers', 'my-site-hand'); ?></span>
+								<span
+									class="msh-setting-desc"><?php esc_html_e('Enable this only if your site sits behind a trusted reverse proxy (e.g. Cloudflare). Allows reading X-Forwarded-For to determine the true client IP for the allowlist.', 'my-site-hand'); ?></span>
+							</div>
+							<label class="msh-switch">
+								<input type="checkbox" name="mysitehand_trust_proxy" value="1" <?php checked(get_option('mysitehand_trust_proxy', false)); ?>
+									onchange="msh.saveOption('mysitehand_trust_proxy', this.checked)" />
+								<span class="msh-slider"></span>
+							</label>
+						</div>
 					</div>
 				</div>
 
@@ -205,6 +219,20 @@ $my_site_hand_svg_allowed = [
 										</option>
 										<option value="none" <?php selected(get_option('mysitehand_log_level'), 'none'); ?>><?php esc_html_e('Off', 'my-site-hand'); ?></option>
 									</select>
+								</div>
+								
+								<div class="msh-form-group" style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--msh-border);">
+									<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;">
+										<div class="msh-setting-info">
+											<span class="msh-setting-title" style="margin-bottom: 4px; display: block;"><?php esc_html_e('Allow token in URL query string', 'my-site-hand'); ?></span>
+											<span class="msh-setting-desc" style="font-size: 13px; color: var(--msh-text-secondary); line-height: 1.4; display: block;"><?php esc_html_e('Not recommended. Tokens sent this way are recorded in server logs and browser history. Enable only if your MCP client cannot send an Authorization header.', 'my-site-hand'); ?></span>
+										</div>
+										<label class="msh-switch">
+											<input type="checkbox" name="mysitehand_allow_query_token" value="1" <?php checked(get_option('mysitehand_allow_query_token', false)); ?>
+												onchange="msh.saveOption('mysitehand_allow_query_token', this.checked)" />
+											<span class="msh-slider"></span>
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>

@@ -119,6 +119,11 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 									<div class="msh-token-card-title-line">
 										<strong class="msh-token-card-label"><?php echo esc_html($my_site_hand_token['label']); ?></strong>
 										<span class="msh-token-card-snippet"><?php echo esc_html('msh_pk_' . substr(md5($my_site_hand_token['created_at'] . $my_site_hand_token['id']), 0, 6) . '...'); ?></span>
+										<?php if ( ! empty( $my_site_hand_token['allowed_ips'] ) ): ?>
+											<span class="msh-token-ip-lock" title="<?php echo esc_attr( sprintf( __( 'Restricted to IPs: %s', 'my-site-hand' ), $my_site_hand_token['allowed_ips'] ) ); ?>">
+												<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; color: var(--msh-text-secondary); vertical-align: middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+											</span>
+										<?php endif; ?>
 									</div>
 									<div class="msh-token-card-meta-line">
 										<span><?php
@@ -158,14 +163,18 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 							</div>
 							<div class="msh-token-card-right">
 								<div class="msh-token-card-permissions">
-									<?php if ($my_site_hand_has_read): ?>
-										<span class="msh-token-perm-tag"><?php echo esc_html__('READ', 'my-site-hand'); ?></span>
-									<?php endif; ?>
-									<?php if ($my_site_hand_has_write): ?>
-										<span class="msh-token-perm-tag"><?php echo esc_html__('WRITE', 'my-site-hand'); ?></span>
-									<?php endif; ?>
-									<?php if ($my_site_hand_has_admin): ?>
-										<span class="msh-token-perm-tag msh-token-perm-tag--admin"><?php echo esc_html__('ADMIN', 'my-site-hand'); ?></span>
+									<?php if (in_array('*', $my_site_hand_token_abilities, true)): ?>
+										<span class="msh-token-perm-tag msh-token-perm-tag--admin"><?php echo esc_html__('FULL ACCESS', 'my-site-hand'); ?></span>
+									<?php else: ?>
+										<?php if ($my_site_hand_has_read): ?>
+											<span class="msh-token-perm-tag"><?php echo esc_html__('READ', 'my-site-hand'); ?></span>
+										<?php endif; ?>
+										<?php if ($my_site_hand_has_write): ?>
+											<span class="msh-token-perm-tag"><?php echo esc_html__('WRITE', 'my-site-hand'); ?></span>
+										<?php endif; ?>
+										<?php if ($my_site_hand_has_admin): ?>
+											<span class="msh-token-perm-tag msh-token-perm-tag--admin"><?php echo esc_html__('ADMIN', 'my-site-hand'); ?></span>
+										<?php endif; ?>
 									<?php endif; ?>
 								</div>
 								<div class="msh-token-card-actions">
@@ -209,7 +218,19 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 						<!-- Scopes -->
 						<div class="msh-form-group">
 							<label class="msh-form-label-caps"><?php echo esc_html__('SCOPES', 'my-site-hand'); ?></label>
-							<div class="msh-scopes-list">
+							<div class="msh-access-type-radios" style="margin-bottom: 16px;">
+								<label class="msh-radio-label" style="display: block; margin-bottom: 8px;">
+									<input type="radio" name="access_type" value="full" checked onchange="mshTokens.onAccessTypeChange()" />
+									<strong style="font-size: 13px;"><?php echo esc_html__('Full access', 'my-site-hand'); ?></strong> — <?php echo esc_html__('all current and future abilities', 'my-site-hand'); ?>
+								</label>
+								<label class="msh-radio-label" style="display: block;">
+									<input type="radio" name="access_type" value="limited" onchange="mshTokens.onAccessTypeChange()" />
+									<strong style="font-size: 13px;"><?php echo esc_html__('Limited access', 'my-site-hand'); ?></strong> — <?php echo esc_html__('select specific abilities', 'my-site-hand'); ?>
+								</label>
+							</div>
+
+							<div id="msh-scopes-selection-area" style="display: none;">
+								<div class="msh-scopes-list">
 								<!-- Read Card -->
 								<div class="msh-scope-card" onclick="mshTokens.toggleScopeCard('read')">
 									<input type="checkbox" id="msh-scope-read" class="msh-scope-checkbox" onchange="mshTokens.onScopeCheckboxChange(event, 'read')" onclick="event.stopPropagation()" />
@@ -271,6 +292,10 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 									<?php endforeach; ?>
 								</div>
 							</div>
+								<div id="msh-scopes-validation-msg" style="display: none; color: #d63638; font-size: 12px; margin-top: 8px;">
+									<?php echo esc_html__('Please select at least one ability for limited access.', 'my-site-hand'); ?>
+								</div>
+							</div>
 						</div>
 
 						<!-- Expires -->
@@ -283,6 +308,20 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 								<option value="1_year"><?php echo esc_html__('In 1 year', 'my-site-hand'); ?></option>
 								<option value="never"><?php echo esc_html__('Never', 'my-site-hand'); ?></option>
 							</select>
+						</div>
+
+						<!-- Allowed IPs -->
+						<div class="msh-form-group">
+							<label class="msh-form-label-caps" for="msh-token-allowed-ips"><?php echo esc_html__('ALLOWED IPS (OPTIONAL)', 'my-site-hand'); ?></label>
+							<textarea id="msh-token-allowed-ips" name="allowed_ips" class="msh-input" rows="2"
+								placeholder="<?php esc_attr_e('203.0.113.45, 198.51.100.0/24', 'my-site-hand'); ?>" oninput="mshTokens.updateSubmitButtonState()"></textarea>
+							<p class="msh-hint" style="margin-top: 4px; font-size: 12px; color: var(--msh-text-muted);">
+								<?php echo esc_html__('Comma-separated. CIDR notation is supported for IPv4 only. Leave empty to allow all IPs.', 'my-site-hand'); ?>
+							</p>
+							<button type="button" class="msh-btn msh-btn--ghost" style="margin-top: 8px; font-size: 12px; padding: 4px 8px;" onclick="mshTokens.insertCurrentIp('<?php echo esc_js(\MySiteHand\Ip_Utils::get_client_ip()); ?>')">
+								<?php echo esc_html__('Insert current IP', 'my-site-hand'); ?>
+							</button>
+							<div id="msh-ips-validation-msg" style="display: none; color: #d63638; font-size: 12px; margin-top: 4px;"></div>
 						</div>
 					</form>
 				</div>

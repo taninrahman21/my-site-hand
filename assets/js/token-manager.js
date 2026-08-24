@@ -130,15 +130,25 @@
 				expiresAt = date.toISOString().split('T')[0]; // YYYY-MM-DD
 			}
 
-			// Collect checked abilities.
-			const abilityCheckboxes = document.querySelectorAll('input[name="abilities[]"]:checked');
-			const abilities = Array.from(abilityCheckboxes).map(cb => cb.value);
+			// Collect checked abilities or set to full access.
+			let abilities = [];
+			const isFull = document.querySelector('input[name="access_type"]:checked')?.value === 'full';
+			if (isFull) {
+				abilities = ['*'];
+			} else {
+				const abilityCheckboxes = document.querySelectorAll('input[name="abilities[]"]:checked');
+				abilities = Array.from(abilityCheckboxes).map(cb => cb.value);
+			}
+
+			// Collect allowed ips
+			const allowedIpsText = document.getElementById('msh-token-allowed-ips')?.value?.trim() || '';
 
 			// Build payload.
 			const payload = {
 				label: label,
 				abilities: abilities,
-				expires_at: expiresAt
+				expires_at: expiresAt,
+				allowed_ips: allowedIpsText
 			};
 
 			const btn = document.getElementById('msh-submit-token');
@@ -257,6 +267,18 @@
 		},
 
 		/**
+		 * Handle change of access type (full vs limited).
+		 */
+		onAccessTypeChange: function () {
+			const isFull = document.querySelector('input[name="access_type"]:checked')?.value === 'full';
+			const scopesArea = document.getElementById('msh-scopes-selection-area');
+			if (scopesArea) {
+				scopesArea.style.display = isFull ? 'none' : 'block';
+			}
+			this.updateSubmitButtonState();
+		},
+
+		/**
 		 * Enable / disable generate token button.
 		 */
 		updateSubmitButtonState: function () {
@@ -264,19 +286,66 @@
 			const btn = document.getElementById('msh-submit-token');
 			if (!btn) return;
 
+			const isFull = document.querySelector('input[name="access_type"]:checked')?.value === 'full';
 			const hasCheckedAbilities = document.querySelectorAll('input[name="abilities[]"]:checked').length > 0;
-			const hasCheckedPreset = document.getElementById('msh-scope-read')?.checked ||
-				document.getElementById('msh-scope-write')?.checked ||
-				document.getElementById('msh-scope-admin')?.checked ||
-				document.getElementById('msh-scope-custom')?.checked;
+			
+			const validationMsg = document.getElementById('msh-scopes-validation-msg');
+			if (!isFull && !hasCheckedAbilities) {
+				if (validationMsg) validationMsg.style.display = 'block';
+			} else {
+				if (validationMsg) validationMsg.style.display = 'none';
+			}
 
-			if (label && (hasCheckedAbilities || hasCheckedPreset)) {
+			// Validate IPs
+			const ipsTextarea = document.getElementById('msh-token-allowed-ips');
+			const ipsMsg = document.getElementById('msh-ips-validation-msg');
+			let ipsValid = true;
+			
+			if (ipsTextarea && ipsTextarea.value.trim()) {
+				const ips = ipsTextarea.value.split(',').map(s => s.trim()).filter(s => s);
+				const ipRegex = /^[a-fA-F0-9\.:]+(\/\d{1,2})?$/;
+				for (const ip of ips) {
+					if (!ipRegex.test(ip)) {
+						ipsValid = false;
+						if (ipsMsg) {
+							ipsMsg.textContent = 'Invalid IP or CIDR format: ' + ip;
+							ipsMsg.style.display = 'block';
+						}
+						break;
+					}
+				}
+			}
+			
+			if (ipsValid && ipsMsg) {
+				ipsMsg.style.display = 'none';
+			}
+
+			if (label && (isFull || hasCheckedAbilities) && ipsValid) {
 				btn.disabled = false;
 				btn.classList.remove('msh-btn--disabled');
 			} else {
 				btn.disabled = true;
 				btn.classList.add('msh-btn--disabled');
 			}
+		},
+
+		/**
+		 * Insert the current IP into the allowed IPs textarea.
+		 * 
+		 * @param {string} ip
+		 */
+		insertCurrentIp: function (ip) {
+			const textarea = document.getElementById('msh-token-allowed-ips');
+			if (!textarea) return;
+			let val = textarea.value.trim();
+			if (val) {
+				if (!val.endsWith(',')) val += ', ';
+				val += ip;
+			} else {
+				val = ip;
+			}
+			textarea.value = val;
+			this.updateSubmitButtonState();
 		},
 
 		/**
@@ -450,6 +519,11 @@
 
 			const step2 = document.getElementById('msh-claude-step-2');
 			if (step2) step2.value = '';
+
+			const allowedIps = document.getElementById('msh-token-allowed-ips');
+			if (allowedIps) allowedIps.value = '';
+			const ipsMsg = document.getElementById('msh-ips-validation-msg');
+			if (ipsMsg) ipsMsg.style.display = 'none';
 
 			const submitBtn = document.getElementById('msh-submit-token');
 			if (submitBtn) {

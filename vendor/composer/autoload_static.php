@@ -18,6 +18,7 @@ class ComposerStaticInit62af73b65723548643c573aa2be8003e
         'MySiteHand\\Deactivator' => __DIR__ . '/../..' . '/includes/class-deactivator.php',
         'MySiteHand\\Error_Handler' => __DIR__ . '/../..' . '/includes/class-error-handler.php',
         'MySiteHand\\Installer' => __DIR__ . '/../..' . '/includes/class-installer.php',
+        'MySiteHand\\Ip_Utils' => __DIR__ . '/../..' . '/includes/class-ip-utils.php',
         'MySiteHand\\MCP_Server' => __DIR__ . '/../..' . '/includes/class-mcp-server.php',
         'MySiteHand\\Modules\\Module_Base' => __DIR__ . '/../..' . '/includes/modules/class-module-base.php',
         'MySiteHand\\Modules\\Module_Content' => __DIR__ . '/../..' . '/includes/modules/class-module-content.php',
@@ -38,6 +39,3 @@ class ComposerStaticInit62af73b65723548643c573aa2be8003e
         }, null, ClassLoader::class);
     }
 }
-
-
-

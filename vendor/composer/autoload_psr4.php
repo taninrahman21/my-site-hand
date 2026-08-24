@@ -7,6 +7,3 @@ $baseDir = dirname($vendorDir);
 
 return array(
 );
-
-
-
