@@ -11,7 +11,7 @@
  * Text Domain: my-site-hand
  * Domain Path: /languages
  * Requires at least: 6.2
- * Tested up to: 7.0
+ * Tested up to: 7.1
  *
  * @package My Site Hand (AI)
  */
@@ -81,9 +81,8 @@ add_action(
 		// One-time migration for token abilities.
 		if (!get_option('mysitehand_token_abilities_migrated_v1')) {
 			global $wpdb;
-			$table = $wpdb->prefix . 'mysitehand_tokens';
 			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
-			$wpdb->query("UPDATE {$table} SET abilities = '[\"*\"]' WHERE abilities = '' OR abilities = '[]' OR abilities IS NULL");
+			$wpdb->query("UPDATE {$wpdb->prefix}mysitehand_tokens SET abilities = '[\"*\"]' WHERE abilities = '' OR abilities = '[]' OR abilities IS NULL");
 			
 				set_transient('mysitehand_token_migration_notice', 1, WEEK_IN_SECONDS);
 			update_option('mysitehand_token_abilities_migrated_v1', 1);

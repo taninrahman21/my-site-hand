@@ -337,6 +337,7 @@ class Rest_Controller {
 			foreach ( $ips as $ip ) {
 				// Basic regex validation for IPv4/IPv6/CIDR
 				if ( ! preg_match( '/^[a-fA-F0-9\.:]+(\/\d{1,2})?$/', $ip ) ) {
+					/* translators: %s: the invalid IP address or CIDR range */
 					return new \WP_REST_Response( [ 'message' => sprintf( __( 'Invalid IP or CIDR format: %s', 'my-site-hand' ), esc_html( $ip ) ) ], 400 );
 				}
 			}

@@ -1,1518 +1,2383 @@
 # Copyright (C) 2026 BuiltByTanin
-# This file is distributed under the same license as the SiteAgent for WordPress plugin.
+# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: My Site Hand (AI) for WordPress 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/taninrahman21/siteagent/issues\n"
+"Project-Id-Version: My Site Hand (AI) 1.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/my-site-hand\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-03 18:24:27+0000\n"
+"POT-Creation-Date: 2026-08-24T17:34:26+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP SiteAgent POT Generator\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: my-site-hand\n"
 
-#: admin\class-admin.php:91
-msgid "WP SiteAgent"
+#. Plugin Name of the plugin
+#: my-site-hand.php
+msgid "My Site Hand (AI)"
 msgstr ""
 
-#: admin\class-admin.php:92
-msgid "SiteAgent"
+#. Plugin URI of the plugin
+#: my-site-hand.php
+msgid "https://wordpress.org/plugins/my-site-hand"
 msgstr ""
 
-#: admin\class-admin.php:103
-msgid "Dashboard — WP SiteAgent"
+#. Description of the plugin
+#: my-site-hand.php
+msgid "Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language."
 msgstr ""
 
-#: admin\class-admin.php:104
-#: templates\partials\header.php:14
+#. Author of the plugin
+#: my-site-hand.php
+msgid "BuiltByTanin"
+msgstr ""
+
+#. Author URI of the plugin
+#: my-site-hand.php
+msgid "https://github.com/taninrahman21"
+msgstr ""
+
+#: admin/class-admin.php:96
+#: admin/class-admin.php:97
+#: templates/partials/header.php:105
+msgid "My Site Hand"
+msgstr ""
+
+#: admin/class-admin.php:108
+msgid "Dashboard - My Site Hand"
+msgstr ""
+
+#: admin/class-admin.php:109
+#: templates/partials/header.php:52
 msgid "Dashboard"
 msgstr ""
 
-#: admin\class-admin.php:113
-msgid "Abilities — WP SiteAgent"
+#: admin/class-admin.php:118
+msgid "Abilities - My Site Hand"
 msgstr ""
 
-#: admin\class-admin.php:114
-#: templates\admin\abilities.php:32
-#: templates\admin\tokens.php:69
-#: templates\partials\header.php:18
+#: admin/class-admin.php:119
+#: templates/admin/abilities.php:82
+#: templates/admin/dashboard.php:610
+#: templates/partials/header.php:56
 msgid "Abilities"
 msgstr ""
 
-#: admin\class-admin.php:123
-msgid "API Tokens — WP SiteAgent"
+#: admin/class-admin.php:128
+msgid "API Tokens - My Site Hand"
 msgstr ""
 
-#: admin\class-admin.php:124
-#: templates\admin\tokens.php:28
-#: templates\partials\header.php:22
+#: admin/class-admin.php:129
+#: templates/admin/tokens.php:31
+#: templates/partials/header.php:60
 msgid "API Tokens"
 msgstr ""
 
-#: admin\class-admin.php:133
-msgid "Audit Log — WP SiteAgent"
+#: admin/class-admin.php:138
+msgid "Audit Log - My Site Hand"
 msgstr ""
 
-#: admin\class-admin.php:134
-#: templates\admin\audit-log.php:52
-#: templates\partials\header.php:26
+#: admin/class-admin.php:139
+#: templates/admin/audit-log.php:88
+#: templates/partials/header.php:64
 msgid "Audit Log"
 msgstr ""
 
-#: admin\class-admin.php:143
-msgid "Settings — WP SiteAgent"
+#: admin/class-admin.php:148
+msgid "Settings - My Site Hand"
 msgstr ""
 
-#: admin\class-admin.php:144
-#: templates\admin\settings.php:28
-#: templates\partials\header.php:30
+#: admin/class-admin.php:149
+#: templates/admin/settings.php:74
+#: templates/partials/header.php:68
 msgid "Settings"
 msgstr ""
 
-#: admin\class-admin.php:153
-msgid "Tools — WP SiteAgent"
+#: admin/class-admin.php:158
+msgid "How to use - My Site Hand"
 msgstr ""
 
-#: admin\class-admin.php:154
-msgid "Tools"
+#: admin/class-admin.php:159
+msgid "How to use"
 msgstr ""
 
-#: admin\class-admin.php:224
+#: admin/class-admin.php:168
+msgid "About & Info - My Site Hand"
+msgstr ""
+
+#: admin/class-admin.php:169
+#: templates/partials/header.php:80
+msgid "About & Info"
+msgstr ""
+
+#: admin/class-admin.php:178
+msgid "Suggest Feature - My Site Hand"
+msgstr ""
+
+#: admin/class-admin.php:179
+#: templates/admin/feature-request.php:168
+#: templates/partials/header.php:84
+msgid "Suggest a Feature"
+msgstr ""
+
+#: admin/class-admin.php:251
+#: templates/admin/documentation.php:903
 msgid "Copied!"
 msgstr ""
 
-#: admin\class-admin.php:225
+#: admin/class-admin.php:252
 msgid "Are you sure you want to revoke this token?"
 msgstr ""
 
-#: admin\class-admin.php:226
+#: admin/class-admin.php:253
 msgid "Saving..."
 msgstr ""
 
-#: admin\class-admin.php:227
+#: admin/class-admin.php:254
 msgid "Saved!"
 msgstr ""
 
-#: admin\class-admin.php:228
+#: admin/class-admin.php:255
 msgid "An error occurred. Please try again."
 msgstr ""
 
-#: admin\class-admin.php:229
+#: admin/class-admin.php:256
 msgid "Cache cleared!"
 msgstr ""
 
-#: admin\class-admin.php:315
-#: admin\class-admin.php:327
-#: admin\class-admin.php:339
-#: admin\class-admin.php:351
-#: admin\class-admin.php:363
-#: admin\class-admin.php:375
+#: admin/class-admin.php:344
+#: admin/class-admin.php:357
+#: admin/class-admin.php:370
+#: admin/class-admin.php:383
+#: admin/class-admin.php:396
+#: admin/class-admin.php:409
+#: admin/class-admin.php:422
+#: admin/class-admin.php:502
 msgid "You do not have permission to access this page."
 msgstr ""
 
-#: api\class-rest-controller.php:315
-#: api\class-rest-controller.php:352
-#: api\class-rest-controller.php:453
+#: admin/class-admin.php:435
+msgid "Please fill in all required fields."
+msgstr ""
+
+#: admin/class-admin.php:477
+msgid "Thank you! Your feature request has been successfully submitted to the developer."
+msgstr ""
+
+#. translators: %s: the mailer error message
+#: admin/class-admin.php:482
+#, php-format
+msgid "Failed to send email. Mailer error: %s"
+msgstr ""
+
+#: admin/class-admin.php:484
+msgid "Failed to send email. Please check your server SMTP settings or contact builtbytanin@gmail.com directly."
+msgstr ""
+
+#: admin/class-admin.php:604
+#: templates/partials/header.php:75
+msgid "How to Use"
+msgstr ""
+
+#: api/class-rest-controller.php:319
+#: api/class-rest-controller.php:374
+#: api/class-rest-controller.php:475
 msgid "Nonce verification failed."
 msgstr ""
 
-#: api\class-rest-controller.php:322
+#: api/class-rest-controller.php:326
 msgid "Label is required."
 msgstr ""
 
-#: api\class-rest-controller.php:336
+#: api/class-rest-controller.php:331
+msgid "Limited access tokens must select at least one ability."
+msgstr ""
+
+#. translators: %s: the invalid IP address or CIDR range
+#: api/class-rest-controller.php:341
+#, php-format
+msgid "Invalid IP or CIDR format: %s"
+msgstr ""
+
+#: api/class-rest-controller.php:358
 msgid "Save this token — it will not be shown again."
 msgstr ""
 
-#: api\class-rest-controller.php:361
+#: api/class-rest-controller.php:383
 msgid "Failed to revoke token."
 msgstr ""
 
-#: api\class-rest-controller.php:402
+#: api/class-rest-controller.php:424
 msgid "Security check failed."
 msgstr ""
 
-#: api\class-rest-controller.php:410
+#: api/class-rest-controller.php:432
 msgid "Could not open output stream."
 msgstr ""
 
-#: api\class-rest-controller.php:464
+#. translators: %d: number of transients cleared
+#: api/class-rest-controller.php:486
+#, php-format
 msgid "Cleared %d cached items."
 msgstr ""
 
-#: includes\class-abilities-registry.php:60
+#. translators: %s: ability name
+#: includes/class-abilities-registry.php:60
+#, php-format
 msgid "Ability \"%s\" must have a label, description and a callable execute_callback."
 msgstr ""
 
-#: includes\class-abilities-registry.php:74
+#. translators: %s: ability name
+#: includes/class-abilities-registry.php:74
+#, php-format
 msgid "Ability \"%s\" is already registered."
 msgstr ""
 
-#: includes\class-abilities-registry.php:88
+#. translators: %s: ability name
+#: includes/class-abilities-registry.php:88
+#, php-format
 msgid "Ability \"%s\" has a non-callable permission_callback."
 msgstr ""
 
-#: includes\class-abilities-registry.php:125
+#. translators: %s: ability name
+#: includes/class-abilities-registry.php:125
+#, php-format
 msgid "Ability \"%s\" is not registered."
 msgstr ""
 
-#: includes\class-abilities-registry.php:140
+#: includes/class-abilities-registry.php:140
 msgid "You do not have permission to execute this ability."
 msgstr ""
 
-#: includes\class-abilities-registry.php:284
+#. translators: %s: field name
+#: includes/class-abilities-registry.php:284
+#, php-format
 msgid "Required field \"%s\" is missing."
 msgstr ""
 
-#: includes\class-abilities-registry.php:312
+#. translators: 1: field name 2: allowed values
+#: includes/class-abilities-registry.php:312
+#, php-format
 msgid "Field \"%1$s\" must be one of: %2$s."
 msgstr ""
 
-#: includes\class-auth-manager.php:70
+#: includes/class-auth-manager.php:73
 msgid "No token provided."
 msgstr ""
 
-#: includes\class-auth-manager.php:84
+#: includes/class-auth-manager.php:88
 msgid "Invalid or revoked token."
 msgstr ""
 
-#: includes\class-auth-manager.php:91
+#: includes/class-auth-manager.php:95
 msgid "Token has expired."
 msgstr ""
 
-#: includes\class-auth-manager.php:294
+#: includes/class-auth-manager.php:102
+msgid "IP address not allowed for this token."
+msgstr ""
+
+#: includes/class-auth-manager.php:316
 msgid "Authorization token is required."
 msgstr ""
 
-#: includes\class-mcp-server.php:115
+#: includes/class-mcp-server.php:120
 msgid "Parse error: empty request body."
 msgstr ""
 
-#: includes\class-mcp-server.php:120
+#: includes/class-mcp-server.php:125
 msgid "Parse error: invalid JSON."
 msgstr ""
 
-#: includes\class-mcp-server.php:173
+#: includes/class-mcp-server.php:178
 msgid "Invalid Request: jsonrpc must be \"2.0\"."
 msgstr ""
 
-#: includes\class-mcp-server.php:183
+#. translators: %s: method name
+#: includes/class-mcp-server.php:188
+#, php-format
 msgid "Method not found: %s"
 msgstr ""
 
-#: includes\class-mcp-server.php:275
+#: includes/class-mcp-server.php:277
 msgid "Invalid params: tool name is required."
 msgstr ""
 
-#: includes\class-mcp-server.php:291
+#: includes/class-mcp-server.php:293
 msgid "Token not authorized for this ability."
 msgstr ""
 
-#: includes\class-plugin.php:262
-#: includes\class-plugin.php:296
-#: includes\class-plugin.php:332
-#: includes\class-plugin.php:383
+#: includes/class-plugin.php:248
+#: includes/class-plugin.php:282
+#: includes/class-plugin.php:318
+#: includes/class-plugin.php:370
+#: includes/class-plugin.php:420
+#: includes/class-plugin.php:447
 msgid "Permission denied."
 msgstr ""
 
-#: includes\class-plugin.php:269
+#: includes/class-plugin.php:255
 msgid "Missing module slug."
 msgstr ""
 
-#: includes\class-plugin.php:303
+#: includes/class-plugin.php:289
 msgid "Missing ability name."
 msgstr ""
 
-#: includes\class-plugin.php:343
+#. translators: %d: number of tokens deleted
+#: includes/class-plugin.php:329
+#, php-format
 msgid "Deleted %d tokens."
 msgstr ""
 
-#: includes\class-plugin.php:354
+#. translators: %d: number of log entries deleted
+#: includes/class-plugin.php:340
+#, php-format
 msgid "Deleted %d log entries."
 msgstr ""
 
-#: includes\class-plugin.php:370
+#: includes/class-plugin.php:357
 msgid "All plugin data has been reset to defaults."
 msgstr ""
 
-#: includes\class-plugin.php:375
+#: includes/class-plugin.php:362
 msgid "Unknown action."
 msgstr ""
 
-#: includes\class-plugin.php:400
+#: includes/class-plugin.php:387
 msgid "Option not allowed via AJAX."
 msgstr ""
 
-#: includes\class-rate-limiter.php:54
+#: includes/class-plugin.php:428
+msgid "Loopback test passed. Server can communicate with itself."
+msgstr ""
+
+#: includes/class-plugin.php:431
+msgid "Discovery simulation successful. 12 tools identified."
+msgstr ""
+
+#: includes/class-plugin.php:434
+msgid "Unknown diagnostic test."
+msgstr ""
+
+#: includes/class-plugin.php:455
+msgid "Database tables verified and repaired."
+msgstr ""
+
+#: includes/class-plugin.php:458
+msgid "Unknown fix action."
+msgstr ""
+
+#. translators: %d: hourly limit
+#: includes/class-rate-limiter.php:54
+#, php-format
 msgid "Hourly rate limit of %d requests exceeded."
 msgstr ""
 
-#: includes\class-rate-limiter.php:71
+#. translators: %d: daily limit
+#: includes/class-rate-limiter.php:71
+#, php-format
 msgid "Daily rate limit of %d requests exceeded."
 msgstr ""
 
-#: includes\modules\class-module-content.php:72
+#: includes/modules/class-module-content.php:72
 msgid "List Posts"
 msgstr ""
 
-#: includes\modules\class-module-content.php:73
+#: includes/modules/class-module-content.php:73
 msgid "List WordPress posts with filtering, sorting, and pagination."
 msgstr ""
 
-#: includes\modules\class-module-content.php:168
+#: includes/modules/class-module-content.php:168
 msgid "Get Post"
 msgstr ""
 
-#: includes\modules\class-module-content.php:169
+#: includes/modules/class-module-content.php:169
 msgid "Get a single WordPress post with full content, meta, and SEO data."
 msgstr ""
 
-#: includes\modules\class-module-content.php:197
-#: includes\modules\class-module-content.php:425
-#: includes\modules\class-module-content.php:540
-#: includes\modules\class-module-content.php:789
-#: includes\modules\class-module-seo.php:103
-#: includes\modules\class-module-seo.php:324
-#: includes\modules\class-module-seo.php:401
-#: includes\modules\class-module-seo.php:608
+#: includes/modules/class-module-content.php:197
+#: includes/modules/class-module-content.php:425
+#: includes/modules/class-module-content.php:540
+#: includes/modules/class-module-content.php:789
+#: includes/modules/class-module-seo.php:103
+#: includes/modules/class-module-seo.php:324
+#: includes/modules/class-module-seo.php:401
+#: includes/modules/class-module-seo.php:608
 msgid "Post not found."
 msgstr ""
 
-#: includes\modules\class-module-content.php:265
+#: includes/modules/class-module-content.php:265
 msgid "Create Post"
 msgstr ""
 
-#: includes\modules\class-module-content.php:266
+#: includes/modules/class-module-content.php:266
 msgid "Create a new WordPress post, page, or custom post type entry."
 msgstr ""
 
-#: includes\modules\class-module-content.php:376
+#: includes/modules/class-module-content.php:376
 msgid "Update Post"
 msgstr ""
 
-#: includes\modules\class-module-content.php:377
+#: includes/modules/class-module-content.php:377
 msgid "Update an existing WordPress post. Only provided fields are changed."
 msgstr ""
 
-#: includes\modules\class-module-content.php:502
+#: includes/modules/class-module-content.php:502
 msgid "Delete Post"
 msgstr ""
 
-#: includes\modules\class-module-content.php:503
+#: includes/modules/class-module-content.php:503
 msgid "Delete or trash a WordPress post."
 msgstr ""
 
-#: includes\modules\class-module-content.php:546
+#: includes/modules/class-module-content.php:546
 msgid "Failed to delete post."
 msgstr ""
 
-#: includes\modules\class-module-content.php:569
+#: includes/modules/class-module-content.php:569
 msgid "Bulk Update Posts"
 msgstr ""
 
-#: includes\modules\class-module-content.php:570
+#: includes/modules/class-module-content.php:570
 msgid "Apply the same updates to multiple posts at once."
 msgstr ""
 
-#: includes\modules\class-module-content.php:650
+#: includes/modules/class-module-content.php:650
 msgid "List Post Types"
 msgstr ""
 
-#: includes\modules\class-module-content.php:651
+#: includes/modules/class-module-content.php:651
 msgid "List all registered public post types with their labels and capabilities."
 msgstr ""
 
-#: includes\modules\class-module-content.php:699
+#: includes/modules/class-module-content.php:699
 msgid "List Taxonomies"
 msgstr ""
 
-#: includes\modules\class-module-content.php:700
+#: includes/modules/class-module-content.php:700
 msgid "List all registered taxonomies with term counts."
 msgstr ""
 
-#: includes\modules\class-module-content.php:759
+#: includes/modules/class-module-content.php:759
 msgid "Get Post Revisions"
 msgstr ""
 
-#: includes\modules\class-module-content.php:760
+#: includes/modules/class-module-content.php:760
 msgid "Get revision history for a post."
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:68
+#: includes/modules/class-module-diagnostics.php:68
 msgid "Site Health Report"
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:69
+#: includes/modules/class-module-diagnostics.php:69
 msgid "Get a comprehensive site health and environment report."
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:253
+#: includes/modules/class-module-diagnostics.php:255
 msgid "Plugin Update List"
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:254
+#: includes/modules/class-module-diagnostics.php:256
 msgid "List all plugins that have available updates."
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:314
+#: includes/modules/class-module-diagnostics.php:316
 msgid "Error Logs"
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:315
+#: includes/modules/class-module-diagnostics.php:317
 msgid "Read the last N lines from the WordPress debug error log."
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:362
+#: includes/modules/class-module-diagnostics.php:364
 msgid "No error log file found or WP_DEBUG_LOG is not enabled."
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:390
+#: includes/modules/class-module-diagnostics.php:392
 msgid "Cron Job List"
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:391
+#: includes/modules/class-module-diagnostics.php:393
 msgid "List all scheduled WP-Cron events."
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:483
+#: includes/modules/class-module-diagnostics.php:485
 msgid "Site Settings"
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:484
+#: includes/modules/class-module-diagnostics.php:486
 msgid "Get WordPress site options (allowlisted safe options only — no passwords or secrets)."
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:546
+#: includes/modules/class-module-diagnostics.php:548
 msgid "Transient List"
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:547
+#: includes/modules/class-module-diagnostics.php:549
 msgid "List active WordPress transients."
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:631
+#: includes/modules/class-module-diagnostics.php:634
 msgid "Database Sizes"
 msgstr ""
 
-#: includes\modules\class-module-diagnostics.php:632
+#: includes/modules/class-module-diagnostics.php:635
 msgid "Get row count and size for every WordPress database table."
 msgstr ""
 
-#: includes\modules\class-module-media.php:66
+#: includes/modules/class-module-media.php:66
 msgid "List Media"
 msgstr ""
 
-#: includes\modules\class-module-media.php:67
+#: includes/modules/class-module-media.php:67
 msgid "List media library items with filtering options."
 msgstr ""
 
-#: includes\modules\class-module-media.php:145
+#: includes/modules/class-module-media.php:145
 msgid "List Unattached Media"
 msgstr ""
 
-#: includes\modules\class-module-media.php:146
+#: includes/modules/class-module-media.php:146
 msgid "List media items not attached to any post."
 msgstr ""
 
-#: includes\modules\class-module-media.php:188
+#: includes/modules/class-module-media.php:188
 msgid "Update Alt Text"
 msgstr ""
 
-#: includes\modules\class-module-media.php:189
+#: includes/modules/class-module-media.php:189
 msgid "Set the alt text for a media attachment."
 msgstr ""
 
-#: includes\modules\class-module-media.php:224
+#: includes/modules/class-module-media.php:224
 msgid "Attachment not found."
 msgstr ""
 
-#: includes\modules\class-module-media.php:249
+#: includes/modules/class-module-media.php:249
 msgid "Bulk Update Alt Text"
 msgstr ""
 
-#: includes\modules\class-module-media.php:250
+#: includes/modules/class-module-media.php:250
 msgid "Set alt text for multiple media attachments at once."
 msgstr ""
 
-#: includes\modules\class-module-media.php:331
+#: includes/modules/class-module-media.php:331
 msgid "Find Large Media"
 msgstr ""
 
-#: includes\modules\class-module-media.php:332
+#: includes/modules/class-module-media.php:332
 msgid "Find media attachments whose file size exceeds a given threshold."
 msgstr ""
 
-#: includes\modules\class-module-media.php:412
+#: includes/modules/class-module-media.php:412
 msgid "Media Library Stats"
 msgstr ""
 
-#: includes\modules\class-module-media.php:413
+#: includes/modules/class-module-media.php:413
 msgid "Get aggregate statistics about the WordPress media library."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:66
+#: includes/modules/class-module-seo.php:66
 msgid "Analyze SEO"
 msgstr ""
 
-#: includes\modules\class-module-seo.php:67
+#: includes/modules/class-module-seo.php:67
 msgid "Analyze the SEO health of a post — keyword density, heading structure, link ratios, meta description, and more."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:198
+#. translators: No meta description error
+#: includes/modules/class-module-seo.php:198
 msgid "No meta description set."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:199
+#: includes/modules/class-module-seo.php:199
 msgid "Add a 120-160 character meta description."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:202
+#. translators: Meta description too short error
+#: includes/modules/class-module-seo.php:202
 msgid "Meta description is too short."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:203
+#: includes/modules/class-module-seo.php:203
 msgid "Expand meta description to 120-160 characters."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:206
+#. translators: Meta description too long error
+#: includes/modules/class-module-seo.php:206
 msgid "Meta description is too long and may be truncated in SERPs."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:211
+#. translators: Focus keyword missing from meta description error
+#: includes/modules/class-module-seo.php:211
 msgid "Focus keyword missing from meta description."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:213
+#. translators: Suggestion to add focus keyword to meta description
+#: includes/modules/class-module-seo.php:213
 msgid "Add focus keyword to meta description."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:218
+#. translators: %d: number of images missing alt text
+#: includes/modules/class-module-seo.php:218
+#, php-format
 msgid "%d image is missing alt text."
 msgid_plural "%d images are missing alt text."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes\modules\class-module-seo.php:220
+#. translators: Suggestion to add alt text to images
+#: includes/modules/class-module-seo.php:220
 msgid "Add descriptive alt text to all images."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:225
+#. translators: No H2 headings error
+#: includes/modules/class-module-seo.php:225
 msgid "No H2 headings found in a long article."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:227
+#. translators: Suggestion to add H2 headings
+#: includes/modules/class-module-seo.php:227
 msgid "Add H2 subheadings to organize content."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:232
+#. translators: Content too short error
+#: includes/modules/class-module-seo.php:232
 msgid "Content is too short (under 300 words)."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:234
+#. translators: Suggestion to expand content
+#: includes/modules/class-module-seo.php:234
 msgid "Expand content to at least 300 words."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:287
+#: includes/modules/class-module-seo.php:287
 msgid "Set Meta Description"
 msgstr ""
 
-#: includes\modules\class-module-seo.php:288
+#: includes/modules/class-module-seo.php:288
 msgid "Set the SEO meta description for a post. Works with Yoast, RankMath, or raw meta."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:364
+#: includes/modules/class-module-seo.php:364
 msgid "Set Focus Keyword"
 msgstr ""
 
-#: includes\modules\class-module-seo.php:365
+#: includes/modules/class-module-seo.php:365
 msgid "Set the SEO focus keyword for a post. Works with Yoast or RankMath."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:437
+#: includes/modules/class-module-seo.php:437
 msgid "Bulk SEO Audit"
 msgstr ""
 
-#: includes\modules\class-module-seo.php:438
+#: includes/modules/class-module-seo.php:438
 msgid "Run SEO audit across multiple posts and return sorted results (worst first)."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:525
+#: includes/modules/class-module-seo.php:525
 msgid "Get Sitemap URLs"
 msgstr ""
 
-#: includes\modules\class-module-seo.php:526
+#: includes/modules/class-module-seo.php:526
 msgid "Get sitemap URLs for this WordPress site (Yoast, RankMath, or WordPress core)."
 msgstr ""
 
-#: includes\modules\class-module-seo.php:579
+#: includes/modules/class-module-seo.php:579
 msgid "Check Broken Links"
 msgstr ""
 
-#: includes\modules\class-module-seo.php:580
+#: includes/modules/class-module-seo.php:580
 msgid "Check all outgoing links in a post for broken URLs (returns HTTP status for each)."
 msgstr ""
 
-#: includes\modules\class-module-users.php:66
+#: includes/modules/class-module-users.php:64
 msgid "List Users"
 msgstr ""
 
-#: includes\modules\class-module-users.php:67
+#: includes/modules/class-module-users.php:65
 msgid "List WordPress users with filtering and sorting."
 msgstr ""
 
-#: includes\modules\class-module-users.php:155
+#: includes/modules/class-module-users.php:153
 msgid "Get User"
 msgstr ""
 
-#: includes\modules\class-module-users.php:156
+#: includes/modules/class-module-users.php:154
 msgid "Get a WordPress user profile (password hash never included)."
 msgstr ""
 
-#: includes\modules\class-module-users.php:190
-#: includes\modules\class-module-users.php:384
+#: includes/modules/class-module-users.php:188
+#: includes/modules/class-module-users.php:272
 msgid "User not found."
 msgstr ""
 
-#: includes\modules\class-module-users.php:237
-msgid "Create User"
-msgstr ""
-
-#: includes\modules\class-module-users.php:238
-msgid "Create a new WordPress user with a secure auto-generated password."
-msgstr ""
-
-#: includes\modules\class-module-users.php:283
-#: includes\modules\class-module-users.php:393
-msgid "Role \"%s\" does not exist."
-msgstr ""
-
-#: includes\modules\class-module-users.php:292
-msgid "Username already exists."
-msgstr ""
-
-#: includes\modules\class-module-users.php:295
-msgid "Email address already in use."
-msgstr ""
-
-#: includes\modules\class-module-users.php:347
+#: includes/modules/class-module-users.php:235
 msgid "Update User Role"
 msgstr ""
 
-#: includes\modules\class-module-users.php:348
-msgid "Change a WordPress user\'s role."
+#: includes/modules/class-module-users.php:236
+msgid "Change a WordPress user's role."
 msgstr ""
 
-#: includes\modules\class-module-users.php:405
+#. translators: %s: role name
+#: includes/modules/class-module-users.php:281
+#, php-format
+msgid "Role \"%s\" does not exist."
+msgstr ""
+
+#: includes/modules/class-module-users.php:293
 msgid "Only administrators can demote other administrators."
 msgstr ""
 
-#: includes\modules\class-module-users.php:434
+#: includes/modules/class-module-users.php:322
 msgid "List Roles"
 msgstr ""
 
-#: includes\modules\class-module-users.php:435
+#: includes/modules/class-module-users.php:323
 msgid "List all registered WordPress roles and their capabilities."
 msgstr ""
 
-#: includes\modules\class-module-users.php:480
+#: includes/modules/class-module-users.php:368
 msgid "User Stats"
 msgstr ""
 
-#: includes\modules\class-module-users.php:481
+#: includes/modules/class-module-users.php:369
 msgid "Get aggregate user statistics including counts by role and registration trends."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:89
+#: includes/modules/class-module-woocommerce.php:89
 msgid "List Products"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:90
+#: includes/modules/class-module-woocommerce.php:90
 msgid "List WooCommerce products with filtering options."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:200
+#: includes/modules/class-module-woocommerce.php:200
 msgid "Get Product"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:201
+#: includes/modules/class-module-woocommerce.php:201
 msgid "Get a single WooCommerce product with all details."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:229
-#: includes\modules\class-module-woocommerce.php:346
-#: includes\modules\class-module-woocommerce.php:519
+#: includes/modules/class-module-woocommerce.php:229
+#: includes/modules/class-module-woocommerce.php:346
+#: includes/modules/class-module-woocommerce.php:519
 msgid "Product not found."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:303
+#: includes/modules/class-module-woocommerce.php:303
 msgid "Update Product"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:304
+#: includes/modules/class-module-woocommerce.php:304
 msgid "Update WooCommerce product fields."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:400
+#: includes/modules/class-module-woocommerce.php:400
 msgid "Create Product"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:401
+#: includes/modules/class-module-woocommerce.php:401
 msgid "Create a new WooCommerce product."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:458
+#: includes/modules/class-module-woocommerce.php:458
 msgid "Failed to create product."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:481
+#: includes/modules/class-module-woocommerce.php:481
 msgid "Delete Product"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:482
+#: includes/modules/class-module-woocommerce.php:482
 msgid "Delete or trash a WooCommerce product."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:544
+#: includes/modules/class-module-woocommerce.php:544
 msgid "List Orders"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:545
+#: includes/modules/class-module-woocommerce.php:545
 msgid "List WooCommerce orders with filtering."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:646
+#: includes/modules/class-module-woocommerce.php:646
 msgid "Get Order"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:647
+#: includes/modules/class-module-woocommerce.php:647
 msgid "Get a WooCommerce order with all details."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:681
-#: includes\modules\class-module-woocommerce.php:777
+#: includes/modules/class-module-woocommerce.php:681
+#: includes/modules/class-module-woocommerce.php:777
 msgid "Order not found."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:741
+#: includes/modules/class-module-woocommerce.php:741
 msgid "Update Order Status"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:742
+#: includes/modules/class-module-woocommerce.php:742
 msgid "Update the status of a WooCommerce order."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:805
+#: includes/modules/class-module-woocommerce.php:805
 msgid "Store Summary"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:806
+#: includes/modules/class-module-woocommerce.php:806
 msgid "Get a WooCommerce store summary for a given time period."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:934
+#: includes/modules/class-module-woocommerce.php:935
 msgid "List Coupons"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:935
+#: includes/modules/class-module-woocommerce.php:936
 msgid "List WooCommerce coupons."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:1004
+#: includes/modules/class-module-woocommerce.php:1005
 msgid "Create Coupon"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:1005
+#: includes/modules/class-module-woocommerce.php:1006
 msgid "Create a new WooCommerce coupon code."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:1059
+#: includes/modules/class-module-woocommerce.php:1060
 msgid "Failed to create coupon."
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:1081
+#: includes/modules/class-module-woocommerce.php:1082
 msgid "List Customers"
 msgstr ""
 
-#: includes\modules\class-module-woocommerce.php:1082
+#: includes/modules/class-module-woocommerce.php:1083
 msgid "List WooCommerce customers."
 msgstr ""
 
-#: templates\admin\abilities.php:15
-#: templates\admin\dashboard.php:238
-#: templates\admin\settings.php:14
+#. translators: 1: required PHP version 2: current PHP version
+#: my-site-hand.php:43
+#, php-format
+msgid "My Site Hand requires PHP %1$s or higher. You are running PHP %2$s. Please upgrade PHP."
+msgstr ""
+
+#. translators: %s: URL to tokens page
+#: my-site-hand.php:96
+#, php-format
+msgid "<strong>My Site Hand Security Update:</strong> API Token permissions are now enforced strictly. Your existing tokens have been preserved with full access to prevent connection breaks. Please <a href=\"%s\">review your tokens</a> to narrow their scope."
+msgstr ""
+
+#: templates/admin/abilities.php:15
+#: templates/admin/dashboard.php:308
+#: templates/admin/settings.php:14
 msgid "Content"
 msgstr ""
 
-#: templates\admin\abilities.php:16
-#: templates\admin\dashboard.php:239
-#: templates\admin\settings.php:15
+#: templates/admin/abilities.php:16
+#: templates/admin/dashboard.php:309
+#: templates/admin/settings.php:15
 msgid "SEO"
 msgstr ""
 
-#: templates\admin\abilities.php:17
-#: templates\admin\dashboard.php:240
-#: templates\admin\settings.php:19
+#: templates/admin/abilities.php:17
+#: templates/admin/dashboard.php:310
+#: templates/admin/settings.php:19
 msgid "WooCommerce"
 msgstr ""
 
-#: templates\admin\abilities.php:18
-#: templates\admin\dashboard.php:241
-#: templates\admin\settings.php:16
+#: templates/admin/abilities.php:18
+#: templates/admin/dashboard.php:311
+#: templates/admin/settings.php:16
 msgid "Diagnostics"
 msgstr ""
 
-#: templates\admin\abilities.php:19
-#: templates\admin\dashboard.php:242
-#: templates\admin\settings.php:17
+#: templates/admin/abilities.php:19
+#: templates/admin/dashboard.php:312
+#: templates/admin/settings.php:17
 msgid "Media"
 msgstr ""
 
-#: templates\admin\abilities.php:20
-#: templates\admin\dashboard.php:243
-#: templates\admin\settings.php:18
+#: templates/admin/abilities.php:20
+#: templates/admin/dashboard.php:313
+#: templates/admin/settings.php:18
 msgid "Users"
 msgstr ""
 
-#: templates\admin\abilities.php:42
-msgid "%1$d registered · %2$d MCP-public · %3$d disabled"
+#: templates/admin/abilities.php:83
+msgid "Control which actions your AI clients can perform."
 msgstr ""
 
-#: templates\admin\abilities.php:54
-msgid "MCP Active"
+#: templates/admin/abilities.php:87
+msgid "Enable all"
 msgstr ""
 
-#: templates\admin\abilities.php:85
-msgid "module"
+#: templates/admin/abilities.php:90
+msgid "Disable all"
 msgstr ""
 
-#: templates\admin\abilities.php:90
-#: templates\admin\dashboard.php:263
-msgid "%d abilities"
+#: templates/admin/abilities.php:98
+msgid "TOTAL"
 msgstr ""
 
-#: templates\admin\abilities.php:110
+#: templates/admin/abilities.php:102
+msgid "ENABLED"
+msgstr ""
+
+#: templates/admin/abilities.php:106
+msgid "DISABLED"
+msgstr ""
+
+#: templates/admin/abilities.php:110
+msgid "MCP-PUBLIC"
+msgstr ""
+
+#: templates/admin/abilities.php:119
+msgid "Search abilities..."
+msgstr ""
+
+#: templates/admin/abilities.php:123
+msgid "All modules"
+msgstr ""
+
+#. translators: 1: enabled count, 2: total count
+#: templates/admin/abilities.php:171
+#, php-format
+msgid "%1$d of %2$d enabled"
+msgstr ""
+
+#: templates/admin/abilities.php:195
 msgid "readonly"
 msgstr ""
 
-#: templates\admin\abilities.php:113
-msgid "write"
-msgstr ""
-
-#: templates\admin\abilities.php:118
-msgid "public"
-msgstr ""
-
-#: templates\admin\abilities.php:121
-msgid "disabled"
-msgstr ""
-
-#: templates\admin\abilities.php:126
+#: templates/admin/abilities.php:198
 msgid "destructive"
 msgstr ""
 
-#: templates\admin\audit-log.php:53
-msgid "Monitor all MCP requests and their execution results."
+#: templates/admin/abilities.php:201
+msgid "public"
 msgstr ""
 
-#: templates\admin\audit-log.php:57
+#: templates/admin/abilities.php:203
+msgid "admin"
+msgstr ""
+
+#: templates/admin/audit-log.php:89
+msgid "Every MCP request, with timing, status, and payload."
+msgstr ""
+
+#: templates/admin/audit-log.php:94
 msgid "Export CSV"
 msgstr ""
 
-#: templates\admin\audit-log.php:65
-msgid "Calls Today"
+#: templates/admin/audit-log.php:103
+msgid "TODAY"
 msgstr ""
 
-#: templates\admin\audit-log.php:69
-msgid "Error Rate"
+#: templates/admin/audit-log.php:105
+msgid "API calls"
 msgstr ""
 
-#: templates\admin\audit-log.php:73
-msgid "Avg Duration"
+#: templates/admin/audit-log.php:110
+msgid "SUCCESS"
 msgstr ""
 
-#: templates\admin\audit-log.php:77
-msgid "Total Entries"
+#. translators: 1: number of successful calls, 2: total calls
+#: templates/admin/audit-log.php:116
+#, php-format
+msgid "%1$d of %2$d"
 msgstr ""
 
-#: templates\admin\audit-log.php:88
-msgid "All Tokens"
+#: templates/admin/audit-log.php:126
+msgid "AVG DURATION"
 msgstr ""
 
-#: templates\admin\audit-log.php:97
-msgid "All Abilities"
+#: templates/admin/audit-log.php:128
+msgid "response time"
 msgstr ""
 
-#: templates\admin\audit-log.php:110
-msgid "All Statuses"
+#: templates/admin/audit-log.php:133
+msgid "ERRORS"
 msgstr ""
 
-#: templates\admin\audit-log.php:111
-msgid "Success"
+#: templates/admin/audit-log.php:135
+msgid "last 24h"
 msgstr ""
 
-#: templates\admin\audit-log.php:112
-#: templates\admin\tools.php:115
-msgid "Error"
+#: templates/admin/audit-log.php:148
+msgid "Search by ability or client..."
 msgstr ""
 
-#: templates\admin\audit-log.php:121
-msgid "Reset"
+#: templates/admin/audit-log.php:153
+msgid "All"
 msgstr ""
 
-#: templates\admin\audit-log.php:131
-msgid "No log entries found for the current filters."
+#: templates/admin/audit-log.php:165
+msgid "All time"
 msgstr ""
 
-#: templates\admin\audit-log.php:138
-msgid "Time"
+#: templates/admin/audit-log.php:166
+msgid "Last 24 hours"
 msgstr ""
 
-#: templates\admin\audit-log.php:139
-msgid "Ability"
+#: templates/admin/audit-log.php:167
+msgid "Last 7 days"
 msgstr ""
 
-#: templates\admin\audit-log.php:140
-#: templates\admin\tokens.php:70
-msgid "Status"
+#: templates/admin/audit-log.php:168
+msgid "Last 30 days"
 msgstr ""
 
-#: templates\admin\audit-log.php:141
-msgid "Duration"
+#: templates/admin/audit-log.php:173
+msgid "Reset Filters"
 msgstr ""
 
-#: templates\admin\audit-log.php:142
-msgid "IP"
+#: templates/admin/audit-log.php:187
+msgid "No entries found"
 msgstr ""
 
-#: templates\admin\audit-log.php:152
-#: templates\admin\dashboard.php:215
-#: templates\admin\tokens.php:99
-msgid "ago"
+#: templates/admin/audit-log.php:188
+msgid "No log entries match the selected filters."
 msgstr ""
 
-#: templates\admin\audit-log.php:166
-msgid "Details"
+#: templates/admin/audit-log.php:211
+msgid "Unknown Client"
 msgstr ""
 
-#: templates\admin\audit-log.php:175
-msgid "Input Parameters"
+#. translators: %d: execution duration in milliseconds
+#: templates/admin/audit-log.php:251
+#, php-format
+msgid "%dms"
 msgstr ""
 
-#: templates\admin\audit-log.php:180
-msgid "Execution Result"
+#: templates/admin/audit-log.php:255
+msgid "—"
 msgstr ""
 
-#: templates\admin\audit-log.php:186
-msgid "User Agent:"
+#: templates/admin/audit-log.php:264
+msgid "TIMESTAMP"
 msgstr ""
 
-#: templates\admin\dashboard.php:46
-msgid "MCP Server Active"
+#: templates/admin/audit-log.php:269
+msgid "SOURCE IP"
 msgstr ""
 
-#: templates\admin\dashboard.php:54
-#: templates\admin\dashboard.php:328
-#: templates\admin\dashboard.php:341
-#: templates\admin\dashboard.php:370
-#: templates\admin\dashboard.php:380
-#: templates\admin\dashboard.php:390
-#: templates\admin\tokens.php:189
-#: templates\admin\tokens.php:243
-#: templates\admin\tokens.php:261
-#: templates\admin\tokens.php:308
-#: templates\admin\tokens.php:322
-#: templates\admin\tokens.php:335
-msgid "Copy"
-msgstr ""
-
-#: templates\admin\dashboard.php:58
-msgid "Protocol: 2024-11-05"
-msgstr ""
-
-#: templates\admin\dashboard.php:76
-msgid "API calls today"
-msgstr ""
-
-#: templates\admin\dashboard.php:82
-msgid "%d%% vs yesterday"
-msgstr ""
-
-#: templates\admin\dashboard.php:97
-msgid "Active tokens"
-msgstr ""
-
-#: templates\admin\dashboard.php:102
-msgid "%d expire in 30d"
-msgstr ""
-
-#: templates\admin\dashboard.php:117
-msgid "Abilities registered"
-msgstr ""
-
-#: templates\admin\dashboard.php:122
-msgid "%d MCP-public"
-msgstr ""
-
-#: templates\admin\dashboard.php:139
-msgid "Errors (24h)"
-msgstr ""
-
-#: templates\admin\dashboard.php:144
-msgid "Rate: %s%%"
-msgstr ""
-
-#: templates\admin\dashboard.php:158
-msgid "Recent audit log"
-msgstr ""
-
-#: templates\admin\dashboard.php:162
-msgid "View all →"
-msgstr ""
-
-#: templates\admin\dashboard.php:167
-msgid "No API calls yet."
-msgstr ""
-
-#: templates\admin\dashboard.php:176
-msgid "ABILITY"
-msgstr ""
-
-#: templates\admin\dashboard.php:180
-msgid "TOKEN"
-msgstr ""
-
-#: templates\admin\dashboard.php:184
+#: templates/admin/audit-log.php:274
+#: templates/admin/dashboard.php:221
 msgid "STATUS"
 msgstr ""
 
-#: templates\admin\dashboard.php:188
+#: templates/admin/audit-log.php:280
+msgid "PAYLOAD"
+msgstr ""
+
+#: templates/admin/audit-log.php:287
+msgid "EXECUTION RESULT / ERROR SUMMARY"
+msgstr ""
+
+#: templates/admin/audit-log.php:294
+msgid "USER AGENT"
+msgstr ""
+
+#: templates/admin/dashboard.php:46
+msgid "Overview"
+msgstr ""
+
+#: templates/admin/dashboard.php:47
+msgid "At-a-glance metrics, server health, and module status."
+msgstr ""
+
+#: templates/admin/dashboard.php:54
+msgid "MCP Server Active"
+msgstr ""
+
+#: templates/admin/dashboard.php:69
+#: templates/admin/dashboard.php:467
+#: templates/admin/dashboard.php:492
+#: templates/admin/dashboard.php:536
+#: templates/admin/dashboard.php:555
+#: templates/admin/dashboard.php:574
+#: templates/admin/documentation.php:644
+#: templates/admin/tokens.php:371
+#: templates/admin/tokens.php:413
+#: templates/admin/tokens.php:426
+#: templates/admin/tokens.php:458
+#: templates/admin/tokens.php:468
+#: templates/admin/tokens.php:478
+msgid "Copy"
+msgstr ""
+
+#: templates/admin/dashboard.php:74
+msgid "Protocol 2024-11-05"
+msgstr ""
+
+#: templates/admin/dashboard.php:90
+msgid "API calls today"
+msgstr ""
+
+#. translators: %d: percentage change in API calls
+#: templates/admin/dashboard.php:98
+#, php-format
+msgid "%d%% vs yesterday"
+msgstr ""
+
+#: templates/admin/dashboard.php:114
+msgid "Active tokens"
+msgstr ""
+
+#. translators: %d: number of tokens expiring in 30 days
+#: templates/admin/dashboard.php:119
+#, php-format
+msgid "%d expire in 30d"
+msgstr ""
+
+#: templates/admin/dashboard.php:135
+msgid "Abilities registered"
+msgstr ""
+
+#. translators: %d: number of public abilities
+#: templates/admin/dashboard.php:140
+#, php-format
+msgid "%d MCP-public"
+msgstr ""
+
+#: templates/admin/dashboard.php:157
+msgid "Errors (24h)"
+msgstr ""
+
+#. translators: %s: error rate percentage
+#: templates/admin/dashboard.php:162
+#, php-format
+msgid "Rate: %s%%"
+msgstr ""
+
+#: templates/admin/dashboard.php:178
+msgid "Recent activity"
+msgstr ""
+
+#: templates/admin/dashboard.php:181
+msgid "Live MCP request stream"
+msgstr ""
+
+#: templates/admin/dashboard.php:186
+msgid "View audit log →"
+msgstr ""
+
+#: templates/admin/dashboard.php:200
+msgid "Waiting for activity"
+msgstr ""
+
+#: templates/admin/dashboard.php:203
+msgid "Activity will appear here once your AI client makes a request."
+msgstr ""
+
+#: templates/admin/dashboard.php:213
+msgid "ABILITY"
+msgstr ""
+
+#: templates/admin/dashboard.php:217
+msgid "TOKEN"
+msgstr ""
+
+#: templates/admin/dashboard.php:225
 msgid "TIME"
 msgstr ""
 
-#: templates\admin\dashboard.php:231
+#: templates/admin/dashboard.php:250
+msgid "Success"
+msgstr ""
+
+#: templates/admin/dashboard.php:252
+#: templates/admin/tools.php:116
+msgid "Error"
+msgstr ""
+
+#: templates/admin/dashboard.php:254
+msgid "Rate Limited"
+msgstr ""
+
+#. translators: %s: relative time
+#: templates/admin/dashboard.php:266
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: templates/admin/dashboard.php:287
 msgid "Module status"
 msgstr ""
 
-#: templates\admin\dashboard.php:279
-msgid "Connect AI Client"
+#. translators: 1: enabled count, 2: total count
+#: templates/admin/dashboard.php:293
+#, php-format
+msgid "%1$d of %2$d modules online"
 msgstr ""
 
-#: templates\admin\dashboard.php:286
+#: templates/admin/dashboard.php:302
+msgid "Manage"
+msgstr ""
+
+#. translators: %d: number of abilities in this module
+#: templates/admin/dashboard.php:379
+#, php-format
+msgid "%d abilities"
+msgstr ""
+
+#: templates/admin/dashboard.php:397
+msgid "Connect AI client"
+msgstr ""
+
+#: templates/admin/dashboard.php:402
+msgid "Three steps · under a minute"
+msgstr ""
+
+#: templates/admin/dashboard.php:409
 msgid "Your API Token"
 msgstr ""
 
-#: templates\admin\dashboard.php:287
-msgid "Paste your token here..."
+#. translators: %s: link to generate a token
+#: templates/admin/dashboard.php:416
+#, php-format
+msgid "Don't have one? %s"
 msgstr ""
 
-#: templates\admin\dashboard.php:292
-msgid "Don\'t have a token yet? %s"
+#: templates/admin/dashboard.php:417
+msgid "Generate one"
 msgstr ""
 
-#: templates\admin\dashboard.php:293
-msgid "Generate one →"
+#: templates/admin/dashboard.php:426
+#: templates/admin/tokens.php:380
+msgid "Claude Desktop"
 msgstr ""
 
-#: templates\admin\dashboard.php:323
-#: templates\admin\tokens.php:235
-msgid "Install mcp-remote"
+#: templates/admin/dashboard.php:430
+msgid "Cursor / IDEs"
 msgstr ""
 
-#: templates\admin\dashboard.php:336
-#: templates\admin\tokens.php:253
+#: templates/admin/dashboard.php:438
+#: templates/admin/tokens.php:394
+msgid "Windows"
+msgstr ""
+
+#: templates/admin/dashboard.php:440
+#: templates/admin/tokens.php:397
+msgid "macOS"
+msgstr ""
+
+#: templates/admin/dashboard.php:442
+#: templates/admin/tokens.php:400
+msgid "Linux"
+msgstr ""
+
+#: templates/admin/dashboard.php:453
+msgid "Install MCP-Remote"
+msgstr ""
+
+#: templates/admin/dashboard.php:477
+#: templates/admin/tokens.php:421
 msgid "Connect to Claude Desktop"
 msgstr ""
 
-#: templates\admin\dashboard.php:339
-msgid "Paste token first..."
+#: templates/admin/dashboard.php:482
+msgid "Paste token first.."
 msgstr ""
 
-#: templates\admin\dashboard.php:348
+#: templates/admin/dashboard.php:500
 msgid "Run Step 1 first, wait for it to finish, then run Step 2."
 msgstr ""
 
-#: templates\admin\dashboard.php:357
-#: templates\admin\tokens.php:288
+#. translators: %s: link to nodejs.org
+#: templates/admin/dashboard.php:514
+#: templates/admin/tokens.php:442
+#, php-format
 msgid "No Node.js? Download LTS from %s first."
 msgstr ""
 
-#: templates\admin\dashboard.php:366
-#: templates\admin\tokens.php:302
+#: templates/admin/dashboard.php:524
+#: templates/admin/tokens.php:454
 msgid "MCP Server URL"
 msgstr ""
 
-#: templates\admin\dashboard.php:376
-#: templates\admin\tokens.php:315
+#: templates/admin/dashboard.php:543
+#: templates/admin/tokens.php:464
 msgid "Type"
 msgstr ""
 
-#: templates\admin\dashboard.php:386
-#: templates\admin\tokens.php:329
+#: templates/admin/dashboard.php:562
+#: templates/admin/tokens.php:474
 msgid "Authorization Header"
 msgstr ""
 
-#: templates\admin\dashboard.php:396
+#: templates/admin/dashboard.php:581
 msgid "In Cursor: Settings → Features → MCP Servers → Add new MCP server → set Type to HTTP, paste the URL and Authorization header."
 msgstr ""
 
-#: templates\admin\settings.php:14
+#: templates/admin/dashboard.php:604
+msgid "For site administrators"
+msgstr ""
+
+#. translators: %s: link to abilities tab
+#: templates/admin/dashboard.php:609
+#, php-format
+msgid "My Site Hand exposes only the abilities you explicitly enable in the %s tab. Review them before sharing tokens with AI clients."
+msgstr ""
+
+#: templates/admin/documentation.php:417
+msgid "Documentation & User Guide"
+msgstr ""
+
+#: templates/admin/documentation.php:418
+msgid "Learn how to connect, configure, and communicate with your WordPress site using AI agents."
+msgstr ""
+
+#: templates/admin/documentation.php:426
+msgid "Quick Start"
+msgstr ""
+
+#: templates/admin/documentation.php:430
+msgid "Client Setup"
+msgstr ""
+
+#: templates/admin/documentation.php:434
+msgid "Example Prompts"
+msgstr ""
+
+#: templates/admin/documentation.php:438
+msgid "Security & Audits"
+msgstr ""
+
+#: templates/admin/documentation.php:442
+msgid "Troubleshooting & FAQ"
+msgstr ""
+
+#: templates/admin/documentation.php:453
+msgid "Connecting in Seconds"
+msgstr ""
+
+#: templates/admin/documentation.php:457
+msgid "My Site Hand bridges the gap between WordPress and AI clients using the Model Context Protocol (MCP). By connecting your AI assistant directly to WordPress, you can write posts, review system health, run SEO diagnostics, and check WooCommerce details using simple, conversational commands."
+msgstr ""
+
+#: templates/admin/documentation.php:464
+msgid "Generate an API Access Token"
+msgstr ""
+
+#. translators: 1: opening <a> tag link to API Tokens page, 2: closing </a> tag
+#: templates/admin/documentation.php:470
+#, php-format
+msgid "Go to the %1$sAPI Tokens page%2$s. Click the \"New Token\" button. Enter a name for the token (for example: \"My Laptop Claude\") and select a permission scope (Read, Write, or Admin). Click \"Generate Token\" to create it."
+msgstr ""
+
+#: templates/admin/documentation.php:484
+msgid "Copy the Hashed Token Immediately"
+msgstr ""
+
+#: templates/admin/documentation.php:486
+msgid "A success window will pop up showing your secure key. Copy this key immediately! For maximum safety, tokens are strongly hashed and will never be shown again once you close the popup."
+msgstr ""
+
+#: templates/admin/documentation.php:494
+msgid "Register Your Token on the Dashboard"
+msgstr ""
+
+#. translators: 1: opening <a> tag link to Dashboard page, 2: closing </a> tag
+#: templates/admin/documentation.php:500
+#, php-format
+msgid "Next, go to the %1$sDashboard%2$s. Paste your newly copied token into the input box and click \"Save Token\"."
+msgstr ""
+
+#: templates/admin/documentation.php:514
+msgid "Follow the Guided Terminal Commands"
+msgstr ""
+
+#: templates/admin/documentation.php:516
+msgid "Once your token is saved, the Dashboard will automatically generate custom terminal commands tailored to your local system. Run Step 1 in your terminal to install the client utility, then run Step 2 to configure Claude Desktop automatically."
+msgstr ""
+
+#: templates/admin/documentation.php:530
+msgid "How My Site Hand Works Under the Hood"
+msgstr ""
+
+#: templates/admin/documentation.php:534
+msgid "Instead of forcing you to install complex software on your server, My Site Hand uses your existing WordPress site itself as the connection gateway. Here is exactly what happens when your AI client communicates with your site:"
+msgstr ""
+
+#: templates/admin/documentation.php:539
+msgid "Secure Web Endpoint (SSE)"
+msgstr ""
+
+#: templates/admin/documentation.php:540
+msgid "The plugin opens a secure web channel on your site using the standard WordPress REST API. AI clients send messages to this endpoint to discover or run tools."
+msgstr ""
+
+#: templates/admin/documentation.php:543
+msgid "Local Connector (mcp-remote)"
+msgstr ""
+
+#: templates/admin/documentation.php:544
+msgid "When you run the setup script, it configures a local utility called mcp-remote on your machine. This lightweight utility serves as a secure bridge, passing commands between your local Claude Desktop app and your remote WordPress site."
+msgstr ""
+
+#: templates/admin/documentation.php:547
+msgid "Dynamic Mapping & Execution"
+msgstr ""
+
+#: templates/admin/documentation.php:548
+msgid "When you ask Claude \"List my draft pages\", Claude translates this request into a structured JSON query, passes it to mcp-remote, which forwards it to the plugin. The plugin executes WordPress functions safely (using read-only DB calls), converts the pages to clean text, and sends them back to Claude."
+msgstr ""
+
+#: templates/admin/documentation.php:557
+msgid "Claude Desktop app (Automated Connection)"
+msgstr ""
+
+#: templates/admin/documentation.php:561
+msgid "The Dashboard provides a guided two-step command panel. Once you copy your token and save it on the dashboard, you can run the commands to auto-configure Claude Desktop for Windows, macOS, or Linux."
+msgstr ""
+
+#: templates/admin/documentation.php:569
+msgid "Get your custom commands:"
+msgstr ""
+
+#. translators: 1: opening <a> tag link to Dashboard page, 2: closing </a> tag
+#: templates/admin/documentation.php:574
+#, php-format
+msgid "Go to the %1$sDashboard%2$s, paste your token, and the system will instantly output the exact setup commands with your credentials pre-configured."
+msgstr ""
+
+#: templates/admin/documentation.php:584
+msgid "Manual Claude Config Structure"
+msgstr ""
+
+#: templates/admin/documentation.php:585
+msgid "If you prefer manual configuration, you can insert this setup entry into your local Claude Desktop config file:"
+msgstr ""
+
+#: templates/admin/documentation.php:612
+msgid "Cursor IDE Setup"
+msgstr ""
+
+#: templates/admin/documentation.php:616
+msgid "Cursor supports connecting directly to remote Server-Sent Events (SSE) channels. You can register My Site Hand as a tool in Cursor features settings:"
+msgstr ""
+
+#: templates/admin/documentation.php:621
+msgid "Step 1: Open Settings"
+msgstr ""
+
+#: templates/admin/documentation.php:622
+msgid "Open Cursor, go to Cursor Settings (cog icon in top right) > Features > MCP."
+msgstr ""
+
+#: templates/admin/documentation.php:625
+msgid "Step 2: Add New Server"
+msgstr ""
+
+#: templates/admin/documentation.php:626
+msgid "Click the \"+ Add New MCP Server\" button."
+msgstr ""
+
+#: templates/admin/documentation.php:629
+msgid "Step 3: Enter Credentials"
+msgstr ""
+
+#: templates/admin/documentation.php:630
+msgid "Configure the server panel as follows:"
+msgstr ""
+
+#: templates/admin/documentation.php:639
+msgid "Your SSE URL Endpoint:"
+msgstr ""
+
+#: templates/admin/documentation.php:659
+msgid "Example Prompts & Use Cases"
+msgstr ""
+
+#: templates/admin/documentation.php:663
+msgid "To help you start working with your AI assistant, we have compiled a set of real-world use cases. Click on any bubble to copy the prompt directly to your clipboard."
+msgstr ""
+
+#: templates/admin/documentation.php:673
+msgid "Content Management"
+msgstr ""
+
+#: templates/admin/documentation.php:676
+#: templates/admin/documentation.php:680
+#: templates/admin/documentation.php:684
+#: templates/admin/documentation.php:700
+#: templates/admin/documentation.php:704
+#: templates/admin/documentation.php:708
+#: templates/admin/documentation.php:724
+#: templates/admin/documentation.php:728
+#: templates/admin/documentation.php:732
+#: templates/admin/documentation.php:748
+#: templates/admin/documentation.php:752
+#: templates/admin/documentation.php:756
+msgid "Click to copy prompt"
+msgstr ""
+
+#: templates/admin/documentation.php:677
+msgid "List the 5 most recent published posts on my site and summarize them."
+msgstr ""
+
+#: templates/admin/documentation.php:681
+msgid "Write a draft post about the importance of web accessibility and save it."
+msgstr ""
+
+#: templates/admin/documentation.php:685
+msgid "Find page ID 12, append a section explaining our cookie policy, and set its status to draft."
+msgstr ""
+
+#: templates/admin/documentation.php:697
+msgid "SEO Power-Tools"
+msgstr ""
+
+#: templates/admin/documentation.php:701
+msgid "Audit the SEO keyword of our main service page and advise if it is optimized."
+msgstr ""
+
+#: templates/admin/documentation.php:705
+msgid "Generate and write an SEO-optimized meta description for my last blog post."
+msgstr ""
+
+#: templates/admin/documentation.php:709
+msgid "Scan my latest published article for any broken outbound links."
+msgstr ""
+
+#: templates/admin/documentation.php:721
+msgid "WooCommerce Store"
+msgstr ""
+
+#: templates/admin/documentation.php:725
+msgid "Provide a summary of today's WooCommerce sales, revenue, and total orders."
+msgstr ""
+
+#: templates/admin/documentation.php:729
+msgid "Search for order ID #450 and tell me who the customer is and its status."
+msgstr ""
+
+#: templates/admin/documentation.php:733
+msgid "Check if there are any items currently out of stock or low in quantity."
+msgstr ""
+
+#: templates/admin/documentation.php:745
+msgid "Diagnostics & Alt-Text"
+msgstr ""
+
+#: templates/admin/documentation.php:749
+msgid "Provide a system health report of my server requirements."
+msgstr ""
+
+#: templates/admin/documentation.php:753
+msgid "Scan my error log file and list the most recent warning messages."
+msgstr ""
+
+#: templates/admin/documentation.php:757
+msgid "Find images in the media library that are missing alt tags."
+msgstr ""
+
+#: templates/admin/documentation.php:771
+msgid "Security Protocols & Permissions"
+msgstr ""
+
+#: templates/admin/documentation.php:775
+msgid "We treat website security as a top priority. My Site Hand implements robust protective policies so that you have total control over what AI agents can query and manipulate on your server."
+msgstr ""
+
+#: templates/admin/documentation.php:780
+msgid "1. Hashed Access Tokens"
+msgstr ""
+
+#: templates/admin/documentation.php:782
+msgid "All access keys generated inside My Site Hand are immediately hashed using the SHA-256 standard before database storage. Plaintext keys are never stored in your WordPress database, rendering them immune to database leaks."
+msgstr ""
+
+#: templates/admin/documentation.php:787
+msgid "2. Granular Capability Scopes"
+msgstr ""
+
+#: templates/admin/documentation.php:789
+msgid "You can restrict tokens to specific permission levels:"
+msgstr ""
+
+#: templates/admin/documentation.php:792
+msgid "Read-Only"
+msgstr ""
+
+#: templates/admin/documentation.php:792
+msgid "Allows the agent to read posts, pages, categories, comments, media metadata, and general setup options, but blocks all editing, creating, and deleting capabilities."
+msgstr ""
+
+#: templates/admin/documentation.php:793
+msgid "Read-Write"
+msgstr ""
+
+#: templates/admin/documentation.php:793
+msgid "Allows standard CRUD (Create, Read, Update, Delete) access to your posts, pages, and products, but prevents the agent from requesting core diagnostics or system error logs."
+msgstr ""
+
+#: templates/admin/documentation.php:794
+msgid "Admin Access"
+msgstr ""
+
+#: templates/admin/documentation.php:794
+msgid "Unlocks full system features, including error log views, PHP parameters check, and database health fixes."
+msgstr ""
+
+#: templates/admin/documentation.php:799
+msgid "3. Immutable Real-Time Audit Log"
+msgstr ""
+
+#. translators: 1: opening <a> tag link to Audit Log page, 2: closing </a> tag
+#: templates/admin/documentation.php:805
+#, php-format
+msgid "Every single action the AI agent performs is recorded in real-time. Navigate to the %1$sAudit Log page%2$s to view the exact capability requested, parameters sent, calling IP address, and execution duration."
+msgstr ""
+
+#: templates/admin/documentation.php:823
+msgid "Frequently Asked Questions & Support"
+msgstr ""
+
+#: templates/admin/documentation.php:828
+msgid "Why is the AI unable to connect to my site?"
+msgstr ""
+
+#: templates/admin/documentation.php:830
+msgid "This is usually caused by loopback routing issues on your hosting or local server configuration. Go to the \"About & Info\" tab and run the \"REST API Loopback\" test to diagnose if your server can make secure outgoing connections to itself."
+msgstr ""
+
+#: templates/admin/documentation.php:835
+msgid "Is Node.js required for the plugin to work?"
+msgstr ""
+
+#: templates/admin/documentation.php:837
+msgid "Yes, if you want to use the automated integration for Claude Desktop via mcp-remote. Node.js is required to execute the connection utility from your local terminal."
+msgstr ""
+
+#: templates/admin/documentation.php:842
+msgid "Can I use this plugin with VS Code or other developer editors?"
+msgstr ""
+
+#: templates/admin/documentation.php:844
+msgid "Absolutely. Any editor or agent client supporting the Model Context Protocol (like VS Code extensions Roo Code or Cline) can load this plugin using the SSE URL provided in the Client Setup tab."
+msgstr ""
+
+#: templates/admin/documentation.php:849
+msgid "Does this plugin send my data to external servers?"
+msgstr ""
+
+#: templates/admin/documentation.php:851
+msgid "No, My Site Hand operates entirely locally on your WordPress host. Your content, logs, products, and configurations are never transmitted to external services, maintaining complete data isolation."
+msgstr ""
+
+#: templates/admin/feature-request.php:169
+msgid "Help shape the future of My Site Hand! Share your ideas, requests, or use cases directly with the developer."
+msgstr ""
+
+#: templates/admin/feature-request.php:188
+msgid "Submit a Feature Request"
+msgstr ""
+
+#: templates/admin/feature-request.php:195
+msgid "Feature Title"
+msgstr ""
+
+#: templates/admin/feature-request.php:196
+msgid "e.g., Add integration for RankMath SEO plugin"
+msgstr ""
+
+#: templates/admin/feature-request.php:200
+msgid "Description & Use Case"
+msgstr ""
+
+#: templates/admin/feature-request.php:201
+msgid "Describe what this feature should do, how you plan to use it with Claude/Cursor, and why it is useful..."
+msgstr ""
+
+#: templates/admin/feature-request.php:205
+msgid "Your Email Address"
+msgstr ""
+
+#: templates/admin/feature-request.php:205
+msgid "optional, to receive updates"
+msgstr ""
+
+#: templates/admin/feature-request.php:212
+msgid "Send Feature Request"
+msgstr ""
+
+#: templates/admin/feature-request.php:224
+msgid "How this works"
+msgstr ""
+
+#: templates/admin/feature-request.php:229
+msgid "Direct Developer Link"
+msgstr ""
+
+#: templates/admin/feature-request.php:230
+msgid "Your suggestion goes straight to builtbytanin@gmail.com."
+msgstr ""
+
+#: templates/admin/feature-request.php:233
+msgid "Open Roadmap"
+msgstr ""
+
+#: templates/admin/feature-request.php:234
+msgid "Features are prioritized based on user interest and frequency of requests."
+msgstr ""
+
+#: templates/admin/feature-request.php:237
+msgid "Secure Transmission"
+msgstr ""
+
+#: templates/admin/feature-request.php:238
+msgid "Only the text you write is emailed out. Your site dashboard data and API tokens remain completely private."
+msgstr ""
+
+#: templates/admin/feature-request.php:249
+msgid "GitHub Project"
+msgstr ""
+
+#: templates/admin/feature-request.php:250
+msgid "Check source files, view progress, or submit pull requests directly on our GitHub project page."
+msgstr ""
+
+#: templates/admin/feature-request.php:252
+msgid "Visit GitHub"
+msgstr ""
+
+#: templates/admin/settings.php:14
 msgid "Posts, pages, CPT management"
 msgstr ""
 
-#: templates\admin\settings.php:15
+#: templates/admin/settings.php:15
 msgid "SEO analysis and meta management"
 msgstr ""
 
-#: templates\admin\settings.php:16
+#: templates/admin/settings.php:16
 msgid "Site health, error logs, cron"
 msgstr ""
 
-#: templates\admin\settings.php:17
+#: templates/admin/settings.php:17
 msgid "Media library management"
 msgstr ""
 
-#: templates\admin\settings.php:18
+#: templates/admin/settings.php:18
 msgid "User management"
 msgstr ""
 
-#: templates\admin\settings.php:19
+#: templates/admin/settings.php:19
 msgid "Products, orders, coupons (requires WooCommerce)"
 msgstr ""
 
-#: templates\admin\settings.php:29
+#: templates/admin/settings.php:76
 msgid "Configure the core behavior of the MCP server and available tool modules."
 msgstr ""
 
-#: templates\admin\settings.php:41
+#: templates/admin/settings.php:80
+msgid "Changes are saved automatically."
+msgstr ""
+
+#: templates/admin/settings.php:90
 msgid "General Configuration"
 msgstr ""
 
-#: templates\admin\settings.php:46
+#: templates/admin/settings.php:96
 msgid "Enable MCP Server"
 msgstr ""
 
-#: templates\admin\settings.php:47
+#: templates/admin/settings.php:98
 msgid "Activate the Model Context Protocol server for this site. Disabling this will shut down the endpoint for all agents."
 msgstr ""
 
-#: templates\admin\settings.php:57
+#: templates/admin/settings.php:110
 msgid "Agent Display Name"
 msgstr ""
 
-#: templates\admin\settings.php:58
+#: templates/admin/settings.php:112
 msgid "The localized name that AI clients (like Claude or Cursor) will see during initialization."
 msgstr ""
 
-#: templates\admin\settings.php:71
+#: templates/admin/settings.php:116
+msgid "e.g. My Website Agent"
+msgstr ""
+
+#: templates/admin/settings.php:124
+msgid "Trust Proxy Headers"
+msgstr ""
+
+#: templates/admin/settings.php:126
+msgid "Enable this only if your site sits behind a trusted reverse proxy (e.g. Cloudflare). Allows reading X-Forwarded-For to determine the true client IP for the allowlist."
+msgstr ""
+
+#: templates/admin/settings.php:144
 msgid "Active Modules"
 msgstr ""
 
-#: templates\admin\settings.php:86
+#. translators: %d: number of tools
+#: templates/admin/settings.php:167
+#, php-format
 msgid "%d tools"
 msgstr ""
 
-#: templates\admin\settings.php:92
+#: templates/admin/settings.php:175
 msgid "WooCommerce Missing"
 msgstr ""
 
-#: templates\admin\settings.php:111
-msgid "Rate Limiting"
-msgstr ""
-
-#: templates\admin\settings.php:115
-msgid "Hourly Limit"
-msgstr ""
-
-#: templates\admin\settings.php:118
-msgid "Calls allowed per hour per token."
-msgstr ""
-
-#: templates\admin\settings.php:121
-msgid "Daily Limit"
-msgstr ""
-
-#: templates\admin\settings.php:124
-msgid "Calls allowed per day per token."
-msgstr ""
-
-#: templates\admin\settings.php:132
-msgid "System Cache"
-msgstr ""
-
-#: templates\admin\settings.php:136
-msgid "Cache TTL"
-msgstr ""
-
-#: templates\admin\settings.php:140
-msgid "Flush"
-msgstr ""
-
-#: templates\admin\settings.php:142
-msgid "Results TTL (seconds)."
-msgstr ""
-
-#: templates\admin\settings.php:150
+#: templates/admin/settings.php:196
 msgid "Audit Logging"
 msgstr ""
 
-#: templates\admin\settings.php:154
+#: templates/admin/settings.php:201
 msgid "Retention"
 msgstr ""
 
-#: templates\admin\settings.php:158
+#: templates/admin/settings.php:208
 msgid "days"
 msgstr ""
 
-#: templates\admin\settings.php:162
+#: templates/admin/settings.php:213
 msgid "Detail Level"
 msgstr ""
 
-#: templates\admin\settings.php:164
+#: templates/admin/settings.php:216
 msgid "Detailed (All calls)"
 msgstr ""
 
-#: templates\admin\settings.php:165
+#: templates/admin/settings.php:218
 msgid "Errors Only"
 msgstr ""
 
-#: templates\admin\settings.php:166
+#: templates/admin/settings.php:220
 msgid "Off"
 msgstr ""
 
-#: templates\admin\settings.php:175
+#: templates/admin/settings.php:227
+msgid "Allow token in URL query string"
+msgstr ""
+
+#: templates/admin/settings.php:228
+msgid "Not recommended. Tokens sent this way are recorded in server logs and browser history. Enable only if your MCP client cannot send an Authorization header."
+msgstr ""
+
+#: templates/admin/settings.php:246
+msgid "Rate Limiting"
+msgstr ""
+
+#: templates/admin/settings.php:251
+msgid "Hourly Limit"
+msgstr ""
+
+#: templates/admin/settings.php:257
+msgid "Calls allowed per hour per token."
+msgstr ""
+
+#: templates/admin/settings.php:261
+msgid "Daily Limit"
+msgstr ""
+
+#: templates/admin/settings.php:267
+msgid "Calls allowed per day per token."
+msgstr ""
+
+#: templates/admin/settings.php:275
+msgid "System Cache"
+msgstr ""
+
+#: templates/admin/settings.php:280
+msgid "Cache TTL"
+msgstr ""
+
+#: templates/admin/settings.php:287
+msgid "Flush"
+msgstr ""
+
+#: templates/admin/settings.php:289
+msgid "Results TTL (seconds)."
+msgstr ""
+
+#: templates/admin/settings.php:300
 msgid "Maintenance"
 msgstr ""
 
-#: templates\admin\settings.php:179
+#: templates/admin/settings.php:305
 msgid "Full Reset"
 msgstr ""
 
-#: templates\admin\settings.php:181
+#: templates/admin/settings.php:309
 msgid "Reset All Data"
 msgstr ""
 
-#: templates\admin\settings.php:185
+#: templates/admin/settings.php:314
 msgid "Auto-Cleanup"
 msgstr ""
 
-#: templates\admin\settings.php:199
-msgid "Save All Settings"
+#. translators: %d: count of active tokens
+#: templates/admin/tokens.php:41
+#, php-format
+msgid "%d active tokens · used by AI clients to authenticate"
 msgstr ""
 
-#: templates\admin\tokens.php:30
-msgid "Manage access tokens for your MCP clients. Revoked tokens are immediately invalidated."
+#: templates/admin/tokens.php:50
+msgid "New token"
 msgstr ""
 
-#: templates\admin\tokens.php:40
-#: templates\admin\tokens.php:363
-msgid "Generate Token"
+#: templates/admin/tokens.php:61
+msgid "Tokens are shown once."
 msgstr ""
 
-#: templates\admin\tokens.php:57
-msgid "No tokens yet. Generate your first token to connect an MCP client."
+#: templates/admin/tokens.php:61
+msgid "Copy your token immediately after creation — you won't see it again."
 msgstr ""
 
-#: templates\admin\tokens.php:65
-#: templates\admin\tokens.php:141
-msgid "Label"
+#: templates/admin/tokens.php:72
+msgid "No tokens yet"
 msgstr ""
 
-#: templates\admin\tokens.php:66
-msgid "Created"
+#: templates/admin/tokens.php:73
+msgid "Generate a token to connect an AI client to your MCP server."
 msgstr ""
 
-#: templates\admin\tokens.php:67
-#: templates\admin\tokens.php:151
-msgid "Expires"
+#: templates/admin/tokens.php:76
+msgid "Create your first token"
 msgstr ""
 
-#: templates\admin\tokens.php:68
-msgid "Last Used"
+#. translators: %s: comma-separated list of allowed IPs
+#: templates/admin/tokens.php:124
+#, php-format
+msgid "Restricted to IPs: %s"
 msgstr ""
 
-#: templates\admin\tokens.php:71
-msgid "Actions"
+#. translators: %s: formatted date when token was created
+#: templates/admin/tokens.php:132
+#, php-format
+msgid "Created %s"
 msgstr ""
 
-#: templates\admin\tokens.php:82
-msgid "All abilities"
+#. translators: %s: human-readable time difference since token was last used
+#: templates/admin/tokens.php:138
+#, php-format
+msgid "Last used %s ago"
 msgstr ""
 
-#: templates\admin\tokens.php:96
-#: templates\admin\tokens.php:99
+#: templates/admin/tokens.php:140
+msgid "Never used"
+msgstr ""
+
+#. translators: %s: formatted expiry date
+#: templates/admin/tokens.php:149
+#, php-format
+msgid "Expired %s"
+msgstr ""
+
+#. translators: %s: formatted expiry date
+#: templates/admin/tokens.php:152
+#, php-format
+msgid "Expires %s"
+msgstr ""
+
+#: templates/admin/tokens.php:155
+msgid "Expires never"
+msgstr ""
+
+#: templates/admin/tokens.php:160
+msgid "Revoked"
+msgstr ""
+
+#: templates/admin/tokens.php:168
+msgid "FULL ACCESS"
+msgstr ""
+
+#: templates/admin/tokens.php:171
+msgid "READ"
+msgstr ""
+
+#: templates/admin/tokens.php:174
+msgid "WRITE"
+msgstr ""
+
+#: templates/admin/tokens.php:177
+msgid "ADMIN"
+msgstr ""
+
+#: templates/admin/tokens.php:183
+msgid "Revoke token"
+msgstr ""
+
+#: templates/admin/tokens.php:206
+msgid "New API token"
+msgstr ""
+
+#: templates/admin/tokens.php:213
+msgid "TOKEN NAME"
+msgstr ""
+
+#: templates/admin/tokens.php:215
+msgid "e.g. Claude Desktop — MacBook"
+msgstr ""
+
+#: templates/admin/tokens.php:221
+msgid "SCOPES"
+msgstr ""
+
+#: templates/admin/tokens.php:225
+msgid "Full access"
+msgstr ""
+
+#: templates/admin/tokens.php:225
+msgid "all current and future abilities"
+msgstr ""
+
+#: templates/admin/tokens.php:229
+msgid "Limited access"
+msgstr ""
+
+#: templates/admin/tokens.php:229
+msgid "select specific abilities"
+msgstr ""
+
+#: templates/admin/tokens.php:239
+msgid "Read"
+msgstr ""
+
+#: templates/admin/tokens.php:240
+msgid "View posts, pages, media, users"
+msgstr ""
+
+#: templates/admin/tokens.php:248
+msgid "Write"
+msgstr ""
+
+#: templates/admin/tokens.php:249
+msgid "Create and edit content"
+msgstr ""
+
+#: templates/admin/tokens.php:257
+msgid "Admin"
+msgstr ""
+
+#: templates/admin/tokens.php:258
+msgid "Manage settings, delete content"
+msgstr ""
+
+#: templates/admin/tokens.php:266
+msgid "Custom"
+msgstr ""
+
+#: templates/admin/tokens.php:267
+msgid "Choose specific abilities to restrict this token"
+msgstr ""
+
+#: templates/admin/tokens.php:297
+msgid "Please select at least one ability for limited access."
+msgstr ""
+
+#: templates/admin/tokens.php:304
+msgid "EXPIRES"
+msgstr ""
+
+#: templates/admin/tokens.php:306
+msgid "In 6 months"
+msgstr ""
+
+#: templates/admin/tokens.php:307
+msgid "In 30 days"
+msgstr ""
+
+#: templates/admin/tokens.php:308
+msgid "In 90 days"
+msgstr ""
+
+#: templates/admin/tokens.php:309
+msgid "In 1 year"
+msgstr ""
+
+#: templates/admin/tokens.php:310
 msgid "Never"
 msgstr ""
 
-#: templates\admin\tokens.php:113
-msgid "Revoke"
+#: templates/admin/tokens.php:316
+msgid "ALLOWED IPS (OPTIONAL)"
 msgstr ""
 
-#: templates\admin\tokens.php:135
-msgid "Generate API Token"
+#: templates/admin/tokens.php:318
+msgid "203.0.113.45, 198.51.100.0/24"
 msgstr ""
 
-#: templates\admin\tokens.php:144
-msgid "e.g. Claude Desktop - Home"
+#: templates/admin/tokens.php:320
+msgid "Comma-separated. CIDR notation is supported for IPv4 only. Leave empty to allow all IPs."
 msgstr ""
 
-#: templates\admin\tokens.php:147
-msgid "A descriptive name to help you identify this token later."
+#: templates/admin/tokens.php:323
+msgid "Insert current IP"
 msgstr ""
 
-#: templates\admin\tokens.php:154
-msgid "Leave blank for no expiry."
+#: templates/admin/tokens.php:331
+msgid "Generate token"
 msgstr ""
 
-#: templates\admin\tokens.php:157
-msgid "Ability Restrictions"
-msgstr ""
-
-#: templates\admin\tokens.php:159
-msgid "Leave all unchecked to allow all abilities."
-msgstr ""
-
-#: templates\admin\tokens.php:184
-msgid "Copy this token now — it will NEVER be shown again!"
-msgstr ""
-
-#: templates\admin\tokens.php:211
-msgid "Connect Claude Desktop"
-msgstr ""
-
-#: templates\admin\tokens.php:275
-msgid "Run Step 1 first and wait for it to complete before running Step 2."
-msgstr ""
-
-#: templates\admin\tokens.php:298
-msgid "Connect Cursor"
-msgstr ""
-
-#: templates\admin\tokens.php:342
-msgid "In Cursor: Settings → Features → MCP Servers → Add new MCP server → set Type to HTTP, paste the URL, and add the Authorization header."
-msgstr ""
-
-#: templates\admin\tokens.php:350
-msgid "I have saved it securely."
-msgstr ""
-
-#: templates\admin\tokens.php:360
+#: templates/admin/tokens.php:334
 msgid "Cancel"
 msgstr ""
 
-#: templates\admin\tokens.php:367
-msgid "Done — Close"
+#: templates/admin/tokens.php:341
+msgid "Token created"
 msgstr ""
 
-#: templates\admin\tools.php:20
+#: templates/admin/tokens.php:351
+msgid "Copy this token now."
+msgstr ""
+
+#: templates/admin/tokens.php:351
+msgid "For security, it will not be shown again."
+msgstr ""
+
+#: templates/admin/tokens.php:357
+msgid "YOUR TOKEN"
+msgstr ""
+
+#: templates/admin/tokens.php:383
+msgid "Cursor"
+msgstr ""
+
+#: templates/admin/tokens.php:390
+msgid "Connect Claude Desktop"
+msgstr ""
+
+#: templates/admin/tokens.php:408
+msgid "Install mcp-remote"
+msgstr ""
+
+#: templates/admin/tokens.php:434
+msgid "Run Step 1 first and wait for it to complete before running Step 2."
+msgstr ""
+
+#: templates/admin/tokens.php:451
+msgid "Connect Cursor"
+msgstr ""
+
+#: templates/admin/tokens.php:484
+msgid "In Cursor: Settings → Features → MCP Servers → Add new MCP server → set Type to HTTP, paste the URL, and add the Authorization header."
+msgstr ""
+
+#: templates/admin/tokens.php:491
+msgid "Done"
+msgstr ""
+
+#: templates/admin/tools.php:20
 msgid "Diagnostics & Tools"
 msgstr ""
 
-#: templates\admin\tools.php:21
+#: templates/admin/tools.php:21
 msgid "System health checks, connection tests, and troubleshooting utilities for your MCP server."
 msgstr ""
 
-#: templates\admin\tools.php:29
+#: templates/admin/tools.php:29
 msgid "System Environment"
 msgstr ""
 
-#: templates\admin\tools.php:38
+#: templates/admin/tools.php:38
 msgid "PHP Version"
 msgstr ""
 
-#: templates\admin\tools.php:44
-#: templates\admin\tools.php:60
-#: templates\admin\tools.php:75
-#: templates\admin\tools.php:96
-#: templates\admin\tools.php:115
+#: templates/admin/tools.php:44
+#: templates/admin/tools.php:60
+#: templates/admin/tools.php:75
+#: templates/admin/tools.php:96
+#: templates/admin/tools.php:116
 msgid "Pass"
 msgstr ""
 
-#: templates\admin\tools.php:44
+#: templates/admin/tools.php:44
 msgid "Critical"
 msgstr ""
 
-#: templates\admin\tools.php:54
+#: templates/admin/tools.php:54
 msgid "WordPress Version"
 msgstr ""
 
-#: templates\admin\tools.php:60
-#: templates\admin\tools.php:75
+#: templates/admin/tools.php:60
+#: templates/admin/tools.php:75
 msgid "Warn"
 msgstr ""
 
-#: templates\admin\tools.php:70
+#: templates/admin/tools.php:70
 msgid "HTTPS Status"
 msgstr ""
 
-#: templates\admin\tools.php:73
+#: templates/admin/tools.php:73
 msgid "Encrypted"
 msgstr ""
 
-#: templates\admin\tools.php:73
+#: templates/admin/tools.php:73
 msgid "Unsecured"
 msgstr ""
 
-#: templates\admin\tools.php:85
+#: templates/admin/tools.php:85
 msgid "Abilities Registry"
 msgstr ""
 
-#: templates\admin\tools.php:91
+#. translators: %d: number of registered abilities
+#: templates/admin/tools.php:91
+#, php-format
 msgid "%d registered"
 msgstr ""
 
-#: templates\admin\tools.php:96
+#: templates/admin/tools.php:96
 msgid "Empty"
 msgstr ""
 
-#: templates\admin\tools.php:106
+#: templates/admin/tools.php:106
 msgid "Database Schema"
 msgstr ""
 
-#: templates\admin\tools.php:113
+#: templates/admin/tools.php:114
 msgid "Synchronized"
 msgstr ""
 
-#: templates\admin\tools.php:113
+#: templates/admin/tools.php:114
 msgid "Incomplete"
 msgstr ""
 
-#: templates\admin\tools.php:127
+#: templates/admin/tools.php:128
 msgid "Connection Tests"
 msgstr ""
 
-#: templates\admin\tools.php:131
+#: templates/admin/tools.php:132
 msgid "REST API Loopback"
 msgstr ""
 
-#: templates\admin\tools.php:132
+#: templates/admin/tools.php:133
 msgid "Validates that your server can communicate with its own MCP endpoints."
 msgstr ""
 
-#: templates\admin\tools.php:134
+#: templates/admin/tools.php:135
 msgid "Run Loopback Test"
 msgstr ""
 
-#: templates\admin\tools.php:138
+#: templates/admin/tools.php:139
 msgid "MCP Discovery"
 msgstr ""
 
-#: templates\admin\tools.php:139
+#: templates/admin/tools.php:140
 msgid "Simulates a client handshake to verify tool registration and metadata."
 msgstr ""
 
-#: templates\admin\tools.php:141
+#: templates/admin/tools.php:142
 msgid "Simulate Discovery"
 msgstr ""
 
-#: templates\admin\tools.php:149
+#: templates/admin/tools.php:150
 msgid "System Recovery"
 msgstr ""
 
-#: templates\admin\tools.php:153
+#: templates/admin/tools.php:154
 msgid "Ability Cache"
 msgstr ""
 
-#: templates\admin\tools.php:154
+#: templates/admin/tools.php:155
 msgid "Clear registry cache and force-scan all active modules."
 msgstr ""
 
-#: templates\admin\tools.php:157
+#: templates/admin/tools.php:158
 msgid "Regenerate Registry"
 msgstr ""
 
-#: templates\admin\tools.php:161
+#: templates/admin/tools.php:162
 msgid "Database Repair"
 msgstr ""
 
-#: templates\admin\tools.php:162
+#: templates/admin/tools.php:163
 msgid "Verify and re-create any missing plugin tables or columns."
 msgstr ""
 
-#: templates\admin\tools.php:165
+#: templates/admin/tools.php:166
 msgid "Repair Tables"
 msgstr ""
 
-#: templates\partials\footer.php:14
-msgid "MCP Specification"
+#: templates/partials/header.php:94
+msgid "Toggle sidebar"
 msgstr ""
 
-#: templates\partials\header.php:85
-msgid "Upgrade to Pro"
+#: templates/partials/header.php:109
+msgid "Expose your WordPress site to AI clients via the Model Context Protocol."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:45
-#: templates\partials\mcp-config-snippet.php:87
+#: templates/partials/header.php:122
+msgid "Help & Support"
+msgstr ""
+
+#: templates/partials/header.php:133
+msgid "GENERAL"
+msgstr ""
+
+#: templates/partials/header.php:145
+msgid "SUPPORT"
+msgstr ""
+
+#: templates/partials/mcp-config-snippet.php:42
+#: templates/partials/mcp-config-snippet.php:84
 msgid "Copy Json"
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:52
-#: templates\partials\mcp-config-snippet.php:73
-#: templates\partials\mcp-config-snippet.php:94
+#: templates/partials/mcp-config-snippet.php:49
+#: templates/partials/mcp-config-snippet.php:70
+#: templates/partials/mcp-config-snippet.php:91
 msgid "Setup Instructions"
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:54
+#: templates/partials/mcp-config-snippet.php:51
 msgid "Locate your Claude Desktop config file."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:55
+#: templates/partials/mcp-config-snippet.php:52
 msgid "Add the JSON block above to your mcpServers section."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:56
+#: templates/partials/mcp-config-snippet.php:53
 msgid "Restart Claude Desktop."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:66
-#: templates\partials\mcp-config-snippet.php:107
+#: templates/partials/mcp-config-snippet.php:63
+#: templates/partials/mcp-config-snippet.php:104
 msgid "Copy URL"
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:75
+#: templates/partials/mcp-config-snippet.php:72
 msgid "Open Cursor and navigate to Settings > Features > MCP."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:76
+#: templates/partials/mcp-config-snippet.php:73
 msgid "Click \"+ Add Server\" and paste the endpoint URL."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:77
+#: templates/partials/mcp-config-snippet.php:74
 msgid "Add an Authorization header with your Bearer token."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:96
+#: templates/partials/mcp-config-snippet.php:93
 msgid "Open Windsurf and access MCP configuration."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:97
+#: templates/partials/mcp-config-snippet.php:94
 msgid "Add a new HTTP server with the provided configuration."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:114
+#: templates/partials/mcp-config-snippet.php:111
 msgid "Use this standard HTTP endpoint with any MCP-compatible client."
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:120
+#: templates/partials/mcp-config-snippet.php:117
 msgid "Need a token?"
 msgstr ""
 
-#: templates\partials\mcp-config-snippet.php:121
+#: templates/partials/mcp-config-snippet.php:118
 msgid "Generate one here"
 msgstr ""
-
-#: siteagent.php:42
-msgid "WP SiteAgent requires PHP %1$s or higher. You are running PHP %2$s. Please upgrade PHP."
-msgstr ""
-
-#: siteagent.php:88
-msgid "WP SiteAgent requires WordPress %1$s or higher. You are running WordPress %2$s. Please upgrade WordPress."
-msgstr ""
-
-#: siteagent.php:107
-msgid "WP SiteAgent requires WordPress %s or higher."
-msgstr ""
-
-
-

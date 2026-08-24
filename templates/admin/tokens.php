@@ -120,6 +120,7 @@ $my_site_hand_abilities = array_filter($my_site_hand_all_abilities, function ($m
 										<strong class="msh-token-card-label"><?php echo esc_html($my_site_hand_token['label']); ?></strong>
 										<span class="msh-token-card-snippet"><?php echo esc_html('msh_pk_' . substr(md5($my_site_hand_token['created_at'] . $my_site_hand_token['id']), 0, 6) . '...'); ?></span>
 										<?php if ( ! empty( $my_site_hand_token['allowed_ips'] ) ): ?>
+											<?php /* translators: %s: comma-separated list of allowed IPs */ ?>
 											<span class="msh-token-ip-lock" title="<?php echo esc_attr( sprintf( __( 'Restricted to IPs: %s', 'my-site-hand' ), $my_site_hand_token['allowed_ips'] ) ); ?>">
 												<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; color: var(--msh-text-secondary); vertical-align: middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
 											</span>
