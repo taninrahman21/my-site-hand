@@ -98,6 +98,21 @@ class Installer {
 		) {$charset_collate};";
 
 		dbDelta( $sql_rate );
+
+		// Table: mysitehand_health_history.
+		// Append-only trend data for the Site Health score. Stores per-check
+		// counts only — never issue detail, or this table grows forever.
+		$table_health = $wpdb->prefix . 'mysitehand_health_history';
+		$sql_health   = "CREATE TABLE {$table_health} (
+			id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+			scanned_at DATETIME NOT NULL,
+			score TINYINT(3) UNSIGNED NOT NULL,
+			summary TEXT NOT NULL,
+			PRIMARY KEY (id),
+			KEY scanned_at (scanned_at)
+		) {$charset_collate};";
+
+		dbDelta( $sql_health );
 	}
 
 	/**
@@ -118,6 +133,12 @@ class Installer {
 			'mysitehand_delete_data_on_uninstall' => false,
 			'mysitehand_allow_query_token'      => false,
 			'mysitehand_trust_proxy'            => false,
+			// Scheduled site reports. On by default, and disclosed on the
+			// activation screen: silent email is a support complaint and a
+			// privacy problem.
+			'mysitehand_weekly_report_enabled'  => true,
+			'mysitehand_weekly_report_email'    => get_option( 'admin_email' ),
+			'mysitehand_report_frequency'       => 'weekly',
 		];
 
 		foreach ( $defaults as $option => $value ) {
@@ -139,6 +160,14 @@ class Installer {
 
 		if ( ! wp_next_scheduled( 'my_site_hand_cleanup_expired_tokens' ) ) {
 			wp_schedule_event( time(), 'daily', 'my_site_hand_cleanup_expired_tokens' );
+		}
+
+		// Scheduled Site Health scan. The first run is deliberately an hour
+		// out so it never collides with activation.
+		$health_frequency = (string) get_option( 'mysitehand_report_frequency', 'weekly' );
+
+		if ( 'never' !== $health_frequency && ! wp_next_scheduled( Health_Reporter::CRON_SCAN ) ) {
+			wp_schedule_event( time() + HOUR_IN_SECONDS, $health_frequency, Health_Reporter::CRON_SCAN );
 		}
 	}
 }

@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => 'yourname/my-site-hand',
+        'name' => 'mysitehand/my-site-hand',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b4d972b2971e3085e625aecada8c468ec156491c',
+        'reference' => '10ad0d4126408355c6e1bab78398307d2832a342',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => false,
     ),
     'versions' => array(
-        'yourname/my-site-hand' => array(
+        'mysitehand/my-site-hand' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b4d972b2971e3085e625aecada8c468ec156491c',
+            'reference' => '10ad0d4126408355c6e1bab78398307d2832a342',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -21,6 +21,3 @@
         ),
     ),
 );
-
-
-

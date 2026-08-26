@@ -1,0 +1,33 @@
+# Files that must not ship to WordPress.org.
+#
+# Used by `wp dist-archive` and by build tooling that respects .distignore.
+# If you build the zip by hand, delete these from the copy before zipping.
+
+# Development tooling
+/tools
+/tests
+/node_modules
+wp-cli.phar
+composer.json
+composer.lock
+phpunit.xml
+phpunit.xml.dist
+.phpcs.xml
+.phpcs.xml.dist
+
+# Repository files
+/.git
+/.github
+/.claude
+.gitignore
+.distignore
+README.md
+
+# Build output
+my-site-hand.zip
+*.zip
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.log

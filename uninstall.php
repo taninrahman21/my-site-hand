@@ -26,6 +26,8 @@ $wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}mysitehand_tokens`" );
 $wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}mysitehand_audit_log`" );
 // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
 $wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}mysitehand_rate_limits`" );
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
+$wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}mysitehand_health_history`" );
 
 // Delete all plugin options.
 $my_site_hand_options = [
@@ -39,6 +41,11 @@ $my_site_hand_options = [
 	'mysitehand_log_retention_days',
 	'mysitehand_log_level',
 	'mysitehand_delete_data_on_uninstall',
+	'mysitehand_last_scan',
+	'mysitehand_weekly_report_enabled',
+	'mysitehand_weekly_report_email',
+	'mysitehand_report_frequency',
+	'mysitehand_cron_scan_progress',
 ];
 
 foreach ( $my_site_hand_options as $my_site_hand_option ) {
@@ -56,3 +63,9 @@ $wpdb->query(
 // Remove cron schedule.
 wp_clear_scheduled_hook( 'my_site_hand_cleanup_logs' );
 wp_clear_scheduled_hook( 'my_site_hand_cleanup_expired_tokens' );
+wp_clear_scheduled_hook( 'my_site_hand_health_scan' );
+wp_clear_scheduled_hook( 'my_site_hand_health_scan_continue' );
+
+// Per-user Site Health state.
+delete_metadata( 'user', 0, 'mysitehand_review_state', '', true );
+delete_metadata( 'user', 0, 'mysitehand_fix_count', '', true );

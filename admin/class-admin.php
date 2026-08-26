@@ -112,6 +112,20 @@ class Admin
 			[$this, 'render_dashboard']
 		);
 
+		// Site Health submenu — deliberately first: it is the only page that
+		// delivers value without any setup. Position 0 places it above
+		// Dashboard without changing the parent menu slug, so existing links
+		// to admin.php?page=my-site-hand still land on the Dashboard.
+		$this->page_hooks[] = add_submenu_page(
+			'my-site-hand',
+			__('Site Health - My Site Hand', 'my-site-hand'),
+			__('Site Health', 'my-site-hand'),
+			'manage_options',
+			'my-site-hand-health',
+			[$this, 'render_health'],
+			0
+		);
+
 		// Abilities submenu.
 		$this->page_hooks[] = add_submenu_page(
 			'my-site-hand',
@@ -236,6 +250,58 @@ class Admin
 			);
 		}
 
+		// Site Health scan JS.
+		if (str_contains($hook, 'my-site-hand-health')) {
+			wp_enqueue_script(
+				'msh-health-scan',
+				MYSITEHAND_URL . 'assets/js/health-scan.js',
+				['mysitehand-admin'],
+				MYSITEHAND_VERSION,
+				true
+			);
+
+			wp_localize_script(
+				'msh-health-scan',
+				'mshHealth',
+				[
+					'restUrl' => rest_url('my-site-hand/v1/health/'),
+					'nonce' => wp_create_nonce('wp_rest'),
+					'weights' => \MySiteHand\Site_Health_Scanner::ISSUE_WEIGHTS,
+					'caps' => \MySiteHand\Site_Health_Scanner::CHECK_CAPS,
+					'bands' => [
+						'good' => __('Good', 'my-site-hand'),
+						'warning' => __('Needs Attention', 'my-site-hand'),
+						'critical' => __('Critical', 'my-site-hand'),
+					],
+					'i18n' => [
+						'scanning' => __('scanning…', 'my-site-hand'),
+						'queued' => __('queued', 'my-site-hand'),
+						'skipped' => __('not applicable', 'my-site-hand'),
+						'failed' => __('could not run', 'my-site-hand'),
+						'clean' => __('nothing found', 'my-site-hand'),
+						'cancelled' => __('Scan cancelled.', 'my-site-hand'),
+						'found' => __('found', 'my-site-hand'),
+						'scanAgain' => __('Scan Again', 'my-site-hand'),
+						'scanMySite' => __('Scan My Site', 'my-site-hand'),
+						'preparing' => __('Preparing…', 'my-site-hand'),
+						'genericError' => __('Something went wrong. Please try again.', 'my-site-hand'),
+						/* translators: %1$d: checks finished, %2$d: total checks */
+						'progress' => __('%1$d of %2$d checks complete', 'my-site-hand'),
+						'open' => __('Open', 'my-site-hand'),
+						'saving' => __('Saving…', 'my-site-hand'),
+						'saved' => __('Saved', 'my-site-hand'),
+						'describeImage' => __('Describe this image…', 'my-site-hand'),
+						'describePage' => __('Write a short description…', 'my-site-hand'),
+						'replacementUrl' => __('Replace with a working URL…', 'my-site-hand'),
+						'moveToTrash' => __('Move to trash', 'my-site-hand'),
+						'confirmDelete' => __('Move this file to the trash?', 'my-site-hand'),
+						'yes' => __('Yes', 'my-site-hand'),
+						'cancel' => __('Cancel', 'my-site-hand'),
+					],
+				]
+			);
+		}
+
 		// Localized data for JavaScript.
 		wp_localize_script(
 			'mysitehand-admin',
@@ -344,6 +410,22 @@ class Admin
 			wp_die(esc_html__('You do not have permission to access this page.', 'my-site-hand'));
 		}
 		require MYSITEHAND_PATH . 'templates/admin/dashboard.php';
+	}
+
+	/**
+	 * Render the Site Health page.
+	 *
+	 * Note: this inspects the user's site. It is not the AI Audit Log, which
+	 * lives at templates/admin/audit-log.php.
+	 *
+	 * @return void
+	 */
+	public function render_health(): void
+	{
+		if (!current_user_can('manage_options')) {
+			wp_die(esc_html__('You do not have permission to access this page.', 'my-site-hand'));
+		}
+		require MYSITEHAND_PATH . 'templates/admin/health.php';
 	}
 
 	/**
@@ -535,7 +617,15 @@ class Admin
 	}
 
 	/**
-	 * Redirect to the dashboard page on plugin activation.
+	 * Redirect to Site Health on plugin activation.
+	 *
+	 * Deliberately not the Dashboard. The Dashboard opens with a token, a
+	 * Node.js install and a terminal — which is exactly what non-technical
+	 * users bounce off. Site Health delivers something about their own site
+	 * before they have decided what this plugin is.
+	 *
+	 * The msh-autoscan flag rides along on the redirect only, so the scan
+	 * starts by itself on this one visit and never again.
 	 *
 	 * @return void
 	 */
@@ -553,7 +643,7 @@ class Admin
 				(!defined('DOING_AJAX') || !DOING_AJAX) &&
 				(!defined('WP_CLI') || !WP_CLI)
 			) {
-				wp_safe_redirect(admin_url('admin.php?page=my-site-hand'));
+				wp_safe_redirect(admin_url('admin.php?page=my-site-hand-health&msh-autoscan=1'));
 				exit;
 			}
 		}

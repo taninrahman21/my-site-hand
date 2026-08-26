@@ -36,6 +36,8 @@ class Deactivator {
 		$hooks = [
 			'my_site_hand_cleanup_logs',
 			'my_site_hand_cleanup_expired_tokens',
+			Health_Reporter::CRON_SCAN,
+			Health_Reporter::CRON_CONTINUE,
 		];
 
 		foreach ( $hooks as $hook ) {

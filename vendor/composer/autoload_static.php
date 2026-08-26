@@ -15,8 +15,17 @@ class ComposerStaticInit62af73b65723548643c573aa2be8003e
         'MySiteHand\\Auth_Manager' => __DIR__ . '/../..' . '/includes/class-auth-manager.php',
         'MySiteHand\\Autoloader' => __DIR__ . '/../..' . '/includes/class-autoloader.php',
         'MySiteHand\\Cache_Manager' => __DIR__ . '/../..' . '/includes/class-cache-manager.php',
+        'MySiteHand\\Check_Broken_Links' => __DIR__ . '/../..' . '/includes/health/class-check-broken-links.php',
+        'MySiteHand\\Check_Large_Media' => __DIR__ . '/../..' . '/includes/health/class-check-large-media.php',
+        'MySiteHand\\Check_Missing_Alt_Text' => __DIR__ . '/../..' . '/includes/health/class-check-missing-alt-text.php',
+        'MySiteHand\\Check_Missing_Meta_Description' => __DIR__ . '/../..' . '/includes/health/class-check-missing-meta-description.php',
+        'MySiteHand\\Check_Orphan_Media' => __DIR__ . '/../..' . '/includes/health/class-check-orphan-media.php',
+        'MySiteHand\\Check_Site_Status' => __DIR__ . '/../..' . '/includes/health/class-check-site-status.php',
+        'MySiteHand\\Core_Site_Health' => __DIR__ . '/../..' . '/includes/class-core-site-health.php',
         'MySiteHand\\Deactivator' => __DIR__ . '/../..' . '/includes/class-deactivator.php',
         'MySiteHand\\Error_Handler' => __DIR__ . '/../..' . '/includes/class-error-handler.php',
+        'MySiteHand\\Health_Check_Base' => __DIR__ . '/../..' . '/includes/health/class-health-check-base.php',
+        'MySiteHand\\Health_Reporter' => __DIR__ . '/../..' . '/includes/class-health-reporter.php',
         'MySiteHand\\Installer' => __DIR__ . '/../..' . '/includes/class-installer.php',
         'MySiteHand\\Ip_Utils' => __DIR__ . '/../..' . '/includes/class-ip-utils.php',
         'MySiteHand\\MCP_Server' => __DIR__ . '/../..' . '/includes/class-mcp-server.php',
@@ -29,6 +38,8 @@ class ComposerStaticInit62af73b65723548643c573aa2be8003e
         'MySiteHand\\Modules\\Module_Woocommerce' => __DIR__ . '/../..' . '/includes/modules/class-module-woocommerce.php',
         'MySiteHand\\Plugin' => __DIR__ . '/../..' . '/includes/class-plugin.php',
         'MySiteHand\\Rate_Limiter' => __DIR__ . '/../..' . '/includes/class-rate-limiter.php',
+        'MySiteHand\\Review_Prompt' => __DIR__ . '/../..' . '/includes/class-review-prompt.php',
+        'MySiteHand\\Site_Health_Scanner' => __DIR__ . '/../..' . '/includes/class-site-health-scanner.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

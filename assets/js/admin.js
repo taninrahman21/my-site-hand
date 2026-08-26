@@ -296,14 +296,16 @@
 				position: 'fixed',
 				bottom: '32px',
 				right: '28px',
-				background: type === 'error' ? '#ef4444' : '#22c55e',
+				background: type === 'error' ? '#BE2434' : '#0C1426',
 				color: '#fff',
-				padding: '12px 20px',
-				borderRadius: '10px',
-				fontSize: '13px',
+				padding: '11px 18px',
+				borderRadius: '0',
+				fontSize: '11px',
 				fontWeight: '600',
-				fontFamily: "'Inter', sans-serif",
-				boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+				letterSpacing: '0.11em',
+				textTransform: 'uppercase',
+				fontFamily: "'IBM Plex Mono', ui-monospace, monospace",
+				boxShadow: '0 20px 40px -20px rgba(12,20,38,0.6)',
 				zIndex: '999999',
 				animation: 'msh-fade-in 0.15s ease-out',
 				cursor: 'pointer'
@@ -382,16 +384,16 @@
 	 * DOM Ready
 	 * ---------------------------------------------------------------------- */
 	document.addEventListener('DOMContentLoaded', function () {
-		// Match body background to the layout's light page background.
+		// Match body background to the layout's page ground.
 		const wrap = document.querySelector('.msh-wrap');
 		if (wrap) {
 			const wpBody = document.getElementById('wpbody-content');
 			if (wpBody) {
-				wpBody.style.background = '#f3f4f6';
+				wpBody.style.background = '#EEF0F5';
 			}
 			const wpWrap = document.getElementById('wpbody');
 			if (wpWrap) {
-				wpWrap.style.background = '#f3f4f6';
+				wpWrap.style.background = '#EEF0F5';
 			}
 		}
 
@@ -409,6 +411,61 @@
 					sidebar.classList.remove('msh-sidebar--open');
 				}
 			});
+		}
+
+		// Keep the text beside each switch in sync with its state.
+		document.querySelectorAll('.msh-switch-label').forEach(function (label) {
+			const input = label.querySelector('input[type="checkbox"]');
+			const text = label.querySelector('.msh-switch-text');
+			if (!input || !text) return;
+
+			const onLabel = text.getAttribute('data-on') || 'On';
+			const offLabel = text.getAttribute('data-off') || 'Off';
+
+			const sync = function () {
+				text.textContent = input.checked ? onLabel : offLabel;
+				text.style.color = input.checked ? 'var(--msh-c2)' : 'var(--msh-n5)';
+			};
+
+			input.addEventListener('change', sync);
+			sync();
+		});
+
+		// Highlight the index entry for the section currently in view.
+		const indexLinks = Array.prototype.slice.call(document.querySelectorAll('.msh-index-link[href^="#"]'));
+		if (indexLinks.length) {
+			const sections = indexLinks
+				.map(function (link) {
+					return document.getElementById(link.getAttribute('href').slice(1));
+				})
+				.filter(Boolean);
+
+			const setActive = function (id) {
+				indexLinks.forEach(function (link) {
+					link.classList.toggle('msh-index-link--active', link.getAttribute('href') === '#' + id);
+				});
+			};
+
+			indexLinks.forEach(function (link) {
+				link.addEventListener('click', function (e) {
+					const target = document.getElementById(link.getAttribute('href').slice(1));
+					if (!target) return;
+					e.preventDefault();
+					setActive(target.id);
+					target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				});
+			});
+
+			if ('IntersectionObserver' in window && sections.length) {
+				const observer = new IntersectionObserver(function (entries) {
+					const visible = entries.filter(function (en) { return en.isIntersecting; });
+					if (visible.length) {
+						setActive(visible[0].target.id);
+					}
+				}, { rootMargin: '-80px 0px -65% 0px', threshold: 0 });
+
+				sections.forEach(function (section) { observer.observe(section); });
+			}
 		}
 
 		// Search and filter abilities.
@@ -434,7 +491,7 @@
 					const matchesFilter = filter === 'all' || moduleSlug === filter;
 					
 					if (matchesQuery && matchesFilter) {
-						row.style.display = 'flex';
+						row.style.display = 'grid';
 						hasVisibleRows = true;
 					} else {
 						row.style.display = 'none';

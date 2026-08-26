@@ -82,6 +82,20 @@ class Plugin {
 	private ?MCP_Server $mcp_server = null;
 
 	/**
+	 * Site Health scanner instance.
+	 *
+	 * @var Site_Health_Scanner|null
+	 */
+	private ?Site_Health_Scanner $site_health_scanner = null;
+
+	/**
+	 * Scheduled health report instance.
+	 *
+	 * @var Health_Reporter|null
+	 */
+	private ?Health_Reporter $health_reporter = null;
+
+	/**
 	 * Private constructor — use get_instance().
 	 */
 	private function __construct() {}
@@ -109,6 +123,7 @@ class Plugin {
 		$this->init_services();
 		$this->init_modules();
 		$this->register_abilities();
+		$this->register_health_checks();
 		$this->boot_mcp_server();
 		$this->register_cron_callbacks();
 
@@ -131,6 +146,10 @@ class Plugin {
 		$this->rate_limiter       = new Rate_Limiter();
 		$this->audit_logger       = new Audit_Logger();
 		$this->cache_manager      = new Cache_Manager();
+
+		$this->site_health_scanner = new Site_Health_Scanner( $this->cache_manager );
+		$this->health_reporter     = new Health_Reporter( $this->site_health_scanner );
+		$this->health_reporter->init();
 
 		// Make services accessible globally via plugin instance.
 		Error_Handler::init();
@@ -180,6 +199,35 @@ class Plugin {
 	}
 
 	/**
+	 * Register the Site Health checks shipped with the plugin.
+	 *
+	 * Checks are contributed through a filter rather than hard-coded into the
+	 * scanner, so add-ons can register their own without touching core code.
+	 *
+	 * @return void
+	 */
+	private function register_health_checks(): void {
+		add_filter( 'my_site_hand_health_checks', [ $this, 'register_default_health_checks' ], 10 );
+	}
+
+	/**
+	 * Filter callback: append the default checks, in display order.
+	 *
+	 * @param array<int, \MySiteHand\Health_Check_Base> $checks Registered checks.
+	 * @return array<int, \MySiteHand\Health_Check_Base>
+	 */
+	public function register_default_health_checks( array $checks ): array {
+		$checks[] = new Check_Broken_Links( $this->cache_manager );
+		$checks[] = new Check_Missing_Alt_Text();
+		$checks[] = new Check_Missing_Meta_Description();
+		$checks[] = new Check_Large_Media();
+		$checks[] = new Check_Orphan_Media( $this->cache_manager );
+		$checks[] = new Check_Site_Status();
+
+		return $checks;
+	}
+
+	/**
 	 * Boot the MCP server and REST API.
 	 *
 	 * @return void
@@ -218,6 +266,12 @@ class Plugin {
 			$this->audit_logger
 		);
 		$admin->init();
+
+		$review_prompt = new Review_Prompt( $this->site_health_scanner );
+		$review_prompt->init();
+
+		$core_site_health = new Core_Site_Health( $this->site_health_scanner );
+		$core_site_health->init();
 	}
 
 	/**
@@ -379,6 +433,11 @@ class Plugin {
 			'mysitehand_cache_ttl',
 			'mysitehand_log_retention_days',
 			'mysitehand_log_level',
+			'mysitehand_trust_proxy',
+			'mysitehand_allow_query_token',
+			'mysitehand_weekly_report_enabled',
+			'mysitehand_weekly_report_email',
+			'mysitehand_report_frequency',
 		];
 
 		$option_name = sanitize_key( wp_unslash( $_POST['option_name'] ?? '' ) );
@@ -391,12 +450,20 @@ class Plugin {
 		$option_value = wp_unslash( $_POST['option_value'] ?? '' );
 
 		// Sanitize based on option type.
-		if ( in_array( $option_name, [ 'mysitehand_enabled', 'mysitehand_delete_data_on_uninstall' ], true ) ) {
+		if ( in_array( $option_name, [ 'mysitehand_enabled', 'mysitehand_delete_data_on_uninstall', 'mysitehand_trust_proxy', 'mysitehand_allow_query_token', 'mysitehand_weekly_report_enabled' ], true ) ) {
 			$option_value = rest_sanitize_boolean( $option_value );
 		} elseif ( in_array( $option_name, [ 'mysitehand_hourly_limit', 'mysitehand_daily_limit', 'mysitehand_cache_ttl', 'mysitehand_log_retention_days' ], true ) ) {
 			$option_value = absint( $option_value );
 		} elseif ( 'mysitehand_display_name' === $option_name ) {
 			$option_value = sanitize_text_field( $option_value );
+		} elseif ( 'mysitehand_weekly_report_email' === $option_name ) {
+			$option_value = sanitize_email( $option_value );
+
+			if ( ! is_email( $option_value ) ) {
+				wp_send_json_error( [ 'message' => __( 'That is not a valid email address.', 'my-site-hand' ) ], 400 );
+			}
+		} elseif ( 'mysitehand_report_frequency' === $option_name ) {
+			$option_value = in_array( $option_value, [ 'weekly', 'monthly', 'never' ], true ) ? $option_value : 'weekly';
 		} elseif ( 'mysitehand_log_level' === $option_name ) {
 			$option_value = in_array( $option_value, [ 'all', 'errors-only', 'none' ], true ) ? $option_value : 'all';
 		} else {
@@ -467,6 +534,7 @@ class Plugin {
 	private function register_cron_callbacks(): void {
 		add_action( 'my_site_hand_cleanup_logs', [ $this->audit_logger, 'cleanup_old_logs' ] );
 		add_action( 'my_site_hand_cleanup_expired_tokens', [ $this->auth_manager, 'delete_expired_tokens' ] );
+		add_action( 'my_site_hand_cleanup_logs', [ $this->site_health_scanner, 'prune_history' ] );
 	}
 
 	/**
@@ -531,6 +599,24 @@ class Plugin {
 	 */
 	public function get_rate_limiter(): Rate_Limiter {
 		return $this->rate_limiter;
+	}
+
+	/**
+	 * Get the Site Health scanner.
+	 *
+	 * @return Site_Health_Scanner
+	 */
+	public function get_site_health_scanner(): Site_Health_Scanner {
+		return $this->site_health_scanner;
+	}
+
+	/**
+	 * Get the scheduled health reporter.
+	 *
+	 * @return Health_Reporter
+	 */
+	public function get_health_reporter(): Health_Reporter {
+		return $this->health_reporter;
 	}
 
 	/**
