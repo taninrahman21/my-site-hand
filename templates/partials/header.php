@@ -115,7 +115,7 @@ $my_site_hand_secondary_tabs = [
 <!-- Brand row -->
 <header class="msh-brand-header">
 	<div class="msh-brand-header-left">
-		<img src="<?php echo esc_url(MYSITEHAND_URL . 'assets/logo.png'); ?>" alt="" class="msh-brand-logo">
+		<img src="<?php echo esc_url(add_query_arg('ver', MYSITEHAND_VERSION, MYSITEHAND_URL . 'assets/logo.png')); ?>" alt="" class="msh-brand-logo">
 		<div class="msh-brand-info">
 			<div class="msh-brand-title-row">
 				<span class="msh-brand-name"><?php esc_html_e('My Site Hand', 'my-site-hand'); ?></span>

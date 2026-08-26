@@ -149,8 +149,6 @@
 	width: 34px;
 	height: 34px;
 	object-fit: contain;
-	background: var(--msh-k);
-	padding: 5px;
 	flex: none;
 	display: block;
 }

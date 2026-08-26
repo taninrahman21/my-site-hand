@@ -89,7 +89,9 @@ class Admin
 	 */
 	public function register_menus(): void
 	{
-		$icon = MYSITEHAND_URL . 'assets/logo.png';
+		// Versioned like the CSS/JS enqueues, so a released icon change is not
+		// served from the browser cache.
+		$icon = add_query_arg('ver', MYSITEHAND_VERSION, MYSITEHAND_URL . 'assets/logo.png');
 
 		// Main menu page.
 		$this->page_hooks[] = add_menu_page(
@@ -665,9 +667,8 @@ class Admin
 			}
 
 			#adminmenu .toplevel_page_my-site-hand .wp-menu-image img {
-				padding: 2px !important;
-				background: #ffffff !important;
-				border-radius: 4px !important;
+				/* Core pads menu images; zero it so the icon is not inset. */
+				padding: 0 !important;
 				max-width: 20px !important;
 				max-height: 20px !important;
 				width: 20px !important;
@@ -675,6 +676,7 @@ class Admin
 				box-sizing: border-box !important;
 				display: block !important;
 				margin: 0 !important;
+				border: 1px solid white !important;
 			}
 		</style>
 		<?php
