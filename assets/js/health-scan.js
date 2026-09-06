@@ -17,6 +17,28 @@
 	var cfg = window.mshHealth || {};
 	var root = document.getElementById('msh-health');
 
+	// Every user-facing string in this file goes through wp.i18n, so it lands
+	// in the .pot alongside the PHP strings and follows the site locale. The
+	// aliases keep each call site looking like __( 'text', 'domain' ), which is
+	// both what make-pot scans for and what a translator expects to read.
+	//
+	// wp-i18n is a declared dependency of this script, so these are always
+	// there; the fallbacks exist so a stripped page degrades to English rather
+	// than to a blank button.
+	var wpI18n = (window.wp && window.wp.i18n) || {};
+
+	var __ = wpI18n.__ || function (text) {
+		return text;
+	};
+
+	var _n = wpI18n._n || function (single, plural, number) {
+		return 1 === number ? single : plural;
+	};
+
+	var sprintf = wpI18n.sprintf || function (format) {
+		return format;
+	};
+
 	if (!root || !cfg.restUrl) {
 		return;
 	}
@@ -113,25 +135,24 @@
 	}
 
 	function countLabel(status, count) {
-		var i18n = cfg.i18n || {};
-
 		if (status === 'running') {
-			return i18n.scanning || 'scanning…';
+			return __('scanning…', 'my-site-hand');
 		}
 		if (status === 'skipped') {
-			return i18n.skipped || 'not applicable';
+			return __('not applicable', 'my-site-hand');
 		}
 		if (status === 'error') {
-			return i18n.failed || 'could not run';
+			return __('could not run', 'my-site-hand');
 		}
 		if (status === 'pending') {
-			return i18n.queued || 'queued';
+			return __('queued', 'my-site-hand');
 		}
 		if (!count) {
-			return i18n.clean || 'nothing found';
+			return __('nothing found', 'my-site-hand');
 		}
 
-		return count + ' ' + (i18n.found || 'found');
+		/* translators: %d: number of issues found */
+		return sprintf(_n('%d found', '%d found', count, 'my-site-hand'), count);
 	}
 
 	function clearIssues(id) {
@@ -207,7 +228,7 @@
 			link.href = issue.link;
 			link.target = '_blank';
 			link.rel = 'noopener noreferrer';
-			link.textContent = (cfg.i18n && cfg.i18n.open) || 'Open';
+			link.textContent = __('Open', 'my-site-hand');
 			li.appendChild(link);
 		}
 
@@ -226,10 +247,12 @@
 		}
 
 		if (el.progressLabel) {
-			var template = (cfg.i18n && cfg.i18n.progress) || '%1$d of %2$d checks complete';
-			el.progressLabel.textContent = template
-				.replace('%1$d', String(done))
-				.replace('%2$d', String(total));
+			el.progressLabel.textContent = sprintf(
+				/* translators: 1: number of checks finished. 2: total number of checks. */
+				__('%1$d of %2$d checks complete', 'my-site-hand'),
+				done,
+				total
+			);
 		}
 	}
 
@@ -299,7 +322,7 @@
 		}
 
 		if (el.bandLabel) {
-			el.bandLabel.textContent = (cfg.bands && cfg.bands[band]) || '';
+			el.bandLabel.textContent = bandLabel(band);
 		}
 
 		if (typeof metaText === 'string' && el.meta) {
@@ -359,8 +382,25 @@
 		return run;
 	}
 
-	function t(key, fallback) {
-		return (cfg.i18n && cfg.i18n[key]) || fallback;
+	/**
+	 * Translated name of a score band.
+	 *
+	 * The bands are decided by the server; only their names live here.
+	 */
+	function bandLabel(band) {
+		if ('good' === band) {
+			return __('Good', 'my-site-hand');
+		}
+
+		if ('warning' === band) {
+			return __('Needs Attention', 'my-site-hand');
+		}
+
+		if ('critical' === band) {
+			return __('Critical', 'my-site-hand');
+		}
+
+		return '';
 	}
 
 	function meta(li) {
@@ -411,7 +451,7 @@
 	}
 
 	function submitFix(li, value, onSuccess, onFailure) {
-		setFixState(li, 'saving', t('saving', 'Saving…'));
+		setFixState(li, 'saving', __('Saving…', 'my-site-hand'));
 
 		return enqueue(function () {
 			return request('fix', {
@@ -424,7 +464,7 @@
 				}
 			});
 		}).then(function (response) {
-			setFixState(li, 'saved', t('saved', 'Saved'));
+			setFixState(li, 'saved', __('Saved', 'my-site-hand'));
 			markResolved(li);
 
 			if (onSuccess) {
@@ -434,7 +474,7 @@
 			return response;
 		}).catch(function (error) {
 			// Optimistic UI is fine, but it has to roll back.
-			setFixState(li, 'error', error.message || t('genericError', 'Something went wrong.'));
+			setFixState(li, 'error', error.message || __('Something went wrong.', 'my-site-hand'));
 
 			if (onFailure) {
 				onFailure(error);
@@ -452,9 +492,20 @@
 		input.type = 'text';
 		input.className = 'msh-hissue-input';
 		input.placeholder = isAlt
-			? t('describeImage', 'Describe this image…')
-			: t('describePage', 'Write a short description…');
-		input.setAttribute('aria-label', input.placeholder + ' — ' + issueLabel(li));
+			? __('Describe this image…', 'my-site-hand')
+			: __('Write a short description…', 'my-site-hand');
+
+		// A format string rather than joined pieces: word order differs between
+		// languages, so a translator has to be able to reorder the two halves.
+		input.setAttribute(
+			'aria-label',
+			sprintf(
+				/* translators: 1: the prompt or action. 2: the item it applies to. */
+				__('%1$s — %2$s', 'my-site-hand'),
+				input.placeholder,
+				issueLabel(li)
+			)
+		);
 
 		var previous = '';
 		var saving = false;
@@ -494,7 +545,7 @@
 		var input = document.createElement('input');
 		input.type = 'url';
 		input.className = 'msh-hissue-input';
-		input.placeholder = t('replacementUrl', 'Replace with a working URL…');
+		input.placeholder = __('Replace with a working URL…', 'my-site-hand');
 		input.setAttribute('aria-label', input.placeholder + ' — ' + issueLabel(li));
 
 		var saving = false;
@@ -532,8 +583,16 @@
 		var trash = document.createElement('button');
 		trash.type = 'button';
 		trash.className = 'msh-btn msh-btn--sm msh-hissue-delete';
-		trash.textContent = t('moveToTrash', 'Move to trash');
-		trash.setAttribute('aria-label', t('moveToTrash', 'Move to trash') + ' — ' + issueLabel(li));
+		trash.textContent = __('Move to trash', 'my-site-hand');
+		trash.setAttribute(
+			'aria-label',
+			sprintf(
+				/* translators: 1: the prompt or action. 2: the item it applies to. */
+				__('%1$s — %2$s', 'my-site-hand'),
+				__('Move to trash', 'my-site-hand'),
+				issueLabel(li)
+			)
+		);
 
 		var confirmWrap = document.createElement('span');
 		confirmWrap.className = 'msh-hissue-confirm';
@@ -541,17 +600,17 @@
 
 		var question = document.createElement('span');
 		question.className = 'msh-hissue-confirmq';
-		question.textContent = t('confirmDelete', 'Move this file to the trash?');
+		question.textContent = __('Move this file to the trash?', 'my-site-hand');
 
 		var yes = document.createElement('button');
 		yes.type = 'button';
 		yes.className = 'msh-btn msh-btn--sm msh-btn--danger';
-		yes.textContent = t('yes', 'Yes');
+		yes.textContent = __('Yes', 'my-site-hand');
 
 		var no = document.createElement('button');
 		no.type = 'button';
 		no.className = 'msh-btn msh-btn--sm';
-		no.textContent = t('cancel', 'Cancel');
+		no.textContent = __('Cancel', 'my-site-hand');
 
 		trash.addEventListener('click', function () {
 			trash.hidden = true;
@@ -739,7 +798,7 @@
 		setProgress(0, 1);
 
 		if (el.progressLabel) {
-			el.progressLabel.textContent = (cfg.i18n && cfg.i18n.preparing) || 'Preparing…';
+			el.progressLabel.textContent = __('Preparing…', 'my-site-hand');
 		}
 
 		requestWithRetry('checks').then(function (data) {
@@ -781,7 +840,7 @@
 		}).then(function () {
 			if (state.cancelled) {
 				finish();
-				showError((cfg.i18n && cfg.i18n.cancelled) || 'Scan cancelled.');
+				showError(__('Scan cancelled.', 'my-site-hand'));
 				return null;
 			}
 
@@ -791,7 +850,7 @@
 				return null;
 			});
 		}).catch(function () {
-			showError((cfg.i18n && cfg.i18n.genericError) || 'Something went wrong. Please try again.');
+			showError(__('Something went wrong. Please try again.', 'my-site-hand'));
 			finish();
 		});
 	}
@@ -802,6 +861,189 @@
 		if (el.progress) {
 			el.progress.hidden = true;
 		}
+	}
+
+	// ---------------------------------------------------------------------
+	// Share links
+	//
+	// The report itself is redacted on the server when the link is created.
+	// Nothing here decides what is published, and nothing here should start
+	// deciding: this code only creates, lists and revokes.
+	// ---------------------------------------------------------------------
+
+	var share = {
+		panel: document.getElementById('msh-health-share'),
+		toggle: document.getElementById('msh-health-share-toggle'),
+		days: document.getElementById('msh-health-share-days'),
+		create: document.getElementById('msh-health-share-create'),
+		fresh: document.getElementById('msh-health-share-fresh'),
+		url: document.getElementById('msh-health-share-url'),
+		copy: document.getElementById('msh-health-share-copy'),
+		error: document.getElementById('msh-health-share-error'),
+		table: document.getElementById('msh-health-share-table'),
+		rows: document.getElementById('msh-health-share-rows'),
+		empty: document.getElementById('msh-health-share-empty')
+	};
+
+	function shareError(message) {
+		if (!share.error) {
+			return;
+		}
+
+		share.error.textContent = message || __('Something went wrong. Please try again.', 'my-site-hand');
+		share.error.hidden = false;
+	}
+
+	function clearShareError() {
+		if (share.error) {
+			share.error.hidden = true;
+			share.error.textContent = '';
+		}
+	}
+
+	function syncShareEmptyState() {
+		if (!share.rows || !share.table || !share.empty) {
+			return;
+		}
+
+		var any = share.rows.children.length > 0;
+
+		share.table.hidden = !any;
+		share.empty.hidden = any;
+	}
+
+	function shareRow(link) {
+		var tr = document.createElement('tr');
+		tr.setAttribute('data-share-id', String(link.id));
+
+		[link.created, link.expires, String(link.view_count)].forEach(function (value) {
+			var td = document.createElement('td');
+			td.textContent = value;
+			tr.appendChild(td);
+		});
+
+		var actions = document.createElement('td');
+		var button = document.createElement('button');
+
+		button.type = 'button';
+		button.className = 'msh-btn msh-btn--ghost msh-health-share-revoke';
+		button.setAttribute('data-share-id', String(link.id));
+		button.textContent = __('Revoke', 'my-site-hand');
+
+		actions.appendChild(button);
+		tr.appendChild(actions);
+
+		return tr;
+	}
+
+	function createShareLink() {
+		clearShareError();
+
+		var days = share.days ? parseInt(share.days.value, 10) : 30;
+
+		share.create.disabled = true;
+		share.create.textContent = __('Creating…', 'my-site-hand');
+
+		request('shares', { method: 'POST', body: { days: days } })
+			.then(function (data) {
+				if (share.url) {
+					share.url.value = data.url;
+				}
+
+				if (share.fresh) {
+					share.fresh.hidden = false;
+				}
+
+				if (share.url) {
+					share.url.focus();
+					share.url.select();
+				}
+
+				if (share.rows) {
+					share.rows.insertBefore(shareRow(data), share.rows.firstChild);
+					syncShareEmptyState();
+				}
+			})
+			.catch(function (error) {
+				shareError(error && error.message);
+			})
+			.then(function () {
+				share.create.disabled = false;
+				share.create.textContent = __('Create link', 'my-site-hand');
+			});
+	}
+
+	function revokeShareLink(button) {
+		clearShareError();
+
+		var id = button.getAttribute('data-share-id');
+
+		if (!id || !window.confirm(__('Revoke this link? Anyone holding it will stop being able to open the report.', 'my-site-hand'))) {
+			return;
+		}
+
+		button.disabled = true;
+
+		request('shares/' + encodeURIComponent(id), { method: 'DELETE' })
+			.then(function () {
+				var row = share.rows && share.rows.querySelector('tr[data-share-id="' + id + '"]');
+
+				if (row) {
+					row.parentNode.removeChild(row);
+				}
+
+				syncShareEmptyState();
+			})
+			.catch(function (error) {
+				button.disabled = false;
+				shareError(error && error.message);
+			});
+	}
+
+	if (share.toggle && share.panel) {
+		share.toggle.addEventListener('click', function () {
+			var open = share.panel.hidden;
+
+			share.panel.hidden = !open;
+			share.toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+		});
+	}
+
+	if (share.create) {
+		share.create.addEventListener('click', createShareLink);
+	}
+
+	if (share.copy && share.url) {
+		share.copy.addEventListener('click', function () {
+			share.url.select();
+
+			var done = function () {
+				share.copy.textContent = __('Copied', 'my-site-hand');
+				window.setTimeout(function () {
+					share.copy.textContent = __('Copy', 'my-site-hand');
+				}, 1600);
+			};
+
+			if (navigator.clipboard && navigator.clipboard.writeText) {
+				navigator.clipboard.writeText(share.url.value).then(done, function () {
+					// Clipboard access can be refused; the text is selected
+					// either way, so the manual copy still works.
+				});
+				return;
+			}
+
+			done();
+		});
+	}
+
+	if (share.rows) {
+		share.rows.addEventListener('click', function (event) {
+			var button = event.target.closest('.msh-health-share-revoke');
+
+			if (button) {
+				revokeShareLink(button);
+			}
+		});
 	}
 
 	// ---------------------------------------------------------------------

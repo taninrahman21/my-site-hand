@@ -21,6 +21,26 @@ $my_site_hand_band = $my_site_hand_has_report
 	? $my_site_hand_scanner->get_score_band($my_site_hand_score)
 	: ['band' => 'good', 'label' => ''];
 
+// Export links are followed, not fetched, so both nonces travel in the query
+// string. Two, because they do two different jobs: _wpnonce is what keeps REST
+// cookie authentication from treating the request as anonymous, and nonce is
+// the plugin's own check, matching the audit log export.
+$my_site_hand_export_args = [
+	'nonce'    => wp_create_nonce('my_site_hand_admin'),
+	'_wpnonce' => wp_create_nonce('wp_rest'),
+];
+$my_site_hand_export_base = rest_url('my-site-hand/v1/health/export/');
+$my_site_hand_print_url = add_query_arg(
+	$my_site_hand_export_args + ['print' => '1'],
+	$my_site_hand_export_base . 'print'
+);
+$my_site_hand_csv_url = add_query_arg(
+	$my_site_hand_export_args,
+	$my_site_hand_export_base . 'csv'
+);
+
+$my_site_hand_share_links = (new \MySiteHand\Shared_Reports())->list_active();
+
 // Auto-start only on the post-activation visit, and only when there is
 // nothing to show yet. Landing on an existing report must never silently
 // kick off a fresh scan.
@@ -150,7 +170,132 @@ endif;
 						<button type="button" class="msh-btn msh-btn--primary" data-msh-health-start>
 							<?php esc_html_e('Scan Again', 'my-site-hand'); ?>
 						</button>
+
+						<a class="msh-btn msh-btn--ghost" id="msh-health-print"
+							href="<?php echo esc_url($my_site_hand_print_url); ?>"
+							target="_blank" rel="noopener noreferrer"
+							title="<?php esc_attr_e('Opens a printable page and your browser\'s print dialog. Choose "Save as PDF" as the destination.', 'my-site-hand'); ?>">
+							<?php esc_html_e('Download PDF', 'my-site-hand'); ?>
+						</a>
+
+						<a class="msh-btn msh-btn--ghost" id="msh-health-csv"
+							href="<?php echo esc_url($my_site_hand_csv_url); ?>">
+							<?php esc_html_e('Export CSV', 'my-site-hand'); ?>
+						</a>
+
+						<button type="button" class="msh-btn msh-btn--ghost" id="msh-health-share-toggle"
+							aria-expanded="false" aria-controls="msh-health-share">
+							<?php esc_html_e('Share', 'my-site-hand'); ?>
+						</button>
 					</div>
+
+					<p class="msh-health-exportnote">
+						<?php esc_html_e('"Download PDF" uses your browser\'s own print-to-PDF — pick "Save as PDF" in the dialog that opens.', 'my-site-hand'); ?>
+					</p>
+				</div>
+
+				<!-- Share: creates a public, read-only link to a redacted copy -->
+				<div class="msh-health-share" id="msh-health-share" hidden>
+					<h2 class="msh-health-share-title"><?php esc_html_e('Share this report', 'my-site-hand'); ?></h2>
+
+					<div class="msh-health-share-disclosure">
+						<p class="msh-health-share-lead">
+							<?php esc_html_e('A share link is public. Anyone who has it can open the report without logging in. Before you create one, this is exactly what it does and does not contain:', 'my-site-hand'); ?>
+						</p>
+						<div class="msh-health-share-cols">
+							<div>
+								<h3><?php esc_html_e('They will see', 'my-site-hand'); ?></h3>
+								<ul>
+									<li><?php esc_html_e('Your site name and the date of the scan', 'my-site-hand'); ?></li>
+									<li><?php esc_html_e('The score and its band', 'my-site-hand'); ?></li>
+									<li><?php esc_html_e('Each check by name, and how many issues it found', 'my-site-hand'); ?></li>
+								</ul>
+							</div>
+							<div>
+								<h3><?php esc_html_e('They will not see', 'my-site-hand'); ?></h3>
+								<ul>
+									<li><?php esc_html_e('Any file name, page address, or server path', 'my-site-hand'); ?></li>
+									<li><?php esc_html_e('Any post, media or user ID, or any edit link', 'my-site-hand'); ?></li>
+									<li><?php esc_html_e('Your plugin, theme, PHP or WordPress versions', 'my-site-hand'); ?></li>
+									<li><?php esc_html_e('The two security checks — those are left out entirely', 'my-site-hand'); ?></li>
+								</ul>
+							</div>
+						</div>
+						<p class="msh-health-share-note">
+							<?php esc_html_e('The link shows a copy taken at the moment you create it, so re-scanning your site will not change what you already sent.', 'my-site-hand'); ?>
+						</p>
+					</div>
+
+					<div class="msh-health-share-create">
+						<label for="msh-health-share-days"><?php esc_html_e('Link expires after', 'my-site-hand'); ?></label>
+						<select id="msh-health-share-days">
+							<?php foreach (\MySiteHand\Shared_Reports::EXPIRY_CHOICES as $my_site_hand_days): ?>
+								<option value="<?php echo esc_attr((string) $my_site_hand_days); ?>"
+									<?php selected($my_site_hand_days, \MySiteHand\Shared_Reports::DEFAULT_EXPIRY_DAYS); ?>>
+									<?php
+									printf(
+										/* translators: %d: number of days a share link stays valid */
+										esc_html(_n('%d day', '%d days', $my_site_hand_days, 'my-site-hand')),
+										esc_html((string) $my_site_hand_days)
+									);
+									?>
+								</option>
+							<?php endforeach; ?>
+						</select>
+						<button type="button" class="msh-btn msh-btn--primary" id="msh-health-share-create">
+							<?php esc_html_e('Create link', 'my-site-hand'); ?>
+						</button>
+					</div>
+
+					<!-- Shown once, immediately after creation, and never again -->
+					<div class="msh-health-share-fresh" id="msh-health-share-fresh" hidden>
+						<p class="msh-health-share-once">
+							<?php esc_html_e('Copy this link now. For the same reason API tokens are shown once, it is not stored anywhere and cannot be shown again.', 'my-site-hand'); ?>
+						</p>
+						<div class="msh-health-share-freshrow">
+							<input type="text" id="msh-health-share-url" readonly value="">
+							<button type="button" class="msh-btn" id="msh-health-share-copy">
+								<?php esc_html_e('Copy', 'my-site-hand'); ?>
+							</button>
+						</div>
+					</div>
+
+					<p class="msh-health-share-error" id="msh-health-share-error" role="alert" hidden></p>
+
+					<table class="msh-health-share-table" id="msh-health-share-table"
+						<?php echo empty($my_site_hand_share_links) ? 'hidden' : ''; ?>>
+						<thead>
+							<tr>
+								<th scope="col"><?php esc_html_e('Created', 'my-site-hand'); ?></th>
+								<th scope="col"><?php esc_html_e('Expires', 'my-site-hand'); ?></th>
+								<th scope="col"><?php esc_html_e('Views', 'my-site-hand'); ?></th>
+								<th scope="col"><span class="screen-reader-text"><?php esc_html_e('Actions', 'my-site-hand'); ?></span></th>
+							</tr>
+						</thead>
+						<tbody id="msh-health-share-rows">
+							<?php foreach ($my_site_hand_share_links as $my_site_hand_link):
+								$my_site_hand_created = strtotime($my_site_hand_link['created_at'] . ' UTC');
+								$my_site_hand_expires = strtotime($my_site_hand_link['expires_at'] . ' UTC');
+								?>
+								<tr data-share-id="<?php echo esc_attr((string) $my_site_hand_link['id']); ?>">
+									<td><?php echo esc_html(wp_date(get_option('date_format'), $my_site_hand_created ?: time())); ?></td>
+									<td><?php echo esc_html(wp_date(get_option('date_format'), $my_site_hand_expires ?: time())); ?></td>
+									<td><?php echo esc_html((string) $my_site_hand_link['view_count']); ?></td>
+									<td>
+										<button type="button" class="msh-btn msh-btn--ghost msh-health-share-revoke"
+											data-share-id="<?php echo esc_attr((string) $my_site_hand_link['id']); ?>">
+											<?php esc_html_e('Revoke', 'my-site-hand'); ?>
+										</button>
+									</td>
+								</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
+
+					<p class="msh-health-share-empty" id="msh-health-share-empty"
+						<?php echo empty($my_site_hand_share_links) ? '' : 'hidden'; ?>>
+						<?php esc_html_e('No share links yet.', 'my-site-hand'); ?>
+					</p>
 				</div>
 
 				<!-- Progress: shown while a scan is running -->

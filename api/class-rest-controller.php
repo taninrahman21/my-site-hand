@@ -343,6 +343,121 @@ class Rest_Controller {
 				],
 			]
 		);
+
+		$this->register_export_routes();
+		$this->register_share_routes();
+	}
+
+	/**
+	 * Register the report export routes.
+	 *
+	 * Both send a file or a document rather than a REST response, so both take
+	 * a nonce in the query string the way the audit log export does: they are
+	 * opened by following a link, not by fetch().
+	 *
+	 * @return void
+	 */
+	private function register_export_routes(): void {
+		// GET /health/export/csv — CSV download.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/export/csv',
+			[
+				'methods'             => 'GET',
+				'callback'            => [ $this, 'export_health_csv' ],
+				'permission_callback' => [ $this, 'require_manage_options' ],
+			]
+		);
+
+		// GET /health/export/print — printable page for the browser's own
+		// print-to-PDF. There is no server-side PDF here by design.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/export/print',
+			[
+				'methods'             => 'GET',
+				'callback'            => [ $this, 'export_health_print' ],
+				'permission_callback' => [ $this, 'require_manage_options' ],
+				'args'                => [
+					'print' => [
+						'required' => false,
+						'default'  => '0',
+					],
+				],
+			]
+		);
+	}
+
+	/**
+	 * Register the shared report routes.
+	 *
+	 * @return void
+	 */
+	private function register_share_routes(): void {
+		// GET/POST /health/shares — list and create.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/shares',
+			[
+				[
+					'methods'             => 'GET',
+					'callback'            => [ $this, 'list_shared_reports' ],
+					'permission_callback' => [ $this, 'require_manage_options' ],
+				],
+				[
+					'methods'             => 'POST',
+					'callback'            => [ $this, 'create_shared_report' ],
+					'permission_callback' => [ $this, 'require_manage_options' ],
+					'args'                => [
+						'days' => [
+							'required'          => false,
+							'type'              => 'integer',
+							'default'           => \MySiteHand\Shared_Reports::DEFAULT_EXPIRY_DAYS,
+							'sanitize_callback' => 'absint',
+							'enum'              => \MySiteHand\Shared_Reports::EXPIRY_CHOICES,
+						],
+					],
+				],
+			]
+		);
+
+		// DELETE /health/shares/{id} — revoke.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/shares/(?P<id>\d+)',
+			[
+				'methods'             => 'DELETE',
+				'callback'            => [ $this, 'revoke_shared_report' ],
+				'permission_callback' => [ $this, 'require_manage_options' ],
+				'args'                => [
+					'id' => [
+						'type'     => 'integer',
+						'required' => true,
+					],
+				],
+			]
+		);
+
+		// GET /health/shared/{token} — DELIBERATELY PUBLIC.
+		//
+		// The only unauthenticated surface in the plugin. It serves a payload
+		// that was redacted when the link was created, never the stored
+		// report. See Shared_Reports before touching anything here.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/shared/(?P<token>[a-f0-9]{64})',
+			[
+				'methods'             => 'GET',
+				'callback'            => [ $this, 'view_shared_report' ],
+				'permission_callback' => '__return_true',
+				'args'                => [
+					'token' => [
+						'type'     => 'string',
+						'required' => true,
+					],
+				],
+			]
+		);
 	}
 
 	/**
@@ -838,6 +953,300 @@ class Rest_Controller {
 			[ 'history' => $this->health()->get_history( (int) $request->get_param( 'limit' ) ) ],
 			200
 		);
+	}
+
+	// -------------------------------------------------------------------------
+	// Report export
+	// -------------------------------------------------------------------------
+
+	/**
+	 * GET /health/export/csv — the stored report as a spreadsheet.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return void
+	 */
+	public function export_health_csv( \WP_REST_Request $request ): void {
+		$this->guard_export( $request );
+
+		$report = $this->health()->get_latest_report();
+
+		if ( null === $report ) {
+			wp_die(
+				esc_html__( 'There is no scan to export yet. Run a scan first.', 'my-site-hand' ),
+				esc_html__( 'Nothing to export', 'my-site-hand' ),
+				[ 'response' => 404 ]
+			);
+		}
+
+		( new \MySiteHand\Report_Exporter() )->stream_csv( $report );
+	}
+
+	/**
+	 * GET /health/export/print — the stored report as a printable page.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return void
+	 */
+	public function export_health_print( \WP_REST_Request $request ): void {
+		$this->guard_export( $request );
+
+		$report = $this->health()->get_latest_report();
+
+		if ( null === $report ) {
+			wp_die(
+				esc_html__( 'There is no scan to export yet. Run a scan first.', 'my-site-hand' ),
+				esc_html__( 'Nothing to export', 'my-site-hand' ),
+				[ 'response' => 404 ]
+			);
+		}
+
+		$auto_print = '1' === (string) $request->get_param( 'print' );
+
+		( new \MySiteHand\Report_Exporter() )->render_print_page( $report, $auto_print );
+	}
+
+	/**
+	 * Verify the nonce carried by an export link.
+	 *
+	 * These endpoints are opened by following a link rather than by fetch(),
+	 * so the nonce arrives in the query string — same as the audit log export.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return void
+	 */
+	private function guard_export( \WP_REST_Request $request ): void {
+		$nonce = $request->get_param( 'nonce' );
+
+		if ( ! $nonce || ! wp_verify_nonce( (string) $nonce, 'my_site_hand_admin' ) ) {
+			wp_die( esc_html__( 'Security check failed.', 'my-site-hand' ), '', [ 'response' => 403 ] );
+		}
+	}
+
+	// -------------------------------------------------------------------------
+	// Shared reports
+	//
+	// One of these routes is public. Read Shared_Reports before editing any of
+	// them, and never hand the public renderer a stored report.
+	// -------------------------------------------------------------------------
+
+	/**
+	 * The shared reports store.
+	 *
+	 * @return \MySiteHand\Shared_Reports
+	 */
+	private function shares(): \MySiteHand\Shared_Reports {
+		return new \MySiteHand\Shared_Reports();
+	}
+
+	/**
+	 * GET /health/shares — links that have not expired.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return \WP_REST_Response
+	 */
+	public function list_shared_reports( \WP_REST_Request $request ): \WP_REST_Response {
+		$links = [];
+
+		foreach ( $this->shares()->list_active() as $link ) {
+			$links[] = [
+				'id'         => $link['id'],
+				'created_at' => $link['created_at'],
+				'expires_at' => $link['expires_at'],
+				'created'    => $this->format_share_date( $link['created_at'] ),
+				'expires'    => $this->format_share_date( $link['expires_at'] ),
+				'view_count' => $link['view_count'],
+			];
+		}
+
+		return new \WP_REST_Response( [ 'links' => $links ], 200 );
+	}
+
+	/**
+	 * POST /health/shares — publish a redacted snapshot behind a new token.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return \WP_REST_Response|\WP_Error
+	 */
+	public function create_shared_report( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+		$report = $this->health()->get_latest_report();
+
+		if ( null === $report ) {
+			return new \WP_Error(
+				'my_site_hand_no_report',
+				__( 'There is no scan to share yet. Run a scan first.', 'my-site-hand' ),
+				[ 'status' => 404 ]
+			);
+		}
+
+		$created = $this->shares()->create( $report, (int) $request->get_param( 'days' ) );
+
+		if ( is_wp_error( $created ) ) {
+			return $created;
+		}
+
+		$this->audit->log(
+			[
+				'token_id'       => null,
+				'user_id'        => get_current_user_id(),
+				'ability_name'   => 'my-site-hand/share-report',
+				'input'          => [
+					'link_id'    => $created['id'],
+					'expires_at' => $created['expires_at'],
+				],
+				'result_status'  => 'success',
+				'result_summary' => sprintf(
+					/* translators: %s: the date the share link expires */
+					__( 'Created a public report link that expires on %s.', 'my-site-hand' ),
+					$this->format_share_date( $created['expires_at'] )
+				),
+				'duration_ms'    => 0,
+			]
+		);
+
+		return new \WP_REST_Response(
+			[
+				'id'         => $created['id'],
+				// Returned exactly once. Nothing stores the raw token, so
+				// there is no second chance to read it.
+				'url'        => $created['url'],
+				'expires_at' => $created['expires_at'],
+				'expires'    => $this->format_share_date( $created['expires_at'] ),
+				'view_count' => 0,
+				'created'    => $this->format_share_date( gmdate( 'Y-m-d H:i:s' ) ),
+			],
+			201
+		);
+	}
+
+	/**
+	 * DELETE /health/shares/{id} — revoke a link.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return \WP_REST_Response
+	 */
+	public function revoke_shared_report( \WP_REST_Request $request ): \WP_REST_Response {
+		$id      = (int) $request->get_param( 'id' );
+		$revoked = $this->shares()->revoke( $id );
+
+		if ( $revoked ) {
+			$this->audit->log(
+				[
+					'token_id'       => null,
+					'user_id'        => get_current_user_id(),
+					'ability_name'   => 'my-site-hand/revoke-report-link',
+					'input'          => [ 'link_id' => $id ],
+					'result_status'  => 'success',
+					'result_summary' => __( 'Revoked a public report link.', 'my-site-hand' ),
+					'duration_ms'    => 0,
+				]
+			);
+		}
+
+		return new \WP_REST_Response(
+			[
+				'revoked' => $revoked,
+				'id'      => $id,
+			],
+			200
+		);
+	}
+
+	/**
+	 * GET /health/shared/{token} — the public report page.
+	 *
+	 * PUBLIC AND UNAUTHENTICATED, on purpose.
+	 *
+	 * Unknown, expired and revoked tokens all produce the same 404. Telling
+	 * the caller which of the three it was tells them whether the token they
+	 * hold was ever real.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return void
+	 */
+	public function view_shared_report( \WP_REST_Request $request ): void {
+		// These pages are for one recipient, not for a search index.
+		header( 'X-Robots-Tag: noindex, nofollow', true );
+		header( 'Referrer-Policy: no-referrer', true );
+		header( 'Cache-Control: private, no-store, max-age=0', true );
+
+		$ip      = \MySiteHand\Ip_Utils::get_client_ip();
+		$limited = $this->rate_limiter->check_ip( 'share', $ip, \MySiteHand\Shared_Reports::VIEW_RATE_LIMIT );
+
+		if ( is_wp_error( $limited ) ) {
+			$this->send_share_error(
+				429,
+				__( 'Too many requests', 'my-site-hand' ),
+				__( 'This link has been opened too many times in the last hour. Please try again later.', 'my-site-hand' )
+			);
+		}
+
+		$this->rate_limiter->increment_ip( 'share', $ip );
+
+		$shares = $this->shares();
+		$link   = $shares->find( (string) $request->get_param( 'token' ) );
+
+		if ( null === $link ) {
+			$this->send_share_error(
+				404,
+				__( 'Report not found', 'my-site-hand' ),
+				__( 'This report link is not valid. It may have expired or been revoked.', 'my-site-hand' )
+			);
+		}
+
+		$shares->record_view( $link['id'] );
+
+		header( 'Content-Type: text/html; charset=utf-8' );
+		status_header( 200 );
+
+		// The template sees the redacted payload and nothing else.
+		$my_site_hand_payload = $link['payload'];
+		$my_site_hand_expires = $this->format_share_date( $link['expires_at'] );
+
+		require MYSITEHAND_PATH . 'templates/export/shared-report.php';
+
+		exit;
+	}
+
+	/**
+	 * Send a plain, self-contained error page from the public endpoint and stop.
+	 *
+	 * Deliberately says nothing about why. Every failure looks the same.
+	 *
+	 * @param int    $status  HTTP status.
+	 * @param string $title   Page title.
+	 * @param string $message Body text.
+	 * @return never
+	 */
+	private function send_share_error( int $status, string $title, string $message ): void {
+		status_header( $status );
+		header( 'Content-Type: text/html; charset=utf-8' );
+
+		printf(
+			'<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>%1$s</title>'
+			. '<style>body{margin:0;padding:64px 20px;background:#f4f4f4;color:#1c1c1c;font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;text-align:center}'
+			. 'h1{font-size:18px;margin:0 0 8px}p{margin:0;color:#5f5f5f}</style></head>'
+			. '<body><h1>%1$s</h1><p>%2$s</p></body></html>',
+			esc_html( $title ),
+			esc_html( $message )
+		);
+
+		exit;
+	}
+
+	/**
+	 * Format a stored UTC datetime in the site's own date format.
+	 *
+	 * @param string $datetime MySQL datetime in UTC.
+	 * @return string
+	 */
+	private function format_share_date( string $datetime ): string {
+		$timestamp = strtotime( $datetime . ' UTC' );
+
+		if ( false === $timestamp ) {
+			return $datetime;
+		}
+
+		return wp_date( (string) get_option( 'date_format' ), $timestamp );
 	}
 
 	// -------------------------------------------------------------------------

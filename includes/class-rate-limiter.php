@@ -195,6 +195,98 @@ class Rate_Limiter {
 	}
 
 	/**
+	 * Check an hourly limit for a caller identified by IP rather than by token.
+	 *
+	 * The public shared-report endpoint has no token to count against, so it
+	 * counts against the visitor's address instead. It reuses this class and
+	 * its table on purpose: a second limiter would be a second set of windows,
+	 * a second cleanup job, and a second place for the counting to be wrong.
+	 *
+	 * The address is never stored — only a truncated hash of it, inside the
+	 * window key, which is enough to count with and not enough to identify
+	 * anyone from.
+	 *
+	 * @param string $bucket What is being limited, e.g. 'share'.
+	 * @param string $ip     Caller IP address.
+	 * @param int    $limit  Requests allowed per hour.
+	 * @return true|\WP_Error True when within the limit.
+	 */
+	public function check_ip( string $bucket, string $ip, int $limit ): true|\WP_Error {
+		$used = $this->get_window_count( 0, $this->ip_window_key( $bucket, $ip ) );
+
+		if ( $used < max( 1, $limit ) ) {
+			return true;
+		}
+
+		return new \WP_Error(
+			'rate_limited',
+			__( 'Too many requests. Please try again later.', 'my-site-hand' ),
+			[
+				'status'      => 429,
+				'retry_after' => 3600 - ( time() % 3600 ),
+			]
+		);
+	}
+
+	/**
+	 * Count one request against an IP's hourly window.
+	 *
+	 * @param string $bucket What is being limited, e.g. 'share'.
+	 * @param string $ip     Caller IP address.
+	 * @return void
+	 */
+	public function increment_ip( string $bucket, string $ip ): void {
+		global $wpdb;
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		$wpdb->query(
+			$wpdb->prepare(
+				"INSERT INTO {$wpdb->prefix}mysitehand_rate_limits (token_id, window_key, request_count, window_start)
+				VALUES (0, %s, 1, %s)
+				ON DUPLICATE KEY UPDATE request_count = request_count + 1",
+				$this->ip_window_key( $bucket, $ip ),
+				current_time( 'mysql' )
+			)
+		);
+	}
+
+	/**
+	 * Window key for one IP, one bucket, and the current hour.
+	 *
+	 * Token id zero is used for these rows. Token ids are auto-increment and
+	 * start at one, so nothing collides.
+	 *
+	 * @param string $bucket What is being limited.
+	 * @param string $ip     Caller IP address.
+	 * @return string
+	 */
+	private function ip_window_key( string $bucket, string $ip ): string {
+		return substr( sanitize_key( $bucket ), 0, 8 )
+			. '_' . substr( hash( 'sha256', $ip ), 0, 20 )
+			. '_' . gmdate( 'Y-m-d-H' );
+	}
+
+	/**
+	 * Read one window counter.
+	 *
+	 * @param int    $token_id   Token DB ID, or 0 for an IP window.
+	 * @param string $window_key Window key.
+	 * @return int
+	 */
+	private function get_window_count( int $token_id, string $window_key ): int {
+		global $wpdb;
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		return (int) $wpdb->get_var(
+			$wpdb->prepare(
+				"SELECT request_count FROM {$wpdb->prefix}mysitehand_rate_limits WHERE token_id = %d AND window_key = %s",
+				$token_id,
+				$window_key
+			)
+		);
+	}
+
+	/**
 	 * Clean up old rate limit records.
 	 *
 	 * Removes records older than 2 days.

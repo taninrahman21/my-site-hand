@@ -1,10 +1,10 @@
 === My Site Hand – AI Assistant, Site Health & MCP Server for WordPress ===
 Contributors: builtbytanin
-Tags: ai, site health, ai assistant, claude, mcp
+Tags: ai, site health, security, claude, mcp
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,18 +18,36 @@ Activate the plugin and it scans your site straight away. No token, no API key, 
 
 ### 🔍 The Site Health Scan (no setup required)
 
+Twelve checks, run one at a time so nothing times out.
+
 *   **Broken links** — checks the links in your recent posts and pages, and reports only the ones that are genuinely gone. Anything ambiguous is left alone rather than reported as a false alarm.
 *   **Missing alt text** — images your visitors using screen readers cannot see, and search engines cannot read.
 *   **Missing meta descriptions** — published posts and pages with no SEO description, for Yoast SEO and RankMath.
 *   **Oversized media** — files big enough to slow your pages down, with the space you would get back.
 *   **Orphaned files** — uploads that nothing on your site appears to use.
 *   **Plugin and core health** — pending updates, an unsupported PHP version, missing HTTPS, errors visible to visitors, a stalled cron.
+*   **Images missing dimensions** — the cause of pages that jump around while they load, which Google measures as a Core Web Vital.
+*   **Images missing lazy loading** — pictures further down a post that something has opted out, so visitors download them before they are ever seen.
+*   **Exposed WordPress files** — readme.html, license.txt and a debug log left publicly readable. The first hands an attacker your exact version; the last can contain server paths and credentials.
+*   **XML-RPC** — reported as a notice, with the tradeoff stated plainly. It is a brute-force vector, but the WordPress mobile app and Jetpack need it, so this is only worth turning off if you use neither. Sites running Jetpack are skipped entirely.
+*   **Thin content** — published pages with very few words. Read with judgement: a contact page is supposed to be short, and pages built from a shortcode, gallery or embed are left out.
+*   **Accessibility basics** — links that announce nothing to a screen reader, "click here" links, more than one main heading, and headings that skip a level. Structural checks only; it does not claim to be a full audit.
 
 ### ⚡ Quick Fix
 
 A list of complaints is not much use on its own. Write alt text straight into the report, replace a dead link, or trash a file you no longer need — one row at a time, with the score climbing as you go. **No AI and no API key required for any of it.**
 
 Your score is kept over time, so you can watch the site improve, and you can have a short report emailed to you when something changes.
+
+### 📤 Send the report to someone else
+
+A report is more useful when the person who needs to act on it can read it.
+
+*   **PDF** — opens a clean, printable page and your browser's own print dialog. Choose "Save as PDF". No bloated PDF library bundled into the plugin to do a job your browser already does well.
+*   **CSV** — every issue as a row: check, severity, issue, context, link and object ID. Opens correctly in Excel and Google Sheets, in any language.
+*   **A shareable link** — a public web page your client can open without a login, with an expiry you choose: 7, 30 or 90 days. There is no never-expires option.
+
+Shared reports are **redacted on purpose**. They show the score, each check by name, and how many issues it found. They never show file names, page addresses, server paths, post or media IDs, edit links, or your plugin, theme, PHP and WordPress versions — and the two security checks are left out entirely, because publishing those would be publishing a vulnerability report about your own server. The page tells you exactly what a recipient will and will not see before you create the link, every link can be revoked instantly, and the report is a snapshot: re-scanning your site never changes what you already sent.
 
 ### 🤖 And when you want an AI to do the work
 
@@ -95,7 +113,16 @@ Connecting an AI assistant is optional, and fully guided:
 No. The Site Health scan and Quick Fix work on their own, with nothing to install and nothing to configure. Connecting Claude, Cursor or VS Code is an optional upgrade, not a requirement.
 
 = What does the scan actually check? =
-Broken links in your 50 most recent posts and pages, images with no alternative text, published posts and pages with no SEO meta description (Yoast SEO or RankMath), oversized media, files that nothing on your site appears to use, and platform problems such as pending updates, an outdated PHP version, missing HTTPS or a stalled cron.
+Twelve things. Broken links in your 50 most recent posts and pages; images with no alternative text; published posts and pages with no SEO meta description (Yoast SEO or RankMath); oversized media; files that nothing on your site appears to use; platform problems such as pending updates, an outdated PHP version, missing HTTPS or a stalled cron; images with no width or height; images opted out of lazy loading; WordPress files left publicly readable; whether xmlrpc.php answers; pages with very little content; and four structural accessibility problems.
+
+= What does a shared report link show the person I send it to? =
+The score, the name of each check, and how many issues each one found. Nothing else. No file names, no page addresses, no server paths, no post or media IDs, no edit links, and no plugin, theme, PHP or WordPress version numbers. The two security checks are excluded from public reports entirely. Every link expires — 7, 30 or 90 days, your choice — and you can revoke one at any time.
+
+= Does the "Download PDF" button make a PDF on my server? =
+No, and deliberately so. It opens a clean printable page and your browser's own print dialog, where you choose "Save as PDF". Bundling a PDF library would multiply the size of the plugin to do something every browser already does well.
+
+= Should I turn XML-RPC off because the scan mentions it? =
+Only if you do not use the WordPress mobile app, Jetpack, or a desktop publishing tool — all of which need it. That is why it is reported as a notice rather than a warning, and why sites running Jetpack are skipped entirely. Disabling it on a site that needs it breaks that site, which is worse than leaving it alone.
 
 = Will it report links that are not really broken? =
 It tries hard not to. Only 404 and 410 count as gone. Anything ambiguous — a 403, a 405, a server error — is retried a different way, and if it is still unclear the link is not reported at all. A single false alarm would make you distrust the whole report.
@@ -119,17 +146,25 @@ No. All MCP communications occur directly between your local AI client and your 
 
 == Screenshots ==
 
-1. One click, no setup at all. Broken links, missing alt text, missing meta descriptions, oversized media, orphaned files and platform problems — scored out of 100.
+1. One click, no setup at all. Broken links, missing alt text, missing meta descriptions, oversized media, orphaned files, security and accessibility problems — scored out of 100.
 2. Quick Fix. Write alt text, replace a dead link or trash a file you no longer need, straight from the report. No AI and no API key.
-3. Six checks, run one at a time so nothing times out. Results appear as they land, and you can cancel at any point.
+3. Twelve checks, run one at a time so nothing times out. Results appear as they land, and you can cancel at any point.
 4. Every scan is kept, so you can watch the score climb. The optional email arrives only when something actually changed.
 5. The dashboard opens with your health score, then the MCP endpoint, live figures and the most recent calls.
 6. Set the schedule once and leave it. Choose how often the site scans itself and where the report goes — or switch it off entirely. Rate limits and log retention live here too.
 7. Connecting Claude Desktop, Cursor or VS Code is the optional upgrade — the scan and Quick Fix need none of it.
 8. Every ability is its own switch, and every token is scoped to exactly what you allow. Tokens are SHA-256 hashed and shown once.
 9. Every call recorded with its payload, duration and the exact reason it failed. Quick Fix repairs are logged here too. Exportable to CSV.
+10. Send the report on. Save it as a PDF, export it as a CSV, or create a public link with an expiry you choose. Before you create one you are told exactly what the recipient will and will not see — scores and counts, never a file name, an address or a version number.
 
 == Changelog ==
+
+= 1.2.0 - 6 September 2026 =
+*   **New: six more checks** — image dimensions, lazy loading, exposed WordPress files, XML-RPC, thin content, and accessibility basics. Twelve checks in total.
+*   **New: PDF and CSV export.** Send a client the report without giving them a login.
+*   **New: shareable report links** with an expiry you choose. Public reports show scores and counts only — never paths, IDs, versions or plugin names.
+*   **New:** Bengali translation, and the plugin is now fully ready for community translation.
+*   **Improved:** Score weighting was retuned for twelve checks, so an ordinary site still lands in a usable range rather than being marked critical for having twice as much measured.
 
 = 1.1.0 - 26 August 2026 =
 *   **New: Site Health Scan** — one click, no setup. Find broken links, missing alt text, missing meta descriptions, oversized media, orphaned files, and plugin or core health problems.
@@ -167,6 +202,9 @@ No. All MCP communications occur directly between your local AI client and your 
 
 == Upgrade Notice ==
 
+= 1.2.0 =
+Six new checks including security and accessibility, plus PDF, CSV and shareable report links. Existing scans, tokens and MCP connections are unchanged.
+
 = 1.1.0 =
 Adds a one-click Site Health scan with inline Quick Fix — no setup, no API key. Your existing MCP connection, tokens and audit history are unchanged. If screens look unstyled after updating, refresh once.
 
@@ -180,5 +218,11 @@ When the check-broken-links ability is called via the MCP API, this plugin sends
 
 = Link Checker (Site Health scan) =
 The Broken Links check in the Site Health scan sends HTTP HEAD requests (and, where a server refuses HEAD, a single ranged GET) to the links found in your 50 most recent published posts and pages, to see whether they still resolve. The request identifies this plugin and your site URL in its user agent. No personal user data is transmitted. Results are cached for 12 hours. This runs when you start a scan from the admin, and during the scheduled scan if you leave that enabled — on sites with more than 500 published posts the link check is skipped on the schedule. Turning scheduled reports off in **My Site Hand → Settings** stops the scheduled scan entirely.
+
+= Requests this plugin makes to your own site =
+The Exposed WordPress Files and XML-RPC checks ask your own site, over HTTP, whether /readme.html, /license.txt, /wp-config-sample.php, /wp-content/debug.log and /xmlrpc.php answer to an anonymous visitor. These are loopback requests to your own domain, not to any third party, and no data is sent in them. Results are cached for 12 hours. If your host blocks loopback requests, both checks report that they could not run rather than reporting your files as safe.
+
+= Shared report links =
+Creating a share link stores a redacted snapshot of your scan in your own database and serves it from your own site at a tokenized URL. Nothing is uploaded anywhere. The page is sent with X-Robots-Tag: noindex, nofollow, every link expires, and you can revoke one at any time.
 
 No data is sent to any third-party analytics or tracking service by this plugin.

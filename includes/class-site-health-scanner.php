@@ -88,12 +88,21 @@ class Site_Health_Scanner {
 	 * 600 missing alt tags both floor the score at zero, every large site sees
 	 * the same number, and clearing a category produces no visible reward.
 	 *
+	 * Retuned in 1.2.0, when the scan went from six checks to twelve. The old
+	 * caps (25 / 15 / 10) were sized so that six checks summed to exactly 100.
+	 * Left alone, twelve checks summed to 175 and an ordinary site tripping
+	 * seven or eight categories landed in the critical band — a report that
+	 * tells every single user their site is broken is not a measurement, it is
+	 * noise, and users uninstall it. These caps sum to 105 across the twelve
+	 * shipped checks, so the top of the range is still reachable only by a site
+	 * that is genuinely failing everywhere.
+	 *
 	 * @var array<string, int>
 	 */
 	public const CHECK_CAPS = [
-		Health_Check_Base::SEVERITY_CRITICAL => 25,
-		Health_Check_Base::SEVERITY_WARNING  => 15,
-		Health_Check_Base::SEVERITY_NOTICE   => 10,
+		Health_Check_Base::SEVERITY_CRITICAL => 20,
+		Health_Check_Base::SEVERITY_WARNING  => 8,
+		Health_Check_Base::SEVERITY_NOTICE   => 5,
 	];
 
 	/**

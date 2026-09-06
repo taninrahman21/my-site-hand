@@ -15,6 +15,10 @@ phpunit.xml.dist
 .phpcs.xml
 .phpcs.xml.dist
 
+# WordPress.org assets (screenshots, banner, icon) - uploaded to SVN assets/,
+# never part of the plugin zip.
+/.wordpress-org
+
 # Repository files
 /.git
 /.github

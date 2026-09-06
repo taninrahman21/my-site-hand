@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: My Site Hand (AI) 1.1.0\n"
+"Project-Id-Version: My Site Hand (AI) 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/my-site-hand\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-26T09:13:48+00:00\n"
+"POT-Creation-Date: 2026-09-05T18:39:05+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: my-site-hand\n"
@@ -39,351 +39,279 @@ msgstr ""
 msgid "https://github.com/taninrahman21"
 msgstr ""
 
-#: admin/class-admin.php:96
-#: admin/class-admin.php:97
+#: admin/class-admin.php:98
+#: admin/class-admin.php:99
 #: includes/class-core-site-health.php:107
 #: templates/admin/tools.php:298
 #: templates/partials/header.php:121
 msgid "My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:108
+#: admin/class-admin.php:110
 msgid "Dashboard - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:109
+#: admin/class-admin.php:111
 #: templates/partials/header.php:82
 msgid "Dashboard"
 msgstr ""
 
-#: admin/class-admin.php:121
+#: admin/class-admin.php:123
 msgid "Site Health - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:122
-#: templates/admin/audit-log.php:256
+#: admin/class-admin.php:124
+#: templates/admin/audit-log.php:262
 #: templates/admin/tokens.php:199
 #: templates/partials/header.php:77
 msgid "Site Health"
 msgstr ""
 
-#: admin/class-admin.php:132
+#: admin/class-admin.php:134
 msgid "Abilities - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:133
+#: admin/class-admin.php:135
 #: templates/admin/abilities.php:163
-#: templates/admin/dashboard.php:633
+#: templates/admin/dashboard.php:639
 #: templates/partials/header.php:87
 msgid "Abilities"
 msgstr ""
 
-#: admin/class-admin.php:142
+#: admin/class-admin.php:144
 msgid "API Tokens - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:143
+#: admin/class-admin.php:145
 #: templates/partials/header.php:92
 msgid "API Tokens"
 msgstr ""
 
-#: admin/class-admin.php:152
+#: admin/class-admin.php:154
 msgid "Audit Log - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:153
+#: admin/class-admin.php:155
 #: templates/partials/header.php:97
 msgid "Audit Log"
 msgstr ""
 
-#: admin/class-admin.php:162
+#: admin/class-admin.php:164
 msgid "Settings - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:163
+#: admin/class-admin.php:165
 #: templates/admin/abilities.php:252
-#: templates/admin/health.php:103
+#: templates/admin/health.php:124
 #: templates/admin/settings.php:104
 #: templates/partials/header.php:102
 msgid "Settings"
 msgstr ""
 
-#: admin/class-admin.php:172
+#: admin/class-admin.php:174
 msgid "How to use - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:173
+#: admin/class-admin.php:175
 #: templates/admin/documentation.php:105
 #: templates/partials/header.php:109
 msgid "How to use"
 msgstr ""
 
-#: admin/class-admin.php:182
+#: admin/class-admin.php:184
 msgid "About & Info - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:183
+#: admin/class-admin.php:185
 #: templates/partials/header.php:110
 msgid "About & Info"
 msgstr ""
 
-#: admin/class-admin.php:192
+#: admin/class-admin.php:194
 msgid "Suggest Feature - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:193
+#: admin/class-admin.php:195
 #: templates/partials/header.php:111
 msgid "Suggest a Feature"
 msgstr ""
 
-#: admin/class-admin.php:272
-#: includes/class-site-health-scanner.php:428
-msgid "Good"
-msgstr ""
-
-#: admin/class-admin.php:273
-#: includes/class-site-health-scanner.php:435
-msgid "Needs Attention"
-msgstr ""
-
-#: admin/class-admin.php:274
-#: includes/class-site-health-scanner.php:441
-#: templates/admin/tools.php:28
-msgid "Critical"
-msgstr ""
-
-#: admin/class-admin.php:277
-msgid "scanning…"
-msgstr ""
-
-#: admin/class-admin.php:278
-msgid "queued"
-msgstr ""
-
-#: admin/class-admin.php:279
-#: templates/admin/health.php:194
-msgid "not applicable"
-msgstr ""
-
-#: admin/class-admin.php:280
-#: templates/admin/health.php:196
-msgid "could not run"
-msgstr ""
-
-#: admin/class-admin.php:281
-#: templates/admin/health.php:198
-msgid "nothing found"
-msgstr ""
-
-#: admin/class-admin.php:282
-msgid "Scan cancelled."
-msgstr ""
-
-#: admin/class-admin.php:283
-msgid "found"
-msgstr ""
-
-#: admin/class-admin.php:284
-#: templates/admin/health.php:150
-msgid "Scan Again"
-msgstr ""
-
-#: admin/class-admin.php:285
-#: templates/admin/dashboard.php:208
-#: templates/admin/health.php:95
-msgid "Scan My Site"
-msgstr ""
-
-#: admin/class-admin.php:286
-msgid "Preparing…"
-msgstr ""
-
-#: admin/class-admin.php:287
-msgid "Something went wrong. Please try again."
-msgstr ""
-
-#. translators: %1$d: checks finished, %2$d: total checks
-#: admin/class-admin.php:289
-#, php-format
-msgid "%1$d of %2$d checks complete"
-msgstr ""
-
-#: admin/class-admin.php:290
-#: templates/admin/health.php:63
-msgid "Open"
-msgstr ""
-
-#: admin/class-admin.php:291
-msgid "Saving…"
-msgstr ""
-
-#: admin/class-admin.php:292
-msgid "Saved"
-msgstr ""
-
-#: admin/class-admin.php:293
-msgid "Describe this image…"
-msgstr ""
-
-#: admin/class-admin.php:294
-msgid "Write a short description…"
-msgstr ""
-
-#: admin/class-admin.php:295
-msgid "Replace with a working URL…"
-msgstr ""
-
-#: admin/class-admin.php:296
-msgid "Move to trash"
-msgstr ""
-
-#: admin/class-admin.php:297
-msgid "Move this file to the trash?"
-msgstr ""
-
 #: admin/class-admin.php:298
-msgid "Yes"
-msgstr ""
-
-#: admin/class-admin.php:299
-#: templates/admin/health.php:164
-#: templates/admin/tokens.php:492
-msgid "Cancel"
-msgstr ""
-
-#: admin/class-admin.php:317
 msgid "Copied!"
 msgstr ""
 
-#: admin/class-admin.php:318
+#: admin/class-admin.php:299
 msgid "Are you sure you want to revoke this token?"
 msgstr ""
 
-#: admin/class-admin.php:319
+#: admin/class-admin.php:300
 msgid "Saving..."
 msgstr ""
 
-#: admin/class-admin.php:320
+#: admin/class-admin.php:301
 msgid "Saved!"
 msgstr ""
 
-#: admin/class-admin.php:321
+#: admin/class-admin.php:302
 msgid "An error occurred. Please try again."
 msgstr ""
 
-#: admin/class-admin.php:322
+#: admin/class-admin.php:303
 msgid "Cache cleared!"
 msgstr ""
 
-#: admin/class-admin.php:410
-#: admin/class-admin.php:426
-#: admin/class-admin.php:439
-#: admin/class-admin.php:452
-#: admin/class-admin.php:465
-#: admin/class-admin.php:478
-#: admin/class-admin.php:491
-#: admin/class-admin.php:504
-#: admin/class-admin.php:584
+#: admin/class-admin.php:416
+#: admin/class-admin.php:432
+#: admin/class-admin.php:445
+#: admin/class-admin.php:458
+#: admin/class-admin.php:471
+#: admin/class-admin.php:484
+#: admin/class-admin.php:497
+#: admin/class-admin.php:510
+#: admin/class-admin.php:590
 msgid "You do not have permission to access this page."
 msgstr ""
 
-#: admin/class-admin.php:517
+#: admin/class-admin.php:523
 msgid "Please fill in all required fields."
 msgstr ""
 
-#: admin/class-admin.php:559
+#: admin/class-admin.php:565
 msgid "Thank you! Your feature request has been successfully submitted to the developer."
 msgstr ""
 
 #. translators: %s: the mailer error message
-#: admin/class-admin.php:564
+#: admin/class-admin.php:570
 #, php-format
 msgid "Failed to send email. Mailer error: %s"
 msgstr ""
 
-#: admin/class-admin.php:566
+#: admin/class-admin.php:572
 msgid "Failed to send email. Please check your server SMTP settings or contact builtbytanin@gmail.com directly."
 msgstr ""
 
-#: admin/class-admin.php:694
+#: admin/class-admin.php:700
 msgid "How to Use"
 msgstr ""
 
-#: api/class-rest-controller.php:495
+#: api/class-rest-controller.php:610
 msgid "That issue cannot be repaired from here."
 msgstr ""
 
-#: api/class-rest-controller.php:533
+#: api/class-rest-controller.php:648
 msgid "That field cannot be edited from here."
 msgstr ""
 
-#: api/class-rest-controller.php:553
+#: api/class-rest-controller.php:668
 msgid "Enter some text before saving."
 msgstr ""
 
-#: api/class-rest-controller.php:595
+#: api/class-rest-controller.php:710
 msgid "That does not look like a valid URL."
 msgstr ""
 
-#: api/class-rest-controller.php:605
+#: api/class-rest-controller.php:720
 msgid "That post no longer exists."
 msgstr ""
 
-#: api/class-rest-controller.php:613
-#: api/class-rest-controller.php:623
+#: api/class-rest-controller.php:728
+#: api/class-rest-controller.php:738
 msgid "That link is no longer in this post. Scan again to refresh the report."
 msgstr ""
 
-#: api/class-rest-controller.php:764
+#: api/class-rest-controller.php:879
 msgid "That file could not be moved to the trash."
 msgstr ""
 
-#: api/class-rest-controller.php:786
+#: api/class-rest-controller.php:901
 msgid "That item no longer exists."
 msgstr ""
 
-#: api/class-rest-controller.php:794
+#: api/class-rest-controller.php:909
 msgid "You are not allowed to change that item."
 msgstr ""
 
-#: api/class-rest-controller.php:944
-#: api/class-rest-controller.php:999
-#: api/class-rest-controller.php:1100
+#: api/class-rest-controller.php:975
+#: api/class-rest-controller.php:997
+msgid "There is no scan to export yet. Run a scan first."
+msgstr ""
+
+#: api/class-rest-controller.php:976
+#: api/class-rest-controller.php:998
+msgid "Nothing to export"
+msgstr ""
+
+#: api/class-rest-controller.php:1021
+#: api/class-rest-controller.php:1458
+msgid "Security check failed."
+msgstr ""
+
+#: api/class-rest-controller.php:1076
+msgid "There is no scan to share yet. Run a scan first."
+msgstr ""
+
+#. translators: %s: the date the share link expires
+#: api/class-rest-controller.php:1099
+#, php-format
+msgid "Created a public report link that expires on %s."
+msgstr ""
+
+#: api/class-rest-controller.php:1139
+msgid "Revoked a public report link."
+msgstr ""
+
+#: api/class-rest-controller.php:1178
+msgid "Too many requests"
+msgstr ""
+
+#: api/class-rest-controller.php:1179
+msgid "This link has been opened too many times in the last hour. Please try again later."
+msgstr ""
+
+#: api/class-rest-controller.php:1191
+msgid "Report not found"
+msgstr ""
+
+#: api/class-rest-controller.php:1192
+msgid "This report link is not valid. It may have expired or been revoked."
+msgstr ""
+
+#: api/class-rest-controller.php:1353
+#: api/class-rest-controller.php:1408
+#: api/class-rest-controller.php:1509
 msgid "Nonce verification failed."
 msgstr ""
 
-#: api/class-rest-controller.php:951
+#: api/class-rest-controller.php:1360
 msgid "Label is required."
 msgstr ""
 
-#: api/class-rest-controller.php:956
+#: api/class-rest-controller.php:1365
 msgid "Limited access tokens must select at least one ability."
 msgstr ""
 
 #. translators: %s: the invalid IP address or CIDR range
-#: api/class-rest-controller.php:966
-#, php-format
+#: api/class-rest-controller.php:1375
+#: assets/js/token-manager.js:320
+#, php-format,js-format
 msgid "Invalid IP or CIDR format: %s"
 msgstr ""
 
-#: api/class-rest-controller.php:983
+#: api/class-rest-controller.php:1392
 msgid "Save this token — it will not be shown again."
 msgstr ""
 
-#: api/class-rest-controller.php:1008
+#: api/class-rest-controller.php:1417
 msgid "Failed to revoke token."
 msgstr ""
 
-#: api/class-rest-controller.php:1049
-msgid "Security check failed."
-msgstr ""
-
-#: api/class-rest-controller.php:1057
+#: api/class-rest-controller.php:1466
+#: includes/class-report-exporter.php:58
 msgid "Could not open output stream."
 msgstr ""
 
 #. translators: %d: number of transients cleared
-#: api/class-rest-controller.php:1111
+#: api/class-rest-controller.php:1520
 #, php-format
 msgid "Cleared %d cached items."
 msgstr ""
@@ -546,6 +474,7 @@ msgstr[1] ""
 
 #. translators: %d: number of issues
 #: includes/class-core-site-health.php:241
+#: includes/class-report-exporter.php:270
 #, php-format
 msgid "%d issue found"
 msgid_plural "%d issues found"
@@ -653,19 +582,19 @@ msgstr ""
 msgid "Turn these emails off:"
 msgstr ""
 
-#: includes/class-health-reporter.php:530
+#: includes/class-health-reporter.php:534
 msgid "That unsubscribe link is not valid. You can turn reports off in My Site Hand settings."
 msgstr ""
 
-#: includes/class-health-reporter.php:531
+#: includes/class-health-reporter.php:535
 msgid "Link expired"
 msgstr ""
 
-#: includes/class-health-reporter.php:540
+#: includes/class-health-reporter.php:544
 msgid "Done. This site will not email you site reports again."
 msgstr ""
 
-#: includes/class-health-reporter.php:541
+#: includes/class-health-reporter.php:545
 msgid "Reports turned off"
 msgstr ""
 
@@ -695,69 +624,69 @@ msgstr ""
 msgid "Token not authorized for this ability."
 msgstr ""
 
-#: includes/class-plugin.php:302
-#: includes/class-plugin.php:336
-#: includes/class-plugin.php:372
-#: includes/class-plugin.php:424
-#: includes/class-plugin.php:487
-#: includes/class-plugin.php:514
-#: includes/class-review-prompt.php:230
+#: includes/class-plugin.php:312
+#: includes/class-plugin.php:346
+#: includes/class-plugin.php:382
+#: includes/class-plugin.php:434
+#: includes/class-plugin.php:497
+#: includes/class-plugin.php:524
+#: includes/class-review-prompt.php:232
 msgid "Permission denied."
 msgstr ""
 
-#: includes/class-plugin.php:309
+#: includes/class-plugin.php:319
 msgid "Missing module slug."
 msgstr ""
 
-#: includes/class-plugin.php:343
+#: includes/class-plugin.php:353
 msgid "Missing ability name."
 msgstr ""
 
 #. translators: %d: number of tokens deleted
-#: includes/class-plugin.php:383
+#: includes/class-plugin.php:393
 #, php-format
 msgid "Deleted %d tokens."
 msgstr ""
 
 #. translators: %d: number of log entries deleted
-#: includes/class-plugin.php:394
+#: includes/class-plugin.php:404
 #, php-format
 msgid "Deleted %d log entries."
 msgstr ""
 
-#: includes/class-plugin.php:411
+#: includes/class-plugin.php:421
 msgid "All plugin data has been reset to defaults."
 msgstr ""
 
-#: includes/class-plugin.php:416
+#: includes/class-plugin.php:426
 msgid "Unknown action."
 msgstr ""
 
-#: includes/class-plugin.php:446
+#: includes/class-plugin.php:456
 msgid "Option not allowed via AJAX."
 msgstr ""
 
-#: includes/class-plugin.php:463
+#: includes/class-plugin.php:473
 msgid "That is not a valid email address."
 msgstr ""
 
-#: includes/class-plugin.php:495
+#: includes/class-plugin.php:505
 msgid "Loopback test passed. Server can communicate with itself."
 msgstr ""
 
-#: includes/class-plugin.php:498
+#: includes/class-plugin.php:508
 msgid "Discovery simulation successful. 12 tools identified."
 msgstr ""
 
-#: includes/class-plugin.php:501
+#: includes/class-plugin.php:511
 msgid "Unknown diagnostic test."
 msgstr ""
 
-#: includes/class-plugin.php:522
+#: includes/class-plugin.php:532
 msgid "Database tables verified and repaired."
 msgstr ""
 
-#: includes/class-plugin.php:525
+#: includes/class-plugin.php:535
 msgid "Unknown fix action."
 msgstr ""
 
@@ -773,32 +702,178 @@ msgstr ""
 msgid "Daily rate limit of %d requests exceeded."
 msgstr ""
 
+#: includes/class-rate-limiter.php:223
+msgid "Too many requests. Please try again later."
+msgstr ""
+
+#: includes/class-report-exporter.php:35
+#: templates/export/health-print.php:256
+#: templates/export/shared-report.php:172
+msgid "Check"
+msgstr ""
+
+#: includes/class-report-exporter.php:36
+msgid "Severity"
+msgstr ""
+
+#: includes/class-report-exporter.php:37
+msgid "Issue"
+msgstr ""
+
+#: includes/class-report-exporter.php:38
+msgid "Context"
+msgstr ""
+
+#: includes/class-report-exporter.php:39
+msgid "Link"
+msgstr ""
+
+#: includes/class-report-exporter.php:40
+msgid "Object ID"
+msgstr ""
+
+#. translators: %d: number of issues found but not included in the file
+#: includes/class-report-exporter.php:115
+#, php-format
+msgid "%d more issue not exported"
+msgid_plural "%d more issues not exported"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-report-exporter.php:257
+msgid "Not applicable to this site"
+msgstr ""
+
+#: includes/class-report-exporter.php:259
+#: templates/export/shared-report.php:188
+msgid "Could not run"
+msgstr ""
+
+#: includes/class-report-exporter.php:261
+msgid "Not run"
+msgstr ""
+
+#: includes/class-report-exporter.php:265
+#: templates/export/shared-report.php:190
+msgid "Nothing found"
+msgstr ""
+
 #. translators: %d: number of issues the user repaired
-#: includes/class-review-prompt.php:167
+#: includes/class-review-prompt.php:168
 #, php-format
 msgid "You fixed %d issue on your site."
 msgid_plural "You fixed %d issues on your site."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class-review-prompt.php:171
+#: includes/class-review-prompt.php:173
 msgid "If My Site Hand is useful, a review would help a lot."
 msgstr ""
 
-#: includes/class-review-prompt.php:176
+#: includes/class-review-prompt.php:178
 msgid "Leave a review"
 msgstr ""
 
-#: includes/class-review-prompt.php:179
+#: includes/class-review-prompt.php:181
 msgid "Maybe later"
 msgstr ""
 
-#: includes/class-review-prompt.php:182
+#: includes/class-review-prompt.php:184
 msgid "Don't ask again"
 msgstr ""
 
-#: includes/class-site-health-scanner.php:191
+#. translators: %d: maximum number of share links allowed at once
+#: includes/class-shared-reports.php:110
+#, php-format
+msgid "You already have %d share links. Revoke one before creating another."
+msgstr ""
+
+#: includes/class-shared-reports.php:123
+msgid "This report could not be prepared for sharing."
+msgstr ""
+
+#: includes/class-shared-reports.php:147
+msgid "The share link could not be saved."
+msgstr ""
+
+#: includes/class-site-health-scanner.php:200
 msgid "Unknown health check."
+msgstr ""
+
+#: includes/class-site-health-scanner.php:437
+#: assets/js/health-scan.js:392
+msgid "Good"
+msgstr ""
+
+#: includes/class-site-health-scanner.php:444
+#: assets/js/health-scan.js:396
+msgid "Needs Attention"
+msgstr ""
+
+#: includes/class-site-health-scanner.php:450
+#: templates/admin/tools.php:28
+#: assets/js/health-scan.js:400
+msgid "Critical"
+msgstr ""
+
+#: includes/health/class-check-accessibility-basics.php:61
+msgid "Accessibility Basics"
+msgstr ""
+
+#: includes/health/class-check-accessibility-basics.php:70
+msgid "Looks for four structural problems in your content: links that announce nothing to a screen reader, links that only say \"click here\", more than one main heading, and headings that skip a level. This is a structural check, not a full accessibility audit — it deliberately does not test colour contrast, which is the most common failure of all and cannot be measured on the server. Passing this check does not mean your site is accessible."
+msgstr ""
+
+#. translators: 1: post title, 2: number of accessibility problems found in it
+#: includes/health/class-check-accessibility-basics.php:149
+#, php-format
+msgid "%1$s (%2$d accessibility problem)"
+msgid_plural "%1$s (%2$d accessibility problems)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/health/class-check-accessibility-basics.php:158
+msgid " · "
+msgstr ""
+
+#. translators: %d: number of links with no readable text
+#: includes/health/class-check-accessibility-basics.php:228
+#, php-format
+msgid "%d link a screen reader announces as nothing"
+msgid_plural "%d links a screen reader announces as nothing"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of links whose text says nothing about the destination
+#: includes/health/class-check-accessibility-basics.php:241
+#, php-format
+msgid "%d link says only \"click here\" or similar"
+msgid_plural "%d links say only \"click here\" or similar"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of top-level headings in the content
+#: includes/health/class-check-accessibility-basics.php:262
+#, php-format
+msgid "%d main headings — a page should have one"
+msgstr ""
+
+#. translators: %d: number of places where a heading level was skipped
+#: includes/health/class-check-accessibility-basics.php:272
+#, php-format
+msgid "%d heading skips a level"
+msgid_plural "%d headings skip a level"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: post ID
+#: includes/health/class-check-accessibility-basics.php:394
+#: includes/health/class-check-missing-image-dimensions.php:284
+#: includes/health/class-check-missing-lazy-loading.php:295
+#: includes/health/class-check-missing-meta-description.php:141
+#: includes/health/class-check-thin-content.php:403
+#, php-format
+msgid "Untitled (#%d)"
 msgstr ""
 
 #: includes/health/class-check-broken-links.php:109
@@ -813,6 +888,38 @@ msgstr ""
 #: includes/health/class-check-broken-links.php:177
 #, php-format
 msgid "%1$s (HTTP %2$d)"
+msgstr ""
+
+#: includes/health/class-check-exposed-files.php:85
+msgid "Exposed WordPress Files"
+msgstr ""
+
+#: includes/health/class-check-exposed-files.php:94
+msgid "Asks your own site whether a few well-known files can be read by anyone. readme.html gives away your exact WordPress version, and a debug log can contain server paths and credentials. Closing them off is a rule in your .htaccess or nginx config — this plugin will not edit server configuration for you, so the fix is a short manual step."
+msgstr ""
+
+#: includes/health/class-check-exposed-files.php:140
+msgid "This site could not make a request to itself, so its files could not be checked. Some hosts block loopback requests."
+msgstr ""
+
+#: includes/health/class-check-exposed-files.php:177
+msgid "Publicly readable — it names your exact WordPress version"
+msgstr ""
+
+#: includes/health/class-check-exposed-files.php:179
+msgid "Publicly readable — it confirms the site runs WordPress"
+msgstr ""
+
+#: includes/health/class-check-exposed-files.php:181
+msgid "Publicly readable — it confirms a standard, unhardened install"
+msgstr ""
+
+#: includes/health/class-check-exposed-files.php:183
+msgid "Publicly readable — debug logs can contain server paths and credentials"
+msgstr ""
+
+#: includes/health/class-check-exposed-files.php:185
+msgid "Publicly readable"
 msgstr ""
 
 #: includes/health/class-check-large-media.php:52
@@ -831,8 +938,8 @@ msgstr ""
 
 #. translators: %d: attachment ID
 #: includes/health/class-check-large-media.php:245
-#: includes/health/class-check-missing-alt-text.php:153
-#: includes/health/class-check-orphan-media.php:561
+#: includes/health/class-check-missing-alt-text.php:155
+#: includes/health/class-check-orphan-media.php:563
 #, php-format
 msgid "Attachment #%d"
 msgstr ""
@@ -840,7 +947,7 @@ msgstr ""
 #. translators: %s: post title the attachment is attached to
 #. translators: %s: post title the image is attached to
 #: includes/health/class-check-large-media.php:263
-#: includes/health/class-check-missing-alt-text.php:171
+#: includes/health/class-check-missing-alt-text.php:173
 #, php-format
 msgid "Used in: %s"
 msgstr ""
@@ -853,18 +960,52 @@ msgstr ""
 msgid "Finds images with no alternative text, which screen readers and search engines both rely on."
 msgstr ""
 
+#: includes/health/class-check-missing-image-dimensions.php:43
+msgid "Images Missing Dimensions"
+msgstr ""
+
+#: includes/health/class-check-missing-image-dimensions.php:52
+msgid "Finds images with no width or height, which makes the page jump around while it loads. Open the post, select each image and re-insert it from the media library — WordPress writes the dimensions back in for you. There is no safe automatic repair for this: rewriting the markup of a stored post is not something a scanner should do on your behalf."
+msgstr ""
+
+#. translators: 1: post title, 2: number of images with no width or height
+#: includes/health/class-check-missing-image-dimensions.php:128
+#, php-format
+msgid "%1$s (%2$d image with no dimensions)"
+msgid_plural "%1$s (%2$d images with no dimensions)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/health/class-check-missing-image-dimensions.php:137
+msgid "Causes layout shift while the page loads"
+msgstr ""
+
+#: includes/health/class-check-missing-lazy-loading.php:56
+msgid "Images Missing Lazy Loading"
+msgstr ""
+
+#: includes/health/class-check-missing-lazy-loading.php:65
+msgid "WordPress lazy-loads content images by itself, so this check usually finds nothing — that is a good result, not a broken check. It reports the images further down a post that something has deliberately opted out, which makes visitors download them before they are ever seen. The first image in a post is never reported, because that one should load straight away."
+msgstr ""
+
+#. translators: 1: post title, 2: number of images that will not lazy load
+#: includes/health/class-check-missing-lazy-loading.php:154
+#, php-format
+msgid "%1$s (%2$d image loads eagerly)"
+msgid_plural "%1$s (%2$d images load eagerly)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/health/class-check-missing-lazy-loading.php:163
+msgid "Downloaded before the visitor scrolls to it"
+msgstr ""
+
 #: includes/health/class-check-missing-meta-description.php:52
 msgid "Missing Meta Description"
 msgstr ""
 
 #: includes/health/class-check-missing-meta-description.php:61
 msgid "Finds published posts and pages with no SEO meta description, so search engines invent their own snippet."
-msgstr ""
-
-#. translators: %d: post ID
-#: includes/health/class-check-missing-meta-description.php:141
-#, php-format
-msgid "Untitled (#%d)"
 msgstr ""
 
 #: includes/health/class-check-orphan-media.php:96
@@ -959,6 +1100,48 @@ msgstr[1] ""
 
 #: includes/health/class-check-site-status.php:387
 msgid "Cron may not be running on this site"
+msgstr ""
+
+#: includes/health/class-check-thin-content.php:74
+msgid "Thin Content"
+msgstr ""
+
+#: includes/health/class-check-thin-content.php:83
+msgid "Lists published posts and pages with very few words, which search engines tend to rank poorly. Read this one with judgement: a contact page, a thank-you page or a landing page is supposed to be short, and there is nothing wrong with it. Pages built mostly from a shortcode, a gallery or an embed are left out entirely, because counting their words tells you nothing."
+msgstr ""
+
+#. translators: 1: post title, 2: number of words in the post
+#: includes/health/class-check-thin-content.php:183
+#, php-format
+msgid "%1$s (%2$d word)"
+msgid_plural "%1$s (%2$d words)"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: the word count threshold
+#: includes/health/class-check-thin-content.php:194
+#, php-format
+msgid "Under %d words — fine if the page is meant to be short"
+msgstr ""
+
+#: includes/health/class-check-xmlrpc.php:83
+msgid "XML-RPC Enabled"
+msgstr ""
+
+#: includes/health/class-check-xmlrpc.php:92
+msgid "XML-RPC is the old remote interface at xmlrpc.php. It lets an attacker try many passwords in a single request, which is why hardening guides suggest closing it. It is also what the WordPress mobile apps, Jetpack and some publishing tools use to reach your site — so this is only worth turning off if you do not use any of them. That is why it is a notice and not a warning: on plenty of perfectly healthy sites the right answer is to leave it alone."
+msgstr ""
+
+#: includes/health/class-check-xmlrpc.php:161
+msgid "This site could not make a request to itself, so xmlrpc.php could not be checked. Some hosts block loopback requests."
+msgstr ""
+
+#: includes/health/class-check-xmlrpc.php:184
+msgid "xmlrpc.php is reachable"
+msgstr ""
+
+#: includes/health/class-check-xmlrpc.php:185
+msgid "Fine if you use the WordPress mobile app, Jetpack or a publishing tool — worth closing if you do not"
 msgstr ""
 
 #: includes/modules/class-module-content.php:72
@@ -1451,44 +1634,44 @@ msgid "My Site Hand requires PHP %1$s or higher. You are running PHP %2$s. Pleas
 msgstr ""
 
 #. translators: %s: URL to tokens page
-#: my-site-hand.php:96
+#: my-site-hand.php:112
 #, php-format
 msgid "<strong>My Site Hand Security Update:</strong> API Token permissions are now enforced strictly. Your existing tokens have been preserved with full access to prevent connection breaks. Please <a href=\"%s\">review your tokens</a> to narrow their scope."
 msgstr ""
 
 #: templates/admin/abilities.php:16
-#: templates/admin/dashboard.php:124
+#: templates/admin/dashboard.php:130
 #: templates/admin/settings.php:16
 msgid "Content"
 msgstr ""
 
 #: templates/admin/abilities.php:17
-#: templates/admin/dashboard.php:125
+#: templates/admin/dashboard.php:131
 #: templates/admin/settings.php:17
 msgid "SEO"
 msgstr ""
 
 #: templates/admin/abilities.php:18
-#: templates/admin/dashboard.php:126
+#: templates/admin/dashboard.php:132
 #: templates/admin/settings.php:18
 #: templates/admin/tools.php:151
 msgid "Diagnostics"
 msgstr ""
 
 #: templates/admin/abilities.php:19
-#: templates/admin/dashboard.php:127
+#: templates/admin/dashboard.php:133
 #: templates/admin/settings.php:19
 msgid "Media"
 msgstr ""
 
 #: templates/admin/abilities.php:20
-#: templates/admin/dashboard.php:128
+#: templates/admin/dashboard.php:134
 #: templates/admin/settings.php:20
 msgid "Users"
 msgstr ""
 
 #: templates/admin/abilities.php:21
-#: templates/admin/dashboard.php:129
+#: templates/admin/dashboard.php:135
 #: templates/admin/settings.php:21
 msgid "WooCommerce"
 msgstr ""
@@ -1498,25 +1681,25 @@ msgid "Posts, pages, and custom post types"
 msgstr ""
 
 #: templates/admin/abilities.php:26
-#: templates/admin/dashboard.php:125
+#: templates/admin/dashboard.php:131
 #: templates/admin/settings.php:17
 msgid "Analysis and meta management"
 msgstr ""
 
 #: templates/admin/abilities.php:27
-#: templates/admin/dashboard.php:126
+#: templates/admin/dashboard.php:132
 #: templates/admin/settings.php:18
 msgid "Site health, error logs, cron"
 msgstr ""
 
 #: templates/admin/abilities.php:28
-#: templates/admin/dashboard.php:127
+#: templates/admin/dashboard.php:133
 #: templates/admin/settings.php:19
 msgid "Media library"
 msgstr ""
 
 #: templates/admin/abilities.php:29
-#: templates/admin/dashboard.php:128
+#: templates/admin/dashboard.php:134
 #: templates/admin/settings.php:20
 msgid "Accounts and roles"
 msgstr ""
@@ -1623,19 +1806,24 @@ msgid "admin scope"
 msgstr ""
 
 #: templates/admin/abilities.php:287
-#: templates/admin/dashboard.php:469
+#: templates/admin/dashboard.php:475
 msgid "On"
 msgstr ""
 
 #: templates/admin/abilities.php:287
-#: templates/admin/dashboard.php:469
+#: templates/admin/dashboard.php:475
 msgid "Off"
 msgstr ""
 
-#: templates/admin/audit-log.php:94
-#: templates/admin/audit-log.php:95
-#: templates/admin/dashboard.php:152
-#: templates/admin/dashboard.php:153
+#: templates/admin/audit-log.php:77
+#: templates/admin/dashboard.php:30
+msgid "Quick Fix"
+msgstr ""
+
+#: templates/admin/audit-log.php:100
+#: templates/admin/audit-log.php:101
+#: templates/admin/dashboard.php:158
+#: templates/admin/dashboard.php:159
 #: templates/admin/settings.php:86
 #: templates/admin/settings.php:87
 #: templates/admin/tokens.php:108
@@ -1645,354 +1833,362 @@ msgstr ""
 msgid "On this page"
 msgstr ""
 
-#: templates/admin/audit-log.php:96
-#: templates/admin/dashboard.php:154
-#: templates/admin/dashboard.php:178
+#: templates/admin/audit-log.php:102
+#: templates/admin/dashboard.php:160
+#: templates/admin/dashboard.php:184
 msgid "Today"
 msgstr ""
 
-#: templates/admin/audit-log.php:97
+#: templates/admin/audit-log.php:103
 msgid "Filters"
 msgstr ""
 
-#: templates/admin/audit-log.php:98
-#: templates/admin/audit-log.php:213
+#: templates/admin/audit-log.php:104
+#: templates/admin/audit-log.php:219
 msgid "Entries"
 msgstr ""
 
 #. translators: %d: number of errors in the last 24 hours
-#: templates/admin/audit-log.php:103
+#: templates/admin/audit-log.php:109
 #, php-format
 msgid "%d failure in the last 24 hours."
 msgid_plural "%d failures in the last 24 hours."
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/audit-log.php:106
-#: templates/admin/audit-log.php:126
+#: templates/admin/audit-log.php:112
+#: templates/admin/audit-log.php:132
+#: templates/admin/health.php:183
 msgid "Export CSV"
 msgstr ""
 
-#: templates/admin/audit-log.php:114
+#: templates/admin/audit-log.php:120
 msgid "Record"
 msgstr ""
 
-#: templates/admin/audit-log.php:115
+#: templates/admin/audit-log.php:121
 msgid "Audit"
 msgstr ""
 
 #. translators: %d: log retention period in days
-#: templates/admin/audit-log.php:119
+#: templates/admin/audit-log.php:125
 #, php-format
 msgid "Every call, what it sent, and what came back. Kept for %d days."
 msgstr ""
 
-#: templates/admin/audit-log.php:134
+#: templates/admin/audit-log.php:140
 msgid "Entries today"
 msgstr ""
 
 #. translators: %d: number of tokens
-#: templates/admin/audit-log.php:139
+#: templates/admin/audit-log.php:145
 #, php-format
 msgid "Across %d token"
 msgid_plural "Across %d tokens"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/audit-log.php:144
+#: templates/admin/audit-log.php:150
 msgid "Succeeded"
 msgstr ""
 
 #. translators: 1: number of successful calls, 2: total calls
-#: templates/admin/audit-log.php:150
+#: templates/admin/audit-log.php:156
 #, php-format
 msgid "%1$s of %2$s"
 msgstr ""
 
-#: templates/admin/audit-log.php:158
+#: templates/admin/audit-log.php:164
 msgid "Average"
 msgstr ""
 
-#: templates/admin/audit-log.php:160
+#: templates/admin/audit-log.php:166
 msgid "Over the last 30 days"
 msgstr ""
 
-#: templates/admin/audit-log.php:163
-#: templates/admin/dashboard.php:304
+#: templates/admin/audit-log.php:169
+#: templates/admin/dashboard.php:310
 msgid "Failures"
 msgstr ""
 
-#: templates/admin/audit-log.php:165
-#: templates/admin/audit-log.php:193
+#: templates/admin/audit-log.php:171
+#: templates/admin/audit-log.php:199
 msgid "Last 24 hours"
 msgstr ""
 
-#: templates/admin/audit-log.php:177
+#: templates/admin/audit-log.php:183
 msgid "Search ability or client"
 msgstr ""
 
-#: templates/admin/audit-log.php:183
+#: templates/admin/audit-log.php:189
 msgid "All tokens"
 msgstr ""
 
-#: templates/admin/audit-log.php:192
+#: templates/admin/audit-log.php:198
 msgid "All time"
 msgstr ""
 
-#: templates/admin/audit-log.php:194
+#: templates/admin/audit-log.php:200
 msgid "Last 7 days"
 msgstr ""
 
-#: templates/admin/audit-log.php:195
+#: templates/admin/audit-log.php:201
 msgid "Last 30 days"
 msgstr ""
 
-#: templates/admin/audit-log.php:200
+#: templates/admin/audit-log.php:206
 msgid "Reset"
 msgstr ""
 
-#: templates/admin/audit-log.php:214
+#: templates/admin/audit-log.php:220
 msgid "Click a row for the payload and the exact reason a call failed."
 msgstr ""
 
 #. translators: 1: first entry number, 2: last entry number, 3: total entries
-#: templates/admin/audit-log.php:221
+#: templates/admin/audit-log.php:227
 #, php-format
 msgid "%1$s–%2$s of %3$s"
 msgstr ""
 
-#: templates/admin/audit-log.php:227
+#: templates/admin/audit-log.php:233
 msgid "No entries"
 msgstr ""
 
-#: templates/admin/audit-log.php:240
+#: templates/admin/audit-log.php:246
 msgid "No entries found"
 msgstr ""
 
-#: templates/admin/audit-log.php:241
+#: templates/admin/audit-log.php:247
 msgid "No AI actions recorded yet"
 msgstr ""
 
-#: templates/admin/audit-log.php:245
+#: templates/admin/audit-log.php:251
 msgid "No log entries match the selected filters."
 msgstr ""
 
-#: templates/admin/audit-log.php:246
+#: templates/admin/audit-log.php:252
 msgid "This is the record of what an AI assistant did on your site. Entries appear as soon as one connects."
 msgstr ""
 
-#: templates/admin/audit-log.php:250
+#: templates/admin/audit-log.php:256
 msgid "Connect an AI assistant"
 msgstr ""
 
 #. translators: %s: link to the Site Health page
-#: templates/admin/audit-log.php:255
+#: templates/admin/audit-log.php:261
 #, php-format
 msgid "Not using an AI assistant? %s scans your site on its own, with no setup."
 msgstr ""
 
-#: templates/admin/audit-log.php:283
-#: templates/admin/audit-log.php:294
+#: templates/admin/audit-log.php:289
+#: templates/admin/audit-log.php:300
 msgid "Unknown client"
 msgstr ""
 
 #. translators: %s: WordPress user display name
-#: templates/admin/audit-log.php:291
+#: templates/admin/audit-log.php:297
 #, php-format
 msgid "%s (from the admin)"
 msgstr ""
 
 #. translators: %d: execution duration in milliseconds
-#: templates/admin/audit-log.php:329
-#: templates/admin/dashboard.php:406
+#: templates/admin/audit-log.php:335
+#: templates/admin/dashboard.php:412
 #, php-format
 msgid "%d ms"
 msgstr ""
 
-#: templates/admin/audit-log.php:340
+#: templates/admin/audit-log.php:346
 msgid "When"
 msgstr ""
 
-#: templates/admin/audit-log.php:345
+#: templates/admin/audit-log.php:351
 msgid "Source"
 msgstr ""
 
-#: templates/admin/audit-log.php:350
-#: templates/admin/dashboard.php:359
+#: templates/admin/audit-log.php:356
+#: templates/admin/dashboard.php:365
 msgid "Ability"
 msgstr ""
 
-#: templates/admin/audit-log.php:355
+#: templates/admin/audit-log.php:361
 msgid "Status"
 msgstr ""
 
-#: templates/admin/audit-log.php:360
+#: templates/admin/audit-log.php:366
 msgid "Sent"
 msgstr ""
 
-#: templates/admin/audit-log.php:368
+#: templates/admin/audit-log.php:374
 msgid "Came back"
 msgstr ""
 
-#: templates/admin/audit-log.php:369
+#: templates/admin/audit-log.php:375
 msgid "Why it failed"
 msgstr ""
 
-#: templates/admin/audit-log.php:376
+#: templates/admin/audit-log.php:382
 msgid "User agent"
 msgstr ""
 
-#: templates/admin/dashboard.php:50
+#: templates/admin/dashboard.php:56
 msgid "No HTTPS on this site"
 msgstr ""
 
-#: templates/admin/dashboard.php:51
+#: templates/admin/dashboard.php:57
 msgid "Every token you issue travels in plain text."
 msgstr ""
 
-#: templates/admin/dashboard.php:53
+#: templates/admin/dashboard.php:59
 msgid "Run the checks"
 msgstr ""
 
 #. translators: %d: number of tokens expiring within 30 days
-#: templates/admin/dashboard.php:61
+#: templates/admin/dashboard.php:67
 #, php-format
 msgid "%d token expires within 30 days"
 msgid_plural "%d tokens expire within 30 days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/dashboard.php:64
+#: templates/admin/dashboard.php:70
 msgid "Clients using them will stop working the moment they lapse."
 msgstr ""
 
-#: templates/admin/dashboard.php:66
+#: templates/admin/dashboard.php:72
 msgid "Rotate them now"
 msgstr ""
 
-#: templates/admin/dashboard.php:72
+#: templates/admin/dashboard.php:78
 msgid "The MCP endpoint is switched off"
 msgstr ""
 
-#: templates/admin/dashboard.php:73
+#: templates/admin/dashboard.php:79
 msgid "No agent can reach this site until you turn it back on."
 msgstr ""
 
-#: templates/admin/dashboard.php:75
+#: templates/admin/dashboard.php:81
 #: templates/admin/documentation.php:295
 msgid "Open settings"
 msgstr ""
 
-#: templates/admin/dashboard.php:124
+#: templates/admin/dashboard.php:130
 #: templates/admin/settings.php:16
 msgid "Posts, pages, custom post types"
 msgstr ""
 
-#: templates/admin/dashboard.php:129
+#: templates/admin/dashboard.php:135
 #: templates/admin/settings.php:21
 msgid "Products, orders, coupons"
 msgstr ""
 
-#: templates/admin/dashboard.php:156
+#: templates/admin/dashboard.php:162
 msgid "Needs you"
 msgstr ""
 
-#: templates/admin/dashboard.php:158
+#: templates/admin/dashboard.php:164
 msgid "Stream"
 msgstr ""
 
-#: templates/admin/dashboard.php:159
+#: templates/admin/dashboard.php:165
 msgid "Surface"
 msgstr ""
 
-#: templates/admin/dashboard.php:160
+#: templates/admin/dashboard.php:166
 msgid "Connect"
 msgstr ""
 
 #. translators: %d: number of active tokens
-#: templates/admin/dashboard.php:165
+#: templates/admin/dashboard.php:171
 #, php-format
 msgid "%d token issued."
 msgid_plural "%d tokens issued."
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/dashboard.php:168
+#: templates/admin/dashboard.php:174
 msgid "Review tokens"
 msgstr ""
 
-#: templates/admin/dashboard.php:177
+#: templates/admin/dashboard.php:183
 msgid "Overview"
 msgstr ""
 
 #. translators: 1: number of calls today, 2: number of active tokens, 3: number of errors in the last 24 hours
-#: templates/admin/dashboard.php:182
+#: templates/admin/dashboard.php:188
 #, php-format
 msgid "%1$s calls from %2$s. %3$s failed in the last 24 hours."
 msgstr ""
 
 #. translators: %d: number of active tokens
-#: templates/admin/dashboard.php:186
+#: templates/admin/dashboard.php:192
 #, php-format
 msgid "%d token"
 msgid_plural "%d tokens"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/dashboard.php:193
+#: templates/admin/dashboard.php:199
 msgid "Refresh"
 msgstr ""
 
-#: templates/admin/dashboard.php:194
+#: templates/admin/dashboard.php:200
 #: templates/admin/tokens.php:144
 msgid "New token"
 msgstr ""
 
-#: templates/admin/dashboard.php:202
+#: templates/admin/dashboard.php:208
 msgid "You have never scanned this site"
 msgstr ""
 
-#: templates/admin/dashboard.php:204
+#: templates/admin/dashboard.php:210
 msgid "Find broken links, missing SEO data, and health issues in about 30 seconds. No setup required."
 msgstr ""
 
-#: templates/admin/dashboard.php:218
-#: templates/admin/health.php:115
+#: templates/admin/dashboard.php:214
+#: templates/admin/health.php:116
+msgid "Scan My Site"
+msgstr ""
+
+#: templates/admin/dashboard.php:224
+#: templates/admin/health.php:136
+#: templates/export/shared-report.php:154
 msgid "/ 100"
 msgstr ""
 
 #. translators: %s: score band, e.g. "Good"
-#: templates/admin/dashboard.php:225
+#: templates/admin/dashboard.php:231
 #, php-format
 msgid "Site health: %s"
 msgstr ""
 
 #. translators: %s: human readable time difference, e.g. "5 minutes"
-#: templates/admin/dashboard.php:234
-#: templates/admin/health.php:125
+#: templates/admin/dashboard.php:240
+#: templates/admin/health.php:146
 #, php-format
 msgid "Last scanned %s ago"
 msgstr ""
 
-#: templates/admin/dashboard.php:246
+#: templates/admin/dashboard.php:252
 msgid "View report"
 msgstr ""
 
-#: templates/admin/dashboard.php:255
+#: templates/admin/dashboard.php:261
 msgid "Server active"
 msgstr ""
 
-#: templates/admin/dashboard.php:255
+#: templates/admin/dashboard.php:261
 msgid "Server stopped"
 msgstr ""
 
-#: templates/admin/dashboard.php:262
-#: templates/admin/dashboard.php:546
-#: templates/admin/dashboard.php:562
-#: templates/admin/dashboard.php:591
-#: templates/admin/dashboard.php:600
-#: templates/admin/dashboard.php:610
+#: templates/admin/dashboard.php:268
+#: templates/admin/dashboard.php:552
+#: templates/admin/dashboard.php:568
+#: templates/admin/dashboard.php:597
+#: templates/admin/dashboard.php:606
+#: templates/admin/dashboard.php:616
 #: templates/admin/documentation.php:313
+#: templates/admin/health.php:258
 #: templates/admin/tokens.php:528
 #: templates/admin/tokens.php:567
 #: templates/admin/tokens.php:579
@@ -2000,233 +2196,235 @@ msgstr ""
 #: templates/admin/tokens.php:614
 #: templates/admin/tokens.php:624
 #: templates/partials/header.php:132
+#: assets/js/health-scan.js:1023
 msgid "Copy"
 msgstr ""
 
-#: templates/admin/dashboard.php:265
+#: templates/admin/dashboard.php:271
 msgid "Protocol 2024-11-05"
 msgstr ""
 
-#: templates/admin/dashboard.php:271
+#: templates/admin/dashboard.php:277
 msgid "Calls today"
 msgstr ""
 
 #. translators: %d: percentage change in API calls
-#: templates/admin/dashboard.php:278
+#: templates/admin/dashboard.php:284
 #, php-format
 msgid "%d%% against yesterday"
 msgstr ""
 
-#: templates/admin/dashboard.php:284
+#: templates/admin/dashboard.php:290
 msgid "Abilities on"
 msgstr ""
 
 #. translators: %d: number of abilities switched off
-#: templates/admin/dashboard.php:289
+#: templates/admin/dashboard.php:295
 #, php-format
 msgid "%d held back by you"
 msgstr ""
 
-#: templates/admin/dashboard.php:294
+#: templates/admin/dashboard.php:300
 msgid "Average duration"
 msgstr ""
 
 #. translators: %d: number of active tokens
-#: templates/admin/dashboard.php:299
+#: templates/admin/dashboard.php:305
 #, php-format
 msgid "Across %d active tokens"
 msgstr ""
 
 #. translators: %s: error rate percentage
-#: templates/admin/dashboard.php:309
+#: templates/admin/dashboard.php:315
 #, php-format
 msgid "%s%% error rate this month"
 msgstr ""
 
-#: templates/admin/dashboard.php:338
+#: templates/admin/dashboard.php:344
 msgid "Request stream"
 msgstr ""
 
-#: templates/admin/dashboard.php:339
+#: templates/admin/dashboard.php:345
 msgid "The most recent calls, newest first."
 msgstr ""
 
-#: templates/admin/dashboard.php:342
+#: templates/admin/dashboard.php:348
 msgid "Full audit →"
 msgstr ""
 
-#: templates/admin/dashboard.php:350
+#: templates/admin/dashboard.php:356
 msgid "Waiting for activity"
 msgstr ""
 
-#: templates/admin/dashboard.php:351
+#: templates/admin/dashboard.php:357
 msgid "Calls appear here the moment your AI client makes its first request."
 msgstr ""
 
-#: templates/admin/dashboard.php:358
+#: templates/admin/dashboard.php:364
 msgid "Time"
 msgstr ""
 
-#: templates/admin/dashboard.php:360
+#: templates/admin/dashboard.php:366
 msgid "Client"
 msgstr ""
 
-#: templates/admin/dashboard.php:361
+#: templates/admin/dashboard.php:367
+#: templates/export/health-print.php:257
 msgid "Result"
 msgstr ""
 
-#: templates/admin/dashboard.php:362
+#: templates/admin/dashboard.php:368
 msgid "Duration"
 msgstr ""
 
-#: templates/admin/dashboard.php:391
+#: templates/admin/dashboard.php:397
 #: templates/admin/tokens.php:635
 msgid "Done"
 msgstr ""
 
-#: templates/admin/dashboard.php:393
+#: templates/admin/dashboard.php:399
 msgid "Failed 500"
 msgstr ""
 
-#: templates/admin/dashboard.php:395
+#: templates/admin/dashboard.php:401
 msgid "Throttled 429"
 msgstr ""
 
-#: templates/admin/dashboard.php:427
+#: templates/admin/dashboard.php:433
 msgid "Permission surface"
 msgstr ""
 
-#: templates/admin/dashboard.php:428
+#: templates/admin/dashboard.php:434
 msgid "How much of each module is reachable right now."
 msgstr ""
 
-#: templates/admin/dashboard.php:431
+#: templates/admin/dashboard.php:437
 msgid "Change →"
 msgstr ""
 
-#: templates/admin/dashboard.php:458
+#: templates/admin/dashboard.php:464
 msgid "Switched off in settings"
 msgstr ""
 
-#: templates/admin/dashboard.php:484
+#: templates/admin/dashboard.php:490
 msgid "Connect an AI assistant (Claude Desktop, Cursor)"
 msgstr ""
 
-#: templates/admin/dashboard.php:485
+#: templates/admin/dashboard.php:491
 #: templates/admin/feature-request.php:73
 msgid "optional"
 msgstr ""
 
-#: templates/admin/dashboard.php:491
+#: templates/admin/dashboard.php:497
 msgid "Connect a client"
 msgstr ""
 
-#: templates/admin/dashboard.php:492
+#: templates/admin/dashboard.php:498
 msgid "Paste a token, run two commands, restart. Under a minute."
 msgstr ""
 
-#: templates/admin/dashboard.php:495
+#: templates/admin/dashboard.php:501
 msgid "Make a token →"
 msgstr ""
 
-#: templates/admin/dashboard.php:500
+#: templates/admin/dashboard.php:506
 msgid "01 — Your API token"
 msgstr ""
 
-#: templates/admin/dashboard.php:503
+#: templates/admin/dashboard.php:509
 msgid "Shown once, at creation. Nothing you paste here is stored or sent anywhere."
 msgstr ""
 
-#: templates/admin/dashboard.php:507
+#: templates/admin/dashboard.php:513
 msgid "02 — Pick your client"
 msgstr ""
 
-#: templates/admin/dashboard.php:510
+#: templates/admin/dashboard.php:516
 #: templates/admin/documentation.php:241
 #: templates/admin/tokens.php:537
 msgid "Claude Desktop"
 msgstr ""
 
-#: templates/admin/dashboard.php:512
+#: templates/admin/dashboard.php:518
 msgid "Cursor / IDEs"
 msgstr ""
 
-#: templates/admin/dashboard.php:521
+#: templates/admin/dashboard.php:527
 msgid "03 — Operating system"
 msgstr ""
 
-#: templates/admin/dashboard.php:524
+#: templates/admin/dashboard.php:530
 #: templates/admin/tokens.php:549
 msgid "Windows"
 msgstr ""
 
-#: templates/admin/dashboard.php:526
+#: templates/admin/dashboard.php:532
 #: templates/admin/tokens.php:552
 msgid "macOS"
 msgstr ""
 
-#: templates/admin/dashboard.php:528
+#: templates/admin/dashboard.php:534
 #: templates/admin/tokens.php:555
 msgid "Linux"
 msgstr ""
 
-#: templates/admin/dashboard.php:538
+#: templates/admin/dashboard.php:544
 #: templates/admin/tokens.php:562
 msgid "Install mcp-remote"
 msgstr ""
 
-#: templates/admin/dashboard.php:553
+#: templates/admin/dashboard.php:559
 #: templates/admin/tokens.php:574
 msgid "Register this site with Claude Desktop"
 msgstr ""
 
-#: templates/admin/dashboard.php:558
+#: templates/admin/dashboard.php:564
 msgid "Paste your token above first"
 msgstr ""
 
-#: templates/admin/dashboard.php:570
+#: templates/admin/dashboard.php:576
 #: templates/admin/tokens.php:587
 msgid "Run step 1 and wait for it to finish before running step 2, then restart Claude Desktop."
 msgstr ""
 
 #. translators: %s: link to nodejs.org
-#: templates/admin/dashboard.php:574
+#: templates/admin/dashboard.php:580
 #: templates/admin/tokens.php:591
 #, php-format
 msgid "No Node.js? Download LTS from %s first."
 msgstr ""
 
-#: templates/admin/dashboard.php:586
+#: templates/admin/dashboard.php:592
 #: templates/admin/tokens.php:600
 msgid "Server URL"
 msgstr ""
 
-#: templates/admin/dashboard.php:596
+#: templates/admin/dashboard.php:602
 #: templates/admin/tokens.php:610
 msgid "Type"
 msgstr ""
 
-#: templates/admin/dashboard.php:605
+#: templates/admin/dashboard.php:611
 #: templates/admin/tokens.php:620
 msgid "Authorization header"
 msgstr ""
 
-#: templates/admin/dashboard.php:616
+#: templates/admin/dashboard.php:622
 #: templates/admin/tokens.php:629
 msgid "In Cursor: Settings → Features → MCP Servers → Add new MCP server. Set Type to HTTP, then paste the URL and the Authorization header."
 msgstr ""
 
-#: templates/admin/dashboard.php:628
+#: templates/admin/dashboard.php:634
 msgid "For site administrators"
 msgstr ""
 
 #. translators: %s: link to abilities tab
-#: templates/admin/dashboard.php:632
+#: templates/admin/dashboard.php:638
 #, php-format
 msgid "My Site Hand exposes only the abilities you explicitly enable in the %s tab. Review them before sharing tokens with AI clients."
 msgstr ""
 
-#: templates/admin/dashboard.php:639
+#: templates/admin/dashboard.php:645
 msgid "Dismiss"
 msgstr ""
 
@@ -2557,6 +2755,7 @@ msgid "The token hit its hourly or daily cap. Raise the limits under Settings �
 msgstr ""
 
 #: templates/admin/documentation.php:485
+#: assets/js/health-scan.js:1021
 msgid "Copied"
 msgstr ""
 
@@ -2653,40 +2852,182 @@ msgstr ""
 msgid "Visit GitHub"
 msgstr ""
 
-#: templates/admin/health.php:90
+#: templates/admin/health.php:84
+#: assets/js/health-scan.js:231
+msgid "Open"
+msgstr ""
+
+#: templates/admin/health.php:111
 msgid "Scan your site"
 msgstr ""
 
-#: templates/admin/health.php:92
+#: templates/admin/health.php:113
 msgid "Find broken links, missing SEO data, and health issues in about 30 seconds."
 msgstr ""
 
-#: templates/admin/health.php:97
+#: templates/admin/health.php:118
 msgid "No setup required"
 msgstr ""
 
 #. translators: %s: link to the settings page
-#: templates/admin/health.php:102
+#: templates/admin/health.php:123
 #, php-format
 msgid "This site will also scan itself on a schedule and email you when your score changes. You can turn that off in %s."
 msgstr ""
 
 #. translators: %s: signed score change, e.g. "+6"
-#: templates/admin/health.php:134
+#: templates/admin/health.php:155
 #, php-format
 msgid "%s since your last scan"
 msgstr ""
 
-#. translators: %d: number of issues found
-#: templates/admin/health.php:202
+#: templates/admin/health.php:171
+msgid "Scan Again"
+msgstr ""
+
+#: templates/admin/health.php:177
+msgid "Opens a printable page and your browser's print dialog. Choose \"Save as PDF\" as the destination."
+msgstr ""
+
+#: templates/admin/health.php:178
+msgid "Download PDF"
+msgstr ""
+
+#: templates/admin/health.php:188
+msgid "Share"
+msgstr ""
+
+#: templates/admin/health.php:193
+msgid "\"Download PDF\" uses your browser's own print-to-PDF — pick \"Save as PDF\" in the dialog that opens."
+msgstr ""
+
+#: templates/admin/health.php:199
+msgid "Share this report"
+msgstr ""
+
+#: templates/admin/health.php:203
+msgid "A share link is public. Anyone who has it can open the report without logging in. Before you create one, this is exactly what it does and does not contain:"
+msgstr ""
+
+#: templates/admin/health.php:207
+msgid "They will see"
+msgstr ""
+
+#: templates/admin/health.php:209
+msgid "Your site name and the date of the scan"
+msgstr ""
+
+#: templates/admin/health.php:210
+msgid "The score and its band"
+msgstr ""
+
+#: templates/admin/health.php:211
+msgid "Each check by name, and how many issues it found"
+msgstr ""
+
+#: templates/admin/health.php:215
+msgid "They will not see"
+msgstr ""
+
+#: templates/admin/health.php:217
+msgid "Any file name, page address, or server path"
+msgstr ""
+
+#: templates/admin/health.php:218
+msgid "Any post, media or user ID, or any edit link"
+msgstr ""
+
+#: templates/admin/health.php:219
+msgid "Your plugin, theme, PHP or WordPress versions"
+msgstr ""
+
+#: templates/admin/health.php:220
+msgid "The two security checks — those are left out entirely"
+msgstr ""
+
+#: templates/admin/health.php:225
+msgid "The link shows a copy taken at the moment you create it, so re-scanning your site will not change what you already sent."
+msgstr ""
+
+#: templates/admin/health.php:230
+msgid "Link expires after"
+msgstr ""
+
+#. translators: %d: number of days a share link stays valid
+#: templates/admin/health.php:238
 #, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin/health.php:246
+#: assets/js/health-scan.js:972
+msgid "Create link"
+msgstr ""
+
+#: templates/admin/health.php:253
+msgid "Copy this link now. For the same reason API tokens are shown once, it is not stored anywhere and cannot be shown again."
+msgstr ""
+
+#: templates/admin/health.php:269
+msgid "Created"
+msgstr ""
+
+#: templates/admin/health.php:270
+#: templates/admin/tokens.php:467
+msgid "Expires"
+msgstr ""
+
+#: templates/admin/health.php:271
+msgid "Views"
+msgstr ""
+
+#: templates/admin/health.php:272
+msgid "Actions"
+msgstr ""
+
+#: templates/admin/health.php:287
+#: assets/js/health-scan.js:931
+msgid "Revoke"
+msgstr ""
+
+#: templates/admin/health.php:297
+msgid "No share links yet."
+msgstr ""
+
+#: templates/admin/health.php:310
+#: templates/admin/tokens.php:492
+#: assets/js/health-scan.js:613
+msgid "Cancel"
+msgstr ""
+
+#: templates/admin/health.php:340
+#: assets/js/health-scan.js:142
+msgid "not applicable"
+msgstr ""
+
+#: templates/admin/health.php:342
+#: assets/js/health-scan.js:145
+msgid "could not run"
+msgstr ""
+
+#: templates/admin/health.php:344
+#: assets/js/health-scan.js:151
+msgid "nothing found"
+msgstr ""
+
+#. translators: %d: number of issues found
+#: templates/admin/health.php:348
+#: assets/js/health-scan.js:155
+#, php-format,js-format
 msgid "%d found"
 msgid_plural "%d found"
 msgstr[0] ""
 msgstr[1] ""
 
 #. translators: 1: number of issues shown, 2: total issues found
-#: templates/admin/health.php:228
+#: templates/admin/health.php:374
 #, php-format
 msgid "Showing the first %1$d of %2$d. Fix these and scan again to see more."
 msgstr ""
@@ -3214,10 +3555,6 @@ msgstr ""
 msgid "Please select at least one ability for limited access."
 msgstr ""
 
-#: templates/admin/tokens.php:467
-msgid "Expires"
-msgstr ""
-
 #: templates/admin/tokens.php:469
 msgid "In 6 months"
 msgstr ""
@@ -3251,6 +3588,8 @@ msgid "Insert current IP"
 msgstr ""
 
 #: templates/admin/tokens.php:495
+#: assets/js/token-manager.js:186
+#: assets/js/token-manager.js:543
 msgid "Generate token"
 msgstr ""
 
@@ -3471,6 +3810,88 @@ msgstr ""
 msgid "Requests are prioritized by how often they come up. Send yours and it goes straight to the developer."
 msgstr ""
 
+#: templates/export/health-print.php:25
+#: templates/export/shared-report.php:224
+msgid "Generated by My Site Hand"
+msgstr ""
+
+#. translators: %s: site name
+#: templates/export/health-print.php:37
+#: templates/export/shared-report.php:42
+#, php-format
+msgid "Site Health Report — %s"
+msgstr ""
+
+#: templates/export/health-print.php:213
+msgid "Print or save as PDF"
+msgstr ""
+
+#: templates/export/health-print.php:214
+msgid "Choose \"Save as PDF\" as the destination in your browser's print dialog."
+msgstr ""
+
+#. translators: %s: date and time the scan ran
+#: templates/export/health-print.php:226
+#, php-format
+msgid "Scanned %s"
+msgstr ""
+
+#: templates/export/health-print.php:238
+msgid "/100"
+msgstr ""
+
+#. translators: 1: signed score change such as "+6", 2: the previous score
+#: templates/export/health-print.php:244
+#, php-format
+msgid "%1$s since the last scan (was %2$d)"
+msgstr ""
+
+#. translators: %d: number of issues found but not listed in this report
+#: templates/export/health-print.php:297
+#, php-format
+msgid "%d more issue was found but is not listed here."
+msgid_plural "%d more issues were found but are not listed here."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: date the scan ran
+#: templates/export/shared-report.php:145
+#, php-format
+msgid "Site health scan of %s"
+msgstr ""
+
+#. translators: %s: signed score change such as "+6"
+#: templates/export/shared-report.php:162
+#, php-format
+msgid "%s since the previous scan"
+msgstr ""
+
+#: templates/export/shared-report.php:173
+msgid "Issues found"
+msgstr ""
+
+#: templates/export/shared-report.php:186
+msgid "Not applicable"
+msgstr ""
+
+#. translators: %d: number of issues
+#: templates/export/shared-report.php:198
+#, php-format
+msgid "%d issue"
+msgid_plural "%d issues"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/export/shared-report.php:212
+msgid "This is a summary. It shows how many issues each check found and nothing about what they were — no file names, no page addresses, no plugin or version details."
+msgstr ""
+
+#. translators: %s: date the link stops working
+#: templates/export/shared-report.php:216
+#, php-format
+msgid "This link stops working on %s."
+msgstr ""
+
 #: templates/partials/header.php:124
 msgid "WordPress over MCP"
 msgstr ""
@@ -3557,4 +3978,87 @@ msgstr ""
 
 #: templates/partials/mcp-config-snippet.php:118
 msgid "Generate one here"
+msgstr ""
+
+#: assets/js/dashboard-connect.js:123
+msgid "Paste token first…"
+msgstr ""
+
+#: assets/js/health-scan.js:139
+msgid "scanning…"
+msgstr ""
+
+#: assets/js/health-scan.js:148
+msgid "queued"
+msgstr ""
+
+#. translators: 1: number of checks finished. 2: total number of checks.
+#: assets/js/health-scan.js:252
+#, js-format
+msgid "%1$d of %2$d checks complete"
+msgstr ""
+
+#: assets/js/health-scan.js:454
+msgid "Saving…"
+msgstr ""
+
+#: assets/js/health-scan.js:467
+msgid "Saved"
+msgstr ""
+
+#: assets/js/health-scan.js:477
+msgid "Something went wrong."
+msgstr ""
+
+#: assets/js/health-scan.js:495
+msgid "Describe this image…"
+msgstr ""
+
+#: assets/js/health-scan.js:496
+msgid "Write a short description…"
+msgstr ""
+
+#. translators: 1: the prompt or action. 2: the item it applies to.
+#: assets/js/health-scan.js:504
+#: assets/js/health-scan.js:591
+#, js-format
+msgid "%1$s — %2$s"
+msgstr ""
+
+#: assets/js/health-scan.js:548
+msgid "Replace with a working URL…"
+msgstr ""
+
+#: assets/js/health-scan.js:586
+#: assets/js/health-scan.js:592
+msgid "Move to trash"
+msgstr ""
+
+#: assets/js/health-scan.js:603
+msgid "Move this file to the trash?"
+msgstr ""
+
+#: assets/js/health-scan.js:608
+msgid "Yes"
+msgstr ""
+
+#: assets/js/health-scan.js:801
+msgid "Preparing…"
+msgstr ""
+
+#: assets/js/health-scan.js:843
+msgid "Scan cancelled."
+msgstr ""
+
+#: assets/js/health-scan.js:853
+#: assets/js/health-scan.js:893
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: assets/js/health-scan.js:945
+msgid "Creating…"
+msgstr ""
+
+#: assets/js/health-scan.js:981
+msgid "Revoke this link? Anyone holding it will stop being able to open the report."
 msgstr ""

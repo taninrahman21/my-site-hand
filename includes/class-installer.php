@@ -113,6 +113,26 @@ class Installer {
 		) {$charset_collate};";
 
 		dbDelta( $sql_health );
+
+		// Table: mysitehand_shared_reports.
+		// Public, tokenized snapshots of a Site Health report. The raw token is
+		// never stored, only its SHA-256 hash — same rule as API tokens. The
+		// payload is a REDACTED copy taken when the link was created, so a
+		// later rescan cannot change what an already-sent link shows.
+		$table_shared = $wpdb->prefix . 'mysitehand_shared_reports';
+		$sql_shared   = "CREATE TABLE {$table_shared} (
+			id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+			token_hash CHAR(64) NOT NULL,
+			payload LONGTEXT NOT NULL,
+			created_at DATETIME NOT NULL,
+			expires_at DATETIME NOT NULL,
+			view_count INT(10) UNSIGNED NOT NULL DEFAULT 0,
+			PRIMARY KEY (id),
+			UNIQUE KEY token_hash (token_hash),
+			KEY expires_at (expires_at)
+		) {$charset_collate};";
+
+		dbDelta( $sql_shared );
 	}
 
 	/**

@@ -12,6 +12,12 @@
 
 (function () {
 
+	// See token-manager.js: user-facing strings go through wp.i18n. The
+	// shell commands this file builds are deliberately NOT translated —
+	// they are typed into a terminal, not read.
+	const wpI18n = (window.wp && window.wp.i18n) || {};
+	const __ = wpI18n.__ || ((text) => text);
+
 	const cfg = window.mysitehandAdmin || {};
 	const i18n = cfg.i18n || {};
 
@@ -114,7 +120,7 @@
 				if (step2Input) {
 					if (!token) {
 						step2Input.value = '';
-						step2Input.placeholder = 'Paste token first...';
+						step2Input.placeholder = __('Paste token first…', 'my-site-hand');
 						return;
 					}
 

@@ -16,6 +16,13 @@
 	const restNonce = cfg.restNonce || '';
 	const i18n = cfg.i18n || {};
 
+	// Strings written in this file go through wp.i18n so make-pot can find
+	// them and the site locale applies. wp-i18n is a declared dependency of
+	// this script; the fallbacks only cover a stripped page.
+	const wpI18n = (window.wp && window.wp.i18n) || {};
+	const __ = wpI18n.__ || ((text) => text);
+	const sprintf = wpI18n.sprintf || ((format) => format);
+
 	let generatedToken = null;
 
 	// Auto-detect OS once on load.
@@ -176,7 +183,7 @@
 					}
 					if (btn) {
 						btn.disabled = false;
-						btn.textContent = 'Generate token';
+						btn.textContent = __('Generate token', 'my-site-hand');
 					}
 				});
 		},
@@ -308,7 +315,11 @@
 					if (!ipRegex.test(ip)) {
 						ipsValid = false;
 						if (ipsMsg) {
-							ipsMsg.textContent = 'Invalid IP or CIDR format: ' + ip;
+							ipsMsg.textContent = sprintf(
+								/* translators: %s: the invalid IP address or CIDR range */
+								__('Invalid IP or CIDR format: %s', 'my-site-hand'),
+								ip
+							);
 							ipsMsg.style.display = 'block';
 						}
 						break;
@@ -529,7 +540,7 @@
 			if (submitBtn) {
 				submitBtn.disabled = true;
 				submitBtn.classList.add('msh-btn--disabled');
-				submitBtn.textContent = 'Generate token';
+				submitBtn.textContent = __('Generate token', 'my-site-hand');
 			}
 		}
 	};

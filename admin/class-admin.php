@@ -236,20 +236,24 @@ class Admin
 		wp_enqueue_script(
 			'msh-token-manager',
 			MYSITEHAND_URL . 'assets/js/token-manager.js',
-			['mysitehand-admin'],
+			['mysitehand-admin', 'wp-i18n'],
 			MYSITEHAND_VERSION,
 			true
 		);
+
+		$this->set_script_translations('msh-token-manager');
 
 		// Dashboard Connect JS.
 		if ('toplevel_page_my-site-hand' === $hook) {
 			wp_enqueue_script(
 				'msh-dashboard-connect',
 				MYSITEHAND_URL . 'assets/js/dashboard-connect.js',
-				['mysitehand-admin'],
+				['mysitehand-admin', 'wp-i18n'],
 				MYSITEHAND_VERSION,
 				true
 			);
+
+			$this->set_script_translations('msh-dashboard-connect');
 		}
 
 		// Site Health scan JS.
@@ -257,11 +261,16 @@ class Admin
 			wp_enqueue_script(
 				'msh-health-scan',
 				MYSITEHAND_URL . 'assets/js/health-scan.js',
-				['mysitehand-admin'],
+				['mysitehand-admin', 'wp-i18n'],
 				MYSITEHAND_VERSION,
 				true
 			);
 
+			$this->set_script_translations('msh-health-scan');
+
+			// Only data now. The strings this script used to receive here are
+			// wp.i18n.__() calls inside health-scan.js, so make-pot can see
+			// them and a translator only has to render each one once.
 			wp_localize_script(
 				'msh-health-scan',
 				'mshHealth',
@@ -270,36 +279,6 @@ class Admin
 					'nonce' => wp_create_nonce('wp_rest'),
 					'weights' => \MySiteHand\Site_Health_Scanner::ISSUE_WEIGHTS,
 					'caps' => \MySiteHand\Site_Health_Scanner::CHECK_CAPS,
-					'bands' => [
-						'good' => __('Good', 'my-site-hand'),
-						'warning' => __('Needs Attention', 'my-site-hand'),
-						'critical' => __('Critical', 'my-site-hand'),
-					],
-					'i18n' => [
-						'scanning' => __('scanning…', 'my-site-hand'),
-						'queued' => __('queued', 'my-site-hand'),
-						'skipped' => __('not applicable', 'my-site-hand'),
-						'failed' => __('could not run', 'my-site-hand'),
-						'clean' => __('nothing found', 'my-site-hand'),
-						'cancelled' => __('Scan cancelled.', 'my-site-hand'),
-						'found' => __('found', 'my-site-hand'),
-						'scanAgain' => __('Scan Again', 'my-site-hand'),
-						'scanMySite' => __('Scan My Site', 'my-site-hand'),
-						'preparing' => __('Preparing…', 'my-site-hand'),
-						'genericError' => __('Something went wrong. Please try again.', 'my-site-hand'),
-						/* translators: %1$d: checks finished, %2$d: total checks */
-						'progress' => __('%1$d of %2$d checks complete', 'my-site-hand'),
-						'open' => __('Open', 'my-site-hand'),
-						'saving' => __('Saving…', 'my-site-hand'),
-						'saved' => __('Saved', 'my-site-hand'),
-						'describeImage' => __('Describe this image…', 'my-site-hand'),
-						'describePage' => __('Write a short description…', 'my-site-hand'),
-						'replacementUrl' => __('Replace with a working URL…', 'my-site-hand'),
-						'moveToTrash' => __('Move to trash', 'my-site-hand'),
-						'confirmDelete' => __('Move this file to the trash?', 'my-site-hand'),
-						'yes' => __('Yes', 'my-site-hand'),
-						'cancel' => __('Cancel', 'my-site-hand'),
-					],
 				]
 			);
 		}
@@ -324,6 +303,31 @@ class Admin
 					'cacheCleared' => __('Cache cleared!', 'my-site-hand'),
 				],
 			]
+		);
+	}
+
+	/**
+	 * Point one script at the plugin's JSON translation files.
+	 *
+	 * wp.i18n reads its strings from a per-script JSON file that
+	 * translate.wordpress.org generates from the .pot, and WordPress only
+	 * knows where to find those if the languages directory is declared here.
+	 * Without this call every __() in our JavaScript silently returns English
+	 * however well the plugin is translated.
+	 *
+	 * @param string $handle Registered script handle.
+	 * @return void
+	 */
+	private function set_script_translations(string $handle): void
+	{
+		if (!function_exists('wp_set_script_translations')) {
+			return;
+		}
+
+		wp_set_script_translations(
+			$handle,
+			'my-site-hand',
+			MYSITEHAND_PATH . 'languages'
 		);
 	}
 

@@ -1,0 +1,4066 @@
+# Bengali (Bangladesh) translation for My Site Hand (AI).
+# Copyright (C) 2026 BuiltByTanin
+# This file is distributed under the same license as the My Site Hand (AI) plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: My Site Hand (AI) 1.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/my-site-hand\n"
+"Last-Translator: BuiltByTanin <builtbytanin@gmail.com>\n"
+"Language-Team: Bengali (Bangladesh)\n"
+"Language: bn_BD\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: My Site Hand build-po.php\n"
+"X-Domain: my-site-hand\n"
+
+#. Plugin Name of the plugin
+#: my-site-hand.php
+msgid "My Site Hand (AI)"
+msgstr "My Site Hand (AI)"
+
+#. Plugin URI of the plugin
+#: my-site-hand.php
+msgid "https://wordpress.org/plugins/my-site-hand"
+msgstr "https://wordpress.org/plugins/my-site-hand"
+
+#. Description of the plugin
+#: my-site-hand.php
+msgid "Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language."
+msgstr "সাধারণ কথ্য ভাষায় নির্দেশ দিয়ে Claude, Cursor ও অন্যান্য AI অ্যাসিস্ট্যান্টকে দিয়ে পোস্ট লেখান, WooCommerce সামলান, SEO ঠিক করুন আর সাইটের ডায়াগনস্টিক চালান।"
+
+#. Author of the plugin
+#: my-site-hand.php
+msgid "BuiltByTanin"
+msgstr "BuiltByTanin"
+
+#. Author URI of the plugin
+#: my-site-hand.php
+msgid "https://github.com/taninrahman21"
+msgstr "https://github.com/taninrahman21"
+
+#: admin/class-admin.php:98
+#: admin/class-admin.php:99
+#: includes/class-core-site-health.php:107
+#: templates/admin/tools.php:298
+#: templates/partials/header.php:121
+msgid "My Site Hand"
+msgstr "My Site Hand"
+
+#: admin/class-admin.php:110
+msgid "Dashboard - My Site Hand"
+msgstr "ড্যাশবোর্ড - My Site Hand"
+
+#: admin/class-admin.php:111
+#: templates/partials/header.php:82
+msgid "Dashboard"
+msgstr "ড্যাশবোর্ড"
+
+#: admin/class-admin.php:123
+msgid "Site Health - My Site Hand"
+msgstr "সাইট হেলথ - My Site Hand"
+
+#: admin/class-admin.php:124
+#: templates/admin/audit-log.php:262
+#: templates/admin/tokens.php:199
+#: templates/partials/header.php:77
+msgid "Site Health"
+msgstr "সাইট হেলথ"
+
+#: admin/class-admin.php:134
+msgid "Abilities - My Site Hand"
+msgstr "অ্যাবিলিটি - My Site Hand"
+
+#: admin/class-admin.php:135
+#: templates/admin/abilities.php:163
+#: templates/admin/dashboard.php:639
+#: templates/partials/header.php:87
+msgid "Abilities"
+msgstr "অ্যাবিলিটি"
+
+#: admin/class-admin.php:144
+msgid "API Tokens - My Site Hand"
+msgstr "API টোকেন - My Site Hand"
+
+#: admin/class-admin.php:145
+#: templates/partials/header.php:92
+msgid "API Tokens"
+msgstr "API টোকেন"
+
+#: admin/class-admin.php:154
+msgid "Audit Log - My Site Hand"
+msgstr "অডিট লগ - My Site Hand"
+
+#: admin/class-admin.php:155
+#: templates/partials/header.php:97
+msgid "Audit Log"
+msgstr "অডিট লগ"
+
+#: admin/class-admin.php:164
+msgid "Settings - My Site Hand"
+msgstr "সেটিংস - My Site Hand"
+
+#: admin/class-admin.php:165
+#: templates/admin/abilities.php:252
+#: templates/admin/health.php:124
+#: templates/admin/settings.php:104
+#: templates/partials/header.php:102
+msgid "Settings"
+msgstr "সেটিংস"
+
+#: admin/class-admin.php:174
+msgid "How to use - My Site Hand"
+msgstr "ব্যবহারবিধি - My Site Hand"
+
+#: admin/class-admin.php:175
+#: templates/admin/documentation.php:105
+#: templates/partials/header.php:109
+msgid "How to use"
+msgstr "ব্যবহারবিধি"
+
+#: admin/class-admin.php:184
+msgid "About & Info - My Site Hand"
+msgstr "পরিচিতি ও তথ্য - My Site Hand"
+
+#: admin/class-admin.php:185
+#: templates/partials/header.php:110
+msgid "About & Info"
+msgstr "পরিচিতি ও তথ্য"
+
+#: admin/class-admin.php:194
+msgid "Suggest Feature - My Site Hand"
+msgstr "ফিচারের প্রস্তাব - My Site Hand"
+
+#: admin/class-admin.php:195
+#: templates/partials/header.php:111
+msgid "Suggest a Feature"
+msgstr "ফিচারের প্রস্তাব দিন"
+
+#: admin/class-admin.php:298
+msgid "Copied!"
+msgstr "কপি হয়েছে!"
+
+#: admin/class-admin.php:299
+msgid "Are you sure you want to revoke this token?"
+msgstr "আপনি কি নিশ্চিত যে এই টোকেনটি বাতিল করতে চান?"
+
+#: admin/class-admin.php:300
+msgid "Saving..."
+msgstr "সেভ হচ্ছে..."
+
+#: admin/class-admin.php:301
+msgid "Saved!"
+msgstr "সেভ হয়েছে!"
+
+#: admin/class-admin.php:302
+msgid "An error occurred. Please try again."
+msgstr "একটি সমস্যা হয়েছে। আবার চেষ্টা করুন।"
+
+#: admin/class-admin.php:303
+msgid "Cache cleared!"
+msgstr "ক্যাশ পরিষ্কার হয়েছে!"
+
+#: admin/class-admin.php:416
+#: admin/class-admin.php:432
+#: admin/class-admin.php:445
+#: admin/class-admin.php:458
+#: admin/class-admin.php:471
+#: admin/class-admin.php:484
+#: admin/class-admin.php:497
+#: admin/class-admin.php:510
+#: admin/class-admin.php:590
+msgid "You do not have permission to access this page."
+msgstr "এই পেজটি দেখার অনুমতি আপনার নেই।"
+
+#: admin/class-admin.php:523
+msgid "Please fill in all required fields."
+msgstr "সবগুলো আবশ্যক ঘর পূরণ করুন।"
+
+#: admin/class-admin.php:565
+msgid "Thank you! Your feature request has been successfully submitted to the developer."
+msgstr "ধন্যবাদ! আপনার ফিচার অনুরোধটি ডেভেলপারের কাছে পাঠানো হয়েছে।"
+
+#. translators: %s: the mailer error message
+#: admin/class-admin.php:570
+#, php-format
+msgid "Failed to send email. Mailer error: %s"
+msgstr "ইমেইল পাঠানো যায়নি। মেইলার এরর: %s"
+
+#: admin/class-admin.php:572
+msgid "Failed to send email. Please check your server SMTP settings or contact builtbytanin@gmail.com directly."
+msgstr "ইমেইল পাঠানো যায়নি। আপনার সার্ভারের SMTP সেটিংস দেখুন, অথবা সরাসরি builtbytanin@gmail.com ঠিকানায় লিখুন।"
+
+#: admin/class-admin.php:700
+msgid "How to Use"
+msgstr "ব্যবহারবিধি"
+
+#: api/class-rest-controller.php:610
+msgid "That issue cannot be repaired from here."
+msgstr "এই সমস্যাটি এখান থেকে ঠিক করা যাবে না।"
+
+#: api/class-rest-controller.php:648
+msgid "That field cannot be edited from here."
+msgstr "এই ঘরটি এখান থেকে বদলানো যাবে না।"
+
+#: api/class-rest-controller.php:668
+msgid "Enter some text before saving."
+msgstr "সেভ করার আগে কিছু লিখুন।"
+
+#: api/class-rest-controller.php:710
+msgid "That does not look like a valid URL."
+msgstr "এটি দেখে বৈধ URL মনে হচ্ছে না।"
+
+#: api/class-rest-controller.php:720
+msgid "That post no longer exists."
+msgstr "পোস্টটি আর নেই।"
+
+#: api/class-rest-controller.php:728
+#: api/class-rest-controller.php:738
+msgid "That link is no longer in this post. Scan again to refresh the report."
+msgstr "লিঙ্কটি আর এই পোস্টে নেই। রিপোর্ট হালনাগাদ করতে আবার স্ক্যান করুন।"
+
+#: api/class-rest-controller.php:879
+msgid "That file could not be moved to the trash."
+msgstr "ফাইলটি ট্র্যাশে সরানো যায়নি।"
+
+#: api/class-rest-controller.php:901
+msgid "That item no longer exists."
+msgstr "আইটেমটি আর নেই।"
+
+#: api/class-rest-controller.php:909
+msgid "You are not allowed to change that item."
+msgstr "এই আইটেমটি বদলানোর অনুমতি আপনার নেই।"
+
+#: api/class-rest-controller.php:975
+#: api/class-rest-controller.php:997
+msgid "There is no scan to export yet. Run a scan first."
+msgstr "রপ্তানি করার মতো কোনো স্ক্যান এখনো নেই। আগে একবার স্ক্যান চালান।"
+
+#: api/class-rest-controller.php:976
+#: api/class-rest-controller.php:998
+msgid "Nothing to export"
+msgstr "রপ্তানি করার কিছু নেই"
+
+#: api/class-rest-controller.php:1021
+#: api/class-rest-controller.php:1458
+msgid "Security check failed."
+msgstr "নিরাপত্তা যাচাই ব্যর্থ হয়েছে।"
+
+#: api/class-rest-controller.php:1076
+msgid "There is no scan to share yet. Run a scan first."
+msgstr "শেয়ার করার মতো কোনো স্ক্যান এখনো নেই। আগে একবার স্ক্যান চালান।"
+
+#. translators: %s: the date the share link expires
+#: api/class-rest-controller.php:1099
+#, php-format
+msgid "Created a public report link that expires on %s."
+msgstr "একটি পাবলিক রিপোর্ট লিঙ্ক তৈরি হয়েছে, যেটির মেয়াদ %s তারিখে শেষ হবে।"
+
+#: api/class-rest-controller.php:1139
+msgid "Revoked a public report link."
+msgstr "একটি পাবলিক রিপোর্ট লিঙ্ক বাতিল করা হয়েছে।"
+
+#: api/class-rest-controller.php:1178
+msgid "Too many requests"
+msgstr "অতিরিক্ত অনুরোধ"
+
+#: api/class-rest-controller.php:1179
+msgid "This link has been opened too many times in the last hour. Please try again later."
+msgstr "গত এক ঘণ্টায় এই লিঙ্কটি অনেকবার খোলা হয়েছে। কিছুক্ষণ পরে আবার চেষ্টা করুন।"
+
+#: api/class-rest-controller.php:1191
+msgid "Report not found"
+msgstr "রিপোর্ট পাওয়া যায়নি"
+
+#: api/class-rest-controller.php:1192
+msgid "This report link is not valid. It may have expired or been revoked."
+msgstr "এই রিপোর্ট লিঙ্কটি বৈধ নয়। এটির মেয়াদ শেষ হয়ে থাকতে পারে, অথবা এটি বাতিল করা হয়েছে।"
+
+#: api/class-rest-controller.php:1353
+#: api/class-rest-controller.php:1408
+#: api/class-rest-controller.php:1509
+msgid "Nonce verification failed."
+msgstr "Nonce যাচাই ব্যর্থ হয়েছে।"
+
+#: api/class-rest-controller.php:1360
+msgid "Label is required."
+msgstr "একটি নাম দিতে হবে।"
+
+#: api/class-rest-controller.php:1365
+msgid "Limited access tokens must select at least one ability."
+msgstr "সীমিত অ্যাক্সেসের টোকেনের জন্য অন্তত একটি অ্যাবিলিটি বেছে নিতে হবে।"
+
+#. translators: %s: the invalid IP address or CIDR range
+#: api/class-rest-controller.php:1375
+#: assets/js/token-manager.js:320
+#, php-format,js-format
+msgid "Invalid IP or CIDR format: %s"
+msgstr "IP বা CIDR ফরম্যাট ঠিক নেই: %s"
+
+#: api/class-rest-controller.php:1392
+msgid "Save this token — it will not be shown again."
+msgstr "টোকেনটি সংরক্ষণ করুন — এটি আর দেখানো হবে না।"
+
+#: api/class-rest-controller.php:1417
+msgid "Failed to revoke token."
+msgstr "টোকেন বাতিল করা যায়নি।"
+
+#: api/class-rest-controller.php:1466
+#: includes/class-report-exporter.php:58
+msgid "Could not open output stream."
+msgstr "আউটপুট স্ট্রিম খোলা যায়নি।"
+
+#. translators: %d: number of transients cleared
+#: api/class-rest-controller.php:1520
+#, php-format
+msgid "Cleared %d cached items."
+msgstr "%d টি ক্যাশ করা আইটেম মুছে ফেলা হয়েছে।"
+
+#. translators: %s: ability name
+#: includes/class-abilities-registry.php:60
+#, php-format
+msgid "Ability \"%s\" must have a label, description and a callable execute_callback."
+msgstr "\"%s\" অ্যাবিলিটির একটি নাম, বিবরণ এবং কলযোগ্য execute_callback থাকা আবশ্যক।"
+
+#. translators: %s: ability name
+#: includes/class-abilities-registry.php:74
+#, php-format
+msgid "Ability \"%s\" is already registered."
+msgstr "\"%s\" অ্যাবিলিটি আগেই নিবন্ধিত আছে।"
+
+#. translators: %s: ability name
+#: includes/class-abilities-registry.php:88
+#, php-format
+msgid "Ability \"%s\" has a non-callable permission_callback."
+msgstr "\"%s\" অ্যাবিলিটির permission_callback কলযোগ্য নয়।"
+
+#. translators: %s: ability name
+#: includes/class-abilities-registry.php:125
+#, php-format
+msgid "Ability \"%s\" is not registered."
+msgstr "\"%s\" অ্যাবিলিটি নিবন্ধিত নয়।"
+
+#: includes/class-abilities-registry.php:140
+msgid "You do not have permission to execute this ability."
+msgstr "এই অ্যাবিলিটি চালানোর অনুমতি আপনার নেই।"
+
+#. translators: %s: field name
+#: includes/class-abilities-registry.php:284
+#, php-format
+msgid "Required field \"%s\" is missing."
+msgstr "আবশ্যক ঘর \"%s\" পূরণ করা হয়নি।"
+
+#. translators: 1: field name 2: allowed values
+#: includes/class-abilities-registry.php:312
+#, php-format
+msgid "Field \"%1$s\" must be one of: %2$s."
+msgstr "\"%1$s\" ঘরের মান এগুলোর একটি হতে হবে: %2$s।"
+
+#: includes/class-auth-manager.php:73
+msgid "No token provided."
+msgstr "কোনো টোকেন দেওয়া হয়নি।"
+
+#: includes/class-auth-manager.php:88
+msgid "Invalid or revoked token."
+msgstr "টোকেনটি বৈধ নয় বা বাতিল করা হয়েছে।"
+
+#: includes/class-auth-manager.php:95
+msgid "Token has expired."
+msgstr "টোকেনের মেয়াদ শেষ হয়ে গেছে।"
+
+#: includes/class-auth-manager.php:102
+msgid "IP address not allowed for this token."
+msgstr "এই টোকেনের জন্য এই IP ঠিকানাটি অনুমোদিত নয়।"
+
+#: includes/class-auth-manager.php:316
+msgid "Authorization token is required."
+msgstr "Authorization টোকেন দিতে হবে।"
+
+#: includes/class-core-site-health.php:111
+msgid "Open Site Health"
+msgstr "সাইট হেলথ খুলুন"
+
+#: includes/class-core-site-health.php:119
+msgid "My Site Hand has not scanned your site yet, so there is nothing to report here."
+msgstr "My Site Hand এখনো আপনার সাইট স্ক্যান করেনি, তাই এখানে দেখানোর মতো কিছু নেই।"
+
+#: includes/class-core-site-health.php:121
+msgid "Run your first scan"
+msgstr "প্রথম স্ক্যানটি চালান"
+
+#: includes/class-core-site-health.php:133
+msgid "This check does not apply to your site, so it was skipped."
+msgstr "এই পরীক্ষাটি আপনার সাইটের জন্য প্রযোজ্য নয়, তাই এটি বাদ দেওয়া হয়েছে।"
+
+#: includes/class-core-site-health.php:141
+msgid "This check could not finish the last time your site was scanned."
+msgstr "গতবার স্ক্যানের সময় এই পরীক্ষাটি শেষ করা যায়নি।"
+
+#: includes/class-core-site-health.php:158
+msgid "Fix these in My Site Hand"
+msgstr "My Site Hand থেকে এগুলো ঠিক করুন"
+
+#: includes/class-core-site-health.php:172
+msgid "Your links all work"
+msgstr "আপনার সব লিঙ্ক কাজ করছে"
+
+#: includes/class-core-site-health.php:174
+msgid "Your images all have alt text"
+msgstr "আপনার সব ছবিতে alt টেক্সট আছে"
+
+#: includes/class-core-site-health.php:176
+msgid "Your pages all have meta descriptions"
+msgstr "আপনার সব পেজে মেটা ডেসক্রিপশন আছে"
+
+#: includes/class-core-site-health.php:178
+msgid "None of your files are oversized"
+msgstr "আপনার কোনো ফাইলই অতিরিক্ত বড় নয়"
+
+#: includes/class-core-site-health.php:180
+msgid "Nothing to fix here"
+msgstr "এখানে ঠিক করার কিছু নেই"
+
+#: includes/class-core-site-health.php:193
+msgid "Every link checked in your recent posts and pages resolved successfully."
+msgstr "আপনার সাম্প্রতিক পোস্ট ও পেজে যাচাই করা প্রতিটি লিঙ্কই কাজ করছে।"
+
+#: includes/class-core-site-health.php:195
+msgid "Every image in your media library has alternative text, which screen readers and search engines both rely on."
+msgstr "আপনার মিডিয়া লাইব্রেরির প্রতিটি ছবিতে বিকল্প টেক্সট আছে — স্ক্রিন রিডার ও সার্চ ইঞ্জিন দুটোই এর উপর নির্ভর করে।"
+
+#: includes/class-core-site-health.php:197
+msgid "Every published post and page has an SEO meta description."
+msgstr "প্রকাশিত প্রতিটি পোস্ট ও পেজে SEO মেটা ডেসক্রিপশন আছে।"
+
+#: includes/class-core-site-health.php:199
+msgid "No files in your media library are large enough to slow your pages down."
+msgstr "আপনার মিডিয়া লাইব্রেরিতে এমন কোনো ফাইল নেই যা পেজ ধীর করে দিতে পারে।"
+
+#: includes/class-core-site-health.php:201
+msgid "This check found nothing to fix."
+msgstr "এই পরীক্ষায় ঠিক করার মতো কিছু পাওয়া যায়নি।"
+
+#. translators: %d: number of broken links
+#: includes/class-core-site-health.php:217
+#, php-format
+msgid "%d broken link on your site"
+msgid_plural "%d broken links on your site"
+msgstr[0] "আপনার সাইটে %d টি ভাঙা লিঙ্ক"
+msgstr[1] "আপনার সাইটে %d টি ভাঙা লিঙ্ক"
+
+#. translators: %d: number of images
+#: includes/class-core-site-health.php:223
+#, php-format
+msgid "%d image is missing alt text"
+msgid_plural "%d images are missing alt text"
+msgstr[0] "%d টি ছবিতে alt টেক্সট নেই"
+msgstr[1] "%d টি ছবিতে alt টেক্সট নেই"
+
+#. translators: %d: number of posts and pages
+#: includes/class-core-site-health.php:229
+#, php-format
+msgid "%d page is missing a meta description"
+msgid_plural "%d pages are missing a meta description"
+msgstr[0] "%d টি পেজে মেটা ডেসক্রিপশন নেই"
+msgstr[1] "%d টি পেজে মেটা ডেসক্রিপশন নেই"
+
+#. translators: %d: number of files
+#: includes/class-core-site-health.php:235
+#, php-format
+msgid "%d oversized file in your media library"
+msgid_plural "%d oversized files in your media library"
+msgstr[0] "মিডিয়া লাইব্রেরিতে %d টি অতিরিক্ত বড় ফাইল"
+msgstr[1] "মিডিয়া লাইব্রেরিতে %d টি অতিরিক্ত বড় ফাইল"
+
+#. translators: %d: number of issues
+#: includes/class-core-site-health.php:241
+#: includes/class-report-exporter.php:270
+#, php-format
+msgid "%d issue found"
+msgid_plural "%d issues found"
+msgstr[0] "%d টি সমস্যা পাওয়া গেছে"
+msgstr[1] "%d টি সমস্যা পাওয়া গেছে"
+
+#: includes/class-core-site-health.php:257
+msgid "Visitors following these links land on a page that no longer exists. You can replace them one at a time from the Site Health screen."
+msgstr "এই লিঙ্কগুলোতে ক্লিক করলে দর্শক এমন পেজে পৌঁছায় যা আর নেই। সাইট হেলথ পাতা থেকে একটি একটি করে এগুলো বদলে নিতে পারেন।"
+
+#: includes/class-core-site-health.php:259
+msgid "Screen readers cannot describe these images, and search engines cannot read them. You can write descriptions inline from the Site Health screen."
+msgstr "স্ক্রিন রিডার এই ছবিগুলো বর্ণনা করতে পারে না, সার্চ ইঞ্জিনও পড়তে পারে না। সাইট হেলথ পাতা থেকেই বিবরণ লিখে দিতে পারেন।"
+
+#: includes/class-core-site-health.php:261
+msgid "Search engines will invent their own snippet for these pages. You can write descriptions inline from the Site Health screen."
+msgstr "এই পেজগুলোর জন্য সার্চ ইঞ্জিন নিজে থেকেই বর্ণনা বানিয়ে নেবে। সাইট হেলথ পাতা থেকেই বিবরণ লিখে দিতে পারেন।"
+
+#: includes/class-core-site-health.php:263
+msgid "These files are large enough to slow down the pages that use them, and they take up storage."
+msgstr "এই ফাইলগুলো এতটাই বড় যে যেসব পেজে ব্যবহৃত হচ্ছে সেগুলো ধীর করে দেয়, আর স্টোরেজও দখল করে রাখে।"
+
+#: includes/class-core-site-health.php:265
+msgid "Open the Site Health screen for the details."
+msgstr "বিস্তারিত দেখতে সাইট হেলথ পাতা খুলুন।"
+
+#: includes/class-health-reporter.php:114
+msgid "Once Monthly"
+msgstr "মাসে একবার"
+
+#. translators: %s: site name
+#: includes/class-health-reporter.php:290
+#, php-format
+msgid "[%s] Your site report"
+msgstr "[%s] আপনার সাইট রিপোর্ট"
+
+#. translators: 1: number of new issues, 2: check name
+#: includes/class-health-reporter.php:381
+#: includes/class-health-reporter.php:476
+#, php-format
+msgid "%1$d new %2$s issue"
+msgid_plural "%1$d new %2$s issues"
+msgstr[0] "%2$s ধরনের %1$d টি নতুন সমস্যা"
+msgstr[1] "%2$s ধরনের %1$d টি নতুন সমস্যা"
+
+#: includes/class-health-reporter.php:392
+#: includes/class-health-reporter.php:471
+msgid "No new problems since your last scan."
+msgstr "গত স্ক্যানের পর নতুন কোনো সমস্যা হয়নি।"
+
+#. translators: %d: previous score
+#: includes/class-health-reporter.php:399
+#, php-format
+msgid "up from %d last time"
+msgstr "গতবারের %d থেকে বেড়েছে"
+
+#: includes/class-health-reporter.php:402
+msgid "your first scan"
+msgstr "আপনার প্রথম স্ক্যান"
+
+#. translators: %d: previous score
+#: includes/class-health-reporter.php:407
+#, php-format
+msgid "down from %d last time"
+msgstr "গতবারের %d থেকে কমেছে"
+
+#: includes/class-health-reporter.php:418
+#: includes/class-health-reporter.php:452
+msgid "Your site report"
+msgstr "আপনার সাইট রিপোর্ট"
+
+#: includes/class-health-reporter.php:423
+msgid "out of 100"
+msgstr "১০০ এর মধ্যে"
+
+#: includes/class-health-reporter.php:431
+msgid "View full report"
+msgstr "পূর্ণ রিপোর্ট দেখুন"
+
+#: includes/class-health-reporter.php:434
+msgid "You are getting this because scheduled site reports are on for this site."
+msgstr "এই সাইটে নির্ধারিত সময়ে সাইট রিপোর্ট পাঠানো চালু আছে বলে আপনি এটি পাচ্ছেন।"
+
+#: includes/class-health-reporter.php:435
+msgid "Turn these off"
+msgstr "এগুলো বন্ধ করুন"
+
+#. translators: %d: health score out of 100
+#: includes/class-health-reporter.php:456
+#, php-format
+msgid "Score: %d/100"
+msgstr "স্কোর: %d/১০০"
+
+#. translators: %d: previous health score
+#: includes/class-health-reporter.php:463
+#, php-format
+msgid "Previously: %d"
+msgstr "আগে ছিল: %d"
+
+#: includes/class-health-reporter.php:484
+msgid "View the full report:"
+msgstr "পূর্ণ রিপোর্ট দেখুন:"
+
+#: includes/class-health-reporter.php:487
+msgid "Turn these emails off:"
+msgstr "এই ইমেইলগুলো বন্ধ করুন:"
+
+#: includes/class-health-reporter.php:534
+msgid "That unsubscribe link is not valid. You can turn reports off in My Site Hand settings."
+msgstr "আনসাবস্ক্রাইব লিঙ্কটি বৈধ নয়। My Site Hand এর সেটিংস থেকে রিপোর্ট বন্ধ করতে পারেন।"
+
+#: includes/class-health-reporter.php:535
+msgid "Link expired"
+msgstr "লিঙ্কের মেয়াদ শেষ"
+
+#: includes/class-health-reporter.php:544
+msgid "Done. This site will not email you site reports again."
+msgstr "হয়ে গেছে। এই সাইট আর আপনাকে সাইট রিপোর্ট ইমেইল করবে না।"
+
+#: includes/class-health-reporter.php:545
+msgid "Reports turned off"
+msgstr "রিপোর্ট বন্ধ করা হয়েছে"
+
+#: includes/class-mcp-server.php:120
+msgid "Parse error: empty request body."
+msgstr "পার্স এরর: রিকোয়েস্ট বডি খালি।"
+
+#: includes/class-mcp-server.php:125
+msgid "Parse error: invalid JSON."
+msgstr "পার্স এরর: JSON বৈধ নয়।"
+
+#: includes/class-mcp-server.php:178
+msgid "Invalid Request: jsonrpc must be \"2.0\"."
+msgstr "রিকোয়েস্ট বৈধ নয়: jsonrpc অবশ্যই \"2.0\" হতে হবে।"
+
+#. translators: %s: method name
+#: includes/class-mcp-server.php:188
+#, php-format
+msgid "Method not found: %s"
+msgstr "মেথড পাওয়া যায়নি: %s"
+
+#: includes/class-mcp-server.php:277
+msgid "Invalid params: tool name is required."
+msgstr "প্যারামিটার বৈধ নয়: টুলের নাম দিতে হবে।"
+
+#: includes/class-mcp-server.php:293
+msgid "Token not authorized for this ability."
+msgstr "এই অ্যাবিলিটির জন্য টোকেনটির অনুমতি নেই।"
+
+#: includes/class-plugin.php:312
+#: includes/class-plugin.php:346
+#: includes/class-plugin.php:382
+#: includes/class-plugin.php:434
+#: includes/class-plugin.php:497
+#: includes/class-plugin.php:524
+#: includes/class-review-prompt.php:232
+msgid "Permission denied."
+msgstr "অনুমতি নেই।"
+
+#: includes/class-plugin.php:319
+msgid "Missing module slug."
+msgstr "মডিউল slug দেওয়া হয়নি।"
+
+#: includes/class-plugin.php:353
+msgid "Missing ability name."
+msgstr "অ্যাবিলিটির নাম দেওয়া হয়নি।"
+
+#. translators: %d: number of tokens deleted
+#: includes/class-plugin.php:393
+#, php-format
+msgid "Deleted %d tokens."
+msgstr "%d টি টোকেন মুছে ফেলা হয়েছে।"
+
+#. translators: %d: number of log entries deleted
+#: includes/class-plugin.php:404
+#, php-format
+msgid "Deleted %d log entries."
+msgstr "%d টি লগ এন্ট্রি মুছে ফেলা হয়েছে।"
+
+#: includes/class-plugin.php:421
+msgid "All plugin data has been reset to defaults."
+msgstr "প্লাগইনের সব তথ্য ডিফল্ট অবস্থায় ফিরিয়ে আনা হয়েছে।"
+
+#: includes/class-plugin.php:426
+msgid "Unknown action."
+msgstr "অজানা কাজ।"
+
+#: includes/class-plugin.php:456
+msgid "Option not allowed via AJAX."
+msgstr "এই অপশনটি AJAX দিয়ে বদলানো যায় না।"
+
+#: includes/class-plugin.php:473
+msgid "That is not a valid email address."
+msgstr "এটি বৈধ ইমেইল ঠিকানা নয়।"
+
+#: includes/class-plugin.php:505
+msgid "Loopback test passed. Server can communicate with itself."
+msgstr "লুপব্যাক পরীক্ষা সফল। সার্ভার নিজের সঙ্গে যোগাযোগ করতে পারছে।"
+
+#: includes/class-plugin.php:508
+msgid "Discovery simulation successful. 12 tools identified."
+msgstr "ডিসকভারি সিমুলেশন সফল। ১২টি টুল শনাক্ত হয়েছে।"
+
+#: includes/class-plugin.php:511
+msgid "Unknown diagnostic test."
+msgstr "অজানা ডায়াগনস্টিক পরীক্ষা।"
+
+#: includes/class-plugin.php:532
+msgid "Database tables verified and repaired."
+msgstr "ডেটাবেস টেবিল যাচাই ও মেরামত করা হয়েছে।"
+
+#: includes/class-plugin.php:535
+msgid "Unknown fix action."
+msgstr "অজানা মেরামত কাজ।"
+
+#. translators: %d: hourly limit
+#: includes/class-rate-limiter.php:54
+#, php-format
+msgid "Hourly rate limit of %d requests exceeded."
+msgstr "ঘণ্টাপ্রতি %d টি রিকোয়েস্টের সীমা পেরিয়ে গেছে।"
+
+#. translators: %d: daily limit
+#: includes/class-rate-limiter.php:71
+#, php-format
+msgid "Daily rate limit of %d requests exceeded."
+msgstr "দৈনিক %d টি রিকোয়েস্টের সীমা পেরিয়ে গেছে।"
+
+#: includes/class-rate-limiter.php:223
+msgid "Too many requests. Please try again later."
+msgstr "অনেক বেশি রিকোয়েস্ট। কিছুক্ষণ পরে আবার চেষ্টা করুন।"
+
+#: includes/class-report-exporter.php:35
+#: templates/export/health-print.php:256
+#: templates/export/shared-report.php:172
+msgid "Check"
+msgstr "পরীক্ষা"
+
+#: includes/class-report-exporter.php:36
+msgid "Severity"
+msgstr "গুরুত্ব"
+
+#: includes/class-report-exporter.php:37
+msgid "Issue"
+msgstr "সমস্যা"
+
+#: includes/class-report-exporter.php:38
+msgid "Context"
+msgstr "প্রসঙ্গ"
+
+#: includes/class-report-exporter.php:39
+msgid "Link"
+msgstr "লিঙ্ক"
+
+#: includes/class-report-exporter.php:40
+msgid "Object ID"
+msgstr "অবজেক্ট ID"
+
+#. translators: %d: number of issues found but not included in the file
+#: includes/class-report-exporter.php:115
+#, php-format
+msgid "%d more issue not exported"
+msgid_plural "%d more issues not exported"
+msgstr[0] "আরও %d টি সমস্যা রপ্তানি করা হয়নি"
+msgstr[1] "আরও %d টি সমস্যা রপ্তানি করা হয়নি"
+
+#: includes/class-report-exporter.php:257
+msgid "Not applicable to this site"
+msgstr "এই সাইটের জন্য প্রযোজ্য নয়"
+
+#: includes/class-report-exporter.php:259
+#: templates/export/shared-report.php:188
+msgid "Could not run"
+msgstr "চালানো যায়নি"
+
+#: includes/class-report-exporter.php:261
+msgid "Not run"
+msgstr "চালানো হয়নি"
+
+#: includes/class-report-exporter.php:265
+#: templates/export/shared-report.php:190
+msgid "Nothing found"
+msgstr "কিছু পাওয়া যায়নি"
+
+#. translators: %d: number of issues the user repaired
+#: includes/class-review-prompt.php:168
+#, php-format
+msgid "You fixed %d issue on your site."
+msgid_plural "You fixed %d issues on your site."
+msgstr[0] "আপনি আপনার সাইটের %d টি সমস্যা ঠিক করেছেন।"
+msgstr[1] "আপনি আপনার সাইটের %d টি সমস্যা ঠিক করেছেন।"
+
+#: includes/class-review-prompt.php:173
+msgid "If My Site Hand is useful, a review would help a lot."
+msgstr "My Site Hand কাজে লাগলে একটি রিভিউ দিলে অনেক উপকার হয়।"
+
+#: includes/class-review-prompt.php:178
+msgid "Leave a review"
+msgstr "রিভিউ দিন"
+
+#: includes/class-review-prompt.php:181
+msgid "Maybe later"
+msgstr "পরে দেখা যাবে"
+
+#: includes/class-review-prompt.php:184
+msgid "Don't ask again"
+msgstr "আর জিজ্ঞেস কোরো না"
+
+#. translators: %d: maximum number of share links allowed at once
+#: includes/class-shared-reports.php:110
+#, php-format
+msgid "You already have %d share links. Revoke one before creating another."
+msgstr "আপনার ইতিমধ্যেই %d টি শেয়ার লিঙ্ক আছে। নতুন একটি তৈরির আগে কোনো একটি বাতিল করুন।"
+
+#: includes/class-shared-reports.php:123
+msgid "This report could not be prepared for sharing."
+msgstr "রিপোর্টটি শেয়ার করার জন্য প্রস্তুত করা যায়নি।"
+
+#: includes/class-shared-reports.php:147
+msgid "The share link could not be saved."
+msgstr "শেয়ার লিঙ্কটি সেভ করা যায়নি।"
+
+#: includes/class-site-health-scanner.php:200
+msgid "Unknown health check."
+msgstr "অজানা হেলথ চেক।"
+
+#: includes/class-site-health-scanner.php:437
+#: assets/js/health-scan.js:392
+msgid "Good"
+msgstr "ভালো"
+
+#: includes/class-site-health-scanner.php:444
+#: assets/js/health-scan.js:396
+msgid "Needs Attention"
+msgstr "নজর দেওয়া দরকার"
+
+#: includes/class-site-health-scanner.php:450
+#: templates/admin/tools.php:28
+#: assets/js/health-scan.js:400
+msgid "Critical"
+msgstr "জরুরি"
+
+#: includes/health/class-check-accessibility-basics.php:61
+msgid "Accessibility Basics"
+msgstr "অ্যাক্সেসিবিলিটির মৌলিক বিষয়"
+
+#: includes/health/class-check-accessibility-basics.php:70
+msgid "Looks for four structural problems in your content: links that announce nothing to a screen reader, links that only say \"click here\", more than one main heading, and headings that skip a level. This is a structural check, not a full accessibility audit — it deliberately does not test colour contrast, which is the most common failure of all and cannot be measured on the server. Passing this check does not mean your site is accessible."
+msgstr "আপনার লেখায় চার ধরনের কাঠামোগত সমস্যা খোঁজে: যেসব লিঙ্ক স্ক্রিন রিডারে কিছুই পড়ে শোনায় না, যেসব লিঙ্কে শুধু \"click here\" লেখা, একের বেশি মূল শিরোনাম, আর যেসব শিরোনাম একটি স্তর টপকে যায়। এটি কাঠামোগত পরীক্ষা, পূর্ণাঙ্গ অ্যাক্সেসিবিলিটি অডিট নয় — রঙের কনট্রাস্ট এটি ইচ্ছে করেই পরীক্ষা করে না, কারণ সবচেয়ে বেশি যে ভুলটি হয় সেটি সার্ভার থেকে মাপা যায় না। এই পরীক্ষায় উতরে গেলেই আপনার সাইট অ্যাক্সেসিবল, এমন নয়।"
+
+#. translators: 1: post title, 2: number of accessibility problems found in it
+#: includes/health/class-check-accessibility-basics.php:149
+#, php-format
+msgid "%1$s (%2$d accessibility problem)"
+msgid_plural "%1$s (%2$d accessibility problems)"
+msgstr[0] "%1$s (%2$d টি অ্যাক্সেসিবিলিটি সমস্যা)"
+msgstr[1] "%1$s (%2$d টি অ্যাক্সেসিবিলিটি সমস্যা)"
+
+#: includes/health/class-check-accessibility-basics.php:158
+msgid " · "
+msgstr " · "
+
+#. translators: %d: number of links with no readable text
+#: includes/health/class-check-accessibility-basics.php:228
+#, php-format
+msgid "%d link a screen reader announces as nothing"
+msgid_plural "%d links a screen reader announces as nothing"
+msgstr[0] "%d টি লিঙ্ক স্ক্রিন রিডারে কিছুই পড়ে শোনায় না"
+msgstr[1] "%d টি লিঙ্ক স্ক্রিন রিডারে কিছুই পড়ে শোনায় না"
+
+#. translators: %d: number of links whose text says nothing about the destination
+#: includes/health/class-check-accessibility-basics.php:241
+#, php-format
+msgid "%d link says only \"click here\" or similar"
+msgid_plural "%d links say only \"click here\" or similar"
+msgstr[0] "%d টি লিঙ্কে শুধু \"click here\" ধরনের কথা লেখা"
+msgstr[1] "%d টি লিঙ্কে শুধু \"click here\" ধরনের কথা লেখা"
+
+#. translators: %d: number of top-level headings in the content
+#: includes/health/class-check-accessibility-basics.php:262
+#, php-format
+msgid "%d main headings — a page should have one"
+msgstr "%d টি মূল শিরোনাম — একটি পেজে একটিই থাকা উচিত"
+
+#. translators: %d: number of places where a heading level was skipped
+#: includes/health/class-check-accessibility-basics.php:272
+#, php-format
+msgid "%d heading skips a level"
+msgid_plural "%d headings skip a level"
+msgstr[0] "%d টি শিরোনাম একটি স্তর টপকে গেছে"
+msgstr[1] "%d টি শিরোনাম একটি স্তর টপকে গেছে"
+
+#. translators: %d: post ID
+#: includes/health/class-check-accessibility-basics.php:394
+#: includes/health/class-check-missing-image-dimensions.php:284
+#: includes/health/class-check-missing-lazy-loading.php:295
+#: includes/health/class-check-missing-meta-description.php:141
+#: includes/health/class-check-thin-content.php:403
+#, php-format
+msgid "Untitled (#%d)"
+msgstr "শিরোনামহীন (#%d)"
+
+#: includes/health/class-check-broken-links.php:109
+msgid "Broken Links"
+msgstr "ভাঙা লিঙ্ক"
+
+#: includes/health/class-check-broken-links.php:118
+msgid "Checks the links in your 50 most recent posts and pages and reports the ones that are gone."
+msgstr "আপনার সবচেয়ে সাম্প্রতিক ৫০টি পোস্ট ও পেজের লিঙ্কগুলো যাচাই করে, আর যেগুলো আর নেই সেগুলো জানায়।"
+
+#. translators: 1: URL, 2: HTTP status code
+#: includes/health/class-check-broken-links.php:177
+#, php-format
+msgid "%1$s (HTTP %2$d)"
+msgstr "%1$s (HTTP %2$d)"
+
+#: includes/health/class-check-exposed-files.php:85
+msgid "Exposed WordPress Files"
+msgstr "উন্মুক্ত WordPress ফাইল"
+
+#: includes/health/class-check-exposed-files.php:94
+msgid "Asks your own site whether a few well-known files can be read by anyone. readme.html gives away your exact WordPress version, and a debug log can contain server paths and credentials. Closing them off is a rule in your .htaccess or nginx config — this plugin will not edit server configuration for you, so the fix is a short manual step."
+msgstr "আপনার সাইটকেই জিজ্ঞেস করে দেখে, সুপরিচিত কয়েকটি ফাইল যে কেউ পড়ে ফেলতে পারে কি না। readme.html আপনার WordPress এর ঠিক কোন সংস্করণ চলছে তা জানিয়ে দেয়, আর ডিবাগ লগে সার্ভারের পাথ ও পাসওয়ার্ড পর্যন্ত থাকতে পারে। এগুলো বন্ধ করতে হয় .htaccess বা nginx কনফিগে একটি নিয়ম লিখে — এই প্লাগইন আপনার সার্ভার কনফিগ নিজে বদলাবে না, তাই কাজটি হাতে করতে হবে।"
+
+#: includes/health/class-check-exposed-files.php:140
+msgid "This site could not make a request to itself, so its files could not be checked. Some hosts block loopback requests."
+msgstr "এই সাইট নিজের কাছেই রিকোয়েস্ট পাঠাতে পারেনি, তাই ফাইলগুলো যাচাই করা যায়নি। কিছু হোস্ট লুপব্যাক রিকোয়েস্ট আটকে দেয়।"
+
+#: includes/health/class-check-exposed-files.php:177
+msgid "Publicly readable — it names your exact WordPress version"
+msgstr "যে কেউ পড়তে পারে — এটি আপনার WordPress এর ঠিক কোন সংস্করণ তা জানিয়ে দেয়"
+
+#: includes/health/class-check-exposed-files.php:179
+msgid "Publicly readable — it confirms the site runs WordPress"
+msgstr "যে কেউ পড়তে পারে — এটি নিশ্চিত করে দেয় যে সাইটটি WordPress এ চলছে"
+
+#: includes/health/class-check-exposed-files.php:181
+msgid "Publicly readable — it confirms a standard, unhardened install"
+msgstr "যে কেউ পড়তে পারে — এটি জানিয়ে দেয় যে ইনস্টলেশনটি সাধারণ, বাড়তি নিরাপত্তা ছাড়া"
+
+#: includes/health/class-check-exposed-files.php:183
+msgid "Publicly readable — debug logs can contain server paths and credentials"
+msgstr "যে কেউ পড়তে পারে — ডিবাগ লগে সার্ভারের পাথ ও পাসওয়ার্ড থাকতে পারে"
+
+#: includes/health/class-check-exposed-files.php:185
+msgid "Publicly readable"
+msgstr "যে কেউ পড়তে পারে"
+
+#: includes/health/class-check-large-media.php:52
+msgid "Large Media"
+msgstr "বড় মিডিয়া ফাইল"
+
+#: includes/health/class-check-large-media.php:61
+msgid "Finds oversized images and files that slow your pages down and fill your storage."
+msgstr "অতিরিক্ত বড় ছবি ও ফাইল খুঁজে বের করে, যেগুলো পেজ ধীর করে দেয় আর স্টোরেজ ভরে ফেলে।"
+
+#. translators: 1: file name, 2: formatted file size
+#: includes/health/class-check-large-media.php:154
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#. translators: %d: attachment ID
+#: includes/health/class-check-large-media.php:245
+#: includes/health/class-check-missing-alt-text.php:155
+#: includes/health/class-check-orphan-media.php:563
+#, php-format
+msgid "Attachment #%d"
+msgstr "অ্যাটাচমেন্ট #%d"
+
+#. translators: %s: post title the attachment is attached to
+#. translators: %s: post title the image is attached to
+#: includes/health/class-check-large-media.php:263
+#: includes/health/class-check-missing-alt-text.php:173
+#, php-format
+msgid "Used in: %s"
+msgstr "ব্যবহৃত হয়েছে: %s"
+
+#: includes/health/class-check-missing-alt-text.php:36
+msgid "Missing Alt Text"
+msgstr "Alt টেক্সট নেই"
+
+#: includes/health/class-check-missing-alt-text.php:45
+msgid "Finds images with no alternative text, which screen readers and search engines both rely on."
+msgstr "যেসব ছবিতে বিকল্প টেক্সট নেই সেগুলো খুঁজে বের করে — স্ক্রিন রিডার ও সার্চ ইঞ্জিন দুটোই এর উপর নির্ভর করে।"
+
+#: includes/health/class-check-missing-image-dimensions.php:43
+msgid "Images Missing Dimensions"
+msgstr "মাপ ছাড়া ছবি"
+
+#: includes/health/class-check-missing-image-dimensions.php:52
+msgid "Finds images with no width or height, which makes the page jump around while it loads. Open the post, select each image and re-insert it from the media library — WordPress writes the dimensions back in for you. There is no safe automatic repair for this: rewriting the markup of a stored post is not something a scanner should do on your behalf."
+msgstr "যেসব ছবিতে প্রস্থ বা উচ্চতা দেওয়া নেই সেগুলো খুঁজে বের করে — এর ফলে পেজ লোড হওয়ার সময় লেখা লাফিয়ে সরে যায়। পোস্টটি খুলে প্রতিটি ছবি বেছে নিয়ে মিডিয়া লাইব্রেরি থেকে আবার বসান, WordPress নিজেই মাপগুলো লিখে দেবে। এটির নিরাপদ স্বয়ংক্রিয় সমাধান নেই: সংরক্ষিত পোস্টের মার্কআপ নতুন করে লিখে দেওয়া কোনো স্ক্যানারের আপনার হয়ে করা উচিত নয়।"
+
+#. translators: 1: post title, 2: number of images with no width or height
+#: includes/health/class-check-missing-image-dimensions.php:128
+#, php-format
+msgid "%1$s (%2$d image with no dimensions)"
+msgid_plural "%1$s (%2$d images with no dimensions)"
+msgstr[0] "%1$s (%2$d টি ছবিতে মাপ নেই)"
+msgstr[1] "%1$s (%2$d টি ছবিতে মাপ নেই)"
+
+#: includes/health/class-check-missing-image-dimensions.php:137
+msgid "Causes layout shift while the page loads"
+msgstr "পেজ লোড হওয়ার সময় লেখা সরে যায়"
+
+#: includes/health/class-check-missing-lazy-loading.php:56
+msgid "Images Missing Lazy Loading"
+msgstr "লেজি লোডিং ছাড়া ছবি"
+
+#: includes/health/class-check-missing-lazy-loading.php:65
+msgid "WordPress lazy-loads content images by itself, so this check usually finds nothing — that is a good result, not a broken check. It reports the images further down a post that something has deliberately opted out, which makes visitors download them before they are ever seen. The first image in a post is never reported, because that one should load straight away."
+msgstr "WordPress নিজেই কনটেন্টের ছবিগুলো লেজি লোড করে, তাই এই পরীক্ষায় সাধারণত কিছুই ধরা পড়ে না — সেটিই ভালো ফল, পরীক্ষা নষ্ট হয়েছে এমন নয়। পোস্টের নিচের দিকের যেসব ছবি কেউ ইচ্ছে করে এই সুবিধার বাইরে রেখেছে, এটি সেগুলোই জানায় — ফলে দর্শক ছবিগুলো দেখার আগেই ডাউনলোড করে ফেলেন। পোস্টের প্রথম ছবিটি কখনোই জানানো হয় না, কারণ সেটির সঙ্গে সঙ্গেই লোড হওয়া উচিত।"
+
+#. translators: 1: post title, 2: number of images that will not lazy load
+#: includes/health/class-check-missing-lazy-loading.php:154
+#, php-format
+msgid "%1$s (%2$d image loads eagerly)"
+msgid_plural "%1$s (%2$d images load eagerly)"
+msgstr[0] "%1$s (%2$d টি ছবি সঙ্গে সঙ্গে লোড হয়)"
+msgstr[1] "%1$s (%2$d টি ছবি সঙ্গে সঙ্গে লোড হয়)"
+
+#: includes/health/class-check-missing-lazy-loading.php:163
+msgid "Downloaded before the visitor scrolls to it"
+msgstr "দর্শক সেখানে পৌঁছানোর আগেই ডাউনলোড হয়ে যায়"
+
+#: includes/health/class-check-missing-meta-description.php:52
+msgid "Missing Meta Description"
+msgstr "মেটা ডেসক্রিপশন নেই"
+
+#: includes/health/class-check-missing-meta-description.php:61
+msgid "Finds published posts and pages with no SEO meta description, so search engines invent their own snippet."
+msgstr "যেসব প্রকাশিত পোস্ট ও পেজে SEO মেটা ডেসক্রিপশন নেই সেগুলো খুঁজে বের করে — না থাকলে সার্চ ইঞ্জিন নিজেই বর্ণনা বানিয়ে নেয়।"
+
+#: includes/health/class-check-orphan-media.php:96
+msgid "Orphan Media"
+msgstr "অব্যবহৃত মিডিয়া"
+
+#: includes/health/class-check-orphan-media.php:105
+msgid "Finds unattached files that no published content seems to reference. Images placed with a page builder such as Elementor or Divi can appear here by mistake, so review each one before deleting it."
+msgstr "যেসব ফাইল কোনো পোস্টের সঙ্গে যুক্ত নয় এবং প্রকাশিত কোনো লেখাতেও ব্যবহৃত হয়েছে বলে মনে হয় না, সেগুলো খুঁজে বের করে। Elementor বা Divi এর মতো পেজ বিল্ডার দিয়ে বসানো ছবি ভুল করে এখানে চলে আসতে পারে, তাই মুছে ফেলার আগে প্রতিটি দেখে নিন।"
+
+#: includes/health/class-check-orphan-media.php:179
+msgid "Not attached to any post"
+msgstr "কোনো পোস্টের সঙ্গে যুক্ত নয়"
+
+#: includes/health/class-check-site-status.php:56
+msgid "Plugin & Core Health"
+msgstr "প্লাগইন ও কোরের অবস্থা"
+
+#: includes/health/class-check-site-status.php:65
+msgid "Checks for pending updates, an outdated PHP version, missing HTTPS, and other platform problems."
+msgstr "বাকি থাকা আপডেট, পুরনো PHP সংস্করণ, HTTPS না থাকা এবং প্ল্যাটফর্মের অন্যান্য সমস্যা যাচাই করে।"
+
+#. translators: 1: plugin name, 2: installed version, 3: available version
+#: includes/health/class-check-site-status.php:142
+#, php-format
+msgid "%1$s %2$s is out of date (%3$s available)"
+msgstr "%1$s %2$s পুরনো হয়ে গেছে (%3$s পাওয়া যাচ্ছে)"
+
+#: includes/health/class-check-site-status.php:145
+msgid "a newer version"
+msgstr "নতুন একটি সংস্করণ"
+
+#: includes/health/class-check-site-status.php:147
+msgid "Pending plugin update"
+msgstr "প্লাগইন আপডেট বাকি আছে"
+
+#. translators: %s: WordPress version
+#: includes/health/class-check-site-status.php:204
+#, php-format
+msgid "WordPress %s is available"
+msgstr "WordPress %s পাওয়া যাচ্ছে"
+
+#. translators: %s: installed WordPress version
+#: includes/health/class-check-site-status.php:209
+#, php-format
+msgid "You are running %s"
+msgstr "আপনি চালাচ্ছেন %s"
+
+#. translators: %s: PHP version
+#: includes/health/class-check-site-status.php:247
+#, php-format
+msgid "PHP %s no longer receives security updates"
+msgstr "PHP %s আর নিরাপত্তা আপডেট পায় না"
+
+#. translators: %s: minimum supported PHP version
+#: includes/health/class-check-site-status.php:252
+#, php-format
+msgid "Ask your host to move you to PHP %s or newer"
+msgstr "আপনার হোস্টকে বলুন PHP %s বা তার নতুন সংস্করণে নিয়ে যেতে"
+
+#: includes/health/class-check-site-status.php:281
+msgid "Your site is not served over HTTPS"
+msgstr "আপনার সাইট HTTPS দিয়ে চলছে না"
+
+#: includes/health/class-check-site-status.php:282
+msgid "Browsers mark plain HTTP sites as insecure"
+msgstr "ব্রাউজার সাধারণ HTTP সাইটকে অনিরাপদ বলে চিহ্নিত করে"
+
+#: includes/health/class-check-site-status.php:317
+msgid "Debug output is visible to your visitors"
+msgstr "ডিবাগ আউটপুট আপনার দর্শকরা দেখতে পাচ্ছেন"
+
+#: includes/health/class-check-site-status.php:318
+msgid "Set WP_DEBUG_DISPLAY to false in wp-config.php"
+msgstr "wp-config.php ফাইলে WP_DEBUG_DISPLAY এর মান false করে দিন"
+
+#: includes/health/class-check-site-status.php:342
+msgid "WordPress cron is disabled"
+msgstr "WordPress ক্রন বন্ধ করা আছে"
+
+#: includes/health/class-check-site-status.php:343
+msgid "Scheduled tasks only run if a real cron job calls wp-cron.php"
+msgstr "নির্ধারিত কাজগুলো তখনই চলবে যখন সত্যিকারের একটি ক্রন জব wp-cron.php ডাকবে"
+
+#. translators: %d: number of overdue scheduled tasks
+#: includes/health/class-check-site-status.php:379
+#, php-format
+msgid "%d scheduled task is overdue"
+msgid_plural "%d scheduled tasks are overdue"
+msgstr[0] "%d টি নির্ধারিত কাজের সময় পেরিয়ে গেছে"
+msgstr[1] "%d টি নির্ধারিত কাজের সময় পেরিয়ে গেছে"
+
+#: includes/health/class-check-site-status.php:387
+msgid "Cron may not be running on this site"
+msgstr "এই সাইটে ক্রন হয়তো চলছে না"
+
+#: includes/health/class-check-thin-content.php:74
+msgid "Thin Content"
+msgstr "অল্প লেখার পেজ"
+
+#: includes/health/class-check-thin-content.php:83
+msgid "Lists published posts and pages with very few words, which search engines tend to rank poorly. Read this one with judgement: a contact page, a thank-you page or a landing page is supposed to be short, and there is nothing wrong with it. Pages built mostly from a shortcode, a gallery or an embed are left out entirely, because counting their words tells you nothing."
+msgstr "যেসব প্রকাশিত পোস্ট ও পেজে খুব কম শব্দ আছে সেগুলোর তালিকা দেয় — সার্চ ইঞ্জিন সাধারণত এগুলোকে নিচে রাখে। এই তালিকাটি বিবেচনা করে পড়ুন: যোগাযোগের পাতা, ধন্যবাদ জানানোর পাতা বা ল্যান্ডিং পেজ ছোট হওয়াই স্বাভাবিক, এতে দোষের কিছু নেই। যেসব পেজ মূলত শর্টকোড, গ্যালারি বা এমবেড দিয়ে তৈরি, সেগুলো একেবারেই বাদ দেওয়া হয় — কারণ সেখানে শব্দ গুনে কিছুই বোঝা যায় না।"
+
+#. translators: 1: post title, 2: number of words in the post
+#: includes/health/class-check-thin-content.php:183
+#, php-format
+msgid "%1$s (%2$d word)"
+msgid_plural "%1$s (%2$d words)"
+msgstr[0] "%1$s (%2$d টি শব্দ)"
+msgstr[1] "%1$s (%2$d টি শব্দ)"
+
+#. translators: %d: the word count threshold
+#: includes/health/class-check-thin-content.php:194
+#, php-format
+msgid "Under %d words — fine if the page is meant to be short"
+msgstr "%d শব্দের কম — পেজটি ছোট হওয়ারই কথা হলে সমস্যা নেই"
+
+#: includes/health/class-check-xmlrpc.php:83
+msgid "XML-RPC Enabled"
+msgstr "XML-RPC চালু আছে"
+
+#: includes/health/class-check-xmlrpc.php:92
+msgid "XML-RPC is the old remote interface at xmlrpc.php. It lets an attacker try many passwords in a single request, which is why hardening guides suggest closing it. It is also what the WordPress mobile apps, Jetpack and some publishing tools use to reach your site — so this is only worth turning off if you do not use any of them. That is why it is a notice and not a warning: on plenty of perfectly healthy sites the right answer is to leave it alone."
+msgstr "XML-RPC হলো xmlrpc.php ঠিকানার পুরনো রিমোট ইন্টারফেস। এটি দিয়ে একজন আক্রমণকারী একটি রিকোয়েস্টেই বহু পাসওয়ার্ড পরখ করতে পারে, সেজন্যই নিরাপত্তা নির্দেশিকাগুলো এটি বন্ধ করতে বলে। আবার WordPress এর মোবাইল অ্যাপ, Jetpack এবং কিছু পাবলিশিং টুল আপনার সাইটে পৌঁছাতে এটিই ব্যবহার করে — তাই এগুলোর কোনোটি ব্যবহার না করলেই কেবল এটি বন্ধ করা যুক্তিযুক্ত। এ কারণেই এটি সতর্কতা নয়, শুধু একটি নোটিশ: বহু সুস্থ সাইটে ঠিক কাজটি হলো এটিকে ছুঁয়ে না দেখা।"
+
+#: includes/health/class-check-xmlrpc.php:161
+msgid "This site could not make a request to itself, so xmlrpc.php could not be checked. Some hosts block loopback requests."
+msgstr "এই সাইট নিজের কাছেই রিকোয়েস্ট পাঠাতে পারেনি, তাই xmlrpc.php যাচাই করা যায়নি। কিছু হোস্ট লুপব্যাক রিকোয়েস্ট আটকে দেয়।"
+
+#: includes/health/class-check-xmlrpc.php:184
+msgid "xmlrpc.php is reachable"
+msgstr "xmlrpc.php এ পৌঁছানো যাচ্ছে"
+
+#: includes/health/class-check-xmlrpc.php:185
+msgid "Fine if you use the WordPress mobile app, Jetpack or a publishing tool — worth closing if you do not"
+msgstr "WordPress মোবাইল অ্যাপ, Jetpack বা কোনো পাবলিশিং টুল ব্যবহার করলে সমস্যা নেই — না করলে বন্ধ করাই ভালো"
+
+#: includes/modules/class-module-content.php:72
+msgid "List Posts"
+msgstr "পোস্টের তালিকা"
+
+#: includes/modules/class-module-content.php:73
+msgid "List WordPress posts with filtering, sorting, and pagination."
+msgstr "ফিল্টার, সাজানো ও পেজিনেশনসহ WordPress পোস্টের তালিকা দেখায়।"
+
+#: includes/modules/class-module-content.php:168
+msgid "Get Post"
+msgstr "পোস্ট আনুন"
+
+#: includes/modules/class-module-content.php:169
+msgid "Get a single WordPress post with full content, meta, and SEO data."
+msgstr "পূর্ণ কনটেন্ট, মেটা ও SEO তথ্যসহ একটি WordPress পোস্ট আনে।"
+
+#: includes/modules/class-module-content.php:197
+#: includes/modules/class-module-content.php:425
+#: includes/modules/class-module-content.php:540
+#: includes/modules/class-module-content.php:789
+#: includes/modules/class-module-seo.php:103
+#: includes/modules/class-module-seo.php:324
+#: includes/modules/class-module-seo.php:401
+#: includes/modules/class-module-seo.php:608
+msgid "Post not found."
+msgstr "পোস্ট পাওয়া যায়নি।"
+
+#: includes/modules/class-module-content.php:265
+msgid "Create Post"
+msgstr "পোস্ট তৈরি করুন"
+
+#: includes/modules/class-module-content.php:266
+msgid "Create a new WordPress post, page, or custom post type entry."
+msgstr "নতুন একটি WordPress পোস্ট, পেজ বা কাস্টম পোস্ট টাইপ এন্ট্রি তৈরি করে।"
+
+#: includes/modules/class-module-content.php:376
+msgid "Update Post"
+msgstr "পোস্ট হালনাগাদ করুন"
+
+#: includes/modules/class-module-content.php:377
+msgid "Update an existing WordPress post. Only provided fields are changed."
+msgstr "বিদ্যমান একটি WordPress পোস্ট হালনাগাদ করে। শুধু যেসব ঘর দেওয়া হয়েছে সেগুলোই বদলায়।"
+
+#: includes/modules/class-module-content.php:502
+msgid "Delete Post"
+msgstr "পোস্ট মুছুন"
+
+#: includes/modules/class-module-content.php:503
+msgid "Delete or trash a WordPress post."
+msgstr "একটি WordPress পোস্ট মুছে ফেলে বা ট্র্যাশে পাঠায়।"
+
+#: includes/modules/class-module-content.php:546
+msgid "Failed to delete post."
+msgstr "পোস্ট মোছা যায়নি।"
+
+#: includes/modules/class-module-content.php:569
+msgid "Bulk Update Posts"
+msgstr "একসঙ্গে অনেক পোস্ট হালনাগাদ"
+
+#: includes/modules/class-module-content.php:570
+msgid "Apply the same updates to multiple posts at once."
+msgstr "একই পরিবর্তন একসঙ্গে অনেকগুলো পোস্টে প্রয়োগ করে।"
+
+#: includes/modules/class-module-content.php:650
+msgid "List Post Types"
+msgstr "পোস্ট টাইপের তালিকা"
+
+#: includes/modules/class-module-content.php:651
+msgid "List all registered public post types with their labels and capabilities."
+msgstr "নিবন্ধিত সব পাবলিক পোস্ট টাইপ, তাদের নাম ও ক্ষমতাসহ তালিকা দেখায়।"
+
+#: includes/modules/class-module-content.php:699
+msgid "List Taxonomies"
+msgstr "ট্যাক্সোনমির তালিকা"
+
+#: includes/modules/class-module-content.php:700
+msgid "List all registered taxonomies with term counts."
+msgstr "নিবন্ধিত সব ট্যাক্সোনমি, প্রতিটির টার্ম সংখ্যাসহ তালিকা দেখায়।"
+
+#: includes/modules/class-module-content.php:759
+msgid "Get Post Revisions"
+msgstr "পোস্টের রিভিশন আনুন"
+
+#: includes/modules/class-module-content.php:760
+msgid "Get revision history for a post."
+msgstr "একটি পোস্টের রিভিশনের ইতিহাস আনে।"
+
+#: includes/modules/class-module-diagnostics.php:68
+msgid "Site Health Report"
+msgstr "সাইট হেলথ রিপোর্ট"
+
+#: includes/modules/class-module-diagnostics.php:69
+msgid "Get a comprehensive site health and environment report."
+msgstr "সাইটের অবস্থা ও পরিবেশ নিয়ে বিস্তারিত একটি রিপোর্ট আনে।"
+
+#: includes/modules/class-module-diagnostics.php:255
+msgid "Plugin Update List"
+msgstr "প্লাগইন আপডেটের তালিকা"
+
+#: includes/modules/class-module-diagnostics.php:256
+msgid "List all plugins that have available updates."
+msgstr "যেসব প্লাগইনের আপডেট এসেছে সেগুলোর তালিকা দেখায়।"
+
+#: includes/modules/class-module-diagnostics.php:316
+msgid "Error Logs"
+msgstr "এরর লগ"
+
+#: includes/modules/class-module-diagnostics.php:317
+msgid "Read the last N lines from the WordPress debug error log."
+msgstr "WordPress ডিবাগ এরর লগের শেষ N টি লাইন পড়ে।"
+
+#: includes/modules/class-module-diagnostics.php:364
+msgid "No error log file found or WP_DEBUG_LOG is not enabled."
+msgstr "কোনো এরর লগ ফাইল পাওয়া যায়নি, অথবা WP_DEBUG_LOG চালু নেই।"
+
+#: includes/modules/class-module-diagnostics.php:392
+msgid "Cron Job List"
+msgstr "ক্রন জবের তালিকা"
+
+#: includes/modules/class-module-diagnostics.php:393
+msgid "List all scheduled WP-Cron events."
+msgstr "নির্ধারিত সব WP-Cron ইভেন্টের তালিকা দেখায়।"
+
+#: includes/modules/class-module-diagnostics.php:485
+msgid "Site Settings"
+msgstr "সাইট সেটিংস"
+
+#: includes/modules/class-module-diagnostics.php:486
+msgid "Get WordPress site options (allowlisted safe options only — no passwords or secrets)."
+msgstr "WordPress সাইটের অপশন আনে (শুধু অনুমোদিত নিরাপদ অপশন — কোনো পাসওয়ার্ড বা গোপন তথ্য নয়)।"
+
+#: includes/modules/class-module-diagnostics.php:548
+msgid "Transient List"
+msgstr "ট্রানজিয়েন্টের তালিকা"
+
+#: includes/modules/class-module-diagnostics.php:549
+msgid "List active WordPress transients."
+msgstr "সক্রিয় WordPress ট্রানজিয়েন্টগুলোর তালিকা দেখায়।"
+
+#: includes/modules/class-module-diagnostics.php:634
+msgid "Database Sizes"
+msgstr "ডেটাবেসের আকার"
+
+#: includes/modules/class-module-diagnostics.php:635
+msgid "Get row count and size for every WordPress database table."
+msgstr "WordPress ডেটাবেসের প্রতিটি টেবিলের সারি সংখ্যা ও আকার আনে।"
+
+#: includes/modules/class-module-media.php:66
+msgid "List Media"
+msgstr "মিডিয়ার তালিকা"
+
+#: includes/modules/class-module-media.php:67
+msgid "List media library items with filtering options."
+msgstr "ফিল্টারসহ মিডিয়া লাইব্রেরির আইটেমগুলোর তালিকা দেখায়।"
+
+#: includes/modules/class-module-media.php:145
+msgid "List Unattached Media"
+msgstr "যুক্ত নয় এমন মিডিয়ার তালিকা"
+
+#: includes/modules/class-module-media.php:146
+msgid "List media items not attached to any post."
+msgstr "কোনো পোস্টের সঙ্গে যুক্ত নয় এমন মিডিয়া আইটেমের তালিকা দেখায়।"
+
+#: includes/modules/class-module-media.php:188
+msgid "Update Alt Text"
+msgstr "Alt টেক্সট হালনাগাদ করুন"
+
+#: includes/modules/class-module-media.php:189
+msgid "Set the alt text for a media attachment."
+msgstr "একটি মিডিয়া অ্যাটাচমেন্টের alt টেক্সট বসায়।"
+
+#: includes/modules/class-module-media.php:224
+msgid "Attachment not found."
+msgstr "অ্যাটাচমেন্ট পাওয়া যায়নি।"
+
+#: includes/modules/class-module-media.php:249
+msgid "Bulk Update Alt Text"
+msgstr "একসঙ্গে অনেক Alt টেক্সট হালনাগাদ"
+
+#: includes/modules/class-module-media.php:250
+msgid "Set alt text for multiple media attachments at once."
+msgstr "একসঙ্গে অনেকগুলো মিডিয়া অ্যাটাচমেন্টের alt টেক্সট বসায়।"
+
+#: includes/modules/class-module-media.php:331
+msgid "Find Large Media"
+msgstr "বড় মিডিয়া খুঁজুন"
+
+#: includes/modules/class-module-media.php:332
+msgid "Find media attachments whose file size exceeds a given threshold."
+msgstr "নির্দিষ্ট আকারের চেয়ে বড় মিডিয়া অ্যাটাচমেন্টগুলো খুঁজে বের করে।"
+
+#: includes/modules/class-module-media.php:412
+msgid "Media Library Stats"
+msgstr "মিডিয়া লাইব্রেরির পরিসংখ্যান"
+
+#: includes/modules/class-module-media.php:413
+msgid "Get aggregate statistics about the WordPress media library."
+msgstr "WordPress মিডিয়া লাইব্রেরির সামগ্রিক পরিসংখ্যান আনে।"
+
+#: includes/modules/class-module-seo.php:66
+msgid "Analyze SEO"
+msgstr "SEO বিশ্লেষণ"
+
+#: includes/modules/class-module-seo.php:67
+msgid "Analyze the SEO health of a post — keyword density, heading structure, link ratios, meta description, and more."
+msgstr "একটি পোস্টের SEO অবস্থা বিশ্লেষণ করে — কীওয়ার্ডের ঘনত্ব, শিরোনামের কাঠামো, লিঙ্কের অনুপাত, মেটা ডেসক্রিপশন ও আরও অনেক কিছু।"
+
+#. translators: No meta description error
+#: includes/modules/class-module-seo.php:198
+msgid "No meta description set."
+msgstr "কোনো মেটা ডেসক্রিপশন বসানো হয়নি।"
+
+#: includes/modules/class-module-seo.php:199
+msgid "Add a 120-160 character meta description."
+msgstr "১২০-১৬০ অক্ষরের একটি মেটা ডেসক্রিপশন যোগ করুন।"
+
+#. translators: Meta description too short error
+#: includes/modules/class-module-seo.php:202
+msgid "Meta description is too short."
+msgstr "মেটা ডেসক্রিপশনটি খুব ছোট।"
+
+#: includes/modules/class-module-seo.php:203
+msgid "Expand meta description to 120-160 characters."
+msgstr "মেটা ডেসক্রিপশনটি বাড়িয়ে ১২০-১৬০ অক্ষর করুন।"
+
+#. translators: Meta description too long error
+#: includes/modules/class-module-seo.php:206
+msgid "Meta description is too long and may be truncated in SERPs."
+msgstr "মেটা ডেসক্রিপশনটি খুব বড়, সার্চ ফলাফলে অংশটুকু কেটে যেতে পারে।"
+
+#. translators: Focus keyword missing from meta description error
+#: includes/modules/class-module-seo.php:211
+msgid "Focus keyword missing from meta description."
+msgstr "মেটা ডেসক্রিপশনে ফোকাস কীওয়ার্ডটি নেই।"
+
+#. translators: Suggestion to add focus keyword to meta description
+#: includes/modules/class-module-seo.php:213
+msgid "Add focus keyword to meta description."
+msgstr "মেটা ডেসক্রিপশনে ফোকাস কীওয়ার্ড যোগ করুন।"
+
+#. translators: %d: number of images missing alt text
+#: includes/modules/class-module-seo.php:218
+#, php-format
+msgid "%d image is missing alt text."
+msgid_plural "%d images are missing alt text."
+msgstr[0] "%d টি ছবিতে alt টেক্সট নেই।"
+msgstr[1] "%d টি ছবিতে alt টেক্সট নেই।"
+
+#. translators: Suggestion to add alt text to images
+#: includes/modules/class-module-seo.php:220
+msgid "Add descriptive alt text to all images."
+msgstr "সব ছবিতে বর্ণনামূলক alt টেক্সট যোগ করুন।"
+
+#. translators: No H2 headings error
+#: includes/modules/class-module-seo.php:225
+msgid "No H2 headings found in a long article."
+msgstr "দীর্ঘ লেখাটিতে কোনো H2 শিরোনাম পাওয়া যায়নি।"
+
+#. translators: Suggestion to add H2 headings
+#: includes/modules/class-module-seo.php:227
+msgid "Add H2 subheadings to organize content."
+msgstr "লেখা গুছিয়ে রাখতে H2 উপশিরোনাম যোগ করুন।"
+
+#. translators: Content too short error
+#: includes/modules/class-module-seo.php:232
+msgid "Content is too short (under 300 words)."
+msgstr "লেখাটি খুব ছোট (৩০০ শব্দের কম)।"
+
+#. translators: Suggestion to expand content
+#: includes/modules/class-module-seo.php:234
+msgid "Expand content to at least 300 words."
+msgstr "লেখাটি অন্তত ৩০০ শব্দ পর্যন্ত বাড়ান।"
+
+#: includes/modules/class-module-seo.php:287
+msgid "Set Meta Description"
+msgstr "মেটা ডেসক্রিপশন বসান"
+
+#: includes/modules/class-module-seo.php:288
+msgid "Set the SEO meta description for a post. Works with Yoast, RankMath, or raw meta."
+msgstr "একটি পোস্টের SEO মেটা ডেসক্রিপশন বসায়। Yoast, RankMath বা সরাসরি মেটা — সবগুলোতেই কাজ করে।"
+
+#: includes/modules/class-module-seo.php:364
+msgid "Set Focus Keyword"
+msgstr "ফোকাস কীওয়ার্ড বসান"
+
+#: includes/modules/class-module-seo.php:365
+msgid "Set the SEO focus keyword for a post. Works with Yoast or RankMath."
+msgstr "একটি পোস্টের SEO ফোকাস কীওয়ার্ড বসায়। Yoast ও RankMath দুটোতেই কাজ করে।"
+
+#: includes/modules/class-module-seo.php:437
+msgid "Bulk SEO Audit"
+msgstr "একসঙ্গে SEO অডিট"
+
+#: includes/modules/class-module-seo.php:438
+msgid "Run SEO audit across multiple posts and return sorted results (worst first)."
+msgstr "অনেকগুলো পোস্টে একসঙ্গে SEO অডিট চালিয়ে সাজানো ফলাফল দেয় (সবচেয়ে খারাপগুলো আগে)।"
+
+#: includes/modules/class-module-seo.php:525
+msgid "Get Sitemap URLs"
+msgstr "সাইটম্যাপ URL আনুন"
+
+#: includes/modules/class-module-seo.php:526
+msgid "Get sitemap URLs for this WordPress site (Yoast, RankMath, or WordPress core)."
+msgstr "এই WordPress সাইটের সাইটম্যাপ URL আনে (Yoast, RankMath বা WordPress কোর)।"
+
+#: includes/modules/class-module-seo.php:579
+msgid "Check Broken Links"
+msgstr "ভাঙা লিঙ্ক যাচাই করুন"
+
+#: includes/modules/class-module-seo.php:580
+msgid "Check all outgoing links in a post for broken URLs (returns HTTP status for each)."
+msgstr "একটি পোস্টের সব বাইরের লিঙ্ক যাচাই করে ভাঙা URL খোঁজে (প্রতিটির HTTP স্ট্যাটাস জানায়)।"
+
+#: includes/modules/class-module-users.php:64
+msgid "List Users"
+msgstr "ব্যবহারকারীর তালিকা"
+
+#: includes/modules/class-module-users.php:65
+msgid "List WordPress users with filtering and sorting."
+msgstr "ফিল্টার ও সাজানোসহ WordPress ব্যবহারকারীদের তালিকা দেখায়।"
+
+#: includes/modules/class-module-users.php:153
+msgid "Get User"
+msgstr "ব্যবহারকারী আনুন"
+
+#: includes/modules/class-module-users.php:154
+msgid "Get a WordPress user profile (password hash never included)."
+msgstr "একটি WordPress ব্যবহারকারীর প্রোফাইল আনে (পাসওয়ার্ড হ্যাশ কখনোই দেওয়া হয় না)।"
+
+#: includes/modules/class-module-users.php:188
+#: includes/modules/class-module-users.php:272
+msgid "User not found."
+msgstr "ব্যবহারকারী পাওয়া যায়নি।"
+
+#: includes/modules/class-module-users.php:235
+msgid "Update User Role"
+msgstr "ব্যবহারকারীর ভূমিকা বদলান"
+
+#: includes/modules/class-module-users.php:236
+msgid "Change a WordPress user's role."
+msgstr "একজন WordPress ব্যবহারকারীর ভূমিকা বদলায়।"
+
+#. translators: %s: role name
+#: includes/modules/class-module-users.php:281
+#, php-format
+msgid "Role \"%s\" does not exist."
+msgstr "\"%s\" নামে কোনো ভূমিকা নেই।"
+
+#: includes/modules/class-module-users.php:293
+msgid "Only administrators can demote other administrators."
+msgstr "শুধু অ্যাডমিনিস্ট্রেটররাই অন্য অ্যাডমিনিস্ট্রেটরের ভূমিকা নামাতে পারেন।"
+
+#: includes/modules/class-module-users.php:322
+msgid "List Roles"
+msgstr "ভূমিকার তালিকা"
+
+#: includes/modules/class-module-users.php:323
+msgid "List all registered WordPress roles and their capabilities."
+msgstr "নিবন্ধিত সব WordPress ভূমিকা ও তাদের ক্ষমতার তালিকা দেখায়।"
+
+#: includes/modules/class-module-users.php:368
+msgid "User Stats"
+msgstr "ব্যবহারকারীর পরিসংখ্যান"
+
+#: includes/modules/class-module-users.php:369
+msgid "Get aggregate user statistics including counts by role and registration trends."
+msgstr "ভূমিকা অনুযায়ী সংখ্যা ও নিবন্ধনের ধারা সহ ব্যবহারকারীদের সামগ্রিক পরিসংখ্যান আনে।"
+
+#: includes/modules/class-module-woocommerce.php:89
+msgid "List Products"
+msgstr "পণ্যের তালিকা"
+
+#: includes/modules/class-module-woocommerce.php:90
+msgid "List WooCommerce products with filtering options."
+msgstr "ফিল্টারসহ WooCommerce পণ্যের তালিকা দেখায়।"
+
+#: includes/modules/class-module-woocommerce.php:200
+msgid "Get Product"
+msgstr "পণ্য আনুন"
+
+#: includes/modules/class-module-woocommerce.php:201
+msgid "Get a single WooCommerce product with all details."
+msgstr "একটি WooCommerce পণ্যের সব বিবরণ আনে।"
+
+#: includes/modules/class-module-woocommerce.php:229
+#: includes/modules/class-module-woocommerce.php:346
+#: includes/modules/class-module-woocommerce.php:519
+msgid "Product not found."
+msgstr "পণ্য পাওয়া যায়নি।"
+
+#: includes/modules/class-module-woocommerce.php:303
+msgid "Update Product"
+msgstr "পণ্য হালনাগাদ করুন"
+
+#: includes/modules/class-module-woocommerce.php:304
+msgid "Update WooCommerce product fields."
+msgstr "WooCommerce পণ্যের ঘরগুলো হালনাগাদ করে।"
+
+#: includes/modules/class-module-woocommerce.php:400
+msgid "Create Product"
+msgstr "পণ্য তৈরি করুন"
+
+#: includes/modules/class-module-woocommerce.php:401
+msgid "Create a new WooCommerce product."
+msgstr "নতুন একটি WooCommerce পণ্য তৈরি করে।"
+
+#: includes/modules/class-module-woocommerce.php:458
+msgid "Failed to create product."
+msgstr "পণ্য তৈরি করা যায়নি।"
+
+#: includes/modules/class-module-woocommerce.php:481
+msgid "Delete Product"
+msgstr "পণ্য মুছুন"
+
+#: includes/modules/class-module-woocommerce.php:482
+msgid "Delete or trash a WooCommerce product."
+msgstr "একটি WooCommerce পণ্য মুছে ফেলে বা ট্র্যাশে পাঠায়।"
+
+#: includes/modules/class-module-woocommerce.php:544
+msgid "List Orders"
+msgstr "অর্ডারের তালিকা"
+
+#: includes/modules/class-module-woocommerce.php:545
+msgid "List WooCommerce orders with filtering."
+msgstr "ফিল্টারসহ WooCommerce অর্ডারের তালিকা দেখায়।"
+
+#: includes/modules/class-module-woocommerce.php:646
+msgid "Get Order"
+msgstr "অর্ডার আনুন"
+
+#: includes/modules/class-module-woocommerce.php:647
+msgid "Get a WooCommerce order with all details."
+msgstr "একটি WooCommerce অর্ডারের সব বিবরণ আনে।"
+
+#: includes/modules/class-module-woocommerce.php:681
+#: includes/modules/class-module-woocommerce.php:777
+msgid "Order not found."
+msgstr "অর্ডার পাওয়া যায়নি।"
+
+#: includes/modules/class-module-woocommerce.php:741
+msgid "Update Order Status"
+msgstr "অর্ডারের অবস্থা বদলান"
+
+#: includes/modules/class-module-woocommerce.php:742
+msgid "Update the status of a WooCommerce order."
+msgstr "একটি WooCommerce অর্ডারের অবস্থা হালনাগাদ করে।"
+
+#: includes/modules/class-module-woocommerce.php:805
+msgid "Store Summary"
+msgstr "দোকানের সারসংক্ষেপ"
+
+#: includes/modules/class-module-woocommerce.php:806
+msgid "Get a WooCommerce store summary for a given time period."
+msgstr "নির্দিষ্ট সময়ের জন্য WooCommerce দোকানের সারসংক্ষেপ আনে।"
+
+#: includes/modules/class-module-woocommerce.php:935
+msgid "List Coupons"
+msgstr "কুপনের তালিকা"
+
+#: includes/modules/class-module-woocommerce.php:936
+msgid "List WooCommerce coupons."
+msgstr "WooCommerce কুপনগুলোর তালিকা দেখায়।"
+
+#: includes/modules/class-module-woocommerce.php:1005
+msgid "Create Coupon"
+msgstr "কুপন তৈরি করুন"
+
+#: includes/modules/class-module-woocommerce.php:1006
+msgid "Create a new WooCommerce coupon code."
+msgstr "নতুন একটি WooCommerce কুপন কোড তৈরি করে।"
+
+#: includes/modules/class-module-woocommerce.php:1060
+msgid "Failed to create coupon."
+msgstr "কুপন তৈরি করা যায়নি।"
+
+#: includes/modules/class-module-woocommerce.php:1082
+msgid "List Customers"
+msgstr "ক্রেতার তালিকা"
+
+#: includes/modules/class-module-woocommerce.php:1083
+msgid "List WooCommerce customers."
+msgstr "WooCommerce ক্রেতাদের তালিকা দেখায়।"
+
+#. translators: 1: required PHP version 2: current PHP version
+#: my-site-hand.php:43
+#, php-format
+msgid "My Site Hand requires PHP %1$s or higher. You are running PHP %2$s. Please upgrade PHP."
+msgstr "My Site Hand চালাতে PHP %1$s বা তার নতুন সংস্করণ লাগে। আপনি চালাচ্ছেন PHP %2$s। অনুগ্রহ করে PHP আপগ্রেড করুন।"
+
+#. translators: %s: URL to tokens page
+#: my-site-hand.php:112
+#, php-format
+msgid "<strong>My Site Hand Security Update:</strong> API Token permissions are now enforced strictly. Your existing tokens have been preserved with full access to prevent connection breaks. Please <a href=\"%s\">review your tokens</a> to narrow their scope."
+msgstr "<strong>My Site Hand নিরাপত্তা আপডেট:</strong> API টোকেনের অনুমতি এখন কড়াভাবে প্রয়োগ করা হয়। সংযোগ যাতে না ভাঙে সেজন্য আপনার পুরনো টোকেনগুলো পূর্ণ অ্যাক্সেসসহ রাখা হয়েছে। এগুলোর সীমা কমাতে <a href=\"%s\">আপনার টোকেনগুলো দেখে নিন</a>।"
+
+#: templates/admin/abilities.php:16
+#: templates/admin/dashboard.php:130
+#: templates/admin/settings.php:16
+msgid "Content"
+msgstr "কনটেন্ট"
+
+#: templates/admin/abilities.php:17
+#: templates/admin/dashboard.php:131
+#: templates/admin/settings.php:17
+msgid "SEO"
+msgstr "SEO"
+
+#: templates/admin/abilities.php:18
+#: templates/admin/dashboard.php:132
+#: templates/admin/settings.php:18
+#: templates/admin/tools.php:151
+msgid "Diagnostics"
+msgstr "ডায়াগনস্টিকস"
+
+#: templates/admin/abilities.php:19
+#: templates/admin/dashboard.php:133
+#: templates/admin/settings.php:19
+msgid "Media"
+msgstr "মিডিয়া"
+
+#: templates/admin/abilities.php:20
+#: templates/admin/dashboard.php:134
+#: templates/admin/settings.php:20
+msgid "Users"
+msgstr "ব্যবহারকারী"
+
+#: templates/admin/abilities.php:21
+#: templates/admin/dashboard.php:135
+#: templates/admin/settings.php:21
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: templates/admin/abilities.php:25
+msgid "Posts, pages, and custom post types"
+msgstr "পোস্ট, পেজ ও কাস্টম পোস্ট টাইপ"
+
+#: templates/admin/abilities.php:26
+#: templates/admin/dashboard.php:131
+#: templates/admin/settings.php:17
+msgid "Analysis and meta management"
+msgstr "বিশ্লেষণ ও মেটা ব্যবস্থাপনা"
+
+#: templates/admin/abilities.php:27
+#: templates/admin/dashboard.php:132
+#: templates/admin/settings.php:18
+msgid "Site health, error logs, cron"
+msgstr "সাইটের অবস্থা, এরর লগ, ক্রন"
+
+#: templates/admin/abilities.php:28
+#: templates/admin/dashboard.php:133
+#: templates/admin/settings.php:19
+msgid "Media library"
+msgstr "মিডিয়া লাইব্রেরি"
+
+#: templates/admin/abilities.php:29
+#: templates/admin/dashboard.php:134
+#: templates/admin/settings.php:20
+msgid "Accounts and roles"
+msgstr "অ্যাকাউন্ট ও ভূমিকা"
+
+#: templates/admin/abilities.php:30
+msgid "Products, orders, and coupons"
+msgstr "পণ্য, অর্ডার ও কুপন"
+
+#: templates/admin/abilities.php:134
+#: templates/admin/abilities.php:135
+#: templates/admin/settings.php:89
+#: templates/admin/settings.php:186
+msgid "Modules"
+msgstr "মডিউল"
+
+#. translators: %d: number of destructive abilities
+#: templates/admin/abilities.php:151
+#, php-format
+msgid "%d ability is destructive. It also needs a token with admin scope."
+msgid_plural "%d abilities are destructive. Those also need a token with admin scope."
+msgstr[0] "%d টি অ্যাবিলিটি ধ্বংসাত্মক। এটির জন্য অ্যাডমিন স্কোপওয়ালা টোকেনও লাগে।"
+msgstr[1] "%d টি অ্যাবিলিটি ধ্বংসাত্মক। এগুলোর জন্য অ্যাডমিন স্কোপওয়ালা টোকেনও লাগে।"
+
+#: templates/admin/abilities.php:154
+msgid "See tokens"
+msgstr "টোকেনগুলো দেখুন"
+
+#: templates/admin/abilities.php:162
+msgid "Permissions"
+msgstr "অনুমতি"
+
+#. translators: 1: number of enabled abilities, 2: total number of abilities
+#: templates/admin/abilities.php:167
+#, php-format
+msgid "%1$d of %2$d are callable. Each switch is one thing an AI client may do here."
+msgstr "%2$d টির মধ্যে %1$d টি চালানো যায়। প্রতিটি সুইচ মানে একটি কাজ, যা একটি AI ক্লায়েন্ট এখানে করতে পারবে।"
+
+#: templates/admin/abilities.php:173
+msgid "All off"
+msgstr "সব বন্ধ"
+
+#: templates/admin/abilities.php:174
+msgid "All on"
+msgstr "সব চালু"
+
+#: templates/admin/abilities.php:181
+msgid "Registered"
+msgstr "নিবন্ধিত"
+
+#: templates/admin/abilities.php:185
+msgid "Enabled"
+msgstr "চালু"
+
+#: templates/admin/abilities.php:189
+msgid "Held back"
+msgstr "আটকে রাখা"
+
+#: templates/admin/abilities.php:193
+msgid "MCP-public"
+msgstr "MCP-পাবলিক"
+
+#. translators: %d: total number of abilities
+#: templates/admin/abilities.php:206
+#, php-format
+msgid "Search %d abilities"
+msgstr "%d টি অ্যাবিলিটির মধ্যে খুঁজুন"
+
+#: templates/admin/abilities.php:212
+msgid "All modules"
+msgstr "সব মডিউল"
+
+#. translators: 1: number of enabled abilities, 2: total abilities in the module
+#. translators: 1: number of enabled modules, 2: total modules
+#: templates/admin/abilities.php:240
+#: templates/admin/settings.php:193
+#, php-format
+msgid "%1$d of %2$d on"
+msgstr "%2$d টির মধ্যে %1$d টি চালু"
+
+#. translators: %s: link to the settings page
+#: templates/admin/abilities.php:251
+#, php-format
+msgid "This module is switched off, so none of the abilities below are reachable. Turn it on in %s."
+msgstr "এই মডিউলটি বন্ধ আছে, তাই নিচের কোনো অ্যাবিলিটিতেই পৌঁছানো যাবে না। %s থেকে এটি চালু করুন।"
+
+#: templates/admin/abilities.php:271
+#: templates/admin/tokens.php:76
+msgid "read only"
+msgstr "শুধু পড়া"
+
+#: templates/admin/abilities.php:274
+#: templates/admin/tokens.php:88
+msgid "destructive"
+msgstr "ধ্বংসাত্মক"
+
+#: templates/admin/abilities.php:277
+#: templates/admin/tokens.php:82
+msgid "public"
+msgstr "পাবলিক"
+
+#: templates/admin/abilities.php:279
+#: templates/admin/tokens.php:94
+msgid "admin scope"
+msgstr "অ্যাডমিন স্কোপ"
+
+#: templates/admin/abilities.php:287
+#: templates/admin/dashboard.php:475
+msgid "On"
+msgstr "চালু"
+
+#: templates/admin/abilities.php:287
+#: templates/admin/dashboard.php:475
+msgid "Off"
+msgstr "বন্ধ"
+
+#: templates/admin/audit-log.php:77
+#: templates/admin/dashboard.php:30
+msgid "Quick Fix"
+msgstr "কুইক ফিক্স"
+
+#: templates/admin/audit-log.php:100
+#: templates/admin/audit-log.php:101
+#: templates/admin/dashboard.php:158
+#: templates/admin/dashboard.php:159
+#: templates/admin/settings.php:86
+#: templates/admin/settings.php:87
+#: templates/admin/tokens.php:108
+#: templates/admin/tokens.php:109
+#: templates/admin/tools.php:135
+#: templates/admin/tools.php:136
+msgid "On this page"
+msgstr "এই পাতায়"
+
+#: templates/admin/audit-log.php:102
+#: templates/admin/dashboard.php:160
+#: templates/admin/dashboard.php:184
+msgid "Today"
+msgstr "আজ"
+
+#: templates/admin/audit-log.php:103
+msgid "Filters"
+msgstr "ফিল্টার"
+
+#: templates/admin/audit-log.php:104
+#: templates/admin/audit-log.php:219
+msgid "Entries"
+msgstr "এন্ট্রি"
+
+#. translators: %d: number of errors in the last 24 hours
+#: templates/admin/audit-log.php:109
+#, php-format
+msgid "%d failure in the last 24 hours."
+msgid_plural "%d failures in the last 24 hours."
+msgstr[0] "গত ২৪ ঘণ্টায় %d টি ব্যর্থতা।"
+msgstr[1] "গত ২৪ ঘণ্টায় %d টি ব্যর্থতা।"
+
+#: templates/admin/audit-log.php:112
+#: templates/admin/audit-log.php:132
+#: templates/admin/health.php:183
+msgid "Export CSV"
+msgstr "CSV রপ্তানি"
+
+#: templates/admin/audit-log.php:120
+msgid "Record"
+msgstr "রেকর্ড"
+
+#: templates/admin/audit-log.php:121
+msgid "Audit"
+msgstr "অডিট"
+
+#. translators: %d: log retention period in days
+#: templates/admin/audit-log.php:125
+#, php-format
+msgid "Every call, what it sent, and what came back. Kept for %d days."
+msgstr "প্রতিটি কল, কী পাঠানো হয়েছিল আর কী ফিরে এসেছিল। %d দিন পর্যন্ত রাখা হয়।"
+
+#: templates/admin/audit-log.php:140
+msgid "Entries today"
+msgstr "আজকের এন্ট্রি"
+
+#. translators: %d: number of tokens
+#: templates/admin/audit-log.php:145
+#, php-format
+msgid "Across %d token"
+msgid_plural "Across %d tokens"
+msgstr[0] "%d টি টোকেন মিলিয়ে"
+msgstr[1] "%d টি টোকেন মিলিয়ে"
+
+#: templates/admin/audit-log.php:150
+msgid "Succeeded"
+msgstr "সফল"
+
+#. translators: 1: number of successful calls, 2: total calls
+#: templates/admin/audit-log.php:156
+#, php-format
+msgid "%1$s of %2$s"
+msgstr "%2$s এর মধ্যে %1$s"
+
+#: templates/admin/audit-log.php:164
+msgid "Average"
+msgstr "গড়"
+
+#: templates/admin/audit-log.php:166
+msgid "Over the last 30 days"
+msgstr "গত ৩০ দিনে"
+
+#: templates/admin/audit-log.php:169
+#: templates/admin/dashboard.php:310
+msgid "Failures"
+msgstr "ব্যর্থতা"
+
+#: templates/admin/audit-log.php:171
+#: templates/admin/audit-log.php:199
+msgid "Last 24 hours"
+msgstr "গত ২৪ ঘণ্টা"
+
+#: templates/admin/audit-log.php:183
+msgid "Search ability or client"
+msgstr "অ্যাবিলিটি বা ক্লায়েন্ট খুঁজুন"
+
+#: templates/admin/audit-log.php:189
+msgid "All tokens"
+msgstr "সব টোকেন"
+
+#: templates/admin/audit-log.php:198
+msgid "All time"
+msgstr "সব সময়"
+
+#: templates/admin/audit-log.php:200
+msgid "Last 7 days"
+msgstr "গত ৭ দিন"
+
+#: templates/admin/audit-log.php:201
+msgid "Last 30 days"
+msgstr "গত ৩০ দিন"
+
+#: templates/admin/audit-log.php:206
+msgid "Reset"
+msgstr "রিসেট"
+
+#: templates/admin/audit-log.php:220
+msgid "Click a row for the payload and the exact reason a call failed."
+msgstr "পেলোড আর কল ব্যর্থ হওয়ার সঠিক কারণ দেখতে যেকোনো সারিতে ক্লিক করুন।"
+
+#. translators: 1: first entry number, 2: last entry number, 3: total entries
+#: templates/admin/audit-log.php:227
+#, php-format
+msgid "%1$s–%2$s of %3$s"
+msgstr "%3$s এর মধ্যে %1$s–%2$s"
+
+#: templates/admin/audit-log.php:233
+msgid "No entries"
+msgstr "কোনো এন্ট্রি নেই"
+
+#: templates/admin/audit-log.php:246
+msgid "No entries found"
+msgstr "কোনো এন্ট্রি পাওয়া যায়নি"
+
+#: templates/admin/audit-log.php:247
+msgid "No AI actions recorded yet"
+msgstr "AI এর কোনো কাজ এখনো রেকর্ড হয়নি"
+
+#: templates/admin/audit-log.php:251
+msgid "No log entries match the selected filters."
+msgstr "বেছে নেওয়া ফিল্টারের সঙ্গে কোনো লগ এন্ট্রি মেলেনি।"
+
+#: templates/admin/audit-log.php:252
+msgid "This is the record of what an AI assistant did on your site. Entries appear as soon as one connects."
+msgstr "আপনার সাইটে একটি AI অ্যাসিস্ট্যান্ট কী কী করেছে, এটি তারই রেকর্ড। কোনো একটি যুক্ত হওয়ার সঙ্গে সঙ্গেই এন্ট্রি দেখা যাবে।"
+
+#: templates/admin/audit-log.php:256
+msgid "Connect an AI assistant"
+msgstr "একটি AI অ্যাসিস্ট্যান্ট যুক্ত করুন"
+
+#. translators: %s: link to the Site Health page
+#: templates/admin/audit-log.php:261
+#, php-format
+msgid "Not using an AI assistant? %s scans your site on its own, with no setup."
+msgstr "AI অ্যাসিস্ট্যান্ট ব্যবহার করছেন না? %s কোনো সেটআপ ছাড়াই নিজে থেকেই আপনার সাইট স্ক্যান করে।"
+
+#: templates/admin/audit-log.php:289
+#: templates/admin/audit-log.php:300
+msgid "Unknown client"
+msgstr "অজানা ক্লায়েন্ট"
+
+#. translators: %s: WordPress user display name
+#: templates/admin/audit-log.php:297
+#, php-format
+msgid "%s (from the admin)"
+msgstr "%s (অ্যাডমিন থেকে)"
+
+#. translators: %d: execution duration in milliseconds
+#: templates/admin/audit-log.php:335
+#: templates/admin/dashboard.php:412
+#, php-format
+msgid "%d ms"
+msgstr "%d মিলিসেকেন্ড"
+
+#: templates/admin/audit-log.php:346
+msgid "When"
+msgstr "কখন"
+
+#: templates/admin/audit-log.php:351
+msgid "Source"
+msgstr "উৎস"
+
+#: templates/admin/audit-log.php:356
+#: templates/admin/dashboard.php:365
+msgid "Ability"
+msgstr "অ্যাবিলিটি"
+
+#: templates/admin/audit-log.php:361
+msgid "Status"
+msgstr "অবস্থা"
+
+#: templates/admin/audit-log.php:366
+msgid "Sent"
+msgstr "পাঠানো হয়েছে"
+
+#: templates/admin/audit-log.php:374
+msgid "Came back"
+msgstr "ফিরে এসেছে"
+
+#: templates/admin/audit-log.php:375
+msgid "Why it failed"
+msgstr "কেন ব্যর্থ হলো"
+
+#: templates/admin/audit-log.php:382
+msgid "User agent"
+msgstr "ইউজার এজেন্ট"
+
+#: templates/admin/dashboard.php:56
+msgid "No HTTPS on this site"
+msgstr "এই সাইটে HTTPS নেই"
+
+#: templates/admin/dashboard.php:57
+msgid "Every token you issue travels in plain text."
+msgstr "আপনার দেওয়া প্রতিটি টোকেন খোলা লেখায় যাতায়াত করে।"
+
+#: templates/admin/dashboard.php:59
+msgid "Run the checks"
+msgstr "পরীক্ষাগুলো চালান"
+
+#. translators: %d: number of tokens expiring within 30 days
+#: templates/admin/dashboard.php:67
+#, php-format
+msgid "%d token expires within 30 days"
+msgid_plural "%d tokens expire within 30 days"
+msgstr[0] "%d টি টোকেনের মেয়াদ ৩০ দিনের মধ্যে শেষ হবে"
+msgstr[1] "%d টি টোকেনের মেয়াদ ৩০ দিনের মধ্যে শেষ হবে"
+
+#: templates/admin/dashboard.php:70
+msgid "Clients using them will stop working the moment they lapse."
+msgstr "মেয়াদ শেষ হওয়ার সঙ্গে সঙ্গেই এগুলো ব্যবহার করা ক্লায়েন্টগুলো কাজ করা বন্ধ করে দেবে।"
+
+#: templates/admin/dashboard.php:72
+msgid "Rotate them now"
+msgstr "এখনই বদলে নিন"
+
+#: templates/admin/dashboard.php:78
+msgid "The MCP endpoint is switched off"
+msgstr "MCP এন্ডপয়েন্ট বন্ধ আছে"
+
+#: templates/admin/dashboard.php:79
+msgid "No agent can reach this site until you turn it back on."
+msgstr "আবার চালু না করা পর্যন্ত কোনো এজেন্ট এই সাইটে পৌঁছাতে পারবে না।"
+
+#: templates/admin/dashboard.php:81
+#: templates/admin/documentation.php:295
+msgid "Open settings"
+msgstr "সেটিংস খুলুন"
+
+#: templates/admin/dashboard.php:130
+#: templates/admin/settings.php:16
+msgid "Posts, pages, custom post types"
+msgstr "পোস্ট, পেজ, কাস্টম পোস্ট টাইপ"
+
+#: templates/admin/dashboard.php:135
+#: templates/admin/settings.php:21
+msgid "Products, orders, coupons"
+msgstr "পণ্য, অর্ডার, কুপন"
+
+#: templates/admin/dashboard.php:162
+msgid "Needs you"
+msgstr "আপনার নজর দরকার"
+
+#: templates/admin/dashboard.php:164
+msgid "Stream"
+msgstr "স্ট্রিম"
+
+#: templates/admin/dashboard.php:165
+msgid "Surface"
+msgstr "পরিসর"
+
+#: templates/admin/dashboard.php:166
+msgid "Connect"
+msgstr "সংযোগ"
+
+#. translators: %d: number of active tokens
+#: templates/admin/dashboard.php:171
+#, php-format
+msgid "%d token issued."
+msgid_plural "%d tokens issued."
+msgstr[0] "%d টি টোকেন দেওয়া হয়েছে।"
+msgstr[1] "%d টি টোকেন দেওয়া হয়েছে।"
+
+#: templates/admin/dashboard.php:174
+msgid "Review tokens"
+msgstr "টোকেনগুলো দেখুন"
+
+#: templates/admin/dashboard.php:183
+msgid "Overview"
+msgstr "সারসংক্ষেপ"
+
+#. translators: 1: number of calls today, 2: number of active tokens, 3: number of errors in the last 24 hours
+#: templates/admin/dashboard.php:188
+#, php-format
+msgid "%1$s calls from %2$s. %3$s failed in the last 24 hours."
+msgstr "%2$s থেকে %1$s টি কল। গত ২৪ ঘণ্টায় %3$s টি ব্যর্থ হয়েছে।"
+
+#. translators: %d: number of active tokens
+#: templates/admin/dashboard.php:192
+#, php-format
+msgid "%d token"
+msgid_plural "%d tokens"
+msgstr[0] "%d টি টোকেন"
+msgstr[1] "%d টি টোকেন"
+
+#: templates/admin/dashboard.php:199
+msgid "Refresh"
+msgstr "রিফ্রেশ"
+
+#: templates/admin/dashboard.php:200
+#: templates/admin/tokens.php:144
+msgid "New token"
+msgstr "নতুন টোকেন"
+
+#: templates/admin/dashboard.php:208
+msgid "You have never scanned this site"
+msgstr "আপনি এই সাইটটি কখনো স্ক্যান করেননি"
+
+#: templates/admin/dashboard.php:210
+msgid "Find broken links, missing SEO data, and health issues in about 30 seconds. No setup required."
+msgstr "প্রায় ৩০ সেকেন্ডেই ভাঙা লিঙ্ক, না থাকা SEO তথ্য আর অন্যান্য সমস্যা খুঁজে বের করুন। কোনো সেটআপ লাগবে না।"
+
+#: templates/admin/dashboard.php:214
+#: templates/admin/health.php:116
+msgid "Scan My Site"
+msgstr "আমার সাইট স্ক্যান করুন"
+
+#: templates/admin/dashboard.php:224
+#: templates/admin/health.php:136
+#: templates/export/shared-report.php:154
+msgid "/ 100"
+msgstr "/ ১০০"
+
+#. translators: %s: score band, e.g. "Good"
+#: templates/admin/dashboard.php:231
+#, php-format
+msgid "Site health: %s"
+msgstr "সাইটের অবস্থা: %s"
+
+#. translators: %s: human readable time difference, e.g. "5 minutes"
+#: templates/admin/dashboard.php:240
+#: templates/admin/health.php:146
+#, php-format
+msgid "Last scanned %s ago"
+msgstr "শেষ স্ক্যান %s আগে"
+
+#: templates/admin/dashboard.php:252
+msgid "View report"
+msgstr "রিপোর্ট দেখুন"
+
+#: templates/admin/dashboard.php:261
+msgid "Server active"
+msgstr "সার্ভার সক্রিয়"
+
+#: templates/admin/dashboard.php:261
+msgid "Server stopped"
+msgstr "সার্ভার বন্ধ"
+
+#: templates/admin/dashboard.php:268
+#: templates/admin/dashboard.php:552
+#: templates/admin/dashboard.php:568
+#: templates/admin/dashboard.php:597
+#: templates/admin/dashboard.php:606
+#: templates/admin/dashboard.php:616
+#: templates/admin/documentation.php:313
+#: templates/admin/health.php:258
+#: templates/admin/tokens.php:528
+#: templates/admin/tokens.php:567
+#: templates/admin/tokens.php:579
+#: templates/admin/tokens.php:604
+#: templates/admin/tokens.php:614
+#: templates/admin/tokens.php:624
+#: templates/partials/header.php:132
+#: assets/js/health-scan.js:1023
+msgid "Copy"
+msgstr "কপি"
+
+#: templates/admin/dashboard.php:271
+msgid "Protocol 2024-11-05"
+msgstr "প্রোটোকল 2024-11-05"
+
+#: templates/admin/dashboard.php:277
+msgid "Calls today"
+msgstr "আজকের কল"
+
+#. translators: %d: percentage change in API calls
+#: templates/admin/dashboard.php:284
+#, php-format
+msgid "%d%% against yesterday"
+msgstr "গতকালের তুলনায় %d%%"
+
+#: templates/admin/dashboard.php:290
+msgid "Abilities on"
+msgstr "চালু অ্যাবিলিটি"
+
+#. translators: %d: number of abilities switched off
+#: templates/admin/dashboard.php:295
+#, php-format
+msgid "%d held back by you"
+msgstr "আপনি %d টি আটকে রেখেছেন"
+
+#: templates/admin/dashboard.php:300
+msgid "Average duration"
+msgstr "গড় সময়"
+
+#. translators: %d: number of active tokens
+#: templates/admin/dashboard.php:305
+#, php-format
+msgid "Across %d active tokens"
+msgstr "%d টি সক্রিয় টোকেন মিলিয়ে"
+
+#. translators: %s: error rate percentage
+#: templates/admin/dashboard.php:315
+#, php-format
+msgid "%s%% error rate this month"
+msgstr "এই মাসে %s%% এরর হার"
+
+#: templates/admin/dashboard.php:344
+msgid "Request stream"
+msgstr "রিকোয়েস্ট স্ট্রিম"
+
+#: templates/admin/dashboard.php:345
+msgid "The most recent calls, newest first."
+msgstr "সবচেয়ে সাম্প্রতিক কলগুলো, নতুনগুলো আগে।"
+
+#: templates/admin/dashboard.php:348
+msgid "Full audit →"
+msgstr "পূর্ণ অডিট →"
+
+#: templates/admin/dashboard.php:356
+msgid "Waiting for activity"
+msgstr "কাজের অপেক্ষায়"
+
+#: templates/admin/dashboard.php:357
+msgid "Calls appear here the moment your AI client makes its first request."
+msgstr "আপনার AI ক্লায়েন্ট প্রথম রিকোয়েস্ট পাঠানোর সঙ্গে সঙ্গেই কলগুলো এখানে দেখা যাবে।"
+
+#: templates/admin/dashboard.php:364
+msgid "Time"
+msgstr "সময়"
+
+#: templates/admin/dashboard.php:366
+msgid "Client"
+msgstr "ক্লায়েন্ট"
+
+#: templates/admin/dashboard.php:367
+#: templates/export/health-print.php:257
+msgid "Result"
+msgstr "ফলাফল"
+
+#: templates/admin/dashboard.php:368
+msgid "Duration"
+msgstr "সময়কাল"
+
+#: templates/admin/dashboard.php:397
+#: templates/admin/tokens.php:635
+msgid "Done"
+msgstr "সম্পন্ন"
+
+#: templates/admin/dashboard.php:399
+msgid "Failed 500"
+msgstr "ব্যর্থ ৫০০"
+
+#: templates/admin/dashboard.php:401
+msgid "Throttled 429"
+msgstr "সীমিত ৪২৯"
+
+#: templates/admin/dashboard.php:433
+msgid "Permission surface"
+msgstr "অনুমতির পরিসর"
+
+#: templates/admin/dashboard.php:434
+msgid "How much of each module is reachable right now."
+msgstr "এই মুহূর্তে প্রতিটি মডিউলের কতটুকুতে পৌঁছানো যাচ্ছে।"
+
+#: templates/admin/dashboard.php:437
+msgid "Change →"
+msgstr "বদলান →"
+
+#: templates/admin/dashboard.php:464
+msgid "Switched off in settings"
+msgstr "সেটিংসে বন্ধ করা আছে"
+
+#: templates/admin/dashboard.php:490
+msgid "Connect an AI assistant (Claude Desktop, Cursor)"
+msgstr "একটি AI অ্যাসিস্ট্যান্ট যুক্ত করুন (Claude Desktop, Cursor)"
+
+#: templates/admin/dashboard.php:491
+#: templates/admin/feature-request.php:73
+msgid "optional"
+msgstr "ঐচ্ছিক"
+
+#: templates/admin/dashboard.php:497
+msgid "Connect a client"
+msgstr "একটি ক্লায়েন্ট যুক্ত করুন"
+
+#: templates/admin/dashboard.php:498
+msgid "Paste a token, run two commands, restart. Under a minute."
+msgstr "একটি টোকেন পেস্ট করুন, দুটি কমান্ড চালান, তারপর রিস্টার্ট। এক মিনিটেরও কম।"
+
+#: templates/admin/dashboard.php:501
+msgid "Make a token →"
+msgstr "একটি টোকেন বানান →"
+
+#: templates/admin/dashboard.php:506
+msgid "01 — Your API token"
+msgstr "০১ — আপনার API টোকেন"
+
+#: templates/admin/dashboard.php:509
+msgid "Shown once, at creation. Nothing you paste here is stored or sent anywhere."
+msgstr "তৈরির সময় একবারই দেখানো হয়। এখানে যা পেস্ট করবেন তা কোথাও সংরক্ষণ বা পাঠানো হয় না।"
+
+#: templates/admin/dashboard.php:513
+msgid "02 — Pick your client"
+msgstr "০২ — আপনার ক্লায়েন্ট বেছে নিন"
+
+#: templates/admin/dashboard.php:516
+#: templates/admin/documentation.php:241
+#: templates/admin/tokens.php:537
+msgid "Claude Desktop"
+msgstr "Claude Desktop"
+
+#: templates/admin/dashboard.php:518
+msgid "Cursor / IDEs"
+msgstr "Cursor / IDE"
+
+#: templates/admin/dashboard.php:527
+msgid "03 — Operating system"
+msgstr "০৩ — অপারেটিং সিস্টেম"
+
+#: templates/admin/dashboard.php:530
+#: templates/admin/tokens.php:549
+msgid "Windows"
+msgstr "Windows"
+
+#: templates/admin/dashboard.php:532
+#: templates/admin/tokens.php:552
+msgid "macOS"
+msgstr "macOS"
+
+#: templates/admin/dashboard.php:534
+#: templates/admin/tokens.php:555
+msgid "Linux"
+msgstr "Linux"
+
+#: templates/admin/dashboard.php:544
+#: templates/admin/tokens.php:562
+msgid "Install mcp-remote"
+msgstr "mcp-remote ইনস্টল করুন"
+
+#: templates/admin/dashboard.php:559
+#: templates/admin/tokens.php:574
+msgid "Register this site with Claude Desktop"
+msgstr "Claude Desktop এ এই সাইটটি নিবন্ধন করুন"
+
+#: templates/admin/dashboard.php:564
+msgid "Paste your token above first"
+msgstr "আগে উপরে আপনার টোকেনটি পেস্ট করুন"
+
+#: templates/admin/dashboard.php:576
+#: templates/admin/tokens.php:587
+msgid "Run step 1 and wait for it to finish before running step 2, then restart Claude Desktop."
+msgstr "১ নম্বর ধাপটি চালিয়ে শেষ হওয়া পর্যন্ত অপেক্ষা করুন, তারপর ২ নম্বর ধাপ চালান, শেষে Claude Desktop রিস্টার্ট করুন।"
+
+#. translators: %s: link to nodejs.org
+#: templates/admin/dashboard.php:580
+#: templates/admin/tokens.php:591
+#, php-format
+msgid "No Node.js? Download LTS from %s first."
+msgstr "Node.js নেই? আগে %s থেকে LTS সংস্করণটি ডাউনলোড করুন।"
+
+#: templates/admin/dashboard.php:592
+#: templates/admin/tokens.php:600
+msgid "Server URL"
+msgstr "সার্ভার URL"
+
+#: templates/admin/dashboard.php:602
+#: templates/admin/tokens.php:610
+msgid "Type"
+msgstr "ধরন"
+
+#: templates/admin/dashboard.php:611
+#: templates/admin/tokens.php:620
+msgid "Authorization header"
+msgstr "Authorization হেডার"
+
+#: templates/admin/dashboard.php:622
+#: templates/admin/tokens.php:629
+msgid "In Cursor: Settings → Features → MCP Servers → Add new MCP server. Set Type to HTTP, then paste the URL and the Authorization header."
+msgstr "Cursor এ: Settings → Features → MCP Servers → Add new MCP server। Type হিসেবে HTTP বেছে নিন, তারপর URL আর Authorization হেডারটি পেস্ট করুন।"
+
+#: templates/admin/dashboard.php:634
+msgid "For site administrators"
+msgstr "সাইট অ্যাডমিনিস্ট্রেটরদের জন্য"
+
+#. translators: %s: link to abilities tab
+#: templates/admin/dashboard.php:638
+#, php-format
+msgid "My Site Hand exposes only the abilities you explicitly enable in the %s tab. Review them before sharing tokens with AI clients."
+msgstr "%s ট্যাবে আপনি নিজে হাতে যেসব অ্যাবিলিটি চালু করেছেন, My Site Hand কেবল সেগুলোই খুলে দেয়। AI ক্লায়েন্টের সঙ্গে টোকেন শেয়ার করার আগে সেগুলো একবার দেখে নিন।"
+
+#: templates/admin/dashboard.php:645
+msgid "Dismiss"
+msgstr "বন্ধ করুন"
+
+#: templates/admin/documentation.php:22
+msgid "Content management"
+msgstr "কনটেন্ট ব্যবস্থাপনা"
+
+#: templates/admin/documentation.php:25
+msgid "List the 5 most recent published posts on my site and summarize them."
+msgstr "আমার সাইটের সবচেয়ে সাম্প্রতিক ৫টি প্রকাশিত পোস্টের তালিকা দাও আর সংক্ষেপে বলো।"
+
+#: templates/admin/documentation.php:26
+msgid "Write a draft post about the importance of web accessibility and save it."
+msgstr "ওয়েব অ্যাক্সেসিবিলিটি কেন জরুরি তা নিয়ে একটি খসড়া পোস্ট লিখে সেভ করো।"
+
+#: templates/admin/documentation.php:27
+msgid "Find page ID 12, append a section explaining our cookie policy, and set its status to draft."
+msgstr "১২ নম্বর পেজটি খুঁজে বের করো, আমাদের কুকি নীতি ব্যাখ্যা করে একটি অংশ যোগ করো, আর অবস্থা খসড়া করে দাও।"
+
+#: templates/admin/documentation.php:31
+msgid "SEO power-tools"
+msgstr "SEO টুল"
+
+#: templates/admin/documentation.php:34
+msgid "Audit the SEO keyword of our main service page and advise if it is optimized."
+msgstr "আমাদের মূল সেবার পাতার SEO কীওয়ার্ড যাচাই করো আর বলো এটি ঠিকঠাক আছে কি না।"
+
+#: templates/admin/documentation.php:35
+msgid "Generate and write an SEO-optimized meta description for my last blog post."
+msgstr "আমার সর্বশেষ ব্লগ পোস্টের জন্য SEO-বান্ধব একটি মেটা ডেসক্রিপশন লিখে বসিয়ে দাও।"
+
+#: templates/admin/documentation.php:36
+msgid "Scan my latest published article for any broken outbound links."
+msgstr "আমার সর্বশেষ প্রকাশিত লেখাটিতে ভাঙা বাইরের লিঙ্ক আছে কি না দেখো।"
+
+#: templates/admin/documentation.php:40
+msgid "WooCommerce store"
+msgstr "WooCommerce দোকান"
+
+#: templates/admin/documentation.php:43
+msgid "Provide a summary of today's WooCommerce sales, revenue, and total orders."
+msgstr "আজকের WooCommerce বিক্রি, আয় ও মোট অর্ডারের একটি সারসংক্ষেপ দাও।"
+
+#: templates/admin/documentation.php:44
+msgid "Search for order ID #450 and tell me who the customer is and its status."
+msgstr "#৪৫০ নম্বর অর্ডারটি খুঁজে বের করে বলো ক্রেতা কে আর অর্ডারের অবস্থা কী।"
+
+#: templates/admin/documentation.php:45
+msgid "Check if there are any items currently out of stock or low in quantity."
+msgstr "এখন কোনো পণ্য স্টকে নেই বা কম আছে কি না দেখো।"
+
+#: templates/admin/documentation.php:49
+msgid "Diagnostics & alt text"
+msgstr "ডায়াগনস্টিকস ও alt টেক্সট"
+
+#: templates/admin/documentation.php:52
+msgid "Provide a system health report of my server requirements."
+msgstr "আমার সার্ভারের প্রয়োজনীয়তা নিয়ে একটি সিস্টেম হেলথ রিপোর্ট দাও।"
+
+#: templates/admin/documentation.php:53
+msgid "Scan my error log file and list the most recent warning messages."
+msgstr "আমার এরর লগ ফাইলটি দেখে সাম্প্রতিক সতর্কবার্তাগুলোর তালিকা দাও।"
+
+#: templates/admin/documentation.php:54
+msgid "Find images in the media library that are missing alt tags."
+msgstr "মিডিয়া লাইব্রেরিতে যেসব ছবিতে alt ট্যাগ নেই সেগুলো খুঁজে বের করো।"
+
+#: templates/admin/documentation.php:104
+msgid "Guide"
+msgstr "নির্দেশিকা"
+
+#: templates/admin/documentation.php:106
+msgid "Connect a client, learn what to ask it, and understand exactly what it can reach."
+msgstr "একটি ক্লায়েন্ট যুক্ত করুন, কী জিজ্ঞেস করবেন তা শিখুন, আর ঠিক কতটুকুতে সেটি পৌঁছাতে পারে তা বুঝে নিন।"
+
+#: templates/admin/documentation.php:109
+msgid "Make a token"
+msgstr "একটি টোকেন বানান"
+
+#: templates/admin/documentation.php:118
+msgid "Quick start"
+msgstr "শুরু করা"
+
+#: templates/admin/documentation.php:122
+msgid "Client setup"
+msgstr "ক্লায়েন্ট সেটআপ"
+
+#: templates/admin/documentation.php:126
+#: templates/admin/documentation.php:326
+msgid "Example prompts"
+msgstr "নমুনা প্রম্পট"
+
+#: templates/admin/documentation.php:130
+msgid "Security & audits"
+msgstr "নিরাপত্তা ও অডিট"
+
+#: templates/admin/documentation.php:134
+#: templates/admin/documentation.php:414
+msgid "Troubleshooting"
+msgstr "সমস্যা সমাধান"
+
+#: templates/admin/documentation.php:137
+msgid "Nothing on this page leaves your server. The plugin talks only to the clients you connect."
+msgstr "এই পাতার কিছুই আপনার সার্ভারের বাইরে যায় না। প্লাগইনটি কেবল আপনার যুক্ত করা ক্লায়েন্টগুলোর সঙ্গেই কথা বলে।"
+
+#: templates/admin/documentation.php:138
+msgid "See the audit log"
+msgstr "অডিট লগ দেখুন"
+
+#: templates/admin/documentation.php:149
+msgid "Connecting in four steps"
+msgstr "চার ধাপে সংযোগ"
+
+#: templates/admin/documentation.php:153
+msgid "My Site Hand bridges WordPress and AI clients using the Model Context Protocol. Once connected, you can write posts, review system health, run SEO diagnostics, and check WooCommerce details with plain conversational commands."
+msgstr "My Site Hand, Model Context Protocol ব্যবহার করে WordPress আর AI ক্লায়েন্টের মধ্যে সেতু তৈরি করে। একবার যুক্ত হয়ে গেলে সাধারণ কথ্য নির্দেশ দিয়েই পোস্ট লেখা, সিস্টেমের অবস্থা দেখা, SEO ডায়াগনস্টিক চালানো আর WooCommerce এর তথ্য দেখা যায়।"
+
+#: templates/admin/documentation.php:160
+msgid "Generate an API token"
+msgstr "একটি API টোকেন তৈরি করুন"
+
+#. translators: 1: opening <a> tag link to API Tokens page, 2: closing </a> tag
+#: templates/admin/documentation.php:165
+#, php-format
+msgid "Open the %1$sAPI Tokens page%2$s and click \"New token\". Give it a name you will recognise in the audit log, then pick a scope — full access, or a limited set of abilities."
+msgstr "%1$sAPI টোকেন পাতাটি%2$s খুলে \"নতুন টোকেন\" এ ক্লিক করুন। এমন একটি নাম দিন যা অডিট লগে দেখলে চিনতে পারবেন, তারপর স্কোপ বেছে নিন — পূর্ণ অ্যাক্সেস, নাকি নির্দিষ্ট কয়েকটি অ্যাবিলিটি।"
+
+#: templates/admin/documentation.php:178
+msgid "Copy the token immediately"
+msgstr "টোকেনটি সঙ্গে সঙ্গে কপি করুন"
+
+#: templates/admin/documentation.php:179
+msgid "Only a SHA-256 hash is stored, so the token itself can never be shown again. Copy it before you close the dialog."
+msgstr "শুধু একটি SHA-256 হ্যাশ সংরক্ষণ করা হয়, তাই টোকেনটি আর কখনোই দেখানো যাবে না। উইন্ডোটি বন্ধ করার আগেই কপি করে নিন।"
+
+#: templates/admin/documentation.php:186
+msgid "Paste it on the dashboard"
+msgstr "ড্যাশবোর্ডে পেস্ট করুন"
+
+#. translators: 1: opening <a> tag link to Dashboard page, 2: closing </a> tag
+#: templates/admin/documentation.php:191
+#, php-format
+msgid "Go to the %1$sDashboard%2$s and paste the token into the Connect a client field. Nothing is saved — it is used only to build the commands in your browser."
+msgstr "%1$sড্যাশবোর্ডে%2$s গিয়ে \"একটি ক্লায়েন্ট যুক্ত করুন\" ঘরে টোকেনটি পেস্ট করুন। কিছুই সংরক্ষণ হয় না — এটি শুধু আপনার ব্রাউজারে কমান্ডগুলো বানাতে কাজে লাগে।"
+
+#: templates/admin/documentation.php:204
+msgid "Run the two generated commands"
+msgstr "তৈরি হওয়া দুটি কমান্ড চালান"
+
+#: templates/admin/documentation.php:205
+msgid "The dashboard writes commands tailored to your operating system. Run step 1 to install the connector, then step 2 to register this site, and restart the client."
+msgstr "ড্যাশবোর্ড আপনার অপারেটিং সিস্টেম অনুযায়ী কমান্ড লিখে দেয়। কানেক্টর ইনস্টল করতে ১ নম্বর ধাপ চালান, এই সাইটটি নিবন্ধন করতে ২ নম্বর ধাপ, তারপর ক্লায়েন্টটি রিস্টার্ট করুন।"
+
+#: templates/admin/documentation.php:217
+msgid "How the connection works"
+msgstr "সংযোগটি কীভাবে কাজ করে"
+
+#: templates/admin/documentation.php:220
+msgid "Instead of installing software on your server, My Site Hand uses your existing WordPress site as the gateway. Here is what happens on every call:"
+msgstr "আপনার সার্ভারে আলাদা কোনো সফটওয়্যার বসানোর বদলে My Site Hand আপনার চালু WordPress সাইটটিকেই প্রবেশপথ হিসেবে ব্যবহার করে। প্রতিটি কলে যা ঘটে:"
+
+#: templates/admin/documentation.php:224
+msgid "A secure REST endpoint"
+msgstr "একটি নিরাপদ REST এন্ডপয়েন্ট"
+
+#: templates/admin/documentation.php:225
+msgid "The plugin opens one streamable channel on the standard WordPress REST API. Clients post to it to discover or run abilities."
+msgstr "প্লাগইনটি সাধারণ WordPress REST API তে একটি স্ট্রিমযোগ্য চ্যানেল খোলে। ক্লায়েন্টরা অ্যাবিলিটি খুঁজতে বা চালাতে সেখানেই রিকোয়েস্ট পাঠায়।"
+
+#: templates/admin/documentation.php:228
+msgid "A local connector (mcp-remote)"
+msgstr "একটি লোকাল কানেক্টর (mcp-remote)"
+
+#: templates/admin/documentation.php:229
+msgid "The setup command configures a small utility on your own machine. It bridges your desktop client and this site, carrying the Authorization header with every request."
+msgstr "সেটআপ কমান্ডটি আপনার নিজের কম্পিউটারে ছোট একটি ইউটিলিটি বসিয়ে দেয়। এটি আপনার ডেস্কটপ ক্লায়েন্ট ও এই সাইটের মধ্যে সেতু হিসেবে কাজ করে, আর প্রতিটি রিকোয়েস্টের সঙ্গে Authorization হেডারটি বয়ে নিয়ে যায়।"
+
+#: templates/admin/documentation.php:232
+msgid "Mapping and execution"
+msgstr "মিলিয়ে নেওয়া ও চালানো"
+
+#: templates/admin/documentation.php:233
+msgid "Ask for your draft pages and the client turns that into a structured call. The plugin runs the matching ability, checks the token scope, writes an audit entry, and returns clean text."
+msgstr "আপনি খসড়া পাতাগুলো চাইলে ক্লায়েন্ট সেটিকে একটি কাঠামোবদ্ধ কলে রূপ দেয়। প্লাগইনটি মিলে যাওয়া অ্যাবিলিটিটি চালায়, টোকেনের স্কোপ যাচাই করে, একটি অডিট এন্ট্রি লেখে, আর পরিষ্কার লেখা ফেরত দেয়।"
+
+#: templates/admin/documentation.php:249
+msgid "Get your exact commands"
+msgstr "আপনার নিজের কমান্ডগুলো নিন"
+
+#. translators: 1: opening <a> tag link to Dashboard page, 2: closing </a> tag
+#: templates/admin/documentation.php:254
+#, php-format
+msgid "Open the %1$sDashboard%2$s and paste your token. The setup commands appear with your endpoint and credentials already filled in."
+msgstr "%1$sড্যাশবোর্ডটি%2$s খুলে আপনার টোকেনটি পেস্ট করুন। সেটআপ কমান্ডগুলো আপনার এন্ডপয়েন্ট ও পরিচয় বসানো অবস্থাতেই দেখা যাবে।"
+
+#: templates/admin/documentation.php:264
+msgid "Manual config, if you prefer"
+msgstr "চাইলে হাতে কনফিগ করুন"
+
+#: templates/admin/documentation.php:265
+msgid "Add this entry to your local claude_desktop_config.json instead:"
+msgstr "তার বদলে আপনার claude_desktop_config.json ফাইলে এই অংশটি যোগ করুন:"
+
+#: templates/admin/documentation.php:288
+msgid "Cursor and other IDEs"
+msgstr "Cursor ও অন্যান্য IDE"
+
+#: templates/admin/documentation.php:291
+msgid "Cursor connects to the endpoint directly — no local connector needed."
+msgstr "Cursor সরাসরি এন্ডপয়েন্টে যুক্ত হয় — আলাদা কোনো লোকাল কানেক্টর লাগে না।"
+
+#: templates/admin/documentation.php:296
+msgid "Cursor Settings (cog icon, top right) → Features → MCP."
+msgstr "Cursor Settings (উপরে ডানদিকের গিয়ার আইকন) → Features → MCP।"
+
+#: templates/admin/documentation.php:299
+msgid "Add a new server"
+msgstr "নতুন একটি সার্ভার যোগ করুন"
+
+#: templates/admin/documentation.php:300
+msgid "Click \"+ Add New MCP Server\", name it My Site Hand, and set Type to HTTP."
+msgstr "\"+ Add New MCP Server\" এ ক্লিক করে নাম দিন My Site Hand, আর Type হিসেবে HTTP বেছে নিন।"
+
+#: templates/admin/documentation.php:303
+msgid "Paste the URL and header"
+msgstr "URL ও হেডারটি পেস্ট করুন"
+
+#: templates/admin/documentation.php:304
+msgid "Use the endpoint below, and add Authorization: Bearer YOUR_TOKEN as a header."
+msgstr "নিচের এন্ডপয়েন্টটি ব্যবহার করুন, আর হেডার হিসেবে Authorization: Bearer YOUR_TOKEN যোগ করুন।"
+
+#: templates/admin/documentation.php:308
+msgid "Your endpoint"
+msgstr "আপনার এন্ডপয়েন্ট"
+
+#: templates/admin/documentation.php:317
+msgid "The token must travel in the Authorization header. Passing it in the URL query string is disabled by default, and only worth enabling if your client cannot send headers."
+msgstr "টোকেনটি Authorization হেডারেই যেতে হবে। URL এর কোয়েরি স্ট্রিংয়ে পাঠানো ডিফল্টভাবে বন্ধ রাখা আছে, আর আপনার ক্লায়েন্ট হেডার পাঠাতে না পারলেই কেবল এটি চালু করা যুক্তিযুক্ত।"
+
+#: templates/admin/documentation.php:329
+msgid "Real requests that work once a client is connected. Click any one to copy it."
+msgstr "ক্লায়েন্ট যুক্ত হয়ে গেলে সত্যিই কাজ করে এমন কিছু অনুরোধ। কপি করতে যেকোনোটিতে ক্লিক করুন।"
+
+#: templates/admin/documentation.php:341
+msgid "Click to copy"
+msgstr "কপি করতে ক্লিক করুন"
+
+#: templates/admin/documentation.php:358
+msgid "Security and permissions"
+msgstr "নিরাপত্তা ও অনুমতি"
+
+#: templates/admin/documentation.php:361
+msgid "Three layers decide whether a call is allowed: the ability must be enabled, the module it belongs to must be on, and the token must carry the scope for it."
+msgstr "একটি কল অনুমোদিত কি না তা তিনটি স্তর ঠিক করে: অ্যাবিলিটিটি চালু থাকতে হবে, সেটি যে মডিউলের সেটিও চালু থাকতে হবে, আর টোকেনটির সেই স্কোপ থাকতে হবে।"
+
+#: templates/admin/documentation.php:367
+msgid "Hashed access tokens"
+msgstr "হ্যাশ করা অ্যাক্সেস টোকেন"
+
+#: templates/admin/documentation.php:368
+msgid "Every token is hashed with SHA-256 before it touches the database. Plaintext keys are never stored, so a database leak does not hand anyone a working credential."
+msgstr "ডেটাবেসে পৌঁছানোর আগেই প্রতিটি টোকেন SHA-256 দিয়ে হ্যাশ করা হয়। খোলা লেখায় কোনো কী সংরক্ষণ করা হয় না, তাই ডেটাবেস ফাঁস হলেও কারও হাতে কার্যকর কোনো পরিচয় পড়ে না।"
+
+#: templates/admin/documentation.php:375
+msgid "Granular scopes"
+msgstr "সূক্ষ্ম স্কোপ"
+
+#: templates/admin/documentation.php:376
+msgid "Read lets an agent look but not touch. Write adds create and update. Admin unlocks the destructive abilities — deleting content, reading error logs, repairing tables. Custom lets you tick abilities one at a time."
+msgstr "পড়া দিলে এজেন্ট দেখতে পারে, ছুঁতে পারে না। লেখা যোগ করলে তৈরি ও হালনাগাদও করতে পারে। অ্যাডমিন খুলে দেয় ধ্বংসাত্মক অ্যাবিলিটিগুলো — কনটেন্ট মোছা, এরর লগ পড়া, টেবিল মেরামত। কাস্টম দিলে একটি একটি করে অ্যাবিলিটি বেছে নিতে পারেন।"
+
+#: templates/admin/documentation.php:383
+msgid "IP allowlists and rate limits"
+msgstr "IP অনুমোদিত তালিকা ও সীমা"
+
+#: templates/admin/documentation.php:384
+msgid "A token can be pinned to specific IPs or CIDR ranges. Hourly and daily caps are counted per token, so one runaway client cannot starve the others."
+msgstr "একটি টোকেনকে নির্দিষ্ট IP বা CIDR পরিসরে বেঁধে দেওয়া যায়। ঘণ্টা ও দিনের সীমা প্রতিটি টোকেনের জন্য আলাদাভাবে গোনা হয়, তাই বেসামাল একটি ক্লায়েন্ট বাকিদের আটকে দিতে পারে না।"
+
+#: templates/admin/documentation.php:391
+msgid "A full audit trail"
+msgstr "পূর্ণ অডিট রেকর্ড"
+
+#. translators: 1: opening <a> tag link to Audit Log page, 2: closing </a> tag
+#: templates/admin/documentation.php:396
+#, php-format
+msgid "Every call is recorded as it happens. The %1$saudit log%2$s shows the ability requested, the payload sent, the calling IP, the result, and how long it took."
+msgstr "প্রতিটি কল ঘটার সঙ্গে সঙ্গেই লিখে রাখা হয়। %1$sঅডিট লগে%2$s দেখা যায় কোন অ্যাবিলিটি চাওয়া হয়েছিল, কী পেলোড পাঠানো হয়েছিল, কোন IP থেকে এসেছিল, ফল কী হয়েছিল আর কত সময় লেগেছিল।"
+
+#: templates/admin/documentation.php:419
+msgid "Why can the AI not connect to my site?"
+msgstr "AI কেন আমার সাইটে যুক্ত হতে পারছে না?"
+
+#: templates/admin/documentation.php:420
+msgid "Usually loopback routing on the host or a local server setup. Open About & Info and run the REST API loopback test to see whether your server can reach its own endpoints."
+msgstr "সাধারণত হোস্টের লুপব্যাক রাউটিং বা লোকাল সার্ভার সেটআপের কারণে। \"পরিচিতি ও তথ্য\" পাতা খুলে REST API লুপব্যাক পরীক্ষাটি চালিয়ে দেখুন, আপনার সার্ভার নিজের এন্ডপয়েন্টে পৌঁছাতে পারে কি না।"
+
+#: templates/admin/documentation.php:424
+msgid "Do I need Node.js?"
+msgstr "আমার কি Node.js লাগবে?"
+
+#: templates/admin/documentation.php:425
+msgid "Only for Claude Desktop, which reaches this site through the mcp-remote connector. Cursor and other HTTP-capable clients connect to the endpoint directly."
+msgstr "শুধু Claude Desktop এর জন্য, যেটি mcp-remote কানেক্টরের মাধ্যমে এই সাইটে পৌঁছায়। Cursor ও অন্যান্য HTTP-সক্ষম ক্লায়েন্ট সরাসরি এন্ডপয়েন্টে যুক্ত হয়।"
+
+#: templates/admin/documentation.php:429
+msgid "Can I use it with VS Code or other editors?"
+msgstr "VS Code বা অন্য এডিটরে কি ব্যবহার করা যাবে?"
+
+#: templates/admin/documentation.php:430
+msgid "Yes. Any client that speaks the Model Context Protocol — including VS Code extensions such as Roo Code or Cline — can load this plugin using the endpoint on the Client setup tab."
+msgstr "হ্যাঁ। যেকোনো ক্লায়েন্ট যেটি Model Context Protocol বোঝে — Roo Code বা Cline এর মতো VS Code এক্সটেনশনসহ — \"ক্লায়েন্ট সেটআপ\" ট্যাবের এন্ডপয়েন্ট দিয়ে এই প্লাগইনটি যুক্ত করতে পারে।"
+
+#: templates/admin/documentation.php:434
+msgid "Does the plugin send my data anywhere?"
+msgstr "প্লাগইনটি কি আমার তথ্য কোথাও পাঠায়?"
+
+#: templates/admin/documentation.php:435
+msgid "No. My Site Hand runs entirely on your WordPress host. Your content, logs, products, and configuration go only to the clients you connect, on the calls they make."
+msgstr "না। My Site Hand পুরোপুরি আপনার WordPress হোস্টেই চলে। আপনার কনটেন্ট, লগ, পণ্য ও কনফিগারেশন কেবল আপনার যুক্ত করা ক্লায়েন্টগুলোর কাছেই যায়, তারা যে কলগুলো করে সেগুলোতেই।"
+
+#: templates/admin/documentation.php:439
+msgid "A call came back as 429. What now?"
+msgstr "একটি কল ৪২৯ হয়ে ফিরে এসেছে। এখন কী?"
+
+#: templates/admin/documentation.php:440
+msgid "The token hit its hourly or daily cap. Raise the limits under Settings → Limits, or wait for the window to roll over. Throttled calls are written to the audit log too."
+msgstr "টোকেনটি তার ঘণ্টা বা দিনের সীমায় পৌঁছে গেছে। সেটিংস → সীমা থেকে সীমা বাড়িয়ে নিন, অথবা পরের সময়সীমা শুরু হওয়া পর্যন্ত অপেক্ষা করুন। সীমার কারণে আটকে যাওয়া কলগুলোও অডিট লগে লেখা হয়।"
+
+#: templates/admin/documentation.php:485
+#: assets/js/health-scan.js:1021
+msgid "Copied"
+msgstr "কপি হয়েছে"
+
+#: templates/admin/feature-request.php:20
+msgid "Roadmap"
+msgstr "রোডম্যাপ"
+
+#: templates/admin/feature-request.php:21
+#: templates/admin/tools.php:312
+msgid "Suggest a feature"
+msgstr "একটি ফিচারের প্রস্তাব দিন"
+
+#: templates/admin/feature-request.php:22
+msgid "Tell the developer what is missing. Requests are prioritized by how often they come up, so a specific use case counts for more than a vague wish."
+msgstr "কী নেই তা ডেভেলপারকে জানান। যে অনুরোধগুলো বেশি আসে সেগুলোই আগে করা হয়, তাই অস্পষ্ট ইচ্ছার চেয়ে নির্দিষ্ট একটি ব্যবহারের উদাহরণ অনেক বেশি কাজে লাগে।"
+
+#: templates/admin/feature-request.php:25
+msgid "Open an issue instead"
+msgstr "তার বদলে একটি issue খুলুন"
+
+#: templates/admin/feature-request.php:45
+msgid "Your request"
+msgstr "আপনার অনুরোধ"
+
+#: templates/admin/feature-request.php:53
+msgid "Title"
+msgstr "শিরোনাম"
+
+#: templates/admin/feature-request.php:57
+msgid "e.g. Add an ability for RankMath meta fields"
+msgstr "যেমন: RankMath মেটা ফিল্ডের জন্য একটি অ্যাবিলিটি যোগ করুন"
+
+#: templates/admin/feature-request.php:62
+msgid "What it should do, and why"
+msgstr "এটি কী করবে, আর কেন"
+
+#: templates/admin/feature-request.php:66
+msgid "Describe the behaviour you want, the prompt you would type into Claude or Cursor, and what you are doing by hand today."
+msgstr "আপনি কেমন আচরণ চান, Claude বা Cursor এ কী লিখবেন, আর আজ কাজটি হাতে কীভাবে করছেন — সব লিখুন।"
+
+#: templates/admin/feature-request.php:67
+msgid "A concrete example of the request you would make is the most useful thing you can include."
+msgstr "আপনি ঠিক কী অনুরোধ করবেন তার একটি বাস্তব উদাহরণই সবচেয়ে কাজে লাগে।"
+
+#: templates/admin/feature-request.php:72
+msgid "Your email"
+msgstr "আপনার ইমেইল"
+
+#: templates/admin/feature-request.php:77
+msgid "Only used to reply to you about this request."
+msgstr "শুধু এই অনুরোধের উত্তর দিতে ব্যবহার করা হবে।"
+
+#: templates/admin/feature-request.php:83
+msgid "Send request"
+msgstr "অনুরোধ পাঠান"
+
+#: templates/admin/feature-request.php:95
+msgid "What happens next"
+msgstr "এরপর কী হবে"
+
+#: templates/admin/feature-request.php:100
+msgid "Straight to the developer"
+msgstr "সরাসরি ডেভেলপারের কাছে"
+
+#: templates/admin/feature-request.php:101
+msgid "Your message is emailed to builtbytanin@gmail.com. No tracker in between."
+msgstr "আপনার বার্তাটি builtbytanin@gmail.com ঠিকানায় ইমেইল করা হয়। মাঝখানে কোনো ট্র্যাকার নেই।"
+
+#: templates/admin/feature-request.php:104
+msgid "Prioritized by demand"
+msgstr "চাহিদা অনুযায়ী অগ্রাধিকার"
+
+#: templates/admin/feature-request.php:105
+msgid "Requests that several people ask for get built first."
+msgstr "যে অনুরোধগুলো একাধিক মানুষ করেন সেগুলোই আগে তৈরি করা হয়।"
+
+#: templates/admin/feature-request.php:108
+msgid "Only what you typed"
+msgstr "শুধু আপনি যা লিখেছেন"
+
+#: templates/admin/feature-request.php:109
+msgid "The email carries your text plus your site URL and PHP version. No tokens, no content, no log entries."
+msgstr "ইমেইলে আপনার লেখা, আপনার সাইটের URL আর PHP সংস্করণ যায়। কোনো টোকেন নয়, কোনো কনটেন্ট নয়, কোনো লগ এন্ট্রিও নয়।"
+
+#: templates/admin/feature-request.php:120
+msgid "Rather use GitHub?"
+msgstr "GitHub ব্যবহার করবেন?"
+
+#: templates/admin/feature-request.php:121
+msgid "Read the source, follow progress, or send a pull request on the project page."
+msgstr "প্রজেক্ট পাতায় গিয়ে সোর্স পড়ুন, অগ্রগতি দেখুন, অথবা একটি pull request পাঠান।"
+
+#: templates/admin/feature-request.php:122
+msgid "Visit GitHub"
+msgstr "GitHub এ যান"
+
+#: templates/admin/health.php:84
+#: assets/js/health-scan.js:231
+msgid "Open"
+msgstr "খুলুন"
+
+#: templates/admin/health.php:111
+msgid "Scan your site"
+msgstr "আপনার সাইট স্ক্যান করুন"
+
+#: templates/admin/health.php:113
+msgid "Find broken links, missing SEO data, and health issues in about 30 seconds."
+msgstr "প্রায় ৩০ সেকেন্ডেই ভাঙা লিঙ্ক, না থাকা SEO তথ্য আর অন্যান্য সমস্যা খুঁজে বের করুন।"
+
+#: templates/admin/health.php:118
+msgid "No setup required"
+msgstr "কোনো সেটআপ লাগবে না"
+
+#. translators: %s: link to the settings page
+#: templates/admin/health.php:123
+#, php-format
+msgid "This site will also scan itself on a schedule and email you when your score changes. You can turn that off in %s."
+msgstr "এই সাইটটি নির্ধারিত সময়ে নিজে থেকেও স্ক্যান করবে, আর স্কোর বদলালে আপনাকে ইমেইল করবে। %s থেকে এটি বন্ধ করতে পারেন।"
+
+#. translators: %s: signed score change, e.g. "+6"
+#: templates/admin/health.php:155
+#, php-format
+msgid "%s since your last scan"
+msgstr "গত স্ক্যানের পর %s"
+
+#: templates/admin/health.php:171
+msgid "Scan Again"
+msgstr "আবার স্ক্যান করুন"
+
+#: templates/admin/health.php:177
+msgid "Opens a printable page and your browser's print dialog. Choose \"Save as PDF\" as the destination."
+msgstr "একটি ছাপার উপযোগী পাতা আর আপনার ব্রাউজারের প্রিন্ট উইন্ডো খোলে। গন্তব্য হিসেবে \"Save as PDF\" বেছে নিন।"
+
+#: templates/admin/health.php:178
+msgid "Download PDF"
+msgstr "PDF ডাউনলোড"
+
+#: templates/admin/health.php:188
+msgid "Share"
+msgstr "শেয়ার"
+
+#: templates/admin/health.php:193
+msgid "\"Download PDF\" uses your browser's own print-to-PDF — pick \"Save as PDF\" in the dialog that opens."
+msgstr "\"PDF ডাউনলোড\" আপনার ব্রাউজারের নিজের প্রিন্ট-টু-PDF ব্যবহার করে — যে উইন্ডোটি খুলবে সেখানে \"Save as PDF\" বেছে নিন।"
+
+#: templates/admin/health.php:199
+msgid "Share this report"
+msgstr "এই রিপোর্টটি শেয়ার করুন"
+
+#: templates/admin/health.php:203
+msgid "A share link is public. Anyone who has it can open the report without logging in. Before you create one, this is exactly what it does and does not contain:"
+msgstr "শেয়ার লিঙ্ক পাবলিক। যার কাছেই লিঙ্কটি থাকবে সে লগইন না করেই রিপোর্টটি খুলতে পারবে। তৈরি করার আগে দেখে নিন এতে ঠিক কী থাকে আর কী থাকে না:"
+
+#: templates/admin/health.php:207
+msgid "They will see"
+msgstr "তাঁরা যা দেখবেন"
+
+#: templates/admin/health.php:209
+msgid "Your site name and the date of the scan"
+msgstr "আপনার সাইটের নাম আর স্ক্যানের তারিখ"
+
+#: templates/admin/health.php:210
+msgid "The score and its band"
+msgstr "স্কোর আর সেটি কোন স্তরে পড়ে"
+
+#: templates/admin/health.php:211
+msgid "Each check by name, and how many issues it found"
+msgstr "প্রতিটি পরীক্ষার নাম, আর সেটি কতগুলো সমস্যা পেয়েছে"
+
+#: templates/admin/health.php:215
+msgid "They will not see"
+msgstr "তাঁরা যা দেখবেন না"
+
+#: templates/admin/health.php:217
+msgid "Any file name, page address, or server path"
+msgstr "কোনো ফাইলের নাম, পাতার ঠিকানা বা সার্ভারের পাথ"
+
+#: templates/admin/health.php:218
+msgid "Any post, media or user ID, or any edit link"
+msgstr "কোনো পোস্ট, মিডিয়া বা ব্যবহারকারীর ID, বা কোনো সম্পাদনার লিঙ্ক"
+
+#: templates/admin/health.php:219
+msgid "Your plugin, theme, PHP or WordPress versions"
+msgstr "আপনার প্লাগইন, থিম, PHP বা WordPress এর সংস্করণ"
+
+#: templates/admin/health.php:220
+msgid "The two security checks — those are left out entirely"
+msgstr "নিরাপত্তার দুটি পরীক্ষা — সেগুলো একেবারেই বাদ দেওয়া হয়"
+
+#: templates/admin/health.php:225
+msgid "The link shows a copy taken at the moment you create it, so re-scanning your site will not change what you already sent."
+msgstr "লিঙ্কটি তৈরির মুহূর্তে নেওয়া একটি অনুলিপি দেখায়, তাই আবার স্ক্যান করলেও আপনি যা পাঠিয়েছেন তা বদলাবে না।"
+
+#: templates/admin/health.php:230
+msgid "Link expires after"
+msgstr "লিঙ্কের মেয়াদ শেষ হবে"
+
+#. translators: %d: number of days a share link stays valid
+#: templates/admin/health.php:238
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d দিন পর"
+msgstr[1] "%d দিন পর"
+
+#: templates/admin/health.php:246
+#: assets/js/health-scan.js:972
+msgid "Create link"
+msgstr "লিঙ্ক তৈরি করুন"
+
+#: templates/admin/health.php:253
+msgid "Copy this link now. For the same reason API tokens are shown once, it is not stored anywhere and cannot be shown again."
+msgstr "লিঙ্কটি এখনই কপি করুন। API টোকেন যে কারণে একবারই দেখানো হয়, ঠিক সেই কারণেই এটিও কোথাও সংরক্ষণ করা হয় না এবং আর দেখানো যাবে না।"
+
+#: templates/admin/health.php:269
+msgid "Created"
+msgstr "তৈরি হয়েছে"
+
+#: templates/admin/health.php:270
+#: templates/admin/tokens.php:467
+msgid "Expires"
+msgstr "মেয়াদ শেষ"
+
+#: templates/admin/health.php:271
+msgid "Views"
+msgstr "দেখা হয়েছে"
+
+#: templates/admin/health.php:272
+msgid "Actions"
+msgstr "কাজ"
+
+#: templates/admin/health.php:287
+#: assets/js/health-scan.js:931
+msgid "Revoke"
+msgstr "বাতিল করুন"
+
+#: templates/admin/health.php:297
+msgid "No share links yet."
+msgstr "এখনো কোনো শেয়ার লিঙ্ক নেই।"
+
+#: templates/admin/health.php:310
+#: templates/admin/tokens.php:492
+#: assets/js/health-scan.js:613
+msgid "Cancel"
+msgstr "বাতিল"
+
+#: templates/admin/health.php:340
+#: assets/js/health-scan.js:142
+msgid "not applicable"
+msgstr "প্রযোজ্য নয়"
+
+#: templates/admin/health.php:342
+#: assets/js/health-scan.js:145
+msgid "could not run"
+msgstr "চালানো যায়নি"
+
+#: templates/admin/health.php:344
+#: assets/js/health-scan.js:151
+msgid "nothing found"
+msgstr "কিছু পাওয়া যায়নি"
+
+#. translators: %d: number of issues found
+#: templates/admin/health.php:348
+#: assets/js/health-scan.js:155
+#, php-format,js-format
+msgid "%d found"
+msgid_plural "%d found"
+msgstr[0] "%d টি পাওয়া গেছে"
+msgstr[1] "%d টি পাওয়া গেছে"
+
+#. translators: 1: number of issues shown, 2: total issues found
+#: templates/admin/health.php:374
+#, php-format
+msgid "Showing the first %1$d of %2$d. Fix these and scan again to see more."
+msgstr "%2$d টির মধ্যে প্রথম %1$d টি দেখানো হচ্ছে। এগুলো ঠিক করে আবার স্ক্যান করলে বাকিগুলো দেখা যাবে।"
+
+#: templates/admin/settings.php:88
+#: templates/admin/settings.php:124
+msgid "Server"
+msgstr "সার্ভার"
+
+#: templates/admin/settings.php:90
+#: templates/admin/settings.php:264
+msgid "Limits"
+msgstr "সীমা"
+
+#: templates/admin/settings.php:91
+#: templates/admin/settings.php:389
+msgid "Audit log"
+msgstr "অডিট লগ"
+
+#: templates/admin/settings.php:92
+#: templates/admin/settings.php:450
+msgid "Irreversible"
+msgstr "অপরিবর্তনীয়"
+
+#: templates/admin/settings.php:94
+msgid "Every row states what it changes and what stops working if you change it."
+msgstr "প্রতিটি সারি বলে দেয় সেটি কী বদলায়, আর বদলালে কী কাজ করা বন্ধ করে দেয়।"
+
+#: templates/admin/settings.php:95
+#: templates/admin/tools.php:143
+msgid "Read the guide"
+msgstr "নির্দেশিকা পড়ুন"
+
+#: templates/admin/settings.php:103
+msgid "Configuration"
+msgstr "কনফিগারেশন"
+
+#: templates/admin/settings.php:105
+msgid "Five groups. Jump straight to the one you came for."
+msgstr "পাঁচটি ভাগ। যেটির জন্য এসেছেন সরাসরি সেখানেই যান।"
+
+#: templates/admin/settings.php:110
+msgid "Saved automatically"
+msgstr "নিজে থেকেই সেভ হয়"
+
+#: templates/admin/settings.php:125
+msgid "Whether clients can reach this site, and what they see it called."
+msgstr "ক্লায়েন্টরা এই সাইটে পৌঁছাতে পারবে কি না, আর তারা এটিকে কী নামে দেখবে।"
+
+#: templates/admin/settings.php:132
+msgid "Serve the MCP endpoint"
+msgstr "MCP এন্ডপয়েন্ট চালু রাখুন"
+
+#: templates/admin/settings.php:133
+msgid "The master switch. Off means every connected agent stops working immediately. Your tokens, abilities, and log entries are all kept."
+msgstr "প্রধান সুইচ। বন্ধ করলে যুক্ত থাকা সব এজেন্ট সঙ্গে সঙ্গেই কাজ করা বন্ধ করে দেয়। আপনার টোকেন, অ্যাবিলিটি আর লগ এন্ট্রি সবই থেকে যায়।"
+
+#: templates/admin/settings.php:137
+#: templates/partials/header.php:138
+msgid "Serving"
+msgstr "চালু আছে"
+
+#: templates/admin/settings.php:137
+#: templates/partials/header.php:138
+msgid "Stopped"
+msgstr "বন্ধ"
+
+#: templates/admin/settings.php:149
+msgid "Agent display name"
+msgstr "এজেন্টের প্রদর্শিত নাম"
+
+#: templates/admin/settings.php:150
+msgid "What Claude, Cursor, and other clients call this site in their tool list."
+msgstr "Claude, Cursor আর অন্যান্য ক্লায়েন্ট তাদের টুল তালিকায় এই সাইটটিকে যে নামে ডাকবে।"
+
+#: templates/admin/settings.php:156
+msgid "e.g. My Website Agent"
+msgstr "যেমন: My Website Agent"
+
+#: templates/admin/settings.php:158
+msgid "Blank uses the site title."
+msgstr "ফাঁকা রাখলে সাইটের শিরোনামই ব্যবহৃত হয়।"
+
+#: templates/admin/settings.php:164
+msgid "Trust proxy headers"
+msgstr "প্রক্সি হেডার বিশ্বাস করুন"
+
+#: templates/admin/settings.php:165
+msgid "Enable this only if your site sits behind a trusted reverse proxy such as Cloudflare. It allows reading X-Forwarded-For to determine the true client IP for the allowlist."
+msgstr "আপনার সাইট Cloudflare এর মতো কোনো বিশ্বস্ত রিভার্স প্রক্সির পেছনে থাকলেই কেবল এটি চালু করুন। এটি চালু থাকলে অনুমোদিত তালিকার জন্য প্রকৃত ক্লায়েন্ট IP বের করতে X-Forwarded-For পড়া হয়।"
+
+#: templates/admin/settings.php:169
+msgid "Trusting"
+msgstr "বিশ্বাস করা হচ্ছে"
+
+#: templates/admin/settings.php:169
+msgid "Ignoring"
+msgstr "উপেক্ষা করা হচ্ছে"
+
+#: templates/admin/settings.php:187
+msgid "A module is a group of abilities. Switch one off and all of them go."
+msgstr "একটি মডিউল মানে একগুচ্ছ অ্যাবিলিটি। একটি বন্ধ করলে তার সবগুলোই বন্ধ হয়ে যায়।"
+
+#. translators: %d: number of tools
+#: templates/admin/settings.php:230
+#, php-format
+msgid "%d tools"
+msgstr "%d টি টুল"
+
+#: templates/admin/settings.php:236
+msgid "Install WooCommerce to enable"
+msgstr "চালু করতে WooCommerce ইনস্টল করুন"
+
+#: templates/admin/settings.php:265
+msgid "Counted per token, so one busy client cannot starve the others."
+msgstr "প্রতিটি টোকেনের জন্য আলাদা করে গোনা হয়, তাই ব্যস্ত একটি ক্লায়েন্ট বাকিদের আটকে দিতে পারে না।"
+
+#: templates/admin/settings.php:272
+msgid "Calls per hour"
+msgstr "ঘণ্টাপ্রতি কল"
+
+#: templates/admin/settings.php:273
+msgid "Over the cap returns 429 and is written to the log. 200 suits conversational use."
+msgstr "সীমা পেরোলে ৪২৯ ফেরত আসে আর লগে লেখা হয়। সাধারণ কথোপকথনের জন্য ২০০ যথেষ্ট।"
+
+#: templates/admin/settings.php:285
+msgid "Calls per day"
+msgstr "দিনপ্রতি কল"
+
+#: templates/admin/settings.php:286
+msgid "A backstop in case a client gets stuck in a loop overnight."
+msgstr "রাতভর কোনো ক্লায়েন্ট লুপে আটকে গেলে এটি শেষ রক্ষাকবচ।"
+
+#: templates/admin/settings.php:298
+msgid "Cache read results for"
+msgstr "পড়ার ফলাফল ক্যাশে রাখুন"
+
+#: templates/admin/settings.php:299
+msgid "Repeat reads come from cache instead of the database. Drop to 60 while testing abilities."
+msgstr "একই তথ্য বারবার পড়লে ডেটাবেসের বদলে ক্যাশ থেকে আসে। অ্যাবিলিটি পরখ করার সময় ৬০ এ নামিয়ে নিন।"
+
+#: templates/admin/settings.php:307
+msgid "sec"
+msgstr "সেকেন্ড"
+
+#: templates/admin/settings.php:309
+msgid "Flush"
+msgstr "খালি করুন"
+
+#: templates/admin/settings.php:322
+msgid "Site Health reports"
+msgstr "সাইট হেলথ রিপোর্ট"
+
+#: templates/admin/settings.php:323
+msgid "A scheduled scan of your own site, emailed to you when something changes."
+msgstr "আপনার নিজের সাইটের একটি নির্ধারিত স্ক্যান, কিছু বদলালে ইমেইলে জানানো হয়।"
+
+#: templates/admin/settings.php:330
+msgid "Email me a report"
+msgstr "আমাকে রিপোর্ট ইমেইল করুন"
+
+#: templates/admin/settings.php:331
+msgid "Nothing is sent when your score is unchanged and no new problems appeared."
+msgstr "স্কোর অপরিবর্তিত থাকলে আর নতুন কোনো সমস্যা না এলে কিছুই পাঠানো হয় না।"
+
+#: templates/admin/settings.php:345
+msgid "Send to"
+msgstr "পাঠানো হবে"
+
+#: templates/admin/settings.php:346
+msgid "Defaults to the site admin address."
+msgstr "কিছু না দিলে সাইট অ্যাডমিনের ঠিকানাটিই ব্যবহৃত হয়।"
+
+#: templates/admin/settings.php:358
+msgid "How often"
+msgstr "কত ঘন ঘন"
+
+#: templates/admin/settings.php:359
+msgid "Choosing Never also stops the scheduled scan itself."
+msgstr "\"কখনো নয়\" বেছে নিলে নির্ধারিত স্ক্যানটিও বন্ধ হয়ে যায়।"
+
+#: templates/admin/settings.php:367
+msgid "Weekly"
+msgstr "সাপ্তাহিক"
+
+#: templates/admin/settings.php:368
+msgid "Monthly"
+msgstr "মাসিক"
+
+#: templates/admin/settings.php:369
+#: templates/admin/tokens.php:473
+msgid "Never"
+msgstr "কখনো নয়"
+
+#: templates/admin/settings.php:390
+msgid "What gets written down, and how long it survives."
+msgstr "কী কী লিখে রাখা হয়, আর কতদিন থাকে।"
+
+#: templates/admin/settings.php:397
+msgid "Keep entries for"
+msgstr "এন্ট্রি রাখুন"
+
+#: templates/admin/settings.php:398
+msgid "Older entries are removed on a daily cron. Export to CSV first if you need them."
+msgstr "পুরনো এন্ট্রিগুলো প্রতিদিনের ক্রনে মুছে ফেলা হয়। দরকার হলে আগে CSV তে রপ্তানি করে নিন।"
+
+#: templates/admin/settings.php:406
+msgid "days"
+msgstr "দিন"
+
+#: templates/admin/settings.php:413
+msgid "Level of detail"
+msgstr "বিস্তারিত কতটুকু"
+
+#: templates/admin/settings.php:414
+msgid "Payloads are what make the log useful for debugging. Only turn this down on very high traffic."
+msgstr "পেলোড থাকলেই লগটি ডিবাগ করার কাজে লাগে। কেবল খুব বেশি ট্রাফিক হলেই এটি কমান।"
+
+#: templates/admin/settings.php:419
+msgid "Every call, with payloads"
+msgstr "প্রতিটি কল, পেলোডসহ"
+
+#: templates/admin/settings.php:420
+msgid "Failures only"
+msgstr "শুধু ব্যর্থতা"
+
+#: templates/admin/settings.php:421
+msgid "Nothing"
+msgstr "কিছুই নয়"
+
+#: templates/admin/settings.php:428
+msgid "Allow token in URL query string"
+msgstr "URL কোয়েরি স্ট্রিংয়ে টোকেন অনুমোদন করুন"
+
+#: templates/admin/settings.php:429
+msgid "Not recommended. Tokens sent this way are recorded in server logs and browser history. Enable only if your MCP client cannot send an Authorization header."
+msgstr "এটি পরামর্শ দেওয়া হয় না। এভাবে পাঠানো টোকেন সার্ভার লগ আর ব্রাউজারের ইতিহাসে লেখা থাকে। আপনার MCP ক্লায়েন্ট Authorization হেডার পাঠাতে না পারলেই কেবল চালু করুন।"
+
+#: templates/admin/settings.php:433
+msgid "Allowed"
+msgstr "অনুমোদিত"
+
+#: templates/admin/settings.php:433
+msgid "Blocked"
+msgstr "আটকানো"
+
+#: templates/admin/settings.php:451
+msgid "Both delete data permanently. There is no undo."
+msgstr "দুটোই স্থায়ীভাবে তথ্য মুছে ফেলে। ফিরিয়ে আনার উপায় নেই।"
+
+#: templates/admin/settings.php:458
+msgid "Reset everything"
+msgstr "সবকিছু রিসেট করুন"
+
+#: templates/admin/settings.php:459
+msgid "Deletes all tokens, every log entry, and all settings, then returns the plugin to a fresh install."
+msgstr "সব টোকেন, প্রতিটি লগ এন্ট্রি আর সব সেটিংস মুছে ফেলে প্লাগইনটিকে নতুন ইনস্টলের অবস্থায় ফিরিয়ে নেয়।"
+
+#: templates/admin/settings.php:464
+msgid "Reset all data"
+msgstr "সব তথ্য রিসেট করুন"
+
+#: templates/admin/settings.php:471
+msgid "Delete data on uninstall"
+msgstr "আনইনস্টলের সময় তথ্য মুছে ফেলুন"
+
+#: templates/admin/settings.php:472
+msgid "Off means your setup survives a deactivate and reactivate — useful when moving hosts."
+msgstr "বন্ধ রাখলে নিষ্ক্রিয় করে আবার সক্রিয় করলেও আপনার সেটআপ থেকে যায় — হোস্ট বদলানোর সময় কাজে লাগে।"
+
+#: templates/admin/settings.php:476
+msgid "Deleting"
+msgstr "মুছে ফেলা হবে"
+
+#: templates/admin/settings.php:476
+msgid "Keeping"
+msgstr "রেখে দেওয়া হবে"
+
+#: templates/admin/tokens.php:75
+#: templates/admin/tokens.php:301
+#: templates/admin/tokens.php:401
+msgid "Read"
+msgstr "পড়া"
+
+#: templates/admin/tokens.php:78
+msgid "The agent can look at posts, pages, media metadata, users, and settings. It cannot change anything."
+msgstr "এজেন্ট পোস্ট, পেজ, মিডিয়ার মেটাডেটা, ব্যবহারকারী ও সেটিংস দেখতে পারে। কিছুই বদলাতে পারে না।"
+
+#: templates/admin/tokens.php:81
+#: templates/admin/tokens.php:304
+#: templates/admin/tokens.php:410
+msgid "Write"
+msgstr "লেখা"
+
+#: templates/admin/tokens.php:84
+msgid "Adds create and update on top of read. Deleting and system diagnostics stay out of reach."
+msgstr "পড়ার সঙ্গে তৈরি ও হালনাগাদ যোগ করে। মোছা আর সিস্টেম ডায়াগনস্টিকস নাগালের বাইরেই থাকে।"
+
+#: templates/admin/tokens.php:87
+#: templates/admin/tokens.php:307
+#: templates/admin/tokens.php:419
+msgid "Admin"
+msgstr "অ্যাডমিন"
+
+#: templates/admin/tokens.php:90
+msgid "Unlocks the destructive abilities: deleting content, reading error logs, and repairing tables."
+msgstr "ধ্বংসাত্মক অ্যাবিলিটিগুলো খুলে দেয়: কনটেন্ট মোছা, এরর লগ পড়া আর টেবিল মেরামত করা।"
+
+#: templates/admin/tokens.php:93
+#: templates/admin/tokens.php:428
+msgid "Custom"
+msgstr "কাস্টম"
+
+#: templates/admin/tokens.php:96
+msgid "Pick abilities one by one. Anything you do not tick is refused for this token, even if it is enabled globally."
+msgstr "একটি একটি করে অ্যাবিলিটি বেছে নিন। যেগুলোতে টিক দেবেন না সেগুলো এই টোকেনের জন্য বন্ধ থাকবে, এমনকি সেগুলো সাইটজুড়ে চালু থাকলেও।"
+
+#: templates/admin/tokens.php:110
+#: templates/admin/tokens.php:175
+msgid "Tokens"
+msgstr "টোকেন"
+
+#: templates/admin/tokens.php:111
+#: templates/admin/tokens.php:383
+msgid "Scopes"
+msgstr "স্কোপ"
+
+#. translators: %d: number of tokens that have never been used
+#: templates/admin/tokens.php:117
+#, php-format
+msgid "%d token has never been used."
+msgid_plural "%d tokens have never been used."
+msgstr[0] "%d টি টোকেন কখনো ব্যবহার হয়নি।"
+msgstr[1] "%d টি টোকেন কখনো ব্যবহার হয়নি।"
+
+#: templates/admin/tokens.php:121
+msgid "Every token here has been used at least once."
+msgstr "এখানকার প্রতিটি টোকেন অন্তত একবার ব্যবহার হয়েছে।"
+
+#: templates/admin/tokens.php:124
+msgid "See what they did"
+msgstr "তারা কী করেছে দেখুন"
+
+#: templates/admin/tokens.php:132
+msgid "Access"
+msgstr "অ্যাক্সেস"
+
+#: templates/admin/tokens.php:133
+msgid "API tokens"
+msgstr "API টোকেন"
+
+#. translators: %d: count of active tokens
+#: templates/admin/tokens.php:137
+#, php-format
+msgid "%d token is live. Each one is how a single AI client proves it may talk to this site."
+msgid_plural "%d tokens are live. Each one is how a single AI client proves it may talk to this site."
+msgstr[0] "%d টি টোকেন সচল। প্রতিটি দিয়ে একটি AI ক্লায়েন্ট প্রমাণ করে যে সে এই সাইটের সঙ্গে কথা বলতে পারে।"
+msgstr[1] "%d টি টোকেন সচল। প্রতিটি দিয়ে একটি AI ক্লায়েন্ট প্রমাণ করে যে সে এই সাইটের সঙ্গে কথা বলতে পারে।"
+
+#: templates/admin/tokens.php:155
+msgid "A token is shown once."
+msgstr "একটি টোকেন একবারই দেখানো হয়।"
+
+#: templates/admin/tokens.php:156
+msgid "Copy it the moment it is created — only a hash is kept here, so it cannot be shown again."
+msgstr "তৈরি হওয়ার সঙ্গে সঙ্গেই কপি করে নিন — এখানে শুধু একটি হ্যাশ রাখা হয়, তাই এটি আর দেখানো যাবে না।"
+
+#. translators: %d: number of tokens expiring within 30 days
+#: templates/admin/tokens.php:161
+#, php-format
+msgid " %d expires within 30 days."
+msgid_plural " %d expire within 30 days."
+msgstr[0] " %d টির মেয়াদ ৩০ দিনের মধ্যে শেষ হবে।"
+msgstr[1] " %d টির মেয়াদ ৩০ দিনের মধ্যে শেষ হবে।"
+
+#: templates/admin/tokens.php:176
+msgid "Revoking one disconnects its client immediately. The audit entries it made are kept."
+msgstr "কোনো একটি বাতিল করলে তার ক্লায়েন্টটি সঙ্গে সঙ্গেই বিচ্ছিন্ন হয়ে যায়। সেটি যে অডিট এন্ট্রিগুলো তৈরি করেছিল সেগুলো থেকে যায়।"
+
+#. translators: %d: number of live tokens
+#: templates/admin/tokens.php:182
+#, php-format
+msgid "%d live"
+msgstr "%d টি সচল"
+
+#: templates/admin/tokens.php:193
+msgid "No tokens yet"
+msgstr "এখনো কোনো টোকেন নেই"
+
+#: templates/admin/tokens.php:194
+msgid "A token is what lets an AI assistant such as Claude Desktop reach this site. Nothing gets through the endpoint without one."
+msgstr "একটি টোকেনই Claude Desktop এর মতো AI অ্যাসিস্ট্যান্টকে এই সাইটে পৌঁছাতে দেয়। টোকেন ছাড়া এন্ডপয়েন্ট দিয়ে কিছুই ঢুকতে পারে না।"
+
+#. translators: %s: link to the Site Health page
+#: templates/admin/tokens.php:198
+#, php-format
+msgid "You may not need one yet. The %s scan works with no token, no API key and no setup at all."
+msgstr "এখনই হয়তো আপনার একটি লাগবে না। %s স্ক্যানটি কোনো টোকেন, কোনো API কী বা কোনো সেটআপ ছাড়াই কাজ করে।"
+
+#: templates/admin/tokens.php:204
+msgid "Create your first token"
+msgstr "আপনার প্রথম টোকেনটি তৈরি করুন"
+
+#. translators: %s: comma-separated list of allowed IPs
+#: templates/admin/tokens.php:252
+#, php-format
+msgid "Restricted to IPs: %s"
+msgstr "শুধু এই IP গুলোতে সীমিত: %s"
+
+#: templates/admin/tokens.php:253
+msgid "IP locked"
+msgstr "IP তে বাঁধা"
+
+#: templates/admin/tokens.php:257
+msgid "Expired"
+msgstr "মেয়াদোত্তীর্ণ"
+
+#: templates/admin/tokens.php:260
+msgid "Revoked"
+msgstr "বাতিল"
+
+#. translators: %s: formatted date when token was created
+#: templates/admin/tokens.php:266
+#, php-format
+msgid "Created %s"
+msgstr "তৈরি হয়েছে %s"
+
+#. translators: %s: human-readable time difference since token was last used
+#: templates/admin/tokens.php:272
+#, php-format
+msgid "Last used %s ago"
+msgstr "শেষ ব্যবহার %s আগে"
+
+#: templates/admin/tokens.php:274
+msgid "Never used"
+msgstr "কখনো ব্যবহার হয়নি"
+
+#. translators: %s: formatted expiry date
+#: templates/admin/tokens.php:283
+#, php-format
+msgid "Expired %s"
+msgstr "মেয়াদ শেষ হয়েছে %s"
+
+#. translators: %s: formatted expiry date
+#: templates/admin/tokens.php:286
+#, php-format
+msgid "Expires %s"
+msgstr "মেয়াদ শেষ হবে %s"
+
+#: templates/admin/tokens.php:289
+msgid "Never expires"
+msgstr "মেয়াদ শেষ হয় না"
+
+#: templates/admin/tokens.php:298
+#: templates/admin/tokens.php:387
+msgid "Full access"
+msgstr "পূর্ণ অ্যাক্সেস"
+
+#: templates/admin/tokens.php:313
+msgid "Revoke token"
+msgstr "টোকেন বাতিল করুন"
+
+#: templates/admin/tokens.php:332
+msgid "What the scopes mean"
+msgstr "স্কোপগুলোর মানে কী"
+
+#: templates/admin/tokens.php:333
+msgid "A token can never do more than the abilities you have enabled globally."
+msgstr "আপনি সাইটজুড়ে যেসব অ্যাবিলিটি চালু করেছেন, একটি টোকেন কখনোই তার বেশি কিছু করতে পারে না।"
+
+#: templates/admin/tokens.php:336
+msgid "Manage abilities →"
+msgstr "অ্যাবিলিটি সামলান →"
+
+#: templates/admin/tokens.php:367
+msgid "New API token"
+msgstr "নতুন API টোকেন"
+
+#: templates/admin/tokens.php:368
+#: templates/admin/tokens.php:504
+msgid "Close"
+msgstr "বন্ধ করুন"
+
+#: templates/admin/tokens.php:374
+msgid "Token name"
+msgstr "টোকেনের নাম"
+
+#: templates/admin/tokens.php:376
+msgid "e.g. Claude Desktop — MacBook"
+msgstr "যেমন: Claude Desktop — MacBook"
+
+#: templates/admin/tokens.php:378
+msgid "You will see this name in the audit log next to every call the client makes."
+msgstr "ক্লায়েন্টটি যত কল করবে, অডিট লগে প্রতিটির পাশে আপনি এই নামটিই দেখবেন।"
+
+#: templates/admin/tokens.php:387
+msgid "every ability you have enabled, now and in future"
+msgstr "আপনার চালু করা প্রতিটি অ্যাবিলিটি, এখন এবং ভবিষ্যতেও"
+
+#: templates/admin/tokens.php:391
+msgid "Limited access"
+msgstr "সীমিত অ্যাক্সেস"
+
+#: templates/admin/tokens.php:391
+msgid "pick exactly what this token may do"
+msgstr "এই টোকেনটি ঠিক কী কী করতে পারবে তা বেছে নিন"
+
+#: templates/admin/tokens.php:402
+msgid "View posts, pages, media, users"
+msgstr "পোস্ট, পেজ, মিডিয়া ও ব্যবহারকারী দেখা"
+
+#: templates/admin/tokens.php:411
+msgid "Create and edit content"
+msgstr "কনটেন্ট তৈরি ও সম্পাদনা"
+
+#: templates/admin/tokens.php:420
+msgid "Manage settings, delete content"
+msgstr "সেটিংস সামলানো, কনটেন্ট মোছা"
+
+#: templates/admin/tokens.php:429
+msgid "Choose specific abilities one by one"
+msgstr "একটি একটি করে নির্দিষ্ট অ্যাবিলিটি বেছে নিন"
+
+#: templates/admin/tokens.php:460
+msgid "Please select at least one ability for limited access."
+msgstr "সীমিত অ্যাক্সেসের জন্য অন্তত একটি অ্যাবিলিটি বেছে নিন।"
+
+#: templates/admin/tokens.php:469
+msgid "In 6 months"
+msgstr "৬ মাস পর"
+
+#: templates/admin/tokens.php:470
+msgid "In 30 days"
+msgstr "৩০ দিন পর"
+
+#: templates/admin/tokens.php:471
+msgid "In 90 days"
+msgstr "৯০ দিন পর"
+
+#: templates/admin/tokens.php:472
+msgid "In 1 year"
+msgstr "১ বছর পর"
+
+#: templates/admin/tokens.php:479
+msgid "Allowed IPs (optional)"
+msgstr "অনুমোদিত IP (ঐচ্ছিক)"
+
+#: templates/admin/tokens.php:481
+msgid "203.0.113.45, 198.51.100.0/24"
+msgstr "203.0.113.45, 198.51.100.0/24"
+
+#: templates/admin/tokens.php:482
+msgid "Comma-separated. CIDR notation is supported for IPv4 only. Leave empty to allow all IPs."
+msgstr "কমা দিয়ে আলাদা করুন। CIDR শুধু IPv4 এর জন্য কাজ করে। সব IP অনুমোদন করতে ফাঁকা রাখুন।"
+
+#: templates/admin/tokens.php:484
+msgid "Insert current IP"
+msgstr "বর্তমান IP বসান"
+
+#: templates/admin/tokens.php:495
+#: assets/js/token-manager.js:186
+#: assets/js/token-manager.js:543
+msgid "Generate token"
+msgstr "টোকেন তৈরি করুন"
+
+#: templates/admin/tokens.php:503
+msgid "Token created"
+msgstr "টোকেন তৈরি হয়েছে"
+
+#: templates/admin/tokens.php:512
+msgid "Copy this token now."
+msgstr "টোকেনটি এখনই কপি করুন।"
+
+#: templates/admin/tokens.php:513
+msgid "For security, it will not be shown again."
+msgstr "নিরাপত্তার জন্য এটি আর দেখানো হবে না।"
+
+#: templates/admin/tokens.php:518
+msgid "Your token"
+msgstr "আপনার টোকেন"
+
+#: templates/admin/tokens.php:522
+msgid "Toggle visibility"
+msgstr "দেখানো/লুকানো"
+
+#: templates/admin/tokens.php:540
+msgid "Cursor"
+msgstr "Cursor"
+
+#: templates/admin/tokens.php:546
+msgid "Operating system"
+msgstr "অপারেটিং সিস্টেম"
+
+#: templates/admin/tools.php:22
+msgid "PHP version"
+msgstr "PHP সংস্করণ"
+
+#: templates/admin/tools.php:27
+#: templates/admin/tools.php:37
+#: templates/admin/tools.php:47
+#: templates/admin/tools.php:61
+#: templates/admin/tools.php:71
+msgid "Pass"
+msgstr "উত্তীর্ণ"
+
+#: templates/admin/tools.php:32
+msgid "WordPress version"
+msgstr "WordPress সংস্করণ"
+
+#: templates/admin/tools.php:38
+#: templates/admin/tools.php:48
+msgid "Warn"
+msgstr "সতর্কতা"
+
+#: templates/admin/tools.php:42
+msgid "HTTPS"
+msgstr "HTTPS"
+
+#: templates/admin/tools.php:43
+msgid "Encrypted"
+msgstr "এনক্রিপ্ট করা"
+
+#: templates/admin/tools.php:43
+msgid "Unsecured"
+msgstr "অনিরাপদ"
+
+#: templates/admin/tools.php:52
+msgid "Abilities registry"
+msgstr "অ্যাবিলিটি রেজিস্ট্রি"
+
+#. translators: %d: number of registered abilities
+#: templates/admin/tools.php:55
+#, php-format
+msgid "%d registered"
+msgstr "%d টি নিবন্ধিত"
+
+#: templates/admin/tools.php:62
+msgid "Empty"
+msgstr "খালি"
+
+#: templates/admin/tools.php:66
+msgid "Database schema"
+msgstr "ডেটাবেস স্কিমা"
+
+#: templates/admin/tools.php:67
+msgid "Synchronized"
+msgstr "সমন্বিত"
+
+#: templates/admin/tools.php:67
+msgid "Incomplete"
+msgstr "অসম্পূর্ণ"
+
+#: templates/admin/tools.php:72
+msgid "Error"
+msgstr "এরর"
+
+#: templates/admin/tools.php:137
+#: templates/admin/tools.php:178
+msgid "Environment"
+msgstr "পরিবেশ"
+
+#: templates/admin/tools.php:138
+#: templates/admin/tools.php:213
+msgid "Connection tests"
+msgstr "সংযোগ পরীক্ষা"
+
+#: templates/admin/tools.php:139
+#: templates/admin/tools.php:250
+msgid "Recovery"
+msgstr "পুনরুদ্ধার"
+
+#: templates/admin/tools.php:140
+#: templates/admin/tools.php:289
+msgid "About"
+msgstr "পরিচিতি"
+
+#: templates/admin/tools.php:142
+msgid "Every test here runs on your own server. Nothing is sent anywhere."
+msgstr "এখানকার প্রতিটি পরীক্ষা আপনার নিজের সার্ভারেই চলে। কিছুই কোথাও পাঠানো হয় না।"
+
+#: templates/admin/tools.php:152
+msgid "About & info"
+msgstr "পরিচিতি ও তথ্য"
+
+#: templates/admin/tools.php:155
+msgid "Every check passes. Health checks, connection tests, and repair tools live here."
+msgstr "সব পরীক্ষায় উতরে গেছে। হেলথ চেক, সংযোগ পরীক্ষা আর মেরামতের সরঞ্জাম এখানেই আছে।"
+
+#. translators: %d: number of failing checks
+#: templates/admin/tools.php:159
+#, php-format
+msgid "%d check needs your attention. Details below."
+msgid_plural "%d checks need your attention. Details below."
+msgstr[0] "%d টি পরীক্ষায় আপনার নজর দরকার। বিস্তারিত নিচে।"
+msgstr[1] "%d টি পরীক্ষায় আপনার নজর দরকার। বিস্তারিত নিচে।"
+
+#: templates/admin/tools.php:179
+msgid "What this server gives the plugin to work with."
+msgstr "এই সার্ভার প্লাগইনটিকে কাজ করার জন্য কী কী দিচ্ছে।"
+
+#. translators: 1: number of passing checks, 2: total checks
+#: templates/admin/tools.php:185
+#, php-format
+msgid "%1$d of %2$d pass"
+msgstr "%2$d টির মধ্যে %1$d টি উত্তীর্ণ"
+
+#: templates/admin/tools.php:214
+msgid "Run these first when a client cannot reach the site."
+msgstr "কোনো ক্লায়েন্ট সাইটে পৌঁছাতে না পারলে আগে এগুলো চালান।"
+
+#: templates/admin/tools.php:221
+msgid "REST API loopback"
+msgstr "REST API লুপব্যাক"
+
+#: templates/admin/tools.php:222
+msgid "Checks that your server can reach its own MCP endpoint. A failure here is almost always host routing, not the plugin."
+msgstr "আপনার সার্ভার নিজের MCP এন্ডপয়েন্টে পৌঁছাতে পারে কি না তা যাচাই করে। এখানে ব্যর্থ হলে প্রায় সবসময়ই কারণ হোস্টের রাউটিং, প্লাগইন নয়।"
+
+#: templates/admin/tools.php:226
+msgid "Run test"
+msgstr "পরীক্ষা চালান"
+
+#: templates/admin/tools.php:233
+msgid "MCP discovery"
+msgstr "MCP ডিসকভারি"
+
+#: templates/admin/tools.php:234
+msgid "Simulates a client handshake so you can verify the abilities are registered and the metadata is well formed."
+msgstr "একটি ক্লায়েন্ট হ্যান্ডশেক নকল করে দেখায়, যাতে আপনি যাচাই করতে পারেন অ্যাবিলিটিগুলো নিবন্ধিত হয়েছে কি না আর মেটাডেটা ঠিকঠাক আছে কি না।"
+
+#: templates/admin/tools.php:238
+msgid "Simulate"
+msgstr "নকল করে দেখুন"
+
+#: templates/admin/tools.php:251
+msgid "Safe to run at any time. Neither one deletes your data."
+msgstr "যেকোনো সময় চালানো নিরাপদ। কোনোটিই আপনার তথ্য মোছে না।"
+
+#: templates/admin/tools.php:258
+msgid "Regenerate the registry"
+msgstr "রেজিস্ট্রি নতুন করে তৈরি করুন"
+
+#: templates/admin/tools.php:259
+msgid "Clears the ability cache and re-scans every active module. Use this after enabling a module that has not appeared yet."
+msgstr "অ্যাবিলিটির ক্যাশ মুছে দিয়ে প্রতিটি সক্রিয় মডিউল আবার স্ক্যান করে। কোনো মডিউল চালু করার পরও দেখা না গেলে এটি ব্যবহার করুন।"
+
+#: templates/admin/tools.php:264
+msgid "Regenerate"
+msgstr "নতুন করে তৈরি করুন"
+
+#: templates/admin/tools.php:271
+msgid "Repair tables"
+msgstr "টেবিল মেরামত করুন"
+
+#: templates/admin/tools.php:272
+msgid "Verifies the plugin tables and re-creates anything missing. Existing rows are left alone."
+msgstr "প্লাগইনের টেবিলগুলো যাচাই করে, আর যা নেই তা নতুন করে তৈরি করে। থাকা সারিগুলোতে হাত দেওয়া হয় না।"
+
+#: templates/admin/tools.php:277
+msgid "Repair"
+msgstr "মেরামত"
+
+#: templates/admin/tools.php:290
+msgid "What this plugin is, and where to take a question."
+msgstr "এই প্লাগইনটি কী, আর প্রশ্ন থাকলে কোথায় জিজ্ঞেস করবেন।"
+
+#: templates/admin/tools.php:299
+msgid "An MCP server for WordPress. It exposes only the abilities you switch on, only to tokens you issue, and writes down every call it serves."
+msgstr "WordPress এর জন্য একটি MCP সার্ভার। আপনি যেসব অ্যাবিলিটি চালু করেন কেবল সেগুলোই, আর কেবল আপনার দেওয়া টোকেনগুলোর জন্যই খুলে দেয় — আর যত কল সামলায় প্রতিটি লিখে রাখে।"
+
+#: templates/admin/tools.php:302
+msgid "Source on GitHub"
+msgstr "GitHub এ সোর্স"
+
+#: templates/admin/tools.php:308
+msgid "Missing something?"
+msgstr "কিছু নেই বলে মনে হচ্ছে?"
+
+#: templates/admin/tools.php:309
+msgid "Requests are prioritized by how often they come up. Send yours and it goes straight to the developer."
+msgstr "যে অনুরোধগুলো বেশি আসে সেগুলোই আগে করা হয়। আপনারটি পাঠান, সেটি সরাসরি ডেভেলপারের কাছেই যাবে।"
+
+#: templates/export/health-print.php:25
+#: templates/export/shared-report.php:224
+msgid "Generated by My Site Hand"
+msgstr "My Site Hand দিয়ে তৈরি"
+
+#. translators: %s: site name
+#: templates/export/health-print.php:37
+#: templates/export/shared-report.php:42
+#, php-format
+msgid "Site Health Report — %s"
+msgstr "সাইট হেলথ রিপোর্ট — %s"
+
+#: templates/export/health-print.php:213
+msgid "Print or save as PDF"
+msgstr "ছাপুন বা PDF হিসেবে সেভ করুন"
+
+#: templates/export/health-print.php:214
+msgid "Choose \"Save as PDF\" as the destination in your browser's print dialog."
+msgstr "ব্রাউজারের প্রিন্ট উইন্ডোতে গন্তব্য হিসেবে \"Save as PDF\" বেছে নিন।"
+
+#. translators: %s: date and time the scan ran
+#: templates/export/health-print.php:226
+#, php-format
+msgid "Scanned %s"
+msgstr "স্ক্যান করা হয়েছে %s"
+
+#: templates/export/health-print.php:238
+msgid "/100"
+msgstr "/১০০"
+
+#. translators: 1: signed score change such as "+6", 2: the previous score
+#: templates/export/health-print.php:244
+#, php-format
+msgid "%1$s since the last scan (was %2$d)"
+msgstr "গত স্ক্যানের পর %1$s (ছিল %2$d)"
+
+#. translators: %d: number of issues found but not listed in this report
+#: templates/export/health-print.php:297
+#, php-format
+msgid "%d more issue was found but is not listed here."
+msgid_plural "%d more issues were found but are not listed here."
+msgstr[0] "আরও %d টি সমস্যা পাওয়া গেছে, তবে সেগুলো এখানে তালিকাভুক্ত করা হয়নি।"
+msgstr[1] "আরও %d টি সমস্যা পাওয়া গেছে, তবে সেগুলো এখানে তালিকাভুক্ত করা হয়নি।"
+
+#. translators: %s: date the scan ran
+#: templates/export/shared-report.php:145
+#, php-format
+msgid "Site health scan of %s"
+msgstr "%s তারিখের সাইট হেলথ স্ক্যান"
+
+#. translators: %s: signed score change such as "+6"
+#: templates/export/shared-report.php:162
+#, php-format
+msgid "%s since the previous scan"
+msgstr "আগের স্ক্যানের পর %s"
+
+#: templates/export/shared-report.php:173
+msgid "Issues found"
+msgstr "পাওয়া সমস্যা"
+
+#: templates/export/shared-report.php:186
+msgid "Not applicable"
+msgstr "প্রযোজ্য নয়"
+
+#. translators: %d: number of issues
+#: templates/export/shared-report.php:198
+#, php-format
+msgid "%d issue"
+msgid_plural "%d issues"
+msgstr[0] "%d টি সমস্যা"
+msgstr[1] "%d টি সমস্যা"
+
+#: templates/export/shared-report.php:212
+msgid "This is a summary. It shows how many issues each check found and nothing about what they were — no file names, no page addresses, no plugin or version details."
+msgstr "এটি একটি সারসংক্ষেপ। প্রতিটি পরীক্ষা কতগুলো সমস্যা পেয়েছে শুধু তা-ই দেখায়, সমস্যাগুলো কী ছিল তা নয় — কোনো ফাইলের নাম নেই, পাতার ঠিকানা নেই, প্লাগইন বা সংস্করণের তথ্যও নেই।"
+
+#. translators: %s: date the link stops working
+#: templates/export/shared-report.php:216
+#, php-format
+msgid "This link stops working on %s."
+msgstr "এই লিঙ্কটি %s তারিখে কাজ করা বন্ধ করে দেবে।"
+
+#: templates/partials/header.php:124
+msgid "WordPress over MCP"
+msgstr "MCP দিয়ে WordPress"
+
+#: templates/partials/header.php:129
+msgid "Endpoint"
+msgstr "এন্ডপয়েন্ট"
+
+#: templates/partials/header.php:150
+msgid "Help"
+msgstr "সহায়তা"
+
+#: templates/partials/header.php:156
+msgid "My Site Hand sections"
+msgstr "My Site Hand এর অংশগুলো"
+
+#. translators: %s: comma separated list of recent scores
+#: templates/partials/health-trend.php:59
+#, php-format
+msgid "Recent scores: %s"
+msgstr "সাম্প্রতিক স্কোর: %s"
+
+#. translators: %s: signed score change across the trend window, e.g. "+16"
+#: templates/partials/health-trend.php:75
+#, php-format
+msgid "%s over your last few scans"
+msgstr "আপনার শেষ কয়েকটি স্ক্যানে %s"
+
+#: templates/partials/mcp-config-snippet.php:42
+#: templates/partials/mcp-config-snippet.php:84
+msgid "Copy Json"
+msgstr "JSON কপি করুন"
+
+#: templates/partials/mcp-config-snippet.php:49
+#: templates/partials/mcp-config-snippet.php:70
+#: templates/partials/mcp-config-snippet.php:91
+msgid "Setup Instructions"
+msgstr "সেটআপের নির্দেশনা"
+
+#: templates/partials/mcp-config-snippet.php:51
+msgid "Locate your Claude Desktop config file."
+msgstr "আপনার Claude Desktop এর কনফিগ ফাইলটি খুঁজে বের করুন।"
+
+#: templates/partials/mcp-config-snippet.php:52
+msgid "Add the JSON block above to your mcpServers section."
+msgstr "উপরের JSON অংশটি আপনার mcpServers অংশে যোগ করুন।"
+
+#: templates/partials/mcp-config-snippet.php:53
+msgid "Restart Claude Desktop."
+msgstr "Claude Desktop রিস্টার্ট করুন।"
+
+#: templates/partials/mcp-config-snippet.php:63
+#: templates/partials/mcp-config-snippet.php:104
+msgid "Copy URL"
+msgstr "URL কপি করুন"
+
+#: templates/partials/mcp-config-snippet.php:72
+msgid "Open Cursor and navigate to Settings > Features > MCP."
+msgstr "Cursor খুলে Settings > Features > MCP এ যান।"
+
+#: templates/partials/mcp-config-snippet.php:73
+msgid "Click \"+ Add Server\" and paste the endpoint URL."
+msgstr "\"+ Add Server\" এ ক্লিক করে এন্ডপয়েন্ট URL টি পেস্ট করুন।"
+
+#: templates/partials/mcp-config-snippet.php:74
+msgid "Add an Authorization header with your Bearer token."
+msgstr "আপনার Bearer টোকেন দিয়ে একটি Authorization হেডার যোগ করুন।"
+
+#: templates/partials/mcp-config-snippet.php:93
+msgid "Open Windsurf and access MCP configuration."
+msgstr "Windsurf খুলে MCP কনফিগারেশনে যান।"
+
+#: templates/partials/mcp-config-snippet.php:94
+msgid "Add a new HTTP server with the provided configuration."
+msgstr "দেওয়া কনফিগারেশন দিয়ে নতুন একটি HTTP সার্ভার যোগ করুন।"
+
+#: templates/partials/mcp-config-snippet.php:111
+msgid "Use this standard HTTP endpoint with any MCP-compatible client."
+msgstr "যেকোনো MCP-সমর্থিত ক্লায়েন্টের সঙ্গে এই সাধারণ HTTP এন্ডপয়েন্টটি ব্যবহার করুন।"
+
+#: templates/partials/mcp-config-snippet.php:117
+msgid "Need a token?"
+msgstr "একটি টোকেন দরকার?"
+
+#: templates/partials/mcp-config-snippet.php:118
+msgid "Generate one here"
+msgstr "এখান থেকেই তৈরি করুন"
+
+#: assets/js/dashboard-connect.js:123
+msgid "Paste token first…"
+msgstr "আগে টোকেনটি পেস্ট করুন…"
+
+#: assets/js/health-scan.js:139
+msgid "scanning…"
+msgstr "স্ক্যান হচ্ছে…"
+
+#: assets/js/health-scan.js:148
+msgid "queued"
+msgstr "অপেক্ষায়"
+
+#. translators: 1: number of checks finished. 2: total number of checks.
+#: assets/js/health-scan.js:252
+#, js-format
+msgid "%1$d of %2$d checks complete"
+msgstr "%2$d টির মধ্যে %1$d টি পরীক্ষা শেষ"
+
+#: assets/js/health-scan.js:454
+msgid "Saving…"
+msgstr "সেভ হচ্ছে…"
+
+#: assets/js/health-scan.js:467
+msgid "Saved"
+msgstr "সেভ হয়েছে"
+
+#: assets/js/health-scan.js:477
+msgid "Something went wrong."
+msgstr "কিছু একটা সমস্যা হয়েছে।"
+
+#: assets/js/health-scan.js:495
+msgid "Describe this image…"
+msgstr "ছবিটির বর্ণনা দিন…"
+
+#: assets/js/health-scan.js:496
+msgid "Write a short description…"
+msgstr "সংক্ষেপে একটি বর্ণনা লিখুন…"
+
+#. translators: 1: the prompt or action. 2: the item it applies to.
+#: assets/js/health-scan.js:504
+#: assets/js/health-scan.js:591
+#, js-format
+msgid "%1$s — %2$s"
+msgstr "%1$s — %2$s"
+
+#: assets/js/health-scan.js:548
+msgid "Replace with a working URL…"
+msgstr "কাজ করে এমন একটি URL বসান…"
+
+#: assets/js/health-scan.js:586
+#: assets/js/health-scan.js:592
+msgid "Move to trash"
+msgstr "ট্র্যাশে পাঠান"
+
+#: assets/js/health-scan.js:603
+msgid "Move this file to the trash?"
+msgstr "ফাইলটি ট্র্যাশে পাঠাবেন?"
+
+#: assets/js/health-scan.js:608
+msgid "Yes"
+msgstr "হ্যাঁ"
+
+#: assets/js/health-scan.js:801
+msgid "Preparing…"
+msgstr "প্রস্তুত হচ্ছে…"
+
+#: assets/js/health-scan.js:843
+msgid "Scan cancelled."
+msgstr "স্ক্যান বাতিল করা হয়েছে।"
+
+#: assets/js/health-scan.js:853
+#: assets/js/health-scan.js:893
+msgid "Something went wrong. Please try again."
+msgstr "কিছু একটা সমস্যা হয়েছে। আবার চেষ্টা করুন।"
+
+#: assets/js/health-scan.js:945
+msgid "Creating…"
+msgstr "তৈরি হচ্ছে…"
+
+#: assets/js/health-scan.js:981
+msgid "Revoke this link? Anyone holding it will stop being able to open the report."
+msgstr "লিঙ্কটি বাতিল করবেন? যার কাছে এটি আছে সে আর রিপোর্টটি খুলতে পারবে না।"
+

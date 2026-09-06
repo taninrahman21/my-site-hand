@@ -224,6 +224,16 @@ class Plugin {
 		$checks[] = new Check_Orphan_Media( $this->cache_manager );
 		$checks[] = new Check_Site_Status();
 
+		// Added in 1.2.0. Appended rather than interleaved: check order is
+		// display order, and shuffling the rows a user already knows would
+		// make the report harder to read, not easier.
+		$checks[] = new Check_Missing_Image_Dimensions();
+		$checks[] = new Check_Missing_Lazy_Loading();
+		$checks[] = new Check_Exposed_Files( $this->cache_manager );
+		$checks[] = new Check_Xmlrpc( $this->cache_manager );
+		$checks[] = new Check_Thin_Content();
+		$checks[] = new Check_Accessibility_Basics();
+
 		return $checks;
 	}
 
@@ -535,6 +545,10 @@ class Plugin {
 		add_action( 'my_site_hand_cleanup_logs', [ $this->audit_logger, 'cleanup_old_logs' ] );
 		add_action( 'my_site_hand_cleanup_expired_tokens', [ $this->auth_manager, 'delete_expired_tokens' ] );
 		add_action( 'my_site_hand_cleanup_logs', [ $this->site_health_scanner, 'prune_history' ] );
+
+		// Expired share links ride the existing daily cleanup rather than
+		// getting a cron event of their own.
+		add_action( 'my_site_hand_cleanup_logs', [ new Shared_Reports(), 'purge_expired' ] );
 	}
 
 	/**

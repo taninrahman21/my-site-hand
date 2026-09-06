@@ -4488,3 +4488,234 @@
 	margin: 18px auto 0;
 	max-width: 320px;
 }
+
+/* ============================================================
+   Site Health — export and share (1.2.0)
+   ============================================================ */
+
+/* The score card was built for one button. It now carries four plus a note, so
+   the row has to be allowed to wrap — without this the actions block grows
+   until it crushes the trend line into a vertical stack of single words. */
+.msh-health-summary {
+	flex-wrap: wrap;
+}
+
+/* A real basis, not `auto`. With `flex: 1 1 auto` and `min-width: 0` this
+   column will shrink to nothing rather than push the buttons onto their own
+   row, which is what broke the layout. */
+.msh-health-summary-text {
+	flex: 1 1 300px;
+}
+
+.msh-health-summary-actions {
+	flex: 0 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+}
+
+/* Always its own full-width row under the buttons, never a fourth column. */
+.msh-health-exportnote {
+	flex: 1 1 100%;
+	margin: 4px 0 0;
+	font-size: 11.5px;
+	line-height: 1.6;
+	color: var(--msh-text-muted);
+}
+
+/* Belt and braces: even in a narrow column this reads as one line and wraps as
+   a phrase, instead of stacking one word per line. */
+.msh-trend-delta {
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 782px) {
+	/* The card is `flex-direction: column` here, and flex-basis follows the
+	   main axis — so the 300px above would be read as a 300px TALL text
+	   column and open a hole between the trend line and the buttons. */
+	.msh-health-summary-text {
+		flex: 0 1 auto;
+	}
+
+	.msh-health-summary-actions {
+		justify-content: center;
+	}
+
+	.msh-health-exportnote {
+		text-align: center;
+	}
+}
+
+/* --- Share panel ------------------------------------------------------- */
+
+.msh-health-share {
+	border: 1px solid var(--msh-border);
+	background: var(--msh-surface);
+	padding: 20px 22px;
+	margin-top: 14px;
+}
+
+.msh-health-share-title {
+	margin: 0 0 12px;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--msh-text);
+}
+
+/* The disclosure is the part that lets an admin consent to publishing. It is
+   given real weight on the page on purpose — it is not fine print. */
+.msh-health-share-disclosure {
+	border: 1px solid var(--msh-border);
+	background: var(--msh-surface-soft);
+	padding: 14px 16px;
+}
+
+.msh-health-share-lead {
+	margin: 0 0 12px;
+	font-size: 12.5px;
+	line-height: 1.6;
+	color: var(--msh-text-secondary);
+}
+
+.msh-health-share-cols {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
+}
+
+.msh-health-share-cols h3 {
+	margin: 0 0 6px;
+	font-size: 11px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--msh-text-muted);
+	font-weight: 600;
+}
+
+.msh-health-share-cols ul {
+	margin: 0;
+	padding-left: 16px;
+	font-size: 12.5px;
+	line-height: 1.65;
+	color: var(--msh-text-secondary);
+}
+
+.msh-health-share-note {
+	margin: 12px 0 0;
+	font-size: 11.5px;
+	line-height: 1.6;
+	color: var(--msh-text-muted);
+}
+
+.msh-health-share-create {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.msh-health-share-create label {
+	font-size: 12.5px;
+	color: var(--msh-text-secondary);
+}
+
+.msh-health-share-create select {
+	font-family: var(--msh-font);
+	font-size: 13px;
+	padding: 5px 8px;
+	border: 1px solid var(--msh-border);
+	background: var(--msh-surface);
+	color: var(--msh-text);
+	border-radius: var(--msh-radius-sm);
+}
+
+/* --- The one and only sight of the URL --------------------------------- */
+
+.msh-health-share-fresh {
+	margin-top: 16px;
+	border: 1px solid var(--msh-primary);
+	background: var(--msh-cw);
+	padding: 14px 16px;
+}
+
+.msh-health-share-once {
+	margin: 0 0 10px;
+	font-size: 12.5px;
+	line-height: 1.6;
+	color: var(--msh-text-secondary);
+}
+
+.msh-health-share-freshrow {
+	display: flex;
+	gap: 8px;
+}
+
+.msh-health-share-freshrow input {
+	flex: 1 1 auto;
+	min-width: 0;
+	font-family: var(--msh-font-mono);
+	font-size: 12px;
+	padding: 7px 9px;
+	border: 1px solid var(--msh-border);
+	background: var(--msh-surface);
+	color: var(--msh-text);
+	border-radius: var(--msh-radius-sm);
+}
+
+.msh-health-share-error {
+	margin: 12px 0 0;
+	padding: 9px 12px;
+	border: 1px solid var(--msh-rl);
+	background: var(--msh-rw);
+	color: var(--msh-danger);
+	font-size: 12.5px;
+}
+
+/* --- Existing links ---------------------------------------------------- */
+
+.msh-health-share-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 18px;
+}
+
+.msh-health-share-table th,
+.msh-health-share-table td {
+	text-align: left;
+	padding: 8px 6px;
+	border-bottom: 1px solid var(--msh-border);
+	font-size: 12.5px;
+	color: var(--msh-text-secondary);
+}
+
+.msh-health-share-table th {
+	font-size: 11px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--msh-text-muted);
+	font-weight: 600;
+}
+
+.msh-health-share-table td:last-child {
+	text-align: right;
+	width: 1%;
+	white-space: nowrap;
+}
+
+.msh-health-share-empty {
+	margin: 18px 0 0;
+	font-size: 12.5px;
+	color: var(--msh-text-muted);
+}
+
+@media (max-width: 640px) {
+	.msh-health-share-cols {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.msh-health-share-freshrow {
+		flex-wrap: wrap;
+	}
+}
