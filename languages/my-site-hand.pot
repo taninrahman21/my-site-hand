@@ -2,21 +2,26 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: My Site Hand (AI) 1.2.0\n"
+"Project-Id-Version: My Site Hand 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/my-site-hand\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-05T18:39:05+00:00\n"
+"POT-Creation-Date: 2026-11-06T12:37:30+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: my-site-hand\n"
 
 #. Plugin Name of the plugin
 #: my-site-hand.php
-msgid "My Site Hand (AI)"
+#: admin/class-admin.php:98
+#: admin/class-admin.php:99
+#: includes/class-core-site-health.php:107
+#: templates/admin/tools.php:298
+#: templates/partials/header.php:126
+msgid "My Site Hand"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -26,7 +31,7 @@ msgstr ""
 
 #. Description of the plugin
 #: my-site-hand.php
-msgid "Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language."
+msgid "Build your site from free starter sites in plain WordPress blocks. Preview it first, undo anytime, no lock-in. Optional AI, an MCP server for Claude, Cursor and VS Code, and a site health scan."
 msgstr ""
 
 #. Author of the plugin
@@ -39,281 +44,520 @@ msgstr ""
 msgid "https://github.com/taninrahman21"
 msgstr ""
 
-#: admin/class-admin.php:98
-#: admin/class-admin.php:99
-#: includes/class-core-site-health.php:107
-#: templates/admin/tools.php:298
-#: templates/partials/header.php:121
-msgid "My Site Hand"
-msgstr ""
-
 #: admin/class-admin.php:110
 msgid "Dashboard - My Site Hand"
 msgstr ""
 
 #: admin/class-admin.php:111
-#: templates/partials/header.php:82
+#: templates/partials/header.php:87
 msgid "Dashboard"
 msgstr ""
 
+#: admin/class-admin.php:122
+msgid "Site Builder - My Site Hand"
+msgstr ""
+
 #: admin/class-admin.php:123
+#: templates/admin/abilities.php:22
+#: templates/admin/dashboard.php:137
+#: templates/admin/settings.php:22
+#: templates/partials/header.php:77
+#: assets/js/site-builder.js:174
+msgid "Site Builder"
+msgstr ""
+
+#: admin/class-admin.php:133
 msgid "Site Health - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:124
-#: templates/admin/audit-log.php:262
+#: admin/class-admin.php:134
+#: templates/admin/audit-log.php:263
 #: templates/admin/tokens.php:199
-#: templates/partials/header.php:77
+#: templates/partials/header.php:82
 msgid "Site Health"
 msgstr ""
 
-#: admin/class-admin.php:134
+#: admin/class-admin.php:144
 msgid "Abilities - My Site Hand"
 msgstr ""
 
-#: admin/class-admin.php:135
-#: templates/admin/abilities.php:163
-#: templates/admin/dashboard.php:639
-#: templates/partials/header.php:87
+#: admin/class-admin.php:145
+#: templates/admin/abilities.php:166
+#: templates/admin/dashboard.php:682
+#: templates/partials/header.php:92
 msgid "Abilities"
 msgstr ""
 
-#: admin/class-admin.php:144
-msgid "API Tokens - My Site Hand"
-msgstr ""
-
-#: admin/class-admin.php:145
-#: templates/partials/header.php:92
-msgid "API Tokens"
-msgstr ""
-
 #: admin/class-admin.php:154
-msgid "Audit Log - My Site Hand"
+msgid "API Tokens - My Site Hand"
 msgstr ""
 
 #: admin/class-admin.php:155
 #: templates/partials/header.php:97
-msgid "Audit Log"
+msgid "API Tokens"
 msgstr ""
 
 #: admin/class-admin.php:164
-msgid "Settings - My Site Hand"
+msgid "Audit Log - My Site Hand"
 msgstr ""
 
 #: admin/class-admin.php:165
-#: templates/admin/abilities.php:252
-#: templates/admin/health.php:124
-#: templates/admin/settings.php:104
 #: templates/partials/header.php:102
-msgid "Settings"
+msgid "Audit Log"
 msgstr ""
 
 #: admin/class-admin.php:174
-msgid "How to use - My Site Hand"
+msgid "Settings - My Site Hand"
 msgstr ""
 
 #: admin/class-admin.php:175
-#: templates/admin/documentation.php:105
-#: templates/partials/header.php:109
-msgid "How to use"
+#: templates/admin/abilities.php:255
+#: templates/admin/health.php:131
+#: templates/admin/settings.php:107
+#: templates/partials/header.php:107
+msgid "Settings"
 msgstr ""
 
 #: admin/class-admin.php:184
-msgid "About & Info - My Site Hand"
+msgid "How to use - My Site Hand"
 msgstr ""
 
 #: admin/class-admin.php:185
-#: templates/partials/header.php:110
-msgid "About & Info"
+#: templates/admin/documentation.php:105
+#: templates/partials/header.php:114
+msgid "How to use"
 msgstr ""
 
 #: admin/class-admin.php:194
-msgid "Suggest Feature - My Site Hand"
+msgid "About & Info - My Site Hand"
 msgstr ""
 
 #: admin/class-admin.php:195
-#: templates/partials/header.php:111
+#: templates/partials/header.php:115
+msgid "About & Info"
+msgstr ""
+
+#: admin/class-admin.php:204
+msgid "Suggest Feature - My Site Hand"
+msgstr ""
+
+#: admin/class-admin.php:205
+#: templates/partials/header.php:116
 msgid "Suggest a Feature"
 msgstr ""
 
-#: admin/class-admin.php:298
+#: admin/class-admin.php:328
 msgid "Copied!"
 msgstr ""
 
-#: admin/class-admin.php:299
+#: admin/class-admin.php:329
 msgid "Are you sure you want to revoke this token?"
 msgstr ""
 
-#: admin/class-admin.php:300
+#: admin/class-admin.php:330
+#: assets/js/site-builder.js:1252
 msgid "Saving..."
 msgstr ""
 
-#: admin/class-admin.php:301
+#: admin/class-admin.php:331
 msgid "Saved!"
 msgstr ""
 
-#: admin/class-admin.php:302
+#: admin/class-admin.php:332
 msgid "An error occurred. Please try again."
 msgstr ""
 
-#: admin/class-admin.php:303
+#: admin/class-admin.php:333
 msgid "Cache cleared!"
 msgstr ""
 
-#: admin/class-admin.php:416
-#: admin/class-admin.php:432
-#: admin/class-admin.php:445
-#: admin/class-admin.php:458
-#: admin/class-admin.php:471
-#: admin/class-admin.php:484
-#: admin/class-admin.php:497
-#: admin/class-admin.php:510
-#: admin/class-admin.php:590
+#. translators: 1: AI provider name, 2: model name
+#: admin/class-admin.php:485
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: admin/class-admin.php:602
+#: admin/class-admin.php:615
+#: admin/class-admin.php:631
+#: admin/class-admin.php:644
+#: admin/class-admin.php:657
+#: admin/class-admin.php:670
+#: admin/class-admin.php:683
+#: admin/class-admin.php:696
+#: admin/class-admin.php:709
+#: admin/class-admin.php:789
 msgid "You do not have permission to access this page."
 msgstr ""
 
-#: admin/class-admin.php:523
+#: admin/class-admin.php:722
 msgid "Please fill in all required fields."
 msgstr ""
 
-#: admin/class-admin.php:565
+#: admin/class-admin.php:764
 msgid "Thank you! Your feature request has been successfully submitted to the developer."
 msgstr ""
 
 #. translators: %s: the mailer error message
-#: admin/class-admin.php:570
+#: admin/class-admin.php:769
 #, php-format
 msgid "Failed to send email. Mailer error: %s"
 msgstr ""
 
-#: admin/class-admin.php:572
+#: admin/class-admin.php:771
 msgid "Failed to send email. Please check your server SMTP settings or contact builtbytanin@gmail.com directly."
 msgstr ""
 
-#: admin/class-admin.php:700
+#: admin/class-admin.php:897
 msgid "How to Use"
 msgstr ""
 
-#: api/class-rest-controller.php:610
+#: api/class-rest-controller.php:731
 msgid "That issue cannot be repaired from here."
 msgstr ""
 
-#: api/class-rest-controller.php:648
+#: api/class-rest-controller.php:769
 msgid "That field cannot be edited from here."
 msgstr ""
 
-#: api/class-rest-controller.php:668
+#: api/class-rest-controller.php:789
 msgid "Enter some text before saving."
 msgstr ""
 
-#: api/class-rest-controller.php:710
+#: api/class-rest-controller.php:831
 msgid "That does not look like a valid URL."
 msgstr ""
 
-#: api/class-rest-controller.php:720
+#: api/class-rest-controller.php:841
 msgid "That post no longer exists."
 msgstr ""
 
-#: api/class-rest-controller.php:728
-#: api/class-rest-controller.php:738
+#: api/class-rest-controller.php:849
+#: api/class-rest-controller.php:859
 msgid "That link is no longer in this post. Scan again to refresh the report."
 msgstr ""
 
-#: api/class-rest-controller.php:879
+#: api/class-rest-controller.php:1000
 msgid "That file could not be moved to the trash."
 msgstr ""
 
-#: api/class-rest-controller.php:901
+#: api/class-rest-controller.php:1022
 msgid "That item no longer exists."
 msgstr ""
 
-#: api/class-rest-controller.php:909
+#: api/class-rest-controller.php:1030
 msgid "You are not allowed to change that item."
 msgstr ""
 
-#: api/class-rest-controller.php:975
-#: api/class-rest-controller.php:997
+#: api/class-rest-controller.php:1280
+#: api/class-rest-controller.php:1302
 msgid "There is no scan to export yet. Run a scan first."
 msgstr ""
 
-#: api/class-rest-controller.php:976
-#: api/class-rest-controller.php:998
+#: api/class-rest-controller.php:1281
+#: api/class-rest-controller.php:1303
 msgid "Nothing to export"
 msgstr ""
 
-#: api/class-rest-controller.php:1021
-#: api/class-rest-controller.php:1458
+#: api/class-rest-controller.php:1326
+#: api/class-rest-controller.php:1763
 msgid "Security check failed."
 msgstr ""
 
-#: api/class-rest-controller.php:1076
+#: api/class-rest-controller.php:1381
 msgid "There is no scan to share yet. Run a scan first."
 msgstr ""
 
 #. translators: %s: the date the share link expires
-#: api/class-rest-controller.php:1099
+#: api/class-rest-controller.php:1404
 #, php-format
 msgid "Created a public report link that expires on %s."
 msgstr ""
 
-#: api/class-rest-controller.php:1139
+#: api/class-rest-controller.php:1444
 msgid "Revoked a public report link."
 msgstr ""
 
-#: api/class-rest-controller.php:1178
+#: api/class-rest-controller.php:1483
 msgid "Too many requests"
 msgstr ""
 
-#: api/class-rest-controller.php:1179
+#: api/class-rest-controller.php:1484
 msgid "This link has been opened too many times in the last hour. Please try again later."
 msgstr ""
 
-#: api/class-rest-controller.php:1191
+#: api/class-rest-controller.php:1496
 msgid "Report not found"
 msgstr ""
 
-#: api/class-rest-controller.php:1192
+#: api/class-rest-controller.php:1497
 msgid "This report link is not valid. It may have expired or been revoked."
 msgstr ""
 
-#: api/class-rest-controller.php:1353
-#: api/class-rest-controller.php:1408
-#: api/class-rest-controller.php:1509
+#: api/class-rest-controller.php:1658
+#: api/class-rest-controller.php:1713
+#: api/class-rest-controller.php:1814
 msgid "Nonce verification failed."
 msgstr ""
 
-#: api/class-rest-controller.php:1360
+#: api/class-rest-controller.php:1665
 msgid "Label is required."
 msgstr ""
 
-#: api/class-rest-controller.php:1365
+#: api/class-rest-controller.php:1670
 msgid "Limited access tokens must select at least one ability."
 msgstr ""
 
 #. translators: %s: the invalid IP address or CIDR range
-#: api/class-rest-controller.php:1375
+#: api/class-rest-controller.php:1680
 #: assets/js/token-manager.js:320
 #, php-format,js-format
 msgid "Invalid IP or CIDR format: %s"
 msgstr ""
 
-#: api/class-rest-controller.php:1392
+#: api/class-rest-controller.php:1697
 msgid "Save this token — it will not be shown again."
 msgstr ""
 
-#: api/class-rest-controller.php:1417
+#: api/class-rest-controller.php:1722
 msgid "Failed to revoke token."
 msgstr ""
 
-#: api/class-rest-controller.php:1466
+#: api/class-rest-controller.php:1771
 #: includes/class-report-exporter.php:58
 msgid "Could not open output stream."
 msgstr ""
 
 #. translators: %d: number of transients cleared
-#: api/class-rest-controller.php:1520
+#: api/class-rest-controller.php:1825
 #, php-format
 msgid "Cleared %d cached items."
+msgstr ""
+
+#. translators: %s: starter site slug
+#: api/class-site-builder-controller.php:430
+#, php-format
+msgid "Staged the \"%s\" starter site. Nothing on the live site changed."
+msgstr ""
+
+#: api/class-site-builder-controller.php:462
+msgid "Discarded the staged site. Nothing on the live site changed."
+msgstr ""
+
+#: api/class-site-builder-controller.php:481
+msgid "Preview needs a block theme. Switch to Twenty Twenty-Five using the notice at the top of this page."
+msgstr ""
+
+#: api/class-site-builder-controller.php:511
+msgid "Apply needs your confirmation."
+msgstr ""
+
+#. translators: 1: starter site name, 2: number of pages
+#: api/class-site-builder-controller.php:523
+#, php-format
+msgid "Applied the %1$s starter site: %2$d pages published, header, footer and styles saved. A snapshot was taken for Undo."
+msgstr ""
+
+#. translators: %s: starter site name
+#: api/class-site-builder-controller.php:561
+#, php-format
+msgid "Staged the live %s site again for editing. Nothing on the live site changed."
+msgstr ""
+
+#: api/class-site-builder-controller.php:586
+msgid "Undo needs your confirmation."
+msgstr ""
+
+#. translators: %d: number of builds undone
+#: api/class-site-builder-controller.php:597
+#, php-format
+msgid "Undid %d starter site build. Created pages, menu and images were moved to the trash."
+msgid_plural "Undid %d starter site builds. Created pages, menus and images were moved to the trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: what the AI did, 2: cost in USD
+#: api/class-site-builder-controller.php:631
+#, php-format
+msgid "AI %1$s suggestion returned for review (cost %2$s). Nothing was saved."
+msgstr ""
+
+#: api/class-site-builder-controller.php:762
+msgid "Please confirm before changing your theme."
+msgstr ""
+
+#: api/class-site-builder-controller.php:771
+msgid "Installed and activated Twenty Twenty-Five."
+msgstr ""
+
+#. translators: %s: the daily spend cap, e.g. $1.00
+#: includes/ai/class-ai-manager.php:198
+#, php-format
+msgid "Daily spend cap of %s reached. Raise it in Settings, or try again tomorrow."
+msgstr ""
+
+#: includes/ai/class-ai-manager.php:238
+msgid "Choose a provider first."
+msgstr ""
+
+#: includes/ai/class-ai-manager.php:248
+msgid "Paste an API key first."
+msgstr ""
+
+#: includes/ai/class-ai-manager.php:446
+msgid "AI assistance is not set up. Add an API key in Settings to use it."
+msgstr ""
+
+#: includes/ai/class-ai-provider-anthropic.php:69
+msgid "Anthropic (Claude)"
+msgstr ""
+
+#: includes/ai/class-ai-provider-anthropic.php:82
+msgid "Claude Haiku 5.5 (recommended, lowest cost)"
+msgstr ""
+
+#: includes/ai/class-ai-provider-anthropic.php:83
+msgid "Claude Sonnet 5.5 (higher quality, about 20x the cost)"
+msgstr ""
+
+#: includes/ai/class-ai-provider-anthropic.php:145
+#: includes/ai/class-ai-provider-openai.php:144
+msgid "The model declined to write this batch. Try again, or fill these items in by hand."
+msgstr ""
+
+#. translators: %s: AI provider name, e.g. Anthropic
+#: includes/ai/class-ai-provider-base.php:141
+#, php-format
+msgid "Your %s account has no credit left. Add credit in your provider account, then try again."
+msgstr ""
+
+#: includes/ai/class-ai-provider-base.php:151
+msgid "Your API key was rejected. Check it in Settings."
+msgstr ""
+
+#: includes/ai/class-ai-provider-base.php:159
+msgid "Provider rate limit reached. Try again in a minute."
+msgstr ""
+
+#. translators: %s: AI provider name, e.g. Anthropic
+#: includes/ai/class-ai-provider-base.php:169
+#, php-format
+msgid "%s is overloaded right now. Try again in a few minutes."
+msgstr ""
+
+#. translators: %s: the error message returned by the AI provider
+#: includes/ai/class-ai-provider-base.php:182
+#, php-format
+msgid "The provider refused the request: %s Check the model chosen in Settings."
+msgstr ""
+
+#: includes/ai/class-ai-provider-base.php:185
+msgid "The provider refused the request. Check the model chosen in Settings."
+msgstr ""
+
+#. translators: 1: AI provider name, 2: HTTP status code
+#: includes/ai/class-ai-provider-base.php:194
+#, php-format
+msgid "%1$s returned an error (HTTP %2$d). This is on the provider's side; try again shortly."
+msgstr ""
+
+#. translators: %s: AI provider name, e.g. Anthropic
+#: includes/ai/class-ai-provider-base.php:215
+#, php-format
+msgid "Could not reach %s. Your server may be blocking outgoing requests, or the provider is down."
+msgstr ""
+
+#: includes/ai/class-ai-provider-base.php:230
+msgid "The provider sent back a response that could not be read. Try again."
+msgstr ""
+
+#: includes/ai/class-ai-provider-openai.php:62
+msgid "OpenAI"
+msgstr ""
+
+#: includes/ai/class-ai-provider-openai.php:72
+msgid "GPT-4o mini (recommended, lowest cost)"
+msgstr ""
+
+#: includes/ai/class-ai-provider-openai.php:73
+msgid "GPT-4.1 mini (higher quality, about 2.5x the cost)"
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:242
+msgid "AI cannot fix issues from this check."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:365
+msgid "The AI reply could not be read, even on a second try. Fill this one in by hand."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:372
+msgid "One batch of suggestions could not be read and was skipped. The rest carried on."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:385
+msgid "The AI skipped this item. Fill it in by hand."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:465
+msgid "These suggestions have expired. Close the panel and generate them again."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:482
+msgid "There is no suggestion for this item. Generate again."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:504
+msgid "There is no text to apply. Type something first."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:606
+msgid "This item no longer exists."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:610
+msgid "You are not allowed to change this item."
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:628
+msgid "This item is not an image."
+msgstr ""
+
+#. translators: %s: post title the image is attached to
+#. translators: %s: post title the attachment is attached to
+#: includes/ai/class-bulk-fix-manager.php:641
+#: includes/health/class-check-large-media.php:263
+#: includes/health/class-check-missing-alt-text.php:173
+#, php-format
+msgid "Used in: %s"
+msgstr ""
+
+#: includes/ai/class-bulk-fix-manager.php:668
+msgid "This item is not a post or page."
+msgstr ""
+
+#. translators: %d: post ID
+#: includes/ai/class-bulk-fix-manager.php:679
+#: includes/health/class-check-accessibility-basics.php:394
+#: includes/health/class-check-missing-image-dimensions.php:284
+#: includes/health/class-check-missing-lazy-loading.php:295
+#: includes/health/class-check-missing-meta-description.php:141
+#: includes/health/class-check-thin-content.php:403
+#, php-format
+msgid "Untitled (#%d)"
+msgstr ""
+
+#. translators: 1: length of the suggestion in characters, 2: the limit
+#: includes/ai/class-bulk-fix-manager.php:803
+#: includes/ai/class-bulk-fix-manager.php:818
+#, php-format
+msgid "The suggestion was too long (%1$d characters, limit %2$d) and was discarded. Fill this one in by hand."
+msgstr ""
+
+#. translators: 1: length of the suggestion in characters, 2: the minimum
+#: includes/ai/class-bulk-fix-manager.php:830
+#, php-format
+msgid "The suggestion was too short (%1$d characters, minimum %2$d) and was discarded. Fill this one in by hand."
 msgstr ""
 
 #. translators: %s: ability name
@@ -624,70 +868,83 @@ msgstr ""
 msgid "Token not authorized for this ability."
 msgstr ""
 
-#: includes/class-plugin.php:312
-#: includes/class-plugin.php:346
-#: includes/class-plugin.php:382
-#: includes/class-plugin.php:434
-#: includes/class-plugin.php:497
-#: includes/class-plugin.php:524
+#: includes/class-plugin.php:373
+#: includes/class-plugin.php:407
+#: includes/class-plugin.php:443
+#: includes/class-plugin.php:495
+#: includes/class-plugin.php:591
+#: includes/class-plugin.php:618
+#: includes/class-plugin.php:645
 #: includes/class-review-prompt.php:232
 msgid "Permission denied."
 msgstr ""
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:380
 msgid "Missing module slug."
 msgstr ""
 
-#: includes/class-plugin.php:353
+#: includes/class-plugin.php:414
 msgid "Missing ability name."
 msgstr ""
 
 #. translators: %d: number of tokens deleted
-#: includes/class-plugin.php:393
+#: includes/class-plugin.php:454
 #, php-format
 msgid "Deleted %d tokens."
 msgstr ""
 
 #. translators: %d: number of log entries deleted
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:465
 #, php-format
 msgid "Deleted %d log entries."
 msgstr ""
 
-#: includes/class-plugin.php:421
+#: includes/class-plugin.php:482
 msgid "All plugin data has been reset to defaults."
 msgstr ""
 
-#: includes/class-plugin.php:426
+#: includes/class-plugin.php:487
 msgid "Unknown action."
 msgstr ""
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:521
 msgid "Option not allowed via AJAX."
 msgstr ""
 
-#: includes/class-plugin.php:473
+#: includes/class-plugin.php:538
 msgid "That is not a valid email address."
 msgstr ""
 
-#: includes/class-plugin.php:505
+#: includes/class-plugin.php:549
+msgid "That does not look like an API key. Paste it again, without spaces or quotes."
+msgstr ""
+
+#: includes/class-plugin.php:567
+msgid "That model is not offered by the selected provider."
+msgstr ""
+
+#: includes/class-plugin.php:599
 msgid "Loopback test passed. Server can communicate with itself."
 msgstr ""
 
-#: includes/class-plugin.php:508
+#: includes/class-plugin.php:602
 msgid "Discovery simulation successful. 12 tools identified."
 msgstr ""
 
-#: includes/class-plugin.php:511
+#: includes/class-plugin.php:605
 msgid "Unknown diagnostic test."
 msgstr ""
 
-#: includes/class-plugin.php:532
+#: includes/class-plugin.php:626
 msgid "Database tables verified and repaired."
 msgstr ""
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:629
 msgid "Unknown fix action."
+msgstr ""
+
+#: includes/class-plugin.php:654
+msgid "Connected. Your key works."
 msgstr ""
 
 #. translators: %d: hourly limit
@@ -707,7 +964,7 @@ msgid "Too many requests. Please try again later."
 msgstr ""
 
 #: includes/class-report-exporter.php:35
-#: templates/export/health-print.php:256
+#: templates/export/health-print.php:288
 #: templates/export/shared-report.php:172
 msgid "Check"
 msgstr ""
@@ -866,16 +1123,6 @@ msgid_plural "%d headings skip a level"
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: %d: post ID
-#: includes/health/class-check-accessibility-basics.php:394
-#: includes/health/class-check-missing-image-dimensions.php:284
-#: includes/health/class-check-missing-lazy-loading.php:295
-#: includes/health/class-check-missing-meta-description.php:141
-#: includes/health/class-check-thin-content.php:403
-#, php-format
-msgid "Untitled (#%d)"
-msgstr ""
-
 #: includes/health/class-check-broken-links.php:109
 msgid "Broken Links"
 msgstr ""
@@ -942,14 +1189,6 @@ msgstr ""
 #: includes/health/class-check-orphan-media.php:563
 #, php-format
 msgid "Attachment #%d"
-msgstr ""
-
-#. translators: %s: post title the attachment is attached to
-#. translators: %s: post title the image is attached to
-#: includes/health/class-check-large-media.php:263
-#: includes/health/class-check-missing-alt-text.php:173
-#, php-format
-msgid "Used in: %s"
 msgstr ""
 
 #: includes/health/class-check-missing-alt-text.php:36
@@ -1457,6 +1696,86 @@ msgstr ""
 msgid "Check all outgoing links in a post for broken URLs (returns HTTP status for each)."
 msgstr ""
 
+#: includes/modules/class-module-site-builder.php:90
+msgid "List Starter Sites"
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:91
+msgid "List the ready-made starter sites bundled with the plugin (name, category, pages, screenshots), and which one is live on the site now. Read only."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:108
+msgid "Get Starter Site"
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:109
+msgid "Get one starter site: its pages and their sections, every editable slot (id, type, max length, default text, writing hint), preset palettes, font pairs, design options and the library of sections that can be added. Use this before staging. Read only."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:132
+msgid "Stage Starter Site"
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:133
+msgid "Start a private draft from a starter site, with optional slot values, palette and fonts. Replaces your previous draft. Does NOT change the live site. Set from_live to true instead of a slug to continue the site that is live now, with the text, colours and sections it was applied with; applying that draft replaces its pages instead of adding a second set. Returns a preview URL that works in a browser where you are logged in to WordPress as this user."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:156
+msgid "Update Staged Slots"
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:157
+msgid "Change slot values, palette or fonts in your private draft. Only the values you send change; \"reset\" puts listed slots back to their default. Does NOT change the live site."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:180
+msgid "Apply Staged Site"
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:181
+msgid "CHANGES THE LIVE SITE. Publishes the draft: creates and publishes its pages, sets the front page, site title and tagline, replaces the header, footer and global styles of the active block theme, creates a menu and adds images to the media library. A snapshot is taken first so restore-snapshot can undo it. Requires \"confirm\": true. Ask the site owner before calling this."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:207
+msgid "List Site Snapshots"
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:208
+msgid "List the last five starter site applies (date, starter site, applied or undone) with the snapshot id needed by restore-snapshot. Read only."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:225
+msgid "Restore Site Snapshot"
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:226
+msgid "CHANGES THE LIVE SITE. Undoes a starter site apply: restores the previous front page, title, tagline, header, footer and global styles, and moves the pages, menu and images it created to the trash (nothing is permanently deleted). Later applies are undone first. Requires \"confirm\": true."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:300
+msgid "This is a private draft. Nothing on the live site has changed."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:352
+msgid "Give a starter site slug, or set from_live to true."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:380
+msgid "Applying changes the live site, so \"confirm\": true is required. Ask the site owner first."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:385
+msgid "Applied. Use restore-snapshot with this id to undo."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:406
+msgid "Restoring changes the live site, so \"confirm\": true is required."
+msgstr ""
+
+#: includes/modules/class-module-site-builder.php:411
+msgid "Undone. Created content is in the trash."
+msgstr ""
+
 #: includes/modules/class-module-users.php:64
 msgid "List Users"
 msgstr ""
@@ -1627,191 +1946,411 @@ msgstr ""
 msgid "List WooCommerce customers."
 msgstr ""
 
+#: includes/site-builder/class-global-styles-builder.php:95
+msgid "Headings"
+msgstr ""
+
+#: includes/site-builder/class-global-styles-builder.php:95
+msgid "Body"
+msgstr ""
+
+#: includes/site-builder/class-global-styles-builder.php:216
+msgid "Base"
+msgstr ""
+
+#: includes/site-builder/class-global-styles-builder.php:217
+#: templates/admin/dashboard.php:168
+msgid "Surface"
+msgstr ""
+
+#: includes/site-builder/class-global-styles-builder.php:218
+msgid "Accent"
+msgstr ""
+
+#: includes/site-builder/class-global-styles-builder.php:219
+msgid "Contrast"
+msgstr ""
+
+#: includes/site-builder/class-global-styles-builder.php:220
+msgid "Muted"
+msgstr ""
+
+#: includes/site-builder/class-global-styles-builder.php:221
+msgid "Primary"
+msgstr ""
+
+#: includes/site-builder/class-global-styles-builder.php:222
+msgid "On primary"
+msgstr ""
+
+#: includes/site-builder/class-site-applier.php:158
+msgid "Applying a starter site needs a block theme. Switch to Twenty Twenty-Five first."
+msgstr ""
+
+#: includes/site-builder/class-site-applier.php:167
+msgid "A starter site is already being applied. Wait a minute and try again."
+msgstr ""
+
+#. translators: %s: the underlying error message
+#: includes/site-builder/class-site-applier.php:189
+#, php-format
+msgid "The starter site could not be applied, so nothing was changed: %s"
+msgstr ""
+
+#. translators: %d: post id
+#: includes/site-builder/class-site-applier.php:248
+#: includes/site-builder/class-site-applier.php:778
+#, php-format
+msgid "Could not move item %d to the trash."
+msgstr ""
+
+#. translators: %s: starter site name
+#: includes/site-builder/class-site-applier.php:340
+#, php-format
+msgid "%s menu"
+msgstr ""
+
+#: includes/site-builder/class-site-applier.php:421
+msgid "The global styles could not be saved."
+msgstr ""
+
+#: includes/site-builder/class-site-applier.php:482
+msgid "A bundled image is missing from the starter site."
+msgstr ""
+
+#: includes/site-builder/class-site-applier.php:487
+msgid "A bundled image could not be copied. Check that the uploads folder is writable."
+msgstr ""
+
+#: includes/site-builder/class-site-applier.php:701
+msgid "That snapshot no longer exists. Only the last five are kept."
+msgstr ""
+
+#: includes/site-builder/class-site-applier.php:705
+msgid "This build has already been undone."
+msgstr ""
+
+#. translators: %d: post id
+#: includes/site-builder/class-site-applier.php:791
+#, php-format
+msgid "Could not restore item %d from the trash."
+msgstr ""
+
+#: includes/site-builder/class-site-applier.php:843
+msgid "No starter site is live on your site right now."
+msgstr ""
+
+#: includes/site-builder/class-site-builder-ai.php:98
+msgid "There is no text to write in those sections."
+msgstr ""
+
+#: includes/site-builder/class-site-builder-ai.php:192
+msgid "AI rewriting is not available for this field."
+msgstr ""
+
+#: includes/site-builder/class-site-builder-ai.php:431
+msgid "The AI did not suggest any changes. Try describing what you want differently."
+msgstr ""
+
+#: includes/site-builder/class-site-builder-ai.php:570
+msgid "The AI reply could not be used. Nothing was changed. Try again, or keep editing by hand."
+msgstr ""
+
+#. translators: %s: starter site slug
+#: includes/site-builder/class-site-builder.php:363
+#, php-format
+msgid "There is no starter site called \"%s\"."
+msgstr ""
+
+#: includes/site-builder/class-site-builder.php:379
+msgid "There is no staged site yet. Choose a starter site first."
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:638
+#: includes/site-builder/class-site-preview.php:681
+#: includes/site-builder/class-site-preview.php:686
+msgid "Site preview"
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:640
+#: assets/js/site-builder.js:276
+#: assets/js/site-builder.js:538
+#: assets/js/site-builder.js:1645
+#: assets/js/site-builder.js:1648
+msgid "Preview"
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:641
+#: assets/js/site-builder.js:1649
+msgid "Only you can see this. Nothing has changed on your site yet."
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:643
+#: assets/js/site-builder.js:1650
+msgid "Device"
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:646
+#: assets/js/site-builder.js:1607
+msgid "Desktop"
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:647
+#: assets/js/site-builder.js:1607
+msgid "Tablet"
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:648
+#: assets/js/site-builder.js:1607
+msgid "Mobile"
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:656
+#: assets/js/site-builder.js:1653
+msgid "Back to editor"
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:657
+#: assets/js/site-builder.js:534
+#: assets/js/site-builder.js:1011
+msgid "Discard"
+msgstr ""
+
+#: includes/site-builder/class-site-preview.php:658
+#: assets/js/site-builder.js:539
+#: assets/js/site-builder.js:1654
+msgid "Apply to my site"
+msgstr ""
+
+#: includes/site-builder/class-staged-sites.php:44
+msgid "Staged sites"
+msgstr ""
+
+#: includes/site-builder/class-starter-site.php:75
+msgid "Starter site folder names may only use lowercase letters, numbers, dashes and underscores."
+msgstr ""
+
+#. translators: %s: file name
+#: includes/site-builder/class-starter-site.php:412
+#, php-format
+msgid "Missing file: %s"
+msgstr ""
+
+#. translators: 1: file name 2: JSON error message
+#: includes/site-builder/class-starter-site.php:423
+#, php-format
+msgid "Invalid JSON in %1$s: %2$s"
+msgstr ""
+
+#: includes/site-builder/class-theme-installer.php:37
+msgid "That theme cannot be installed from here."
+msgstr ""
+
+#: includes/site-builder/class-theme-installer.php:41
+msgid "You are not allowed to change the theme."
+msgstr ""
+
+#: includes/site-builder/class-theme-installer.php:48
+msgid "You are not allowed to install themes. Ask a site administrator to install Twenty Twenty-Five."
+msgstr ""
+
+#: includes/site-builder/class-theme-installer.php:79
+msgid "The theme could not be installed. Check that WordPress can write to wp-content/themes."
+msgstr ""
+
+#: includes/site-builder/class-theme-installer.php:86
+msgid "The theme was not found after installing."
+msgstr ""
+
 #. translators: 1: required PHP version 2: current PHP version
-#: my-site-hand.php:43
+#: my-site-hand.php:44
 #, php-format
 msgid "My Site Hand requires PHP %1$s or higher. You are running PHP %2$s. Please upgrade PHP."
 msgstr ""
 
 #. translators: %s: URL to tokens page
-#: my-site-hand.php:112
+#: my-site-hand.php:113
 #, php-format
 msgid "<strong>My Site Hand Security Update:</strong> API Token permissions are now enforced strictly. Your existing tokens have been preserved with full access to prevent connection breaks. Please <a href=\"%s\">review your tokens</a> to narrow their scope."
 msgstr ""
 
 #: templates/admin/abilities.php:16
-#: templates/admin/dashboard.php:130
+#: templates/admin/dashboard.php:131
 #: templates/admin/settings.php:16
 msgid "Content"
 msgstr ""
 
 #: templates/admin/abilities.php:17
-#: templates/admin/dashboard.php:131
+#: templates/admin/dashboard.php:132
 #: templates/admin/settings.php:17
 msgid "SEO"
 msgstr ""
 
 #: templates/admin/abilities.php:18
-#: templates/admin/dashboard.php:132
+#: templates/admin/dashboard.php:133
 #: templates/admin/settings.php:18
 #: templates/admin/tools.php:151
 msgid "Diagnostics"
 msgstr ""
 
 #: templates/admin/abilities.php:19
-#: templates/admin/dashboard.php:133
+#: templates/admin/dashboard.php:134
 #: templates/admin/settings.php:19
 msgid "Media"
 msgstr ""
 
 #: templates/admin/abilities.php:20
-#: templates/admin/dashboard.php:134
+#: templates/admin/dashboard.php:135
 #: templates/admin/settings.php:20
 msgid "Users"
 msgstr ""
 
 #: templates/admin/abilities.php:21
-#: templates/admin/dashboard.php:135
+#: templates/admin/dashboard.php:136
 #: templates/admin/settings.php:21
 msgid "WooCommerce"
 msgstr ""
 
-#: templates/admin/abilities.php:25
-msgid "Posts, pages, and custom post types"
-msgstr ""
-
 #: templates/admin/abilities.php:26
-#: templates/admin/dashboard.php:131
-#: templates/admin/settings.php:17
-msgid "Analysis and meta management"
+msgid "Posts, pages, and custom post types"
 msgstr ""
 
 #: templates/admin/abilities.php:27
 #: templates/admin/dashboard.php:132
-#: templates/admin/settings.php:18
-msgid "Site health, error logs, cron"
+#: templates/admin/settings.php:17
+msgid "Analysis and meta management"
 msgstr ""
 
 #: templates/admin/abilities.php:28
 #: templates/admin/dashboard.php:133
-#: templates/admin/settings.php:19
-msgid "Media library"
+#: templates/admin/settings.php:18
+msgid "Site health, error logs, cron"
 msgstr ""
 
 #: templates/admin/abilities.php:29
 #: templates/admin/dashboard.php:134
+#: templates/admin/settings.php:19
+msgid "Media library"
+msgstr ""
+
+#: templates/admin/abilities.php:30
+#: templates/admin/dashboard.php:135
 #: templates/admin/settings.php:20
 msgid "Accounts and roles"
 msgstr ""
 
-#: templates/admin/abilities.php:30
+#: templates/admin/abilities.php:31
 msgid "Products, orders, and coupons"
 msgstr ""
 
-#: templates/admin/abilities.php:134
-#: templates/admin/abilities.php:135
-#: templates/admin/settings.php:89
-#: templates/admin/settings.php:186
+#: templates/admin/abilities.php:32
+msgid "Starter sites: stage, apply and undo"
+msgstr ""
+
+#: templates/admin/abilities.php:137
+#: templates/admin/abilities.php:138
+#: templates/admin/settings.php:91
+#: templates/admin/settings.php:189
 msgid "Modules"
 msgstr ""
 
 #. translators: %d: number of destructive abilities
-#: templates/admin/abilities.php:151
+#: templates/admin/abilities.php:154
 #, php-format
 msgid "%d ability is destructive. It also needs a token with admin scope."
 msgid_plural "%d abilities are destructive. Those also need a token with admin scope."
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/abilities.php:154
+#: templates/admin/abilities.php:157
 msgid "See tokens"
 msgstr ""
 
-#: templates/admin/abilities.php:162
+#: templates/admin/abilities.php:165
 msgid "Permissions"
 msgstr ""
 
 #. translators: 1: number of enabled abilities, 2: total number of abilities
-#: templates/admin/abilities.php:167
+#: templates/admin/abilities.php:170
 #, php-format
 msgid "%1$d of %2$d are callable. Each switch is one thing an AI client may do here."
 msgstr ""
 
-#: templates/admin/abilities.php:173
+#: templates/admin/abilities.php:176
 msgid "All off"
 msgstr ""
 
-#: templates/admin/abilities.php:174
+#: templates/admin/abilities.php:177
 msgid "All on"
 msgstr ""
 
-#: templates/admin/abilities.php:181
+#: templates/admin/abilities.php:184
 msgid "Registered"
 msgstr ""
 
-#: templates/admin/abilities.php:185
+#: templates/admin/abilities.php:188
 msgid "Enabled"
 msgstr ""
 
-#: templates/admin/abilities.php:189
+#: templates/admin/abilities.php:192
 msgid "Held back"
 msgstr ""
 
-#: templates/admin/abilities.php:193
+#: templates/admin/abilities.php:196
 msgid "MCP-public"
 msgstr ""
 
 #. translators: %d: total number of abilities
-#: templates/admin/abilities.php:206
+#: templates/admin/abilities.php:209
 #, php-format
 msgid "Search %d abilities"
 msgstr ""
 
-#: templates/admin/abilities.php:212
+#: templates/admin/abilities.php:215
 msgid "All modules"
 msgstr ""
 
 #. translators: 1: number of enabled abilities, 2: total abilities in the module
 #. translators: 1: number of enabled modules, 2: total modules
-#: templates/admin/abilities.php:240
-#: templates/admin/settings.php:193
+#: templates/admin/abilities.php:243
+#: templates/admin/settings.php:196
 #, php-format
 msgid "%1$d of %2$d on"
 msgstr ""
 
 #. translators: %s: link to the settings page
-#: templates/admin/abilities.php:251
+#: templates/admin/abilities.php:254
 #, php-format
 msgid "This module is switched off, so none of the abilities below are reachable. Turn it on in %s."
 msgstr ""
 
-#: templates/admin/abilities.php:271
+#: templates/admin/abilities.php:274
 #: templates/admin/tokens.php:76
 msgid "read only"
 msgstr ""
 
-#: templates/admin/abilities.php:274
+#: templates/admin/abilities.php:277
 #: templates/admin/tokens.php:88
 msgid "destructive"
 msgstr ""
 
-#: templates/admin/abilities.php:277
+#: templates/admin/abilities.php:280
 #: templates/admin/tokens.php:82
 msgid "public"
 msgstr ""
 
-#: templates/admin/abilities.php:279
+#: templates/admin/abilities.php:282
 #: templates/admin/tokens.php:94
 msgid "admin scope"
 msgstr ""
 
-#: templates/admin/abilities.php:287
-#: templates/admin/dashboard.php:475
+#: templates/admin/abilities.php:290
+#: templates/admin/dashboard.php:518
 msgid "On"
 msgstr ""
 
-#: templates/admin/abilities.php:287
-#: templates/admin/dashboard.php:475
+#: templates/admin/abilities.php:290
+#: templates/admin/dashboard.php:518
 msgid "Off"
 msgstr ""
 
@@ -1820,12 +2359,17 @@ msgstr ""
 msgid "Quick Fix"
 msgstr ""
 
-#: templates/admin/audit-log.php:100
+#: templates/admin/audit-log.php:78
+#: templates/admin/dashboard.php:31
+msgid "AI Bulk Fix"
+msgstr ""
+
 #: templates/admin/audit-log.php:101
-#: templates/admin/dashboard.php:158
-#: templates/admin/dashboard.php:159
-#: templates/admin/settings.php:86
-#: templates/admin/settings.php:87
+#: templates/admin/audit-log.php:102
+#: templates/admin/dashboard.php:161
+#: templates/admin/dashboard.php:162
+#: templates/admin/settings.php:88
+#: templates/admin/settings.php:89
 #: templates/admin/tokens.php:108
 #: templates/admin/tokens.php:109
 #: templates/admin/tools.php:135
@@ -1833,598 +2377,630 @@ msgstr ""
 msgid "On this page"
 msgstr ""
 
-#: templates/admin/audit-log.php:102
-#: templates/admin/dashboard.php:160
-#: templates/admin/dashboard.php:184
+#: templates/admin/audit-log.php:103
+#: templates/admin/dashboard.php:163
+#: templates/admin/dashboard.php:187
+#: templates/admin/settings.php:507
 msgid "Today"
 msgstr ""
 
-#: templates/admin/audit-log.php:103
+#: templates/admin/audit-log.php:104
 msgid "Filters"
 msgstr ""
 
-#: templates/admin/audit-log.php:104
-#: templates/admin/audit-log.php:219
+#: templates/admin/audit-log.php:105
+#: templates/admin/audit-log.php:220
 msgid "Entries"
 msgstr ""
 
 #. translators: %d: number of errors in the last 24 hours
-#: templates/admin/audit-log.php:109
+#: templates/admin/audit-log.php:110
 #, php-format
 msgid "%d failure in the last 24 hours."
 msgid_plural "%d failures in the last 24 hours."
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/audit-log.php:112
-#: templates/admin/audit-log.php:132
-#: templates/admin/health.php:183
+#: templates/admin/audit-log.php:113
+#: templates/admin/audit-log.php:133
+#: templates/admin/health.php:190
 msgid "Export CSV"
 msgstr ""
 
-#: templates/admin/audit-log.php:120
+#: templates/admin/audit-log.php:121
 msgid "Record"
 msgstr ""
 
-#: templates/admin/audit-log.php:121
+#: templates/admin/audit-log.php:122
 msgid "Audit"
 msgstr ""
 
 #. translators: %d: log retention period in days
-#: templates/admin/audit-log.php:125
+#: templates/admin/audit-log.php:126
 #, php-format
 msgid "Every call, what it sent, and what came back. Kept for %d days."
 msgstr ""
 
-#: templates/admin/audit-log.php:140
+#: templates/admin/audit-log.php:141
 msgid "Entries today"
 msgstr ""
 
 #. translators: %d: number of tokens
-#: templates/admin/audit-log.php:145
+#: templates/admin/audit-log.php:146
 #, php-format
 msgid "Across %d token"
 msgid_plural "Across %d tokens"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/audit-log.php:150
+#: templates/admin/audit-log.php:151
 msgid "Succeeded"
 msgstr ""
 
 #. translators: 1: number of successful calls, 2: total calls
-#: templates/admin/audit-log.php:156
+#: templates/admin/audit-log.php:157
 #, php-format
 msgid "%1$s of %2$s"
 msgstr ""
 
-#: templates/admin/audit-log.php:164
+#: templates/admin/audit-log.php:165
 msgid "Average"
 msgstr ""
 
-#: templates/admin/audit-log.php:166
+#: templates/admin/audit-log.php:167
 msgid "Over the last 30 days"
 msgstr ""
 
-#: templates/admin/audit-log.php:169
-#: templates/admin/dashboard.php:310
+#: templates/admin/audit-log.php:170
+#: templates/admin/dashboard.php:353
 msgid "Failures"
 msgstr ""
 
-#: templates/admin/audit-log.php:171
-#: templates/admin/audit-log.php:199
+#: templates/admin/audit-log.php:172
+#: templates/admin/audit-log.php:200
 msgid "Last 24 hours"
 msgstr ""
 
-#: templates/admin/audit-log.php:183
+#: templates/admin/audit-log.php:184
 msgid "Search ability or client"
 msgstr ""
 
-#: templates/admin/audit-log.php:189
+#: templates/admin/audit-log.php:190
 msgid "All tokens"
 msgstr ""
 
-#: templates/admin/audit-log.php:198
+#: templates/admin/audit-log.php:199
 msgid "All time"
 msgstr ""
 
-#: templates/admin/audit-log.php:200
+#: templates/admin/audit-log.php:201
 msgid "Last 7 days"
 msgstr ""
 
-#: templates/admin/audit-log.php:201
+#: templates/admin/audit-log.php:202
 msgid "Last 30 days"
 msgstr ""
 
-#: templates/admin/audit-log.php:206
+#: templates/admin/audit-log.php:207
 msgid "Reset"
 msgstr ""
 
-#: templates/admin/audit-log.php:220
+#: templates/admin/audit-log.php:221
 msgid "Click a row for the payload and the exact reason a call failed."
 msgstr ""
 
 #. translators: 1: first entry number, 2: last entry number, 3: total entries
-#: templates/admin/audit-log.php:227
+#: templates/admin/audit-log.php:228
 #, php-format
 msgid "%1$s–%2$s of %3$s"
 msgstr ""
 
-#: templates/admin/audit-log.php:233
+#: templates/admin/audit-log.php:234
 msgid "No entries"
 msgstr ""
 
-#: templates/admin/audit-log.php:246
+#: templates/admin/audit-log.php:247
 msgid "No entries found"
 msgstr ""
 
-#: templates/admin/audit-log.php:247
+#: templates/admin/audit-log.php:248
 msgid "No AI actions recorded yet"
 msgstr ""
 
-#: templates/admin/audit-log.php:251
+#: templates/admin/audit-log.php:252
 msgid "No log entries match the selected filters."
 msgstr ""
 
-#: templates/admin/audit-log.php:252
+#: templates/admin/audit-log.php:253
 msgid "This is the record of what an AI assistant did on your site. Entries appear as soon as one connects."
 msgstr ""
 
-#: templates/admin/audit-log.php:256
+#: templates/admin/audit-log.php:257
 msgid "Connect an AI assistant"
 msgstr ""
 
 #. translators: %s: link to the Site Health page
-#: templates/admin/audit-log.php:261
+#: templates/admin/audit-log.php:262
 #, php-format
 msgid "Not using an AI assistant? %s scans your site on its own, with no setup."
 msgstr ""
 
-#: templates/admin/audit-log.php:289
-#: templates/admin/audit-log.php:300
+#: templates/admin/audit-log.php:290
+#: templates/admin/audit-log.php:301
 msgid "Unknown client"
 msgstr ""
 
 #. translators: %s: WordPress user display name
-#: templates/admin/audit-log.php:297
+#: templates/admin/audit-log.php:298
 #, php-format
 msgid "%s (from the admin)"
 msgstr ""
 
 #. translators: %d: execution duration in milliseconds
-#: templates/admin/audit-log.php:335
-#: templates/admin/dashboard.php:412
+#: templates/admin/audit-log.php:336
+#: templates/admin/dashboard.php:455
 #, php-format
 msgid "%d ms"
 msgstr ""
 
-#: templates/admin/audit-log.php:346
+#: templates/admin/audit-log.php:347
 msgid "When"
 msgstr ""
 
-#: templates/admin/audit-log.php:351
+#: templates/admin/audit-log.php:352
 msgid "Source"
 msgstr ""
 
-#: templates/admin/audit-log.php:356
-#: templates/admin/dashboard.php:365
+#: templates/admin/audit-log.php:357
+#: templates/admin/dashboard.php:408
 msgid "Ability"
 msgstr ""
 
-#: templates/admin/audit-log.php:361
+#: templates/admin/audit-log.php:362
 msgid "Status"
 msgstr ""
 
-#: templates/admin/audit-log.php:366
+#: templates/admin/audit-log.php:367
 msgid "Sent"
 msgstr ""
 
-#: templates/admin/audit-log.php:374
+#: templates/admin/audit-log.php:375
 msgid "Came back"
 msgstr ""
 
-#: templates/admin/audit-log.php:375
+#: templates/admin/audit-log.php:376
 msgid "Why it failed"
 msgstr ""
 
-#: templates/admin/audit-log.php:382
+#: templates/admin/audit-log.php:383
 msgid "User agent"
 msgstr ""
 
-#: templates/admin/dashboard.php:56
+#: templates/admin/dashboard.php:57
 msgid "No HTTPS on this site"
 msgstr ""
 
-#: templates/admin/dashboard.php:57
+#: templates/admin/dashboard.php:58
 msgid "Every token you issue travels in plain text."
 msgstr ""
 
-#: templates/admin/dashboard.php:59
+#: templates/admin/dashboard.php:60
 msgid "Run the checks"
 msgstr ""
 
 #. translators: %d: number of tokens expiring within 30 days
-#: templates/admin/dashboard.php:67
+#: templates/admin/dashboard.php:68
 #, php-format
 msgid "%d token expires within 30 days"
 msgid_plural "%d tokens expire within 30 days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/dashboard.php:70
+#: templates/admin/dashboard.php:71
 msgid "Clients using them will stop working the moment they lapse."
 msgstr ""
 
-#: templates/admin/dashboard.php:72
+#: templates/admin/dashboard.php:73
 msgid "Rotate them now"
 msgstr ""
 
-#: templates/admin/dashboard.php:78
+#: templates/admin/dashboard.php:79
 msgid "The MCP endpoint is switched off"
 msgstr ""
 
-#: templates/admin/dashboard.php:79
+#: templates/admin/dashboard.php:80
 msgid "No agent can reach this site until you turn it back on."
 msgstr ""
 
-#: templates/admin/dashboard.php:81
+#: templates/admin/dashboard.php:82
 #: templates/admin/documentation.php:295
 msgid "Open settings"
 msgstr ""
 
-#: templates/admin/dashboard.php:130
+#: templates/admin/dashboard.php:131
 #: templates/admin/settings.php:16
 msgid "Posts, pages, custom post types"
 msgstr ""
 
-#: templates/admin/dashboard.php:135
+#: templates/admin/dashboard.php:136
 #: templates/admin/settings.php:21
 msgid "Products, orders, coupons"
 msgstr ""
 
-#: templates/admin/dashboard.php:162
-msgid "Needs you"
-msgstr ""
-
-#: templates/admin/dashboard.php:164
-msgid "Stream"
+#: templates/admin/dashboard.php:137
+#: templates/admin/settings.php:22
+msgid "Starter sites: stage, apply, undo"
 msgstr ""
 
 #: templates/admin/dashboard.php:165
-msgid "Surface"
+msgid "Needs you"
 msgstr ""
 
-#: templates/admin/dashboard.php:166
+#: templates/admin/dashboard.php:167
+msgid "Stream"
+msgstr ""
+
+#: templates/admin/dashboard.php:169
 msgid "Connect"
 msgstr ""
 
 #. translators: %d: number of active tokens
-#: templates/admin/dashboard.php:171
+#: templates/admin/dashboard.php:174
 #, php-format
 msgid "%d token issued."
 msgid_plural "%d tokens issued."
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/dashboard.php:174
+#: templates/admin/dashboard.php:177
 msgid "Review tokens"
 msgstr ""
 
-#: templates/admin/dashboard.php:183
+#: templates/admin/dashboard.php:186
 msgid "Overview"
 msgstr ""
 
 #. translators: 1: number of calls today, 2: number of active tokens, 3: number of errors in the last 24 hours
-#: templates/admin/dashboard.php:188
+#: templates/admin/dashboard.php:191
 #, php-format
 msgid "%1$s calls from %2$s. %3$s failed in the last 24 hours."
 msgstr ""
 
 #. translators: %d: number of active tokens
-#: templates/admin/dashboard.php:192
+#: templates/admin/dashboard.php:195
 #, php-format
 msgid "%d token"
 msgid_plural "%d tokens"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/dashboard.php:199
+#: templates/admin/dashboard.php:202
 msgid "Refresh"
 msgstr ""
 
-#: templates/admin/dashboard.php:200
+#: templates/admin/dashboard.php:203
 #: templates/admin/tokens.php:144
 msgid "New token"
 msgstr ""
 
-#: templates/admin/dashboard.php:208
+#: templates/admin/dashboard.php:219
+msgid "Build your site"
+msgstr ""
+
+#. translators: %s: starter site name
+#: templates/admin/dashboard.php:225
+#, php-format
+msgid "You have a %s draft in progress. Only you can see it."
+msgstr ""
+
+#. translators: 1: starter site name, 2: date
+#: templates/admin/dashboard.php:231
+#, php-format
+msgid "Built from the %1$s starter site on %2$s. You can undo it from Site history."
+msgstr ""
+
+#: templates/admin/dashboard.php:236
+msgid "Pick a ready-made starter site, make it yours and preview it before anything goes live."
+msgstr ""
+
+#: templates/admin/dashboard.php:242
+#: assets/js/site-builder.js:210
+#: assets/js/site-builder.js:250
+msgid "Continue editing"
+msgstr ""
+
+#: templates/admin/dashboard.php:242
+msgid "Open Site Builder"
+msgstr ""
+
+#: templates/admin/dashboard.php:250
 msgid "You have never scanned this site"
 msgstr ""
 
-#: templates/admin/dashboard.php:210
+#: templates/admin/dashboard.php:252
 msgid "Find broken links, missing SEO data, and health issues in about 30 seconds. No setup required."
 msgstr ""
 
-#: templates/admin/dashboard.php:214
-#: templates/admin/health.php:116
+#: templates/admin/dashboard.php:256
+#: templates/admin/health.php:123
 msgid "Scan My Site"
 msgstr ""
 
-#: templates/admin/dashboard.php:224
-#: templates/admin/health.php:136
+#: templates/admin/dashboard.php:266
+#: templates/admin/health.php:143
 #: templates/export/shared-report.php:154
 msgid "/ 100"
 msgstr ""
 
 #. translators: %s: score band, e.g. "Good"
-#: templates/admin/dashboard.php:231
+#: templates/admin/dashboard.php:273
 #, php-format
 msgid "Site health: %s"
 msgstr ""
 
 #. translators: %s: human readable time difference, e.g. "5 minutes"
-#: templates/admin/dashboard.php:240
-#: templates/admin/health.php:146
+#: templates/admin/dashboard.php:282
+#: templates/admin/health.php:153
 #, php-format
 msgid "Last scanned %s ago"
 msgstr ""
 
-#: templates/admin/dashboard.php:252
+#: templates/admin/dashboard.php:294
 msgid "View report"
 msgstr ""
 
-#: templates/admin/dashboard.php:261
+#: templates/admin/dashboard.php:304
 msgid "Server active"
 msgstr ""
 
-#: templates/admin/dashboard.php:261
+#: templates/admin/dashboard.php:304
 msgid "Server stopped"
 msgstr ""
 
-#: templates/admin/dashboard.php:268
-#: templates/admin/dashboard.php:552
-#: templates/admin/dashboard.php:568
-#: templates/admin/dashboard.php:597
-#: templates/admin/dashboard.php:606
-#: templates/admin/dashboard.php:616
+#: templates/admin/dashboard.php:311
+#: templates/admin/dashboard.php:595
+#: templates/admin/dashboard.php:611
+#: templates/admin/dashboard.php:640
+#: templates/admin/dashboard.php:649
+#: templates/admin/dashboard.php:659
 #: templates/admin/documentation.php:313
-#: templates/admin/health.php:258
+#: templates/admin/health.php:265
 #: templates/admin/tokens.php:528
 #: templates/admin/tokens.php:567
 #: templates/admin/tokens.php:579
 #: templates/admin/tokens.php:604
 #: templates/admin/tokens.php:614
 #: templates/admin/tokens.php:624
-#: templates/partials/header.php:132
+#: templates/partials/header.php:137
 #: assets/js/health-scan.js:1023
 msgid "Copy"
 msgstr ""
 
-#: templates/admin/dashboard.php:271
+#: templates/admin/dashboard.php:314
 msgid "Protocol 2024-11-05"
 msgstr ""
 
-#: templates/admin/dashboard.php:277
+#: templates/admin/dashboard.php:320
 msgid "Calls today"
 msgstr ""
 
 #. translators: %d: percentage change in API calls
-#: templates/admin/dashboard.php:284
+#: templates/admin/dashboard.php:327
 #, php-format
 msgid "%d%% against yesterday"
 msgstr ""
 
-#: templates/admin/dashboard.php:290
+#: templates/admin/dashboard.php:333
 msgid "Abilities on"
 msgstr ""
 
 #. translators: %d: number of abilities switched off
-#: templates/admin/dashboard.php:295
+#: templates/admin/dashboard.php:338
 #, php-format
 msgid "%d held back by you"
 msgstr ""
 
-#: templates/admin/dashboard.php:300
+#: templates/admin/dashboard.php:343
 msgid "Average duration"
 msgstr ""
 
 #. translators: %d: number of active tokens
-#: templates/admin/dashboard.php:305
+#: templates/admin/dashboard.php:348
 #, php-format
 msgid "Across %d active tokens"
 msgstr ""
 
 #. translators: %s: error rate percentage
-#: templates/admin/dashboard.php:315
+#: templates/admin/dashboard.php:358
 #, php-format
 msgid "%s%% error rate this month"
 msgstr ""
 
-#: templates/admin/dashboard.php:344
+#: templates/admin/dashboard.php:387
 msgid "Request stream"
 msgstr ""
 
-#: templates/admin/dashboard.php:345
+#: templates/admin/dashboard.php:388
 msgid "The most recent calls, newest first."
 msgstr ""
 
-#: templates/admin/dashboard.php:348
+#: templates/admin/dashboard.php:391
 msgid "Full audit →"
 msgstr ""
 
-#: templates/admin/dashboard.php:356
+#: templates/admin/dashboard.php:399
 msgid "Waiting for activity"
 msgstr ""
 
-#: templates/admin/dashboard.php:357
+#: templates/admin/dashboard.php:400
 msgid "Calls appear here the moment your AI client makes its first request."
 msgstr ""
 
-#: templates/admin/dashboard.php:364
+#: templates/admin/dashboard.php:407
 msgid "Time"
 msgstr ""
 
-#: templates/admin/dashboard.php:366
+#: templates/admin/dashboard.php:409
 msgid "Client"
 msgstr ""
 
-#: templates/admin/dashboard.php:367
-#: templates/export/health-print.php:257
+#: templates/admin/dashboard.php:410
+#: templates/export/health-print.php:289
 msgid "Result"
 msgstr ""
 
-#: templates/admin/dashboard.php:368
+#: templates/admin/dashboard.php:411
 msgid "Duration"
 msgstr ""
 
-#: templates/admin/dashboard.php:397
+#: templates/admin/dashboard.php:440
 #: templates/admin/tokens.php:635
 msgid "Done"
 msgstr ""
 
-#: templates/admin/dashboard.php:399
+#: templates/admin/dashboard.php:442
 msgid "Failed 500"
 msgstr ""
 
-#: templates/admin/dashboard.php:401
+#: templates/admin/dashboard.php:444
 msgid "Throttled 429"
 msgstr ""
 
-#: templates/admin/dashboard.php:433
+#: templates/admin/dashboard.php:476
 msgid "Permission surface"
 msgstr ""
 
-#: templates/admin/dashboard.php:434
+#: templates/admin/dashboard.php:477
 msgid "How much of each module is reachable right now."
 msgstr ""
 
-#: templates/admin/dashboard.php:437
+#: templates/admin/dashboard.php:480
 msgid "Change →"
 msgstr ""
 
-#: templates/admin/dashboard.php:464
+#: templates/admin/dashboard.php:507
 msgid "Switched off in settings"
 msgstr ""
 
-#: templates/admin/dashboard.php:490
+#: templates/admin/dashboard.php:533
 msgid "Connect an AI assistant (Claude Desktop, Cursor)"
 msgstr ""
 
-#: templates/admin/dashboard.php:491
+#: templates/admin/dashboard.php:534
 #: templates/admin/feature-request.php:73
 msgid "optional"
 msgstr ""
 
-#: templates/admin/dashboard.php:497
+#: templates/admin/dashboard.php:540
 msgid "Connect a client"
 msgstr ""
 
-#: templates/admin/dashboard.php:498
+#: templates/admin/dashboard.php:541
 msgid "Paste a token, run two commands, restart. Under a minute."
 msgstr ""
 
-#: templates/admin/dashboard.php:501
+#: templates/admin/dashboard.php:544
 msgid "Make a token →"
 msgstr ""
 
-#: templates/admin/dashboard.php:506
+#: templates/admin/dashboard.php:549
 msgid "01 — Your API token"
 msgstr ""
 
-#: templates/admin/dashboard.php:509
+#: templates/admin/dashboard.php:552
 msgid "Shown once, at creation. Nothing you paste here is stored or sent anywhere."
 msgstr ""
 
-#: templates/admin/dashboard.php:513
+#: templates/admin/dashboard.php:556
 msgid "02 — Pick your client"
 msgstr ""
 
-#: templates/admin/dashboard.php:516
+#: templates/admin/dashboard.php:559
 #: templates/admin/documentation.php:241
 #: templates/admin/tokens.php:537
 msgid "Claude Desktop"
 msgstr ""
 
-#: templates/admin/dashboard.php:518
+#: templates/admin/dashboard.php:561
 msgid "Cursor / IDEs"
 msgstr ""
 
-#: templates/admin/dashboard.php:527
+#: templates/admin/dashboard.php:570
 msgid "03 — Operating system"
 msgstr ""
 
-#: templates/admin/dashboard.php:530
+#: templates/admin/dashboard.php:573
 #: templates/admin/tokens.php:549
 msgid "Windows"
 msgstr ""
 
-#: templates/admin/dashboard.php:532
+#: templates/admin/dashboard.php:575
 #: templates/admin/tokens.php:552
 msgid "macOS"
 msgstr ""
 
-#: templates/admin/dashboard.php:534
+#: templates/admin/dashboard.php:577
 #: templates/admin/tokens.php:555
 msgid "Linux"
 msgstr ""
 
-#: templates/admin/dashboard.php:544
+#: templates/admin/dashboard.php:587
 #: templates/admin/tokens.php:562
 msgid "Install mcp-remote"
 msgstr ""
 
-#: templates/admin/dashboard.php:559
+#: templates/admin/dashboard.php:602
 #: templates/admin/tokens.php:574
 msgid "Register this site with Claude Desktop"
 msgstr ""
 
-#: templates/admin/dashboard.php:564
+#: templates/admin/dashboard.php:607
 msgid "Paste your token above first"
 msgstr ""
 
-#: templates/admin/dashboard.php:576
+#: templates/admin/dashboard.php:619
 #: templates/admin/tokens.php:587
 msgid "Run step 1 and wait for it to finish before running step 2, then restart Claude Desktop."
 msgstr ""
 
 #. translators: %s: link to nodejs.org
-#: templates/admin/dashboard.php:580
+#: templates/admin/dashboard.php:623
 #: templates/admin/tokens.php:591
 #, php-format
 msgid "No Node.js? Download LTS from %s first."
 msgstr ""
 
-#: templates/admin/dashboard.php:592
+#: templates/admin/dashboard.php:635
 #: templates/admin/tokens.php:600
 msgid "Server URL"
 msgstr ""
 
-#: templates/admin/dashboard.php:602
+#: templates/admin/dashboard.php:645
 #: templates/admin/tokens.php:610
 msgid "Type"
 msgstr ""
 
-#: templates/admin/dashboard.php:611
+#: templates/admin/dashboard.php:654
 #: templates/admin/tokens.php:620
 msgid "Authorization header"
 msgstr ""
 
-#: templates/admin/dashboard.php:622
+#: templates/admin/dashboard.php:665
 #: templates/admin/tokens.php:629
 msgid "In Cursor: Settings → Features → MCP Servers → Add new MCP server. Set Type to HTTP, then paste the URL and the Authorization header."
 msgstr ""
 
-#: templates/admin/dashboard.php:634
+#: templates/admin/dashboard.php:677
 msgid "For site administrators"
 msgstr ""
 
 #. translators: %s: link to abilities tab
-#: templates/admin/dashboard.php:638
+#: templates/admin/dashboard.php:681
 #, php-format
 msgid "My Site Hand exposes only the abilities you explicitly enable in the %s tab. Review them before sharing tokens with AI clients."
 msgstr ""
 
-#: templates/admin/dashboard.php:645
+#: templates/admin/dashboard.php:688
 msgid "Dismiss"
 msgstr ""
 
@@ -2852,173 +3428,180 @@ msgstr ""
 msgid "Visit GitHub"
 msgstr ""
 
-#: templates/admin/health.php:84
+#: templates/admin/health.php:90
 #: assets/js/health-scan.js:231
 msgid "Open"
 msgstr ""
 
-#: templates/admin/health.php:111
+#: templates/admin/health.php:118
 msgid "Scan your site"
 msgstr ""
 
-#: templates/admin/health.php:113
+#: templates/admin/health.php:120
 msgid "Find broken links, missing SEO data, and health issues in about 30 seconds."
 msgstr ""
 
-#: templates/admin/health.php:118
+#: templates/admin/health.php:125
 msgid "No setup required"
 msgstr ""
 
 #. translators: %s: link to the settings page
-#: templates/admin/health.php:123
+#: templates/admin/health.php:130
 #, php-format
 msgid "This site will also scan itself on a schedule and email you when your score changes. You can turn that off in %s."
 msgstr ""
 
 #. translators: %s: signed score change, e.g. "+6"
-#: templates/admin/health.php:155
+#: templates/admin/health.php:162
 #, php-format
 msgid "%s since your last scan"
 msgstr ""
 
-#: templates/admin/health.php:171
+#: templates/admin/health.php:178
 msgid "Scan Again"
 msgstr ""
 
-#: templates/admin/health.php:177
+#: templates/admin/health.php:184
 msgid "Opens a printable page and your browser's print dialog. Choose \"Save as PDF\" as the destination."
 msgstr ""
 
-#: templates/admin/health.php:178
+#: templates/admin/health.php:185
 msgid "Download PDF"
 msgstr ""
 
-#: templates/admin/health.php:188
+#: templates/admin/health.php:195
 msgid "Share"
 msgstr ""
 
-#: templates/admin/health.php:193
+#: templates/admin/health.php:200
 msgid "\"Download PDF\" uses your browser's own print-to-PDF — pick \"Save as PDF\" in the dialog that opens."
 msgstr ""
 
-#: templates/admin/health.php:199
+#: templates/admin/health.php:206
 msgid "Share this report"
 msgstr ""
 
-#: templates/admin/health.php:203
+#: templates/admin/health.php:210
 msgid "A share link is public. Anyone who has it can open the report without logging in. Before you create one, this is exactly what it does and does not contain:"
 msgstr ""
 
-#: templates/admin/health.php:207
+#: templates/admin/health.php:214
 msgid "They will see"
 msgstr ""
 
-#: templates/admin/health.php:209
+#: templates/admin/health.php:216
 msgid "Your site name and the date of the scan"
 msgstr ""
 
-#: templates/admin/health.php:210
+#: templates/admin/health.php:217
 msgid "The score and its band"
 msgstr ""
 
-#: templates/admin/health.php:211
+#: templates/admin/health.php:218
 msgid "Each check by name, and how many issues it found"
 msgstr ""
 
-#: templates/admin/health.php:215
+#: templates/admin/health.php:222
 msgid "They will not see"
 msgstr ""
 
-#: templates/admin/health.php:217
+#: templates/admin/health.php:224
 msgid "Any file name, page address, or server path"
 msgstr ""
 
-#: templates/admin/health.php:218
+#: templates/admin/health.php:225
 msgid "Any post, media or user ID, or any edit link"
 msgstr ""
 
-#: templates/admin/health.php:219
+#: templates/admin/health.php:226
 msgid "Your plugin, theme, PHP or WordPress versions"
 msgstr ""
 
-#: templates/admin/health.php:220
+#: templates/admin/health.php:227
 msgid "The two security checks — those are left out entirely"
 msgstr ""
 
-#: templates/admin/health.php:225
+#: templates/admin/health.php:232
 msgid "The link shows a copy taken at the moment you create it, so re-scanning your site will not change what you already sent."
 msgstr ""
 
-#: templates/admin/health.php:230
+#: templates/admin/health.php:237
 msgid "Link expires after"
 msgstr ""
 
 #. translators: %d: number of days a share link stays valid
-#: templates/admin/health.php:238
+#: templates/admin/health.php:245
 #, php-format
 msgid "%d day"
 msgid_plural "%d days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/health.php:246
+#: templates/admin/health.php:253
 #: assets/js/health-scan.js:972
 msgid "Create link"
 msgstr ""
 
-#: templates/admin/health.php:253
+#: templates/admin/health.php:260
 msgid "Copy this link now. For the same reason API tokens are shown once, it is not stored anywhere and cannot be shown again."
 msgstr ""
 
-#: templates/admin/health.php:269
+#: templates/admin/health.php:276
 msgid "Created"
 msgstr ""
 
-#: templates/admin/health.php:270
+#: templates/admin/health.php:277
 #: templates/admin/tokens.php:467
 msgid "Expires"
 msgstr ""
 
-#: templates/admin/health.php:271
+#: templates/admin/health.php:278
 msgid "Views"
 msgstr ""
 
-#: templates/admin/health.php:272
+#: templates/admin/health.php:279
 msgid "Actions"
 msgstr ""
 
-#: templates/admin/health.php:287
+#: templates/admin/health.php:294
 #: assets/js/health-scan.js:931
 msgid "Revoke"
 msgstr ""
 
-#: templates/admin/health.php:297
+#: templates/admin/health.php:304
 msgid "No share links yet."
 msgstr ""
 
-#: templates/admin/health.php:310
+#: templates/admin/health.php:317
 #: templates/admin/tokens.php:492
+#: assets/js/health-ai-fix.js:733
 #: assets/js/health-scan.js:613
+#: assets/js/site-builder.js:147
+#: assets/js/site-builder.js:982
+#: assets/js/site-builder.js:1371
+#: assets/js/site-builder.js:1523
+#: assets/js/site-builder.js:1761
+#: assets/js/site-builder.js:1841
 msgid "Cancel"
 msgstr ""
 
-#: templates/admin/health.php:340
+#: templates/admin/health.php:347
 #: assets/js/health-scan.js:142
 msgid "not applicable"
 msgstr ""
 
-#: templates/admin/health.php:342
+#: templates/admin/health.php:349
 #: assets/js/health-scan.js:145
 msgid "could not run"
 msgstr ""
 
-#: templates/admin/health.php:344
+#: templates/admin/health.php:351
 #: assets/js/health-scan.js:151
 msgid "nothing found"
 msgstr ""
 
 #. translators: %d: number of issues found
-#: templates/admin/health.php:348
+#: templates/admin/health.php:355
 #: assets/js/health-scan.js:155
 #, php-format,js-format
 msgid "%d found"
@@ -3027,283 +3610,404 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: 1: number of issues shown, 2: total issues found
-#: templates/admin/health.php:374
+#: templates/admin/health.php:382
 #, php-format
 msgid "Showing the first %1$d of %2$d. Fix these and scan again to see more."
 msgstr ""
 
-#: templates/admin/settings.php:88
-#: templates/admin/settings.php:124
+#: templates/admin/settings.php:90
+#: templates/admin/settings.php:127
 msgid "Server"
 msgstr ""
 
-#: templates/admin/settings.php:90
-#: templates/admin/settings.php:264
+#: templates/admin/settings.php:92
+#: templates/admin/settings.php:267
 msgid "Limits"
 msgstr ""
 
-#: templates/admin/settings.php:91
-#: templates/admin/settings.php:389
-msgid "Audit log"
-msgstr ""
-
-#: templates/admin/settings.php:92
-#: templates/admin/settings.php:450
-msgid "Irreversible"
+#: templates/admin/settings.php:93
+msgid "AI assistance"
 msgstr ""
 
 #: templates/admin/settings.php:94
-msgid "Every row states what it changes and what stops working if you change it."
+#: templates/admin/settings.php:529
+msgid "Audit log"
 msgstr ""
 
 #: templates/admin/settings.php:95
+#: templates/admin/settings.php:590
+msgid "Irreversible"
+msgstr ""
+
+#: templates/admin/settings.php:97
+msgid "Every row states what it changes and what stops working if you change it."
+msgstr ""
+
+#: templates/admin/settings.php:98
 #: templates/admin/tools.php:143
 msgid "Read the guide"
 msgstr ""
 
-#: templates/admin/settings.php:103
+#: templates/admin/settings.php:106
 msgid "Configuration"
 msgstr ""
 
-#: templates/admin/settings.php:105
+#: templates/admin/settings.php:108
 msgid "Five groups. Jump straight to the one you came for."
 msgstr ""
 
-#: templates/admin/settings.php:110
+#: templates/admin/settings.php:113
 msgid "Saved automatically"
 msgstr ""
 
-#: templates/admin/settings.php:125
+#: templates/admin/settings.php:128
 msgid "Whether clients can reach this site, and what they see it called."
 msgstr ""
 
-#: templates/admin/settings.php:132
+#: templates/admin/settings.php:135
 msgid "Serve the MCP endpoint"
 msgstr ""
 
-#: templates/admin/settings.php:133
+#: templates/admin/settings.php:136
 msgid "The master switch. Off means every connected agent stops working immediately. Your tokens, abilities, and log entries are all kept."
 msgstr ""
 
-#: templates/admin/settings.php:137
-#: templates/partials/header.php:138
+#: templates/admin/settings.php:140
+#: templates/partials/header.php:143
 msgid "Serving"
 msgstr ""
 
-#: templates/admin/settings.php:137
-#: templates/partials/header.php:138
+#: templates/admin/settings.php:140
+#: templates/partials/header.php:143
 msgid "Stopped"
 msgstr ""
 
-#: templates/admin/settings.php:149
+#: templates/admin/settings.php:152
 msgid "Agent display name"
 msgstr ""
 
-#: templates/admin/settings.php:150
+#: templates/admin/settings.php:153
 msgid "What Claude, Cursor, and other clients call this site in their tool list."
 msgstr ""
 
-#: templates/admin/settings.php:156
+#: templates/admin/settings.php:159
 msgid "e.g. My Website Agent"
 msgstr ""
 
-#: templates/admin/settings.php:158
+#: templates/admin/settings.php:161
 msgid "Blank uses the site title."
 msgstr ""
 
-#: templates/admin/settings.php:164
+#: templates/admin/settings.php:167
 msgid "Trust proxy headers"
 msgstr ""
 
-#: templates/admin/settings.php:165
+#: templates/admin/settings.php:168
 msgid "Enable this only if your site sits behind a trusted reverse proxy such as Cloudflare. It allows reading X-Forwarded-For to determine the true client IP for the allowlist."
 msgstr ""
 
-#: templates/admin/settings.php:169
+#: templates/admin/settings.php:172
 msgid "Trusting"
 msgstr ""
 
-#: templates/admin/settings.php:169
+#: templates/admin/settings.php:172
 msgid "Ignoring"
 msgstr ""
 
-#: templates/admin/settings.php:187
+#: templates/admin/settings.php:190
 msgid "A module is a group of abilities. Switch one off and all of them go."
 msgstr ""
 
 #. translators: %d: number of tools
-#: templates/admin/settings.php:230
+#: templates/admin/settings.php:233
 #, php-format
 msgid "%d tools"
 msgstr ""
 
-#: templates/admin/settings.php:236
+#: templates/admin/settings.php:239
 msgid "Install WooCommerce to enable"
 msgstr ""
 
-#: templates/admin/settings.php:265
+#: templates/admin/settings.php:268
 msgid "Counted per token, so one busy client cannot starve the others."
 msgstr ""
 
-#: templates/admin/settings.php:272
+#: templates/admin/settings.php:275
 msgid "Calls per hour"
 msgstr ""
 
-#: templates/admin/settings.php:273
+#: templates/admin/settings.php:276
 msgid "Over the cap returns 429 and is written to the log. 200 suits conversational use."
 msgstr ""
 
-#: templates/admin/settings.php:285
+#: templates/admin/settings.php:288
 msgid "Calls per day"
 msgstr ""
 
-#: templates/admin/settings.php:286
+#: templates/admin/settings.php:289
 msgid "A backstop in case a client gets stuck in a loop overnight."
 msgstr ""
 
-#: templates/admin/settings.php:298
+#: templates/admin/settings.php:301
 msgid "Cache read results for"
 msgstr ""
 
-#: templates/admin/settings.php:299
+#: templates/admin/settings.php:302
 msgid "Repeat reads come from cache instead of the database. Drop to 60 while testing abilities."
 msgstr ""
 
-#: templates/admin/settings.php:307
+#: templates/admin/settings.php:310
 msgid "sec"
 msgstr ""
 
-#: templates/admin/settings.php:309
+#: templates/admin/settings.php:312
 msgid "Flush"
 msgstr ""
 
-#: templates/admin/settings.php:322
+#: templates/admin/settings.php:325
 msgid "Site Health reports"
 msgstr ""
 
-#: templates/admin/settings.php:323
+#: templates/admin/settings.php:326
 msgid "A scheduled scan of your own site, emailed to you when something changes."
 msgstr ""
 
-#: templates/admin/settings.php:330
+#: templates/admin/settings.php:333
 msgid "Email me a report"
 msgstr ""
 
-#: templates/admin/settings.php:331
+#: templates/admin/settings.php:334
 msgid "Nothing is sent when your score is unchanged and no new problems appeared."
 msgstr ""
 
-#: templates/admin/settings.php:345
+#: templates/admin/settings.php:348
 msgid "Send to"
 msgstr ""
 
-#: templates/admin/settings.php:346
+#: templates/admin/settings.php:349
 msgid "Defaults to the site admin address."
 msgstr ""
 
-#: templates/admin/settings.php:358
+#: templates/admin/settings.php:361
 msgid "How often"
 msgstr ""
 
-#: templates/admin/settings.php:359
+#: templates/admin/settings.php:362
 msgid "Choosing Never also stops the scheduled scan itself."
 msgstr ""
 
-#: templates/admin/settings.php:367
+#: templates/admin/settings.php:370
 msgid "Weekly"
 msgstr ""
 
-#: templates/admin/settings.php:368
+#: templates/admin/settings.php:371
 msgid "Monthly"
 msgstr ""
 
-#: templates/admin/settings.php:369
+#: templates/admin/settings.php:372
 #: templates/admin/tokens.php:473
 msgid "Never"
 msgstr ""
 
-#: templates/admin/settings.php:390
-msgid "What gets written down, and how long it survives."
+#: templates/admin/settings.php:408
+msgid "AI Assistance"
 msgstr ""
 
-#: templates/admin/settings.php:397
-msgid "Keep entries for"
+#: templates/admin/settings.php:409
+msgid "Optional. My Site Hand works fully without this — AI only adds bulk fixing. You bring your own API key and are billed by the provider directly."
 msgstr ""
 
-#: templates/admin/settings.php:398
-msgid "Older entries are removed on a daily cron. Export to CSV first if you need them."
+#: templates/admin/settings.php:416
+msgid "Provider"
 msgstr ""
 
-#: templates/admin/settings.php:406
-msgid "days"
-msgstr ""
-
-#: templates/admin/settings.php:413
-msgid "Level of detail"
-msgstr ""
-
-#: templates/admin/settings.php:414
-msgid "Payloads are what make the log useful for debugging. Only turn this down on very high traffic."
-msgstr ""
-
-#: templates/admin/settings.php:419
-msgid "Every call, with payloads"
-msgstr ""
-
-#: templates/admin/settings.php:420
-msgid "Failures only"
+#: templates/admin/settings.php:417
+msgid "Whichever company you already have an API key with. The key below must belong to this provider."
 msgstr ""
 
 #: templates/admin/settings.php:421
+msgid "Not set"
+msgstr ""
+
+#: templates/admin/settings.php:434
+#: templates/admin/settings.php:446
+msgid "API key"
+msgstr ""
+
+#: templates/admin/settings.php:435
+msgid "Stored in your WordPress database and sent only to the provider you chose. It is never shown again after saving, never logged, and is deleted if you delete the plugin."
+msgstr ""
+
+#: templates/admin/settings.php:440
+msgid "Replace"
+msgstr ""
+
+#: templates/admin/settings.php:441
+#: assets/js/site-builder.js:897
+msgid "Remove"
+msgstr ""
+
+#: templates/admin/settings.php:447
+msgid "Paste your API key"
+msgstr ""
+
+#: templates/admin/settings.php:454
+msgid "Model"
+msgstr ""
+
+#: templates/admin/settings.php:455
+msgid "The recommended model is the cheapest and is plenty for alt text and meta descriptions."
+msgstr ""
+
+#: templates/admin/settings.php:473
+msgid "Daily spend cap"
+msgstr ""
+
+#: templates/admin/settings.php:474
+msgid "Once today's estimated spend reaches this, AI requests stop until tomorrow. Set 0 to pause AI entirely."
+msgstr ""
+
+#: templates/admin/settings.php:483
+msgid "per day"
+msgstr ""
+
+#: templates/admin/settings.php:490
+#: templates/admin/settings.php:494
+msgid "Test connection"
+msgstr ""
+
+#: templates/admin/settings.php:491
+msgid "Checks the saved key with the provider. This does not cost anything."
+msgstr ""
+
+#: templates/admin/settings.php:501
+msgid "Usage"
+msgstr ""
+
+#: templates/admin/settings.php:502
+msgid "Estimated from token counts and published prices. Your provider's own billing page is the final word."
+msgstr ""
+
+#: templates/admin/settings.php:511
+msgid "This month"
+msgstr ""
+
+#: templates/admin/settings.php:515
+msgid "Requests this month"
+msgstr ""
+
+#: templates/admin/settings.php:530
+msgid "What gets written down, and how long it survives."
+msgstr ""
+
+#: templates/admin/settings.php:537
+msgid "Keep entries for"
+msgstr ""
+
+#: templates/admin/settings.php:538
+msgid "Older entries are removed on a daily cron. Export to CSV first if you need them."
+msgstr ""
+
+#: templates/admin/settings.php:546
+msgid "days"
+msgstr ""
+
+#: templates/admin/settings.php:553
+msgid "Level of detail"
+msgstr ""
+
+#: templates/admin/settings.php:554
+msgid "Payloads are what make the log useful for debugging. Only turn this down on very high traffic."
+msgstr ""
+
+#: templates/admin/settings.php:559
+msgid "Every call, with payloads"
+msgstr ""
+
+#: templates/admin/settings.php:560
+msgid "Failures only"
+msgstr ""
+
+#: templates/admin/settings.php:561
 msgid "Nothing"
 msgstr ""
 
-#: templates/admin/settings.php:428
+#: templates/admin/settings.php:568
 msgid "Allow token in URL query string"
 msgstr ""
 
-#: templates/admin/settings.php:429
+#: templates/admin/settings.php:569
 msgid "Not recommended. Tokens sent this way are recorded in server logs and browser history. Enable only if your MCP client cannot send an Authorization header."
 msgstr ""
 
-#: templates/admin/settings.php:433
+#: templates/admin/settings.php:573
 msgid "Allowed"
 msgstr ""
 
-#: templates/admin/settings.php:433
+#: templates/admin/settings.php:573
 msgid "Blocked"
 msgstr ""
 
-#: templates/admin/settings.php:451
+#: templates/admin/settings.php:591
 msgid "Both delete data permanently. There is no undo."
 msgstr ""
 
-#: templates/admin/settings.php:458
+#: templates/admin/settings.php:598
 msgid "Reset everything"
 msgstr ""
 
-#: templates/admin/settings.php:459
+#: templates/admin/settings.php:599
 msgid "Deletes all tokens, every log entry, and all settings, then returns the plugin to a fresh install."
 msgstr ""
 
-#: templates/admin/settings.php:464
+#: templates/admin/settings.php:604
 msgid "Reset all data"
 msgstr ""
 
-#: templates/admin/settings.php:471
+#: templates/admin/settings.php:611
 msgid "Delete data on uninstall"
 msgstr ""
 
-#: templates/admin/settings.php:472
+#: templates/admin/settings.php:612
 msgid "Off means your setup survives a deactivate and reactivate — useful when moving hosts."
 msgstr ""
 
-#: templates/admin/settings.php:476
+#: templates/admin/settings.php:616
 msgid "Deleting"
 msgstr ""
 
-#: templates/admin/settings.php:476
+#: templates/admin/settings.php:616
 msgid "Keeping"
+msgstr ""
+
+#: templates/admin/site-builder.php:27
+msgid "Starter sites need a block theme"
+msgstr ""
+
+#. translators: %s: name of the active theme
+#: templates/admin/site-builder.php:32
+#, php-format
+msgid "Your active theme, %s, is a classic theme. Starter sites are built from WordPress blocks and use the Site Editor for the header, footer and styles, which only block themes support."
+msgstr ""
+
+#: templates/admin/site-builder.php:37
+msgid "You can switch to Twenty Twenty-Five, the free default theme from WordPress.org. Your posts and pages stay as they are, and you can switch back under Appearance > Themes at any time."
+msgstr ""
+
+#: templates/admin/site-builder.php:42
+msgid "Activate Twenty Twenty-Five"
+msgstr ""
+
+#: templates/admin/site-builder.php:43
+msgid "Install and activate Twenty Twenty-Five"
+msgstr ""
+
+#: templates/admin/site-builder.php:50
+msgid "Loading starter sites..."
+msgstr ""
+
+#: templates/admin/site-builder.php:54
+msgid "The Site Builder needs JavaScript. Please enable it in your browser."
 msgstr ""
 
 #: templates/admin/tokens.php:75
@@ -3508,6 +4212,11 @@ msgstr ""
 
 #: templates/admin/tokens.php:368
 #: templates/admin/tokens.php:504
+#: assets/js/health-ai-fix.js:273
+#: assets/js/site-builder.js:288
+#: assets/js/site-builder.js:320
+#: assets/js/site-builder.js:1499
+#: assets/js/site-builder.js:1864
 msgid "Close"
 msgstr ""
 
@@ -3822,32 +4531,32 @@ msgstr ""
 msgid "Site Health Report — %s"
 msgstr ""
 
-#: templates/export/health-print.php:213
+#: templates/export/health-print.php:232
 msgid "Print or save as PDF"
 msgstr ""
 
-#: templates/export/health-print.php:214
+#: templates/export/health-print.php:233
 msgid "Choose \"Save as PDF\" as the destination in your browser's print dialog."
 msgstr ""
 
 #. translators: %s: date and time the scan ran
-#: templates/export/health-print.php:226
+#: templates/export/health-print.php:258
 #, php-format
 msgid "Scanned %s"
 msgstr ""
 
-#: templates/export/health-print.php:238
+#: templates/export/health-print.php:270
 msgid "/100"
 msgstr ""
 
 #. translators: 1: signed score change such as "+6", 2: the previous score
-#: templates/export/health-print.php:244
+#: templates/export/health-print.php:276
 #, php-format
 msgid "%1$s since the last scan (was %2$d)"
 msgstr ""
 
 #. translators: %d: number of issues found but not listed in this report
-#: templates/export/health-print.php:297
+#: templates/export/health-print.php:329
 #, php-format
 msgid "%d more issue was found but is not listed here."
 msgid_plural "%d more issues were found but are not listed here."
@@ -3892,19 +4601,32 @@ msgstr ""
 msgid "This link stops working on %s."
 msgstr ""
 
-#: templates/partials/header.php:124
-msgid "WordPress over MCP"
+#. translators: %d: number of issues AI will write fixes for
+#: templates/partials/ai-bulk-fix.php:26
+#: assets/js/health-ai-fix.js:171
+#, php-format,js-format
+msgid "Fix %d with AI"
+msgid_plural "Fix all %d with AI"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/partials/ai-bulk-fix.php:31
+msgid "You review every suggestion before anything is saved."
 msgstr ""
 
 #: templates/partials/header.php:129
+msgid "WordPress over MCP"
+msgstr ""
+
+#: templates/partials/header.php:134
 msgid "Endpoint"
 msgstr ""
 
-#: templates/partials/header.php:150
+#: templates/partials/header.php:155
 msgid "Help"
 msgstr ""
 
-#: templates/partials/header.php:156
+#: templates/partials/header.php:161
 msgid "My Site Hand sections"
 msgstr ""
 
@@ -3980,9 +4702,318 @@ msgstr ""
 msgid "Generate one here"
 msgstr ""
 
+#: templates/partials/welcome.php:20
+msgid "Welcome"
+msgstr ""
+
+#: templates/partials/welcome.php:21
+msgid "What would you like to do first?"
+msgstr ""
+
+#: templates/partials/welcome.php:22
+msgid "Nothing changes on your site until you say yes. Everything works without an AI key."
+msgstr ""
+
+#: templates/partials/welcome.php:26
+msgid "Build a site"
+msgstr ""
+
+#: templates/partials/welcome.php:27
+msgid "Start from a ready-made starter site, make it yours, preview it, then apply."
+msgstr ""
+
+#: templates/partials/welcome.php:30
+msgid "Check my site"
+msgstr ""
+
+#: templates/partials/welcome.php:31
+msgid "Find broken links, missing alt text and SEO gaps in about 30 seconds."
+msgstr ""
+
+#: templates/partials/welcome.php:34
+msgid "Dismiss welcome"
+msgstr ""
+
+#: assets/js/ai-settings.js:125
+msgid "Remove the stored API key? AI bulk fixing will disappear until you add one again."
+msgstr ""
+
+#: assets/js/ai-settings.js:140
+msgid "Testing…"
+msgstr ""
+
+#: assets/js/ai-settings.js:157
+#: assets/js/ai-settings.js:160
+msgid "The test could not be completed. Reload the page and try again."
+msgstr ""
+
 #: assets/js/dashboard-connect.js:123
 msgid "Paste token first…"
 msgstr ""
+
+#: assets/js/health-ai-fix.js:99
+msgid "The connection to your site was lost. Check your internet connection, then try again."
+msgstr ""
+
+#: assets/js/health-ai-fix.js:263
+msgid "AI suggestions"
+msgstr ""
+
+#. translators: %d: number of items
+#: assets/js/health-ai-fix.js:268
+#, js-format
+msgid "Write a suggestion for %d item"
+msgid_plural "Write suggestions for %d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: estimated cost, e.g. $0.03. 2: AI provider and model name.
+#: assets/js/health-ai-fix.js:285
+#, js-format
+msgid "Estimated cost: about %1$s, billed to your own account with %2$s."
+msgstr ""
+
+#. translators: 1: amount spent today, 2: daily spend cap
+#: assets/js/health-ai-fix.js:292
+#, js-format
+msgid "Spent today so far: %1$s of your %2$s daily cap."
+msgstr ""
+
+#: assets/js/health-ai-fix.js:297
+msgid "Nothing on your site changes until you review the suggestions and press Apply."
+msgstr ""
+
+#: assets/js/health-ai-fix.js:299
+msgid "Write suggestions"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:316
+msgid "Progress"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:328
+msgid "Stop"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:351
+msgid "Approve all"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:352
+msgid "Reject all"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:361
+msgid "Tip: select a row and press Enter to approve it."
+msgstr ""
+
+#: assets/js/health-ai-fix.js:365
+msgid "Suggestions"
+msgstr ""
+
+#. translators: 1: items done, 2: total items
+#: assets/js/health-ai-fix.js:442
+#: assets/js/health-ai-fix.js:481
+#, js-format
+msgid "Writing suggestions: %1$d of %2$d"
+msgstr ""
+
+#. translators: %d: number of suggestions written
+#: assets/js/health-ai-fix.js:515
+#, js-format
+msgid "%d suggestion ready to review."
+msgid_plural "%d suggestions ready to review."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/health-ai-fix.js:520
+msgid "Stopped. The suggestions written so far are below."
+msgstr ""
+
+#. translators: %d: number of suggestions discarded
+#: assets/js/health-ai-fix.js:528
+#, js-format
+msgid "%d suggestion did not meet the length rules and was discarded. Those items are marked below."
+msgid_plural "%d suggestions did not meet the length rules and were discarded. Those items are marked below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/health-ai-fix.js:617
+msgid "Now:"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:618
+#: assets/js/site-builder.js:1804
+msgid "(empty)"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:630
+msgid "Your edit:"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:631
+msgid "Proposed:"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:636
+msgid "Saved to your site."
+msgstr ""
+
+#: assets/js/health-ai-fix.js:646
+msgid "Approve"
+msgstr ""
+
+#. translators: %s: item name
+#: assets/js/health-ai-fix.js:650
+#, js-format
+msgid "Approve suggestion for %s"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:657
+msgid "Reject"
+msgstr ""
+
+#. translators: %s: item name
+#: assets/js/health-ai-fix.js:661
+#, js-format
+msgid "Reject suggestion for %s"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:668
+msgid "Edit"
+msgstr ""
+
+#. translators: %s: item name
+#: assets/js/health-ai-fix.js:671
+#: assets/js/health-ai-fix.js:728
+#, js-format
+msgid "Edit suggestion for %s"
+msgstr ""
+
+#. translators: 1: characters typed, 2: recommended maximum
+#: assets/js/health-ai-fix.js:702
+#, js-format
+msgid "%1$d / %2$d characters"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:732
+msgid "Use this text"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:787
+msgid "Needs your input: there was not enough information to write this honestly."
+msgstr ""
+
+#: assets/js/health-ai-fix.js:798
+#: assets/js/health-scan.js:496
+msgid "Write a short description…"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:799
+#: assets/js/health-scan.js:495
+msgid "Describe this image…"
+msgstr ""
+
+#. translators: 1: the prompt or action. 2: the item it applies to.
+#: assets/js/health-ai-fix.js:802
+#: assets/js/health-scan.js:504
+#: assets/js/health-scan.js:591
+#, js-format
+msgid "%1$s — %2$s"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:807
+msgid "Save"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:820
+#: assets/js/health-scan.js:454
+msgid "Saving…"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:841
+#: assets/js/health-scan.js:467
+msgid "Saved"
+msgstr ""
+
+#. translators: %d: number of approved suggestions
+#: assets/js/health-ai-fix.js:911
+#, js-format
+msgid "%d approved"
+msgstr ""
+
+#. translators: %d: number of rejected suggestions
+#: assets/js/health-ai-fix.js:913
+#, js-format
+msgid "%d rejected"
+msgstr ""
+
+#. translators: %d: number of suggestions not yet reviewed
+#: assets/js/health-ai-fix.js:915
+#, js-format
+msgid "%d pending"
+msgstr ""
+
+#. translators: %d: number of items that need typing in by hand
+#: assets/js/health-ai-fix.js:923
+#, js-format
+msgid "%d need your input"
+msgstr ""
+
+#. translators: %d: number of items saved
+#: assets/js/health-ai-fix.js:928
+#, js-format
+msgid "%d saved"
+msgstr ""
+
+#. translators: %s: estimated cost, e.g. $0.03
+#: assets/js/health-ai-fix.js:936
+#, js-format
+msgid "Estimated cost: about %s"
+msgstr ""
+
+#. translators: 1: actual cost, 2: the estimate shown beforehand
+#: assets/js/health-ai-fix.js:941
+#, js-format
+msgid "Actual cost: %1$s (estimated %2$s)"
+msgstr ""
+
+#. translators: %d: number of approved suggestions
+#: assets/js/health-ai-fix.js:948
+#, js-format
+msgid "Apply %d approved"
+msgid_plural "Apply %d approved"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: items saved, 2: total items
+#: assets/js/health-ai-fix.js:1028
+#: assets/js/health-ai-fix.js:1073
+#, js-format
+msgid "Saving: %1$d of %2$d"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:1060
+msgid "Fixed with AI"
+msgstr ""
+
+#: assets/js/health-ai-fix.js:1065
+msgid "This item could not be saved. Try it again, or fix it by hand."
+msgstr ""
+
+#. translators: 1: number saved, 2: number that failed
+#: assets/js/health-ai-fix.js:1100
+#, js-format
+msgid "%1$d saved, %2$d could not be saved. The failed rows say why."
+msgstr ""
+
+#. translators: %d: number of items saved
+#: assets/js/health-ai-fix.js:1106
+#, js-format
+msgid "%d fix saved to your site."
+msgid_plural "%d fixes saved to your site."
+msgstr[0] ""
+msgstr[1] ""
 
 #: assets/js/health-scan.js:139
 msgid "scanning…"
@@ -3998,31 +5029,8 @@ msgstr ""
 msgid "%1$d of %2$d checks complete"
 msgstr ""
 
-#: assets/js/health-scan.js:454
-msgid "Saving…"
-msgstr ""
-
-#: assets/js/health-scan.js:467
-msgid "Saved"
-msgstr ""
-
 #: assets/js/health-scan.js:477
 msgid "Something went wrong."
-msgstr ""
-
-#: assets/js/health-scan.js:495
-msgid "Describe this image…"
-msgstr ""
-
-#: assets/js/health-scan.js:496
-msgid "Write a short description…"
-msgstr ""
-
-#. translators: 1: the prompt or action. 2: the item it applies to.
-#: assets/js/health-scan.js:504
-#: assets/js/health-scan.js:591
-#, js-format
-msgid "%1$s — %2$s"
 msgstr ""
 
 #: assets/js/health-scan.js:548
@@ -4052,6 +5060,7 @@ msgstr ""
 
 #: assets/js/health-scan.js:853
 #: assets/js/health-scan.js:893
+#: assets/js/site-builder.js:82
 msgid "Something went wrong. Please try again."
 msgstr ""
 
@@ -4061,4 +5070,987 @@ msgstr ""
 
 #: assets/js/health-scan.js:981
 msgid "Revoke this link? Anyone holding it will stop being able to open the report."
+msgstr ""
+
+#: assets/js/site-builder.js:163
+msgid "Nothing changes on your site until you say yes."
+msgstr ""
+
+#: assets/js/site-builder.js:164
+msgid "Works fully without AI."
+msgstr ""
+
+#: assets/js/site-builder.js:165
+msgid "No lock-in: your site stays plain WordPress blocks."
+msgstr ""
+
+#: assets/js/site-builder.js:175
+msgid "Choose a starter site"
+msgstr ""
+
+#: assets/js/site-builder.js:176
+msgid "Pick a ready-made site, change the words, images and colours to fit your business, and preview it on your own site. Apply it only when you are happy, and undo it any time."
+msgstr ""
+
+#: assets/js/site-builder.js:187
+msgid "Live on your site"
+msgstr ""
+
+#. translators: 1: starter site name, 2: date
+#: assets/js/site-builder.js:190
+#, js-format
+msgid "Your site uses the %1$s starter site, applied on %2$s. Open it again to change text, colours or sections, then update your site."
+msgstr ""
+
+#: assets/js/site-builder.js:193
+msgid "View site"
+msgstr ""
+
+#: assets/js/site-builder.js:194
+msgid "Customize my site"
+msgstr ""
+
+#: assets/js/site-builder.js:204
+#, js-format
+msgid "You are changing your live %s site. Your edits are saved as a draft that only you can see until you update your site."
+msgstr ""
+
+#: assets/js/site-builder.js:205
+#, js-format
+msgid "You are working on the %s starter site. Your edits are saved as a draft that only you can see."
+msgstr ""
+
+#: assets/js/site-builder.js:209
+#: assets/js/site-builder.js:394
+msgid "Discard draft"
+msgstr ""
+
+#: assets/js/site-builder.js:220
+msgid "Filter starter sites by type"
+msgstr ""
+
+#. translators: %d: number of starter sites
+#: assets/js/site-builder.js:237
+#, js-format
+msgid "All (%d)"
+msgstr ""
+
+#: assets/js/site-builder.js:248
+#: assets/js/site-builder.js:321
+msgid "Use this site"
+msgstr ""
+
+#: assets/js/site-builder.js:252
+msgid "Customize"
+msgstr ""
+
+#: assets/js/site-builder.js:257
+msgid "On your site"
+msgstr ""
+
+#. translators: %s: starter site name
+#: assets/js/site-builder.js:262
+#, js-format
+msgid "Preview the %s starter site"
+msgstr ""
+
+#: assets/js/site-builder.js:271
+msgid "Pages"
+msgstr ""
+
+#. translators: 1: starter site name, 2: page number, 3: page count
+#: assets/js/site-builder.js:300
+#, js-format
+msgid "%1$s screenshot %2$d of %3$d"
+msgstr ""
+
+#: assets/js/site-builder.js:310
+msgid "Previous"
+msgstr ""
+
+#: assets/js/site-builder.js:312
+msgid "Next"
+msgstr ""
+
+#: assets/js/site-builder.js:337
+msgid "Start over with a different site?"
+msgstr ""
+
+#. translators: 1: current starter site name, 2: new starter site name
+#: assets/js/site-builder.js:340
+#, js-format
+msgid "Your draft of %1$s will be replaced by %2$s, and your edits to it will be lost. Your live site is not affected."
+msgstr ""
+
+#: assets/js/site-builder.js:342
+msgid "Start over"
+msgstr ""
+
+#: assets/js/site-builder.js:362
+msgid "Replace your current draft?"
+msgstr ""
+
+#. translators: 1: draft starter site name, 2: live starter site name
+#: assets/js/site-builder.js:365
+#, js-format
+msgid "Your draft of %1$s will be replaced by your live %2$s site, and your edits to the draft will be lost. Your live site is not affected."
+msgstr ""
+
+#: assets/js/site-builder.js:367
+msgid "Replace draft"
+msgstr ""
+
+#: assets/js/site-builder.js:383
+msgid "This site was applied with an older version, so its edits were not kept. It opens with the starter text. Applying it still replaces the pages it made."
+msgstr ""
+
+#: assets/js/site-builder.js:392
+msgid "Discard this draft?"
+msgstr ""
+
+#: assets/js/site-builder.js:393
+msgid "All your edits to this starter site will be deleted. Nothing on your live site changes."
+msgstr ""
+
+#: assets/js/site-builder.js:404
+msgid "Draft discarded."
+msgstr ""
+
+#: assets/js/site-builder.js:422
+msgid "Loading editor..."
+msgstr ""
+
+#: assets/js/site-builder.js:479
+msgid "Editor sections"
+msgstr ""
+
+#: assets/js/site-builder.js:489
+msgid "These fill your business details everywhere they appear, on every page."
+msgstr ""
+
+#: assets/js/site-builder.js:492
+#: assets/js/site-builder.js:1207
+msgid "Design"
+msgstr ""
+
+#: assets/js/site-builder.js:500
+msgid "Page sections"
+msgstr ""
+
+#: assets/js/site-builder.js:515
+#: assets/js/site-builder.js:516
+msgid "Every page"
+msgstr ""
+
+#: assets/js/site-builder.js:528
+msgid "All starter sites"
+msgstr ""
+
+#: assets/js/site-builder.js:531
+msgid "Live site"
+msgstr ""
+
+#: assets/js/site-builder.js:535
+#: assets/js/site-builder.js:975
+msgid "Redesign with AI"
+msgstr ""
+
+#: assets/js/site-builder.js:536
+msgid "Fill with AI"
+msgstr ""
+
+#: assets/js/site-builder.js:537
+msgid "Undo redesign"
+msgstr ""
+
+#: assets/js/site-builder.js:539
+msgid "Update my site"
+msgstr ""
+
+#: assets/js/site-builder.js:544
+msgid "Tip: add an AI key in Settings to fill this automatically. Everything here also works by hand."
+msgstr ""
+
+#: assets/js/site-builder.js:545
+msgid "AI settings"
+msgstr ""
+
+#: assets/js/site-builder.js:569
+msgid "Reset section"
+msgstr ""
+
+#: assets/js/site-builder.js:592
+msgid "Reset to default"
+msgstr ""
+
+#: assets/js/site-builder.js:617
+msgid "Rewrite with AI"
+msgstr ""
+
+#: assets/js/site-builder.js:670
+msgid "Enter a full web address, starting with https://"
+msgstr ""
+
+#: assets/js/site-builder.js:713
+msgid "Formatting"
+msgstr ""
+
+#: assets/js/site-builder.js:714
+#: assets/js/site-builder.js:1342
+msgid "Bold"
+msgstr ""
+
+#: assets/js/site-builder.js:715
+msgid "Italic"
+msgstr ""
+
+#: assets/js/site-builder.js:716
+msgid "Add link"
+msgstr ""
+
+#: assets/js/site-builder.js:717
+msgid "Link address (https://...)"
+msgstr ""
+
+#: assets/js/site-builder.js:722
+msgid "Remove link"
+msgstr ""
+
+#: assets/js/site-builder.js:805
+msgid "The media library could not be loaded."
+msgstr ""
+
+#: assets/js/site-builder.js:812
+msgid "Use this image"
+msgstr ""
+
+#: assets/js/site-builder.js:822
+msgid "Choose from media library"
+msgstr ""
+
+#: assets/js/site-builder.js:824
+msgid "Keep default image"
+msgstr ""
+
+#: assets/js/site-builder.js:886
+msgid "Added"
+msgstr ""
+
+#: assets/js/site-builder.js:887
+msgid "Hidden"
+msgstr ""
+
+#: assets/js/site-builder.js:889
+msgid "Move up"
+msgstr ""
+
+#. translators: %s: section name
+#: assets/js/site-builder.js:891
+#, js-format
+msgid "Move %s up"
+msgstr ""
+
+#: assets/js/site-builder.js:892
+msgid "Move down"
+msgstr ""
+
+#. translators: %s: section name
+#: assets/js/site-builder.js:894
+#, js-format
+msgid "Move %s down"
+msgstr ""
+
+#: assets/js/site-builder.js:896
+msgid "Show"
+msgstr ""
+
+#: assets/js/site-builder.js:896
+msgid "Hide"
+msgstr ""
+
+#: assets/js/site-builder.js:899
+msgid "Section to add"
+msgstr ""
+
+#: assets/js/site-builder.js:903
+msgid "Add section"
+msgstr ""
+
+#. translators: %s: page title
+#: assets/js/site-builder.js:909
+#, js-format
+msgid "%s: page sections"
+msgstr ""
+
+#: assets/js/site-builder.js:910
+msgid "Change the order, hide what you do not need, or add a new section. Hidden sections keep their text."
+msgstr ""
+
+#: assets/js/site-builder.js:921
+msgid "Mode"
+msgstr ""
+
+#: assets/js/site-builder.js:921
+#: assets/js/site-builder.js:1113
+msgid "Corners"
+msgstr ""
+
+#: assets/js/site-builder.js:921
+#: assets/js/site-builder.js:1113
+msgid "Spacing"
+msgstr ""
+
+#: assets/js/site-builder.js:929
+#: assets/js/site-builder.js:1216
+msgid "Fonts"
+msgstr ""
+
+#: assets/js/site-builder.js:932
+msgid "Brand colour"
+msgstr ""
+
+#: assets/js/site-builder.js:950
+msgid "add"
+msgstr ""
+
+#: assets/js/site-builder.js:953
+msgid "hide"
+msgstr ""
+
+#: assets/js/site-builder.js:956
+msgid "show"
+msgstr ""
+
+#: assets/js/site-builder.js:959
+msgid "new section order"
+msgstr ""
+
+#: assets/js/site-builder.js:968
+msgid "For example: make it dark and luxurious with gold, rounded corners, and add a pricing section to the home page."
+msgstr ""
+
+#: assets/js/site-builder.js:970
+msgid "Make it dark and modern"
+msgstr ""
+
+#: assets/js/site-builder.js:971
+msgid "Softer and friendlier, with rounded corners"
+msgstr ""
+
+#: assets/js/site-builder.js:972
+msgid "Add pricing and questions to the home page"
+msgstr ""
+
+#: assets/js/site-builder.js:977
+msgid "Describe the look or the changes you want. The AI picks colours, fonts, corners, spacing and sections from safe options. You see every change before it is used."
+msgstr ""
+
+#: assets/js/site-builder.js:983
+msgid "Suggest a redesign"
+msgstr ""
+
+#: assets/js/site-builder.js:990
+msgid "Designing..."
+msgstr ""
+
+#: assets/js/site-builder.js:990
+msgid "This usually takes a few seconds."
+msgstr ""
+
+#: assets/js/site-builder.js:1005
+msgid "Suggested redesign"
+msgstr ""
+
+#: assets/js/site-builder.js:1009
+msgid "This changes your draft only. You can undo it, preview it, and nothing goes live until you apply."
+msgstr ""
+
+#: assets/js/site-builder.js:1012
+msgid "Use this redesign"
+msgstr ""
+
+#: assets/js/site-builder.js:1056
+msgid "Write text for the new sections?"
+msgstr ""
+
+#: assets/js/site-builder.js:1057
+msgid "The new sections have example text. The AI can write text that fits your business, for you to review."
+msgstr ""
+
+#: assets/js/site-builder.js:1058
+msgid "Write their text"
+msgstr ""
+
+#: assets/js/site-builder.js:1070
+msgid "Redesign applied to your draft. Use Preview to see it."
+msgstr ""
+
+#: assets/js/site-builder.js:1089
+msgid "Redesign undone."
+msgstr ""
+
+#: assets/js/site-builder.js:1102
+#: assets/js/site-builder.js:1103
+msgid "As designed"
+msgstr ""
+
+#: assets/js/site-builder.js:1102
+msgid "Light"
+msgstr ""
+
+#: assets/js/site-builder.js:1102
+msgid "Dark"
+msgstr ""
+
+#: assets/js/site-builder.js:1103
+msgid "Square"
+msgstr ""
+
+#: assets/js/site-builder.js:1103
+msgid "Soft"
+msgstr ""
+
+#: assets/js/site-builder.js:1104
+msgid "Rounded"
+msgstr ""
+
+#: assets/js/site-builder.js:1104
+msgid "Pill"
+msgstr ""
+
+#: assets/js/site-builder.js:1105
+msgid "Compact"
+msgstr ""
+
+#: assets/js/site-builder.js:1105
+msgid "Comfortable"
+msgstr ""
+
+#: assets/js/site-builder.js:1105
+msgid "Airy"
+msgstr ""
+
+#: assets/js/site-builder.js:1113
+msgid "Light or dark"
+msgstr ""
+
+#: assets/js/site-builder.js:1120
+msgid "You picked every colour yourself, so these are used as they are. Choose a colour set above to use light or dark again."
+msgstr ""
+
+#: assets/js/site-builder.js:1137
+msgid "Background"
+msgstr ""
+
+#: assets/js/site-builder.js:1137
+msgid "Soft background"
+msgstr ""
+
+#: assets/js/site-builder.js:1137
+msgid "Highlight background"
+msgstr ""
+
+#: assets/js/site-builder.js:1138
+msgid "Text"
+msgstr ""
+
+#: assets/js/site-builder.js:1138
+msgid "Quiet text"
+msgstr ""
+
+#: assets/js/site-builder.js:1138
+msgid "Brand and buttons"
+msgstr ""
+
+#: assets/js/site-builder.js:1139
+msgid "Text on buttons"
+msgstr ""
+
+#: assets/js/site-builder.js:1148
+msgid "Pick every colour yourself"
+msgstr ""
+
+#: assets/js/site-builder.js:1149
+msgid "If a text colour would be hard to read, it is adjusted just enough to pass WCAG AA. Backgrounds stay exactly as you pick them."
+msgstr ""
+
+#: assets/js/site-builder.js:1155
+#: assets/js/site-builder.js:1547
+msgid "Use these colours"
+msgstr ""
+
+#: assets/js/site-builder.js:1166
+msgid "Colour palettes"
+msgstr ""
+
+#: assets/js/site-builder.js:1178
+msgid "Font pairs"
+msgstr ""
+
+#: assets/js/site-builder.js:1190
+msgid "Clear, friendly body text."
+msgstr ""
+
+#: assets/js/site-builder.js:1196
+msgid "Or start from your brand colour"
+msgstr ""
+
+#: assets/js/site-builder.js:1197
+msgid "We build a full palette from it and adjust it until every text colour is easy to read (WCAG AA)."
+msgstr ""
+
+#: assets/js/site-builder.js:1201
+msgid "Update brand palette"
+msgstr ""
+
+#: assets/js/site-builder.js:1201
+msgid "Use my brand colour"
+msgstr ""
+
+#: assets/js/site-builder.js:1208
+msgid "Every palette passes WCAG AA contrast for text. Fonts load from the visitor's device, so nothing is fetched from other servers."
+msgstr ""
+
+#: assets/js/site-builder.js:1210
+#: assets/js/site-builder.js:1520
+msgid "Suggest colours with AI"
+msgstr ""
+
+#: assets/js/site-builder.js:1211
+msgid "Colour palette"
+msgstr ""
+
+#: assets/js/site-builder.js:1250
+msgid "Draft saved"
+msgstr ""
+
+#: assets/js/site-builder.js:1251
+msgid "Unsaved changes"
+msgstr ""
+
+#: assets/js/site-builder.js:1253
+msgid "Not saved. Check your connection."
+msgstr ""
+
+#. translators: 1: AI provider name, 2: spent today, 3: daily cap
+#: assets/js/site-builder.js:1321
+#, js-format
+msgid "Uses your %1$s key. Spent today: %2$s of your %3$s daily cap."
+msgstr ""
+
+#: assets/js/site-builder.js:1327
+msgid "The AI could not help this time"
+msgstr ""
+
+#: assets/js/site-builder.js:1328
+msgid "Nothing was changed. You can keep editing by hand."
+msgstr ""
+
+#: assets/js/site-builder.js:1329
+#: assets/js/site-builder.js:1569
+#: assets/js/site-builder.js:1879
+msgid "OK"
+msgstr ""
+
+#: assets/js/site-builder.js:1335
+msgid "e.g. family dental practice"
+msgstr ""
+
+#: assets/js/site-builder.js:1339
+msgid "What you do, who for, and what makes you different."
+msgstr ""
+
+#: assets/js/site-builder.js:1342
+msgid "Friendly"
+msgstr ""
+
+#: assets/js/site-builder.js:1342
+msgid "Professional"
+msgstr ""
+
+#: assets/js/site-builder.js:1343
+#: assets/js/site-builder.js:1355
+msgid "Tone"
+msgstr ""
+
+#: assets/js/site-builder.js:1352
+msgid "Type of business"
+msgstr ""
+
+#: assets/js/site-builder.js:1353
+msgid "Business name (optional)"
+msgstr ""
+
+#: assets/js/site-builder.js:1354
+msgid "Describe it in a sentence or two"
+msgstr ""
+
+#: assets/js/site-builder.js:1363
+msgid "Fill everything with AI"
+msgstr ""
+
+#: assets/js/site-builder.js:1365
+msgid "One request writes text for every section. You review it before anything is used."
+msgstr ""
+
+#: assets/js/site-builder.js:1367
+msgid "Replace text I already edited"
+msgstr ""
+
+#: assets/js/site-builder.js:1368
+msgid "Phone, email, address, opening hours and image descriptions are never filled by AI."
+msgstr ""
+
+#: assets/js/site-builder.js:1372
+msgid "Write my site"
+msgstr ""
+
+#: assets/js/site-builder.js:1386
+msgid "Writing..."
+msgstr ""
+
+#: assets/js/site-builder.js:1386
+msgid "This usually takes 20 to 60 seconds."
+msgstr ""
+
+#: assets/js/site-builder.js:1414
+msgid "The AI did not suggest any changes."
+msgstr ""
+
+#: assets/js/site-builder.js:1432
+msgid "Field"
+msgstr ""
+
+#: assets/js/site-builder.js:1432
+msgid "Now"
+msgstr ""
+
+#: assets/js/site-builder.js:1432
+#: assets/js/site-builder.js:1503
+msgid "Suggestion"
+msgstr ""
+
+#: assets/js/site-builder.js:1435
+msgid "Review the suggestions"
+msgstr ""
+
+#. translators: %d: number of suggestions
+#: assets/js/site-builder.js:1440
+#, js-format
+msgid "%d suggestion. Untick any you do not want."
+msgid_plural "%d suggestions. Untick any you do not want."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of fields
+#: assets/js/site-builder.js:1443
+#, js-format
+msgid "%d field you edited was left alone."
+msgid_plural "%d fields you edited were left alone."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/site-builder.js:1446
+msgid "Discard all"
+msgstr ""
+
+#: assets/js/site-builder.js:1447
+msgid "Use selected"
+msgstr ""
+
+#. translators: %d: number of fields
+#: assets/js/site-builder.js:1469
+#, js-format
+msgid "%d field updated in your draft."
+msgid_plural "%d fields updated in your draft."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/site-builder.js:1478
+msgid "How to rewrite"
+msgstr ""
+
+#: assets/js/site-builder.js:1479
+msgid "Rewrite"
+msgstr ""
+
+#: assets/js/site-builder.js:1480
+msgid "Shorter"
+msgstr ""
+
+#: assets/js/site-builder.js:1481
+msgid "Friendlier"
+msgstr ""
+
+#: assets/js/site-builder.js:1482
+msgid "More professional"
+msgstr ""
+
+#: assets/js/site-builder.js:1485
+msgid "AI suggestion"
+msgstr ""
+
+#: assets/js/site-builder.js:1487
+#: assets/js/site-builder.js:1524
+msgid "Suggest"
+msgstr ""
+
+#: assets/js/site-builder.js:1492
+msgid "Thinking..."
+msgstr ""
+
+#: assets/js/site-builder.js:1498
+msgid "Your text is unchanged."
+msgstr ""
+
+#: assets/js/site-builder.js:1505
+#: assets/js/site-builder.js:1546
+msgid "Keep mine"
+msgstr ""
+
+#: assets/js/site-builder.js:1512
+msgid "Accept"
+msgstr ""
+
+#: assets/js/site-builder.js:1540
+msgid "Suggested colours"
+msgstr ""
+
+#: assets/js/site-builder.js:1544
+msgid "Adjusted so all text passes WCAG AA contrast."
+msgstr ""
+
+#: assets/js/site-builder.js:1567
+msgid "Preview needs a block theme"
+msgstr ""
+
+#: assets/js/site-builder.js:1568
+msgid "Starter sites use the Site Editor, which only block themes have. Use the notice at the top of this page to switch to Twenty Twenty-Five, then preview again."
+msgstr ""
+
+#: assets/js/site-builder.js:1591
+msgid "Preview of your staged site"
+msgstr ""
+
+#: assets/js/site-builder.js:1652
+msgid "Open in new tab"
+msgstr ""
+
+#. translators: %d: number of pages
+#: assets/js/site-builder.js:1729
+#, js-format
+msgid "%d page"
+msgid_plural "%d pages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/site-builder.js:1731
+msgid "Undone"
+msgstr ""
+
+#: assets/js/site-builder.js:1732
+#: assets/js/site-builder.js:1762
+msgid "Undo"
+msgstr ""
+
+#: assets/js/site-builder.js:1736
+msgid "Site history"
+msgstr ""
+
+#: assets/js/site-builder.js:1737
+msgid "Every time you apply a starter site, a snapshot is taken first. Undo puts back your previous front page, title, header, footer and styles, and moves what was created to the trash."
+msgstr ""
+
+#. translators: 1: starter site name, 2: date
+#: assets/js/site-builder.js:1747
+#, js-format
+msgid "This undoes the %1$s site applied on %2$s:"
+msgstr ""
+
+#: assets/js/site-builder.js:1749
+msgid "Your previous front page, site title and tagline come back."
+msgstr ""
+
+#: assets/js/site-builder.js:1750
+msgid "Your previous header, footer and global styles come back."
+msgstr ""
+
+#: assets/js/site-builder.js:1751
+msgid "The pages, menu and images that were created move to the trash. You can restore them from the trash if you change your mind."
+msgstr ""
+
+#. translators: %d: number of later builds
+#: assets/js/site-builder.js:1754
+#, js-format
+msgid "%d later build will be undone first."
+msgid_plural "%d later builds will be undone first."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/site-builder.js:1755
+msgid "Edits you made to those pages after applying go to the trash with them."
+msgstr ""
+
+#: assets/js/site-builder.js:1758
+msgid "Undo this build?"
+msgstr ""
+
+#: assets/js/site-builder.js:1773
+msgid "Undone. Your previous site is back."
+msgstr ""
+
+#. translators: 1: old value, 2: new value
+#: assets/js/site-builder.js:1804
+#, js-format
+msgid "\"%1$s\" becomes \"%2$s\""
+msgstr ""
+
+#. translators: %s: theme name
+#: assets/js/site-builder.js:1809
+#, js-format
+msgid "Applying makes these changes to your live site, using your %s theme:"
+msgstr ""
+
+#: assets/js/site-builder.js:1811
+msgid "Pages published:"
+msgstr ""
+
+#: assets/js/site-builder.js:1812
+msgid "Front page:"
+msgstr ""
+
+#: assets/js/site-builder.js:1813
+msgid "Site title:"
+msgstr ""
+
+#: assets/js/site-builder.js:1814
+msgid "Tagline:"
+msgstr ""
+
+#: assets/js/site-builder.js:1815
+msgid "Header and footer:"
+msgstr ""
+
+#: assets/js/site-builder.js:1815
+msgid "replaced, saved as your theme customizations"
+msgstr ""
+
+#: assets/js/site-builder.js:1816
+msgid "Global styles:"
+msgstr ""
+
+#: assets/js/site-builder.js:1816
+msgid "colours, fonts and spacing replaced"
+msgstr ""
+
+#: assets/js/site-builder.js:1817
+msgid "Menu:"
+msgstr ""
+
+#: assets/js/site-builder.js:1818
+msgid "Media library:"
+msgstr ""
+
+#. translators: %d: number of images
+#: assets/js/site-builder.js:1820
+#, js-format
+msgid "up to %d image added"
+msgid_plural "up to %d images added"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of pages, 2: starter site name, 3: date
+#: assets/js/site-builder.js:1823
+#, js-format
+msgid "The %1$d page from your current %2$s site (applied on %3$s) goes to the trash, and the new version takes its web address. Undo brings it back."
+msgid_plural "The %1$d pages from your current %2$s site (applied on %3$s) go to the trash, and the new versions take their web addresses. Undo brings them back."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: list of page titles
+#: assets/js/site-builder.js:1827
+#, js-format
+msgid "These pages were changed outside the Site Builder after applying: %s. Those changes go to the trash with the old pages. Copy anything you want to keep first."
+msgstr ""
+
+#: assets/js/site-builder.js:1829
+msgid "You already have pages with some of these names. Yours are kept, and the new pages get a number added to their web address."
+msgstr ""
+
+#: assets/js/site-builder.js:1830
+msgid "A snapshot is taken first, so you can undo all of this from Site history at any time. Your existing posts and pages are not changed."
+msgstr ""
+
+#: assets/js/site-builder.js:1834
+msgid "Update your site?"
+msgstr ""
+
+#. translators: %s: starter site name
+#: assets/js/site-builder.js:1837
+#, js-format
+msgid "Apply %s to your site?"
+msgstr ""
+
+#: assets/js/site-builder.js:1842
+msgid "Yes, update my site"
+msgstr ""
+
+#: assets/js/site-builder.js:1842
+msgid "Yes, apply to my site"
+msgstr ""
+
+#: assets/js/site-builder.js:1849
+msgid "Applying..."
+msgstr ""
+
+#: assets/js/site-builder.js:1849
+msgid "Publishing pages and saving your header, footer and styles. This takes a few seconds."
+msgstr ""
+
+#: assets/js/site-builder.js:1859
+msgid "Your site is updated"
+msgstr ""
+
+#: assets/js/site-builder.js:1859
+msgid "Your new site is live"
+msgstr ""
+
+#: assets/js/site-builder.js:1861
+msgid "Everything is ordinary WordPress content now. You can keep editing it in the Site Editor, with or without this plugin."
+msgstr ""
+
+#: assets/js/site-builder.js:1862
+msgid "To change it again, press Customize my site at the top of this page. Changed your mind? Use Undo in Site history below."
+msgstr ""
+
+#: assets/js/site-builder.js:1865
+msgid "Edit in Site Editor"
+msgstr ""
+
+#: assets/js/site-builder.js:1866
+msgid "View my site"
+msgstr ""
+
+#: assets/js/site-builder.js:1877
+msgid "Nothing was changed"
+msgstr ""
+
+#: assets/js/site-builder.js:1888
+msgid "Switch to Twenty Twenty-Five?"
+msgstr ""
+
+#: assets/js/site-builder.js:1889
+msgid "This downloads Twenty Twenty-Five from WordPress.org if needed and makes it your active theme. Your posts, pages and media stay as they are. Menus and widgets made for your current theme may need setting up again. You can switch back under Appearance > Themes."
+msgstr ""
+
+#: assets/js/site-builder.js:1890
+msgid "Yes, switch theme"
+msgstr ""
+
+#: assets/js/site-builder.js:1896
+msgid "Installing..."
+msgstr ""
+
+#: assets/js/site-builder.js:1902
+msgid "Try again"
 msgstr ""

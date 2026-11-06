@@ -4719,3 +4719,437 @@
 		flex-wrap: wrap;
 	}
 }
+
+/* A display rule beats the UA stylesheet's [hidden], so these controls never
+   hid: the trash confirmation showed next to its own button. Say it
+   explicitly, as the rules for the health panels above already do. */
+.msh-hissue-confirm[hidden],
+.msh-hissue-fix .msh-btn[hidden],
+.msh-ai-key-stored[hidden],
+.msh-ai-key-entry[hidden],
+.msh-aifix[hidden],
+.msh-aifix-panel[hidden],
+.msh-aifix-panel [hidden] {
+	display: none !important;
+}
+
+/* =========================================================================
+   AI Bulk Fix (1.3.0)
+
+   Only ever on screen when an API key is configured. Nothing here styles an
+   element that exists on a site without one.
+   ========================================================================= */
+
+.msh-aifix {
+	margin: 0 0 12px;
+}
+
+.msh-aifix-bar {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.msh-aifix-hint {
+	font-size: 12px;
+	color: var(--msh-text-muted);
+}
+
+.msh-aifix-panel {
+	margin-top: 10px;
+	border: 1px solid var(--msh-border);
+	background: var(--msh-surface);
+	padding: 14px 16px;
+}
+
+.msh-aifix-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 10px;
+}
+
+.msh-aifix-title {
+	font-size: 14px;
+	margin: 0;
+}
+
+.msh-aifix-intro p {
+	font-size: 12.5px;
+	line-height: 1.6;
+	margin: 0 0 6px;
+	color: var(--msh-text-secondary);
+}
+
+.msh-aifix-intro .msh-aifix-estimate {
+	color: var(--msh-text);
+	font-weight: 600;
+}
+
+.msh-aifix-intro .msh-btn {
+	margin-top: 6px;
+}
+
+.msh-aifix-progress {
+	margin: 8px 0 12px;
+}
+
+.msh-aifix-progressrow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-top: 6px;
+	font-size: 12.5px;
+	color: var(--msh-text-secondary);
+}
+
+.msh-aifix-error,
+.msh-aifix-notice {
+	font-size: 12.5px;
+	padding: 8px 12px;
+	margin: 0 0 12px;
+}
+
+.msh-aifix-error {
+	border: 1px solid var(--msh-rl);
+	background: var(--msh-rw);
+	color: var(--msh-r);
+}
+
+.msh-aifix-notice {
+	border: 1px solid var(--msh-al);
+	background: var(--msh-aw);
+	color: var(--msh-text);
+}
+
+.msh-aifix-bulk {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 10px;
+}
+
+.msh-aifix-keyhint {
+	font-size: 11.5px;
+	color: var(--msh-text-muted);
+	margin-left: auto;
+}
+
+.msh-aifix-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 1px solid var(--msh-border);
+	max-height: 520px;
+	overflow-y: auto;
+}
+
+.msh-aifix-item {
+	padding: 10px 12px;
+	border-left: 3px solid var(--msh-n4);
+}
+
+.msh-aifix-item + .msh-aifix-item {
+	border-top: 1px solid var(--msh-n2);
+}
+
+.msh-aifix-item:focus {
+	outline: 2px solid var(--msh-border-focus);
+	outline-offset: -2px;
+}
+
+.msh-aifix-item[data-state="approved"] { border-left-color: var(--msh-c); background: var(--msh-cw); }
+.msh-aifix-item[data-state="rejected"] { border-left-color: var(--msh-n4); opacity: 0.6; }
+.msh-aifix-item[data-state="applied"]  { border-left-color: var(--msh-ok); background: var(--msh-okw); }
+.msh-aifix-item[data-state="error"],
+.msh-aifix-item[data-state="failed"]   { border-left-color: var(--msh-r); }
+.msh-aifix-item[data-state="manual"]   { border-left-color: var(--msh-a); }
+
+.msh-aifix-name {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 8px;
+	font-size: 13px;
+	margin-bottom: 4px;
+	word-break: break-word;
+}
+
+.msh-aifix-detail {
+	font-size: 12px;
+	color: var(--msh-text-muted);
+}
+
+.msh-aifix-line {
+	display: flex;
+	gap: 8px;
+	font-size: 12.5px;
+	line-height: 1.55;
+	margin: 2px 0;
+}
+
+.msh-aifix-key {
+	flex: 0 0 72px;
+	color: var(--msh-text-muted);
+}
+
+.msh-aifix-now {
+	color: var(--msh-text-secondary);
+}
+
+.msh-aifix-proposed {
+	color: var(--msh-text);
+	font-weight: 500;
+}
+
+.msh-aifix-actions {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 8px;
+}
+
+.msh-aifix-editor {
+	margin-top: 6px;
+}
+
+.msh-aifix-input {
+	width: 100%;
+	max-width: 560px;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+.msh-aifix-count {
+	display: block;
+	font-size: 11.5px;
+	color: var(--msh-text-muted);
+	margin-top: 3px;
+}
+
+.msh-aifix-count--over {
+	color: var(--msh-r);
+}
+
+.msh-aifix-done {
+	font-size: 12px;
+	color: var(--msh-ok);
+	margin: 6px 0 0;
+}
+
+.msh-aifix-done::before {
+	content: "\2713\00a0";
+}
+
+.msh-aifix-rowerror,
+.msh-aifix-manualnote {
+	font-size: 12px;
+	margin: 6px 0 0;
+}
+
+.msh-aifix-rowerror {
+	color: var(--msh-r);
+}
+
+.msh-aifix-manualnote {
+	color: var(--msh-a);
+}
+
+.msh-aifix-manualresult {
+	font-size: 12px;
+	color: var(--msh-text-secondary);
+}
+
+.msh-aifix-foot {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px 16px;
+	margin-top: 12px;
+}
+
+.msh-aifix-tally,
+.msh-aifix-spend {
+	font-size: 12.5px;
+	margin: 0;
+	color: var(--msh-text-secondary);
+}
+
+.msh-aifix-apply {
+	margin-left: auto;
+}
+
+/* --- AI settings ------------------------------------------------------- */
+
+.msh-ai-key-stored {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.msh-ai-key-mask {
+	font-family: var(--msh-font-mono);
+	font-size: 12.5px;
+	padding: 4px 8px;
+	background: var(--msh-n1);
+	border: 1px solid var(--msh-border);
+}
+
+.msh-ai-test-result {
+	font-size: 12px;
+	color: var(--msh-text-secondary);
+}
+
+.msh-ai-test-result--ok {
+	color: var(--msh-ok);
+}
+
+.msh-ai-test-result--error {
+	color: var(--msh-r);
+}
+
+.msh-ai-usage {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+	margin: 0;
+}
+
+.msh-ai-usage div {
+	text-align: right;
+}
+
+.msh-ai-usage dt {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--msh-text-muted);
+}
+
+.msh-ai-usage dd {
+	margin: 2px 0 0;
+	font-family: var(--msh-font-mono);
+	font-size: 14px;
+	color: var(--msh-text);
+}
+
+@media screen and (max-width: 782px) {
+	.msh-aifix-keyhint,
+	.msh-aifix-apply {
+		margin-left: 0;
+	}
+
+	.msh-aifix-line {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.msh-aifix-key {
+		flex-basis: auto;
+	}
+}
+
+/* ============================================================
+   1.4.0: dashboard top cards and the welcome panel
+   ============================================================ */
+.msh-dash-top {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 18px;
+	margin-bottom: 18px;
+}
+
+.msh-dash-top .msh-dash-health {
+	margin-bottom: 0;
+}
+
+.msh-dash-build {
+	border-color: var(--msh-cl);
+	background: var(--msh-cw);
+}
+
+.msh-welcome {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 20px 32px;
+	margin: 0 0 24px;
+	padding: 22px 56px 22px 24px;
+	background: var(--msh-s);
+	border: 1px solid var(--msh-c);
+}
+
+.msh-welcome-text {
+	flex: 1 1 280px;
+}
+
+.msh-welcome h2 {
+	margin: 0 0 6px;
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+}
+
+.msh-welcome-text p:last-child {
+	margin: 0;
+	color: var(--msh-n7);
+}
+
+.msh-welcome-options {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	flex: 2 1 420px;
+}
+
+.msh-welcome-option {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	flex: 1 1 200px;
+	padding: 14px 16px;
+	color: var(--msh-k);
+	text-decoration: none;
+	border: 1px solid var(--msh-n3);
+	background: var(--msh-n1);
+}
+
+.msh-welcome-option:hover,
+.msh-welcome-option:focus {
+	color: var(--msh-c2);
+	border-color: var(--msh-c);
+	background: var(--msh-cw);
+	box-shadow: none;
+}
+
+.msh-welcome-option span {
+	font-size: 13px;
+	color: var(--msh-n7);
+}
+
+.msh-welcome-close {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	width: 32px;
+	height: 32px;
+	font-size: 22px;
+	line-height: 1;
+	color: var(--msh-n6);
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.msh-welcome-close:hover,
+.msh-welcome-close:focus-visible {
+	color: var(--msh-k);
+	background: var(--msh-n1);
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#f4e4df"/>
+  <circle cx="300" cy="260" r="220" fill="#fbefec"/>
+  <!-- Shelf -->
+  <rect x="100" y="640" width="1000" height="34" rx="6" fill="#d8a95c"/>
+  <rect x="100" y="674" width="1000" height="14" fill="#b88a45" opacity="0.6"/>
+  <!-- Bottles -->
+  <g transform="translate(180 330)"><rect x="40" y="0" width="40" height="40" rx="6" fill="#2d1a1a"/><rect x="0" y="40" width="120" height="270" rx="30" fill="#9c3556"/><rect x="20" y="120" width="80" height="100" rx="8" fill="#fbefec"/></g>
+  <g transform="translate(360 420)"><rect x="20" y="-30" width="60" height="30" rx="8" fill="#ffffff"/><rect x="0" y="0" width="100" height="220" rx="20" fill="#ffffff"/><rect x="18" y="70" width="64" height="70" rx="6" fill="#e8a0b4"/></g>
+  <g transform="translate(500 380)"><path d="M40 0 h20 v40 h-20z" fill="#d8a95c"/><rect x="0" y="40" width="100" height="220" rx="50" fill="#e8a0b4"/></g>
+  <g transform="translate(640 450)"><rect x="0" y="0" width="140" height="80" rx="10" fill="#2d1a1a"/><rect x="0" y="80" width="140" height="110" rx="16" fill="#fbefec" stroke="#2d1a1a" stroke-width="6"/></g>
+  <!-- Folded towels -->
+  <g transform="translate(820 470)">
+    <rect width="220" height="56" rx="20" fill="#ffffff"/><rect y="60" width="220" height="56" rx="20" fill="#f4dcd6"/><rect y="120" width="220" height="56" rx="20" fill="#ffffff"/>
+  </g>
+  <!-- Flowers in vase -->
+  <g transform="translate(920 200)">
+    <g stroke="#5f8460" stroke-width="6"><line x1="60" y1="140" x2="20" y2="30"/><line x1="60" y1="140" x2="60" y2="10"/><line x1="60" y1="140" x2="100" y2="40"/></g>
+    <g fill="#e8a0b4"><circle cx="20" cy="30" r="24"/><circle cx="100" cy="40" r="22"/></g><circle cx="60" cy="10" r="26" fill="#9c3556"/>
+    <rect x="30" y="140" width="60" height="110" rx="20" fill="#ffffff"/>
+  </g>
+</svg>

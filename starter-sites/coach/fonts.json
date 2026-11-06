@@ -1,0 +1,69 @@
+{
+	"font_pairs": [
+		{
+			"id": "warm",
+			"name": "Warm",
+			"heading": {
+				"name": "Warm headings",
+				"fontFamily": "Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif",
+				"fontWeight": "600"
+			},
+			"body": {
+				"name": "Warm body",
+				"fontFamily": "Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif"
+			}
+		},
+		{
+			"id": "soft",
+			"name": "Soft",
+			"heading": {
+				"name": "Soft headings",
+				"fontFamily": "ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', Calibri, source-sans-pro, sans-serif",
+				"fontWeight": "700"
+			},
+			"body": {
+				"name": "Soft body",
+				"fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+			}
+		},
+		{
+			"id": "editorial",
+			"name": "Editorial",
+			"heading": {
+				"name": "Editorial headings",
+				"fontFamily": "'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif",
+				"fontWeight": "500"
+			},
+			"body": {
+				"name": "Editorial body",
+				"fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+			}
+		},
+		{
+			"id": "classic",
+			"name": "Classic",
+			"heading": {
+				"name": "Classic headings",
+				"fontFamily": "Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif",
+				"fontWeight": "600"
+			},
+			"body": {
+				"name": "Classic body",
+				"fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+			}
+		},
+		{
+			"id": "modern",
+			"name": "Modern",
+			"heading": {
+				"name": "Modern headings",
+				"fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"fontWeight": "700"
+			},
+			"body": {
+				"name": "Modern body",
+				"fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+			}
+		}
+	]
+}

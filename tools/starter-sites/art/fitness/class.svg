@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#20261d"/>
+  <rect y="560" width="1200" height="340" fill="#2b3226"/>
+  <!-- Windows -->
+  <g fill="#3a4a5a"><rect x="80" y="80" width="300" height="360" rx="6"/><rect x="450" y="80" width="300" height="360" rx="6"/><rect x="820" y="80" width="300" height="360" rx="6"/></g>
+  <g fill="#c8f04a" opacity="0.18"><rect x="80" y="80" width="300" height="140"/><rect x="450" y="80" width="300" height="140"/><rect x="820" y="80" width="300" height="140"/></g>
+  <!-- Mats -->
+  <g fill="#c8f04a"><path d="M120 640 L380 610 L420 700 L150 740 Z"/></g>
+  <g fill="#ff7a3d"><path d="M470 650 L730 630 L760 720 L490 750 Z"/></g>
+  <g fill="#7dd3fc"><path d="M820 640 L1080 620 L1110 710 L840 740 Z"/></g>
+  <!-- People: simple figures doing a lunge / plank -->
+  <g fill="#f1f5ec">
+    <circle cx="250" cy="430" r="30"/><path d="M230 465 h40 l20 110 l40 50 l-20 15 l-50 -55 l-30 60 l-25 -10 l25 -80 z"/>
+    <circle cx="610" cy="560" r="28"/><path d="M500 610 L650 580 L660 600 L515 632 Z"/><rect x="640" y="590" width="14" height="50" transform="rotate(-10 647 615)"/>
+    <circle cx="960" cy="420" r="30"/><path d="M940 455 h40 l10 120 l-15 70 l-22 -4 l8 -70 l-22 -60 l-10 64 l-22 -4 z"/>
+  </g>
+  <!-- Kettlebells near mats -->
+  <g fill="#0f0f0f"><circle cx="420" cy="780" r="36"/><path d="M398 752 a22 22 0 0 1 44 0" fill="none" stroke="#0f0f0f" stroke-width="10"/></g>
+  <g fill="#c8f04a"><circle cx="1130" cy="790" r="30"/></g>
+</svg>

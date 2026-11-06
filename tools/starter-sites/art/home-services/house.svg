@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#f3f5f8"/>
+  <circle cx="600" cy="470" r="400" fill="#e2e8f0"/>
+  <!-- Cut-away house -->
+  <g transform="translate(250 120)">
+    <path d="M-30 260 L350 0 L730 260 Z" fill="#0f1b2d"/>
+    <rect x="20" y="260" width="660" height="460" fill="#ffffff"/>
+    <rect x="20" y="480" width="660" height="14" fill="#cbd5e1"/>
+    <rect x="340" y="260" width="14" height="460" fill="#cbd5e1"/>
+    <!-- Water pipes (blue) -->
+    <g fill="none" stroke="#2563eb" stroke-width="12" stroke-linecap="round"><path d="M80 700 V560 H260 V420"/><path d="M80 560 H40"/><path d="M260 420 H300"/></g>
+    <!-- Wiring (orange) -->
+    <g fill="none" stroke="#b8420d" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 0"><path d="M420 300 V440 H600 V620"/><path d="M600 520 H650"/><path d="M420 380 H380"/></g>
+    <!-- Fixtures -->
+    <rect x="270" y="380" width="60" height="44" rx="8" fill="#93c5fd"/>
+    <path d="M60 640 h80 v40 a40 40 0 0 1 -80 0z" fill="#e5e7eb"/>
+    <g><circle cx="420" cy="300" r="22" fill="#ffd166"/><rect x="636" y="508" width="30" height="40" rx="5" fill="#e5e7eb"/><rect x="590" y="620" width="40" height="70" rx="6" fill="#475467"/></g>
+    <rect x="480" y="560" width="90" height="140" rx="8" fill="#9aa5b4"/><circle cx="525" cy="600" r="14" fill="#ff9a4d"/>
+    <rect x="80" y="300" width="160" height="110" fill="#bfdcef" stroke="#cbd5e1" stroke-width="8"/>
+  </g>
+  <!-- Check badge -->
+  <g transform="translate(960 640)"><circle r="80" fill="#15803d"/><path d="M-34 2 l24 24 l46 -50" stroke="#ffffff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

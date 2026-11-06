@@ -1,0 +1,194 @@
+{
+	"slug": "coach",
+	"name": "Coach & Consultant",
+	"category": "coaching",
+	"description": "A warm, personal site for a coach, consultant or therapist. Your story, clear programs with prices, client stories and a free intro call.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "help",
+					"label": "How I help",
+					"file": "pages/home/help.html"
+				},
+				{
+					"id": "approach",
+					"label": "Approach",
+					"file": "pages/home/approach.html"
+				},
+				{
+					"id": "programs",
+					"label": "Programs",
+					"file": "pages/home/programs.html"
+				},
+				{
+					"id": "testimonial",
+					"label": "Testimonial",
+					"file": "pages/home/testimonial.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "programs",
+			"title": "Programs",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/programs/intro.html"
+				},
+				{
+					"id": "plans",
+					"label": "Programs",
+					"file": "pages/programs/plans.html"
+				},
+				{
+					"id": "how",
+					"label": "How it works",
+					"file": "pages/programs/how.html"
+				},
+				{
+					"id": "faq",
+					"label": "Questions",
+					"file": "pages/programs/faq.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/programs/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "about",
+			"title": "About",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/about/intro.html"
+				},
+				{
+					"id": "story",
+					"label": "Story",
+					"file": "pages/about/story.html"
+				},
+				{
+					"id": "numbers",
+					"label": "Highlights",
+					"file": "pages/about/numbers.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/about/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "stories",
+			"title": "Client Stories",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/stories/intro.html"
+				},
+				{
+					"id": "story1",
+					"label": "Testimonial",
+					"file": "pages/stories/story1.html"
+				},
+				{
+					"id": "story2",
+					"label": "Testimonial",
+					"file": "pages/stories/story2.html"
+				},
+				{
+					"id": "story3",
+					"label": "Testimonial",
+					"file": "pages/stories/story3.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/stories/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "contact",
+			"title": "Contact",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/contact/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/contact/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Programs",
+			"page": "programs"
+		},
+		{
+			"label": "About",
+			"page": "about"
+		},
+		{
+			"label": "Stories",
+			"page": "stories"
+		},
+		{
+			"label": "Contact",
+			"page": "contact"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/programs.jpg",
+		"screenshots/about.jpg",
+		"screenshots/stories.jpg",
+		"screenshots/contact.jpg"
+	]
+}

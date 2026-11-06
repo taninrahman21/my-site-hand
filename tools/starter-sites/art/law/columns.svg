@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9e4e8"/><stop offset="1" stop-color="#f3f0e8"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <!-- Building -->
+  <g transform="translate(180 120)">
+    <path d="M0 180 L420 20 L840 180 Z" fill="#e8e2d3"/>
+    <path d="M70 160 L420 40 L770 160 Z" fill="#d8d0bc"/>
+    <circle cx="420" cy="120" r="34" fill="#1f3a2e"/>
+    <rect x="-20" y="180" width="880" height="40" fill="#cfc6b0"/>
+    <g fill="#f3f0e8">
+      <rect x="40" y="220" width="70" height="340"/><rect x="190" y="220" width="70" height="340"/><rect x="340" y="220" width="70" height="340"/>
+      <rect x="430" y="220" width="70" height="340"/><rect x="580" y="220" width="70" height="340"/><rect x="730" y="220" width="70" height="340"/>
+    </g>
+    <g fill="#ddd5c2"><rect x="88" y="220" width="22" height="340"/><rect x="238" y="220" width="22" height="340"/><rect x="388" y="220" width="22" height="340"/><rect x="478" y="220" width="22" height="340"/><rect x="628" y="220" width="22" height="340"/><rect x="778" y="220" width="22" height="340"/></g>
+    <rect x="-20" y="560" width="880" height="30" fill="#cfc6b0"/>
+    <rect x="-60" y="590" width="960" height="30" fill="#bfb59c"/>
+    <rect x="-100" y="620" width="1040" height="30" fill="#afa48a"/>
+  </g>
+  <!-- Trees -->
+  <g transform="translate(90 600)"><rect x="-8" y="60" width="16" height="130" fill="#5a4636"/><circle r="70" fill="#3c6b4f"/></g>
+  <g transform="translate(1110 600)"><rect x="-8" y="60" width="16" height="130" fill="#5a4636"/><circle r="70" fill="#3c6b4f"/></g>
+  <rect y="790" width="1200" height="110" fill="#c9c1b3"/>
+</svg>

@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "terracotta",
+			"name": "Terracotta",
+			"colors": {
+				"base": "#fbf6ee",
+				"surface": "#f3e8d8",
+				"accent": "#ead6bb",
+				"contrast": "#2a1a12",
+				"muted": "#5d4a3c",
+				"primary": "#9a3a1a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "olive",
+			"name": "Olive grove",
+			"colors": {
+				"base": "#fafaf4",
+				"surface": "#eef0e2",
+				"accent": "#dfe4c9",
+				"contrast": "#1f2416",
+				"muted": "#4f5641",
+				"primary": "#556b2f",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "brass",
+			"name": "Charcoal and brass",
+			"colors": {
+				"base": "#16130f",
+				"surface": "#211c17",
+				"accent": "#2d261f",
+				"contrast": "#f3ead9",
+				"muted": "#bfb19b",
+				"primary": "#d6a84e",
+				"on-primary": "#16130f"
+			}
+		},
+		{
+			"id": "sea",
+			"name": "Sea salt",
+			"colors": {
+				"base": "#f8fbfc",
+				"surface": "#eaf2f5",
+				"accent": "#d7e7ee",
+				"contrast": "#10232c",
+				"muted": "#46606b",
+				"primary": "#1e5f7a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "saffron",
+			"name": "Saffron",
+			"colors": {
+				"base": "#fffaf0",
+				"surface": "#fbefd6",
+				"accent": "#f6e0b2",
+				"contrast": "#2b1d05",
+				"muted": "#5f4a20",
+				"primary": "#8a5300",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "bistro",
+			"name": "Bistro red",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f7efee",
+				"accent": "#efdcda",
+				"contrast": "#1f1414",
+				"muted": "#5a4646",
+				"primary": "#9e1b32",
+				"on-primary": "#ffffff"
+			}
+		}
+	]
+}

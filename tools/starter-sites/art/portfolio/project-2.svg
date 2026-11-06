@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#dfe6dc"/>
+  <!-- Open magazine -->
+  <g transform="translate(120 130) rotate(-4 480 320)">
+    <rect x="18" y="24" width="960" height="640" fill="#000" opacity="0.14"/>
+    <rect width="480" height="640" fill="#fbfaf6"/>
+    <rect x="480" width="480" height="640" fill="#f6f4ee"/>
+    <rect x="474" width="12" height="640" fill="#e4e0d5"/>
+    <!-- Left page: big type -->
+    <rect x="50" y="60" width="300" height="70" fill="#1e3b2c"/>
+    <rect x="50" y="150" width="380" height="70" fill="#1e3b2c"/>
+    <rect x="50" y="240" width="220" height="70" fill="#1e3b2c"/>
+    <g fill="#b8b3a6"><rect x="50" y="360" width="380" height="10"/><rect x="50" y="384" width="360" height="10"/><rect x="50" y="408" width="370" height="10"/><rect x="50" y="432" width="300" height="10"/><rect x="50" y="480" width="380" height="10"/><rect x="50" y="504" width="340" height="10"/><rect x="50" y="528" width="360" height="10"/></g>
+    <!-- Right page: leaf illustration -->
+    <rect x="530" y="60" width="380" height="380" fill="#e7a54a"/>
+    <path d="M720 420 C620 330 600 200 720 90 C840 200 820 330 720 420 Z" fill="#1e3b2c"/>
+    <path d="M720 410 V110" stroke="#e7a54a" stroke-width="6"/>
+    <g stroke="#e7a54a" stroke-width="4"><path d="M720 200 L660 160"/><path d="M720 250 L780 200"/><path d="M720 300 L650 250"/><path d="M720 340 L790 290"/></g>
+    <g fill="#b8b3a6"><rect x="530" y="480" width="380" height="10"/><rect x="530" y="504" width="340" height="10"/><rect x="530" y="528" width="360" height="10"/></g>
+    <rect x="530" y="570" width="120" height="14" fill="#1e3b2c"/>
+  </g>
+</svg>

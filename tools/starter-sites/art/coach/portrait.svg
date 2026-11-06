@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#f8ebda"/>
+  <circle cx="600" cy="420" r="330" fill="#f2d9b8"/>
+  <!-- Window light -->
+  <rect x="800" y="80" width="300" height="420" rx="150" fill="#ffffff" opacity="0.7"/>
+  <!-- Plant -->
+  <g transform="translate(140 430)"><path d="M70 300 C30 220 -20 190 -30 120 C20 150 60 210 80 290" fill="#5b8c6a"/><path d="M80 300 C90 200 70 120 100 50 C140 130 120 220 92 300" fill="#4a7a59"/><path d="M90 300 C120 230 170 200 200 140 C190 220 140 260 100 300" fill="#6aa07b"/><path d="M30 290 H150 L134 400 H46 Z" fill="#b0532e"/></g>
+  <!-- Person -->
+  <g transform="translate(600 470)">
+    <path d="M-260 430 C-250 250 -150 180 0 180 C150 180 250 250 260 430 Z" fill="#155e75"/>
+    <path d="M-50 180 L0 250 L50 180" fill="#f8ebda"/>
+    <rect x="-38" y="110" width="76" height="90" rx="30" fill="#a86b47"/>
+    <ellipse cx="0" cy="30" rx="112" ry="132" fill="#b97a52"/>
+    <!-- Curly hair -->
+    <g fill="#2a1d14">
+      <circle cx="-90" cy="-60" r="56"/><circle cx="-30" cy="-100" r="60"/><circle cx="40" cy="-100" r="60"/><circle cx="100" cy="-50" r="54"/>
+      <circle cx="-120" cy="10" r="46"/><circle cx="120" cy="20" r="46"/><circle cx="-110" cy="80" r="40"/><circle cx="114" cy="86" r="40"/>
+    </g>
+    <ellipse cx="0" cy="45" rx="96" ry="112" fill="#b97a52"/>
+    <g fill="#2a1d14"><ellipse cx="-38" cy="30" rx="9" ry="11"/><ellipse cx="38" cy="30" rx="9" ry="11"/></g>
+    <path d="M-60 0 q22 -14 40 -4 M20 -4 q20 -10 40 4" stroke="#2a1d14" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M-36 96 Q0 128 36 96" stroke="#7c3b2a" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <g fill="#f2b880"><circle cx="-108" cy="70" r="10"/><circle cx="108" cy="70" r="10"/></g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+{
+	"name": "my-site-hand-starter-site-tools",
+	"private": true,
+	"description": "Dev-only tooling for building and validating starter sites. Not shipped.",
+	"dependencies": {
+		"@wordpress/block-library": "12.1.0",
+		"@wordpress/blocks": "17.1.0",
+		"jsdom": "29.1.1"
+	}
+}

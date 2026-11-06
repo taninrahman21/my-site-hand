@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "teal",
+			"name": "Calm teal",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f1f7f6",
+				"accent": "#dcefeb",
+				"contrast": "#11292b",
+				"muted": "#4a5e60",
+				"primary": "#0d6b66",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "sky",
+			"name": "Clear sky",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f6fb",
+				"accent": "#e0e9f7",
+				"contrast": "#0f1c2e",
+				"muted": "#4a5568",
+				"primary": "#1b5cb8",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "sage",
+			"name": "Sage",
+			"colors": {
+				"base": "#fbfbf7",
+				"surface": "#eff2e8",
+				"accent": "#e1e8d6",
+				"contrast": "#1f2a1f",
+				"muted": "#4f594d",
+				"primary": "#3c6642",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "sand",
+			"name": "Warm sand",
+			"colors": {
+				"base": "#fffcf7",
+				"surface": "#f7efe4",
+				"accent": "#f0e1cd",
+				"contrast": "#2b1d12",
+				"muted": "#5d4d3f",
+				"primary": "#94461c",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "plum",
+			"name": "Soft plum",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f7f2f7",
+				"accent": "#eddff0",
+				"contrast": "#241326",
+				"muted": "#59495b",
+				"primary": "#762d7a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "night",
+			"name": "Night shift",
+			"colors": {
+				"base": "#0f1a1c",
+				"surface": "#162528",
+				"accent": "#1f3538",
+				"contrast": "#eaf2f1",
+				"muted": "#a8b9b8",
+				"primary": "#6fd3c8",
+				"on-primary": "#0b1716"
+			}
+		}
+	]
+}

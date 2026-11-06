@@ -218,9 +218,10 @@
 		 *
 		 * @param {string} optionName  - Option key.
 		 * @param {any} value - Option value.
+		 * @return {Promise<Object|null>} The response data on success, null otherwise.
 		 */
 		saveOption: function (optionName, value) {
-			fetch(cfg.ajaxUrl, {
+			return fetch(cfg.ajaxUrl, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 				body: new URLSearchParams({
@@ -232,10 +233,14 @@
 			}).then(r => r.json()).then(data => {
 				if (data.success) {
 					this._showToast(i18n.saved || 'Saved!');
-				} else {
-					this._showToast(data.data?.message || i18n.error || 'Error.', 'error');
+					return data.data || {};
 				}
-			}).catch(() => this._showToast(i18n.error || 'Error occurred.', 'error'));
+				this._showToast(data.data?.message || i18n.error || 'Error.', 'error');
+				return null;
+			}).catch(() => {
+				this._showToast(i18n.error || 'Error occurred.', 'error');
+				return null;
+			});
 		},
 
 		/**
@@ -523,6 +528,25 @@
 				const modal = document.querySelector('.msh-modal-overlay[style*="flex"], .msh-modal-overlay[style*="block"]');
 				if (modal) modal.style.display = 'none';
 			}
+		});
+	});
+
+	/** -----------------------------------------------------------------------
+	 * Welcome panel: dismiss once, per user.
+	 * ---------------------------------------------------------------------- */
+	document.addEventListener('click', function (e) {
+		const close = e.target && e.target.closest ? e.target.closest('#msh-welcome-close') : null;
+		if (!close || !window.mysitehandAdmin) {
+			return;
+		}
+		const panel = document.getElementById('msh-welcome');
+		if (panel) {
+			panel.remove();
+		}
+		fetch(window.mysitehandAdmin.restUrl + 'builder/welcome', {
+			method: 'DELETE',
+			credentials: 'same-origin',
+			headers: { 'X-WP-Nonce': window.mysitehandAdmin.restNonce },
 		});
 	});
 

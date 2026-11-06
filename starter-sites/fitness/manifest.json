@@ -1,0 +1,189 @@
+{
+	"slug": "fitness",
+	"name": "Fitness & Gym",
+	"category": "fitness",
+	"description": "A bold, energetic site for a gym, studio or personal trainer. Classes, memberships with prices, coaches and a free trial offer.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "stats",
+					"label": "Highlights",
+					"file": "pages/home/stats.html"
+				},
+				{
+					"id": "classes",
+					"label": "Classes",
+					"file": "pages/home/classes.html"
+				},
+				{
+					"id": "coaching",
+					"label": "Coaching",
+					"file": "pages/home/coaching.html"
+				},
+				{
+					"id": "plans",
+					"label": "Membership",
+					"file": "pages/home/plans.html"
+				},
+				{
+					"id": "testimonial",
+					"label": "Testimonial",
+					"file": "pages/home/testimonial.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "classes",
+			"title": "Classes",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/classes/intro.html"
+				},
+				{
+					"id": "list",
+					"label": "Class list",
+					"file": "pages/classes/list.html"
+				},
+				{
+					"id": "first",
+					"label": "Your first week",
+					"file": "pages/classes/first.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/classes/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "membership",
+			"title": "Membership",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/membership/intro.html"
+				},
+				{
+					"id": "plans",
+					"label": "Plans",
+					"file": "pages/membership/plans.html"
+				},
+				{
+					"id": "faq",
+					"label": "Questions",
+					"file": "pages/membership/faq.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/membership/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "coaches",
+			"title": "Coaches",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/coaches/intro.html"
+				},
+				{
+					"id": "team",
+					"label": "Team",
+					"file": "pages/coaches/team.html"
+				},
+				{
+					"id": "stats",
+					"label": "Highlights",
+					"file": "pages/coaches/stats.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/coaches/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "visit",
+			"title": "Visit",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/visit/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/visit/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Classes",
+			"page": "classes"
+		},
+		{
+			"label": "Membership",
+			"page": "membership"
+		},
+		{
+			"label": "Coaches",
+			"page": "coaches"
+		},
+		{
+			"label": "Visit",
+			"page": "visit"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/classes.jpg",
+		"screenshots/membership.jpg",
+		"screenshots/coaches.jpg",
+		"screenshots/visit.jpg"
+	]
+}

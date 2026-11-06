@@ -1,0 +1,184 @@
+{
+	"slug": "law",
+	"name": "Law Firm",
+	"category": "legal",
+	"description": "A serious, reassuring site for a law firm, accountant or advisory practice. Practice areas, your people, how you work and a free consultation offer.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "stats",
+					"label": "Highlights",
+					"file": "pages/home/stats.html"
+				},
+				{
+					"id": "areas",
+					"label": "Practice areas",
+					"file": "pages/home/areas.html"
+				},
+				{
+					"id": "how",
+					"label": "How we work",
+					"file": "pages/home/how.html"
+				},
+				{
+					"id": "testimonial",
+					"label": "Testimonial",
+					"file": "pages/home/testimonial.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "practice-areas",
+			"title": "Practice Areas",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/practice-areas/intro.html"
+				},
+				{
+					"id": "list",
+					"label": "Areas",
+					"file": "pages/practice-areas/list.html"
+				},
+				{
+					"id": "approach",
+					"label": "Approach",
+					"file": "pages/practice-areas/approach.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/practice-areas/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "lawyers",
+			"title": "Our Lawyers",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/lawyers/intro.html"
+				},
+				{
+					"id": "team",
+					"label": "Team",
+					"file": "pages/lawyers/team.html"
+				},
+				{
+					"id": "credentials",
+					"label": "Highlights",
+					"file": "pages/lawyers/credentials.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/lawyers/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "fees",
+			"title": "Fees",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/fees/intro.html"
+				},
+				{
+					"id": "examples",
+					"label": "Example fees",
+					"file": "pages/fees/examples.html"
+				},
+				{
+					"id": "faq",
+					"label": "Questions",
+					"file": "pages/fees/faq.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/fees/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "contact",
+			"title": "Contact",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/contact/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/contact/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Practice areas",
+			"page": "practice-areas"
+		},
+		{
+			"label": "Our lawyers",
+			"page": "lawyers"
+		},
+		{
+			"label": "Fees",
+			"page": "fees"
+		},
+		{
+			"label": "Contact",
+			"page": "contact"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/practice-areas.jpg",
+		"screenshots/lawyers.jpg",
+		"screenshots/fees.jpg",
+		"screenshots/contact.jpg"
+	]
+}

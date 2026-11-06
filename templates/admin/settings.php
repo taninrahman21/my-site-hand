@@ -19,6 +19,7 @@ $my_site_hand_all_modules = [
 	'media' => ['label' => __('Media', 'my-site-hand'), 'desc' => __('Media library', 'my-site-hand'), 'count' => 6],
 	'users' => ['label' => __('Users', 'my-site-hand'), 'desc' => __('Accounts and roles', 'my-site-hand'), 'count' => 5],
 	'woocommerce' => ['label' => __('WooCommerce', 'my-site-hand'), 'desc' => __('Products, orders, coupons', 'my-site-hand'), 'count' => 12],
+	'site-builder' => ['label' => __('Site Builder', 'my-site-hand'), 'desc' => __('Starter sites: stage, apply, undo', 'my-site-hand'), 'count' => 7],
 ];
 
 $my_site_hand_module_icons = [
@@ -28,6 +29,7 @@ $my_site_hand_module_icons = [
 	'diagnostics' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>',
 	'media' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3" y="3" width="18" height="18"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle></svg>',
 	'users' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>',
+	'site-builder' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3" y="3" width="18" height="18"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>',
 ];
 
 $my_site_hand_svg_allowed = [
@@ -88,6 +90,7 @@ $my_site_hand_module_total = count($my_site_hand_all_modules);
 					<a class="msh-index-link msh-index-link--active" href="#msh-set-server"><span class="msh-index-no">01</span><?php esc_html_e('Server', 'my-site-hand'); ?></a>
 					<a class="msh-index-link" href="#msh-set-modules"><span class="msh-index-no">02</span><?php esc_html_e('Modules', 'my-site-hand'); ?><span class="msh-index-ct"><?php echo esc_html($my_site_hand_active_module_count . '/' . $my_site_hand_module_total); ?></span></a>
 					<a class="msh-index-link" href="#msh-set-limits"><span class="msh-index-no">03</span><?php esc_html_e('Limits', 'my-site-hand'); ?></a>
+					<a class="msh-index-link" href="#msh-set-ai"><span class="msh-index-no">AI</span><?php esc_html_e('AI assistance', 'my-site-hand'); ?></a>
 					<a class="msh-index-link" href="#msh-set-audit"><span class="msh-index-no">04</span><?php esc_html_e('Audit log', 'my-site-hand'); ?></a>
 					<a class="msh-index-link" href="#msh-set-danger"><span class="msh-index-no">05</span><?php esc_html_e('Irreversible', 'my-site-hand'); ?></a>
 					<div class="msh-index-foot">
@@ -376,6 +379,143 @@ $my_site_hand_module_total = count($my_site_hand_all_modules);
 											</option>
 										<?php endforeach; ?>
 									</select>
+								</div>
+							</div>
+						</div>
+
+						<!-- AI assistance — optional, bring your own key -->
+						<?php
+						$my_site_hand_ai = $my_site_hand_plugin->get_ai_manager();
+						$my_site_hand_ai_providers = $my_site_hand_ai->get_providers();
+						$my_site_hand_ai_active = $my_site_hand_ai->get_active_provider();
+						$my_site_hand_ai_model = $my_site_hand_ai->get_model();
+						// The masked form is the only form of the key that ever
+						// reaches this page.
+						$my_site_hand_ai_masked = $my_site_hand_ai->get_masked_key();
+						$my_site_hand_ai_today = $my_site_hand_ai->get_usage('today');
+						$my_site_hand_ai_month = $my_site_hand_ai->get_usage('month');
+						$my_site_hand_ai_models = [];
+						foreach ($my_site_hand_ai_providers as $my_site_hand_ai_id => $my_site_hand_ai_provider) {
+							$my_site_hand_ai_models[$my_site_hand_ai_id] = $my_site_hand_ai_provider->get_models();
+						}
+						?>
+						<div class="msh-card" id="msh-set-ai"
+							data-models="<?php echo esc_attr((string) wp_json_encode($my_site_hand_ai_models)); ?>">
+							<div class="msh-card-header">
+								<div class="msh-card-title-group">
+									<span class="msh-card-no">AI</span>
+									<div>
+										<h3><?php esc_html_e('AI Assistance', 'my-site-hand'); ?></h3>
+										<p><?php esc_html_e('Optional. My Site Hand works fully without this — AI only adds bulk fixing. You bring your own API key and are billed by the provider directly.', 'my-site-hand'); ?></p>
+									</div>
+								</div>
+							</div>
+
+							<div class="msh-setting-item">
+								<div class="msh-setting-info">
+									<span class="msh-setting-title"><?php esc_html_e('Provider', 'my-site-hand'); ?></span>
+									<span class="msh-setting-desc"><?php esc_html_e('Whichever company you already have an API key with. The key below must belong to this provider.', 'my-site-hand'); ?></span>
+								</div>
+								<div class="msh-setting-control">
+									<select id="msh-ai-provider" name="mysitehand_ai_provider" class="msh-select">
+										<option value="" <?php selected(null === $my_site_hand_ai_active); ?>><?php esc_html_e('Not set', 'my-site-hand'); ?></option>
+										<?php foreach ($my_site_hand_ai_providers as $my_site_hand_ai_id => $my_site_hand_ai_provider): ?>
+											<option value="<?php echo esc_attr($my_site_hand_ai_id); ?>"
+												<?php selected(null !== $my_site_hand_ai_active && $my_site_hand_ai_active->get_id() === $my_site_hand_ai_id); ?>>
+												<?php echo esc_html($my_site_hand_ai_provider->get_label()); ?>
+											</option>
+										<?php endforeach; ?>
+									</select>
+								</div>
+							</div>
+
+							<div class="msh-setting-item">
+								<div class="msh-setting-info">
+									<span class="msh-setting-title"><?php esc_html_e('API key', 'my-site-hand'); ?></span>
+									<span class="msh-setting-desc"><?php esc_html_e('Stored in your WordPress database and sent only to the provider you chose. It is never shown again after saving, never logged, and is deleted if you delete the plugin.', 'my-site-hand'); ?></span>
+								</div>
+								<div class="msh-setting-control msh-setting-control--stack">
+									<div class="msh-ai-key-stored" id="msh-ai-key-stored" <?php echo '' === $my_site_hand_ai_masked ? 'hidden' : ''; ?>>
+										<code class="msh-ai-key-mask" id="msh-ai-key-mask"><?php echo esc_html($my_site_hand_ai_masked); ?></code>
+										<button type="button" class="msh-btn msh-btn--sm" id="msh-ai-key-replace"><?php esc_html_e('Replace', 'my-site-hand'); ?></button>
+										<button type="button" class="msh-btn msh-btn--sm msh-btn--ghost" id="msh-ai-key-remove"><?php esc_html_e('Remove', 'my-site-hand'); ?></button>
+									</div>
+									<div class="msh-ai-key-entry" id="msh-ai-key-entry" <?php echo '' === $my_site_hand_ai_masked ? '' : 'hidden'; ?>>
+										<input type="password" id="msh-ai-key" class="msh-input" style="max-width: 280px;"
+											autocomplete="off" spellcheck="false" value=""
+											aria-label="<?php esc_attr_e('API key', 'my-site-hand'); ?>"
+											placeholder="<?php esc_attr_e('Paste your API key', 'my-site-hand'); ?>" />
+									</div>
+								</div>
+							</div>
+
+							<div class="msh-setting-item">
+								<div class="msh-setting-info">
+									<span class="msh-setting-title"><?php esc_html_e('Model', 'my-site-hand'); ?></span>
+									<span class="msh-setting-desc"><?php esc_html_e('The recommended model is the cheapest and is plenty for alt text and meta descriptions.', 'my-site-hand'); ?></span>
+								</div>
+								<div class="msh-setting-control">
+									<select id="msh-ai-model" name="mysitehand_ai_model" class="msh-select"
+										<?php disabled(null === $my_site_hand_ai_active); ?>>
+										<?php if (null !== $my_site_hand_ai_active): ?>
+											<?php foreach ($my_site_hand_ai_active->get_models() as $my_site_hand_ai_model_id => $my_site_hand_ai_model_label): ?>
+												<option value="<?php echo esc_attr($my_site_hand_ai_model_id); ?>" <?php selected($my_site_hand_ai_model, $my_site_hand_ai_model_id); ?>>
+													<?php echo esc_html($my_site_hand_ai_model_label); ?>
+												</option>
+											<?php endforeach; ?>
+										<?php endif; ?>
+									</select>
+								</div>
+							</div>
+
+							<div class="msh-setting-item">
+								<div class="msh-setting-info">
+									<span class="msh-setting-title"><?php esc_html_e('Daily spend cap', 'my-site-hand'); ?></span>
+									<span class="msh-setting-desc"><?php esc_html_e('Once today\'s estimated spend reaches this, AI requests stop until tomorrow. Set 0 to pause AI entirely.', 'my-site-hand'); ?></span>
+								</div>
+								<div class="msh-setting-control">
+									<div class="msh-unit">
+										<span>$</span>
+										<input type="number" id="msh-ai-cap" name="mysitehand_ai_daily_cap" min="0" max="1000" step="0.01"
+											value="<?php echo esc_attr(number_format($my_site_hand_ai->get_daily_cap(), 2, '.', '')); ?>"
+											class="msh-input msh-num" style="max-width: 110px; text-align: right;"
+											onblur="msh.saveOption('mysitehand_ai_daily_cap', this.value)" />
+										<span><?php esc_html_e('per day', 'my-site-hand'); ?></span>
+									</div>
+								</div>
+							</div>
+
+							<div class="msh-setting-item">
+								<div class="msh-setting-info">
+									<span class="msh-setting-title"><?php esc_html_e('Test connection', 'my-site-hand'); ?></span>
+									<span class="msh-setting-desc"><?php esc_html_e('Checks the saved key with the provider. This does not cost anything.', 'my-site-hand'); ?></span>
+								</div>
+								<div class="msh-setting-control msh-setting-control--stack">
+									<button type="button" class="msh-btn msh-btn--sm" id="msh-ai-test"><?php esc_html_e('Test connection', 'my-site-hand'); ?></button>
+									<span class="msh-ai-test-result" id="msh-ai-test-result" role="status" aria-live="polite"></span>
+								</div>
+							</div>
+
+							<div class="msh-setting-item">
+								<div class="msh-setting-info">
+									<span class="msh-setting-title"><?php esc_html_e('Usage', 'my-site-hand'); ?></span>
+									<span class="msh-setting-desc"><?php esc_html_e('Estimated from token counts and published prices. Your provider\'s own billing page is the final word.', 'my-site-hand'); ?></span>
+								</div>
+								<div class="msh-setting-control">
+									<dl class="msh-ai-usage">
+										<div>
+											<dt><?php esc_html_e('Today', 'my-site-hand'); ?></dt>
+											<dd><?php echo esc_html(\MySiteHand\AI_Manager::format_usd($my_site_hand_ai_today['cost'])); ?></dd>
+										</div>
+										<div>
+											<dt><?php esc_html_e('This month', 'my-site-hand'); ?></dt>
+											<dd><?php echo esc_html(\MySiteHand\AI_Manager::format_usd($my_site_hand_ai_month['cost'])); ?></dd>
+										</div>
+										<div>
+											<dt><?php esc_html_e('Requests this month', 'my-site-hand'); ?></dt>
+											<dd><?php echo esc_html(number_format_i18n($my_site_hand_ai_month['requests'])); ?></dd>
+										</div>
+									</dl>
 								</div>
 							</div>
 						</div>

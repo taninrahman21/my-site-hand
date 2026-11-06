@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "harbor",
+			"name": "Harbor navy",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f4f6f8",
+				"accent": "#e2e8ee",
+				"contrast": "#0e1c2b",
+				"muted": "#4a5868",
+				"primary": "#1d3c5e",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "pine",
+			"name": "Pine",
+			"colors": {
+				"base": "#fcfdfb",
+				"surface": "#f3f9f7",
+				"accent": "#e2f1eb",
+				"contrast": "#152821",
+				"muted": "#4e6a5f",
+				"primary": "#1f5f46",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "terracotta",
+			"name": "Terracotta",
+			"colors": {
+				"base": "#fffcf9",
+				"surface": "#f9f5f3",
+				"accent": "#f1e6e2",
+				"contrast": "#281a15",
+				"muted": "#6a554e",
+				"primary": "#a0482a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "charcoal",
+			"name": "Charcoal",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f5f6f7",
+				"accent": "#e8eaeb",
+				"contrast": "#1c1f21",
+				"muted": "#555e63",
+				"primary": "#2f3437",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "coastal",
+			"name": "Coastal",
+			"colors": {
+				"base": "#fbfdfe",
+				"surface": "#f3f8f9",
+				"accent": "#e2edf1",
+				"contrast": "#152328",
+				"muted": "#4e636a",
+				"primary": "#1b6f8a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "evening",
+			"name": "Evening",
+			"colors": {
+				"base": "#10151c",
+				"surface": "#18202a",
+				"accent": "#222c39",
+				"contrast": "#f1f4f8",
+				"muted": "#aab5c3",
+				"primary": "#d9b26b",
+				"on-primary": "#10151c"
+			}
+		}
+	]
+}

@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "blush",
+			"name": "Blush",
+			"colors": {
+				"base": "#fffaf8",
+				"surface": "#fbefec",
+				"accent": "#f4dcd6",
+				"contrast": "#2d1a1a",
+				"muted": "#664b49",
+				"primary": "#9c3556",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "sage",
+			"name": "Sage spa",
+			"colors": {
+				"base": "#fbfcf9",
+				"surface": "#f5f8f5",
+				"accent": "#e6ede8",
+				"contrast": "#1a241c",
+				"muted": "#4e6a55",
+				"primary": "#4d6b55",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "lavender",
+			"name": "Lavender",
+			"colors": {
+				"base": "#fdfbff",
+				"surface": "#f5f3f9",
+				"accent": "#e7e2f1",
+				"contrast": "#1c1528",
+				"muted": "#584e6a",
+				"primary": "#674c9a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "nude",
+			"name": "Nude",
+			"colors": {
+				"base": "#fffbf7",
+				"surface": "#f9f5f3",
+				"accent": "#f1e7e2",
+				"contrast": "#281b15",
+				"muted": "#6a574e",
+				"primary": "#8a5a44",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "ocean",
+			"name": "Sea mist",
+			"colors": {
+				"base": "#fafdfd",
+				"surface": "#f3f9f9",
+				"accent": "#e2f0f1",
+				"contrast": "#152728",
+				"muted": "#4e686a",
+				"primary": "#2f6f73",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "noir",
+			"name": "Noir",
+			"colors": {
+				"base": "#141012",
+				"surface": "#1e181b",
+				"accent": "#2a2125",
+				"contrast": "#f8eef1",
+				"muted": "#c0abb2",
+				"primary": "#e8a0b4",
+				"on-primary": "#141012"
+			}
+		}
+	]
+}

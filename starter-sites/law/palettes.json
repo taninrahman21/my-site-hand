@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "oxford",
+			"name": "Oxford green",
+			"colors": {
+				"base": "#fdfcf9",
+				"surface": "#f3f0e8",
+				"accent": "#e8e2d3",
+				"contrast": "#1b1a17",
+				"muted": "#55524a",
+				"primary": "#1f3a2e",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "navy",
+			"name": "Navy",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f6f9",
+				"accent": "#e2e8f1",
+				"contrast": "#151d28",
+				"muted": "#4e5a6a",
+				"primary": "#1e3a5f",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "burgundy",
+			"name": "Burgundy",
+			"colors": {
+				"base": "#fffcfb",
+				"surface": "#f9f3f4",
+				"accent": "#f1e2e4",
+				"contrast": "#281518",
+				"muted": "#6a4e52",
+				"primary": "#7a1f2b",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "slate",
+			"name": "Slate",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f4f6f8",
+				"accent": "#e4e8ef",
+				"contrast": "#171d26",
+				"muted": "#4e596a",
+				"primary": "#334155",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "bronze",
+			"name": "Bronze",
+			"colors": {
+				"base": "#fffdf8",
+				"surface": "#f9f7f3",
+				"accent": "#f1ebe2",
+				"contrast": "#282015",
+				"muted": "#6a5e4e",
+				"primary": "#7c5a2a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "chamber",
+			"name": "Chamber",
+			"colors": {
+				"base": "#121411",
+				"surface": "#1b1e1a",
+				"accent": "#262a24",
+				"contrast": "#f2f1ea",
+				"muted": "#b2b0a4",
+				"primary": "#cdb27a",
+				"on-primary": "#121411"
+			}
+		}
+	]
+}

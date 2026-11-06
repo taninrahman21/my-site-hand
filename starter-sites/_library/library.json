@@ -1,0 +1,620 @@
+{
+	"version": 1,
+	"prefix": "s.x",
+	"sections": [
+		{
+			"type": "features",
+			"label": "Three features",
+			"description": "Three cards with a heading and a short text.",
+			"file": "sections/features.html",
+			"slots": [
+				{
+					"id": "s.x.item1_title",
+					"type": "text",
+					"label": "Item 1 title",
+					"default": "Friendly experts",
+					"max": 40
+				},
+				{
+					"id": "s.x.item1_text",
+					"type": "text",
+					"label": "Item 1 text",
+					"default": "Real people who know their work and explain it clearly.",
+					"max": 120
+				},
+				{
+					"id": "s.x.item2_title",
+					"type": "text",
+					"label": "Item 2 title",
+					"default": "Fair prices",
+					"max": 24
+				},
+				{
+					"id": "s.x.item2_text",
+					"type": "text",
+					"label": "Item 2 text",
+					"default": "Clear prices up front, with no surprises later.",
+					"max": 80
+				},
+				{
+					"id": "s.x.item3_title",
+					"type": "text",
+					"label": "Item 3 title",
+					"default": "Here for you",
+					"max": 24
+				},
+				{
+					"id": "s.x.item3_text",
+					"type": "text",
+					"label": "Item 3 text",
+					"default": "Quick replies and help whenever you need it.",
+					"max": 80
+				},
+				{
+					"id": "s.x.eyebrow",
+					"type": "text",
+					"label": "Label above heading",
+					"default": "Why choose us",
+					"max": 40
+				},
+				{
+					"id": "s.x.heading",
+					"type": "text",
+					"label": "Heading",
+					"default": "What makes us different",
+					"max": 40
+				},
+				{
+					"id": "s.x.intro",
+					"type": "text",
+					"label": "Intro text",
+					"default": "A short line that sums up why people pick you.",
+					"max": 80
+				}
+			]
+		},
+		{
+			"type": "steps",
+			"label": "How it works",
+			"description": "Three numbered steps.",
+			"file": "sections/steps.html",
+			"slots": [
+				{
+					"id": "s.x.item1_title",
+					"type": "text",
+					"label": "Step 1 title",
+					"default": "Get in touch",
+					"max": 24
+				},
+				{
+					"id": "s.x.item1_text",
+					"type": "text",
+					"label": "Step 1 text",
+					"default": "Tell us what you need. We reply within one working day.",
+					"max": 120
+				},
+				{
+					"id": "s.x.item2_title",
+					"type": "text",
+					"label": "Step 2 title",
+					"default": "Make a plan",
+					"max": 24
+				},
+				{
+					"id": "s.x.item2_text",
+					"type": "text",
+					"label": "Step 2 text",
+					"default": "We agree what happens next, when, and what it costs.",
+					"max": 120
+				},
+				{
+					"id": "s.x.item3_title",
+					"type": "text",
+					"label": "Step 3 title",
+					"default": "Done",
+					"max": 24
+				},
+				{
+					"id": "s.x.item3_text",
+					"type": "text",
+					"label": "Step 3 text",
+					"default": "We do the work and check that you are happy with it.",
+					"max": 120
+				},
+				{
+					"id": "s.x.heading",
+					"type": "text",
+					"label": "Heading",
+					"default": "How it works",
+					"max": 24
+				}
+			]
+		},
+		{
+			"type": "stats",
+			"label": "Numbers",
+			"description": "Four big numbers with captions.",
+			"file": "sections/stats.html",
+			"slots": [
+				{
+					"id": "s.x.item1_value",
+					"type": "text",
+					"label": "Fact 1 number",
+					"default": "10+",
+					"max": 16
+				},
+				{
+					"id": "s.x.item1_text",
+					"type": "text",
+					"label": "Fact 1 caption",
+					"default": "years in business",
+					"max": 80
+				},
+				{
+					"id": "s.x.item2_value",
+					"type": "text",
+					"label": "Fact 2 number",
+					"default": "500+",
+					"max": 16
+				},
+				{
+					"id": "s.x.item2_text",
+					"type": "text",
+					"label": "Fact 2 caption",
+					"default": "happy customers",
+					"max": 80
+				},
+				{
+					"id": "s.x.item3_value",
+					"type": "text",
+					"label": "Fact 3 number",
+					"default": "4.9/5",
+					"max": 16
+				},
+				{
+					"id": "s.x.item3_text",
+					"type": "text",
+					"label": "Fact 3 caption",
+					"default": "average review",
+					"max": 80
+				},
+				{
+					"id": "s.x.item4_value",
+					"type": "text",
+					"label": "Fact 4 number",
+					"default": "24h",
+					"max": 16
+				},
+				{
+					"id": "s.x.item4_text",
+					"type": "text",
+					"label": "Fact 4 caption",
+					"default": "reply time",
+					"max": 80
+				}
+			]
+		},
+		{
+			"type": "testimonial",
+			"label": "Testimonial",
+			"description": "A customer quote.",
+			"file": "sections/testimonial.html",
+			"slots": [
+				{
+					"id": "s.x.quote",
+					"type": "text",
+					"label": "Quote",
+					"default": "Friendly, quick and great value. I would recommend them to anyone.",
+					"max": 280
+				},
+				{
+					"id": "s.x.name",
+					"type": "text",
+					"label": "Name",
+					"default": "A happy customer",
+					"max": 70
+				}
+			]
+		},
+		{
+			"type": "faq",
+			"label": "Questions",
+			"description": "Four questions and answers that open and close.",
+			"file": "sections/faq.html",
+			"slots": [
+				{
+					"id": "s.x.q1",
+					"type": "text",
+					"label": "Question 1",
+					"default": "How do I get started?",
+					"max": 120
+				},
+				{
+					"id": "s.x.a1",
+					"type": "richtext",
+					"label": "Answer 1",
+					"default": "Get in touch by phone or email and we will take it from there.",
+					"max": 120
+				},
+				{
+					"id": "s.x.q2",
+					"type": "text",
+					"label": "Question 2",
+					"default": "How much does it cost?",
+					"max": 120
+				},
+				{
+					"id": "s.x.a2",
+					"type": "richtext",
+					"label": "Answer 2",
+					"default": "Prices depend on what you need. <strong>Ask us for a free quote.</strong>",
+					"max": 120
+				},
+				{
+					"id": "s.x.q3",
+					"type": "text",
+					"label": "Question 3",
+					"default": "How long does it take?",
+					"max": 120
+				},
+				{
+					"id": "s.x.a3",
+					"type": "richtext",
+					"label": "Answer 3",
+					"default": "Most work starts within a week. We give you a clear timeline up front.",
+					"max": 120
+				},
+				{
+					"id": "s.x.q4",
+					"type": "text",
+					"label": "Question 4",
+					"default": "Can I change my mind?",
+					"max": 120
+				},
+				{
+					"id": "s.x.a4",
+					"type": "richtext",
+					"label": "Answer 4",
+					"default": "Yes. Talk to us and we will find a fair solution.",
+					"max": 80
+				},
+				{
+					"id": "s.x.heading",
+					"type": "text",
+					"label": "Heading",
+					"default": "Frequently asked questions",
+					"max": 60
+				}
+			]
+		},
+		{
+			"type": "pricing",
+			"label": "Pricing",
+			"description": "Three plans with prices; one can be highlighted.",
+			"file": "sections/pricing.html",
+			"slots": [
+				{
+					"id": "s.x.plan1_name",
+					"type": "text",
+					"label": "Plan 1 name",
+					"default": "Basic",
+					"max": 40
+				},
+				{
+					"id": "s.x.plan1_price",
+					"type": "text",
+					"label": "Plan 1 price",
+					"default": "$49",
+					"max": 16
+				},
+				{
+					"id": "s.x.plan1_period",
+					"type": "text",
+					"label": "Plan 1 price note",
+					"default": "per month",
+					"max": 40
+				},
+				{
+					"id": "s.x.plan1_included",
+					"type": "richtext",
+					"label": "Plan 1 includes",
+					"default": "The essentials<br>Email support",
+					"max": 60,
+					"hint": "One item per line."
+				},
+				{
+					"id": "s.x.plan1_button",
+					"type": "text",
+					"label": "Plan 1 button",
+					"default": "Choose Basic",
+					"max": 28
+				},
+				{
+					"id": "s.x.plan2_badge",
+					"type": "text",
+					"label": "Plan 2 label",
+					"default": "Most popular",
+					"max": 24
+				},
+				{
+					"id": "s.x.plan2_name",
+					"type": "text",
+					"label": "Plan 2 name",
+					"default": "Standard",
+					"max": 40
+				},
+				{
+					"id": "s.x.plan2_price",
+					"type": "text",
+					"label": "Plan 2 price",
+					"default": "$99",
+					"max": 16
+				},
+				{
+					"id": "s.x.plan2_period",
+					"type": "text",
+					"label": "Plan 2 price note",
+					"default": "per month",
+					"max": 40
+				},
+				{
+					"id": "s.x.plan2_included",
+					"type": "richtext",
+					"label": "Plan 2 includes",
+					"default": "Everything in Basic<br>Priority support<br>Monthly review",
+					"max": 120,
+					"hint": "One item per line."
+				},
+				{
+					"id": "s.x.plan2_button",
+					"type": "text",
+					"label": "Plan 2 button",
+					"default": "Choose Standard",
+					"max": 28
+				},
+				{
+					"id": "s.x.plan3_name",
+					"type": "text",
+					"label": "Plan 3 name",
+					"default": "Premium",
+					"max": 40
+				},
+				{
+					"id": "s.x.plan3_price",
+					"type": "text",
+					"label": "Plan 3 price",
+					"default": "$199",
+					"max": 16
+				},
+				{
+					"id": "s.x.plan3_period",
+					"type": "text",
+					"label": "Plan 3 price note",
+					"default": "per month",
+					"max": 40
+				},
+				{
+					"id": "s.x.plan3_included",
+					"type": "richtext",
+					"label": "Plan 3 includes",
+					"default": "Everything in Standard<br>Dedicated contact",
+					"max": 80,
+					"hint": "One item per line."
+				},
+				{
+					"id": "s.x.plan3_button",
+					"type": "text",
+					"label": "Plan 3 button",
+					"default": "Choose Premium",
+					"max": 28
+				},
+				{
+					"id": "s.x.eyebrow",
+					"type": "text",
+					"label": "Label above heading",
+					"default": "Pricing",
+					"max": 40
+				},
+				{
+					"id": "s.x.heading",
+					"type": "text",
+					"label": "Heading",
+					"default": "Simple, honest prices",
+					"max": 40
+				},
+				{
+					"id": "s.x.intro",
+					"type": "text",
+					"label": "Intro text",
+					"default": "Choose the option that fits you best.",
+					"max": 60
+				}
+			]
+		},
+		{
+			"type": "team",
+			"label": "Team",
+			"description": "Three people with a role and a short bio.",
+			"file": "sections/team.html",
+			"slots": [
+				{
+					"id": "s.x.member1_name",
+					"type": "text",
+					"label": "Person 1 name",
+					"default": "Alex Morgan",
+					"max": 60
+				},
+				{
+					"id": "s.x.member1_role",
+					"type": "text",
+					"label": "Person 1 role",
+					"default": "Founder",
+					"max": 60
+				},
+				{
+					"id": "s.x.member1_bio",
+					"type": "text",
+					"label": "Person 1 bio",
+					"default": "Started the business and still looks after every customer personally.",
+					"max": 120
+				},
+				{
+					"id": "s.x.member2_name",
+					"type": "text",
+					"label": "Person 2 name",
+					"default": "Sam Lee",
+					"max": 60
+				},
+				{
+					"id": "s.x.member2_role",
+					"type": "text",
+					"label": "Person 2 role",
+					"default": "Team lead",
+					"max": 60
+				},
+				{
+					"id": "s.x.member2_bio",
+					"type": "text",
+					"label": "Person 2 bio",
+					"default": "Keeps everything running smoothly and on time.",
+					"max": 80
+				},
+				{
+					"id": "s.x.member3_name",
+					"type": "text",
+					"label": "Person 3 name",
+					"default": "Jordan Kay",
+					"max": 60
+				},
+				{
+					"id": "s.x.member3_role",
+					"type": "text",
+					"label": "Person 3 role",
+					"default": "Specialist",
+					"max": 60
+				},
+				{
+					"id": "s.x.member3_bio",
+					"type": "text",
+					"label": "Person 3 bio",
+					"default": "Brings years of experience and a lot of patience.",
+					"max": 80
+				},
+				{
+					"id": "s.x.heading",
+					"type": "text",
+					"label": "Heading",
+					"default": "Meet the team",
+					"max": 24
+				},
+				{
+					"id": "s.x.intro",
+					"type": "text",
+					"label": "Intro text",
+					"default": "The people behind the work.",
+					"max": 60
+				}
+			]
+		},
+		{
+			"type": "image_text",
+			"label": "Image and text",
+			"description": "An image beside a heading, text and a button.",
+			"file": "sections/image_text.html",
+			"slots": [
+				{
+					"id": "s.x.eyebrow",
+					"type": "text",
+					"label": "Label above heading",
+					"default": "Our story",
+					"max": 40
+				},
+				{
+					"id": "s.x.heading",
+					"type": "text",
+					"label": "Heading",
+					"default": "Built on care and good work",
+					"max": 60
+				},
+				{
+					"id": "s.x.body",
+					"type": "richtext",
+					"label": "Text",
+					"default": "A short paragraph about you, your story or one thing you do especially well. <strong>Make it personal.</strong>",
+					"max": 220
+				},
+				{
+					"id": "s.x.button",
+					"type": "text",
+					"label": "Button text",
+					"default": "Get in touch",
+					"max": 28
+				},
+				{
+					"id": "image:s.x",
+					"type": "image",
+					"label": "Image",
+					"default": "lib:assets/feature.webp"
+				},
+				{
+					"id": "s.x.image_alt",
+					"type": "text",
+					"label": "Image description",
+					"default": "Illustration of abstract shapes, a plant and a sunny window",
+					"max": 140
+				}
+			]
+		},
+		{
+			"type": "cta",
+			"label": "Call to action",
+			"description": "A full-width coloured band with a button.",
+			"file": "sections/cta.html",
+			"slots": [
+				{
+					"id": "s.x.cta.heading",
+					"type": "text",
+					"label": "Heading",
+					"default": "Ready to get started?",
+					"max": 40
+				},
+				{
+					"id": "s.x.cta.text",
+					"type": "text",
+					"label": "Text",
+					"default": "Get in touch today. We would love to hear from you.",
+					"max": 120
+				},
+				{
+					"id": "s.x.cta.button",
+					"type": "text",
+					"label": "Button text",
+					"default": "Contact us",
+					"max": 28
+				}
+			]
+		},
+		{
+			"type": "text",
+			"label": "Text",
+			"description": "A heading and a paragraph.",
+			"file": "sections/text.html",
+			"slots": [
+				{
+					"id": "s.x.heading",
+					"type": "text",
+					"label": "Heading",
+					"default": "A few words about us",
+					"max": 40
+				},
+				{
+					"id": "s.x.body",
+					"type": "richtext",
+					"label": "Text",
+					"default": "Tell visitors what makes you different, in your own words. <strong>Keep it short and specific.</strong>",
+					"max": 220
+				}
+			]
+		}
+	]
+}

@@ -1,19 +1,20 @@
 <?php
 /**
- * Plugin Name: My Site Hand (AI)
+ * Plugin Name: My Site Hand
  * Plugin URI:  https://wordpress.org/plugins/my-site-hand
- * Description: Let Claude, Cursor, and AI assistants write posts, manage WooCommerce, optimize SEO, and run diagnostics on your site using simple natural language.
- * Version:     1.2.0
+ * Description: Build your site from free starter sites in plain WordPress blocks. Preview it first, undo anytime, no lock-in. Optional AI, an MCP server for Claude, Cursor and VS Code, and a site health scan.
+ * Version:     1.4.0
  * Author:      BuiltByTanin
  * Author URI:  https://github.com/taninrahman21
  * License:     GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: my-site-hand
  * Domain Path: /languages
- * Requires at least: 6.2
+ * Requires at least: 6.6
+ * Requires PHP: 8.1
  * Tested up to: 7.1
  *
- * @package My Site Hand (AI)
+ * @package My Site Hand
  */
 
 defined('ABSPATH') || exit;
@@ -21,7 +22,7 @@ defined('ABSPATH') || exit;
 /**
  * My Site Hand (AI) Plugin Constants.
  */
-define('MYSITEHAND_VERSION', '1.2.0');
+define('MYSITEHAND_VERSION', '1.4.0');
 define('MYSITEHAND_DB_VERSION', '1.3.0');
 define('MYSITEHAND_MIN_PHP', '8.1');
 define('MYSITEHAND_PATH', plugin_dir_path(__FILE__));
@@ -86,7 +87,7 @@ add_action(
 
 		// One-time fix to ensure all modules are enabled on first run.
 		if (!get_option('mysitehand_modules_restored_v1')) {
-			$my_site_hand_default_modules = ['content', 'seo', 'diagnostics', 'media', 'users'];
+			$my_site_hand_default_modules = ['content', 'seo', 'diagnostics', 'media', 'users', 'site-builder'];
 			if (class_exists('WooCommerce')) {
 				$my_site_hand_default_modules[] = 'woocommerce';
 			}
@@ -115,6 +116,19 @@ add_action(
 					'</p></div>';
 				delete_transient('mysitehand_token_migration_notice');
 			});
+		}
+
+		// 1.4.0: switch the new Site Builder module on for existing sites, whose
+		// saved module list predates it, and introduce it once with the
+		// welcome panel. A user who later turns the module off keeps it off.
+		if (!get_option('mysitehand_site_builder_module_v140')) {
+			$my_site_hand_modules = (array) get_option('mysitehand_enabled_modules', []);
+			if ($my_site_hand_modules && !in_array('site-builder', $my_site_hand_modules, true)) {
+				$my_site_hand_modules[] = 'site-builder';
+				update_option('mysitehand_enabled_modules', $my_site_hand_modules);
+			}
+			update_option('mysitehand_site_builder_module_v140', 1);
+			update_option('mysitehand_show_welcome', true);
 		}
 
 		// Schema upgrade for IP allowlist (Chunk 3).

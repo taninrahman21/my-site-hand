@@ -1,0 +1,106 @@
+/* Site Builder preview bar. Only loaded for the user previewing. */
+.msh-pv-bar {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+	padding: 10px 16px;
+	font: 500 13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	color: #fff;
+	background: #0c1426;
+	box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.msh-pv-bar * {
+	box-sizing: border-box;
+}
+
+.msh-pv-label {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 180px;
+	margin: 0;
+}
+
+.msh-pv-label span {
+	color: #b5c0d6;
+	font-size: 12px;
+}
+
+.msh-pv-devices,
+.msh-pv-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.msh-pv-device,
+.msh-pv-btn {
+	display: inline-block;
+	padding: 7px 12px;
+	color: #fff !important;
+	text-decoration: none !important;
+	border: 1px solid #3a4560;
+	background: transparent;
+}
+
+.msh-pv-device:hover,
+.msh-pv-btn:hover,
+.msh-pv-device:focus-visible,
+.msh-pv-btn:focus-visible {
+	background: #16203a;
+	border-color: #6b7a99;
+}
+
+.msh-pv-device.is-current {
+	background: #fff;
+	color: #0c1426 !important;
+	border-color: #fff;
+}
+
+.msh-pv-btn--primary {
+	background: #1b4fd8;
+	border-color: #1b4fd8;
+}
+
+.msh-pv-btn--primary:hover {
+	background: #1239a8;
+	border-color: #1239a8;
+}
+
+/* Room so the bar never covers the footer. */
+body:has(.msh-pv-bar) {
+	padding-bottom: 72px;
+}
+
+/* Standalone device view */
+.msh-pv-shell {
+	margin: 0;
+	padding: 24px 16px 96px;
+	background: #e7eaf1;
+}
+
+.msh-pv-stage {
+	display: flex;
+	justify-content: center;
+}
+
+.msh-pv-frame {
+	max-width: 100%;
+	height: calc(100vh - 140px);
+	border: 1px solid #c0c7d5;
+	background: #fff;
+	box-shadow: 0 20px 50px -30px rgba(12, 20, 38, 0.6);
+}
+
+@media (max-width: 600px) {
+	.msh-pv-label span {
+		display: none;
+	}
+}

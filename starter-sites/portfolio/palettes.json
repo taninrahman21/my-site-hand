@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "ink",
+			"name": "Ink",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f4f4f1",
+				"accent": "#e9e7e1",
+				"contrast": "#111111",
+				"muted": "#545454",
+				"primary": "#111111",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "electric",
+			"name": "Electric blue",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f2f4fb",
+				"accent": "#e1e6f8",
+				"contrast": "#0d1020",
+				"muted": "#4d5266",
+				"primary": "#2b44d6",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "coral",
+			"name": "Coral",
+			"colors": {
+				"base": "#fffaf8",
+				"surface": "#fbeee9",
+				"accent": "#f6ddd4",
+				"contrast": "#26140f",
+				"muted": "#5e4840",
+				"primary": "#b23b1e",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "forest",
+			"name": "Forest",
+			"colors": {
+				"base": "#fbfcfa",
+				"surface": "#edf1ec",
+				"accent": "#dbe4d9",
+				"contrast": "#132018",
+				"muted": "#4a5a4f",
+				"primary": "#1f5c3a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "midnight",
+			"name": "Midnight",
+			"colors": {
+				"base": "#0e0f13",
+				"surface": "#17191f",
+				"accent": "#22252d",
+				"contrast": "#f2f2ee",
+				"muted": "#a9abb3",
+				"primary": "#c9f26b",
+				"on-primary": "#0e0f13"
+			}
+		},
+		{
+			"id": "sunflower",
+			"name": "Sunflower",
+			"colors": {
+				"base": "#fffdf5",
+				"surface": "#fbf4dc",
+				"accent": "#f5e7b5",
+				"contrast": "#1d1a0c",
+				"muted": "#55502f",
+				"primary": "#6e5800",
+				"on-primary": "#ffffff"
+			}
+		}
+	]
+}

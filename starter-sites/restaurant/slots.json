@@ -1,0 +1,1156 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/kitchen",
+			"page": "home",
+			"label": "Our kitchen"
+		},
+		{
+			"id": "home/dishes",
+			"page": "home",
+			"label": "Signature dishes"
+		},
+		{
+			"id": "home/room",
+			"page": "home",
+			"label": "The room"
+		},
+		{
+			"id": "home/review",
+			"page": "home",
+			"label": "Review"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "menu/intro",
+			"page": "menu",
+			"label": "Introduction"
+		},
+		{
+			"id": "menu/starters",
+			"page": "menu",
+			"label": "Small plates"
+		},
+		{
+			"id": "menu/mains",
+			"page": "menu",
+			"label": "From the oven"
+		},
+		{
+			"id": "menu/desserts",
+			"page": "menu",
+			"label": "Something sweet"
+		},
+		{
+			"id": "menu/note",
+			"page": "menu",
+			"label": "Allergy note"
+		},
+		{
+			"id": "menu/cta",
+			"page": "menu",
+			"label": "Call to action"
+		},
+		{
+			"id": "about/intro",
+			"page": "about",
+			"label": "Introduction"
+		},
+		{
+			"id": "about/story",
+			"page": "about",
+			"label": "Story"
+		},
+		{
+			"id": "about/values",
+			"page": "about",
+			"label": "What matters to us"
+		},
+		{
+			"id": "about/cta",
+			"page": "about",
+			"label": "Call to action"
+		},
+		{
+			"id": "private-dining/intro",
+			"page": "private-dining",
+			"label": "Introduction"
+		},
+		{
+			"id": "private-dining/options",
+			"page": "private-dining",
+			"label": "Options"
+		},
+		{
+			"id": "private-dining/how",
+			"page": "private-dining",
+			"label": "How it works"
+		},
+		{
+			"id": "private-dining/cta",
+			"page": "private-dining",
+			"label": "Call to action"
+		},
+		{
+			"id": "visit/intro",
+			"page": "visit",
+			"label": "Introduction"
+		},
+		{
+			"id": "visit/details",
+			"page": "visit",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Olive & Ember",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Wood-fired Mediterranean kitchen",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Olive & Ember",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 017-4410",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "table@oliveandember.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Address",
+			"default": "212 Harbor Lane, Westport",
+			"max": 120
+		},
+		{
+			"id": "biz.hours",
+			"group": "site/basics",
+			"type": "richtext",
+			"label": "Opening hours",
+			"default": "Tue to Thu: 5pm to 10pm<br>Fri and Sat: 5pm to 11pm<br>Sunday: 12pm to 9pm<br>Monday: closed",
+			"max": 200,
+			"hint": "One line per day range."
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Book a table",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "Seasonal plates from the wood oven, natural wines and a long table for friends.",
+			"max": 160
+		},
+		{
+			"id": "footer.visit_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Address heading",
+			"default": "Find us",
+			"max": 40
+		},
+		{
+			"id": "footer.hours_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Hours heading",
+			"default": "Opening hours",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "Walk-ins welcome at the bar.",
+			"max": 80
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Open Tuesday to Sunday",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Fire, olive oil and a table for everyone",
+			"max": 70,
+			"hint": "The feeling of the place, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "Seasonal Mediterranean cooking from our wood oven, with bread baked every morning and a wine list from small growers.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "Book a table",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "See the menu",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/table.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustration of a table set with bread, olives, a salad and two glasses of wine",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.kitchen.eyebrow",
+			"group": "home/kitchen",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our kitchen",
+			"max": 40
+		},
+		{
+			"id": "home.kitchen.heading",
+			"group": "home/kitchen",
+			"type": "text",
+			"label": "Heading",
+			"default": "Simple food, cooked over real fire",
+			"max": 60
+		},
+		{
+			"id": "home.kitchen.body",
+			"group": "home/kitchen",
+			"type": "richtext",
+			"label": "Text",
+			"default": "Everything starts with the oven. We bake our bread in it each morning, roast vegetables from two local farms and finish fish over the embers. <em>The menu changes with the market</em>, so ask what came in today.",
+			"max": 480
+		},
+		{
+			"id": "home.dishes.item1_title",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Dish 1 name",
+			"default": "Ember-roasted lamb",
+			"max": 40
+		},
+		{
+			"id": "home.dishes.item1_text",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Dish 1 description",
+			"default": "Slow-cooked shoulder with smoked yoghurt, mint and crispy chickpeas.",
+			"max": 120
+		},
+		{
+			"id": "home.dishes.item2_title",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Dish 2 name",
+			"default": "Charred octopus",
+			"max": 24
+		},
+		{
+			"id": "home.dishes.item2_text",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Dish 2 description",
+			"default": "With white beans, preserved lemon and our own olive oil.",
+			"max": 120
+		},
+		{
+			"id": "home.dishes.item3_title",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Dish 3 name",
+			"default": "Burnt honey tart",
+			"max": 40
+		},
+		{
+			"id": "home.dishes.item3_text",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Dish 3 description",
+			"default": "Orange blossom cream and toasted almonds.",
+			"max": 80
+		},
+		{
+			"id": "home.dishes.eyebrow",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "From the menu",
+			"max": 40
+		},
+		{
+			"id": "home.dishes.heading",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Heading",
+			"default": "Dishes people come back for",
+			"max": 60
+		},
+		{
+			"id": "home.dishes.link",
+			"group": "home/dishes",
+			"type": "text",
+			"label": "Link text",
+			"default": "View the full menu",
+			"max": 28
+		},
+		{
+			"id": "image:home.room",
+			"group": "home/room",
+			"type": "image",
+			"label": "Room image",
+			"default": "assets/room.webp"
+		},
+		{
+			"id": "home.room.image_alt",
+			"group": "home/room",
+			"type": "text",
+			"label": "Room image description",
+			"default": "Illustration of a warm dining room with arched windows, a long wooden table and hanging lamps",
+			"max": 140
+		},
+		{
+			"id": "home.room.eyebrow",
+			"group": "home/room",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "The room",
+			"max": 40
+		},
+		{
+			"id": "home.room.heading",
+			"group": "home/room",
+			"type": "text",
+			"label": "Heading",
+			"default": "Forty seats, one long table and a bar",
+			"max": 60
+		},
+		{
+			"id": "home.room.body",
+			"group": "home/room",
+			"type": "richtext",
+			"label": "Text",
+			"default": "Book a table for two by the window, or bring the whole family to the long table. <strong>The bar is kept for walk-ins</strong>, every night.",
+			"max": 320
+		},
+		{
+			"id": "home.room.button",
+			"group": "home/room",
+			"type": "text",
+			"label": "Button text",
+			"default": "Plan a private dinner",
+			"max": 28
+		},
+		{
+			"id": "home.review.quote",
+			"group": "home/review",
+			"type": "text",
+			"label": "Quote",
+			"default": "The bread alone is worth the trip. Warm, generous food and staff who remember your name.",
+			"max": 260
+		},
+		{
+			"id": "home.review.name",
+			"group": "home/review",
+			"type": "text",
+			"label": "Name",
+			"default": "Daniela R., regular since opening night",
+			"max": 60
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Save your seat",
+			"max": 24
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book online or call us. We keep the bar for walk-ins every night.",
+			"max": 120
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a table",
+			"max": 28
+		},
+		{
+			"id": "menu.intro.eyebrow",
+			"group": "menu/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Menu",
+			"max": 40
+		},
+		{
+			"id": "menu.intro.heading",
+			"group": "menu/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Tonight's menu",
+			"max": 24
+		},
+		{
+			"id": "menu.intro.lead",
+			"group": "menu/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Our dishes change with the season. Tell us about any allergies and we will happily adapt.",
+			"max": 160
+		},
+		{
+			"id": "menu.starters.item1_name",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 1 name",
+			"default": "Warm sourdough",
+			"max": 60
+		},
+		{
+			"id": "menu.starters.item1_price",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 1 price",
+			"default": "$7",
+			"max": 12
+		},
+		{
+			"id": "menu.starters.item1_desc",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 1 description",
+			"default": "Baked this morning, with whipped butter and sea salt.",
+			"max": 120
+		},
+		{
+			"id": "menu.starters.item2_name",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 2 name",
+			"default": "Marinated olives",
+			"max": 60
+		},
+		{
+			"id": "menu.starters.item2_price",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 2 price",
+			"default": "$6",
+			"max": 12
+		},
+		{
+			"id": "menu.starters.item2_desc",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 2 description",
+			"default": "Green and black olives with orange zest and fennel.",
+			"max": 120
+		},
+		{
+			"id": "menu.starters.item3_name",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 3 name",
+			"default": "Grilled halloumi",
+			"max": 60
+		},
+		{
+			"id": "menu.starters.item3_price",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 3 price",
+			"default": "$12",
+			"max": 12
+		},
+		{
+			"id": "menu.starters.item3_desc",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 3 description",
+			"default": "With honey, thyme and toasted sesame.",
+			"max": 60
+		},
+		{
+			"id": "menu.starters.item4_name",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 4 name",
+			"default": "Burrata",
+			"max": 60
+		},
+		{
+			"id": "menu.starters.item4_price",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 4 price",
+			"default": "$15",
+			"max": 12
+		},
+		{
+			"id": "menu.starters.item4_desc",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Dish 4 description",
+			"default": "Roasted tomatoes, basil oil and charred bread.",
+			"max": 80
+		},
+		{
+			"id": "menu.starters.heading",
+			"group": "menu/starters",
+			"type": "text",
+			"label": "Section heading",
+			"default": "Small plates",
+			"max": 40
+		},
+		{
+			"id": "menu.mains.item1_name",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 1 name",
+			"default": "Ember-roasted lamb",
+			"max": 60
+		},
+		{
+			"id": "menu.mains.item1_price",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 1 price",
+			"default": "$32",
+			"max": 12
+		},
+		{
+			"id": "menu.mains.item1_desc",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 1 description",
+			"default": "Smoked yoghurt, mint, crispy chickpeas.",
+			"max": 80
+		},
+		{
+			"id": "menu.mains.item2_name",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 2 name",
+			"default": "Charred octopus",
+			"max": 60
+		},
+		{
+			"id": "menu.mains.item2_price",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 2 price",
+			"default": "$29",
+			"max": 12
+		},
+		{
+			"id": "menu.mains.item2_desc",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 2 description",
+			"default": "White beans, preserved lemon, olive oil.",
+			"max": 80
+		},
+		{
+			"id": "menu.mains.item3_name",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 3 name",
+			"default": "Whole roast cauliflower",
+			"max": 60
+		},
+		{
+			"id": "menu.mains.item3_price",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 3 price",
+			"default": "$22",
+			"max": 12
+		},
+		{
+			"id": "menu.mains.item3_desc",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 3 description",
+			"default": "Tahini, pomegranate and pistachio. Vegan.",
+			"max": 80
+		},
+		{
+			"id": "menu.mains.item4_name",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 4 name",
+			"default": "Market fish",
+			"max": 60
+		},
+		{
+			"id": "menu.mains.item4_price",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 4 price",
+			"default": "MP",
+			"max": 12
+		},
+		{
+			"id": "menu.mains.item4_desc",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Dish 4 description",
+			"default": "Whole fish of the day with herb salsa. Ask your server.",
+			"max": 120
+		},
+		{
+			"id": "menu.mains.heading",
+			"group": "menu/mains",
+			"type": "text",
+			"label": "Section heading",
+			"default": "From the oven",
+			"max": 40
+		},
+		{
+			"id": "menu.desserts.item1_name",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 1 name",
+			"default": "Burnt honey tart",
+			"max": 60
+		},
+		{
+			"id": "menu.desserts.item1_price",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 1 price",
+			"default": "$11",
+			"max": 12
+		},
+		{
+			"id": "menu.desserts.item1_desc",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 1 description",
+			"default": "Orange blossom cream, toasted almonds.",
+			"max": 80
+		},
+		{
+			"id": "menu.desserts.item2_name",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 2 name",
+			"default": "Olive oil cake",
+			"max": 60
+		},
+		{
+			"id": "menu.desserts.item2_price",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 2 price",
+			"default": "$10",
+			"max": 12
+		},
+		{
+			"id": "menu.desserts.item2_desc",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 2 description",
+			"default": "With poached pears and crème fraîche.",
+			"max": 60
+		},
+		{
+			"id": "menu.desserts.item3_name",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 3 name",
+			"default": "Chocolate mousse",
+			"max": 60
+		},
+		{
+			"id": "menu.desserts.item3_price",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 3 price",
+			"default": "$10",
+			"max": 12
+		},
+		{
+			"id": "menu.desserts.item3_desc",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 3 description",
+			"default": "Dark chocolate, sea salt and hazelnut crunch.",
+			"max": 80
+		},
+		{
+			"id": "menu.desserts.item4_name",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 4 name",
+			"default": "Cheese plate",
+			"max": 60
+		},
+		{
+			"id": "menu.desserts.item4_price",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 4 price",
+			"default": "$16",
+			"max": 12
+		},
+		{
+			"id": "menu.desserts.item4_desc",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Dish 4 description",
+			"default": "Three local cheeses, fig jam and crackers.",
+			"max": 80
+		},
+		{
+			"id": "menu.desserts.heading",
+			"group": "menu/desserts",
+			"type": "text",
+			"label": "Section heading",
+			"default": "Something sweet",
+			"max": 40
+		},
+		{
+			"id": "menu.note.body",
+			"group": "menu/note",
+			"type": "richtext",
+			"label": "Text",
+			"default": "<strong>Allergies and diets:</strong> most dishes can be made vegetarian, vegan or gluten free. Please tell your server before you order.",
+			"max": 220
+		},
+		{
+			"id": "menu.cta.heading",
+			"group": "menu/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Hungry yet?",
+			"max": 24
+		},
+		{
+			"id": "menu.cta.text",
+			"group": "menu/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Tables fill up on Fridays and Saturdays, so book a few days ahead.",
+			"max": 120
+		},
+		{
+			"id": "menu.cta.button",
+			"group": "menu/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a table",
+			"max": 28
+		},
+		{
+			"id": "about.intro.eyebrow",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our story",
+			"max": 40
+		},
+		{
+			"id": "about.intro.heading",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "A kitchen built around one oven",
+			"max": 60
+		},
+		{
+			"id": "about.intro.lead",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Olive & Ember opened in 2019 in an old bakery on Harbor Lane. We kept the oven.",
+			"max": 160
+		},
+		{
+			"id": "about.story.heading",
+			"group": "about/story",
+			"type": "text",
+			"label": "Heading",
+			"default": "From bakery to restaurant",
+			"max": 40
+		},
+		{
+			"id": "about.story.body1",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "First paragraph",
+			"default": "Chef Amir Nasser grew up cooking with his grandmother in Haifa. After fifteen years in city kitchens he wanted somewhere smaller, where he could cook the food he loves for his neighbours.",
+			"max": 320
+		},
+		{
+			"id": "about.story.body2",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "Second paragraph",
+			"default": "The old bakery came with a brick oven older than the building's wiring. <strong>We built the whole menu around it</strong>, and we still bake bread in it every morning.",
+			"max": 320
+		},
+		{
+			"id": "image:about.story",
+			"group": "about/story",
+			"type": "image",
+			"label": "Story image",
+			"default": "assets/dish.webp"
+		},
+		{
+			"id": "about.story.image_alt",
+			"group": "about/story",
+			"type": "text",
+			"label": "Story image description",
+			"default": "Illustration of a bowl of pasta with tomatoes and basil seen from above",
+			"max": 140
+		},
+		{
+			"id": "about.values.eyebrow",
+			"group": "about/values",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "What matters to us",
+			"max": 40
+		},
+		{
+			"id": "about.values.heading",
+			"group": "about/values",
+			"type": "text",
+			"label": "Heading",
+			"default": "Good ingredients, cooked with care",
+			"max": 60
+		},
+		{
+			"id": "about.values.item1_title",
+			"group": "about/values",
+			"type": "text",
+			"label": "Value 1 title",
+			"default": "Local first",
+			"max": 24
+		},
+		{
+			"id": "about.values.item1_text",
+			"group": "about/values",
+			"type": "text",
+			"label": "Value 1 text",
+			"default": "Vegetables from two farms within an hour of the restaurant, and fish from the morning boats.",
+			"max": 160
+		},
+		{
+			"id": "about.values.item2_title",
+			"group": "about/values",
+			"type": "text",
+			"label": "Value 2 title",
+			"default": "Nothing wasted",
+			"max": 24
+		},
+		{
+			"id": "about.values.item2_text",
+			"group": "about/values",
+			"type": "text",
+			"label": "Value 2 text",
+			"default": "Bread becomes crumbs, peels become stock, and the menu follows what is at its best.",
+			"max": 160
+		},
+		{
+			"id": "about.values.item3_title",
+			"group": "about/values",
+			"type": "text",
+			"label": "Value 3 title",
+			"default": "Room for everyone",
+			"max": 40
+		},
+		{
+			"id": "about.values.item3_text",
+			"group": "about/values",
+			"type": "text",
+			"label": "Value 3 text",
+			"default": "Vegan, gluten free or picky eater: tell us, and we will cook something you love.",
+			"max": 160
+		},
+		{
+			"id": "about.cta.heading",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Come and eat with us",
+			"max": 40
+		},
+		{
+			"id": "about.cta.text",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "We would love to cook for you.",
+			"max": 60
+		},
+		{
+			"id": "about.cta.button",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a table",
+			"max": 28
+		},
+		{
+			"id": "private-dining.intro.eyebrow",
+			"group": "private-dining/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Private dining",
+			"max": 40
+		},
+		{
+			"id": "private-dining.intro.heading",
+			"group": "private-dining/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Gather around our long table",
+			"max": 60
+		},
+		{
+			"id": "private-dining.intro.lead",
+			"group": "private-dining/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Birthdays, rehearsal dinners and team nights for up to 24 guests, with a menu planned with you.",
+			"max": 160
+		},
+		{
+			"id": "private-dining.options.item1_title",
+			"group": "private-dining/options",
+			"type": "text",
+			"label": "Option 1 title",
+			"default": "The long table",
+			"max": 24
+		},
+		{
+			"id": "private-dining.options.item1_text",
+			"group": "private-dining/options",
+			"type": "text",
+			"label": "Option 1 text",
+			"default": "Up to 24 guests at one table in the main room. Sharing plates, served family style.",
+			"max": 160
+		},
+		{
+			"id": "private-dining.options.item2_title",
+			"group": "private-dining/options",
+			"type": "text",
+			"label": "Option 2 title",
+			"default": "Whole restaurant",
+			"max": 40
+		},
+		{
+			"id": "private-dining.options.item2_text",
+			"group": "private-dining/options",
+			"type": "text",
+			"label": "Option 2 text",
+			"default": "Close the doors and make it yours, for up to 40 seated or 60 standing.",
+			"max": 120
+		},
+		{
+			"id": "private-dining.options.item3_title",
+			"group": "private-dining/options",
+			"type": "text",
+			"label": "Option 3 title",
+			"default": "Chef's counter",
+			"max": 24
+		},
+		{
+			"id": "private-dining.options.item3_text",
+			"group": "private-dining/options",
+			"type": "text",
+			"label": "Option 3 text",
+			"default": "Six seats at the pass. A tasting menu cooked in front of you.",
+			"max": 120
+		},
+		{
+			"id": "private-dining.how.heading",
+			"group": "private-dining/how",
+			"type": "text",
+			"label": "Heading",
+			"default": "How it works",
+			"max": 24
+		},
+		{
+			"id": "private-dining.how.body",
+			"group": "private-dining/how",
+			"type": "richtext",
+			"label": "Text",
+			"default": "Tell us your date, guest count and any dietary needs. We send a suggested menu within two days, and you can change anything you like. <strong>A deposit holds the date.</strong>",
+			"max": 320
+		},
+		{
+			"id": "private-dining.cta.heading",
+			"group": "private-dining/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Plan your event",
+			"max": 24
+		},
+		{
+			"id": "private-dining.cta.text",
+			"group": "private-dining/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Call or email us and we will find a date that works.",
+			"max": 120
+		},
+		{
+			"id": "private-dining.cta.button",
+			"group": "private-dining/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Get in touch",
+			"max": 28
+		},
+		{
+			"id": "visit.intro.eyebrow",
+			"group": "visit/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Visit",
+			"max": 40
+		},
+		{
+			"id": "visit.intro.heading",
+			"group": "visit/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Book a table or just drop in",
+			"max": 60
+		},
+		{
+			"id": "visit.intro.lead",
+			"group": "visit/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Call us to book, or email for groups of more than eight. The bar is always kept for walk-ins.",
+			"max": 160
+		},
+		{
+			"id": "visit.details.heading",
+			"group": "visit/details",
+			"type": "text",
+			"label": "Reservations heading",
+			"default": "Reservations",
+			"max": 24
+		},
+		{
+			"id": "visit.hours.heading",
+			"group": "visit/details",
+			"type": "text",
+			"label": "Hours heading",
+			"default": "Opening hours",
+			"max": 24
+		},
+		{
+			"id": "visit.directions.heading",
+			"group": "visit/details",
+			"type": "text",
+			"label": "Directions heading",
+			"default": "Getting here",
+			"max": 24
+		},
+		{
+			"id": "visit.directions.body",
+			"group": "visit/details",
+			"type": "richtext",
+			"label": "Directions",
+			"default": "We are on Harbor Lane, two minutes from the ferry. <strong>Street parking</strong> is free after 6pm.",
+			"max": 220
+		}
+	]
+}

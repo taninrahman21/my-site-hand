@@ -1,0 +1,1130 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/treatments",
+			"page": "home",
+			"label": "Treatments"
+		},
+		{
+			"id": "home/space",
+			"page": "home",
+			"label": "Our space"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "treatments/intro",
+			"page": "treatments",
+			"label": "Introduction"
+		},
+		{
+			"id": "treatments/hair",
+			"page": "treatments",
+			"label": "Hair"
+		},
+		{
+			"id": "treatments/skin",
+			"page": "treatments",
+			"label": "Skin and spa"
+		},
+		{
+			"id": "treatments/nails",
+			"page": "treatments",
+			"label": "Nails"
+		},
+		{
+			"id": "treatments/cta",
+			"page": "treatments",
+			"label": "Call to action"
+		},
+		{
+			"id": "about/intro",
+			"page": "about",
+			"label": "Introduction"
+		},
+		{
+			"id": "about/story",
+			"page": "about",
+			"label": "Story"
+		},
+		{
+			"id": "about/faq",
+			"page": "about",
+			"label": "Questions"
+		},
+		{
+			"id": "about/cta",
+			"page": "about",
+			"label": "Call to action"
+		},
+		{
+			"id": "team/intro",
+			"page": "team",
+			"label": "Introduction"
+		},
+		{
+			"id": "team/team",
+			"page": "team",
+			"label": "Team"
+		},
+		{
+			"id": "team/testimonial",
+			"page": "team",
+			"label": "Testimonial"
+		},
+		{
+			"id": "team/cta",
+			"page": "team",
+			"label": "Call to action"
+		},
+		{
+			"id": "book/intro",
+			"page": "book",
+			"label": "Introduction"
+		},
+		{
+			"id": "book/details",
+			"page": "book",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Bloom & Co.",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Hair, beauty and spa",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Bloom & Co. Salon & Spa",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 014-7712",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "hello@bloomandco.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Address",
+			"default": "9 Willow Arcade, Bayside",
+			"max": 120
+		},
+		{
+			"id": "biz.hours",
+			"group": "site/basics",
+			"type": "richtext",
+			"label": "Opening hours",
+			"default": "Tue to Fri: 9am to 8pm<br>Saturday: 9am to 5pm<br>Sun and Mon: closed",
+			"max": 200,
+			"hint": "One line per day range."
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Book now",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "A calm space for hair, skin and nails, with time to slow down between appointments.",
+			"max": 160
+		},
+		{
+			"id": "footer.contact_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Contact heading",
+			"default": "Visit us",
+			"max": 40
+		},
+		{
+			"id": "footer.hours_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Hours heading",
+			"default": "Opening hours",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "Gift cards available at reception.",
+			"max": 120
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Hair, beauty and spa",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Take an hour that is just for you",
+			"max": 80,
+			"hint": "The main promise, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "Expert stylists, gentle facials and a calm room with no rush. Book online in a minute, any time of day.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "Book an appointment",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "View treatments",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/salon.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustration of a bright salon with a styling chair, round mirror and plants",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.treatments.item1_title",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Hair",
+			"max": 24
+		},
+		{
+			"id": "home.treatments.item1_text",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Cuts, colour, balayage and blow-dries, finished with care.",
+			"max": 120
+		},
+		{
+			"id": "home.treatments.item2_title",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Skin",
+			"max": 24
+		},
+		{
+			"id": "home.treatments.item2_text",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Facials and skin treatments matched to your skin, not a menu.",
+			"max": 120
+		},
+		{
+			"id": "home.treatments.item3_title",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Nails and spa",
+			"max": 24
+		},
+		{
+			"id": "home.treatments.item3_text",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Manicures, pedicures and massage to properly switch off.",
+			"max": 120
+		},
+		{
+			"id": "home.treatments.eyebrow",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Treatments",
+			"max": 40
+		},
+		{
+			"id": "home.treatments.heading",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Heading",
+			"default": "Something for every kind of day",
+			"max": 60
+		},
+		{
+			"id": "home.treatments.intro",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Every appointment starts with a short chat about what you want, so nothing is rushed or guessed.",
+			"max": 160
+		},
+		{
+			"id": "home.treatments.link",
+			"group": "home/treatments",
+			"type": "text",
+			"label": "Link text",
+			"default": "See prices",
+			"max": 28
+		},
+		{
+			"id": "home.space.eyebrow",
+			"group": "home/space",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our space",
+			"max": 40
+		},
+		{
+			"id": "home.space.heading",
+			"group": "home/space",
+			"type": "text",
+			"label": "Heading",
+			"default": "A salon that feels like a pause",
+			"max": 60
+		},
+		{
+			"id": "home.space.body",
+			"group": "home/space",
+			"type": "richtext",
+			"label": "Text",
+			"default": "Soft light, quiet music and a cup of something warm while you wait. <strong>We book fewer clients</strong> so nobody is hurried.",
+			"max": 220
+		},
+		{
+			"id": "home.space.button",
+			"group": "home/space",
+			"type": "text",
+			"label": "Button text",
+			"default": "About Bloom",
+			"max": 28
+		},
+		{
+			"id": "image:home.space",
+			"group": "home/space",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/products.webp"
+		},
+		{
+			"id": "home.space.image_alt",
+			"group": "home/space",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of skincare bottles, a towel and a small vase of flowers on a shelf",
+			"max": 140
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "The best colour I have ever had, and the first salon where I actually relaxed. Mia listened to every word.",
+			"max": 280
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "Hannah R., client since 2021",
+			"max": 70
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Your chair is waiting",
+			"max": 40
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book online any time, or call us during opening hours.",
+			"max": 120
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book now",
+			"max": 28
+		},
+		{
+			"id": "treatments.intro.eyebrow",
+			"group": "treatments/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Treatments",
+			"max": 40
+		},
+		{
+			"id": "treatments.intro.heading",
+			"group": "treatments/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Treatments and prices",
+			"max": 40
+		},
+		{
+			"id": "treatments.intro.lead",
+			"group": "treatments/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Prices are a starting point and depend on hair length and stylist level. We confirm before we begin.",
+			"max": 160
+		},
+		{
+			"id": "treatments.hair.item1_name",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 1 name",
+			"default": "Cut and finish",
+			"max": 60
+		},
+		{
+			"id": "treatments.hair.item1_price",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 1 price",
+			"default": "$65",
+			"max": 16
+		},
+		{
+			"id": "treatments.hair.item1_desc",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 1 description",
+			"default": "Consultation, wash, cut and blow-dry.",
+			"max": 60
+		},
+		{
+			"id": "treatments.hair.item2_name",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 2 name",
+			"default": "Blow-dry",
+			"max": 60
+		},
+		{
+			"id": "treatments.hair.item2_price",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 2 price",
+			"default": "$40",
+			"max": 16
+		},
+		{
+			"id": "treatments.hair.item2_desc",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 2 description",
+			"default": "Wash and a smooth or curled finish.",
+			"max": 60
+		},
+		{
+			"id": "treatments.hair.item3_name",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 3 name",
+			"default": "Full colour",
+			"max": 60
+		},
+		{
+			"id": "treatments.hair.item3_price",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 3 price",
+			"default": "$120",
+			"max": 16
+		},
+		{
+			"id": "treatments.hair.item3_desc",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 3 description",
+			"default": "All-over colour with gloss and finish.",
+			"max": 80
+		},
+		{
+			"id": "treatments.hair.item4_name",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 4 name",
+			"default": "Balayage",
+			"max": 60
+		},
+		{
+			"id": "treatments.hair.item4_price",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 4 price",
+			"default": "From $180",
+			"max": 16
+		},
+		{
+			"id": "treatments.hair.item4_desc",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Item 4 description",
+			"default": "Hand-painted, natural-looking highlights.",
+			"max": 80
+		},
+		{
+			"id": "treatments.hair.heading",
+			"group": "treatments/hair",
+			"type": "text",
+			"label": "Section heading",
+			"default": "Hair",
+			"max": 50
+		},
+		{
+			"id": "treatments.skin.item1_name",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 1 name",
+			"default": "Signature facial",
+			"max": 60
+		},
+		{
+			"id": "treatments.skin.item1_price",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 1 price",
+			"default": "$95",
+			"max": 16
+		},
+		{
+			"id": "treatments.skin.item1_desc",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 1 description",
+			"default": "Cleanse, exfoliate, mask and massage. 60 minutes.",
+			"max": 80
+		},
+		{
+			"id": "treatments.skin.item2_name",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 2 name",
+			"default": "Express facial",
+			"max": 60
+		},
+		{
+			"id": "treatments.skin.item2_price",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 2 price",
+			"default": "$55",
+			"max": 16
+		},
+		{
+			"id": "treatments.skin.item2_desc",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 2 description",
+			"default": "A quick glow before an event. 30 minutes.",
+			"max": 80
+		},
+		{
+			"id": "treatments.skin.item3_name",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 3 name",
+			"default": "Back massage",
+			"max": 60
+		},
+		{
+			"id": "treatments.skin.item3_price",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 3 price",
+			"default": "$50",
+			"max": 16
+		},
+		{
+			"id": "treatments.skin.item3_desc",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 3 description",
+			"default": "Relaxing or deep tissue. 30 minutes.",
+			"max": 60
+		},
+		{
+			"id": "treatments.skin.item4_name",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 4 name",
+			"default": "Full body massage",
+			"max": 60
+		},
+		{
+			"id": "treatments.skin.item4_price",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 4 price",
+			"default": "$90",
+			"max": 16
+		},
+		{
+			"id": "treatments.skin.item4_desc",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Item 4 description",
+			"default": "Unwind from head to toe. 60 minutes.",
+			"max": 60
+		},
+		{
+			"id": "treatments.skin.heading",
+			"group": "treatments/skin",
+			"type": "text",
+			"label": "Section heading",
+			"default": "Skin and spa",
+			"max": 50
+		},
+		{
+			"id": "treatments.nails.item1_name",
+			"group": "treatments/nails",
+			"type": "text",
+			"label": "Item 1 name",
+			"default": "Gel manicure",
+			"max": 60
+		},
+		{
+			"id": "treatments.nails.item1_price",
+			"group": "treatments/nails",
+			"type": "text",
+			"label": "Item 1 price",
+			"default": "$45",
+			"max": 16
+		},
+		{
+			"id": "treatments.nails.item1_desc",
+			"group": "treatments/nails",
+			"type": "text",
+			"label": "Item 1 description",
+			"default": "Shape, cuticle care and long-lasting gel.",
+			"max": 80
+		},
+		{
+			"id": "treatments.nails.item2_name",
+			"group": "treatments/nails",
+			"type": "text",
+			"label": "Item 2 name",
+			"default": "Spa pedicure",
+			"max": 60
+		},
+		{
+			"id": "treatments.nails.item2_price",
+			"group": "treatments/nails",
+			"type": "text",
+			"label": "Item 2 price",
+			"default": "$55",
+			"max": 16
+		},
+		{
+			"id": "treatments.nails.item2_desc",
+			"group": "treatments/nails",
+			"type": "text",
+			"label": "Item 2 description",
+			"default": "Soak, scrub, massage and polish.",
+			"max": 60
+		},
+		{
+			"id": "treatments.nails.heading",
+			"group": "treatments/nails",
+			"type": "text",
+			"label": "Section heading",
+			"default": "Nails",
+			"max": 50
+		},
+		{
+			"id": "treatments.nails.note",
+			"group": "treatments/nails",
+			"type": "text",
+			"label": "Note",
+			"default": "New clients: a free skin or hair consultation is included with your first appointment.",
+			"max": 160
+		},
+		{
+			"id": "treatments.cta.heading",
+			"group": "treatments/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Found your treatment?",
+			"max": 40
+		},
+		{
+			"id": "treatments.cta.text",
+			"group": "treatments/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book online in under a minute.",
+			"max": 60
+		},
+		{
+			"id": "treatments.cta.button",
+			"group": "treatments/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book now",
+			"max": 28
+		},
+		{
+			"id": "about.intro.eyebrow",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "About",
+			"max": 40
+		},
+		{
+			"id": "about.intro.heading",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Small salon, big care",
+			"max": 40
+		},
+		{
+			"id": "about.intro.lead",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Bloom & Co. opened in 2018 with one idea: beauty appointments should feel restful, not rushed.",
+			"max": 160
+		},
+		{
+			"id": "about.story.eyebrow",
+			"group": "about/story",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our story",
+			"max": 40
+		},
+		{
+			"id": "about.story.heading",
+			"group": "about/story",
+			"type": "text",
+			"label": "Heading",
+			"default": "Started with two chairs and a kettle",
+			"max": 60
+		},
+		{
+			"id": "about.story.body1",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "First paragraph",
+			"default": "Founder Mia Laurent trained in London and Paris before coming home to Bayside. She wanted a salon where people leave feeling better, not just looking better.",
+			"max": 320
+		},
+		{
+			"id": "about.story.body2",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "Second paragraph",
+			"default": "We use <strong>vegan, cruelty-free products</strong>, recycle our foils and colour tubes, and pay our team fairly.",
+			"max": 220
+		},
+		{
+			"id": "image:about.story",
+			"group": "about/story",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/salon.webp"
+		},
+		{
+			"id": "about.story.image_alt",
+			"group": "about/story",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a bright salon with a styling chair, round mirror and plants",
+			"max": 140
+		},
+		{
+			"id": "about.faq.q1",
+			"group": "about/faq",
+			"type": "text",
+			"label": "Question 1",
+			"default": "Do I need a patch test for colour?",
+			"max": 120
+		},
+		{
+			"id": "about.faq.a1",
+			"group": "about/faq",
+			"type": "richtext",
+			"label": "Answer 1",
+			"default": "Yes, for new colour clients. Pop in any time 48 hours before your appointment, it takes five minutes.",
+			"max": 220
+		},
+		{
+			"id": "about.faq.q2",
+			"group": "about/faq",
+			"type": "text",
+			"label": "Question 2",
+			"default": "What is your cancellation policy?",
+			"max": 120
+		},
+		{
+			"id": "about.faq.a2",
+			"group": "about/faq",
+			"type": "richtext",
+			"label": "Answer 2",
+			"default": "Please give us 24 hours notice. Late cancellations may be charged 50% of the treatment.",
+			"max": 160
+		},
+		{
+			"id": "about.faq.q3",
+			"group": "about/faq",
+			"type": "text",
+			"label": "Question 3",
+			"default": "Do you sell gift cards?",
+			"max": 120
+		},
+		{
+			"id": "about.faq.a3",
+			"group": "about/faq",
+			"type": "richtext",
+			"label": "Answer 3",
+			"default": "Yes, in any amount, at reception or by phone. <strong>They never expire.</strong>",
+			"max": 160
+		},
+		{
+			"id": "about.faq.heading",
+			"group": "about/faq",
+			"type": "text",
+			"label": "Heading",
+			"default": "Good to know",
+			"max": 24
+		},
+		{
+			"id": "about.cta.heading",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Come and see us",
+			"max": 24
+		},
+		{
+			"id": "about.cta.text",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "We would love to look after you.",
+			"max": 60
+		},
+		{
+			"id": "about.cta.button",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book now",
+			"max": 28
+		},
+		{
+			"id": "team.intro.eyebrow",
+			"group": "team/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Team",
+			"max": 40
+		},
+		{
+			"id": "team.intro.heading",
+			"group": "team/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Meet the team",
+			"max": 24
+		},
+		{
+			"id": "team.intro.lead",
+			"group": "team/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Friendly, experienced and always learning. Choose your favourite when you book.",
+			"max": 160
+		},
+		{
+			"id": "team.team.member1_name",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 1 name",
+			"default": "Mia Laurent",
+			"max": 60
+		},
+		{
+			"id": "team.team.member1_role",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 1 role",
+			"default": "Founder, senior stylist",
+			"max": 60
+		},
+		{
+			"id": "team.team.member1_bio",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 1 bio",
+			"default": "Colour specialist with 15 years of experience. Known for soft, natural balayage.",
+			"max": 160
+		},
+		{
+			"id": "team.team.member2_name",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 2 name",
+			"default": "Chloe Park",
+			"max": 60
+		},
+		{
+			"id": "team.team.member2_role",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 2 role",
+			"default": "Stylist",
+			"max": 60
+		},
+		{
+			"id": "team.team.member2_bio",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 2 bio",
+			"default": "Precision cuts and bridal hair. Will tell you honestly what suits you.",
+			"max": 120
+		},
+		{
+			"id": "team.team.member3_name",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 3 name",
+			"default": "Nadia Rahman",
+			"max": 60
+		},
+		{
+			"id": "team.team.member3_role",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 3 role",
+			"default": "Skin and spa therapist",
+			"max": 60
+		},
+		{
+			"id": "team.team.member3_bio",
+			"group": "team/team",
+			"type": "text",
+			"label": "Person 3 bio",
+			"default": "Facials and massage. Clients say they fall asleep within ten minutes.",
+			"max": 120
+		},
+		{
+			"id": "team.team.heading",
+			"group": "team/team",
+			"type": "text",
+			"label": "Heading",
+			"default": "Our stylists and therapists",
+			"max": 60
+		},
+		{
+			"id": "team.team.intro",
+			"group": "team/team",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Every team member trains with us for at least a month before seeing clients.",
+			"max": 160
+		},
+		{
+			"id": "team.testimonial.quote",
+			"group": "team/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "Chloe did my wedding hair and it held all night through dancing in the rain. I cannot recommend her enough.",
+			"max": 280
+		},
+		{
+			"id": "team.testimonial.name",
+			"group": "team/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "Emily T., bride, June 2025",
+			"max": 70
+		},
+		{
+			"id": "team.cta.heading",
+			"group": "team/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Book with your favourite",
+			"max": 40
+		},
+		{
+			"id": "team.cta.text",
+			"group": "team/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Pick your stylist or therapist when you book online.",
+			"max": 120
+		},
+		{
+			"id": "team.cta.button",
+			"group": "team/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book now",
+			"max": 28
+		},
+		{
+			"id": "book.intro.eyebrow",
+			"group": "book/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Book",
+			"max": 40
+		},
+		{
+			"id": "book.intro.heading",
+			"group": "book/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Book your appointment",
+			"max": 40
+		},
+		{
+			"id": "book.intro.lead",
+			"group": "book/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Call us during opening hours or send an email, and we will find a time that suits you.",
+			"max": 160
+		},
+		{
+			"id": "book.details.side_heading",
+			"group": "book/details",
+			"type": "text",
+			"label": "Side heading",
+			"default": "Finding us",
+			"max": 24
+		},
+		{
+			"id": "book.details.side_body",
+			"group": "book/details",
+			"type": "richtext",
+			"label": "Side text",
+			"default": "We are inside Willow Arcade, next to the florist. <strong>Two hours free parking</strong> in the arcade car park.",
+			"max": 220
+		},
+		{
+			"id": "book.details.extra_heading",
+			"group": "book/details",
+			"type": "text",
+			"label": "Second heading",
+			"default": "Before your visit",
+			"max": 40
+		},
+		{
+			"id": "book.details.extra_body",
+			"group": "book/details",
+			"type": "richtext",
+			"label": "Second text",
+			"default": "Arrive five minutes early for your first appointment so we can talk through what you would like.",
+			"max": 160
+		},
+		{
+			"id": "book.details.heading",
+			"group": "book/details",
+			"type": "text",
+			"label": "Contact box heading",
+			"default": "Book by phone or email",
+			"max": 40
+		}
+	]
+}

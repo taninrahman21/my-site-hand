@@ -75,6 +75,7 @@ $my_site_hand_success_rate = $my_site_hand_today_calls > 0
 // calls, but they are not registered abilities and need their own label.
 $my_site_hand_pseudo_abilities = [
 	'my-site-hand/quick-fix' => __( 'Quick Fix', 'my-site-hand' ),
+	'my-site-hand/ai-bulk-fix' => __( 'AI Bulk Fix', 'my-site-hand' ),
 ];
 
 $my_site_hand_has_filters = ! empty( $my_site_hand_search_val ) || ! empty( $my_site_hand_token_id_val ) || 'all' !== $my_site_hand_date_range;

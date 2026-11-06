@@ -1,0 +1,193 @@
+{
+	"slug": "home-services",
+	"name": "Home Services",
+	"category": "trades",
+	"description": "A trustworthy site for a plumber, electrician, cleaner or handyman. Services, upfront prices, service areas and a big call button.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "trust",
+					"label": "Highlights",
+					"file": "pages/home/trust.html"
+				},
+				{
+					"id": "services",
+					"label": "Services",
+					"file": "pages/home/services.html"
+				},
+				{
+					"id": "how",
+					"label": "How it works",
+					"file": "pages/home/how.html"
+				},
+				{
+					"id": "testimonial",
+					"label": "Testimonial",
+					"file": "pages/home/testimonial.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "services",
+			"title": "Services",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/services/intro.html"
+				},
+				{
+					"id": "plumbing",
+					"label": "Plumbing",
+					"file": "pages/services/plumbing.html"
+				},
+				{
+					"id": "electrical",
+					"label": "Electrical",
+					"file": "pages/services/electrical.html"
+				},
+				{
+					"id": "faq",
+					"label": "Questions",
+					"file": "pages/services/faq.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/services/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "prices",
+			"title": "Prices",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/prices/intro.html"
+				},
+				{
+					"id": "plumbing",
+					"label": "Plumbing prices",
+					"file": "pages/prices/plumbing.html"
+				},
+				{
+					"id": "electrical",
+					"label": "Electrical prices",
+					"file": "pages/prices/electrical.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/prices/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "about",
+			"title": "About",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/about/intro.html"
+				},
+				{
+					"id": "story",
+					"label": "Story",
+					"file": "pages/about/story.html"
+				},
+				{
+					"id": "team",
+					"label": "Team",
+					"file": "pages/about/team.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/about/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "contact",
+			"title": "Contact",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/contact/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/contact/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Home",
+			"page": "home"
+		},
+		{
+			"label": "Services",
+			"page": "services"
+		},
+		{
+			"label": "Prices",
+			"page": "prices"
+		},
+		{
+			"label": "About",
+			"page": "about"
+		},
+		{
+			"label": "Contact",
+			"page": "contact"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/services.jpg",
+		"screenshots/prices.jpg",
+		"screenshots/about.jpg",
+		"screenshots/contact.jpg"
+	]
+}

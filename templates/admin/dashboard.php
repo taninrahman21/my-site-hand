@@ -28,6 +28,7 @@ $my_site_hand_disabled_abs = (array) get_option('mysitehand_disabled_abilities',
 // calls, but they are not registered abilities, so they need their own label.
 $my_site_hand_pseudo_abilities = [
 	'my-site-hand/quick-fix' => __('Quick Fix', 'my-site-hand'),
+	'my-site-hand/ai-bulk-fix' => __('AI Bulk Fix', 'my-site-hand'),
 ];
 
 // Site Health — the one thing on this page that needs no setup at all.
@@ -133,6 +134,7 @@ $my_site_hand_module_defs = [
 	'media' => ['label' => __('Media', 'my-site-hand'), 'desc' => __('Media library', 'my-site-hand')],
 	'users' => ['label' => __('Users', 'my-site-hand'), 'desc' => __('Accounts and roles', 'my-site-hand')],
 	'woocommerce' => ['label' => __('WooCommerce', 'my-site-hand'), 'desc' => __('Products, orders, coupons', 'my-site-hand')],
+	'site-builder' => ['label' => __('Site Builder', 'my-site-hand'), 'desc' => __('Starter sites: stage, apply, undo', 'my-site-hand')],
 ];
 
 $my_site_hand_module_icons = [
@@ -142,6 +144,7 @@ $my_site_hand_module_icons = [
 	'diagnostics' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>',
 	'media' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3" y="3" width="18" height="18"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle></svg>',
 	'users' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>',
+	'site-builder' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3" y="3" width="18" height="18"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>',
 ];
 
 $my_site_hand_copy_icon = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
@@ -201,6 +204,45 @@ $my_site_hand_copy_icon = '<svg width="13" height="13" viewBox="0 0 24 24" fill=
 						</div>
 					</div>
 
+					<?php require MYSITEHAND_PATH . 'templates/partials/welcome.php'; ?>
+
+					<!-- Two cards: build, then health -->
+					<div class="msh-dash-top">
+					<?php
+					$my_site_hand_sb_staged   = $my_site_hand_plugin->get_site_builder()->get_staged(get_current_user_id());
+					$my_site_hand_sb_snaps    = $my_site_hand_plugin->get_site_applier()->list_snapshots();
+					$my_site_hand_sb_live     = array_values(array_filter($my_site_hand_sb_snaps, static fn($s) => 'applied' === $s['status']));
+					$my_site_hand_sb_url      = admin_url('admin.php?page=my-site-hand-builder');
+					?>
+						<div class="msh-dash-health msh-dash-build">
+							<div class="msh-dash-health-text">
+								<p class="msh-dash-health-title"><?php esc_html_e('Build your site', 'my-site-hand'); ?></p>
+								<p class="msh-dash-health-body">
+									<?php
+									if ($my_site_hand_sb_staged) {
+										printf(
+											/* translators: %s: starter site name */
+											esc_html__('You have a %s draft in progress. Only you can see it.', 'my-site-hand'),
+											esc_html($my_site_hand_sb_staged['name'])
+										);
+									} elseif ($my_site_hand_sb_live) {
+										printf(
+											/* translators: 1: starter site name, 2: date */
+											esc_html__('Built from the %1$s starter site on %2$s. You can undo it from Site history.', 'my-site-hand'),
+											esc_html($my_site_hand_sb_live[0]['starter']),
+											esc_html($my_site_hand_sb_live[0]['date'])
+										);
+									} else {
+										esc_html_e('Pick a ready-made starter site, make it yours and preview it before anything goes live.', 'my-site-hand');
+									}
+									?>
+								</p>
+							</div>
+							<a href="<?php echo esc_url($my_site_hand_sb_staged ? add_query_arg('view', 'editor', $my_site_hand_sb_url) : add_query_arg('view', 'gallery', $my_site_hand_sb_url)); ?>" class="msh-btn msh-btn--primary">
+								<?php echo $my_site_hand_sb_staged ? esc_html__('Continue editing', 'my-site-hand') : esc_html__('Open Site Builder', 'my-site-hand'); ?>
+							</a>
+						</div>
+
 					<!-- Site Health score -->
 					<?php if (null === $my_site_hand_health_report): ?>
 						<div class="msh-dash-health">
@@ -253,6 +295,7 @@ $my_site_hand_copy_icon = '<svg width="13" height="13" viewBox="0 0 24 24" fill=
 							</a>
 						</div>
 					<?php endif; ?>
+					</div>
 
 					<!-- Endpoint strip -->
 					<div class="msh-top-status">

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe3ea"/>
+      <stop offset="1" stop-color="#eef8f6"/>
+    </linearGradient>
+    <linearGradient id="brick" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c47a58"/>
+      <stop offset="1" stop-color="#b56a49"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dff1f4"/>
+      <stop offset="1" stop-color="#9ccbd3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <circle cx="1020" cy="150" r="60" fill="#fff6d6"/>
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="240" cy="140" rx="90" ry="28"/>
+    <ellipse cx="300" cy="120" rx="60" ry="30"/>
+    <ellipse cx="820" cy="110" rx="70" ry="22"/>
+  </g>
+
+  <!-- Ground -->
+  <rect y="700" width="1200" height="200" fill="#d9d4cb"/>
+  <rect y="690" width="1200" height="20" fill="#bfb8ab"/>
+  <rect y="790" width="1200" height="110" fill="#c9c3b8"/>
+  <g fill="#ffffff" opacity="0.6">
+    <rect x="80" y="836" width="120" height="10" rx="5"/>
+    <rect x="320" y="836" width="120" height="10" rx="5"/>
+    <rect x="560" y="836" width="120" height="10" rx="5"/>
+    <rect x="800" y="836" width="120" height="10" rx="5"/>
+    <rect x="1040" y="836" width="120" height="10" rx="5"/>
+  </g>
+
+  <!-- Building -->
+  <g transform="translate(330 250)">
+    <rect x="-20" y="-24" width="580" height="40" rx="6" fill="#7b4a33"/>
+    <rect x="0" y="0" width="540" height="450" fill="url(#brick)"/>
+    <g fill="#a85f40" opacity="0.5">
+      <rect x="0" y="60" width="540" height="4"/>
+      <rect x="0" y="140" width="540" height="4"/>
+      <rect x="0" y="220" width="540" height="4"/>
+      <rect x="0" y="300" width="540" height="4"/>
+      <rect x="0" y="380" width="540" height="4"/>
+    </g>
+    <!-- Upper windows -->
+    <g>
+      <rect x="50" y="50" width="120" height="130" rx="6" fill="#f3ece3"/>
+      <rect x="62" y="62" width="96" height="106" rx="3" fill="url(#glass)"/>
+      <rect x="108" y="62" width="4" height="106" fill="#f3ece3"/>
+      <rect x="210" y="50" width="120" height="130" rx="6" fill="#f3ece3"/>
+      <rect x="222" y="62" width="96" height="106" rx="3" fill="url(#glass)"/>
+      <rect x="268" y="62" width="4" height="106" fill="#f3ece3"/>
+      <rect x="370" y="50" width="120" height="130" rx="6" fill="#f3ece3"/>
+      <rect x="382" y="62" width="96" height="106" rx="3" fill="url(#glass)"/>
+      <rect x="428" y="62" width="4" height="106" fill="#f3ece3"/>
+    </g>
+    <!-- Sign -->
+    <rect x="150" y="214" width="240" height="56" rx="10" fill="#0d6b66"/>
+    <g fill="#ffffff">
+      <rect x="176" y="234" width="16" height="16" rx="2"/>
+      <rect x="170" y="238" width="28" height="8" rx="2"/>
+      <rect x="178" y="228" width="12" height="28" rx="2"/>
+      <rect x="214" y="236" width="150" height="12" rx="6" opacity="0.85"/>
+    </g>
+    <!-- Door and lower windows -->
+    <rect x="215" y="300" width="110" height="150" rx="6" fill="#0b5a56"/>
+    <rect x="229" y="314" width="82" height="70" rx="3" fill="url(#glass)"/>
+    <circle cx="303" cy="400" r="5" fill="#f3c9a8"/>
+    <rect x="50" y="310" width="120" height="100" rx="6" fill="#f3ece3"/>
+    <rect x="62" y="322" width="96" height="76" rx="3" fill="url(#glass)"/>
+    <rect x="370" y="310" width="120" height="100" rx="6" fill="#f3ece3"/>
+    <rect x="382" y="322" width="96" height="76" rx="3" fill="url(#glass)"/>
+    <rect x="195" y="440" width="150" height="14" rx="4" fill="#9a958c"/>
+    <!-- Window boxes -->
+    <rect x="44" y="404" width="132" height="22" rx="6" fill="#5b4636"/>
+    <g fill="#66b896"><circle cx="66" cy="402" r="14"/><circle cx="96" cy="398" r="16"/><circle cx="128" cy="402" r="14"/><circle cx="156" cy="400" r="13"/></g>
+    <rect x="364" y="404" width="132" height="22" rx="6" fill="#5b4636"/>
+    <g fill="#66b896"><circle cx="386" cy="402" r="14"/><circle cx="416" cy="398" r="16"/><circle cx="448" cy="402" r="14"/><circle cx="476" cy="400" r="13"/></g>
+  </g>
+
+  <!-- Trees -->
+  <g>
+    <rect x="160" y="520" width="22" height="190" rx="8" fill="#6b4e3a"/>
+    <circle cx="171" cy="470" r="110" fill="#4fa784"/>
+    <circle cx="120" cy="510" r="70" fill="#3c8f6f"/>
+    <circle cx="225" cy="420" r="60" fill="#66b896"/>
+  </g>
+  <g>
+    <rect x="1010" y="540" width="22" height="170" rx="8" fill="#6b4e3a"/>
+    <circle cx="1021" cy="490" r="100" fill="#4fa784"/>
+    <circle cx="1075" cy="530" r="64" fill="#3c8f6f"/>
+    <circle cx="970" cy="440" r="56" fill="#66b896"/>
+  </g>
+  <!-- Bench and lamp -->
+  <rect x="932" y="640" width="12" height="70" fill="#11292b"/>
+  <rect x="926" y="560" width="24" height="84" rx="10" fill="#11292b"/>
+  <circle cx="938" cy="552" r="20" fill="#fff6d6"/>
+  <ellipse cx="600" cy="712" rx="320" ry="10" fill="#000" opacity="0.08"/>
+</svg>

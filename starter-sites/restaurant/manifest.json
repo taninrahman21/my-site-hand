@@ -1,0 +1,198 @@
+{
+	"slug": "restaurant",
+	"name": "Restaurant",
+	"category": "food and drink",
+	"description": "A warm, inviting site for a restaurant, café or bistro. A full menu with prices, private dining, opening hours and reservations.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "kitchen",
+					"label": "Our kitchen",
+					"file": "pages/home/kitchen.html"
+				},
+				{
+					"id": "dishes",
+					"label": "Signature dishes",
+					"file": "pages/home/dishes.html"
+				},
+				{
+					"id": "room",
+					"label": "The room",
+					"file": "pages/home/room.html"
+				},
+				{
+					"id": "review",
+					"label": "Review",
+					"file": "pages/home/review.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "menu",
+			"title": "Menu",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/menu/intro.html"
+				},
+				{
+					"id": "starters",
+					"label": "Small plates",
+					"file": "pages/menu/starters.html"
+				},
+				{
+					"id": "mains",
+					"label": "From the oven",
+					"file": "pages/menu/mains.html"
+				},
+				{
+					"id": "desserts",
+					"label": "Something sweet",
+					"file": "pages/menu/desserts.html"
+				},
+				{
+					"id": "note",
+					"label": "Allergy note",
+					"file": "pages/menu/note.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/menu/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "about",
+			"title": "About",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/about/intro.html"
+				},
+				{
+					"id": "story",
+					"label": "Story",
+					"file": "pages/about/story.html"
+				},
+				{
+					"id": "values",
+					"label": "What matters to us",
+					"file": "pages/about/values.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/about/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "private-dining",
+			"title": "Private Dining",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/private-dining/intro.html"
+				},
+				{
+					"id": "options",
+					"label": "Options",
+					"file": "pages/private-dining/options.html"
+				},
+				{
+					"id": "how",
+					"label": "How it works",
+					"file": "pages/private-dining/how.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/private-dining/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "visit",
+			"title": "Visit",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/visit/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/visit/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Home",
+			"page": "home"
+		},
+		{
+			"label": "Menu",
+			"page": "menu"
+		},
+		{
+			"label": "About",
+			"page": "about"
+		},
+		{
+			"label": "Private dining",
+			"page": "private-dining"
+		},
+		{
+			"label": "Visit",
+			"page": "visit"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/menu.jpg",
+		"screenshots/about.jpg",
+		"screenshots/private-dining.jpg",
+		"screenshots/visit.jpg"
+	]
+}

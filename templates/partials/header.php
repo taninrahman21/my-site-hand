@@ -73,6 +73,11 @@ $my_site_hand_shell_endpoint = rest_url('my-site-hand/v1/mcp/streamable');
 $my_site_hand_shell_health = \MySiteHand\Plugin::get_instance()->get_site_health_scanner()->get_latest_report();
 
 $my_site_hand_primary_tabs = [
+	'my-site-hand-builder' => [
+		'label' => __('Site Builder', 'my-site-hand'),
+		'count' => '',
+		'icon'  => '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3" y="3" width="18" height="18"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>',
+	],
 	'my-site-hand-health' => [
 		'label' => __('Site Health', 'my-site-hand'),
 		'count' => null !== $my_site_hand_shell_health ? (string) (int) $my_site_hand_shell_health['score'] : '',

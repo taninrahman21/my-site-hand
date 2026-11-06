@@ -1,0 +1,189 @@
+{
+	"slug": "real-estate",
+	"name": "Real Estate",
+	"category": "property",
+	"description": "A polished site for a real estate agent or small agency. Featured listings, a clear guide for sellers, your story and a free valuation offer.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "stats",
+					"label": "Highlights",
+					"file": "pages/home/stats.html"
+				},
+				{
+					"id": "featured",
+					"label": "Featured homes",
+					"file": "pages/home/featured.html"
+				},
+				{
+					"id": "selling",
+					"label": "Selling",
+					"file": "pages/home/selling.html"
+				},
+				{
+					"id": "testimonial",
+					"label": "Testimonial",
+					"file": "pages/home/testimonial.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "listings",
+			"title": "Homes for Sale",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/listings/intro.html"
+				},
+				{
+					"id": "new",
+					"label": "Just listed",
+					"file": "pages/listings/new.html"
+				},
+				{
+					"id": "more",
+					"label": "More homes",
+					"file": "pages/listings/more.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/listings/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "sell",
+			"title": "Sell",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/sell/intro.html"
+				},
+				{
+					"id": "process",
+					"label": "Process",
+					"file": "pages/sell/process.html"
+				},
+				{
+					"id": "included",
+					"label": "What is included",
+					"file": "pages/sell/included.html"
+				},
+				{
+					"id": "faq",
+					"label": "Questions",
+					"file": "pages/sell/faq.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/sell/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "about",
+			"title": "About",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/about/intro.html"
+				},
+				{
+					"id": "story",
+					"label": "Story",
+					"file": "pages/about/story.html"
+				},
+				{
+					"id": "numbers",
+					"label": "Highlights",
+					"file": "pages/about/numbers.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/about/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "contact",
+			"title": "Contact",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/contact/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/contact/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Homes for sale",
+			"page": "listings"
+		},
+		{
+			"label": "Sell",
+			"page": "sell"
+		},
+		{
+			"label": "About",
+			"page": "about"
+		},
+		{
+			"label": "Contact",
+			"page": "contact"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/listings.jpg",
+		"screenshots/sell.jpg",
+		"screenshots/about.jpg",
+		"screenshots/contact.jpg"
+	]
+}

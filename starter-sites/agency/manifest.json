@@ -1,0 +1,194 @@
+{
+	"slug": "agency",
+	"name": "Business & Agency",
+	"category": "business",
+	"description": "A confident site for an agency, consultancy or small company. Services with clear packages, case studies, your team and an easy way to start a project.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "stats",
+					"label": "Highlights",
+					"file": "pages/home/stats.html"
+				},
+				{
+					"id": "services",
+					"label": "Services",
+					"file": "pages/home/services.html"
+				},
+				{
+					"id": "process",
+					"label": "How we work",
+					"file": "pages/home/process.html"
+				},
+				{
+					"id": "testimonial",
+					"label": "Testimonial",
+					"file": "pages/home/testimonial.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "services",
+			"title": "Services",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/services/intro.html"
+				},
+				{
+					"id": "list",
+					"label": "Service list",
+					"file": "pages/services/list.html"
+				},
+				{
+					"id": "packages",
+					"label": "Packages",
+					"file": "pages/services/packages.html"
+				},
+				{
+					"id": "faq",
+					"label": "Questions",
+					"file": "pages/services/faq.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/services/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "work",
+			"title": "Work",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/work/intro.html"
+				},
+				{
+					"id": "case1",
+					"label": "Case study 1",
+					"file": "pages/work/case1.html"
+				},
+				{
+					"id": "case2",
+					"label": "Case study 2",
+					"file": "pages/work/case2.html"
+				},
+				{
+					"id": "results",
+					"label": "Highlights",
+					"file": "pages/work/results.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/work/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "about",
+			"title": "About",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/about/intro.html"
+				},
+				{
+					"id": "story",
+					"label": "Story",
+					"file": "pages/about/story.html"
+				},
+				{
+					"id": "team",
+					"label": "Team",
+					"file": "pages/about/team.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/about/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "contact",
+			"title": "Contact",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/contact/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/contact/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Services",
+			"page": "services"
+		},
+		{
+			"label": "Work",
+			"page": "work"
+		},
+		{
+			"label": "About",
+			"page": "about"
+		},
+		{
+			"label": "Contact",
+			"page": "contact"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/services.jpg",
+		"screenshots/work.jpg",
+		"screenshots/about.jpg",
+		"screenshots/contact.jpg"
+	]
+}

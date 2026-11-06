@@ -1,0 +1,1406 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/stats",
+			"page": "home",
+			"label": "Highlights"
+		},
+		{
+			"id": "home/classes",
+			"page": "home",
+			"label": "Classes"
+		},
+		{
+			"id": "home/coaching",
+			"page": "home",
+			"label": "Coaching"
+		},
+		{
+			"id": "home/plans",
+			"page": "home",
+			"label": "Membership"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "classes/intro",
+			"page": "classes",
+			"label": "Introduction"
+		},
+		{
+			"id": "classes/list",
+			"page": "classes",
+			"label": "Class list"
+		},
+		{
+			"id": "classes/first",
+			"page": "classes",
+			"label": "Your first week"
+		},
+		{
+			"id": "classes/cta",
+			"page": "classes",
+			"label": "Call to action"
+		},
+		{
+			"id": "membership/intro",
+			"page": "membership",
+			"label": "Introduction"
+		},
+		{
+			"id": "membership/plans",
+			"page": "membership",
+			"label": "Plans"
+		},
+		{
+			"id": "membership/faq",
+			"page": "membership",
+			"label": "Questions"
+		},
+		{
+			"id": "membership/cta",
+			"page": "membership",
+			"label": "Call to action"
+		},
+		{
+			"id": "coaches/intro",
+			"page": "coaches",
+			"label": "Introduction"
+		},
+		{
+			"id": "coaches/team",
+			"page": "coaches",
+			"label": "Team"
+		},
+		{
+			"id": "coaches/stats",
+			"page": "coaches",
+			"label": "Highlights"
+		},
+		{
+			"id": "coaches/cta",
+			"page": "coaches",
+			"label": "Call to action"
+		},
+		{
+			"id": "visit/intro",
+			"page": "visit",
+			"label": "Introduction"
+		},
+		{
+			"id": "visit/details",
+			"page": "visit",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Ironwood Fitness",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Strength, conditioning and community",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Ironwood Fitness",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 016-8820",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "train@ironwood.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Address",
+			"default": "77 Canal Street, Riverside",
+			"max": 120
+		},
+		{
+			"id": "biz.hours",
+			"group": "site/basics",
+			"type": "richtext",
+			"label": "Opening hours",
+			"default": "Mon to Fri: 5:30am to 10pm<br>Sat and Sun: 7am to 6pm",
+			"max": 200,
+			"hint": "One line per day range."
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Free trial week",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "A strength and conditioning gym for real people. No mirrors to pose in, just good coaching.",
+			"max": 160
+		},
+		{
+			"id": "footer.contact_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Contact heading",
+			"default": "Find us",
+			"max": 40
+		},
+		{
+			"id": "footer.hours_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Hours heading",
+			"default": "Opening hours",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "Train hard, recover well.",
+			"max": 120
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Strength and conditioning gym",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Get stronger than you were last month",
+			"max": 80,
+			"hint": "The main promise, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "Coached classes, open gym and a community that notices when you are missing. Your first week is free.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "Start your free week",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "See the classes",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/gym.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustration of a gym with a squat rack, barbell and kettlebells",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.stats.item1_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "40+",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item1_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "coached classes every week",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item2_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "6",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item2_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "full-time coaches",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item3_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "5:30am",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item3_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "doors open on weekdays",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item4_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "1,200",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item4_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "members and counting",
+			"max": 80
+		},
+		{
+			"id": "home.classes.item1_title",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Strength",
+			"max": 24
+		},
+		{
+			"id": "home.classes.item1_text",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Learn the big lifts with small groups and a coach watching every rep.",
+			"max": 120
+		},
+		{
+			"id": "home.classes.item2_title",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Conditioning",
+			"max": 24
+		},
+		{
+			"id": "home.classes.item2_text",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Short, hard sessions that build engines. Scaled for every level.",
+			"max": 120
+		},
+		{
+			"id": "home.classes.item3_title",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Mobility",
+			"max": 24
+		},
+		{
+			"id": "home.classes.item3_text",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Slow down, move better and recover so you can come back tomorrow.",
+			"max": 120
+		},
+		{
+			"id": "home.classes.eyebrow",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Classes",
+			"max": 40
+		},
+		{
+			"id": "home.classes.heading",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Heading",
+			"default": "Find your kind of workout",
+			"max": 40
+		},
+		{
+			"id": "home.classes.link",
+			"group": "home/classes",
+			"type": "text",
+			"label": "Link text",
+			"default": "Full timetable",
+			"max": 28
+		},
+		{
+			"id": "home.coaching.eyebrow",
+			"group": "home/coaching",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Real coaching",
+			"max": 40
+		},
+		{
+			"id": "home.coaching.heading",
+			"group": "home/coaching",
+			"type": "text",
+			"label": "Heading",
+			"default": "Every class has a coach, not a playlist",
+			"max": 80
+		},
+		{
+			"id": "home.coaching.body",
+			"group": "home/coaching",
+			"type": "richtext",
+			"label": "Text",
+			"default": "Our coaches correct your form, adjust the workout to your level and remember your name. <strong>New members get a free one-to-one session</strong> to set goals.",
+			"max": 320
+		},
+		{
+			"id": "home.coaching.button",
+			"group": "home/coaching",
+			"type": "text",
+			"label": "Button text",
+			"default": "Meet the coaches",
+			"max": 28
+		},
+		{
+			"id": "image:home.coaching",
+			"group": "home/coaching",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/class.webp"
+		},
+		{
+			"id": "home.coaching.image_alt",
+			"group": "home/coaching",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a group fitness class with mats, kettlebells and a coach",
+			"max": 140
+		},
+		{
+			"id": "home.plans.plan1_name",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 1 name",
+			"default": "Open gym",
+			"max": 40
+		},
+		{
+			"id": "home.plans.plan1_price",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 1 price",
+			"default": "$45",
+			"max": 16
+		},
+		{
+			"id": "home.plans.plan1_period",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 1 price note",
+			"default": "per month",
+			"max": 40
+		},
+		{
+			"id": "home.plans.plan1_included",
+			"group": "home/plans",
+			"type": "richtext",
+			"label": "Plan 1 includes",
+			"default": "Full gym access<br>Open 7 days<br>Locker room and showers",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "home.plans.plan1_button",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 1 button",
+			"default": "Start free week",
+			"max": 28
+		},
+		{
+			"id": "home.plans.plan2_badge",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 2 label",
+			"default": "Most popular",
+			"max": 24
+		},
+		{
+			"id": "home.plans.plan2_name",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 2 name",
+			"default": "Unlimited",
+			"max": 40
+		},
+		{
+			"id": "home.plans.plan2_price",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 2 price",
+			"default": "$89",
+			"max": 16
+		},
+		{
+			"id": "home.plans.plan2_period",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 2 price note",
+			"default": "per month",
+			"max": 40
+		},
+		{
+			"id": "home.plans.plan2_included",
+			"group": "home/plans",
+			"type": "richtext",
+			"label": "Plan 2 includes",
+			"default": "All classes and open gym<br>Free one-to-one session<br>Member events",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "home.plans.plan2_button",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 2 button",
+			"default": "Start free week",
+			"max": 28
+		},
+		{
+			"id": "home.plans.plan3_name",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 3 name",
+			"default": "Class pack",
+			"max": 40
+		},
+		{
+			"id": "home.plans.plan3_price",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 3 price",
+			"default": "$120",
+			"max": 16
+		},
+		{
+			"id": "home.plans.plan3_period",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 3 price note",
+			"default": "10 classes",
+			"max": 40
+		},
+		{
+			"id": "home.plans.plan3_included",
+			"group": "home/plans",
+			"type": "richtext",
+			"label": "Plan 3 includes",
+			"default": "Use within 3 months<br>Any class type<br>Share with a friend",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "home.plans.plan3_button",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Plan 3 button",
+			"default": "Buy a pack",
+			"max": 28
+		},
+		{
+			"id": "home.plans.eyebrow",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Membership",
+			"max": 40
+		},
+		{
+			"id": "home.plans.heading",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Heading",
+			"default": "Simple memberships, no contracts",
+			"max": 60
+		},
+		{
+			"id": "home.plans.intro",
+			"group": "home/plans",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Cancel any time with 30 days notice. Every plan starts with a free week.",
+			"max": 120
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "I had never lifted anything heavier than my shopping. A year later I deadlift my body weight and actually look forward to 6am.",
+			"max": 280
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "Lauren K., member since 2023",
+			"max": 70
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Your first week is on us",
+			"max": 40
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Try every class, meet the coaches and see if Ironwood fits you.",
+			"max": 120
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Claim your free week",
+			"max": 28
+		},
+		{
+			"id": "classes.intro.eyebrow",
+			"group": "classes/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Classes",
+			"max": 40
+		},
+		{
+			"id": "classes.intro.heading",
+			"group": "classes/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Something for every goal and every level",
+			"max": 80
+		},
+		{
+			"id": "classes.intro.lead",
+			"group": "classes/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Classes run from 5:30am to 8pm. Every one can be scaled, so beginners and athletes train side by side.",
+			"max": 220
+		},
+		{
+			"id": "classes.list.item1_title",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Strength",
+			"max": 24
+		},
+		{
+			"id": "classes.list.item1_text",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Mon, Wed, Fri at 6am, 12pm and 6pm. Squats, presses and pulls.",
+			"max": 120
+		},
+		{
+			"id": "classes.list.item2_title",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Conditioning",
+			"max": 24
+		},
+		{
+			"id": "classes.list.item2_text",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Daily at 7am and 7pm. Intervals on bikes, rowers and sleds.",
+			"max": 120
+		},
+		{
+			"id": "classes.list.item3_title",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Kettlebells",
+			"max": 24
+		},
+		{
+			"id": "classes.list.item3_text",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Tue and Thu at 6am and 6pm. Swings, carries and full-body flows.",
+			"max": 120
+		},
+		{
+			"id": "classes.list.item4_title",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 4 title",
+			"default": "Mobility",
+			"max": 24
+		},
+		{
+			"id": "classes.list.item4_text",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 4 text",
+			"default": "Tue, Thu and Sun at 9am. Stretching and control for better movement.",
+			"max": 120
+		},
+		{
+			"id": "classes.list.item5_title",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 5 title",
+			"default": "Beginners",
+			"max": 24
+		},
+		{
+			"id": "classes.list.item5_text",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 5 text",
+			"default": "Sat at 9am. Learn the basics in a small, friendly group.",
+			"max": 120
+		},
+		{
+			"id": "classes.list.item6_title",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 6 title",
+			"default": "Teens",
+			"max": 24
+		},
+		{
+			"id": "classes.list.item6_text",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Item 6 text",
+			"default": "Mon and Wed at 4pm. Safe strength training for ages 13 to 17.",
+			"max": 120
+		},
+		{
+			"id": "classes.list.eyebrow",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Timetable",
+			"max": 40
+		},
+		{
+			"id": "classes.list.heading",
+			"group": "classes/list",
+			"type": "text",
+			"label": "Heading",
+			"default": "Our weekly classes",
+			"max": 40
+		},
+		{
+			"id": "classes.first.item1_title",
+			"group": "classes/first",
+			"type": "text",
+			"label": "Step 1 title",
+			"default": "Book a free intro",
+			"max": 40
+		},
+		{
+			"id": "classes.first.item1_text",
+			"group": "classes/first",
+			"type": "text",
+			"label": "Step 1 text",
+			"default": "A 30-minute session with a coach to talk goals and test movement.",
+			"max": 120
+		},
+		{
+			"id": "classes.first.item2_title",
+			"group": "classes/first",
+			"type": "text",
+			"label": "Step 2 title",
+			"default": "Try the classes",
+			"max": 24
+		},
+		{
+			"id": "classes.first.item2_text",
+			"group": "classes/first",
+			"type": "text",
+			"label": "Step 2 text",
+			"default": "Come to as many classes as you like for seven days.",
+			"max": 120
+		},
+		{
+			"id": "classes.first.item3_title",
+			"group": "classes/first",
+			"type": "text",
+			"label": "Step 3 title",
+			"default": "Choose a plan",
+			"max": 24
+		},
+		{
+			"id": "classes.first.item3_text",
+			"group": "classes/first",
+			"type": "text",
+			"label": "Step 3 text",
+			"default": "Pick the membership that fits, or walk away with no hard feelings.",
+			"max": 120
+		},
+		{
+			"id": "classes.first.heading",
+			"group": "classes/first",
+			"type": "text",
+			"label": "Heading",
+			"default": "Your first week at Ironwood",
+			"max": 60
+		},
+		{
+			"id": "classes.cta.heading",
+			"group": "classes/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "See you on the floor",
+			"max": 40
+		},
+		{
+			"id": "classes.cta.text",
+			"group": "classes/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book your free intro session today.",
+			"max": 60
+		},
+		{
+			"id": "classes.cta.button",
+			"group": "classes/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book an intro",
+			"max": 28
+		},
+		{
+			"id": "membership.intro.eyebrow",
+			"group": "membership/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Membership",
+			"max": 40
+		},
+		{
+			"id": "membership.intro.heading",
+			"group": "membership/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Join without the small print",
+			"max": 60
+		},
+		{
+			"id": "membership.intro.lead",
+			"group": "membership/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "No joining fee, no annual contract and no hard sell. Just pick a plan and start training.",
+			"max": 160
+		},
+		{
+			"id": "membership.plans.plan1_name",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 1 name",
+			"default": "Open gym",
+			"max": 40
+		},
+		{
+			"id": "membership.plans.plan1_price",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 1 price",
+			"default": "$45",
+			"max": 16
+		},
+		{
+			"id": "membership.plans.plan1_period",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 1 price note",
+			"default": "per month",
+			"max": 40
+		},
+		{
+			"id": "membership.plans.plan1_included",
+			"group": "membership/plans",
+			"type": "richtext",
+			"label": "Plan 1 includes",
+			"default": "Full gym access<br>Open 7 days<br>Locker room and showers",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "membership.plans.plan1_button",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 1 button",
+			"default": "Start free week",
+			"max": 28
+		},
+		{
+			"id": "membership.plans.plan2_badge",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 2 label",
+			"default": "Most popular",
+			"max": 24
+		},
+		{
+			"id": "membership.plans.plan2_name",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 2 name",
+			"default": "Unlimited",
+			"max": 40
+		},
+		{
+			"id": "membership.plans.plan2_price",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 2 price",
+			"default": "$89",
+			"max": 16
+		},
+		{
+			"id": "membership.plans.plan2_period",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 2 price note",
+			"default": "per month",
+			"max": 40
+		},
+		{
+			"id": "membership.plans.plan2_included",
+			"group": "membership/plans",
+			"type": "richtext",
+			"label": "Plan 2 includes",
+			"default": "All classes and open gym<br>Free one-to-one session<br>Member events",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "membership.plans.plan2_button",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 2 button",
+			"default": "Start free week",
+			"max": 28
+		},
+		{
+			"id": "membership.plans.plan3_name",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 3 name",
+			"default": "Personal training",
+			"max": 40
+		},
+		{
+			"id": "membership.plans.plan3_price",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 3 price",
+			"default": "$60",
+			"max": 16
+		},
+		{
+			"id": "membership.plans.plan3_period",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 3 price note",
+			"default": "per session",
+			"max": 40
+		},
+		{
+			"id": "membership.plans.plan3_included",
+			"group": "membership/plans",
+			"type": "richtext",
+			"label": "Plan 3 includes",
+			"default": "One-to-one coaching<br>Custom program<br>Monthly check-ins",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "membership.plans.plan3_button",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Plan 3 button",
+			"default": "Book a session",
+			"max": 28
+		},
+		{
+			"id": "membership.plans.eyebrow",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Plans",
+			"max": 40
+		},
+		{
+			"id": "membership.plans.heading",
+			"group": "membership/plans",
+			"type": "text",
+			"label": "Heading",
+			"default": "Pick the plan that fits your week",
+			"max": 60
+		},
+		{
+			"id": "membership.faq.q1",
+			"group": "membership/faq",
+			"type": "text",
+			"label": "Question 1",
+			"default": "Is there a joining fee?",
+			"max": 120
+		},
+		{
+			"id": "membership.faq.a1",
+			"group": "membership/faq",
+			"type": "richtext",
+			"label": "Answer 1",
+			"default": "No. You pay for your first month only after your free week ends.",
+			"max": 120
+		},
+		{
+			"id": "membership.faq.q2",
+			"group": "membership/faq",
+			"type": "text",
+			"label": "Question 2",
+			"default": "Can I freeze my membership?",
+			"max": 120
+		},
+		{
+			"id": "membership.faq.a2",
+			"group": "membership/faq",
+			"type": "richtext",
+			"label": "Answer 2",
+			"default": "Yes. Freeze for up to three months a year for travel, injury or anything else.",
+			"max": 160
+		},
+		{
+			"id": "membership.faq.q3",
+			"group": "membership/faq",
+			"type": "text",
+			"label": "Question 3",
+			"default": "I am a complete beginner. Is that OK?",
+			"max": 120
+		},
+		{
+			"id": "membership.faq.a3",
+			"group": "membership/faq",
+			"type": "richtext",
+			"label": "Answer 3",
+			"default": "Absolutely. <strong>Most of our members started with no experience.</strong> Every class can be scaled.",
+			"max": 220
+		},
+		{
+			"id": "membership.faq.q4",
+			"group": "membership/faq",
+			"type": "text",
+			"label": "Question 4",
+			"default": "How do I cancel?",
+			"max": 120
+		},
+		{
+			"id": "membership.faq.a4",
+			"group": "membership/faq",
+			"type": "richtext",
+			"label": "Answer 4",
+			"default": "Email us. We stop the next payment after 30 days, and you can keep training until then.",
+			"max": 160
+		},
+		{
+			"id": "membership.faq.heading",
+			"group": "membership/faq",
+			"type": "text",
+			"label": "Heading",
+			"default": "Membership questions",
+			"max": 40
+		},
+		{
+			"id": "membership.cta.heading",
+			"group": "membership/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Start with a free week",
+			"max": 40
+		},
+		{
+			"id": "membership.cta.text",
+			"group": "membership/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "No card needed to try. Just book an intro and come in.",
+			"max": 120
+		},
+		{
+			"id": "membership.cta.button",
+			"group": "membership/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book an intro",
+			"max": 28
+		},
+		{
+			"id": "coaches.intro.eyebrow",
+			"group": "coaches/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Coaches",
+			"max": 40
+		},
+		{
+			"id": "coaches.intro.heading",
+			"group": "coaches/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "The people in your corner",
+			"max": 40
+		},
+		{
+			"id": "coaches.intro.lead",
+			"group": "coaches/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Qualified, experienced and genuinely interested in how you are doing.",
+			"max": 120
+		},
+		{
+			"id": "coaches.team.member1_name",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 1 name",
+			"default": "Marcus Reid",
+			"max": 60
+		},
+		{
+			"id": "coaches.team.member1_role",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 1 role",
+			"default": "Head coach",
+			"max": 60
+		},
+		{
+			"id": "coaches.team.member1_bio",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 1 bio",
+			"default": "Former rugby player, 12 years coaching strength. Loves a good deadlift and a bad pun.",
+			"max": 160
+		},
+		{
+			"id": "coaches.team.member2_name",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 2 name",
+			"default": "Jess Nakamura",
+			"max": 60
+		},
+		{
+			"id": "coaches.team.member2_role",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 2 role",
+			"default": "Conditioning coach",
+			"max": 60
+		},
+		{
+			"id": "coaches.team.member2_bio",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 2 bio",
+			"default": "Ran her first marathon at 40. Makes hard workouts feel possible.",
+			"max": 120
+		},
+		{
+			"id": "coaches.team.member3_name",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 3 name",
+			"default": "Dev Patel",
+			"max": 60
+		},
+		{
+			"id": "coaches.team.member3_role",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 3 role",
+			"default": "Mobility and rehab",
+			"max": 60
+		},
+		{
+			"id": "coaches.team.member3_bio",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Person 3 bio",
+			"default": "Physiotherapy background. Helps members train around old injuries.",
+			"max": 120
+		},
+		{
+			"id": "coaches.team.heading",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Heading",
+			"default": "Our coaches",
+			"max": 24
+		},
+		{
+			"id": "coaches.team.intro",
+			"group": "coaches/team",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Every coach holds a recognised qualification and keeps learning every year.",
+			"max": 120
+		},
+		{
+			"id": "coaches.stats.item1_value",
+			"group": "coaches/stats",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "60+",
+			"max": 16
+		},
+		{
+			"id": "coaches.stats.item1_text",
+			"group": "coaches/stats",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "years of coaching between them",
+			"max": 80
+		},
+		{
+			"id": "coaches.stats.item2_value",
+			"group": "coaches/stats",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "15",
+			"max": 16
+		},
+		{
+			"id": "coaches.stats.item2_text",
+			"group": "coaches/stats",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "recognised qualifications",
+			"max": 80
+		},
+		{
+			"id": "coaches.stats.item3_value",
+			"group": "coaches/stats",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "1:12",
+			"max": 16
+		},
+		{
+			"id": "coaches.stats.item3_text",
+			"group": "coaches/stats",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "coach to member ratio in class",
+			"max": 80
+		},
+		{
+			"id": "coaches.stats.item4_value",
+			"group": "coaches/stats",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "100%",
+			"max": 16
+		},
+		{
+			"id": "coaches.stats.item4_text",
+			"group": "coaches/stats",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "of classes coached",
+			"max": 80
+		},
+		{
+			"id": "coaches.cta.heading",
+			"group": "coaches/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Train with us",
+			"max": 24
+		},
+		{
+			"id": "coaches.cta.text",
+			"group": "coaches/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book a free intro and meet the team.",
+			"max": 60
+		},
+		{
+			"id": "coaches.cta.button",
+			"group": "coaches/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book an intro",
+			"max": 28
+		},
+		{
+			"id": "visit.intro.eyebrow",
+			"group": "visit/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Visit",
+			"max": 40
+		},
+		{
+			"id": "visit.intro.heading",
+			"group": "visit/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Come and see the gym",
+			"max": 40
+		},
+		{
+			"id": "visit.intro.lead",
+			"group": "visit/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Drop in during staffed hours for a tour, or book your free intro session online.",
+			"max": 160
+		},
+		{
+			"id": "visit.details.side_heading",
+			"group": "visit/details",
+			"type": "text",
+			"label": "Side heading",
+			"default": "Getting here",
+			"max": 24
+		},
+		{
+			"id": "visit.details.side_body",
+			"group": "visit/details",
+			"type": "richtext",
+			"label": "Side text",
+			"default": "We are on Canal Street, next to the old mill. <strong>Free parking</strong> behind the building and secure bike racks at the door.",
+			"max": 220
+		},
+		{
+			"id": "visit.details.extra_heading",
+			"group": "visit/details",
+			"type": "text",
+			"label": "Second heading",
+			"default": "What to bring",
+			"max": 24
+		},
+		{
+			"id": "visit.details.extra_body",
+			"group": "visit/details",
+			"type": "richtext",
+			"label": "Second text",
+			"default": "Comfortable clothes, trainers and a water bottle. We have towels, lockers and showers.",
+			"max": 160
+		},
+		{
+			"id": "visit.details.heading",
+			"group": "visit/details",
+			"type": "text",
+			"label": "Contact box heading",
+			"default": "Find Ironwood",
+			"max": 24
+		}
+	]
+}

@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "dusk",
+			"name": "Dusk teal",
+			"colors": {
+				"base": "#fffdf9",
+				"surface": "#fbf3e8",
+				"accent": "#f4e3cc",
+				"contrast": "#1f1a14",
+				"muted": "#5d5043",
+				"primary": "#155e75",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "clay",
+			"name": "Clay",
+			"colors": {
+				"base": "#fffcf8",
+				"surface": "#f9f5f3",
+				"accent": "#f1e6e2",
+				"contrast": "#281b15",
+				"muted": "#6a564e",
+				"primary": "#b0532e",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "plum",
+			"name": "Plum",
+			"colors": {
+				"base": "#fffbfe",
+				"surface": "#f8f3f9",
+				"accent": "#ede2f1",
+				"contrast": "#231528",
+				"muted": "#634e6a",
+				"primary": "#6d3b7d",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "olive",
+			"name": "Olive",
+			"colors": {
+				"base": "#fefef9",
+				"surface": "#f8f9f3",
+				"accent": "#edf1e2",
+				"contrast": "#232815",
+				"muted": "#626a4e",
+				"primary": "#5b6b2f",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "ink",
+			"name": "Ink blue",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f4f9",
+				"accent": "#e2e5f1",
+				"contrast": "#151928",
+				"muted": "#4e546a",
+				"primary": "#253b8c",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "evening",
+			"name": "Evening",
+			"colors": {
+				"base": "#141618",
+				"surface": "#1d2023",
+				"accent": "#272b2f",
+				"contrast": "#f4f1ec",
+				"muted": "#b6b0a6",
+				"primary": "#f2b880",
+				"on-primary": "#141618"
+			}
+		}
+	]
+}

@@ -1,0 +1,895 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/work",
+			"page": "home",
+			"label": "Selected work"
+		},
+		{
+			"id": "home/services",
+			"page": "home",
+			"label": "Services"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "work/intro",
+			"page": "work",
+			"label": "Introduction"
+		},
+		{
+			"id": "work/project1",
+			"page": "work",
+			"label": "Project 1"
+		},
+		{
+			"id": "work/project2",
+			"page": "work",
+			"label": "Project 2"
+		},
+		{
+			"id": "work/project3",
+			"page": "work",
+			"label": "Project 3"
+		},
+		{
+			"id": "work/cta",
+			"page": "work",
+			"label": "Call to action"
+		},
+		{
+			"id": "services/intro",
+			"page": "services",
+			"label": "Introduction"
+		},
+		{
+			"id": "services/packages",
+			"page": "services",
+			"label": "Packages"
+		},
+		{
+			"id": "services/process",
+			"page": "services",
+			"label": "Process"
+		},
+		{
+			"id": "services/cta",
+			"page": "services",
+			"label": "Call to action"
+		},
+		{
+			"id": "about/intro",
+			"page": "about",
+			"label": "Introduction"
+		},
+		{
+			"id": "about/bio",
+			"page": "about",
+			"label": "Bio"
+		},
+		{
+			"id": "about/cta",
+			"page": "about",
+			"label": "Call to action"
+		},
+		{
+			"id": "contact/intro",
+			"page": "contact",
+			"label": "Introduction"
+		},
+		{
+			"id": "contact/details",
+			"page": "contact",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Noor Haddad",
+			"max": 60,
+			"hint": "Your name or studio name."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Brand and web designer",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Noor Haddad Studio",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 018-2365",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "hello@noorhaddad.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Location",
+			"default": "Lisbon, working with clients worldwide",
+			"max": 120
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Start a project",
+			"max": 24
+		},
+		{
+			"id": "footer.heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Footer heading",
+			"default": "Have a project in mind?",
+			"max": 60
+		},
+		{
+			"id": "footer.button",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Footer button",
+			"default": "Get in touch",
+			"max": 24
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "Designed with care, built with WordPress.",
+			"max": 80
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Brand and web design",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "I help small businesses look as good as they are",
+			"max": 80,
+			"hint": "What you do and for whom, in one line."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "Clear brands and fast, friendly websites for independent shops, cafés and studios. Based in Lisbon, working everywhere.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "See my work",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "Start a project",
+			"max": 28
+		},
+		{
+			"id": "image:home.work1",
+			"group": "home/work",
+			"type": "image",
+			"label": "Project 1 image",
+			"default": "assets/project-1.webp"
+		},
+		{
+			"id": "home.work.item1_alt",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 1 image description",
+			"default": "Illustration of coffee bags and a cup with a bold circular logo",
+			"max": 140
+		},
+		{
+			"id": "home.work.item1_title",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 1 name",
+			"default": "Harbor Coffee Roasters",
+			"max": 40
+		},
+		{
+			"id": "home.work.item1_text",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 1 type",
+			"default": "Brand identity and packaging",
+			"max": 60
+		},
+		{
+			"id": "image:home.work2",
+			"group": "home/work",
+			"type": "image",
+			"label": "Project 2 image",
+			"default": "assets/project-2.webp"
+		},
+		{
+			"id": "home.work.item2_alt",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 2 image description",
+			"default": "Illustration of an open magazine spread with large type and leaf shapes",
+			"max": 140
+		},
+		{
+			"id": "home.work.item2_title",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 2 name",
+			"default": "Fieldnotes Journal",
+			"max": 40
+		},
+		{
+			"id": "home.work.item2_text",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 2 type",
+			"default": "Editorial design and website",
+			"max": 60
+		},
+		{
+			"id": "image:home.work3",
+			"group": "home/work",
+			"type": "image",
+			"label": "Project 3 image",
+			"default": "assets/project-3.webp"
+		},
+		{
+			"id": "home.work.item3_alt",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 3 image description",
+			"default": "Illustration of a phone and a laptop showing a colourful climbing website",
+			"max": 140
+		},
+		{
+			"id": "home.work.item3_title",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 3 name",
+			"default": "Northside Climbing",
+			"max": 40
+		},
+		{
+			"id": "home.work.item3_text",
+			"group": "home/work",
+			"type": "text",
+			"label": "Project 3 type",
+			"default": "Website and signage",
+			"max": 40
+		},
+		{
+			"id": "home.work.heading",
+			"group": "home/work",
+			"type": "text",
+			"label": "Heading",
+			"default": "Selected work",
+			"max": 40
+		},
+		{
+			"id": "home.work.link",
+			"group": "home/work",
+			"type": "text",
+			"label": "Link text",
+			"default": "All projects",
+			"max": 24
+		},
+		{
+			"id": "home.services.heading",
+			"group": "home/services",
+			"type": "text",
+			"label": "Heading",
+			"default": "What I can help with",
+			"max": 60
+		},
+		{
+			"id": "home.services.item1_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Service 1 title",
+			"default": "Brand identity",
+			"max": 24
+		},
+		{
+			"id": "home.services.item1_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Service 1 text",
+			"default": "Logo, colours, type and a short guide, so everything you make looks like you.",
+			"max": 160
+		},
+		{
+			"id": "home.services.item2_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Service 2 title",
+			"default": "Websites",
+			"max": 24
+		},
+		{
+			"id": "home.services.item2_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Service 2 text",
+			"default": "Simple WordPress sites you can update yourself, fast on every phone.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item3_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Service 3 title",
+			"default": "Print and packaging",
+			"max": 40
+		},
+		{
+			"id": "home.services.item3_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Service 3 text",
+			"default": "Labels, menus, signs and anything else that needs to look good in hand.",
+			"max": 120
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "Noor listened more than she talked, and the new brand finally feels like us. Sales of our bagged coffee doubled.",
+			"max": 260
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "Tomás P., Harbor Coffee Roasters",
+			"max": 60
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Let's make something good",
+			"max": 40
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Tell me about your project. I reply to every message within two working days.",
+			"max": 160
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Start a project",
+			"max": 28
+		},
+		{
+			"id": "work.intro.eyebrow",
+			"group": "work/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Work",
+			"max": 40
+		},
+		{
+			"id": "work.intro.heading",
+			"group": "work/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Selected projects",
+			"max": 40
+		},
+		{
+			"id": "work.intro.lead",
+			"group": "work/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "A few recent projects for independent businesses. More on request.",
+			"max": 120
+		},
+		{
+			"id": "image:work.project1",
+			"group": "work/project1",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/project-1.webp"
+		},
+		{
+			"id": "work.project1.image_alt",
+			"group": "work/project1",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of coffee bags and a cup with a bold circular logo",
+			"max": 140
+		},
+		{
+			"id": "work.project1.category",
+			"group": "work/project1",
+			"type": "text",
+			"label": "Category",
+			"default": "Brand identity and packaging",
+			"max": 60
+		},
+		{
+			"id": "work.project1.title",
+			"group": "work/project1",
+			"type": "text",
+			"label": "Project name",
+			"default": "Harbor Coffee Roasters",
+			"max": 40
+		},
+		{
+			"id": "work.project1.body",
+			"group": "work/project1",
+			"type": "richtext",
+			"label": "Description",
+			"default": "A new identity for a small-batch roaster: logo, bag labels, menu boards and a simple online shop. <strong>Results:</strong> a brand the owners use on everything, from cups to vans.",
+			"max": 320
+		},
+		{
+			"id": "image:work.project2",
+			"group": "work/project2",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/project-2.webp"
+		},
+		{
+			"id": "work.project2.image_alt",
+			"group": "work/project2",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of an open magazine spread with large type and leaf shapes",
+			"max": 140
+		},
+		{
+			"id": "work.project2.category",
+			"group": "work/project2",
+			"type": "text",
+			"label": "Category",
+			"default": "Editorial design and website",
+			"max": 60
+		},
+		{
+			"id": "work.project2.title",
+			"group": "work/project2",
+			"type": "text",
+			"label": "Project name",
+			"default": "Fieldnotes Journal",
+			"max": 40
+		},
+		{
+			"id": "work.project2.body",
+			"group": "work/project2",
+			"type": "richtext",
+			"label": "Description",
+			"default": "A magazine layout system and a fast reading website for an independent nature journal. <strong>Results:</strong> readers now spend twice as long on each article.",
+			"max": 320
+		},
+		{
+			"id": "image:work.project3",
+			"group": "work/project3",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/project-3.webp"
+		},
+		{
+			"id": "work.project3.image_alt",
+			"group": "work/project3",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a phone and a laptop showing a colourful climbing website",
+			"max": 140
+		},
+		{
+			"id": "work.project3.category",
+			"group": "work/project3",
+			"type": "text",
+			"label": "Category",
+			"default": "Website and signage",
+			"max": 60
+		},
+		{
+			"id": "work.project3.title",
+			"group": "work/project3",
+			"type": "text",
+			"label": "Project name",
+			"default": "Northside Climbing",
+			"max": 40
+		},
+		{
+			"id": "work.project3.body",
+			"group": "work/project3",
+			"type": "richtext",
+			"label": "Description",
+			"default": "A booking website and wayfinding signs for a climbing gym, built around bright route colours. <strong>Results:</strong> online bookings replaced the phone queue within a month.",
+			"max": 320
+		},
+		{
+			"id": "work.cta.heading",
+			"group": "work/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Want results like these?",
+			"max": 40
+		},
+		{
+			"id": "work.cta.text",
+			"group": "work/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "I take on a few new projects each season.",
+			"max": 80
+		},
+		{
+			"id": "work.cta.button",
+			"group": "work/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Start a project",
+			"max": 28
+		},
+		{
+			"id": "services.intro.eyebrow",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Services",
+			"max": 40
+		},
+		{
+			"id": "services.intro.heading",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Design that works as hard as you do",
+			"max": 60
+		},
+		{
+			"id": "services.intro.lead",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Fixed-price packages, so you know the cost before we start.",
+			"max": 120
+		},
+		{
+			"id": "services.packages.item1_title",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Package 1 title",
+			"default": "Brand starter",
+			"max": 24
+		},
+		{
+			"id": "services.packages.item1_text",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Package 1 text",
+			"default": "Logo, colour palette, two typefaces and a one-page guide. Two rounds of changes. From $1,800.",
+			"max": 160
+		},
+		{
+			"id": "services.packages.item2_title",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Package 2 title",
+			"default": "Website",
+			"max": 24
+		},
+		{
+			"id": "services.packages.item2_text",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Package 2 text",
+			"default": "A WordPress site of up to six pages, set up so you can edit it yourself. From $3,500.",
+			"max": 160
+		},
+		{
+			"id": "services.packages.item3_title",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Package 3 title",
+			"default": "Brand and website",
+			"max": 40
+		},
+		{
+			"id": "services.packages.item3_text",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Package 3 text",
+			"default": "Both, designed together so everything matches. From $4,900.",
+			"max": 120
+		},
+		{
+			"id": "services.process.item1_title",
+			"group": "services/process",
+			"type": "text",
+			"label": "Step 1 title",
+			"default": "Talk",
+			"max": 24
+		},
+		{
+			"id": "services.process.item1_text",
+			"group": "services/process",
+			"type": "text",
+			"label": "Step 1 text",
+			"default": "A free 30-minute call about your business, your customers and your goals.",
+			"max": 120
+		},
+		{
+			"id": "services.process.item2_title",
+			"group": "services/process",
+			"type": "text",
+			"label": "Step 2 title",
+			"default": "Design",
+			"max": 24
+		},
+		{
+			"id": "services.process.item2_text",
+			"group": "services/process",
+			"type": "text",
+			"label": "Step 2 text",
+			"default": "I share first ideas within two weeks, then we refine them together.",
+			"max": 120
+		},
+		{
+			"id": "services.process.item3_title",
+			"group": "services/process",
+			"type": "text",
+			"label": "Step 3 title",
+			"default": "Launch",
+			"max": 24
+		},
+		{
+			"id": "services.process.item3_text",
+			"group": "services/process",
+			"type": "text",
+			"label": "Step 3 text",
+			"default": "Final files, your new site live, and a short guide so you can keep it going.",
+			"max": 160
+		},
+		{
+			"id": "services.process.heading",
+			"group": "services/process",
+			"type": "text",
+			"label": "Heading",
+			"default": "How we will work together",
+			"max": 60
+		},
+		{
+			"id": "services.cta.heading",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Not sure what you need?",
+			"max": 40
+		},
+		{
+			"id": "services.cta.text",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book a free call and we will work it out together.",
+			"max": 80
+		},
+		{
+			"id": "services.cta.button",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a call",
+			"max": 28
+		},
+		{
+			"id": "about.intro.eyebrow",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "About",
+			"max": 40
+		},
+		{
+			"id": "about.intro.heading",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Hello, I'm Noor",
+			"max": 24
+		},
+		{
+			"id": "about.intro.lead",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "A brand and web designer who likes small businesses, clear words and good coffee.",
+			"max": 160
+		},
+		{
+			"id": "image:about.portrait",
+			"group": "about/bio",
+			"type": "image",
+			"label": "Portrait",
+			"default": "assets/portrait.webp"
+		},
+		{
+			"id": "about.bio.image_alt",
+			"group": "about/bio",
+			"type": "text",
+			"label": "Portrait description",
+			"default": "Illustrated portrait of a designer at her desk with sketches pinned on the wall",
+			"max": 140
+		},
+		{
+			"id": "about.bio.body1",
+			"group": "about/bio",
+			"type": "richtext",
+			"label": "First paragraph",
+			"default": "I spent eight years at design studios in London and Lisbon, working for large brands. I loved the craft but missed knowing the people I designed for.",
+			"max": 320
+		},
+		{
+			"id": "about.bio.body2",
+			"group": "about/bio",
+			"type": "richtext",
+			"label": "Second paragraph",
+			"default": "Since 2020 I have worked on my own with cafés, shops, makers and small studios. <strong>You work with me directly</strong>, from the first call to the last file.",
+			"max": 320
+		},
+		{
+			"id": "about.bio.clients_heading",
+			"group": "about/bio",
+			"type": "text",
+			"label": "Clients heading",
+			"default": "Some people I have worked with",
+			"max": 60
+		},
+		{
+			"id": "about.bio.clients",
+			"group": "about/bio",
+			"type": "text",
+			"label": "Clients",
+			"default": "Harbor Coffee Roasters, Fieldnotes Journal, Northside Climbing, Casa Verde Ceramics, The Little Print Shop",
+			"max": 240
+		},
+		{
+			"id": "about.cta.heading",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Say hello",
+			"max": 24
+		},
+		{
+			"id": "about.cta.text",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "I would love to hear what you are working on.",
+			"max": 80
+		},
+		{
+			"id": "about.cta.button",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Get in touch",
+			"max": 28
+		},
+		{
+			"id": "contact.intro.eyebrow",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Contact",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.heading",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Let's talk about your project",
+			"max": 60
+		},
+		{
+			"id": "contact.intro.lead",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Email is best. Tell me a little about your business, what you need and when you need it.",
+			"max": 160
+		},
+		{
+			"id": "contact.availability.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Heading",
+			"default": "Availability",
+			"max": 40
+		},
+		{
+			"id": "contact.availability.body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Text",
+			"default": "I am booking projects for <strong>next season</strong>. Small updates for existing clients can usually start within a week.",
+			"max": 220
+		}
+	]
+}

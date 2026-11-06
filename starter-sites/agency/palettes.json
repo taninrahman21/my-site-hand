@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "indigo",
+			"name": "Indigo",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f5f4fb",
+				"accent": "#e7e4f8",
+				"contrast": "#15122b",
+				"muted": "#4f4a68",
+				"primary": "#4b32c3",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "ocean",
+			"name": "Ocean",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f6f9",
+				"accent": "#e2e9f1",
+				"contrast": "#151f28",
+				"muted": "#4e5c6a",
+				"primary": "#0b6bcb",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "emerald",
+			"name": "Emerald",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f9f7",
+				"accent": "#e2f1ed",
+				"contrast": "#152823",
+				"muted": "#4e6a62",
+				"primary": "#047857",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "graphite",
+			"name": "Graphite",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f4f6f8",
+				"accent": "#e4e8ef",
+				"contrast": "#171d26",
+				"muted": "#4e596a",
+				"primary": "#334155",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "ember",
+			"name": "Ember",
+			"colors": {
+				"base": "#fffcf9",
+				"surface": "#f9f5f3",
+				"accent": "#f1e6e2",
+				"contrast": "#281b15",
+				"muted": "#6a564e",
+				"primary": "#c2410c",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "midnight",
+			"name": "Midnight",
+			"colors": {
+				"base": "#0d0c1d",
+				"surface": "#16152c",
+				"accent": "#211f3d",
+				"contrast": "#f1f0fb",
+				"muted": "#aeaacb",
+				"primary": "#a597ff",
+				"on-primary": "#0d0c1d"
+			}
+		}
+	]
+}

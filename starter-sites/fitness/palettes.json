@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "volt",
+			"name": "Volt",
+			"colors": {
+				"base": "#0d0f0c",
+				"surface": "#161a14",
+				"accent": "#20261d",
+				"contrast": "#f1f5ec",
+				"muted": "#a7b3a0",
+				"primary": "#c8f04a",
+				"on-primary": "#0d0f0c"
+			}
+		},
+		{
+			"id": "blaze",
+			"name": "Blaze",
+			"colors": {
+				"base": "#0f0d0c",
+				"surface": "#1a1614",
+				"accent": "#26201d",
+				"contrast": "#f7f1ec",
+				"muted": "#b7a99f",
+				"primary": "#ff7a3d",
+				"on-primary": "#0f0d0c"
+			}
+		},
+		{
+			"id": "power",
+			"name": "Power red",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f9f3f4",
+				"accent": "#f1e2e4",
+				"contrast": "#281518",
+				"muted": "#6a4e53",
+				"primary": "#c81e3a",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "cobalt",
+			"name": "Cobalt",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f5f9",
+				"accent": "#e2e6f1",
+				"contrast": "#151a28",
+				"muted": "#4e556a",
+				"primary": "#1b49ca",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "forest",
+			"name": "Trail",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f9f5",
+				"accent": "#e2f1e8",
+				"contrast": "#15281c",
+				"muted": "#4e6a58",
+				"primary": "#166534",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "steel",
+			"name": "Steel",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f6f6f6",
+				"accent": "#e9e9ea",
+				"contrast": "#1d1d20",
+				"muted": "#58585f",
+				"primary": "#27272a",
+				"on-primary": "#ffffff"
+			}
+		}
+	]
+}

@@ -114,10 +114,20 @@ class Admin
 			[$this, 'render_dashboard']
 		);
 
-		// Site Health submenu — deliberately first: it is the only page that
-		// delivers value without any setup. Position 0 places it above
-		// Dashboard without changing the parent menu slug, so existing links
-		// to admin.php?page=my-site-hand still land on the Dashboard.
+		// Site Builder first, then Site Health, both above Dashboard. Positions
+		// only reorder the submenu: the parent slug is unchanged, so existing
+		// links to admin.php?page=my-site-hand still land on the Dashboard.
+		$this->page_hooks[] = add_submenu_page(
+			'my-site-hand',
+			__('Site Builder - My Site Hand', 'my-site-hand'),
+			__('Site Builder', 'my-site-hand'),
+			'manage_options',
+			'my-site-hand-builder',
+			[$this, 'render_site_builder'],
+			0
+		);
+
+		// Site Health: the page that delivers value with no setup at all.
 		$this->page_hooks[] = add_submenu_page(
 			'my-site-hand',
 			__('Site Health - My Site Hand', 'my-site-hand'),
@@ -125,7 +135,7 @@ class Admin
 			'manage_options',
 			'my-site-hand-health',
 			[$this, 'render_health'],
-			0
+			1
 		);
 
 		// Abilities submenu.
@@ -281,6 +291,26 @@ class Admin
 					'caps' => \MySiteHand\Site_Health_Scanner::CHECK_CAPS,
 				]
 			);
+
+			$this->enqueue_ai_bulk_fix();
+		}
+
+		// Site Builder.
+		if (str_contains($hook, 'my-site-hand-builder')) {
+			$this->enqueue_site_builder();
+		}
+
+		// AI Assistance settings.
+		if (str_contains($hook, 'my-site-hand-settings')) {
+			wp_enqueue_script(
+				'msh-ai-settings',
+				MYSITEHAND_URL . 'assets/js/ai-settings.js',
+				['mysitehand-admin', 'wp-i18n'],
+				MYSITEHAND_VERSION,
+				true
+			);
+
+			$this->set_script_translations('msh-ai-settings');
 		}
 
 		// Localized data for JavaScript.
@@ -302,6 +332,162 @@ class Admin
 					'error' => __('An error occurred. Please try again.', 'my-site-hand'),
 					'cacheCleared' => __('Cache cleared!', 'my-site-hand'),
 				],
+			]
+		);
+	}
+
+	/**
+	 * Enqueue the Site Builder app and its data.
+	 *
+	 * @return void
+	 */
+	private function enqueue_site_builder(): void
+	{
+		$plugin  = \MySiteHand\Plugin::get_instance();
+		$builder = $plugin->get_site_builder();
+		$user_id = get_current_user_id();
+
+		// The image fields use the core media library modal.
+		wp_enqueue_media();
+
+		wp_enqueue_style(
+			'msh-site-builder',
+			MYSITEHAND_URL . 'assets/css/site-builder.css',
+			['mysitehand-admin'],
+			MYSITEHAND_VERSION
+		);
+
+		wp_enqueue_script(
+			'msh-site-builder',
+			MYSITEHAND_URL . 'assets/js/site-builder.js',
+			['mysitehand-admin', 'wp-i18n'],
+			MYSITEHAND_VERSION,
+			true
+		);
+
+		$this->set_script_translations('msh-site-builder');
+
+		wp_localize_script(
+			'msh-site-builder',
+			'mshBuilder',
+			apply_filters(
+				'my_site_hand_builder_script_data',
+				[
+					'restUrl'       => rest_url('my-site-hand/v1/builder/'),
+					'nonce'         => wp_create_nonce('wp_rest'),
+					'sites'         => $builder->list_sites(),
+					'staged'        => $builder->get_staged($user_id),
+					'live'          => $plugin->get_site_applier()->live_summary(),
+					'isBlockTheme'  => wp_is_block_theme(),
+					'themeName'     => wp_get_theme()->get('Name'),
+					'canSwitchTheme' => current_user_can('switch_themes'),
+					'settingsUrl'   => admin_url('admin.php?page=my-site-hand-settings'),
+					'siteEditorUrl' => admin_url('site-editor.php'),
+					'ai'            => $this->site_builder_ai_data($plugin->get_ai_manager()),
+				]
+			)
+		);
+	}
+
+	/**
+	 * What the Site Builder editor needs to know about AI. Never the key.
+	 *
+	 * @param \MySiteHand\AI_Manager $ai AI manager.
+	 * @return array<string, mixed>|null Null when no key is set.
+	 */
+	private function site_builder_ai_data(\MySiteHand\AI_Manager $ai): ?array
+	{
+		if (!$ai->is_configured()) {
+			return null;
+		}
+
+		$provider = $ai->get_active_provider();
+
+		return [
+			'provider'   => null !== $provider ? $provider->get_label() : '',
+			'model'      => $ai->get_model(),
+			'todaySpend' => $ai->get_usage('today')['cost'],
+			'dailyCap'   => $ai->get_daily_cap(),
+		];
+	}
+
+	/**
+	 * Enqueue the AI Bulk Fix review panel, only when AI is configured.
+	 *
+	 * With no API key this returns before doing anything, so the Site Health
+	 * page loads exactly the scripts and data it did before AI existed.
+	 *
+	 * @return void
+	 */
+	private function enqueue_ai_bulk_fix(): void
+	{
+		$plugin = \MySiteHand\Plugin::get_instance();
+		$ai = $plugin->get_ai_manager();
+
+		if (!$ai->is_configured()) {
+			return;
+		}
+
+		$scanner = $plugin->get_site_health_scanner();
+		$checks = [];
+
+		foreach (\MySiteHand\Bulk_Fix_Manager::SUPPORTED_CHECKS as $check_id) {
+			$check = $scanner->get_check($check_id);
+
+			if (null === $check || !$check->is_applicable()) {
+				continue;
+			}
+
+			[$input_tokens, $output_tokens] = \MySiteHand\Bulk_Fix_Manager::ESTIMATED_TOKENS[$check_id];
+
+			$checks[$check_id] = [
+				'kind' => 'missing-alt-text' === $check_id ? 'alt' : 'meta',
+				'maxLength' => 'missing-alt-text' === $check_id
+					? \MySiteHand\Bulk_Fix_Manager::ALT_MAX - 1
+					: \MySiteHand\Bulk_Fix_Manager::META_MAX,
+				'costPerItem' => $ai->estimate_cost($input_tokens, $output_tokens, $ai->get_model()),
+			];
+		}
+
+		if (empty($checks)) {
+			return;
+		}
+
+		wp_enqueue_script(
+			'msh-health-ai-fix',
+			MYSITEHAND_URL . 'assets/js/health-ai-fix.js',
+			['msh-health-scan', 'wp-i18n'],
+			MYSITEHAND_VERSION,
+			true
+		);
+
+		$this->set_script_translations('msh-health-ai-fix');
+
+		$provider = $ai->get_active_provider();
+		$models = null !== $provider ? $provider->get_models() : [];
+		$model = $ai->get_model();
+
+		wp_localize_script(
+			'msh-health-ai-fix',
+			'mshAiFix',
+			[
+				'restUrl' => rest_url('my-site-hand/v1/health/'),
+				'nonce' => wp_create_nonce('wp_rest'),
+				'checks' => $checks,
+				'generateBatch' => \MySiteHand\Bulk_Fix_Manager::GENERATE_BATCH,
+				'applyBatch' => \MySiteHand\Bulk_Fix_Manager::APPLY_BATCH,
+				'todaySpend' => $ai->get_usage('today')['cost'],
+				'dailyCap' => $ai->get_daily_cap(),
+				// Never the key. Only which service, and which model.
+				'providerLabel' => null !== $provider
+					? sprintf(
+						/* translators: 1: AI provider name, 2: model name */
+						__('%1$s, %2$s', 'my-site-hand'),
+						$provider->get_label(),
+						$model
+					)
+					: '',
+				'modelLabel' => $models[$model] ?? $model,
 			]
 		);
 	}
@@ -416,6 +602,19 @@ class Admin
 			wp_die(esc_html__('You do not have permission to access this page.', 'my-site-hand'));
 		}
 		require MYSITEHAND_PATH . 'templates/admin/dashboard.php';
+	}
+
+	/**
+	 * Render the Site Builder page.
+	 *
+	 * @return void
+	 */
+	public function render_site_builder(): void
+	{
+		if (!current_user_can('manage_options')) {
+			wp_die(esc_html__('You do not have permission to access this page.', 'my-site-hand'));
+		}
+		require MYSITEHAND_PATH . 'templates/admin/site-builder.php';
 	}
 
 	/**
@@ -623,15 +822,13 @@ class Admin
 	}
 
 	/**
-	 * Redirect to Site Health on plugin activation.
+	 * Redirect to the Site Builder gallery on plugin activation.
 	 *
 	 * Deliberately not the Dashboard. The Dashboard opens with a token, a
-	 * Node.js install and a terminal — which is exactly what non-technical
-	 * users bounce off. Site Health delivers something about their own site
-	 * before they have decided what this plugin is.
-	 *
-	 * The msh-autoscan flag rides along on the redirect only, so the scan
-	 * starts by itself on this one visit and never again.
+	 * Node.js install and a terminal, which is exactly what non-technical
+	 * users bounce off. The gallery shows what the plugin is for at a glance,
+	 * and its welcome panel offers the health scan as the other first step.
+	 * Nothing runs by itself on arrival.
 	 *
 	 * @return void
 	 */
@@ -649,7 +846,7 @@ class Admin
 				(!defined('DOING_AJAX') || !DOING_AJAX) &&
 				(!defined('WP_CLI') || !WP_CLI)
 			) {
-				wp_safe_redirect(admin_url('admin.php?page=my-site-hand-health&msh-autoscan=1'));
+				wp_safe_redirect(admin_url('admin.php?page=my-site-hand-builder&view=gallery'));
 				exit;
 			}
 		}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe4f5"/><stop offset="1" stop-color="#eef5fb"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <circle cx="1030" cy="150" r="70" fill="#fff4cc"/>
+  <!-- House -->
+  <g transform="translate(90 200)">
+    <path d="M0 220 L230 40 L460 220 Z" fill="#7a4a35"/>
+    <rect x="30" y="220" width="400" height="300" fill="#f2e6d6"/>
+    <rect x="70" y="270" width="110" height="100" fill="#bfdcef" stroke="#ffffff" stroke-width="10"/>
+    <rect x="270" y="270" width="110" height="100" fill="#bfdcef" stroke="#ffffff" stroke-width="10"/>
+    <rect x="190" y="390" width="80" height="130" fill="#0f1b2d"/>
+    <rect x="320" y="60" width="44" height="90" fill="#7a4a35"/>
+  </g>
+  <rect y="720" width="1200" height="180" fill="#c9ced6"/>
+  <rect y="710" width="1200" height="16" fill="#a9b0bb"/>
+  <g fill="#ffffff" opacity="0.7"><rect x="60" y="808" width="140" height="12" rx="6"/><rect x="330" y="808" width="140" height="12" rx="6"/><rect x="600" y="808" width="140" height="12" rx="6"/><rect x="870" y="808" width="140" height="12" rx="6"/></g>
+  <!-- Van -->
+  <g transform="translate(520 430)">
+    <ellipse cx="300" cy="300" rx="320" ry="22" fill="#000" opacity="0.15"/>
+    <path d="M0 80 Q0 40 40 40 H420 L540 150 Q590 160 590 210 V270 H0 Z" fill="#ffffff"/>
+    <path d="M430 60 L520 150 H430 Z" fill="#bfdcef"/>
+    <rect x="0" y="170" width="430" height="40" fill="#b8420d"/>
+    <rect x="40" y="80" width="250" height="60" rx="8" fill="#0f1b2d"/>
+    <rect x="60" y="98" width="150" height="14" rx="7" fill="#ffffff"/>
+    <rect x="60" y="120" width="100" height="10" rx="5" fill="#ff9a4d"/>
+    <g fill="#ffffff"><rect x="310" y="100" width="20" height="56" rx="4"/><rect x="292" y="118" width="56" height="20" rx="4"/></g>
+    <g><circle cx="120" cy="272" r="52" fill="#1f2937"/><circle cx="120" cy="272" r="22" fill="#9ca3af"/><circle cx="470" cy="272" r="52" fill="#1f2937"/><circle cx="470" cy="272" r="22" fill="#9ca3af"/></g>
+    <rect x="560" y="200" width="30" height="20" rx="4" fill="#ffd166"/>
+  </g>
+  <!-- Tree -->
+  <g transform="translate(70 460)"><rect x="-10" y="80" width="20" height="180" fill="#6b4e3a"/><circle cy="60" r="90" fill="#4fa784"/><circle cx="-50" cy="100" r="60" fill="#3c8f6f"/></g>
+</svg>

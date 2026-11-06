@@ -1,0 +1,1201 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/help",
+			"page": "home",
+			"label": "How I help"
+		},
+		{
+			"id": "home/approach",
+			"page": "home",
+			"label": "Approach"
+		},
+		{
+			"id": "home/programs",
+			"page": "home",
+			"label": "Programs"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "programs/intro",
+			"page": "programs",
+			"label": "Introduction"
+		},
+		{
+			"id": "programs/plans",
+			"page": "programs",
+			"label": "Programs"
+		},
+		{
+			"id": "programs/how",
+			"page": "programs",
+			"label": "How it works"
+		},
+		{
+			"id": "programs/faq",
+			"page": "programs",
+			"label": "Questions"
+		},
+		{
+			"id": "programs/cta",
+			"page": "programs",
+			"label": "Call to action"
+		},
+		{
+			"id": "about/intro",
+			"page": "about",
+			"label": "Introduction"
+		},
+		{
+			"id": "about/story",
+			"page": "about",
+			"label": "Story"
+		},
+		{
+			"id": "about/numbers",
+			"page": "about",
+			"label": "Highlights"
+		},
+		{
+			"id": "about/cta",
+			"page": "about",
+			"label": "Call to action"
+		},
+		{
+			"id": "stories/intro",
+			"page": "stories",
+			"label": "Introduction"
+		},
+		{
+			"id": "stories/story1",
+			"page": "stories",
+			"label": "Testimonial"
+		},
+		{
+			"id": "stories/story2",
+			"page": "stories",
+			"label": "Testimonial"
+		},
+		{
+			"id": "stories/story3",
+			"page": "stories",
+			"label": "Testimonial"
+		},
+		{
+			"id": "stories/cta",
+			"page": "stories",
+			"label": "Call to action"
+		},
+		{
+			"id": "contact/intro",
+			"page": "contact",
+			"label": "Introduction"
+		},
+		{
+			"id": "contact/details",
+			"page": "contact",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Maya Ortiz",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Career and leadership coaching",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Maya Ortiz Coaching",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 011-2048",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "hello@mayaortiz.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Address",
+			"default": "Online, and in person in Denver",
+			"max": 120
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Book a free call",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "Coaching for people who are good at their job and ready for what comes next.",
+			"max": 160
+		},
+		{
+			"id": "footer.contact_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Contact heading",
+			"default": "Get in touch",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "Coaching is not therapy or medical advice.",
+			"max": 120
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Career and leadership coach",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Find work that fits the person you are now",
+			"max": 80,
+			"hint": "The main promise, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "One-to-one coaching for people ready to change direction, step up to lead, or stop feeling stuck. Start with a free 20-minute call.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "See programs",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/portrait.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustrated portrait of a smiling coach sitting in a bright room with plants",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.help.item1_title",
+			"group": "home/help",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Stuck in the wrong job",
+			"max": 40
+		},
+		{
+			"id": "home.help.item1_text",
+			"group": "home/help",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "You are good at it, but it no longer fits. You want a plan, not a leap in the dark.",
+			"max": 160
+		},
+		{
+			"id": "home.help.item2_title",
+			"group": "home/help",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "New to leading people",
+			"max": 40
+		},
+		{
+			"id": "home.help.item2_text",
+			"group": "home/help",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "You were promoted for your skills, and now you need a different set.",
+			"max": 120
+		},
+		{
+			"id": "home.help.item3_title",
+			"group": "home/help",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Running on empty",
+			"max": 40
+		},
+		{
+			"id": "home.help.item3_text",
+			"group": "home/help",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "You want ambition without burnout, and a week that leaves room to breathe.",
+			"max": 120
+		},
+		{
+			"id": "home.help.eyebrow",
+			"group": "home/help",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "How I help",
+			"max": 40
+		},
+		{
+			"id": "home.help.heading",
+			"group": "home/help",
+			"type": "text",
+			"label": "Heading",
+			"default": "Is this you?",
+			"max": 24
+		},
+		{
+			"id": "home.approach.eyebrow",
+			"group": "home/approach",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "My approach",
+			"max": 40
+		},
+		{
+			"id": "home.approach.heading",
+			"group": "home/approach",
+			"type": "text",
+			"label": "Heading",
+			"default": "Practical, kind and honest",
+			"max": 60
+		},
+		{
+			"id": "home.approach.body",
+			"group": "home/approach",
+			"type": "richtext",
+			"label": "Text",
+			"default": "We talk about what you actually want, then turn it into small steps you can take this week. <strong>No jargon and no personality tests you will forget.</strong>",
+			"max": 320
+		},
+		{
+			"id": "home.approach.button",
+			"group": "home/approach",
+			"type": "text",
+			"label": "Button text",
+			"default": "About Maya",
+			"max": 28
+		},
+		{
+			"id": "image:home.approach",
+			"group": "home/approach",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/notebook.webp"
+		},
+		{
+			"id": "home.approach.image_alt",
+			"group": "home/approach",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of an open notebook, a pen and a cup of coffee on a wooden table",
+			"max": 140
+		},
+		{
+			"id": "home.programs.plan1_name",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 1 name",
+			"default": "Single session",
+			"max": 40
+		},
+		{
+			"id": "home.programs.plan1_price",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 1 price",
+			"default": "$180",
+			"max": 16
+		},
+		{
+			"id": "home.programs.plan1_period",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 1 price note",
+			"default": "75 minutes",
+			"max": 40
+		},
+		{
+			"id": "home.programs.plan1_included",
+			"group": "home/programs",
+			"type": "richtext",
+			"label": "Plan 1 includes",
+			"default": "One focused session<br>Notes and next steps<br>Email follow-up",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "home.programs.plan1_button",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 1 button",
+			"default": "Book a session",
+			"max": 28
+		},
+		{
+			"id": "home.programs.plan2_badge",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 2 label",
+			"default": "Most popular",
+			"max": 24
+		},
+		{
+			"id": "home.programs.plan2_name",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 2 name",
+			"default": "Next step",
+			"max": 40
+		},
+		{
+			"id": "home.programs.plan2_price",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 2 price",
+			"default": "$1,200",
+			"max": 16
+		},
+		{
+			"id": "home.programs.plan2_period",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 2 price note",
+			"default": "8 sessions over 3 months",
+			"max": 40
+		},
+		{
+			"id": "home.programs.plan2_included",
+			"group": "home/programs",
+			"type": "richtext",
+			"label": "Plan 2 includes",
+			"default": "Fortnightly coaching<br>Personal action plan<br>Email support between sessions",
+			"max": 160,
+			"hint": "One item per line."
+		},
+		{
+			"id": "home.programs.plan2_button",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 2 button",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "home.programs.plan3_name",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 3 name",
+			"default": "Leadership",
+			"max": 40
+		},
+		{
+			"id": "home.programs.plan3_price",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 3 price",
+			"default": "$2,400",
+			"max": 16
+		},
+		{
+			"id": "home.programs.plan3_period",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 3 price note",
+			"default": "12 sessions over 6 months",
+			"max": 40
+		},
+		{
+			"id": "home.programs.plan3_included",
+			"group": "home/programs",
+			"type": "richtext",
+			"label": "Plan 3 includes",
+			"default": "For new and growing leaders<br>360 feedback review<br>Priority support",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "home.programs.plan3_button",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Plan 3 button",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "home.programs.eyebrow",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Programs",
+			"max": 40
+		},
+		{
+			"id": "home.programs.heading",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Heading",
+			"default": "Ways to work together",
+			"max": 40
+		},
+		{
+			"id": "home.programs.intro",
+			"group": "home/programs",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Every program starts with a free 20-minute call to check we are a good fit.",
+			"max": 120
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "Six months after our first call I changed careers, took a pay rise and stopped dreading Mondays. Maya asked the questions I had been avoiding.",
+			"max": 280
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "Daniel F., product manager",
+			"max": 70
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Ready for your next step?",
+			"max": 40
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book a free 20-minute call. No pressure, no sales pitch.",
+			"max": 120
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "programs.intro.eyebrow",
+			"group": "programs/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Programs",
+			"max": 40
+		},
+		{
+			"id": "programs.intro.heading",
+			"group": "programs/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Coaching that fits your life",
+			"max": 60
+		},
+		{
+			"id": "programs.intro.lead",
+			"group": "programs/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Online or in person, at times that work around your job and family.",
+			"max": 120
+		},
+		{
+			"id": "programs.plans.plan1_name",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 1 name",
+			"default": "Single session",
+			"max": 40
+		},
+		{
+			"id": "programs.plans.plan1_price",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 1 price",
+			"default": "$180",
+			"max": 16
+		},
+		{
+			"id": "programs.plans.plan1_period",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 1 price note",
+			"default": "75 minutes",
+			"max": 40
+		},
+		{
+			"id": "programs.plans.plan1_included",
+			"group": "programs/plans",
+			"type": "richtext",
+			"label": "Plan 1 includes",
+			"default": "One focused session<br>Notes and next steps<br>Email follow-up",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "programs.plans.plan1_button",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 1 button",
+			"default": "Book a session",
+			"max": 28
+		},
+		{
+			"id": "programs.plans.plan2_badge",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 2 label",
+			"default": "Most popular",
+			"max": 24
+		},
+		{
+			"id": "programs.plans.plan2_name",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 2 name",
+			"default": "Next step",
+			"max": 40
+		},
+		{
+			"id": "programs.plans.plan2_price",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 2 price",
+			"default": "$1,200",
+			"max": 16
+		},
+		{
+			"id": "programs.plans.plan2_period",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 2 price note",
+			"default": "8 sessions over 3 months",
+			"max": 40
+		},
+		{
+			"id": "programs.plans.plan2_included",
+			"group": "programs/plans",
+			"type": "richtext",
+			"label": "Plan 2 includes",
+			"default": "Fortnightly coaching<br>Personal action plan<br>Email support between sessions",
+			"max": 160,
+			"hint": "One item per line."
+		},
+		{
+			"id": "programs.plans.plan2_button",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 2 button",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "programs.plans.plan3_name",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 3 name",
+			"default": "Leadership",
+			"max": 40
+		},
+		{
+			"id": "programs.plans.plan3_price",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 3 price",
+			"default": "$2,400",
+			"max": 16
+		},
+		{
+			"id": "programs.plans.plan3_period",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 3 price note",
+			"default": "12 sessions over 6 months",
+			"max": 40
+		},
+		{
+			"id": "programs.plans.plan3_included",
+			"group": "programs/plans",
+			"type": "richtext",
+			"label": "Plan 3 includes",
+			"default": "For new and growing leaders<br>360 feedback review<br>Priority support",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "programs.plans.plan3_button",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Plan 3 button",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "programs.plans.eyebrow",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Programs",
+			"max": 40
+		},
+		{
+			"id": "programs.plans.heading",
+			"group": "programs/plans",
+			"type": "text",
+			"label": "Heading",
+			"default": "Choose your program",
+			"max": 40
+		},
+		{
+			"id": "programs.how.item1_title",
+			"group": "programs/how",
+			"type": "text",
+			"label": "Step 1 title",
+			"default": "Free intro call",
+			"max": 24
+		},
+		{
+			"id": "programs.how.item1_text",
+			"group": "programs/how",
+			"type": "text",
+			"label": "Step 1 text",
+			"default": "Twenty minutes to talk about where you are and where you want to be.",
+			"max": 120
+		},
+		{
+			"id": "programs.how.item2_title",
+			"group": "programs/how",
+			"type": "text",
+			"label": "Step 2 title",
+			"default": "Your plan",
+			"max": 24
+		},
+		{
+			"id": "programs.how.item2_text",
+			"group": "programs/how",
+			"type": "text",
+			"label": "Step 2 text",
+			"default": "We agree goals, how often we meet and how we will know it is working.",
+			"max": 120
+		},
+		{
+			"id": "programs.how.item3_title",
+			"group": "programs/how",
+			"type": "text",
+			"label": "Step 3 title",
+			"default": "Regular sessions",
+			"max": 40
+		},
+		{
+			"id": "programs.how.item3_text",
+			"group": "programs/how",
+			"type": "text",
+			"label": "Step 3 text",
+			"default": "Focused conversations with clear actions, and support in between.",
+			"max": 120
+		},
+		{
+			"id": "programs.how.heading",
+			"group": "programs/how",
+			"type": "text",
+			"label": "Heading",
+			"default": "How coaching works",
+			"max": 40
+		},
+		{
+			"id": "programs.faq.q1",
+			"group": "programs/faq",
+			"type": "text",
+			"label": "Question 1",
+			"default": "Is coaching the same as therapy?",
+			"max": 120
+		},
+		{
+			"id": "programs.faq.a1",
+			"group": "programs/faq",
+			"type": "richtext",
+			"label": "Answer 1",
+			"default": "No. Coaching looks forward and focuses on goals. If therapy would help you more, I will tell you.",
+			"max": 160
+		},
+		{
+			"id": "programs.faq.q2",
+			"group": "programs/faq",
+			"type": "text",
+			"label": "Question 2",
+			"default": "Can my employer pay?",
+			"max": 120
+		},
+		{
+			"id": "programs.faq.a2",
+			"group": "programs/faq",
+			"type": "richtext",
+			"label": "Answer 2",
+			"default": "Often, yes. <strong>I can send an invoice to your company</strong> and a short proposal for your manager.",
+			"max": 220
+		},
+		{
+			"id": "programs.faq.q3",
+			"group": "programs/faq",
+			"type": "text",
+			"label": "Question 3",
+			"default": "What if it is not working?",
+			"max": 120
+		},
+		{
+			"id": "programs.faq.a3",
+			"group": "programs/faq",
+			"type": "richtext",
+			"label": "Answer 3",
+			"default": "Tell me. We adjust the plan, and you can stop at any time with a refund for unused sessions.",
+			"max": 160
+		},
+		{
+			"id": "programs.faq.heading",
+			"group": "programs/faq",
+			"type": "text",
+			"label": "Heading",
+			"default": "Common questions",
+			"max": 40
+		},
+		{
+			"id": "programs.cta.heading",
+			"group": "programs/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Not sure which program fits?",
+			"max": 60
+		},
+		{
+			"id": "programs.cta.text",
+			"group": "programs/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "We will work it out together on a free call.",
+			"max": 80
+		},
+		{
+			"id": "programs.cta.button",
+			"group": "programs/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "about.intro.eyebrow",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "About",
+			"max": 40
+		},
+		{
+			"id": "about.intro.heading",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Hello, I am Maya",
+			"max": 40
+		},
+		{
+			"id": "about.intro.lead",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "A former engineering manager who now helps people find work that fits.",
+			"max": 120
+		},
+		{
+			"id": "about.story.eyebrow",
+			"group": "about/story",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "My story",
+			"max": 40
+		},
+		{
+			"id": "about.story.heading",
+			"group": "about/story",
+			"type": "text",
+			"label": "Heading",
+			"default": "I have been where you are",
+			"max": 40
+		},
+		{
+			"id": "about.story.body1",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "First paragraph",
+			"default": "I spent twelve years in tech, the last five leading teams. I was good at it and exhausted by it, and nobody had told me there were other options.",
+			"max": 320
+		},
+		{
+			"id": "about.story.body2",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "Second paragraph",
+			"default": "Since 2019 I have coached more than 300 people through career changes, promotions and burnout. <strong>I am certified by the International Coaching Federation.</strong>",
+			"max": 320
+		},
+		{
+			"id": "image:about.story",
+			"group": "about/story",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/workshop.webp"
+		},
+		{
+			"id": "about.story.image_alt",
+			"group": "about/story",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a small workshop with a whiteboard covered in sticky notes",
+			"max": 140
+		},
+		{
+			"id": "about.numbers.item1_value",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "300+",
+			"max": 16
+		},
+		{
+			"id": "about.numbers.item1_text",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "clients coached",
+			"max": 80
+		},
+		{
+			"id": "about.numbers.item2_value",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "12 yrs",
+			"max": 16
+		},
+		{
+			"id": "about.numbers.item2_text",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "leading teams in tech",
+			"max": 80
+		},
+		{
+			"id": "about.numbers.item3_value",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "ICF",
+			"max": 16
+		},
+		{
+			"id": "about.numbers.item3_text",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "certified coach",
+			"max": 80
+		},
+		{
+			"id": "about.numbers.item4_value",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "92%",
+			"max": 16
+		},
+		{
+			"id": "about.numbers.item4_text",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "reach their main goal",
+			"max": 80
+		},
+		{
+			"id": "about.cta.heading",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Let us talk",
+			"max": 24
+		},
+		{
+			"id": "about.cta.text",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Your first call is free, and there is no obligation.",
+			"max": 120
+		},
+		{
+			"id": "about.cta.button",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "stories.intro.eyebrow",
+			"group": "stories/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Client stories",
+			"max": 40
+		},
+		{
+			"id": "stories.intro.heading",
+			"group": "stories/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Real people, real changes",
+			"max": 40
+		},
+		{
+			"id": "stories.intro.lead",
+			"group": "stories/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "A few words from people I have coached. Names are shared with their permission.",
+			"max": 160
+		},
+		{
+			"id": "stories.story1.quote",
+			"group": "stories/story1",
+			"type": "text",
+			"label": "Quote",
+			"default": "Six months after our first call I changed careers, took a pay rise and stopped dreading Mondays.",
+			"max": 280
+		},
+		{
+			"id": "stories.story1.name",
+			"group": "stories/story1",
+			"type": "text",
+			"label": "Name",
+			"default": "Daniel F., product manager",
+			"max": 70
+		},
+		{
+			"id": "stories.story2.quote",
+			"group": "stories/story2",
+			"type": "text",
+			"label": "Quote",
+			"default": "I became a manager overnight and had no idea what I was doing. Maya gave me a toolkit I still use every week.",
+			"max": 280
+		},
+		{
+			"id": "stories.story2.name",
+			"group": "stories/story2",
+			"type": "text",
+			"label": "Name",
+			"default": "Grace O., engineering lead",
+			"max": 70
+		},
+		{
+			"id": "stories.story3.quote",
+			"group": "stories/story3",
+			"type": "text",
+			"label": "Quote",
+			"default": "I came in burnt out and left with boundaries, a calmer calendar and my weekends back.",
+			"max": 280
+		},
+		{
+			"id": "stories.story3.name",
+			"group": "stories/story3",
+			"type": "text",
+			"label": "Name",
+			"default": "Tomasz W., agency founder",
+			"max": 70
+		},
+		{
+			"id": "stories.cta.heading",
+			"group": "stories/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Write your own story",
+			"max": 40
+		},
+		{
+			"id": "stories.cta.text",
+			"group": "stories/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "It starts with a free 20-minute conversation.",
+			"max": 80
+		},
+		{
+			"id": "stories.cta.button",
+			"group": "stories/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a free call",
+			"max": 28
+		},
+		{
+			"id": "contact.intro.eyebrow",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Contact",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.heading",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Book your free call",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.lead",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Send me a short note about where you are and what you would like to change. I reply within two working days.",
+			"max": 220
+		},
+		{
+			"id": "contact.details.side_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Side heading",
+			"default": "What to expect",
+			"max": 24
+		},
+		{
+			"id": "contact.details.side_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Side text",
+			"default": "A relaxed 20-minute video call. We talk about your situation and whether coaching could help. <strong>No preparation needed.</strong>",
+			"max": 220
+		},
+		{
+			"id": "contact.details.extra_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Second heading",
+			"default": "Working with companies",
+			"max": 40
+		},
+		{
+			"id": "contact.details.extra_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Second text",
+			"default": "I also run leadership programs for teams. Ask for a proposal.",
+			"max": 120
+		},
+		{
+			"id": "contact.details.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Contact box heading",
+			"default": "Get in touch",
+			"max": 24
+		}
+	]
+}

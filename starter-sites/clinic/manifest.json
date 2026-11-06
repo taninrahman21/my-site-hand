@@ -1,0 +1,193 @@
+{
+	"slug": "clinic",
+	"name": "Clinic",
+	"category": "health",
+	"description": "A calm, trustworthy site for a family doctor, dental practice or small clinic. Services, team, new patient FAQ and contact details.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "highlights",
+					"label": "Highlights",
+					"file": "pages/home/highlights.html"
+				},
+				{
+					"id": "services",
+					"label": "Services",
+					"file": "pages/home/services.html"
+				},
+				{
+					"id": "about",
+					"label": "About",
+					"file": "pages/home/about.html"
+				},
+				{
+					"id": "testimonial",
+					"label": "Testimonial",
+					"file": "pages/home/testimonial.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "about",
+			"title": "About",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/about/intro.html"
+				},
+				{
+					"id": "story",
+					"label": "Our story",
+					"file": "pages/about/story.html"
+				},
+				{
+					"id": "values",
+					"label": "Values",
+					"file": "pages/about/values.html"
+				},
+				{
+					"id": "team",
+					"label": "Team",
+					"file": "pages/about/team.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/about/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "services",
+			"title": "Services",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/services/intro.html"
+				},
+				{
+					"id": "list",
+					"label": "Service list",
+					"file": "pages/services/list.html"
+				},
+				{
+					"id": "insurance",
+					"label": "Insurance and payment",
+					"file": "pages/services/insurance.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/services/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "new-patients",
+			"title": "New Patients",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/new-patients/intro.html"
+				},
+				{
+					"id": "steps",
+					"label": "Steps",
+					"file": "pages/new-patients/steps.html"
+				},
+				{
+					"id": "faq",
+					"label": "Questions",
+					"file": "pages/new-patients/faq.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/new-patients/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "contact",
+			"title": "Contact",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/contact/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/contact/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Home",
+			"page": "home"
+		},
+		{
+			"label": "Services",
+			"page": "services"
+		},
+		{
+			"label": "About",
+			"page": "about"
+		},
+		{
+			"label": "New patients",
+			"page": "new-patients"
+		},
+		{
+			"label": "Contact",
+			"page": "contact"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/about.jpg",
+		"screenshots/services.jpg",
+		"screenshots/new-patients.jpg",
+		"screenshots/contact.jpg"
+	]
+}

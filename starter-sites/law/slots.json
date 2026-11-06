@@ -1,0 +1,1139 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/stats",
+			"page": "home",
+			"label": "Highlights"
+		},
+		{
+			"id": "home/areas",
+			"page": "home",
+			"label": "Practice areas"
+		},
+		{
+			"id": "home/how",
+			"page": "home",
+			"label": "How we work"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "practice-areas/intro",
+			"page": "practice-areas",
+			"label": "Introduction"
+		},
+		{
+			"id": "practice-areas/list",
+			"page": "practice-areas",
+			"label": "Areas"
+		},
+		{
+			"id": "practice-areas/approach",
+			"page": "practice-areas",
+			"label": "Approach"
+		},
+		{
+			"id": "practice-areas/cta",
+			"page": "practice-areas",
+			"label": "Call to action"
+		},
+		{
+			"id": "lawyers/intro",
+			"page": "lawyers",
+			"label": "Introduction"
+		},
+		{
+			"id": "lawyers/team",
+			"page": "lawyers",
+			"label": "Team"
+		},
+		{
+			"id": "lawyers/credentials",
+			"page": "lawyers",
+			"label": "Highlights"
+		},
+		{
+			"id": "lawyers/cta",
+			"page": "lawyers",
+			"label": "Call to action"
+		},
+		{
+			"id": "fees/intro",
+			"page": "fees",
+			"label": "Introduction"
+		},
+		{
+			"id": "fees/examples",
+			"page": "fees",
+			"label": "Example fees"
+		},
+		{
+			"id": "fees/faq",
+			"page": "fees",
+			"label": "Questions"
+		},
+		{
+			"id": "fees/cta",
+			"page": "fees",
+			"label": "Call to action"
+		},
+		{
+			"id": "contact/intro",
+			"page": "contact",
+			"label": "Introduction"
+		},
+		{
+			"id": "contact/details",
+			"page": "contact",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Carter & Hale",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Family and estate law, explained plainly",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Carter & Hale Solicitors",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 013-5507",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "enquiries@carterhale.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Address",
+			"default": "Chancery House, 5 Market Square, Ashford",
+			"max": 120
+		},
+		{
+			"id": "biz.hours",
+			"group": "site/basics",
+			"type": "richtext",
+			"label": "Opening hours",
+			"default": "Mon to Fri: 9am to 5:30pm<br>Evening appointments on request",
+			"max": 200,
+			"hint": "One line per day range."
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Free consultation",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "Family, property and estate law for people, not corporations. Clear advice, fixed fees where possible.",
+			"max": 220
+		},
+		{
+			"id": "footer.contact_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Contact heading",
+			"default": "Office",
+			"max": 40
+		},
+		{
+			"id": "footer.hours_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Hours heading",
+			"default": "Opening hours",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "The information on this website is general and is not legal advice.",
+			"max": 120
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Family, property and estate law",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Clear legal advice when it matters most",
+			"max": 80,
+			"hint": "The main promise, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "Divorce, wills, house moves and estates. We explain your options in plain English and tell you the cost before you commit.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "Book a free consultation",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "Our practice areas",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/office.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustration of a calm office with a desk, law books and a reading lamp",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.stats.item1_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "35 years",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item1_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "advising local families",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item2_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "2,000+",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item2_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "cases handled",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item3_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "Fixed fees",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item3_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "for most services",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item4_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "4.9/5",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item4_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "client rating",
+			"max": 80
+		},
+		{
+			"id": "home.areas.item1_title",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Family law",
+			"max": 24
+		},
+		{
+			"id": "home.areas.item1_text",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Separation, divorce and arrangements for children, handled with care.",
+			"max": 120
+		},
+		{
+			"id": "home.areas.item2_title",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Wills and estates",
+			"max": 40
+		},
+		{
+			"id": "home.areas.item2_text",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Wills, lasting powers of attorney and probate, done properly.",
+			"max": 120
+		},
+		{
+			"id": "home.areas.item3_title",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Property",
+			"max": 24
+		},
+		{
+			"id": "home.areas.item3_text",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Buying, selling and remortgaging, with updates at every step.",
+			"max": 120
+		},
+		{
+			"id": "home.areas.eyebrow",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "How we can help",
+			"max": 40
+		},
+		{
+			"id": "home.areas.heading",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Heading",
+			"default": "Practice areas",
+			"max": 24
+		},
+		{
+			"id": "home.areas.link",
+			"group": "home/areas",
+			"type": "text",
+			"label": "Link text",
+			"default": "All practice areas",
+			"max": 28
+		},
+		{
+			"id": "home.how.item1_title",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 1 title",
+			"default": "Free first conversation",
+			"max": 40
+		},
+		{
+			"id": "home.how.item1_text",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 1 text",
+			"default": "Thirty minutes to understand your situation, with no obligation.",
+			"max": 120
+		},
+		{
+			"id": "home.how.item2_title",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 2 title",
+			"default": "A clear plan and price",
+			"max": 40
+		},
+		{
+			"id": "home.how.item2_text",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 2 text",
+			"default": "We set out your options, the likely steps and the cost in writing.",
+			"max": 120
+		},
+		{
+			"id": "home.how.item3_title",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 3 title",
+			"default": "One lawyer throughout",
+			"max": 40
+		},
+		{
+			"id": "home.how.item3_text",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 3 text",
+			"default": "The same person handles your matter from start to finish.",
+			"max": 120
+		},
+		{
+			"id": "home.how.heading",
+			"group": "home/how",
+			"type": "text",
+			"label": "Heading",
+			"default": "How we work with you",
+			"max": 40
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "During the hardest year of my life, Eleanor made everything feel manageable. I always knew what was happening and what it would cost.",
+			"max": 280
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "A family law client, 2025",
+			"max": 70
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Talk to us in confidence",
+			"max": 40
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Your first conversation is free and completely confidential.",
+			"max": 120
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a free consultation",
+			"max": 28
+		},
+		{
+			"id": "practice-areas.intro.eyebrow",
+			"group": "practice-areas/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Practice areas",
+			"max": 40
+		},
+		{
+			"id": "practice-areas.intro.heading",
+			"group": "practice-areas/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Legal help for life's big moments",
+			"max": 60
+		},
+		{
+			"id": "practice-areas.intro.lead",
+			"group": "practice-areas/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "We focus on a few areas of law and know them deeply, rather than doing a little of everything.",
+			"max": 160
+		},
+		{
+			"id": "practice-areas.list.item1_title",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Divorce and separation",
+			"max": 40
+		},
+		{
+			"id": "practice-areas.list.item1_text",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Amicable agreements where possible, firm representation where needed.",
+			"max": 120
+		},
+		{
+			"id": "practice-areas.list.item2_title",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Children arrangements",
+			"max": 40
+		},
+		{
+			"id": "practice-areas.list.item2_text",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Where children live and time with each parent, always putting them first.",
+			"max": 120
+		},
+		{
+			"id": "practice-areas.list.item3_title",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Wills",
+			"max": 24
+		},
+		{
+			"id": "practice-areas.list.item3_text",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Simple and complex wills, reviewed every five years at no charge.",
+			"max": 120
+		},
+		{
+			"id": "practice-areas.list.item4_title",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 4 title",
+			"default": "Lasting power of attorney",
+			"max": 40
+		},
+		{
+			"id": "practice-areas.list.item4_text",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 4 text",
+			"default": "Choose who decides for you if you cannot, before you need to.",
+			"max": 120
+		},
+		{
+			"id": "practice-areas.list.item5_title",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 5 title",
+			"default": "Probate and estates",
+			"max": 40
+		},
+		{
+			"id": "practice-areas.list.item5_text",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 5 text",
+			"default": "Practical help after a death, from forms to final accounts.",
+			"max": 120
+		},
+		{
+			"id": "practice-areas.list.item6_title",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 6 title",
+			"default": "Residential property",
+			"max": 40
+		},
+		{
+			"id": "practice-areas.list.item6_text",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Item 6 text",
+			"default": "Buying, selling and remortgaging homes, with weekly updates.",
+			"max": 120
+		},
+		{
+			"id": "practice-areas.list.eyebrow",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Practice areas",
+			"max": 40
+		},
+		{
+			"id": "practice-areas.list.heading",
+			"group": "practice-areas/list",
+			"type": "text",
+			"label": "Heading",
+			"default": "What we do",
+			"max": 24
+		},
+		{
+			"id": "practice-areas.approach.eyebrow",
+			"group": "practice-areas/approach",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our approach",
+			"max": 40
+		},
+		{
+			"id": "practice-areas.approach.heading",
+			"group": "practice-areas/approach",
+			"type": "text",
+			"label": "Heading",
+			"default": "Calm, practical, on your side",
+			"max": 60
+		},
+		{
+			"id": "practice-areas.approach.body",
+			"group": "practice-areas/approach",
+			"type": "richtext",
+			"label": "Text",
+			"default": "Legal problems are stressful. We return calls the same day, avoid jargon and <strong>tell you the cost before any work starts</strong>.",
+			"max": 220
+		},
+		{
+			"id": "image:practice-areas.approach",
+			"group": "practice-areas/approach",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/columns.webp"
+		},
+		{
+			"id": "practice-areas.approach.image_alt",
+			"group": "practice-areas/approach",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a classic building with stone columns and steps",
+			"max": 140
+		},
+		{
+			"id": "practice-areas.cta.heading",
+			"group": "practice-areas/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Not sure where your issue fits?",
+			"max": 60
+		},
+		{
+			"id": "practice-areas.cta.text",
+			"group": "practice-areas/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Call us. If we cannot help, we will point you to someone who can.",
+			"max": 120
+		},
+		{
+			"id": "practice-areas.cta.button",
+			"group": "practice-areas/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Get in touch",
+			"max": 28
+		},
+		{
+			"id": "lawyers.intro.eyebrow",
+			"group": "lawyers/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our lawyers",
+			"max": 40
+		},
+		{
+			"id": "lawyers.intro.heading",
+			"group": "lawyers/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Experienced, approachable lawyers",
+			"max": 60
+		},
+		{
+			"id": "lawyers.intro.lead",
+			"group": "lawyers/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Every lawyer here has at least ten years of experience in the area they practise.",
+			"max": 160
+		},
+		{
+			"id": "lawyers.team.member1_name",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 1 name",
+			"default": "Eleanor Carter",
+			"max": 60
+		},
+		{
+			"id": "lawyers.team.member1_role",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 1 role",
+			"default": "Partner, family law",
+			"max": 60
+		},
+		{
+			"id": "lawyers.team.member1_bio",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 1 bio",
+			"default": "Accredited family law specialist. Known for keeping difficult separations calm.",
+			"max": 160
+		},
+		{
+			"id": "lawyers.team.member2_name",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 2 name",
+			"default": "James Hale",
+			"max": 60
+		},
+		{
+			"id": "lawyers.team.member2_role",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 2 role",
+			"default": "Partner, wills and estates",
+			"max": 60
+		},
+		{
+			"id": "lawyers.team.member2_bio",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 2 bio",
+			"default": "Thirty years of probate experience. Patient, thorough and kind.",
+			"max": 120
+		},
+		{
+			"id": "lawyers.team.member3_name",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 3 name",
+			"default": "Aisha Bello",
+			"max": 60
+		},
+		{
+			"id": "lawyers.team.member3_role",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 3 role",
+			"default": "Senior associate, property",
+			"max": 60
+		},
+		{
+			"id": "lawyers.team.member3_bio",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Person 3 bio",
+			"default": "Handles 200 house moves a year and still answers her own phone.",
+			"max": 120
+		},
+		{
+			"id": "lawyers.team.heading",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Heading",
+			"default": "Meet the partners",
+			"max": 40
+		},
+		{
+			"id": "lawyers.team.intro",
+			"group": "lawyers/team",
+			"type": "text",
+			"label": "Intro text",
+			"default": "You will always know who is handling your matter and how to reach them.",
+			"max": 120
+		},
+		{
+			"id": "lawyers.credentials.item1_value",
+			"group": "lawyers/credentials",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "3",
+			"max": 16
+		},
+		{
+			"id": "lawyers.credentials.item1_text",
+			"group": "lawyers/credentials",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "accredited specialists",
+			"max": 80
+		},
+		{
+			"id": "lawyers.credentials.item2_value",
+			"group": "lawyers/credentials",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "10+ yrs",
+			"max": 16
+		},
+		{
+			"id": "lawyers.credentials.item2_text",
+			"group": "lawyers/credentials",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "experience each",
+			"max": 80
+		},
+		{
+			"id": "lawyers.credentials.item3_value",
+			"group": "lawyers/credentials",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "Same day",
+			"max": 16
+		},
+		{
+			"id": "lawyers.credentials.item3_text",
+			"group": "lawyers/credentials",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "call-backs",
+			"max": 80
+		},
+		{
+			"id": "lawyers.credentials.item4_value",
+			"group": "lawyers/credentials",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "1",
+			"max": 16
+		},
+		{
+			"id": "lawyers.credentials.item4_text",
+			"group": "lawyers/credentials",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "lawyer per client, start to finish",
+			"max": 80
+		},
+		{
+			"id": "lawyers.cta.heading",
+			"group": "lawyers/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Speak to a lawyer",
+			"max": 40
+		},
+		{
+			"id": "lawyers.cta.text",
+			"group": "lawyers/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book a free 30-minute consultation.",
+			"max": 60
+		},
+		{
+			"id": "lawyers.cta.button",
+			"group": "lawyers/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book now",
+			"max": 28
+		},
+		{
+			"id": "fees.intro.eyebrow",
+			"group": "fees/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Fees",
+			"max": 40
+		},
+		{
+			"id": "fees.intro.heading",
+			"group": "fees/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Clear fees, agreed upfront",
+			"max": 60
+		},
+		{
+			"id": "fees.intro.lead",
+			"group": "fees/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Most of our work is fixed fee. Where it cannot be, we give you a written estimate and update it if anything changes.",
+			"max": 220
+		},
+		{
+			"id": "fees.examples.item1_title",
+			"group": "fees/examples",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Single will",
+			"max": 24
+		},
+		{
+			"id": "fees.examples.item1_text",
+			"group": "fees/examples",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "From $450 plus tax, including a review meeting.",
+			"max": 80
+		},
+		{
+			"id": "fees.examples.item2_title",
+			"group": "fees/examples",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Mirror wills for couples",
+			"max": 40
+		},
+		{
+			"id": "fees.examples.item2_text",
+			"group": "fees/examples",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "From $750 plus tax, for two matching wills.",
+			"max": 80
+		},
+		{
+			"id": "fees.examples.item3_title",
+			"group": "fees/examples",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "House purchase",
+			"max": 24
+		},
+		{
+			"id": "fees.examples.item3_text",
+			"group": "fees/examples",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "From $1,250 plus tax and searches, for a standard sale.",
+			"max": 120
+		},
+		{
+			"id": "fees.examples.eyebrow",
+			"group": "fees/examples",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Examples",
+			"max": 40
+		},
+		{
+			"id": "fees.examples.heading",
+			"group": "fees/examples",
+			"type": "text",
+			"label": "Heading",
+			"default": "Typical fixed fees",
+			"max": 40
+		},
+		{
+			"id": "fees.faq.q1",
+			"group": "fees/faq",
+			"type": "text",
+			"label": "Question 1",
+			"default": "Is the first meeting really free?",
+			"max": 120
+		},
+		{
+			"id": "fees.faq.a1",
+			"group": "fees/faq",
+			"type": "richtext",
+			"label": "Answer 1",
+			"default": "Yes. The first 30-minute conversation is free, with no obligation to instruct us.",
+			"max": 160
+		},
+		{
+			"id": "fees.faq.q2",
+			"group": "fees/faq",
+			"type": "text",
+			"label": "Question 2",
+			"default": "Do you offer payment plans?",
+			"max": 120
+		},
+		{
+			"id": "fees.faq.a2",
+			"group": "fees/faq",
+			"type": "richtext",
+			"label": "Answer 2",
+			"default": "For family matters, yes. <strong>Ask us about monthly payments.</strong>",
+			"max": 120
+		},
+		{
+			"id": "fees.faq.q3",
+			"group": "fees/faq",
+			"type": "text",
+			"label": "Question 3",
+			"default": "Will there be extra costs?",
+			"max": 120
+		},
+		{
+			"id": "fees.faq.a3",
+			"group": "fees/faq",
+			"type": "richtext",
+			"label": "Answer 3",
+			"default": "Sometimes there are court fees or searches. We list these separately before you agree.",
+			"max": 160
+		},
+		{
+			"id": "fees.faq.heading",
+			"group": "fees/faq",
+			"type": "text",
+			"label": "Heading",
+			"default": "Questions about fees",
+			"max": 40
+		},
+		{
+			"id": "fees.cta.heading",
+			"group": "fees/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Ask for a quote",
+			"max": 24
+		},
+		{
+			"id": "fees.cta.text",
+			"group": "fees/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Tell us what you need and we will send a fixed quote in writing.",
+			"max": 120
+		},
+		{
+			"id": "fees.cta.button",
+			"group": "fees/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Request a quote",
+			"max": 28
+		},
+		{
+			"id": "contact.intro.eyebrow",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Contact",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.heading",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Speak to us in confidence",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.lead",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Call, email or visit our office on Market Square. Everything you tell us is confidential.",
+			"max": 160
+		},
+		{
+			"id": "contact.details.side_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Side heading",
+			"default": "Book a free consultation",
+			"max": 40
+		},
+		{
+			"id": "contact.details.side_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Side text",
+			"default": "Call the office or email us with a short summary. A lawyer will call you back <strong>the same working day</strong>.",
+			"max": 220
+		},
+		{
+			"id": "contact.details.extra_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Second heading",
+			"default": "Visiting us",
+			"max": 24
+		},
+		{
+			"id": "contact.details.extra_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Second text",
+			"default": "Our office is wheelchair accessible. Parking is available on Market Square and Church Lane.",
+			"max": 160
+		},
+		{
+			"id": "contact.details.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Contact box heading",
+			"default": "Contact the office",
+			"max": 40
+		}
+	]
+}

@@ -1,0 +1,1310 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/stats",
+			"page": "home",
+			"label": "Highlights"
+		},
+		{
+			"id": "home/featured",
+			"page": "home",
+			"label": "Featured homes"
+		},
+		{
+			"id": "home/selling",
+			"page": "home",
+			"label": "Selling"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "listings/intro",
+			"page": "listings",
+			"label": "Introduction"
+		},
+		{
+			"id": "listings/new",
+			"page": "listings",
+			"label": "Just listed"
+		},
+		{
+			"id": "listings/more",
+			"page": "listings",
+			"label": "More homes"
+		},
+		{
+			"id": "listings/cta",
+			"page": "listings",
+			"label": "Call to action"
+		},
+		{
+			"id": "sell/intro",
+			"page": "sell",
+			"label": "Introduction"
+		},
+		{
+			"id": "sell/process",
+			"page": "sell",
+			"label": "Process"
+		},
+		{
+			"id": "sell/included",
+			"page": "sell",
+			"label": "What is included"
+		},
+		{
+			"id": "sell/faq",
+			"page": "sell",
+			"label": "Questions"
+		},
+		{
+			"id": "sell/cta",
+			"page": "sell",
+			"label": "Call to action"
+		},
+		{
+			"id": "about/intro",
+			"page": "about",
+			"label": "Introduction"
+		},
+		{
+			"id": "about/story",
+			"page": "about",
+			"label": "Story"
+		},
+		{
+			"id": "about/numbers",
+			"page": "about",
+			"label": "Highlights"
+		},
+		{
+			"id": "about/cta",
+			"page": "about",
+			"label": "Call to action"
+		},
+		{
+			"id": "contact/intro",
+			"page": "contact",
+			"label": "Introduction"
+		},
+		{
+			"id": "contact/details",
+			"page": "contact",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Harbor & Pine Realty",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Helping families find home in Cedar Bay",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Harbor & Pine Realty",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 015-6290",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "hello@harborpine.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Address",
+			"default": "42 Main Street, Cedar Bay",
+			"max": 120
+		},
+		{
+			"id": "biz.hours",
+			"group": "site/basics",
+			"type": "richtext",
+			"label": "Opening hours",
+			"default": "Mon to Fri: 9am to 6pm<br>Saturday: 10am to 4pm<br>Sunday: by appointment",
+			"max": 200,
+			"hint": "One line per day range."
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Free valuation",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "Local agents who know every street in Cedar Bay. Buying, selling and renting since 2010.",
+			"max": 160
+		},
+		{
+			"id": "footer.contact_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Contact heading",
+			"default": "Office",
+			"max": 40
+		},
+		{
+			"id": "footer.hours_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Hours heading",
+			"default": "Opening hours",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "Licensed real estate brokerage.",
+			"max": 120
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Cedar Bay real estate",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Find the home that fits your next chapter",
+			"max": 80,
+			"hint": "The main promise, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "Local agents, honest advice and homes you will not see anywhere else. Buying or selling, we are with you from first viewing to keys.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "See homes for sale",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "Get a free valuation",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/house-1.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustration of a modern two-storey house with large windows and a garden",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.stats.item1_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "350+",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item1_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "homes sold in Cedar Bay",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item2_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "21 days",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item2_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "average time to sale",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item3_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "98%",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item3_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "of asking price achieved",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item4_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "15 yrs",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item4_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "selling locally",
+			"max": 80
+		},
+		{
+			"id": "image:home.featured1",
+			"group": "home/featured",
+			"type": "image",
+			"label": "Listing 1 photo",
+			"default": "assets/house-1.webp"
+		},
+		{
+			"id": "home.featured.item1_alt",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 1 photo description",
+			"default": "Illustration of a modern two-storey house with large windows and a garden",
+			"max": 140
+		},
+		{
+			"id": "home.featured.item1_price",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 1 price",
+			"default": "$685,000",
+			"max": 24
+		},
+		{
+			"id": "home.featured.item1_title",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 1 title",
+			"default": "14 Seaview Road",
+			"max": 60
+		},
+		{
+			"id": "home.featured.item1_facts",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 1 details",
+			"default": "4 beds · 3 baths · 2,400 sq ft",
+			"max": 80
+		},
+		{
+			"id": "image:home.featured2",
+			"group": "home/featured",
+			"type": "image",
+			"label": "Listing 2 photo",
+			"default": "assets/house-2.webp"
+		},
+		{
+			"id": "home.featured.item2_alt",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 2 photo description",
+			"default": "Illustration of a cottage with a red door, a porch and flower beds",
+			"max": 140
+		},
+		{
+			"id": "home.featured.item2_price",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 2 price",
+			"default": "$449,000",
+			"max": 24
+		},
+		{
+			"id": "home.featured.item2_title",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 2 title",
+			"default": "7 Orchard Lane",
+			"max": 60
+		},
+		{
+			"id": "home.featured.item2_facts",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 2 details",
+			"default": "3 beds · 2 baths · 1,650 sq ft",
+			"max": 80
+		},
+		{
+			"id": "image:home.featured3",
+			"group": "home/featured",
+			"type": "image",
+			"label": "Listing 3 photo",
+			"default": "assets/house-3.webp"
+		},
+		{
+			"id": "home.featured.item3_alt",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 3 photo description",
+			"default": "Illustration of a row of three townhouses in different colours",
+			"max": 140
+		},
+		{
+			"id": "home.featured.item3_price",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 3 price",
+			"default": "$389,000",
+			"max": 24
+		},
+		{
+			"id": "home.featured.item3_title",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 3 title",
+			"default": "22 Harbour Row",
+			"max": 60
+		},
+		{
+			"id": "home.featured.item3_facts",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Listing 3 details",
+			"default": "2 beds · 2 baths · 1,200 sq ft",
+			"max": 80
+		},
+		{
+			"id": "home.featured.heading",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Heading",
+			"default": "Featured homes",
+			"max": 24
+		},
+		{
+			"id": "home.featured.link",
+			"group": "home/featured",
+			"type": "text",
+			"label": "Link text",
+			"default": "All homes for sale",
+			"max": 28
+		},
+		{
+			"id": "home.selling.eyebrow",
+			"group": "home/selling",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Thinking of selling?",
+			"max": 40
+		},
+		{
+			"id": "home.selling.heading",
+			"group": "home/selling",
+			"type": "text",
+			"label": "Heading",
+			"default": "Know what your home is worth",
+			"max": 60
+		},
+		{
+			"id": "home.selling.body",
+			"group": "home/selling",
+			"type": "richtext",
+			"label": "Text",
+			"default": "We know what sold on your street last month and why. <strong>Get a free, no-pressure valuation</strong> within 48 hours.",
+			"max": 220
+		},
+		{
+			"id": "home.selling.button",
+			"group": "home/selling",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a valuation",
+			"max": 28
+		},
+		{
+			"id": "image:home.selling",
+			"group": "home/selling",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/house-2.webp"
+		},
+		{
+			"id": "home.selling.image_alt",
+			"group": "home/selling",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a cottage with a red door, a porch and flower beds",
+			"max": 140
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "Harbor & Pine sold our house in nine days for more than we hoped. They handled every call so we could focus on the move.",
+			"max": 280
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "The Alvarez family, sold in 2025",
+			"max": 70
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Let us find your next home",
+			"max": 60
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Tell us what you are looking for and we will call you first when it comes up.",
+			"max": 160
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Contact an agent",
+			"max": 28
+		},
+		{
+			"id": "listings.intro.eyebrow",
+			"group": "listings/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Homes for sale",
+			"max": 40
+		},
+		{
+			"id": "listings.intro.heading",
+			"group": "listings/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Homes for sale in Cedar Bay",
+			"max": 60
+		},
+		{
+			"id": "listings.intro.lead",
+			"group": "listings/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "New homes come up every week. Call us to book a viewing, or ask to hear about homes before they go online.",
+			"max": 220
+		},
+		{
+			"id": "image:listings.new1",
+			"group": "listings/new",
+			"type": "image",
+			"label": "Listing 1 photo",
+			"default": "assets/house-1.webp"
+		},
+		{
+			"id": "listings.new.item1_alt",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 1 photo description",
+			"default": "Illustration of a modern two-storey house with large windows and a garden",
+			"max": 140
+		},
+		{
+			"id": "listings.new.item1_price",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 1 price",
+			"default": "$685,000",
+			"max": 24
+		},
+		{
+			"id": "listings.new.item1_title",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 1 title",
+			"default": "14 Seaview Road",
+			"max": 60
+		},
+		{
+			"id": "listings.new.item1_facts",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 1 details",
+			"default": "4 beds · 3 baths · 2,400 sq ft",
+			"max": 80
+		},
+		{
+			"id": "image:listings.new2",
+			"group": "listings/new",
+			"type": "image",
+			"label": "Listing 2 photo",
+			"default": "assets/house-2.webp"
+		},
+		{
+			"id": "listings.new.item2_alt",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 2 photo description",
+			"default": "Illustration of a cottage with a red door, a porch and flower beds",
+			"max": 140
+		},
+		{
+			"id": "listings.new.item2_price",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 2 price",
+			"default": "$449,000",
+			"max": 24
+		},
+		{
+			"id": "listings.new.item2_title",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 2 title",
+			"default": "7 Orchard Lane",
+			"max": 60
+		},
+		{
+			"id": "listings.new.item2_facts",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 2 details",
+			"default": "3 beds · 2 baths · 1,650 sq ft",
+			"max": 80
+		},
+		{
+			"id": "image:listings.new3",
+			"group": "listings/new",
+			"type": "image",
+			"label": "Listing 3 photo",
+			"default": "assets/house-3.webp"
+		},
+		{
+			"id": "listings.new.item3_alt",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 3 photo description",
+			"default": "Illustration of a row of three townhouses in different colours",
+			"max": 140
+		},
+		{
+			"id": "listings.new.item3_price",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 3 price",
+			"default": "$389,000",
+			"max": 24
+		},
+		{
+			"id": "listings.new.item3_title",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 3 title",
+			"default": "22 Harbour Row",
+			"max": 60
+		},
+		{
+			"id": "listings.new.item3_facts",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Listing 3 details",
+			"default": "2 beds · 2 baths · 1,200 sq ft",
+			"max": 80
+		},
+		{
+			"id": "listings.new.heading",
+			"group": "listings/new",
+			"type": "text",
+			"label": "Heading",
+			"default": "Just listed",
+			"max": 24
+		},
+		{
+			"id": "image:listings.more1",
+			"group": "listings/more",
+			"type": "image",
+			"label": "Listing 1 photo",
+			"default": "assets/house-2.webp"
+		},
+		{
+			"id": "listings.more.item1_alt",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 1 photo description",
+			"default": "Illustration of a cottage with a red door, a porch and flower beds",
+			"max": 140
+		},
+		{
+			"id": "listings.more.item1_price",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 1 price",
+			"default": "$525,000",
+			"max": 24
+		},
+		{
+			"id": "listings.more.item1_title",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 1 title",
+			"default": "3 Maple Court",
+			"max": 60
+		},
+		{
+			"id": "listings.more.item1_facts",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 1 details",
+			"default": "4 beds · 2 baths · 1,900 sq ft",
+			"max": 80
+		},
+		{
+			"id": "image:listings.more2",
+			"group": "listings/more",
+			"type": "image",
+			"label": "Listing 2 photo",
+			"default": "assets/house-1.webp"
+		},
+		{
+			"id": "listings.more.item2_alt",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 2 photo description",
+			"default": "Illustration of a modern two-storey house with large windows and a garden",
+			"max": 140
+		},
+		{
+			"id": "listings.more.item2_price",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 2 price",
+			"default": "$799,000",
+			"max": 24
+		},
+		{
+			"id": "listings.more.item2_title",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 2 title",
+			"default": "88 Cliff Drive",
+			"max": 60
+		},
+		{
+			"id": "listings.more.item2_facts",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 2 details",
+			"default": "5 beds · 4 baths · 3,100 sq ft",
+			"max": 80
+		},
+		{
+			"id": "image:listings.more3",
+			"group": "listings/more",
+			"type": "image",
+			"label": "Listing 3 photo",
+			"default": "assets/house-3.webp"
+		},
+		{
+			"id": "listings.more.item3_alt",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 3 photo description",
+			"default": "Illustration of a row of three townhouses in different colours",
+			"max": 140
+		},
+		{
+			"id": "listings.more.item3_price",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 3 price",
+			"default": "$359,000",
+			"max": 24
+		},
+		{
+			"id": "listings.more.item3_title",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 3 title",
+			"default": "5 Station Mews",
+			"max": 60
+		},
+		{
+			"id": "listings.more.item3_facts",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Listing 3 details",
+			"default": "2 beds · 1 bath · 980 sq ft",
+			"max": 80
+		},
+		{
+			"id": "listings.more.heading",
+			"group": "listings/more",
+			"type": "text",
+			"label": "Heading",
+			"default": "Family homes",
+			"max": 24
+		},
+		{
+			"id": "listings.cta.heading",
+			"group": "listings/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Not seeing the right home?",
+			"max": 60
+		},
+		{
+			"id": "listings.cta.text",
+			"group": "listings/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Tell us what you need. Many of our homes sell before they are advertised.",
+			"max": 120
+		},
+		{
+			"id": "listings.cta.button",
+			"group": "listings/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Tell us what you need",
+			"max": 28
+		},
+		{
+			"id": "sell.intro.eyebrow",
+			"group": "sell/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Sell with us",
+			"max": 40
+		},
+		{
+			"id": "sell.intro.heading",
+			"group": "sell/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Sell for the best price, with less stress",
+			"max": 80
+		},
+		{
+			"id": "sell.intro.lead",
+			"group": "sell/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Clear advice, great photos and an agent who answers the phone on Saturdays.",
+			"max": 120
+		},
+		{
+			"id": "sell.process.item1_title",
+			"group": "sell/process",
+			"type": "text",
+			"label": "Step 1 title",
+			"default": "Free valuation",
+			"max": 24
+		},
+		{
+			"id": "sell.process.item1_text",
+			"group": "sell/process",
+			"type": "text",
+			"label": "Step 1 text",
+			"default": "We visit, look at recent sales nearby and give you an honest price range.",
+			"max": 120
+		},
+		{
+			"id": "sell.process.item2_title",
+			"group": "sell/process",
+			"type": "text",
+			"label": "Step 2 title",
+			"default": "Get market ready",
+			"max": 40
+		},
+		{
+			"id": "sell.process.item2_text",
+			"group": "sell/process",
+			"type": "text",
+			"label": "Step 2 text",
+			"default": "Professional photos, floor plans and a launch plan for the first two weeks.",
+			"max": 120
+		},
+		{
+			"id": "sell.process.item3_title",
+			"group": "sell/process",
+			"type": "text",
+			"label": "Step 3 title",
+			"default": "Offers and closing",
+			"max": 40
+		},
+		{
+			"id": "sell.process.item3_text",
+			"group": "sell/process",
+			"type": "text",
+			"label": "Step 3 text",
+			"default": "We negotiate for you and stay with you until the keys change hands.",
+			"max": 120
+		},
+		{
+			"id": "sell.process.heading",
+			"group": "sell/process",
+			"type": "text",
+			"label": "Heading",
+			"default": "How selling works",
+			"max": 40
+		},
+		{
+			"id": "sell.included.item1_title",
+			"group": "sell/included",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Professional photos",
+			"max": 40
+		},
+		{
+			"id": "sell.included.item1_text",
+			"group": "sell/included",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Daylight and twilight photography, plus a floor plan.",
+			"max": 120
+		},
+		{
+			"id": "sell.included.item2_title",
+			"group": "sell/included",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Local marketing",
+			"max": 24
+		},
+		{
+			"id": "sell.included.item2_text",
+			"group": "sell/included",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Featured on the big property sites and our buyer list of 2,000 people.",
+			"max": 120
+		},
+		{
+			"id": "sell.included.item3_title",
+			"group": "sell/included",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Viewings handled",
+			"max": 40
+		},
+		{
+			"id": "sell.included.item3_text",
+			"group": "sell/included",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "We show every buyer around, including evenings and weekends.",
+			"max": 120
+		},
+		{
+			"id": "sell.included.eyebrow",
+			"group": "sell/included",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Included",
+			"max": 40
+		},
+		{
+			"id": "sell.included.heading",
+			"group": "sell/included",
+			"type": "text",
+			"label": "Heading",
+			"default": "Everything you need to sell",
+			"max": 60
+		},
+		{
+			"id": "sell.faq.q1",
+			"group": "sell/faq",
+			"type": "text",
+			"label": "Question 1",
+			"default": "What do you charge?",
+			"max": 120
+		},
+		{
+			"id": "sell.faq.a1",
+			"group": "sell/faq",
+			"type": "richtext",
+			"label": "Answer 1",
+			"default": "A fixed percentage agreed upfront, and nothing at all unless we sell your home.",
+			"max": 160
+		},
+		{
+			"id": "sell.faq.q2",
+			"group": "sell/faq",
+			"type": "text",
+			"label": "Question 2",
+			"default": "How long will it take to sell?",
+			"max": 120
+		},
+		{
+			"id": "sell.faq.a2",
+			"group": "sell/faq",
+			"type": "richtext",
+			"label": "Answer 2",
+			"default": "Our average is 21 days from listing to accepted offer, but every home is different.",
+			"max": 160
+		},
+		{
+			"id": "sell.faq.q3",
+			"group": "sell/faq",
+			"type": "text",
+			"label": "Question 3",
+			"default": "Do I need to be home for viewings?",
+			"max": 120
+		},
+		{
+			"id": "sell.faq.a3",
+			"group": "sell/faq",
+			"type": "richtext",
+			"label": "Answer 3",
+			"default": "No. <strong>We handle every viewing</strong> and send you feedback the same day.",
+			"max": 160
+		},
+		{
+			"id": "sell.faq.heading",
+			"group": "sell/faq",
+			"type": "text",
+			"label": "Heading",
+			"default": "Questions sellers ask",
+			"max": 40
+		},
+		{
+			"id": "sell.cta.heading",
+			"group": "sell/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "What is your home worth?",
+			"max": 40
+		},
+		{
+			"id": "sell.cta.text",
+			"group": "sell/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book a free valuation and get an honest price range within 48 hours.",
+			"max": 120
+		},
+		{
+			"id": "sell.cta.button",
+			"group": "sell/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a valuation",
+			"max": 28
+		},
+		{
+			"id": "about.intro.eyebrow",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "About",
+			"max": 40
+		},
+		{
+			"id": "about.intro.heading",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Local agents, local knowledge",
+			"max": 60
+		},
+		{
+			"id": "about.intro.lead",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Harbor & Pine was started in 2010 by two agents who grew up in Cedar Bay.",
+			"max": 120
+		},
+		{
+			"id": "about.story.eyebrow",
+			"group": "about/story",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our story",
+			"max": 40
+		},
+		{
+			"id": "about.story.heading",
+			"group": "about/story",
+			"type": "text",
+			"label": "Heading",
+			"default": "We know every street",
+			"max": 40
+		},
+		{
+			"id": "about.story.body1",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "First paragraph",
+			"default": "Sarah Lin and David Moss opened their first office above the bakery on Main Street. They wanted an agency that treats a home sale as the big life moment it is.",
+			"max": 320
+		},
+		{
+			"id": "about.story.body2",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "Second paragraph",
+			"default": "Fifteen years later we are still on Main Street, still answering our own phones, and <strong>most of our clients come from friends</strong>.",
+			"max": 320
+		},
+		{
+			"id": "image:about.story",
+			"group": "about/story",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/house-3.webp"
+		},
+		{
+			"id": "about.story.image_alt",
+			"group": "about/story",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a row of three townhouses in different colours",
+			"max": 140
+		},
+		{
+			"id": "about.numbers.item1_value",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "350+",
+			"max": 16
+		},
+		{
+			"id": "about.numbers.item1_text",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "happy sellers",
+			"max": 80
+		},
+		{
+			"id": "about.numbers.item2_value",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "4.9/5",
+			"max": 16
+		},
+		{
+			"id": "about.numbers.item2_text",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "from 300 reviews",
+			"max": 80
+		},
+		{
+			"id": "about.numbers.item3_value",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "6",
+			"max": 16
+		},
+		{
+			"id": "about.numbers.item3_text",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "local agents",
+			"max": 80
+		},
+		{
+			"id": "about.numbers.item4_value",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "1",
+			"max": 16
+		},
+		{
+			"id": "about.numbers.item4_text",
+			"group": "about/numbers",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "office, on Main Street",
+			"max": 80
+		},
+		{
+			"id": "about.cta.heading",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Come and say hello",
+			"max": 40
+		},
+		{
+			"id": "about.cta.text",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Pop into the office or give us a call. The coffee is always on.",
+			"max": 120
+		},
+		{
+			"id": "about.cta.button",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Contact us",
+			"max": 28
+		},
+		{
+			"id": "contact.intro.eyebrow",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Contact",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.heading",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Talk to a local agent",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.lead",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Buying, selling or just curious about the market? We are happy to help.",
+			"max": 120
+		},
+		{
+			"id": "contact.details.side_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Side heading",
+			"default": "Book a viewing",
+			"max": 24
+		},
+		{
+			"id": "contact.details.side_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Side text",
+			"default": "Call the office or email us with the address of the home you would like to see. <strong>Evening and weekend viewings</strong> are available.",
+			"max": 320
+		},
+		{
+			"id": "contact.details.extra_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Second heading",
+			"default": "Selling?",
+			"max": 24
+		},
+		{
+			"id": "contact.details.extra_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Second text",
+			"default": "Ask for a free valuation. We visit within 48 hours and there is no obligation.",
+			"max": 160
+		},
+		{
+			"id": "contact.details.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Contact box heading",
+			"default": "Call or visit",
+			"max": 24
+		}
+	]
+}

@@ -41,6 +41,12 @@ $my_site_hand_csv_url = add_query_arg(
 
 $my_site_hand_share_links = (new \MySiteHand\Shared_Reports())->list_active();
 
+// AI Bulk Fix is rendered only when a key is configured. With no key, nothing
+// below this flag adds a single byte to the page: no greyed-out button, no
+// "set up AI" link. A user who does not want AI must not be able to tell it
+// exists.
+$my_site_hand_ai_ready = \MySiteHand\Plugin::get_instance()->get_ai_manager()->is_configured();
+
 // Auto-start only on the post-activation visit, and only when there is
 // nothing to show yet. Landing on an existing report must never silently
 // kick off a fresh scan.
@@ -96,6 +102,7 @@ endif;
 
 	<div class="msh-main-content">
 		<div class="msh-container">
+			<?php require MYSITEHAND_PATH . 'templates/partials/welcome.php'; ?>
 
 			<div class="msh-health" id="msh-health" data-has-report="<?php echo $my_site_hand_has_report ? '1' : '0'; ?>"
 				data-autostart="<?php echo $my_site_hand_autostart ? '1' : '0'; ?>">
@@ -359,6 +366,7 @@ endif;
 
 							<div class="msh-hcheck-body" id="msh-hcheck-body-<?php echo esc_attr($my_site_hand_id); ?>" hidden>
 								<p class="msh-hcheck-desc"><?php echo esc_html($my_site_hand_check->get_description()); ?></p>
+<?php /* AI Bulk Fix. Column 0 on purpose: with no API key this line must emit nothing, not even indentation. */ if ($my_site_hand_ai_ready && in_array($my_site_hand_id, \MySiteHand\Bulk_Fix_Manager::SUPPORTED_CHECKS, true) && $my_site_hand_check->is_applicable()) { require MYSITEHAND_PATH . 'templates/partials/ai-bulk-fix.php'; } ?>
 
 								<?php if (null !== $my_site_hand_entry && !empty($my_site_hand_entry['issues'])): ?>
 									<ul class="msh-hissues">

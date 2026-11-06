@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#efedf8"/>
+  <rect x="80" y="80" width="1040" height="740" rx="40" fill="#e2def4"/>
+  <!-- Table seen from above -->
+  <rect x="260" y="250" width="680" height="400" rx="200" fill="#c9a77f"/>
+  <rect x="280" y="270" width="640" height="360" rx="180" fill="#d7b78f"/>
+  <!-- Laptops, notes, cups -->
+  <g transform="translate(380 330) rotate(-8)"><rect width="150" height="100" rx="8" fill="#15122b"/><rect x="8" y="8" width="134" height="84" rx="4" fill="#8b7bff"/></g>
+  <g transform="translate(680 320) rotate(10)"><rect width="150" height="100" rx="8" fill="#15122b"/><rect x="8" y="8" width="134" height="84" rx="4" fill="#ffffff"/><rect x="20" y="22" width="90" height="10" rx="5" fill="#4b32c3"/><rect x="20" y="44" width="110" height="8" rx="4" fill="#d6d1f2"/><rect x="20" y="60" width="70" height="8" rx="4" fill="#d6d1f2"/></g>
+  <g fill="#ffe08a"><rect x="530" y="470" width="70" height="70" rx="4" transform="rotate(-6 565 505)"/><rect x="620" y="480" width="70" height="70" rx="4" fill="#ffb38a" transform="rotate(5 655 515)"/></g>
+  <g><circle cx="460" cy="520" r="26" fill="#ffffff"/><circle cx="460" cy="520" r="18" fill="#6b4226"/><circle cx="760" cy="520" r="26" fill="#ffffff"/><circle cx="760" cy="520" r="18" fill="#6b4226"/></g>
+  <!-- People (top view: head + shoulders) -->
+  <g>
+    <ellipse cx="300" cy="300" rx="80" ry="60" fill="#4b32c3"/><circle cx="270" cy="285" r="36" fill="#8a5a3c"/><path d="M240 270 a36 36 0 0 1 60 -10 a30 20 0 0 1 -60 10z" fill="#1d1d1b"/>
+    <ellipse cx="900" cy="300" rx="80" ry="60" fill="#ff8a5c"/><circle cx="930" cy="285" r="36" fill="#f0c3a0"/><path d="M900 275 a36 36 0 0 1 64 -6 a34 22 0 0 1 -64 6z" fill="#b35a2a"/>
+    <ellipse cx="320" cy="620" rx="80" ry="60" fill="#0a7a4f"/><circle cx="290" cy="635" r="36" fill="#c98e66"/><path d="M258 630 a36 36 0 0 1 64 0 a32 18 0 0 1 -64 0z" fill="#3a2a1e"/>
+    <ellipse cx="880" cy="620" rx="80" ry="60" fill="#15122b"/><circle cx="910" cy="635" r="36" fill="#e8b08a"/><path d="M878 628 a36 36 0 0 1 64 4 a30 16 0 0 1 -64 -4z" fill="#e6c25a"/>
+    <ellipse cx="600" cy="200" rx="80" ry="56" fill="#8b7bff"/><circle cx="600" cy="215" r="36" fill="#b9805a"/><path d="M566 205 a36 36 0 0 1 68 0 a34 18 0 0 1 -68 0z" fill="#1d1d1b"/>
+  </g>
+  <!-- Plants -->
+  <g transform="translate(150 700)"><circle r="60" fill="#3c8f6f"/><circle cx="40" cy="-30" r="40" fill="#4fa784"/><circle cx="-36" cy="-24" r="34" fill="#66b896"/></g>
+  <g transform="translate(1050 160)"><circle r="54" fill="#3c8f6f"/><circle cx="-30" cy="30" r="38" fill="#4fa784"/></g>
+</svg>

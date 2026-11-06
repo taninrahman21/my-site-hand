@@ -16,6 +16,7 @@ use MySiteHand\Modules\Module_Woocommerce;
 use MySiteHand\Modules\Module_Diagnostics;
 use MySiteHand\Modules\Module_Media;
 use MySiteHand\Modules\Module_Users;
+use MySiteHand\Modules\Module_Site_Builder;
 
 /**
  * Plugin class.
@@ -96,6 +97,34 @@ class Plugin {
 	private ?Health_Reporter $health_reporter = null;
 
 	/**
+	 * Optional AI provider layer. Inert until a key is stored.
+	 *
+	 * @var AI_Manager|null
+	 */
+	private ?AI_Manager $ai_manager = null;
+
+	/**
+	 * Site builder service.
+	 *
+	 * @var Site_Builder|null
+	 */
+	private ?Site_Builder $site_builder = null;
+
+	/**
+	 * Live preview of staged builds.
+	 *
+	 * @var Site_Preview|null
+	 */
+	private ?Site_Preview $site_preview = null;
+
+	/**
+	 * Apply and undo for staged builds.
+	 *
+	 * @var Site_Applier|null
+	 */
+	private ?Site_Applier $site_applier = null;
+
+	/**
 	 * Private constructor — use get_instance().
 	 */
 	private function __construct() {}
@@ -126,6 +155,7 @@ class Plugin {
 		$this->register_health_checks();
 		$this->boot_mcp_server();
 		$this->register_cron_callbacks();
+		$this->register_cli_commands();
 
 		if ( is_admin() ) {
 			$this->boot_admin();
@@ -151,6 +181,20 @@ class Plugin {
 		$this->health_reporter     = new Health_Reporter( $this->site_health_scanner );
 		$this->health_reporter->init();
 
+		// Constructing this makes no request and reads no option; with no key
+		// stored it never does anything at all.
+		$this->ai_manager = new AI_Manager();
+
+		// Reads bundled packages and the user's own staged build only.
+		$this->site_builder = new Site_Builder();
+		add_action( 'init', [ Staged_Sites::class, 'register_post_type' ] );
+
+		// Inert unless the request carries a preview token.
+		$this->site_preview = new Site_Preview( $this->site_builder );
+		$this->site_preview->init();
+
+		$this->site_applier = new Site_Applier( $this->site_builder );
+
 		// Make services accessible globally via plugin instance.
 		Error_Handler::init();
 	}
@@ -167,6 +211,8 @@ class Plugin {
 			'diagnostics' => Module_Diagnostics::class,
 			'media'       => Module_Media::class,
 			'users'       => Module_Users::class,
+			// Added in 1.4.0. Works with no AI key: MCP clients bring their own.
+			'site-builder' => Module_Site_Builder::class,
 		];
 
 		// Only add WooCommerce module if WooCommerce is active.
@@ -262,6 +308,20 @@ class Plugin {
 			$this->cache_manager
 		);
 		add_action( 'rest_api_init', [ $rest_controller, 'register_routes' ] );
+
+		$builder_controller = new \MySiteHand\Api\Site_Builder_Controller( $this->audit_logger );
+		add_action( 'rest_api_init', [ $builder_controller, 'register_routes' ] );
+	}
+
+	/**
+	 * Register WP-CLI commands. Does nothing outside WP-CLI.
+	 *
+	 * @return void
+	 */
+	private function register_cli_commands(): void {
+		if ( defined( 'WP_CLI' ) && WP_CLI ) {
+			\WP_CLI::add_command( 'my-site-hand', Site_Builder_CLI::class );
+		}
 	}
 
 	/**
@@ -298,6 +358,7 @@ class Plugin {
 		add_action( 'wp_ajax_my_site_hand_toggle_module', [ $this, 'ajax_toggle_module' ] );
 		add_action( 'wp_ajax_my_site_hand_run_diagnostic', [ $this, 'ajax_run_diagnostic' ] );
 		add_action( 'wp_ajax_my_site_hand_fix_action', [ $this, 'ajax_fix_action' ] );
+		add_action( 'wp_ajax_my_site_hand_ai_test_connection', [ $this, 'ajax_ai_test_connection' ] );
 	}
 
 	/**
@@ -448,6 +509,10 @@ class Plugin {
 			'mysitehand_weekly_report_enabled',
 			'mysitehand_weekly_report_email',
 			'mysitehand_report_frequency',
+			AI_Manager::OPTION_PROVIDER,
+			AI_Manager::OPTION_API_KEY,
+			AI_Manager::OPTION_MODEL,
+			AI_Manager::OPTION_DAILY_CAP,
 		];
 
 		$option_name = sanitize_key( wp_unslash( $_POST['option_name'] ?? '' ) );
@@ -474,6 +539,35 @@ class Plugin {
 			}
 		} elseif ( 'mysitehand_report_frequency' === $option_name ) {
 			$option_value = in_array( $option_value, [ 'weekly', 'monthly', 'never' ], true ) ? $option_value : 'weekly';
+		} elseif ( AI_Manager::OPTION_PROVIDER === $option_name ) {
+			$option_value = array_key_exists( $option_value, $this->ai_manager->get_providers() ) ? $option_value : '';
+		} elseif ( AI_Manager::OPTION_API_KEY === $option_name ) {
+			$option_value = AI_Manager::sanitize_api_key( (string) $option_value );
+
+			// The rejected value is not echoed back, not even in part.
+			if ( null === $option_value ) {
+				wp_send_json_error( [ 'message' => __( 'That does not look like an API key. Paste it again, without spaces or quotes.', 'my-site-hand' ) ], 400 );
+			}
+
+			update_option( $option_name, $option_value, false );
+
+			// The browser gets the masked form back so it can show what is
+			// stored, and never the key itself.
+			wp_send_json_success(
+				[
+					'saved'  => true,
+					'masked' => AI_Manager::mask_key( $option_value ),
+				]
+			);
+		} elseif ( AI_Manager::OPTION_MODEL === $option_name ) {
+			$option_value = sanitize_text_field( $option_value );
+			$provider     = $this->ai_manager->get_active_provider();
+
+			if ( null === $provider || ! array_key_exists( $option_value, $provider->get_models() ) ) {
+				wp_send_json_error( [ 'message' => __( 'That model is not offered by the selected provider.', 'my-site-hand' ) ], 400 );
+			}
+		} elseif ( AI_Manager::OPTION_DAILY_CAP === $option_name ) {
+			$option_value = round( max( 0, min( 1000, (float) $option_value ) ), 2 );
 		} elseif ( 'mysitehand_log_level' === $option_name ) {
 			$option_value = in_array( $option_value, [ 'all', 'errors-only', 'none' ], true ) ? $option_value : 'all';
 		} else {
@@ -537,6 +631,30 @@ class Plugin {
 	}
 
 	/**
+	 * AJAX: test the stored AI key against the selected provider.
+	 *
+	 * Tests the key already saved rather than one sent from the browser, so
+	 * the key never has to travel back to the page to be tested.
+	 *
+	 * @return void
+	 */
+	public function ajax_ai_test_connection(): void {
+		check_ajax_referer( 'my_site_hand_admin', 'nonce' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( [ 'message' => __( 'Permission denied.', 'my-site-hand' ) ], 403 );
+		}
+
+		$result = $this->ai_manager->test_connection();
+
+		if ( is_wp_error( $result ) ) {
+			wp_send_json_error( [ 'message' => $result->get_error_message() ], 400 );
+		}
+
+		wp_send_json_success( [ 'message' => __( 'Connected. Your key works.', 'my-site-hand' ) ] );
+	}
+
+	/**
 	 * Register WP-Cron callbacks.
 	 *
 	 * @return void
@@ -549,6 +667,9 @@ class Plugin {
 		// Expired share links ride the existing daily cleanup rather than
 		// getting a cron event of their own.
 		add_action( 'my_site_hand_cleanup_logs', [ new Shared_Reports(), 'purge_expired' ] );
+
+		// Staged builds older than a week ride the same daily event.
+		add_action( 'my_site_hand_cleanup_logs', [ $this->site_builder->staged(), 'cleanup' ] );
 	}
 
 	/**
@@ -631,6 +752,42 @@ class Plugin {
 	 */
 	public function get_health_reporter(): Health_Reporter {
 		return $this->health_reporter;
+	}
+
+	/**
+	 * Get the AI manager.
+	 *
+	 * @return AI_Manager
+	 */
+	public function get_ai_manager(): AI_Manager {
+		return $this->ai_manager;
+	}
+
+	/**
+	 * Get the site builder service.
+	 *
+	 * @return Site_Builder
+	 */
+	public function get_site_builder(): Site_Builder {
+		return $this->site_builder;
+	}
+
+	/**
+	 * Get the site preview service.
+	 *
+	 * @return Site_Preview
+	 */
+	public function get_site_preview(): Site_Preview {
+		return $this->site_preview;
+	}
+
+	/**
+	 * Get the apply and undo service.
+	 *
+	 * @return Site_Applier
+	 */
+	public function get_site_applier(): Site_Applier {
+		return $this->site_applier;
 	}
 
 	/**

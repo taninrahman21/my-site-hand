@@ -1,0 +1,1128 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/highlights",
+			"page": "home",
+			"label": "Highlights"
+		},
+		{
+			"id": "home/services",
+			"page": "home",
+			"label": "Services"
+		},
+		{
+			"id": "home/about",
+			"page": "home",
+			"label": "About"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "about/intro",
+			"page": "about",
+			"label": "Introduction"
+		},
+		{
+			"id": "about/story",
+			"page": "about",
+			"label": "Our story"
+		},
+		{
+			"id": "about/values",
+			"page": "about",
+			"label": "Values"
+		},
+		{
+			"id": "about/team",
+			"page": "about",
+			"label": "Team"
+		},
+		{
+			"id": "about/cta",
+			"page": "about",
+			"label": "Call to action"
+		},
+		{
+			"id": "services/intro",
+			"page": "services",
+			"label": "Introduction"
+		},
+		{
+			"id": "services/list",
+			"page": "services",
+			"label": "Service list"
+		},
+		{
+			"id": "services/insurance",
+			"page": "services",
+			"label": "Insurance and payment"
+		},
+		{
+			"id": "services/cta",
+			"page": "services",
+			"label": "Call to action"
+		},
+		{
+			"id": "new-patients/intro",
+			"page": "new-patients",
+			"label": "Introduction"
+		},
+		{
+			"id": "new-patients/steps",
+			"page": "new-patients",
+			"label": "Steps"
+		},
+		{
+			"id": "new-patients/faq",
+			"page": "new-patients",
+			"label": "Questions"
+		},
+		{
+			"id": "new-patients/cta",
+			"page": "new-patients",
+			"label": "Call to action"
+		},
+		{
+			"id": "contact/intro",
+			"page": "contact",
+			"label": "Introduction"
+		},
+		{
+			"id": "contact/details",
+			"page": "contact",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Riverside Family Clinic",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Caring for every generation",
+			"max": 100,
+			"hint": "A short line about the practice."
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Riverside Family Clinic",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 014-2290",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "hello@riversideclinic.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Address",
+			"default": "48 Mill Street, Riverside",
+			"max": 120
+		},
+		{
+			"id": "biz.hours",
+			"group": "site/basics",
+			"type": "richtext",
+			"label": "Opening hours",
+			"default": "Mon to Fri: 8am to 6pm<br>Saturday: 9am to 1pm<br>Sunday: closed",
+			"max": 160,
+			"hint": "One line per day range."
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Book a visit",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "Family medicine for Riverside and the surrounding towns. Accepting new patients of all ages.",
+			"max": 160
+		},
+		{
+			"id": "footer.visit_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Contact heading",
+			"default": "Visit us",
+			"max": 40
+		},
+		{
+			"id": "footer.hours_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Hours heading",
+			"default": "Opening hours",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "All rights reserved.",
+			"max": 80
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Family medicine in Riverside",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Unhurried care for your whole family",
+			"max": 70,
+			"hint": "The main promise, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "From newborn checkups to long-term conditions, our doctors take the time to listen. Same-week appointments and most insurance plans accepted.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "Book an appointment",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "See our services",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/hero.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustration of a bright clinic room with an arched window and plants",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.highlights.item1_title",
+			"group": "home/highlights",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Same-week appointments",
+			"max": 40
+		},
+		{
+			"id": "home.highlights.item1_text",
+			"group": "home/highlights",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Call before noon and we can often see you the same day.",
+			"max": 120
+		},
+		{
+			"id": "home.highlights.item2_title",
+			"group": "home/highlights",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Most insurance accepted",
+			"max": 40
+		},
+		{
+			"id": "home.highlights.item2_text",
+			"group": "home/highlights",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "We work with all major plans and post clear self-pay prices.",
+			"max": 120
+		},
+		{
+			"id": "home.highlights.item3_title",
+			"group": "home/highlights",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Open six days",
+			"max": 24
+		},
+		{
+			"id": "home.highlights.item3_text",
+			"group": "home/highlights",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Early mornings and Saturday clinics for busy families.",
+			"max": 120
+		},
+		{
+			"id": "home.services.eyebrow",
+			"group": "home/services",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "What we do",
+			"max": 40
+		},
+		{
+			"id": "home.services.heading",
+			"group": "home/services",
+			"type": "text",
+			"label": "Heading",
+			"default": "Care for every stage of life",
+			"max": 60
+		},
+		{
+			"id": "home.services.intro",
+			"group": "home/services",
+			"type": "text",
+			"label": "Intro text",
+			"default": "One practice for the whole family, so your doctor already knows your history.",
+			"max": 160
+		},
+		{
+			"id": "home.services.item1_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Family medicine",
+			"max": 24
+		},
+		{
+			"id": "home.services.item1_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Checkups, illness visits and ongoing care for adults and children.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item2_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Children's health",
+			"max": 40
+		},
+		{
+			"id": "home.services.item2_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Well-baby visits, vaccinations, and school and sports physicals.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item3_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Chronic conditions",
+			"max": 40
+		},
+		{
+			"id": "home.services.item3_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Steady support for diabetes, asthma, blood pressure and more.",
+			"max": 120
+		},
+		{
+			"id": "home.services.link",
+			"group": "home/services",
+			"type": "text",
+			"label": "Link text",
+			"default": "View all services",
+			"max": 28
+		},
+		{
+			"id": "image:home.about",
+			"group": "home/about",
+			"type": "image",
+			"label": "About image",
+			"default": "assets/team.webp"
+		},
+		{
+			"id": "home.about.image_alt",
+			"group": "home/about",
+			"type": "text",
+			"label": "About image description",
+			"default": "Illustration of a doctor's desk with a stethoscope and notebook",
+			"max": 140
+		},
+		{
+			"id": "home.about.eyebrow",
+			"group": "home/about",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "About us",
+			"max": 40
+		},
+		{
+			"id": "home.about.heading",
+			"group": "home/about",
+			"type": "text",
+			"label": "Heading",
+			"default": "A neighborhood practice since 2009",
+			"max": 60
+		},
+		{
+			"id": "home.about.body",
+			"group": "home/about",
+			"type": "richtext",
+			"label": "Text",
+			"default": "We are a small team of doctors, nurses and front desk staff who know our patients by name. <strong>Longer appointments</strong> mean you leave with answers, not more questions.",
+			"max": 320
+		},
+		{
+			"id": "home.about.button",
+			"group": "home/about",
+			"type": "text",
+			"label": "Button text",
+			"default": "Meet our team",
+			"max": 28
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "Dr. Ahmed spent real time with my father and explained every step. For the first time in years we feel looked after.",
+			"max": 260
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "Maria L., patient since 2016",
+			"max": 60
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Ready to book your visit?",
+			"max": 40
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "New patients are welcome. Call us or book online in a few minutes.",
+			"max": 120
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book an appointment",
+			"max": 28
+		},
+		{
+			"id": "about.intro.eyebrow",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "About us",
+			"max": 40
+		},
+		{
+			"id": "about.intro.heading",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Good medicine starts with listening",
+			"max": 60
+		},
+		{
+			"id": "about.intro.lead",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Riverside Family Clinic was started by two local doctors who wanted a practice where nobody feels rushed.",
+			"max": 220
+		},
+		{
+			"id": "about.story.heading",
+			"group": "about/story",
+			"type": "text",
+			"label": "Heading",
+			"default": "Our story",
+			"max": 24
+		},
+		{
+			"id": "about.story.body1",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "First paragraph",
+			"default": "In 2009 Dr. Sara Ahmed and Dr. James Okafor opened a two-room clinic above the Mill Street pharmacy. They wanted appointments long enough to get to know each patient.",
+			"max": 320
+		},
+		{
+			"id": "about.story.body2",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "Second paragraph",
+			"default": "Today we care for more than 4,000 families, but the idea is the same. <strong>You see the same doctor, visit after visit</strong>, and we keep your care in one place.",
+			"max": 320
+		},
+		{
+			"id": "image:about.story",
+			"group": "about/story",
+			"type": "image",
+			"label": "Story image",
+			"default": "assets/building.webp"
+		},
+		{
+			"id": "about.story.image_alt",
+			"group": "about/story",
+			"type": "text",
+			"label": "Story image description",
+			"default": "Illustration of a small brick clinic building on a tree-lined street",
+			"max": 140
+		},
+		{
+			"id": "about.values.heading",
+			"group": "about/values",
+			"type": "text",
+			"label": "Heading",
+			"default": "What we believe",
+			"max": 24
+		},
+		{
+			"id": "about.values.item1_title",
+			"group": "about/values",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Time to talk",
+			"max": 24
+		},
+		{
+			"id": "about.values.item1_text",
+			"group": "about/values",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Standard visits are 30 minutes, not 10, so there is room for every question.",
+			"max": 160
+		},
+		{
+			"id": "about.values.item2_title",
+			"group": "about/values",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Clear answers",
+			"max": 24
+		},
+		{
+			"id": "about.values.item2_text",
+			"group": "about/values",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "We explain your options in plain language and write the plan down for you.",
+			"max": 120
+		},
+		{
+			"id": "about.values.item3_title",
+			"group": "about/values",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Care that lasts",
+			"max": 24
+		},
+		{
+			"id": "about.values.item3_text",
+			"group": "about/values",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Your doctor knows your history, which means fewer repeat tests and better follow-up.",
+			"max": 160
+		},
+		{
+			"id": "about.team.member1_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 1 name",
+			"default": "Dr. Sara Ahmed",
+			"max": 60
+		},
+		{
+			"id": "about.team.member1_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 1 role",
+			"default": "Family physician, co-founder",
+			"max": 60
+		},
+		{
+			"id": "about.team.member1_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 1 bio",
+			"default": "Sara has cared for Riverside families for over 15 years and leads our chronic care program.",
+			"max": 160
+		},
+		{
+			"id": "about.team.member2_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 2 name",
+			"default": "Dr. James Okafor",
+			"max": 60
+		},
+		{
+			"id": "about.team.member2_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 2 role",
+			"default": "Pediatrician, co-founder",
+			"max": 60
+		},
+		{
+			"id": "about.team.member2_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 2 bio",
+			"default": "James looks after our youngest patients, from newborn checks to teenage sports physicals.",
+			"max": 160
+		},
+		{
+			"id": "about.team.member3_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 3 name",
+			"default": "Linda Park, RN",
+			"max": 60
+		},
+		{
+			"id": "about.team.member3_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 3 role",
+			"default": "Nurse manager",
+			"max": 60
+		},
+		{
+			"id": "about.team.member3_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Member 3 bio",
+			"default": "Linda runs our vaccination clinics and makes sure every follow-up happens on time.",
+			"max": 160
+		},
+		{
+			"id": "about.team.heading",
+			"group": "about/team",
+			"type": "text",
+			"label": "Heading",
+			"default": "Meet the team",
+			"max": 24
+		},
+		{
+			"id": "about.team.intro",
+			"group": "about/team",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Doctors and nurses who live in the community they care for.",
+			"max": 120
+		},
+		{
+			"id": "about.cta.heading",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Join our practice",
+			"max": 40
+		},
+		{
+			"id": "about.cta.text",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "We are accepting new patients of all ages. Getting started takes one phone call.",
+			"max": 160
+		},
+		{
+			"id": "about.cta.button",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Become a patient",
+			"max": 28
+		},
+		{
+			"id": "services.intro.eyebrow",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Services",
+			"max": 40
+		},
+		{
+			"id": "services.intro.heading",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Everything your family needs, under one roof",
+			"max": 80
+		},
+		{
+			"id": "services.intro.lead",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Most visits happen right here, and when you need a specialist we arrange the referral and stay involved.",
+			"max": 220
+		},
+		{
+			"id": "services.list.item1_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 1 name",
+			"default": "Family medicine",
+			"max": 24
+		},
+		{
+			"id": "services.list.item1_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 1 description",
+			"default": "Annual checkups, illness visits and preventive screening for adults of every age.",
+			"max": 160
+		},
+		{
+			"id": "services.list.item2_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 2 name",
+			"default": "Children's health",
+			"max": 40
+		},
+		{
+			"id": "services.list.item2_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 2 description",
+			"default": "Well-baby visits, growth checks, vaccinations, and school and sports physicals.",
+			"max": 160
+		},
+		{
+			"id": "services.list.item3_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 3 name",
+			"default": "Women's health",
+			"max": 24
+		},
+		{
+			"id": "services.list.item3_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 3 description",
+			"default": "Cervical screening, contraception advice, pregnancy care and menopause support.",
+			"max": 160
+		},
+		{
+			"id": "services.list.item4_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 4 name",
+			"default": "Chronic care",
+			"max": 24
+		},
+		{
+			"id": "services.list.item4_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 4 description",
+			"default": "Regular reviews for diabetes, asthma, heart health and high blood pressure.",
+			"max": 120
+		},
+		{
+			"id": "services.list.item5_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 5 name",
+			"default": "Vaccinations",
+			"max": 24
+		},
+		{
+			"id": "services.list.item5_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 5 description",
+			"default": "Routine, travel and seasonal flu vaccines, often available the same week.",
+			"max": 120
+		},
+		{
+			"id": "services.list.item6_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 6 name",
+			"default": "Minor procedures",
+			"max": 40
+		},
+		{
+			"id": "services.list.item6_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Service 6 description",
+			"default": "Stitches, wound care, skin checks and the removal of small skin lesions.",
+			"max": 120
+		},
+		{
+			"id": "services.insurance.heading",
+			"group": "services/insurance",
+			"type": "text",
+			"label": "Heading",
+			"default": "Insurance and payment",
+			"max": 40
+		},
+		{
+			"id": "services.insurance.body",
+			"group": "services/insurance",
+			"type": "richtext",
+			"label": "Text",
+			"default": "We accept most major insurance plans, including Medicare. If you pay for yourself, our prices are posted at the front desk and on request. <strong>Ask us before your visit</strong> and we will check your cover for you.",
+			"max": 480
+		},
+		{
+			"id": "services.cta.heading",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Not sure which service you need?",
+			"max": 60
+		},
+		{
+			"id": "services.cta.text",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Call us and a nurse will help you book the right appointment.",
+			"max": 120
+		},
+		{
+			"id": "services.cta.button",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Contact us",
+			"max": 28
+		},
+		{
+			"id": "new-patients.intro.eyebrow",
+			"group": "new-patients/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "New patients",
+			"max": 40
+		},
+		{
+			"id": "new-patients.intro.heading",
+			"group": "new-patients/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Joining the practice is simple",
+			"max": 60
+		},
+		{
+			"id": "new-patients.intro.lead",
+			"group": "new-patients/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Most new patients are registered and booked within a week. Here is what to expect.",
+			"max": 160
+		},
+		{
+			"id": "new-patients.steps.item1_title",
+			"group": "new-patients/steps",
+			"type": "text",
+			"label": "Step 1 title",
+			"default": "Call or visit us",
+			"max": 40
+		},
+		{
+			"id": "new-patients.steps.item1_text",
+			"group": "new-patients/steps",
+			"type": "text",
+			"label": "Step 1 text",
+			"default": "Tell us who is joining and we will check that we cover your address.",
+			"max": 120
+		},
+		{
+			"id": "new-patients.steps.item2_title",
+			"group": "new-patients/steps",
+			"type": "text",
+			"label": "Step 2 title",
+			"default": "Fill in one form",
+			"max": 40
+		},
+		{
+			"id": "new-patients.steps.item2_text",
+			"group": "new-patients/steps",
+			"type": "text",
+			"label": "Step 2 text",
+			"default": "We send a short health questionnaire by email or hand it to you at the desk.",
+			"max": 160
+		},
+		{
+			"id": "new-patients.steps.item3_title",
+			"group": "new-patients/steps",
+			"type": "text",
+			"label": "Step 3 title",
+			"default": "Meet your doctor",
+			"max": 40
+		},
+		{
+			"id": "new-patients.steps.item3_text",
+			"group": "new-patients/steps",
+			"type": "text",
+			"label": "Step 3 text",
+			"default": "Your first appointment is longer, so we can get to know you properly.",
+			"max": 120
+		},
+		{
+			"id": "new-patients.steps.heading",
+			"group": "new-patients/steps",
+			"type": "text",
+			"label": "Heading",
+			"default": "Three steps to register",
+			"max": 40
+		},
+		{
+			"id": "new-patients.faq.q1",
+			"group": "new-patients/faq",
+			"type": "text",
+			"label": "Question 1",
+			"default": "Do I need to change doctors to register?",
+			"max": 120
+		},
+		{
+			"id": "new-patients.faq.a1",
+			"group": "new-patients/faq",
+			"type": "richtext",
+			"label": "Answer 1",
+			"default": "Yes. When you register with us, your records move from your previous practice. We request them for you.",
+			"max": 220
+		},
+		{
+			"id": "new-patients.faq.q2",
+			"group": "new-patients/faq",
+			"type": "text",
+			"label": "Question 2",
+			"default": "What should I bring to my first visit?",
+			"max": 120
+		},
+		{
+			"id": "new-patients.faq.a2",
+			"group": "new-patients/faq",
+			"type": "richtext",
+			"label": "Answer 2",
+			"default": "Your insurance card, a photo ID and a list of any medicines you take. <strong>Arrive ten minutes early</strong> for your first appointment.",
+			"max": 320
+		},
+		{
+			"id": "new-patients.faq.q3",
+			"group": "new-patients/faq",
+			"type": "text",
+			"label": "Question 3",
+			"default": "Can I book online?",
+			"max": 120
+		},
+		{
+			"id": "new-patients.faq.a3",
+			"group": "new-patients/faq",
+			"type": "richtext",
+			"label": "Answer 3",
+			"default": "Yes. Once you are registered you can book, cancel and request repeat prescriptions online at any time.",
+			"max": 220
+		},
+		{
+			"id": "new-patients.faq.q4",
+			"group": "new-patients/faq",
+			"type": "text",
+			"label": "Question 4",
+			"default": "What if I need care after hours?",
+			"max": 120
+		},
+		{
+			"id": "new-patients.faq.a4",
+			"group": "new-patients/faq",
+			"type": "richtext",
+			"label": "Answer 4",
+			"default": "Call our main number and follow the prompts for the on-call doctor. In an emergency, always call 911.",
+			"max": 220
+		},
+		{
+			"id": "new-patients.faq.heading",
+			"group": "new-patients/faq",
+			"type": "text",
+			"label": "Heading",
+			"default": "Common questions",
+			"max": 40
+		},
+		{
+			"id": "new-patients.cta.heading",
+			"group": "new-patients/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Ready to register?",
+			"max": 40
+		},
+		{
+			"id": "new-patients.cta.text",
+			"group": "new-patients/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Call us during opening hours and we will take it from there.",
+			"max": 120
+		},
+		{
+			"id": "new-patients.cta.button",
+			"group": "new-patients/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Get in touch",
+			"max": 28
+		},
+		{
+			"id": "contact.intro.eyebrow",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Contact",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.heading",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "We are here to help",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.lead",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Call us to book, ask a question or request a repeat prescription. We reply to email within one working day.",
+			"max": 220
+		},
+		{
+			"id": "contact.details.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Contact box heading",
+			"default": "Visit or call",
+			"max": 24
+		},
+		{
+			"id": "contact.directions.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Directions heading",
+			"default": "Getting here",
+			"max": 24
+		},
+		{
+			"id": "contact.directions.body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Directions",
+			"default": "We are on Mill Street, opposite the library. <strong>Free parking</strong> is available behind the building, and the number 4 bus stops right outside.",
+			"max": 320
+		},
+		{
+			"id": "contact.urgent.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Urgent care heading",
+			"default": "Need urgent help?",
+			"max": 40
+		},
+		{
+			"id": "contact.urgent.body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Urgent care text",
+			"default": "If you are unwell and it cannot wait, call us before 10am for a same-day appointment. <strong>In an emergency, call 911.</strong>",
+			"max": 220
+		}
+	]
+}

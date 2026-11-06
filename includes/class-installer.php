@@ -29,6 +29,9 @@ class Installer {
 		flush_rewrite_rules();
 		update_option( 'mysitehand_db_version', MYSITEHAND_DB_VERSION );
 		update_option( 'my_site_hand_do_activation_redirect', true );
+
+		// Offer "Build a site" or "Check my site" once, next to the first scan.
+		update_option( 'mysitehand_show_welcome', true );
 	}
 
 	/**
@@ -145,7 +148,7 @@ class Installer {
 			'mysitehand_hourly_limit'           => 200,
 			'mysitehand_daily_limit'            => 2000,
 			'mysitehand_log_retention_days'     => 30,
-			'mysitehand_enabled_modules'        => [ 'content', 'seo', 'diagnostics', 'media', 'users' ],
+			'mysitehand_enabled_modules'        => [ 'content', 'seo', 'diagnostics', 'media', 'users', 'site-builder' ],
 			'mysitehand_cache_ttl'              => 3600,
 			'mysitehand_enabled'                => true,
 			'mysitehand_display_name'           => get_bloginfo( 'name' ) . ' Agent',
@@ -159,6 +162,13 @@ class Installer {
 			'mysitehand_weekly_report_enabled'  => true,
 			'mysitehand_weekly_report_email'    => get_option( 'admin_email' ),
 			'mysitehand_report_frequency'       => 'weekly',
+			// Optional AI assistance. Empty provider and key mean "off", and
+			// off is the default: nothing AI-related appears until a key is
+			// pasted into Settings.
+			AI_Manager::OPTION_PROVIDER           => '',
+			AI_Manager::OPTION_API_KEY            => '',
+			AI_Manager::OPTION_MODEL              => '',
+			AI_Manager::OPTION_DAILY_CAP          => AI_Manager::DEFAULT_DAILY_CAP,
 		];
 
 		foreach ( $defaults as $option => $value ) {

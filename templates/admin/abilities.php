@@ -19,6 +19,7 @@ $my_site_hand_module_labels = [
 	'media'       => __('Media', 'my-site-hand'),
 	'users'       => __('Users', 'my-site-hand'),
 	'woocommerce' => __('WooCommerce', 'my-site-hand'),
+	'site-builder' => __('Site Builder', 'my-site-hand'),
 ];
 
 $my_site_hand_module_descs = [
@@ -28,6 +29,7 @@ $my_site_hand_module_descs = [
 	'media'       => __('Media library', 'my-site-hand'),
 	'users'       => __('Accounts and roles', 'my-site-hand'),
 	'woocommerce' => __('Products, orders, and coupons', 'my-site-hand'),
+	'site-builder' => __('Starter sites: stage, apply and undo', 'my-site-hand'),
 ];
 
 $my_site_hand_module_icons = [
@@ -37,6 +39,7 @@ $my_site_hand_module_icons = [
 	'diagnostics' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>',
 	'media'       => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3" y="3" width="18" height="18"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle></svg>',
 	'users'       => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>',
+	'site-builder' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3" y="3" width="18" height="18"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>',
 ];
 
 $my_site_hand_svg_allowed = [

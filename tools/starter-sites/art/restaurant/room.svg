@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9d6bd"/>
+      <stop offset="1" stop-color="#dcc3a3"/>
+    </linearGradient>
+    <linearGradient id="evening" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2d3d5c"/>
+      <stop offset="0.6" stop-color="#b76e4b"/>
+      <stop offset="1" stop-color="#e7a66b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe2a6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffe2a6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#wall)"/>
+  <rect y="700" width="1200" height="200" fill="#8f5d3b"/>
+  <rect y="690" width="1200" height="16" fill="#7a4d30"/>
+  <!-- Arched windows -->
+  <g>
+    <path d="M140 640 V300 A130 130 0 0 1 400 300 V640 Z" fill="#c9a77f"/>
+    <path d="M160 620 V305 A110 110 0 0 1 380 305 V620 Z" fill="url(#evening)"/>
+    <rect x="266" y="200" width="8" height="420" fill="#c9a77f"/>
+    <path d="M800 640 V300 A130 130 0 0 1 1060 300 V640 Z" fill="#c9a77f"/>
+    <path d="M820 620 V305 A110 110 0 0 1 1040 305 V620 Z" fill="url(#evening)"/>
+    <rect x="926" y="200" width="8" height="420" fill="#c9a77f"/>
+    <path d="M470 640 V320 A130 130 0 0 1 730 320 V640 Z" fill="#7a4d30"/>
+    <path d="M490 640 V325 A110 110 0 0 1 710 325 V640 Z" fill="#5c3a24"/>
+    <g fill="#c9853f"><rect x="520" y="420" width="160" height="10" rx="3"/><rect x="520" y="500" width="160" height="10" rx="3"/></g>
+    <g fill="#556b2f"><rect x="530" y="384" width="18" height="36" rx="4"/><rect x="556" y="378" width="18" height="42" rx="4"/><rect x="640" y="388" width="18" height="32" rx="4"/></g>
+    <g fill="#7a1f2e"><rect x="540" y="458" width="18" height="42" rx="4"/><rect x="566" y="462" width="18" height="38" rx="4"/><rect x="620" y="456" width="18" height="44" rx="4"/><rect x="648" y="460" width="18" height="40" rx="4"/></g>
+  </g>
+  <!-- Pendant lamps -->
+  <g>
+    <line x1="300" y1="0" x2="300" y2="150" stroke="#3a2a1e" stroke-width="4"/>
+    <circle cx="300" cy="200" r="140" fill="url(#glow)"/>
+    <path d="M250 190 Q300 120 350 190 Z" fill="#3a2a1e"/>
+    <line x1="600" y1="0" x2="600" y2="120" stroke="#3a2a1e" stroke-width="4"/>
+    <circle cx="600" cy="170" r="140" fill="url(#glow)"/>
+    <path d="M550 160 Q600 90 650 160 Z" fill="#3a2a1e"/>
+    <line x1="900" y1="0" x2="900" y2="150" stroke="#3a2a1e" stroke-width="4"/>
+    <circle cx="900" cy="200" r="140" fill="url(#glow)"/>
+    <path d="M850 190 Q900 120 950 190 Z" fill="#3a2a1e"/>
+  </g>
+  <!-- Long table -->
+  <rect x="120" y="640" width="960" height="34" rx="6" fill="#6b4226"/>
+  <g fill="#5a3720"><rect x="170" y="674" width="22" height="160"/><rect x="1008" y="674" width="22" height="160"/></g>
+  <g fill="#f6eee2">
+    <ellipse cx="260" cy="636" rx="54" ry="10"/><ellipse cx="450" cy="636" rx="54" ry="10"/><ellipse cx="640" cy="636" rx="54" ry="10"/><ellipse cx="830" cy="636" rx="54" ry="10"/><ellipse cx="990" cy="636" rx="44" ry="9"/>
+  </g>
+  <g fill="#e7a66b"><rect x="350" y="600" width="12" height="36" rx="3"/><rect x="740" y="600" width="12" height="36" rx="3"/></g>
+  <g fill="#ffd27a"><circle cx="356" cy="594" r="7"/><circle cx="746" cy="594" r="7"/></g>
+  <!-- Chairs -->
+  <g fill="#3a2a1e">
+    <rect x="220" y="700" width="70" height="12" rx="4"/><rect x="226" y="712" width="10" height="120"/><rect x="274" y="712" width="10" height="120"/>
+    <rect x="560" y="700" width="70" height="12" rx="4"/><rect x="566" y="712" width="10" height="120"/><rect x="614" y="712" width="10" height="120"/>
+    <rect x="900" y="700" width="70" height="12" rx="4"/><rect x="906" y="712" width="10" height="120"/><rect x="954" y="712" width="10" height="120"/>
+  </g>
+  <!-- Plants -->
+  <g transform="translate(60 520)">
+    <path d="M40 180 C10 120 -30 90 -40 30 C10 60 40 110 50 170" fill="#556b2f"/>
+    <path d="M50 180 C60 100 40 40 70 -10 C100 60 90 130 62 180" fill="#6f8a3c"/>
+    <path d="M10 170 H100 L88 250 H22 Z" fill="#b5653a"/>
+  </g>
+</svg>

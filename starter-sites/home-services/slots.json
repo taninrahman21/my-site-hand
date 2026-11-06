@@ -1,0 +1,1262 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/trust",
+			"page": "home",
+			"label": "Highlights"
+		},
+		{
+			"id": "home/services",
+			"page": "home",
+			"label": "Services"
+		},
+		{
+			"id": "home/how",
+			"page": "home",
+			"label": "How it works"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "services/intro",
+			"page": "services",
+			"label": "Introduction"
+		},
+		{
+			"id": "services/plumbing",
+			"page": "services",
+			"label": "Plumbing"
+		},
+		{
+			"id": "services/electrical",
+			"page": "services",
+			"label": "Electrical"
+		},
+		{
+			"id": "services/faq",
+			"page": "services",
+			"label": "Questions"
+		},
+		{
+			"id": "services/cta",
+			"page": "services",
+			"label": "Call to action"
+		},
+		{
+			"id": "prices/intro",
+			"page": "prices",
+			"label": "Introduction"
+		},
+		{
+			"id": "prices/plumbing",
+			"page": "prices",
+			"label": "Plumbing prices"
+		},
+		{
+			"id": "prices/electrical",
+			"page": "prices",
+			"label": "Electrical prices"
+		},
+		{
+			"id": "prices/cta",
+			"page": "prices",
+			"label": "Call to action"
+		},
+		{
+			"id": "about/intro",
+			"page": "about",
+			"label": "Introduction"
+		},
+		{
+			"id": "about/story",
+			"page": "about",
+			"label": "Story"
+		},
+		{
+			"id": "about/team",
+			"page": "about",
+			"label": "Team"
+		},
+		{
+			"id": "about/cta",
+			"page": "about",
+			"label": "Call to action"
+		},
+		{
+			"id": "contact/intro",
+			"page": "contact",
+			"label": "Introduction"
+		},
+		{
+			"id": "contact/details",
+			"page": "contact",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Hartley Home Services",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Plumbing, electrical and heating you can trust",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Hartley Home Services",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 012-4467",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "help@hartleyhome.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Service area",
+			"default": "Serving Oakdale and 20 miles around",
+			"max": 120
+		},
+		{
+			"id": "biz.hours",
+			"group": "site/basics",
+			"type": "richtext",
+			"label": "Opening hours",
+			"default": "Mon to Fri: 7am to 7pm<br>Saturday: 8am to 4pm<br>Emergencies: 24 hours, 7 days",
+			"max": 200,
+			"hint": "One line per day range."
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Book a visit",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "Licensed and insured plumbers and electricians. Family-run since 2004.",
+			"max": 120
+		},
+		{
+			"id": "footer.contact_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Contact heading",
+			"default": "Get in touch",
+			"max": 40
+		},
+		{
+			"id": "footer.hours_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Hours heading",
+			"default": "Opening hours",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "Licensed and fully insured.",
+			"max": 120
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Licensed plumbers and electricians",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Fixed today, done right, priced upfront",
+			"max": 80,
+			"hint": "The main promise, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "Leaks, power cuts, boilers and everything in between. A real person answers the phone, and you get the price before we start.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "Book a visit",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "See our prices",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/van.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustration of a service van parked outside a house on a sunny street",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.trust.item1_value",
+			"group": "home/trust",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "24/7",
+			"max": 16
+		},
+		{
+			"id": "home.trust.item1_text",
+			"group": "home/trust",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "emergency call-outs, every day",
+			"max": 80
+		},
+		{
+			"id": "home.trust.item2_value",
+			"group": "home/trust",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "60 min",
+			"max": 16
+		},
+		{
+			"id": "home.trust.item2_text",
+			"group": "home/trust",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "average arrival time in town",
+			"max": 80
+		},
+		{
+			"id": "home.trust.item3_value",
+			"group": "home/trust",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "20 yrs",
+			"max": 16
+		},
+		{
+			"id": "home.trust.item3_text",
+			"group": "home/trust",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "family-run in Oakdale",
+			"max": 80
+		},
+		{
+			"id": "home.trust.item4_value",
+			"group": "home/trust",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "4.9/5",
+			"max": 16
+		},
+		{
+			"id": "home.trust.item4_text",
+			"group": "home/trust",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "from 600+ local reviews",
+			"max": 80
+		},
+		{
+			"id": "home.services.item1_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Plumbing",
+			"max": 24
+		},
+		{
+			"id": "home.services.item1_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Leaks, blocked drains, toilets, taps and water heaters.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item2_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Electrical",
+			"max": 24
+		},
+		{
+			"id": "home.services.item2_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Fault finding, rewiring, lighting, sockets and safety checks.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item3_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Heating",
+			"max": 24
+		},
+		{
+			"id": "home.services.item3_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Boiler repairs, servicing and new installations.",
+			"max": 80
+		},
+		{
+			"id": "home.services.item4_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 4 title",
+			"default": "Bathrooms",
+			"max": 24
+		},
+		{
+			"id": "home.services.item4_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 4 text",
+			"default": "Full refits planned, priced and finished by one team.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item5_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 5 title",
+			"default": "Smart home",
+			"max": 24
+		},
+		{
+			"id": "home.services.item5_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 5 text",
+			"default": "Thermostats, doorbells and EV chargers fitted safely.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item6_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 6 title",
+			"default": "Emergencies",
+			"max": 24
+		},
+		{
+			"id": "home.services.item6_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 6 text",
+			"default": "Burst pipes and power cuts, any hour of the day or night.",
+			"max": 120
+		},
+		{
+			"id": "home.services.eyebrow",
+			"group": "home/services",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "What we fix",
+			"max": 40
+		},
+		{
+			"id": "home.services.heading",
+			"group": "home/services",
+			"type": "text",
+			"label": "Heading",
+			"default": "One call for the whole house",
+			"max": 60
+		},
+		{
+			"id": "home.services.link",
+			"group": "home/services",
+			"type": "text",
+			"label": "Link text",
+			"default": "All services",
+			"max": 28
+		},
+		{
+			"id": "home.how.item1_title",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 1 title",
+			"default": "Call or book online",
+			"max": 40
+		},
+		{
+			"id": "home.how.item1_text",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 1 text",
+			"default": "Tell us what is wrong. We give you a time slot that suits you.",
+			"max": 120
+		},
+		{
+			"id": "home.how.item2_title",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 2 title",
+			"default": "Get a fixed price",
+			"max": 40
+		},
+		{
+			"id": "home.how.item2_text",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 2 text",
+			"default": "Our engineer checks the job and tells you the price before starting.",
+			"max": 120
+		},
+		{
+			"id": "home.how.item3_title",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 3 title",
+			"default": "Job done, guaranteed",
+			"max": 40
+		},
+		{
+			"id": "home.how.item3_text",
+			"group": "home/how",
+			"type": "text",
+			"label": "Step 3 text",
+			"default": "Every repair comes with a 12-month guarantee on parts and labour.",
+			"max": 120
+		},
+		{
+			"id": "home.how.heading",
+			"group": "home/how",
+			"type": "text",
+			"label": "Heading",
+			"default": "Booking takes two minutes",
+			"max": 40
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "Our boiler died on a Sunday night. Hartley had an engineer here in under an hour and the heating back on before bedtime. Fair price, no fuss.",
+			"max": 280
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "Gareth W., Oakdale",
+			"max": 70
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Something broken right now?",
+			"max": 60
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Call us any time. Emergencies are answered 24 hours a day.",
+			"max": 120
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a visit",
+			"max": 28
+		},
+		{
+			"id": "services.intro.eyebrow",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Services",
+			"max": 40
+		},
+		{
+			"id": "services.intro.heading",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Repairs, installs and servicing",
+			"max": 60
+		},
+		{
+			"id": "services.intro.lead",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "From a dripping tap to a full rewire, our own engineers do the work. We never send subcontractors.",
+			"max": 160
+		},
+		{
+			"id": "services.plumbing.eyebrow",
+			"group": "services/plumbing",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Plumbing",
+			"max": 40
+		},
+		{
+			"id": "services.plumbing.heading",
+			"group": "services/plumbing",
+			"type": "text",
+			"label": "Heading",
+			"default": "Leaks fixed fast",
+			"max": 40
+		},
+		{
+			"id": "services.plumbing.body",
+			"group": "services/plumbing",
+			"type": "richtext",
+			"label": "Text",
+			"default": "Leaks, blocked drains, toilets, taps, showers and water heaters. <strong>Most repairs are finished on the first visit</strong>, because our vans carry the common parts.",
+			"max": 320
+		},
+		{
+			"id": "image:services.plumbing",
+			"group": "services/plumbing",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/tools.webp"
+		},
+		{
+			"id": "services.plumbing.image_alt",
+			"group": "services/plumbing",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a toolbox with a wrench, pipe fittings and a measuring tape",
+			"max": 140
+		},
+		{
+			"id": "services.electrical.eyebrow",
+			"group": "services/electrical",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Electrical",
+			"max": 40
+		},
+		{
+			"id": "services.electrical.heading",
+			"group": "services/electrical",
+			"type": "text",
+			"label": "Heading",
+			"default": "Safe, certified electrical work",
+			"max": 60
+		},
+		{
+			"id": "services.electrical.body",
+			"group": "services/electrical",
+			"type": "richtext",
+			"label": "Text",
+			"default": "Fault finding, new sockets and lighting, consumer units and full rewires. Every job is tested and certified, and you get the paperwork by email.",
+			"max": 320
+		},
+		{
+			"id": "image:services.electrical",
+			"group": "services/electrical",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/house.webp"
+		},
+		{
+			"id": "services.electrical.image_alt",
+			"group": "services/electrical",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a house cut away to show pipes and wiring inside the walls",
+			"max": 140
+		},
+		{
+			"id": "services.faq.q1",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Question 1",
+			"default": "Do you charge a call-out fee?",
+			"max": 120
+		},
+		{
+			"id": "services.faq.a1",
+			"group": "services/faq",
+			"type": "richtext",
+			"label": "Answer 1",
+			"default": "No call-out fee in our service area during normal hours. Emergency visits have a flat $89 attendance charge.",
+			"max": 220
+		},
+		{
+			"id": "services.faq.q2",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Question 2",
+			"default": "Are you licensed and insured?",
+			"max": 120
+		},
+		{
+			"id": "services.faq.a2",
+			"group": "services/faq",
+			"type": "richtext",
+			"label": "Answer 2",
+			"default": "Yes. All our engineers are licensed, and we carry full public liability insurance.",
+			"max": 160
+		},
+		{
+			"id": "services.faq.q3",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Question 3",
+			"default": "Do you guarantee your work?",
+			"max": 120
+		},
+		{
+			"id": "services.faq.a3",
+			"group": "services/faq",
+			"type": "richtext",
+			"label": "Answer 3",
+			"default": "Yes. <strong>Every repair has a 12-month guarantee</strong> on parts and labour.",
+			"max": 160
+		},
+		{
+			"id": "services.faq.q4",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Question 4",
+			"default": "Can I get a quote for a bigger job?",
+			"max": 120
+		},
+		{
+			"id": "services.faq.a4",
+			"group": "services/faq",
+			"type": "richtext",
+			"label": "Answer 4",
+			"default": "Of course. Book a free visit and we will send a written, fixed quote within two days.",
+			"max": 160
+		},
+		{
+			"id": "services.faq.heading",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Heading",
+			"default": "Common questions",
+			"max": 40
+		},
+		{
+			"id": "services.cta.heading",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Need a hand?",
+			"max": 24
+		},
+		{
+			"id": "services.cta.text",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book online in two minutes, or call and talk to a real person.",
+			"max": 120
+		},
+		{
+			"id": "services.cta.button",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a visit",
+			"max": 28
+		},
+		{
+			"id": "prices.intro.eyebrow",
+			"group": "prices/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Prices",
+			"max": 40
+		},
+		{
+			"id": "prices.intro.heading",
+			"group": "prices/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Honest, upfront prices",
+			"max": 40
+		},
+		{
+			"id": "prices.intro.lead",
+			"group": "prices/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Typical prices for common jobs. You always get a fixed price before any work starts.",
+			"max": 160
+		},
+		{
+			"id": "prices.plumbing.item1_name",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 1 name",
+			"default": "Fix a leaking tap",
+			"max": 60
+		},
+		{
+			"id": "prices.plumbing.item1_price",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 1 price",
+			"default": "$95",
+			"max": 16
+		},
+		{
+			"id": "prices.plumbing.item1_desc",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 1 description",
+			"default": "Washer or cartridge replaced, parts included.",
+			"max": 80
+		},
+		{
+			"id": "prices.plumbing.item2_name",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 2 name",
+			"default": "Unblock a drain",
+			"max": 60
+		},
+		{
+			"id": "prices.plumbing.item2_price",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 2 price",
+			"default": "$120",
+			"max": 16
+		},
+		{
+			"id": "prices.plumbing.item2_desc",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 2 description",
+			"default": "Sinks, showers and baths, cleared and tested.",
+			"max": 80
+		},
+		{
+			"id": "prices.plumbing.item3_name",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 3 name",
+			"default": "Replace a toilet",
+			"max": 60
+		},
+		{
+			"id": "prices.plumbing.item3_price",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 3 price",
+			"default": "$340",
+			"max": 16
+		},
+		{
+			"id": "prices.plumbing.item3_desc",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 3 description",
+			"default": "Supply and fit a standard toilet, old one removed.",
+			"max": 80
+		},
+		{
+			"id": "prices.plumbing.item4_name",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 4 name",
+			"default": "Water heater service",
+			"max": 60
+		},
+		{
+			"id": "prices.plumbing.item4_price",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 4 price",
+			"default": "$150",
+			"max": 16
+		},
+		{
+			"id": "prices.plumbing.item4_desc",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Item 4 description",
+			"default": "Full safety check and clean.",
+			"max": 60
+		},
+		{
+			"id": "prices.plumbing.heading",
+			"group": "prices/plumbing",
+			"type": "text",
+			"label": "Section heading",
+			"default": "Plumbing",
+			"max": 50
+		},
+		{
+			"id": "prices.electrical.item1_name",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 1 name",
+			"default": "Add a socket",
+			"max": 60
+		},
+		{
+			"id": "prices.electrical.item1_price",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 1 price",
+			"default": "$140",
+			"max": 16
+		},
+		{
+			"id": "prices.electrical.item1_desc",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 1 description",
+			"default": "New double socket on an existing circuit.",
+			"max": 80
+		},
+		{
+			"id": "prices.electrical.item2_name",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 2 name",
+			"default": "Replace a light fitting",
+			"max": 60
+		},
+		{
+			"id": "prices.electrical.item2_price",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 2 price",
+			"default": "$85",
+			"max": 16
+		},
+		{
+			"id": "prices.electrical.item2_desc",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 2 description",
+			"default": "Customer-supplied fitting, fitted and tested.",
+			"max": 80
+		},
+		{
+			"id": "prices.electrical.item3_name",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 3 name",
+			"default": "Safety inspection",
+			"max": 60
+		},
+		{
+			"id": "prices.electrical.item3_price",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 3 price",
+			"default": "$190",
+			"max": 16
+		},
+		{
+			"id": "prices.electrical.item3_desc",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 3 description",
+			"default": "Full home inspection with a written report.",
+			"max": 80
+		},
+		{
+			"id": "prices.electrical.item4_name",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 4 name",
+			"default": "EV charger install",
+			"max": 60
+		},
+		{
+			"id": "prices.electrical.item4_price",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 4 price",
+			"default": "From $650",
+			"max": 16
+		},
+		{
+			"id": "prices.electrical.item4_desc",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Item 4 description",
+			"default": "Standard home charger, fitted and certified.",
+			"max": 80
+		},
+		{
+			"id": "prices.electrical.heading",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Section heading",
+			"default": "Electrical",
+			"max": 50
+		},
+		{
+			"id": "prices.electrical.note",
+			"group": "prices/electrical",
+			"type": "text",
+			"label": "Note",
+			"default": "Prices include labour and standard parts. Your engineer confirms the exact price before starting.",
+			"max": 160
+		},
+		{
+			"id": "prices.cta.heading",
+			"group": "prices/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Want a fixed quote?",
+			"max": 40
+		},
+		{
+			"id": "prices.cta.text",
+			"group": "prices/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Tell us about the job and we will send a price, usually the same day.",
+			"max": 120
+		},
+		{
+			"id": "prices.cta.button",
+			"group": "prices/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Get a quote",
+			"max": 28
+		},
+		{
+			"id": "about.intro.eyebrow",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "About us",
+			"max": 40
+		},
+		{
+			"id": "about.intro.heading",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "A family business since 2004",
+			"max": 60
+		},
+		{
+			"id": "about.intro.lead",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Started by Tom Hartley with one van and a toolbox. Now 14 engineers, still family-run.",
+			"max": 160
+		},
+		{
+			"id": "about.story.eyebrow",
+			"group": "about/story",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our story",
+			"max": 40
+		},
+		{
+			"id": "about.story.heading",
+			"group": "about/story",
+			"type": "text",
+			"label": "Heading",
+			"default": "Local people, local work",
+			"max": 40
+		},
+		{
+			"id": "about.story.body",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "Text",
+			"default": "We live where we work, so our reputation is everything. That is why we turn up when we say we will, explain what we find and <strong>never charge more than we quote</strong>.",
+			"max": 320
+		},
+		{
+			"id": "image:about.story",
+			"group": "about/story",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/van.webp"
+		},
+		{
+			"id": "about.story.image_alt",
+			"group": "about/story",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a service van parked outside a house on a sunny street",
+			"max": 140
+		},
+		{
+			"id": "about.team.member1_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 1 name",
+			"default": "Tom Hartley",
+			"max": 60
+		},
+		{
+			"id": "about.team.member1_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 1 role",
+			"default": "Founder, master plumber",
+			"max": 60
+		},
+		{
+			"id": "about.team.member1_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 1 bio",
+			"default": "Tom still takes calls on Saturday mornings and knows half the boilers in town by name.",
+			"max": 160
+		},
+		{
+			"id": "about.team.member2_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 2 name",
+			"default": "Rosa Diaz",
+			"max": 60
+		},
+		{
+			"id": "about.team.member2_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 2 role",
+			"default": "Lead electrician",
+			"max": 60
+		},
+		{
+			"id": "about.team.member2_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 2 bio",
+			"default": "Rosa runs our electrical team and signs off every certificate we issue.",
+			"max": 120
+		},
+		{
+			"id": "about.team.member3_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 3 name",
+			"default": "Sam Okoro",
+			"max": 60
+		},
+		{
+			"id": "about.team.member3_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 3 role",
+			"default": "Heating engineer",
+			"max": 60
+		},
+		{
+			"id": "about.team.member3_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 3 bio",
+			"default": "Sam services more than 400 boilers a year and explains everything as he goes.",
+			"max": 160
+		},
+		{
+			"id": "about.team.heading",
+			"group": "about/team",
+			"type": "text",
+			"label": "Heading",
+			"default": "Meet some of the team",
+			"max": 40
+		},
+		{
+			"id": "about.team.intro",
+			"group": "about/team",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Every engineer is employed by us, trained by us and background checked.",
+			"max": 120
+		},
+		{
+			"id": "about.cta.heading",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Let us take care of it",
+			"max": 40
+		},
+		{
+			"id": "about.cta.text",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Friendly, local and guaranteed. Book your visit today.",
+			"max": 120
+		},
+		{
+			"id": "about.cta.button",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a visit",
+			"max": 28
+		},
+		{
+			"id": "contact.intro.eyebrow",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Contact",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.heading",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Book a visit or ask a question",
+			"max": 60
+		},
+		{
+			"id": "contact.intro.lead",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Call us for emergencies. For everything else, email or call during opening hours.",
+			"max": 160
+		},
+		{
+			"id": "contact.details.side_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Side heading",
+			"default": "Where we work",
+			"max": 24
+		},
+		{
+			"id": "contact.details.side_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Side text",
+			"default": "Oakdale and every town within <strong>20 miles</strong>, including Millbrook, Westfield and Cedar Hill.",
+			"max": 220
+		},
+		{
+			"id": "contact.details.extra_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Second heading",
+			"default": "Emergency?",
+			"max": 24
+		},
+		{
+			"id": "contact.details.extra_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Second text",
+			"default": "Call our main number at any hour. If water is leaking, <strong>turn off your stopcock first</strong>.",
+			"max": 220
+		},
+		{
+			"id": "contact.details.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Contact box heading",
+			"default": "Call or email",
+			"max": 24
+		}
+	]
+}

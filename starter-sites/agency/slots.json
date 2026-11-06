@@ -1,0 +1,1317 @@
+{
+	"groups": [
+		{
+			"id": "site/basics",
+			"page": "site",
+			"label": "Business basics"
+		},
+		{
+			"id": "site/header",
+			"page": "site",
+			"label": "Header"
+		},
+		{
+			"id": "site/footer",
+			"page": "site",
+			"label": "Footer"
+		},
+		{
+			"id": "home/hero",
+			"page": "home",
+			"label": "Hero"
+		},
+		{
+			"id": "home/stats",
+			"page": "home",
+			"label": "Highlights"
+		},
+		{
+			"id": "home/services",
+			"page": "home",
+			"label": "Services"
+		},
+		{
+			"id": "home/process",
+			"page": "home",
+			"label": "How we work"
+		},
+		{
+			"id": "home/testimonial",
+			"page": "home",
+			"label": "Testimonial"
+		},
+		{
+			"id": "home/cta",
+			"page": "home",
+			"label": "Call to action"
+		},
+		{
+			"id": "services/intro",
+			"page": "services",
+			"label": "Introduction"
+		},
+		{
+			"id": "services/list",
+			"page": "services",
+			"label": "Service list"
+		},
+		{
+			"id": "services/packages",
+			"page": "services",
+			"label": "Packages"
+		},
+		{
+			"id": "services/faq",
+			"page": "services",
+			"label": "Questions"
+		},
+		{
+			"id": "services/cta",
+			"page": "services",
+			"label": "Call to action"
+		},
+		{
+			"id": "work/intro",
+			"page": "work",
+			"label": "Introduction"
+		},
+		{
+			"id": "work/case1",
+			"page": "work",
+			"label": "Case study 1"
+		},
+		{
+			"id": "work/case2",
+			"page": "work",
+			"label": "Case study 2"
+		},
+		{
+			"id": "work/results",
+			"page": "work",
+			"label": "Highlights"
+		},
+		{
+			"id": "work/cta",
+			"page": "work",
+			"label": "Call to action"
+		},
+		{
+			"id": "about/intro",
+			"page": "about",
+			"label": "Introduction"
+		},
+		{
+			"id": "about/story",
+			"page": "about",
+			"label": "Story"
+		},
+		{
+			"id": "about/team",
+			"page": "about",
+			"label": "Team"
+		},
+		{
+			"id": "about/cta",
+			"page": "about",
+			"label": "Call to action"
+		},
+		{
+			"id": "contact/intro",
+			"page": "contact",
+			"label": "Introduction"
+		},
+		{
+			"id": "contact/details",
+			"page": "contact",
+			"label": "Details"
+		}
+	],
+	"slots": [
+		{
+			"id": "site.title",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Site title",
+			"default": "Northwind Studio",
+			"max": 60,
+			"hint": "Shown in the header, browser tab and search results."
+		},
+		{
+			"id": "site.tagline",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Tagline",
+			"default": "Websites and marketing that bring in customers",
+			"max": 100
+		},
+		{
+			"id": "biz.name",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Business name",
+			"default": "Northwind Studio",
+			"max": 80
+		},
+		{
+			"id": "biz.phone",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Phone",
+			"default": "(555) 019-3381",
+			"max": 32
+		},
+		{
+			"id": "biz.email",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Email",
+			"default": "hello@northwind.example",
+			"max": 80
+		},
+		{
+			"id": "biz.address",
+			"group": "site/basics",
+			"type": "text",
+			"label": "Address",
+			"default": "18 Foundry Lane, Suite 4, Portland",
+			"max": 120
+		},
+		{
+			"id": "header.cta",
+			"group": "site/header",
+			"type": "text",
+			"label": "Header button",
+			"default": "Start a project",
+			"max": 24
+		},
+		{
+			"id": "footer.about",
+			"group": "site/footer",
+			"type": "text",
+			"label": "About text",
+			"default": "A small team that builds websites, brands and campaigns for growing businesses.",
+			"max": 160
+		},
+		{
+			"id": "footer.contact_heading",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Contact heading",
+			"default": "Get in touch",
+			"max": 40
+		},
+		{
+			"id": "footer.legal",
+			"group": "site/footer",
+			"type": "text",
+			"label": "Legal line",
+			"default": "Built with WordPress.",
+			"max": 120
+		},
+		{
+			"id": "home.hero.eyebrow",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Digital studio for growing businesses",
+			"max": 40
+		},
+		{
+			"id": "home.hero.heading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Heading",
+			"default": "Websites and marketing that bring in real customers",
+			"max": 80,
+			"hint": "The main promise, in under ten words."
+		},
+		{
+			"id": "home.hero.subheading",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Text under heading",
+			"default": "We design, build and run the online side of your business, so you can get back to running the rest of it.",
+			"max": 220
+		},
+		{
+			"id": "home.hero.cta_primary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Main button",
+			"default": "Start a project",
+			"max": 28
+		},
+		{
+			"id": "home.hero.cta_secondary",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Second button",
+			"default": "See our work",
+			"max": 28
+		},
+		{
+			"id": "image:home.hero",
+			"group": "home/hero",
+			"type": "image",
+			"label": "Hero image",
+			"default": "assets/hero.webp"
+		},
+		{
+			"id": "home.hero.image_alt",
+			"group": "home/hero",
+			"type": "text",
+			"label": "Hero image description",
+			"default": "Illustration of a laptop showing a website with rising sales charts",
+			"max": 140,
+			"hint": "Describe the image for people who cannot see it."
+		},
+		{
+			"id": "home.stats.item1_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "120+",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item1_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "websites launched since 2016",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item2_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "3.4x",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item2_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "average rise in enquiries",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item3_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "9 years",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item3_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "average client relationship",
+			"max": 80
+		},
+		{
+			"id": "home.stats.item4_value",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "4.9/5",
+			"max": 16
+		},
+		{
+			"id": "home.stats.item4_text",
+			"group": "home/stats",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "from 80 client reviews",
+			"max": 80
+		},
+		{
+			"id": "home.services.item1_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Websites",
+			"max": 24
+		},
+		{
+			"id": "home.services.item1_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Fast, accessible WordPress sites your team can update without calling us.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item2_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Brand and design",
+			"max": 40
+		},
+		{
+			"id": "home.services.item2_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Logos, colours and messaging that make you easy to recognise and remember.",
+			"max": 120
+		},
+		{
+			"id": "home.services.item3_title",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Search and ads",
+			"max": 24
+		},
+		{
+			"id": "home.services.item3_text",
+			"group": "home/services",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Local SEO and paid campaigns tracked to leads, not just clicks.",
+			"max": 120
+		},
+		{
+			"id": "home.services.eyebrow",
+			"group": "home/services",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "What we do",
+			"max": 40
+		},
+		{
+			"id": "home.services.heading",
+			"group": "home/services",
+			"type": "text",
+			"label": "Heading",
+			"default": "Everything you need to grow online",
+			"max": 60
+		},
+		{
+			"id": "home.services.intro",
+			"group": "home/services",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Pick one service or let us run the whole thing. Either way you get one team and one point of contact.",
+			"max": 220
+		},
+		{
+			"id": "home.services.link",
+			"group": "home/services",
+			"type": "text",
+			"label": "Link text",
+			"default": "All services",
+			"max": 28
+		},
+		{
+			"id": "home.process.item1_title",
+			"group": "home/process",
+			"type": "text",
+			"label": "Step 1 title",
+			"default": "Discovery call",
+			"max": 24
+		},
+		{
+			"id": "home.process.item1_text",
+			"group": "home/process",
+			"type": "text",
+			"label": "Step 1 text",
+			"default": "Thirty minutes to understand your goals, your customers and your budget.",
+			"max": 120
+		},
+		{
+			"id": "home.process.item2_title",
+			"group": "home/process",
+			"type": "text",
+			"label": "Step 2 title",
+			"default": "Plan and design",
+			"max": 24
+		},
+		{
+			"id": "home.process.item2_text",
+			"group": "home/process",
+			"type": "text",
+			"label": "Step 2 text",
+			"default": "A clear proposal, then designs you can comment on before anything is built.",
+			"max": 120
+		},
+		{
+			"id": "home.process.item3_title",
+			"group": "home/process",
+			"type": "text",
+			"label": "Step 3 title",
+			"default": "Launch and grow",
+			"max": 24
+		},
+		{
+			"id": "home.process.item3_text",
+			"group": "home/process",
+			"type": "text",
+			"label": "Step 3 text",
+			"default": "We launch, measure what works and keep improving it with you every month.",
+			"max": 120
+		},
+		{
+			"id": "home.process.heading",
+			"group": "home/process",
+			"type": "text",
+			"label": "Heading",
+			"default": "How a project works",
+			"max": 40
+		},
+		{
+			"id": "home.testimonial.quote",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Quote",
+			"default": "Northwind rebuilt our site in six weeks and our online bookings tripled by the end of the quarter. They explain everything in plain English.",
+			"max": 280
+		},
+		{
+			"id": "home.testimonial.name",
+			"group": "home/testimonial",
+			"type": "text",
+			"label": "Name",
+			"default": "Priya S., owner of Fernhill Dental",
+			"max": 70
+		},
+		{
+			"id": "home.cta.heading",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Ready to grow?",
+			"max": 24
+		},
+		{
+			"id": "home.cta.text",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Tell us about your business. We reply within one working day.",
+			"max": 120
+		},
+		{
+			"id": "home.cta.button",
+			"group": "home/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Start a project",
+			"max": 28
+		},
+		{
+			"id": "services.intro.eyebrow",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Services",
+			"max": 40
+		},
+		{
+			"id": "services.intro.heading",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "One team for your website, brand and marketing",
+			"max": 80
+		},
+		{
+			"id": "services.intro.lead",
+			"group": "services/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Fixed-price packages for most projects, and honest advice about what you do not need.",
+			"max": 160
+		},
+		{
+			"id": "services.list.item1_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 1 title",
+			"default": "Website design",
+			"max": 24
+		},
+		{
+			"id": "services.list.item1_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 1 text",
+			"default": "Custom WordPress sites designed around what your customers need to do.",
+			"max": 120
+		},
+		{
+			"id": "services.list.item2_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 2 title",
+			"default": "Website care",
+			"max": 24
+		},
+		{
+			"id": "services.list.item2_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 2 text",
+			"default": "Updates, backups, security checks and small changes every month.",
+			"max": 120
+		},
+		{
+			"id": "services.list.item3_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 3 title",
+			"default": "Brand identity",
+			"max": 24
+		},
+		{
+			"id": "services.list.item3_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 3 text",
+			"default": "Logo, colours, fonts and a short guide your whole team can follow.",
+			"max": 120
+		},
+		{
+			"id": "services.list.item4_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 4 title",
+			"default": "Local SEO",
+			"max": 24
+		},
+		{
+			"id": "services.list.item4_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 4 text",
+			"default": "Show up in maps and local searches with accurate, consistent listings.",
+			"max": 120
+		},
+		{
+			"id": "services.list.item5_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 5 title",
+			"default": "Paid ads",
+			"max": 24
+		},
+		{
+			"id": "services.list.item5_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 5 text",
+			"default": "Google and social campaigns with a monthly report you can actually read.",
+			"max": 120
+		},
+		{
+			"id": "services.list.item6_title",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 6 title",
+			"default": "Email marketing",
+			"max": 24
+		},
+		{
+			"id": "services.list.item6_text",
+			"group": "services/list",
+			"type": "text",
+			"label": "Item 6 text",
+			"default": "Newsletters and automated emails that bring customers back.",
+			"max": 120
+		},
+		{
+			"id": "services.list.eyebrow",
+			"group": "services/list",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Services",
+			"max": 40
+		},
+		{
+			"id": "services.list.heading",
+			"group": "services/list",
+			"type": "text",
+			"label": "Heading",
+			"default": "What we can help with",
+			"max": 40
+		},
+		{
+			"id": "services.packages.plan1_name",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 1 name",
+			"default": "Starter site",
+			"max": 40
+		},
+		{
+			"id": "services.packages.plan1_price",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 1 price",
+			"default": "$2,900",
+			"max": 16
+		},
+		{
+			"id": "services.packages.plan1_period",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 1 price note",
+			"default": "one-off",
+			"max": 40
+		},
+		{
+			"id": "services.packages.plan1_included",
+			"group": "services/packages",
+			"type": "richtext",
+			"label": "Plan 1 includes",
+			"default": "Up to 5 pages<br>Mobile-friendly design<br>Contact form and maps",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "services.packages.plan1_button",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 1 button",
+			"default": "Choose Starter",
+			"max": 28
+		},
+		{
+			"id": "services.packages.plan2_badge",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 2 label",
+			"default": "Most popular",
+			"max": 24
+		},
+		{
+			"id": "services.packages.plan2_name",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 2 name",
+			"default": "Growth site",
+			"max": 40
+		},
+		{
+			"id": "services.packages.plan2_price",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 2 price",
+			"default": "$6,500",
+			"max": 16
+		},
+		{
+			"id": "services.packages.plan2_period",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 2 price note",
+			"default": "one-off",
+			"max": 40
+		},
+		{
+			"id": "services.packages.plan2_included",
+			"group": "services/packages",
+			"type": "richtext",
+			"label": "Plan 2 includes",
+			"default": "Up to 12 pages<br>Brand refresh<br>Local SEO setup<br>Analytics dashboard",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "services.packages.plan2_button",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 2 button",
+			"default": "Choose Growth",
+			"max": 28
+		},
+		{
+			"id": "services.packages.plan3_name",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 3 name",
+			"default": "Care plan",
+			"max": 40
+		},
+		{
+			"id": "services.packages.plan3_price",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 3 price",
+			"default": "$190",
+			"max": 16
+		},
+		{
+			"id": "services.packages.plan3_period",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 3 price note",
+			"default": "per month",
+			"max": 40
+		},
+		{
+			"id": "services.packages.plan3_included",
+			"group": "services/packages",
+			"type": "richtext",
+			"label": "Plan 3 includes",
+			"default": "Updates and backups<br>Two hours of changes<br>Monthly report",
+			"max": 120,
+			"hint": "One item per line."
+		},
+		{
+			"id": "services.packages.plan3_button",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Plan 3 button",
+			"default": "Choose Care",
+			"max": 28
+		},
+		{
+			"id": "services.packages.eyebrow",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Packages",
+			"max": 40
+		},
+		{
+			"id": "services.packages.heading",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Heading",
+			"default": "Simple, fixed prices",
+			"max": 40
+		},
+		{
+			"id": "services.packages.intro",
+			"group": "services/packages",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Every package includes hosting setup, training and 30 days of support after launch.",
+			"max": 160
+		},
+		{
+			"id": "services.faq.q1",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Question 1",
+			"default": "How long does a website take?",
+			"max": 120
+		},
+		{
+			"id": "services.faq.a1",
+			"group": "services/faq",
+			"type": "richtext",
+			"label": "Answer 1",
+			"default": "Most sites launch in four to eight weeks, depending on how quickly we receive your content.",
+			"max": 160
+		},
+		{
+			"id": "services.faq.q2",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Question 2",
+			"default": "Do I own my website?",
+			"max": 120
+		},
+		{
+			"id": "services.faq.a2",
+			"group": "services/faq",
+			"type": "richtext",
+			"label": "Answer 2",
+			"default": "Yes. You own the site, the domain and all content. <strong>No lock-in contracts.</strong>",
+			"max": 160
+		},
+		{
+			"id": "services.faq.q3",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Question 3",
+			"default": "Can you work with my existing site?",
+			"max": 120
+		},
+		{
+			"id": "services.faq.a3",
+			"group": "services/faq",
+			"type": "richtext",
+			"label": "Answer 3",
+			"default": "Often, yes. We start with a free review and tell you honestly whether to keep it or rebuild.",
+			"max": 160
+		},
+		{
+			"id": "services.faq.heading",
+			"group": "services/faq",
+			"type": "text",
+			"label": "Heading",
+			"default": "Questions clients ask",
+			"max": 40
+		},
+		{
+			"id": "services.cta.heading",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Not sure where to start?",
+			"max": 40
+		},
+		{
+			"id": "services.cta.text",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Book a free 30-minute call and we will suggest the simplest next step.",
+			"max": 120
+		},
+		{
+			"id": "services.cta.button",
+			"group": "services/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Book a call",
+			"max": 28
+		},
+		{
+			"id": "work.intro.eyebrow",
+			"group": "work/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our work",
+			"max": 40
+		},
+		{
+			"id": "work.intro.heading",
+			"group": "work/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Results our clients can measure",
+			"max": 60
+		},
+		{
+			"id": "work.intro.lead",
+			"group": "work/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "A few recent projects for local businesses and growing brands.",
+			"max": 120
+		},
+		{
+			"id": "work.case1.eyebrow",
+			"group": "work/case1",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Website and local SEO",
+			"max": 40
+		},
+		{
+			"id": "work.case1.heading",
+			"group": "work/case1",
+			"type": "text",
+			"label": "Heading",
+			"default": "Fernhill Dental",
+			"max": 24
+		},
+		{
+			"id": "work.case1.body",
+			"group": "work/case1",
+			"type": "richtext",
+			"label": "Text",
+			"default": "A new website with online booking and a local search plan. <strong>Online bookings tripled</strong> within three months.",
+			"max": 220
+		},
+		{
+			"id": "image:work.case1",
+			"group": "work/case1",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/work.webp"
+		},
+		{
+			"id": "work.case1.image_alt",
+			"group": "work/case1",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a phone and a poster showing a new brand and website",
+			"max": 140
+		},
+		{
+			"id": "work.case2.eyebrow",
+			"group": "work/case2",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Brand and paid ads",
+			"max": 40
+		},
+		{
+			"id": "work.case2.heading",
+			"group": "work/case2",
+			"type": "text",
+			"label": "Heading",
+			"default": "Copperline Coffee",
+			"max": 40
+		},
+		{
+			"id": "work.case2.body",
+			"group": "work/case2",
+			"type": "richtext",
+			"label": "Text",
+			"default": "A fresh brand and a seasonal ad campaign for a three-shop coffee roaster. <strong>Wholesale enquiries up 60%.</strong>",
+			"max": 220
+		},
+		{
+			"id": "image:work.case2",
+			"group": "work/case2",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/team.webp"
+		},
+		{
+			"id": "work.case2.image_alt",
+			"group": "work/case2",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a team working together around a table with laptops and notes",
+			"max": 140
+		},
+		{
+			"id": "work.results.item1_value",
+			"group": "work/results",
+			"type": "text",
+			"label": "Fact 1 number",
+			"default": "3x",
+			"max": 16
+		},
+		{
+			"id": "work.results.item1_text",
+			"group": "work/results",
+			"type": "text",
+			"label": "Fact 1 caption",
+			"default": "more online bookings for Fernhill Dental",
+			"max": 80
+		},
+		{
+			"id": "work.results.item2_value",
+			"group": "work/results",
+			"type": "text",
+			"label": "Fact 2 number",
+			"default": "60%",
+			"max": 16
+		},
+		{
+			"id": "work.results.item2_text",
+			"group": "work/results",
+			"type": "text",
+			"label": "Fact 2 caption",
+			"default": "more wholesale enquiries",
+			"max": 80
+		},
+		{
+			"id": "work.results.item3_value",
+			"group": "work/results",
+			"type": "text",
+			"label": "Fact 3 number",
+			"default": "2.1s",
+			"max": 16
+		},
+		{
+			"id": "work.results.item3_text",
+			"group": "work/results",
+			"type": "text",
+			"label": "Fact 3 caption",
+			"default": "average page load on our sites",
+			"max": 80
+		},
+		{
+			"id": "work.results.item4_value",
+			"group": "work/results",
+			"type": "text",
+			"label": "Fact 4 number",
+			"default": "100%",
+			"max": 16
+		},
+		{
+			"id": "work.results.item4_text",
+			"group": "work/results",
+			"type": "text",
+			"label": "Fact 4 caption",
+			"default": "of clients own their site",
+			"max": 80
+		},
+		{
+			"id": "work.cta.heading",
+			"group": "work/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Want results like these?",
+			"max": 40
+		},
+		{
+			"id": "work.cta.text",
+			"group": "work/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Let us look at your site and your numbers, free of charge.",
+			"max": 120
+		},
+		{
+			"id": "work.cta.button",
+			"group": "work/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Get a free review",
+			"max": 28
+		},
+		{
+			"id": "about.intro.eyebrow",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "About us",
+			"max": 40
+		},
+		{
+			"id": "about.intro.heading",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "A small studio that answers the phone",
+			"max": 60
+		},
+		{
+			"id": "about.intro.lead",
+			"group": "about/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "We are eight people who care about craft and about the businesses we work with.",
+			"max": 160
+		},
+		{
+			"id": "about.story.eyebrow",
+			"group": "about/story",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Our story",
+			"max": 40
+		},
+		{
+			"id": "about.story.heading",
+			"group": "about/story",
+			"type": "text",
+			"label": "Heading",
+			"default": "Started by two friends in 2016",
+			"max": 60
+		},
+		{
+			"id": "about.story.body1",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "First paragraph",
+			"default": "Northwind began when two friends, a designer and a developer, kept seeing small businesses pay too much for websites that did too little.",
+			"max": 220
+		},
+		{
+			"id": "about.story.body2",
+			"group": "about/story",
+			"type": "richtext",
+			"label": "Second paragraph",
+			"default": "Today we work with more than 60 clients, and most of them have been with us for years. <strong>We would rather keep a client than win a new one.</strong>",
+			"max": 320
+		},
+		{
+			"id": "image:about.story",
+			"group": "about/story",
+			"type": "image",
+			"label": "Image",
+			"default": "assets/team.webp"
+		},
+		{
+			"id": "about.story.image_alt",
+			"group": "about/story",
+			"type": "text",
+			"label": "Image description",
+			"default": "Illustration of a team working together around a table with laptops and notes",
+			"max": 140
+		},
+		{
+			"id": "about.team.member1_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 1 name",
+			"default": "Hana Moreau",
+			"max": 60
+		},
+		{
+			"id": "about.team.member1_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 1 role",
+			"default": "Co-founder, design lead",
+			"max": 60
+		},
+		{
+			"id": "about.team.member1_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 1 bio",
+			"default": "Hana leads brand and web design and still sketches every homepage by hand first.",
+			"max": 160
+		},
+		{
+			"id": "about.team.member2_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 2 name",
+			"default": "Leo Brandt",
+			"max": 60
+		},
+		{
+			"id": "about.team.member2_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 2 role",
+			"default": "Co-founder, development",
+			"max": 60
+		},
+		{
+			"id": "about.team.member2_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 2 bio",
+			"default": "Leo builds our WordPress sites and makes sure they load fast on every phone.",
+			"max": 160
+		},
+		{
+			"id": "about.team.member3_name",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 3 name",
+			"default": "Ama Owusu",
+			"max": 60
+		},
+		{
+			"id": "about.team.member3_role",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 3 role",
+			"default": "Marketing lead",
+			"max": 60
+		},
+		{
+			"id": "about.team.member3_bio",
+			"group": "about/team",
+			"type": "text",
+			"label": "Person 3 bio",
+			"default": "Ama runs search and ad campaigns and turns the numbers into plain-English reports.",
+			"max": 160
+		},
+		{
+			"id": "about.team.heading",
+			"group": "about/team",
+			"type": "text",
+			"label": "Heading",
+			"default": "The people you will work with",
+			"max": 60
+		},
+		{
+			"id": "about.team.intro",
+			"group": "about/team",
+			"type": "text",
+			"label": "Intro text",
+			"default": "No account managers in the middle. You talk to the people doing the work.",
+			"max": 120
+		},
+		{
+			"id": "about.cta.heading",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Heading",
+			"default": "Let us get to know you",
+			"max": 40
+		},
+		{
+			"id": "about.cta.text",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Text",
+			"default": "Tell us about your business and where you want it to go.",
+			"max": 120
+		},
+		{
+			"id": "about.cta.button",
+			"group": "about/cta",
+			"type": "text",
+			"label": "Button text",
+			"default": "Say hello",
+			"max": 28
+		},
+		{
+			"id": "contact.intro.eyebrow",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Label above heading",
+			"default": "Contact",
+			"max": 40
+		},
+		{
+			"id": "contact.intro.heading",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Heading",
+			"default": "Let us talk about your project",
+			"max": 60
+		},
+		{
+			"id": "contact.intro.lead",
+			"group": "contact/intro",
+			"type": "text",
+			"label": "Intro text",
+			"default": "Tell us a little about your business and what you need. We reply within one working day.",
+			"max": 160
+		},
+		{
+			"id": "contact.details.side_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Side heading",
+			"default": "What happens next",
+			"max": 40
+		},
+		{
+			"id": "contact.details.side_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Side text",
+			"default": "We read every message ourselves. If we are a good fit, we book a <strong>free 30-minute call</strong> to understand your goals.",
+			"max": 220
+		},
+		{
+			"id": "contact.details.extra_heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Second heading",
+			"default": "Prefer to visit?",
+			"max": 40
+		},
+		{
+			"id": "contact.details.extra_body",
+			"group": "contact/details",
+			"type": "richtext",
+			"label": "Second text",
+			"default": "Our studio is above the bakery on Foundry Lane. Drop by any weekday, the coffee is on us.",
+			"max": 160
+		},
+		{
+			"id": "contact.details.heading",
+			"group": "contact/details",
+			"type": "text",
+			"label": "Contact box heading",
+			"default": "Get in touch",
+			"max": 24
+		}
+	]
+}

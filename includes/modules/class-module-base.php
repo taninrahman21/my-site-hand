@@ -68,7 +68,7 @@ abstract class Module_Base {
 	 * @return bool
 	 */
 	protected function is_enabled(): bool {
-		$default = [ 'content', 'seo', 'diagnostics', 'media', 'users', 'woocommerce' ];
+		$default = [ 'content', 'seo', 'diagnostics', 'media', 'users', 'woocommerce', 'site-builder' ];
 		$enabled = get_option( 'mysitehand_enabled_modules', $default );
 
 		// If it's set but empty, we still want to default to enabled for core functionality

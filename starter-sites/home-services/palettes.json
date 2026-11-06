@@ -1,0 +1,82 @@
+{
+	"palettes": [
+		{
+			"id": "safety",
+			"name": "Navy and orange",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f5f8",
+				"accent": "#e2e8f0",
+				"contrast": "#0f1b2d",
+				"muted": "#475467",
+				"primary": "#b8420d",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "trust",
+			"name": "Trust blue",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f5f9",
+				"accent": "#e2e6f1",
+				"contrast": "#151a28",
+				"muted": "#4e556a",
+				"primary": "#1b49ca",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "fresh",
+			"name": "Fresh green",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f3f9f5",
+				"accent": "#e2f1e7",
+				"contrast": "#15281c",
+				"muted": "#4e6a58",
+				"primary": "#15803d",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "red",
+			"name": "Fire red",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f9f3f3",
+				"accent": "#f1e2e2",
+				"contrast": "#281515",
+				"muted": "#6a4e4e",
+				"primary": "#b91c1c",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "slate",
+			"name": "Slate",
+			"colors": {
+				"base": "#ffffff",
+				"surface": "#f4f6f8",
+				"accent": "#e4e8ef",
+				"contrast": "#171d26",
+				"muted": "#4e596a",
+				"primary": "#334155",
+				"on-primary": "#ffffff"
+			}
+		},
+		{
+			"id": "night",
+			"name": "Night shift",
+			"colors": {
+				"base": "#0f1722",
+				"surface": "#172131",
+				"accent": "#21304a",
+				"contrast": "#eef3fa",
+				"muted": "#a9b6c8",
+				"primary": "#ff9a4d",
+				"on-primary": "#0f1722"
+			}
+		}
+	]
+}

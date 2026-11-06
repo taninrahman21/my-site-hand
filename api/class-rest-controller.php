@@ -346,6 +346,127 @@ class Rest_Controller {
 
 		$this->register_export_routes();
 		$this->register_share_routes();
+		$this->register_ai_routes();
+	}
+
+	/**
+	 * Register the AI Bulk Fix routes.
+	 *
+	 * NEW routes only. /health/fix is untouched, so Quick Fix behaves exactly
+	 * as before for everyone — and every handler here answers "not configured"
+	 * until an API key has been stored.
+	 *
+	 * @return void
+	 */
+	private function register_ai_routes(): void {
+		$ids_arg = [
+			'required'          => true,
+			'type'              => 'array',
+			'items'             => [ 'type' => 'integer' ],
+			'sanitize_callback' => static function ( $value ): array {
+				return array_values( array_unique( array_filter( array_map( 'absint', (array) $value ) ) ) );
+			},
+			'validate_callback' => static function ( $value ): bool {
+				if ( ! is_array( $value ) || empty( $value ) || count( $value ) > \MySiteHand\Bulk_Fix_Manager::MAX_IDS_PER_REQUEST ) {
+					return false;
+				}
+
+				foreach ( $value as $id ) {
+					if ( ! is_numeric( $id ) || (int) $id <= 0 ) {
+						return false;
+					}
+				}
+
+				return true;
+			},
+		];
+
+		// POST /health/ai/generate — one batch of proposals.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/ai/generate',
+			[
+				'methods'             => 'POST',
+				'callback'            => [ $this, 'ai_generate' ],
+				'permission_callback' => [ $this, 'require_manage_options' ],
+				'args'                => [
+					'check'      => [
+						'required'          => true,
+						'type'              => 'string',
+						'sanitize_callback' => 'sanitize_key',
+						'validate_callback' => static function ( $value ): bool {
+							return is_string( $value ) && in_array( $value, \MySiteHand\Bulk_Fix_Manager::SUPPORTED_CHECKS, true );
+						},
+					],
+					'object_ids' => $ids_arg,
+					'attempt'    => [
+						'required'          => false,
+						'type'              => 'integer',
+						'default'           => 1,
+						'sanitize_callback' => 'absint',
+						'validate_callback' => static function ( $value ): bool {
+							return in_array( (int) $value, [ 1, 2 ], true );
+						},
+					],
+				],
+			]
+		);
+
+		// GET /health/ai/proposals — the current proposal set.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/ai/proposals',
+			[
+				'methods'             => 'GET',
+				'callback'            => [ $this, 'ai_get_proposals' ],
+				'permission_callback' => [ $this, 'require_manage_options' ],
+			]
+		);
+
+		// POST /health/ai/apply — write approved proposals through Quick Fix.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/ai/apply',
+			[
+				'methods'             => 'POST',
+				'callback'            => [ $this, 'ai_apply' ],
+				'permission_callback' => [ $this, 'require_manage_options' ],
+				'args'                => [
+					'object_ids' => $ids_arg,
+					// Text the user edited in the review panel, by object ID.
+					'values'     => [
+						'required'          => false,
+						'type'              => 'object',
+						'default'           => [],
+						'sanitize_callback' => static function ( $value ): array {
+							$clean = [];
+
+							foreach ( (array) $value as $id => $text ) {
+								if ( is_numeric( $id ) && (int) $id > 0 && is_string( $text ) ) {
+									$clean[ (int) $id ] = sanitize_text_field( $text );
+								}
+							}
+
+							return $clean;
+						},
+						'validate_callback' => static function ( $value ): bool {
+							return is_array( $value ) && count( $value ) <= \MySiteHand\Bulk_Fix_Manager::MAX_IDS_PER_REQUEST;
+						},
+					],
+				],
+			]
+		);
+
+		// POST /health/ai/discard — throw the proposal set away.
+		register_rest_route(
+			self::NAMESPACE,
+			'/health/ai/discard',
+			[
+				'methods'             => 'POST',
+				'callback'            => [ $this, 'ai_discard' ],
+				'permission_callback' => [ $this, 'require_manage_options' ],
+			]
+		);
 	}
 
 	/**
@@ -922,24 +1043,208 @@ class Rest_Controller {
 	 * @param array<string, mixed> $meta     Fix metadata.
 	 * @param string               $status   'success' or 'error'.
 	 * @param string               $summary  Human-readable result.
+	 * @param string               $ability  Audit log ability name. Quick Fix unless AI Bulk Fix applied it.
 	 * @return void
 	 */
-	private function log_fix( string $check, string $fix_type, array $meta, string $status, string $summary ): void {
+	private function log_fix( string $check, string $fix_type, array $meta, string $status, string $summary, string $ability = 'my-site-hand/quick-fix' ): void {
+		$input = [
+			'check'    => $check,
+			'fix_type' => $fix_type,
+			'fix_meta' => $meta,
+		];
+
+		if ( self::BULK_FIX_ABILITY === $ability ) {
+			$input['source'] = 'ai_bulk_fix';
+		}
+
 		$this->audit->log(
 			[
 				'token_id'       => null,
 				'user_id'        => get_current_user_id(),
-				'ability_name'   => 'my-site-hand/quick-fix',
-				'input'          => [
-					'check'    => $check,
-					'fix_type' => $fix_type,
-					'fix_meta' => $meta,
-				],
+				'ability_name'   => $ability,
+				'input'          => $input,
 				'result_status'  => $status,
 				'result_summary' => $summary,
 				'duration_ms'    => 0,
 			]
 		);
+	}
+
+	// -------------------------------------------------------------------------
+	// AI Bulk Fix
+	//
+	// Generates proposals and applies approved ones. Applying goes through
+	// write_bulk_fix() below, which is fix_inline_text() — the Quick Fix
+	// handler — and nothing else. There is exactly one write path per fix
+	// type; keep it that way.
+	// -------------------------------------------------------------------------
+
+	/**
+	 * Audit log ability name for fixes applied by AI Bulk Fix.
+	 *
+	 * @var string
+	 */
+	public const BULK_FIX_ABILITY = 'my-site-hand/ai-bulk-fix';
+
+	/**
+	 * Bulk Fix manager, built on first use.
+	 *
+	 * @var \MySiteHand\Bulk_Fix_Manager|null
+	 */
+	private ?\MySiteHand\Bulk_Fix_Manager $bulk_fix = null;
+
+	/**
+	 * The Bulk Fix manager, wired to the Quick Fix write path.
+	 *
+	 * @return \MySiteHand\Bulk_Fix_Manager
+	 */
+	private function bulk_fix(): \MySiteHand\Bulk_Fix_Manager {
+		if ( null === $this->bulk_fix ) {
+			$plugin = \MySiteHand\Plugin::get_instance();
+
+			$this->bulk_fix = new \MySiteHand\Bulk_Fix_Manager(
+				$plugin->get_ai_manager(),
+				$this->cache,
+				$plugin->get_site_health_scanner(),
+				\Closure::fromCallable( [ $this, 'write_bulk_fix' ] )
+			);
+		}
+
+		return $this->bulk_fix;
+	}
+
+	/**
+	 * Error for every AI route while no key is stored, or null once one is.
+	 *
+	 * @return \WP_Error|null
+	 */
+	private function ai_unavailable(): ?\WP_Error {
+		$ai = \MySiteHand\Plugin::get_instance()->get_ai_manager();
+
+		return $ai->is_configured() ? null : $ai->not_configured_error();
+	}
+
+	/**
+	 * POST /health/ai/generate — generate proposals for one batch.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return \WP_REST_Response|\WP_Error
+	 */
+	public function ai_generate( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+		$error = $this->ai_unavailable();
+
+		if ( null !== $error ) {
+			return $error;
+		}
+
+		$result = $this->bulk_fix()->generate(
+			(string) $request->get_param( 'check' ),
+			(array) $request->get_param( 'object_ids' ),
+			(int) $request->get_param( 'attempt' )
+		);
+
+		if ( is_wp_error( $result ) ) {
+			return $result;
+		}
+
+		return new \WP_REST_Response( $result, 200 );
+	}
+
+	/**
+	 * GET /health/ai/proposals — the current proposal set.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return \WP_REST_Response|\WP_Error
+	 */
+	public function ai_get_proposals( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+		$error = $this->ai_unavailable();
+
+		if ( null !== $error ) {
+			return $error;
+		}
+
+		$proposals = $this->bulk_fix()->get_proposals();
+
+		return new \WP_REST_Response(
+			[
+				'proposals'     => $proposals,
+				'has_proposals' => null !== $proposals,
+			],
+			200
+		);
+	}
+
+	/**
+	 * POST /health/ai/apply — apply approved proposals.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return \WP_REST_Response|\WP_Error
+	 */
+	public function ai_apply( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+		$error = $this->ai_unavailable();
+
+		if ( null !== $error ) {
+			return $error;
+		}
+
+		$result = $this->bulk_fix()->apply(
+			(array) $request->get_param( 'object_ids' ),
+			(array) $request->get_param( 'values' )
+		);
+
+		if ( is_wp_error( $result ) ) {
+			return $result;
+		}
+
+		return new \WP_REST_Response( $result, 200 );
+	}
+
+	/**
+	 * POST /health/ai/discard — throw the proposal set away.
+	 *
+	 * @param \WP_REST_Request $request REST request.
+	 * @return \WP_REST_Response|\WP_Error
+	 */
+	public function ai_discard( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+		$error = $this->ai_unavailable();
+
+		if ( null !== $error ) {
+			return $error;
+		}
+
+		$this->bulk_fix()->discard();
+
+		return new \WP_REST_Response( [ 'discarded' => true ], 200 );
+	}
+
+	/**
+	 * Apply one approved Bulk Fix proposal.
+	 *
+	 * This IS Quick Fix: fix_inline_text() with its meta key allowlist and its
+	 * per-object edit_post check, evaluated now rather than when the proposal
+	 * was generated. The only differences are the audit log label, so a human
+	 * reading the log can tell an AI suggestion from a typed one, and that the
+	 * fix count is incremented here exactly as fix_health_issue() does it.
+	 *
+	 * @param string               $check Check id.
+	 * @param array<string, mixed> $meta  Fix metadata, built on the server.
+	 * @param string               $value Approved text.
+	 * @return array{value: string, fixes: int}|\WP_Error
+	 */
+	private function write_bulk_fix( string $check, array $meta, string $value ): array|\WP_Error {
+		$result = $this->fix_inline_text( $meta, $value );
+
+		if ( is_wp_error( $result ) ) {
+			$this->log_fix( $check, 'inline_text', $meta, 'error', $result->get_error_message(), self::BULK_FIX_ABILITY );
+			return $result;
+		}
+
+		$this->log_fix( $check, 'inline_text', $meta, 'success', $result['summary'], self::BULK_FIX_ABILITY );
+
+		return [
+			'value' => $result['value'],
+			'fixes' => \MySiteHand\Plugin::get_instance()->get_site_health_scanner()->record_fix(),
+		];
 	}
 
 	/**

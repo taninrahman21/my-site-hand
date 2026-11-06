@@ -1,0 +1,179 @@
+{
+	"slug": "portfolio",
+	"name": "Portfolio",
+	"category": "creative",
+	"description": "A clean, type-led portfolio for a designer, photographer or studio. Selected work, case studies, services and an easy way to get in touch.",
+	"version": "1.0.0",
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"sections": [
+				{
+					"id": "hero",
+					"label": "Hero",
+					"file": "pages/home/hero.html"
+				},
+				{
+					"id": "work",
+					"label": "Selected work",
+					"file": "pages/home/work.html"
+				},
+				{
+					"id": "services",
+					"label": "Services",
+					"file": "pages/home/services.html"
+				},
+				{
+					"id": "testimonial",
+					"label": "Testimonial",
+					"file": "pages/home/testimonial.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/home/cta.html"
+				}
+			],
+			"template": "starter-full-width",
+			"is_front_page": true
+		},
+		{
+			"slug": "work",
+			"title": "Work",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/work/intro.html"
+				},
+				{
+					"id": "project1",
+					"label": "Project 1",
+					"file": "pages/work/project1.html"
+				},
+				{
+					"id": "project2",
+					"label": "Project 2",
+					"file": "pages/work/project2.html"
+				},
+				{
+					"id": "project3",
+					"label": "Project 3",
+					"file": "pages/work/project3.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/work/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "services",
+			"title": "Services",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/services/intro.html"
+				},
+				{
+					"id": "packages",
+					"label": "Packages",
+					"file": "pages/services/packages.html"
+				},
+				{
+					"id": "process",
+					"label": "Process",
+					"file": "pages/services/process.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/services/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "about",
+			"title": "About",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/about/intro.html"
+				},
+				{
+					"id": "bio",
+					"label": "Bio",
+					"file": "pages/about/bio.html"
+				},
+				{
+					"id": "cta",
+					"label": "Call to action",
+					"file": "pages/about/cta.html"
+				}
+			],
+			"template": "starter-full-width"
+		},
+		{
+			"slug": "contact",
+			"title": "Contact",
+			"sections": [
+				{
+					"id": "intro",
+					"label": "Introduction",
+					"file": "pages/contact/intro.html"
+				},
+				{
+					"id": "details",
+					"label": "Details",
+					"file": "pages/contact/details.html"
+				}
+			],
+			"template": "starter-full-width"
+		}
+	],
+	"template_parts": {
+		"header": "parts/header.html",
+		"footer": "parts/footer.html"
+	},
+	"templates": {
+		"starter-full-width": {
+			"title": "Full width, no title",
+			"file": "templates/starter-full-width.html"
+		}
+	},
+	"global_styles": "styles.json",
+	"palettes": "palettes.json",
+	"font_pairs": "fonts.json",
+	"navigation": [
+		{
+			"label": "Work",
+			"page": "work"
+		},
+		{
+			"label": "Services",
+			"page": "services"
+		},
+		{
+			"label": "About",
+			"page": "about"
+		},
+		{
+			"label": "Contact",
+			"page": "contact"
+		}
+	],
+	"slots_schema": "slots.json",
+	"screenshots": [
+		"screenshots/home.jpg",
+		"screenshots/work.jpg",
+		"screenshots/services.jpg",
+		"screenshots/about.jpg",
+		"screenshots/contact.jpg"
+	]
+}

@@ -1,0 +1,24 @@
+{
+    "translation-revision-date": "2026-10-11T13:30:39+00:00",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "assets\/js\/ai-settings.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "bn_BD",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Remove the stored API key? AI bulk fixing will disappear until you add one again.": [
+                "\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09bf\u09a4 API \u0995\u09c0 \u09b8\u09b0\u09be\u09ac\u09c7\u09a8? \u0986\u09ac\u09be\u09b0 \u098f\u0995\u099f\u09bf \u0995\u09c0 \u09af\u09cb\u0997 \u09a8\u09be \u0995\u09b0\u09be \u09aa\u09b0\u09cd\u09af\u09a8\u09cd\u09a4 AI \u09ac\u09be\u09b2\u09cd\u0995 \u09ab\u09bf\u0995\u09cd\u09b8 \u09a6\u09c7\u0996\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be\u0964"
+            ],
+            "Testing\u2026": [
+                "\u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7\u2026"
+            ],
+            "The test could not be completed. Reload the page and try again.": [
+                "\u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\u099f\u09bf \u09b8\u09ae\u09cd\u09aa\u09a8\u09cd\u09a8 \u0995\u09b0\u09be \u09af\u09be\u09af\u09bc\u09a8\u09bf\u0964 \u09aa\u09c7\u099c\u099f\u09bf \u09b0\u09bf\u09b2\u09cb\u09a1 \u0995\u09b0\u09c7 \u0986\u09ac\u09be\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c1\u09a8\u0964"
+            ]
+        }
+    }
+}
